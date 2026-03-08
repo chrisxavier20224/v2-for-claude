@@ -49,6 +49,7 @@ const StarlinkSdwan = lazy(() => import("./pages/blog/StarlinkSdwan"));
 const StarlinkInstallers = lazy(() => import("./pages/blog/StarlinkInstallers"));
 const StarlinkRightSolution = lazy(() => import("./pages/blog/StarlinkRightSolution"));
 const SingleMobileNetwork = lazy(() => import("./pages/blog/SingleMobileNetwork"));
+const Resources = lazy(() => import("./pages/resources/Resources"));
 const AccessBroadbandCymru = lazy(() => import("./pages/resources/AccessBroadbandCymru"));
 const PSTNSwitchOff = lazy(() => import("./pages/resources/PSTNSwitchOff"));
 const AlternativesToFibre = lazy(() => import("./pages/resources/AlternativesToFibre"));
@@ -128,6 +129,7 @@ const App = () => (
               <Route path="/integra-sd-wan" element={<IntegraSDWAN />} />
               <Route path="/integra-bridge" element={<IntegraBridge />} />
 
+              <Route path="/resources" element={<Resources />} />
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
               <Route path="/pstn-switch-off" element={<PSTNSwitchOff />} />
               <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />

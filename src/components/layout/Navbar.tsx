@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.jpg";
 
@@ -33,8 +33,15 @@ const postPlatformLinks = [
 
 
 const resourceLinks = [
-  { label: "Access Broadband Cymru", path: "/access-broadband-cymru", icon: FileText, tagline: "Up to £800 towards broadband in Wales" },
+  { label: "All Resources", path: "/resources", icon: BookOpen, tagline: "Guides, comparisons & industry updates" },
+  { label: "Alternatives to Fibre", path: "/alternatives-to-fibre-broadband", icon: Wifi, tagline: "Compare every broadband alternative" },
+  { label: "Rural Business Broadband", path: "/rural-business-broadband", icon: Globe, tagline: "Reliable internet for rural SMEs" },
+  { label: "Starlink for Business", path: "/starlink-for-business", icon: Satellite, tagline: "Honest satellite broadband assessment" },
+  { label: "SD-WAN for Small Business", path: "/sd-wan-for-small-business", icon: Network, tagline: "Plain English SD-WAN explainer" },
+  { label: "Construction Site Broadband", path: "/construction-site-broadband", icon: HardHat, tagline: "Fast-deploy temporary broadband" },
+  { label: "Farm Broadband UK", path: "/farm-broadband", icon: Tractor, tagline: "Internet for farms & rural properties" },
   { label: "PSTN Switch Off", path: "/pstn-switch-off", icon: Phone, tagline: "Prepare for the PSTN transition" },
+  { label: "Access Broadband Cymru", path: "/access-broadband-cymru", icon: FileText, tagline: "Up to £800 towards broadband in Wales" },
 ];
 
 const secondaryLinks = [
