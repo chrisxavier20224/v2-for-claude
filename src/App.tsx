@@ -40,6 +40,7 @@ const APJEuropean = lazy(() => import("./pages/customers/APJEuropean"));
 const McGeeConstruction = lazy(() => import("./pages/customers/McGeeConstruction"));
 const SeaconGroup = lazy(() => import("./pages/customers/SeaconGroup"));
 const AvailabilityChecker = lazy(() => import("./pages/AvailabilityChecker"));
+const Pricing = lazy(() => import("./pages/Pricing"));
 const Customers = lazy(() => import("./pages/Customers"));
 const Blog = lazy(() => import("./pages/Blog"));
 const ExtendingWifiOutbuildings = lazy(() => import("./pages/blog/ExtendingWifiOutbuildings"));
@@ -202,6 +203,7 @@ const App = () => (
               <Route path="/farm-broadband" element={<FarmBroadband />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/availability-checker" element={<AvailabilityChecker />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/privacy-cookies" element={<PrivacyAndCookies />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/sla" element={<SLA />} />

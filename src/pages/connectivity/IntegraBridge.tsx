@@ -326,6 +326,41 @@ const IntegraBridge = () => {
 
       <div className="border-t border-white/5" />
 
+      {/* RELATED SERVICES & SECTORS */}
+      <section className="bg-surface-dark py-16 md:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <div className="border-t border-white/20 pt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Related sectors</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/sectors/construction-sites" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+                Construction Sites
+              </Link>
+              <Link to="/sectors/rural-smes" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+                Rural SMEs
+              </Link>
+            </div>
+          </div>
+          <div className="border-t border-white/20 pt-8 mt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Customer stories</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/customers/mcgee-construction" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 text-surface-dark-foreground text-sm font-medium hover:bg-white/10 transition-colors">
+                McGee Construction
+              </Link>
+            </div>
+          </div>
+          <div className="border-t border-white/20 pt-8 mt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Further reading</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/alternatives-to-fibre-broadband" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 text-surface-dark-foreground text-sm font-medium hover:bg-white/10 transition-colors">
+                Alternatives to Fibre
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="border-t border-white/5" />
+
       {/* CTA */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">

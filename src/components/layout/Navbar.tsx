@@ -221,6 +221,18 @@ const Navbar = () => {
               )}
             </div>
 
+            {/* Pricing Link */}
+            <Link
+              to="/pricing"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === "/pricing"
+                  ? isDarkNav ? "text-white" : "text-foreground"
+                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Pricing
+            </Link>
+
             {/* Company Dropdown */}
             <div
               className="relative"
@@ -347,6 +359,13 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </div>
+              </div>
+
+              {/* Mobile Pricing Link */}
+              <div className="px-3 py-2">
+                <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                  Pricing
+                </Link>
               </div>
 
               {/* Mobile Company Section */}

@@ -441,39 +441,45 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
-      {/* RELATED */}
+      {/* RELATED SERVICES & SECTORS */}
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
       <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Find Out More</p>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-16">Related Content</h2>
-          </AnimatedSection>
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2">
-            <Link to="/sectors/homeworkers" className="group block">
-              <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <div className="aspect-video overflow-hidden">
-                  <img src={heroImg} alt="Homeworkers" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                </div>
-              </motion.div>
-              <h3 className="text-heading-3 text-foreground mt-5 mb-2 group-hover:text-primary transition-colors">Homeworkers</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-3">Work from home worry-free with Integra's robust internet solutions.</p>
-              <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                Homeworkers <ArrowRight className="h-3.5 w-3.5" />
-              </span>
-            </Link>
-            <Link to="/connectivity/home-wifi" className="group block">
-              <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <div className="aspect-video overflow-hidden">
-                  <img src={stableImg} alt="Home WiFi" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                </div>
-              </motion.div>
-              <h3 className="text-heading-3 text-foreground mt-5 mb-2 group-hover:text-primary transition-colors">Home WiFi</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-3">Experience seamless, high-speed home WiFi solutions.</p>
-              <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                Home WiFi <ArrowRight className="h-3.5 w-3.5" />
-              </span>
-            </Link>
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <div className="border-t border-border pt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Related sectors</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/sectors/rural-smes" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+                Rural SMEs
+              </Link>
+              <Link to="/sectors/construction-sites" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+                Construction Sites
+              </Link>
+              <Link to="/sectors/homeworkers" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+                Homeworkers
+              </Link>
+            </div>
+          </div>
+          <div className="border-t border-border pt-8 mt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Customer stories</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/customers/seacon-group" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
+                Seacon Group
+              </Link>
+              <Link to="/customers/wb-power-services" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
+                WB Power Services
+              </Link>
+            </div>
+          </div>
+          <div className="border-t border-border pt-8 mt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Further reading</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/alternatives-to-fibre-broadband" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
+                Alternatives to Fibre
+              </Link>
+              <Link to="/sd-wan-for-small-business" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
+                SD-WAN for Small Business
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -381,8 +381,33 @@ const WirelessDistribution = () => {
         </div>
       </Section>
 
-      {/* CTA */}
+      {/* RELATED SERVICES & SECTORS */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <div className="border-t border-border pt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Customer stories</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/customers/seacon-group" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+                Seacon Group
+              </Link>
+            </div>
+          </div>
+          <div className="border-t border-border pt-8 mt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Complementary services</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
+                Business WiFi
+              </Link>
+              <Link to="/connectivity/cctv" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
+                CCTV
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <Section size="large">
         <div className="text-center">
           <AnimatedSection>
