@@ -12,10 +12,10 @@ interface SEOProps {
   noIndex?: boolean;
 }
 
-const DEFAULT_TITLE = "NEXR | Critical Power Intelligence";
-const DEFAULT_DESCRIPTION = "Real-time visibility, early warnings, and operational clarity for critical power generators. Failure is optional when you pay attention early.";
-const DEFAULT_IMAGE = "https://nexr-iot.co.uk/favicon.png";
-const SITE_URL = "https://nexr-iot.co.uk";
+const DEFAULT_TITLE = "Integra Networks | Business-Grade Connectivity";
+const DEFAULT_DESCRIPTION = "Managed connectivity and SD-WAN solutions for businesses across the UK. 4G/5G bonding, Starlink, WiFi, and leased lines — installed in under 14 days.";
+const DEFAULT_IMAGE = "https://www.integra-networks.co.uk/og-image.png";
+const SITE_URL = "https://www.integra-networks.co.uk";
 
 const SEO = ({
   title,
@@ -28,7 +28,7 @@ const SEO = ({
   author,
   noIndex = false,
 }: SEOProps) => {
-  const pageTitle = title ? `${title} | NEXR` : DEFAULT_TITLE;
+  const pageTitle = title ? `${title} | Integra Networks` : DEFAULT_TITLE;
   const canonicalUrl = url ? `${SITE_URL}${url}` : SITE_URL;
 
   return (
@@ -45,7 +45,7 @@ const SEO = ({
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="NEXR" />
+      <meta property="og:site_name" content="Integra Networks" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -64,7 +64,7 @@ const SEO = ({
 
       {/* Additional SEO */}
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-      <meta name="author" content={author || "NEXR"} />
+      <meta name="author" content={author || "Integra Networks"} />
     </Helmet>
   );
 };

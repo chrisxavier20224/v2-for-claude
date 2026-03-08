@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.jpg";
 
@@ -17,13 +17,15 @@ const sectorLinks = [
 ];
 
 const connectivityLinks = [
-  { label: "Integra SD-WAN", path: "/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
-  { label: "Integra Bridge", path: "/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
+  { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
+  { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
   { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Premium Business-Grade Fibre" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "PSTN Transition Solutions" },
   { type: "divider" },
   { label: "Business WiFi", path: "/connectivity/business-wifi", icon: Wifi, tagline: "High-Speed WiFi Solutions" },
   { label: "Home WiFi", path: "/connectivity/home-wifi", icon: Home, tagline: "Reliable Home Connectivity" },
+  { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite Internet Setup" },
+  { label: "CCTV", path: "/connectivity/cctv", icon: Camera, tagline: "Monitored Camera Systems" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution", icon: Radio, tagline: "Multi-Building Wireless Links" },
   { type: "divider" },
   { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration Platform" },
@@ -59,7 +61,7 @@ const Navbar = () => {
   const [connectivityOpen, setConnectivityOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
-  const isDarkNav = location.pathname === "/integra-bridge";
+  const isDarkNav = location.pathname === "/connectivity/integra-bridge";
   
   const isSectorPath = sectorLinks.some(s => location.pathname === s.path);
   const isConnectivityPath = connectivityLinks.some(c => location.pathname === c.path);

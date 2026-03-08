@@ -171,8 +171,12 @@ const App = () => (
               <Route path="/connectivity/starlink-installation" element={<StarlinkInstallation />} />
               <Route path="/connectivity/cctv" element={<CCTV />} />
               <Route path="/connectivity/wireless-distribution" element={<WirelessDistribution />} />
-              <Route path="/integra-sd-wan" element={<IntegraSDWAN />} />
-              <Route path="/integra-bridge" element={<IntegraBridge />} />
+              <Route path="/connectivity/integra-sd-wan" element={<IntegraSDWAN />} />
+              <Route path="/connectivity/integra-bridge" element={<IntegraBridge />} />
+
+              {/* Redirect old routes to new paths */}
+              <Route path="/integra-sd-wan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />
+              <Route path="/integra-bridge" element={<Navigate to="/connectivity/integra-bridge" replace />} />
 
               <Route path="/resources" element={<Resources />} />
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />

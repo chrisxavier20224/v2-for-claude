@@ -5,18 +5,28 @@ import integraLogo from "@/assets/integra-logo.svg";
 
 
 const connectivityLinks = [
+  { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan" },
+  { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
   { label: "Leased Lines", path: "/connectivity/leased-lines" },
-  { label: "Unified Communications", path: "/connectivity/unified-communications" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
   { label: "Business WiFi", path: "/connectivity/business-wifi" },
   { label: "Home WiFi", path: "/connectivity/home-wifi" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation" },
+  { label: "CCTV", path: "/connectivity/cctv" },
+  { label: "Wireless Distribution", path: "/connectivity/wireless-distribution" },
+  { label: "Unified Communications", path: "/connectivity/unified-communications" },
 ];
 
 const companyLinks = [
   { label: "Customer Stories", path: "/customers" },
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
+];
+
+const resourceLinks = [
+  { label: "About", path: "/about" },
+  { label: "Availability Checker", path: "/availability-checker" },
+  { label: "Resources", path: "/resources" },
 ];
 
 
@@ -77,7 +87,7 @@ const Footer = () => {
       {/* MAIN FOOTER */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-6 py-12">
-          <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
+          <div className="grid gap-8 grid-cols-2 md:grid-cols-5">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <Link to="/" className="flex items-center mb-4">
@@ -87,7 +97,7 @@ const Footer = () => {
                 Managed connectivity and IoT solutions for businesses across the UK.
               </p>
             </div>
-            
+
             {/* Connectivity */}
             <div>
               <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Connectivity</h4>
@@ -101,7 +111,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            
+
             {/* Company */}
             <div>
               <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Company</h4>
@@ -115,17 +125,31 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            
+
+            {/* Resources */}
+            <div>
+              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Resources</h4>
+              <ul className="space-y-2">
+                {resourceLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link to={link.path} className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Contact */}
             <div>
               <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Get in Touch</h4>
               <a href="mailto:connect@integra-networks.co.uk" className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors block mb-1">connect@integra-networks.co.uk</a>
               <a href="tel:02033887111" className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors block mb-4">0203 388 7111</a>
-              
+
               {/* Social Icons */}
               <div className="flex items-center gap-4 mb-4">
                 {socialLinks.map((social) => (
-                  <a 
+                  <a
                     key={social.label}
                     href={social.href}
                     target="_blank"
@@ -137,7 +161,7 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-              
+
               <p className="text-sm text-surface-dark-muted">86–90 Paul Street</p>
               <p className="text-sm text-surface-dark-muted">London, EC2A 4NE</p>
             </div>
