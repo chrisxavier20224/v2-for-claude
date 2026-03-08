@@ -25,7 +25,7 @@ const purpose = [
     title: "We monitor before you notice",
     icon: Shield,
     description: "Prevention over reaction",
-    detail: "Nimbus watches every connection 24/7. If something drops, we're usually fixing it before you've picked up the phone."
+    detail: "Our monitoring platform watches every connection 24/7. If something drops, we're usually fixing it before you've picked up the phone."
   },
   {
     title: "We install it properly",
@@ -65,7 +65,7 @@ const securityPractices = [
 const partners = [
   { category: "Network Hardware", items: ["Integra SD-WAN Hardware", "Integra Managed WiFi", "Commercial-Grade Access Points", "Enterprise Routers & Switches"] },
   { category: "Connectivity", items: ["EE / BT", "Vodafone", "Three", "O2 / Virgin Media"] },
-  { category: "Services", items: ["Starlink (SpaceX)", "Microsoft Teams", "VoIP providers", "Nimbus monitoring"] },
+  { category: "Services", items: ["Starlink (SpaceX)", "Microsoft Teams", "VoIP providers", "24/7 Network Monitoring"] },
 ];
 
 const About = () => {

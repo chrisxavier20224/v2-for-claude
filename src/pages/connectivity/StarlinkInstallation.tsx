@@ -23,9 +23,9 @@ const StarlinkInstallation = () => {
   return (
     <PageLayout>
       <SEO
-        title="Starlink Installation — Starlink Meets Reliability with 4G Failover"
-        description="Keep your Starlink. Add 4G failover for £80/month. No more rain drops. 99.5% uptime SLA. Professional installation by certified network engineers."
-        keywords="Starlink installation, Starlink installer, Starlink SD-WAN, Starlink failover, Starlink static IP, satellite internet, Starlink 4G backup"
+        title="Starlink Installation — Starlink Meets Reliability with 4G/5G Failover"
+        description="Keep your Starlink. Add 4G/5G failover for £80/month. No more rain drops. 99.5% uptime SLA. Professional installation by certified network engineers."
+        keywords="Starlink installation, Starlink installer, Starlink SD-WAN, Starlink failover, Starlink static IP, satellite internet, Starlink 4G/5G backup"
         url="/connectivity/starlink-installation"
       />
 
@@ -46,7 +46,7 @@ const StarlinkInstallation = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Starlink meets reliability.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              You've got Starlink or you're thinking about it. We know its weakness: it drops in rain. We've fixed it. Keep your Starlink. Add our 4G failover. Done.
+              You've got Starlink or you're thinking about it. We know its weakness: it drops in rain. We've fixed it. Keep your Starlink. Add our 4G/5G failover. Done.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -66,7 +66,7 @@ const StarlinkInstallation = () => {
               What Starlink gets right. What it doesn't.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Starlink delivers 50-150Mbps almost anywhere — impressive for rural locations. But heavy rain degrades signal, latency spikes disrupt VoIP calls, and there's no SLA. Our solution: add 4G cellular as automatic failover. When Starlink drops, you switch in 100ms.
+              Starlink delivers 50-150Mbps almost anywhere — impressive for rural locations. But heavy rain degrades signal, latency spikes disrupt VoIP calls, and there's no SLA. Our solution: add 4G/5G cellular as automatic failover. When Starlink drops, you switch in 100ms.
             </p>
           </AnimatedSection>
         </div>
@@ -83,7 +83,7 @@ const StarlinkInstallation = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">What happens on install day.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our engineer arrives, mounts your Starlink dish (if you haven't already), installs the 4G modem and our router, tests both connections, and configures SD-WAN settings. Typically 4 hours, and you're online. We then monitor both connections 24/7.
+              Our engineer arrives, mounts your Starlink dish (if you haven't already), installs the 4G/5G modem and our router, tests both connections, and configures SD-WAN settings. Typically 4 hours, and you're online. We then monitor both connections 24/7.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -107,7 +107,7 @@ const StarlinkInstallation = () => {
             <div className="text-right">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">What you gain by adding us.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                Rain no longer drops you offline — switches to 4G automatically. Latency stays stable at 20-30ms average. Support via phone and WhatsApp in 2-4 hours, not email in 48-72. Plus a 99.5% uptime SLA that Starlink alone can't offer.
+                Rain no longer drops you offline — switches to 4G/5G automatically. Latency stays stable at 20-30ms average. Support via phone and WhatsApp in 2-4 hours, not email in 48-72. Plus a 99.5% uptime SLA that Starlink alone can't offer.
               </p>
             </div>
           </AnimatedSection>
@@ -150,7 +150,7 @@ const StarlinkInstallation = () => {
             <AnimatedSection className="order-1 lg:order-2">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">The simple version.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-6">
-                Your Starlink dish delivers 50-150Mbps. We add a 4G modem on a second network. Our router talks to both and routes traffic to whichever is better. If Starlink drops, it switches to 4G instantly. You get speed from Starlink, reliability from cellular, one connection to your devices.
+                Your Starlink dish delivers 50-150Mbps. We add a 4G/5G modem on a second network. Our router talks to both and routes traffic to whichever is better. If Starlink drops, it switches to 4G/5G instantly. You get speed from Starlink, reliability from cellular, one connection to your devices.
               </p>
               <motion.ul className="space-y-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
                 {sdwanBenefits.map((item) => (
@@ -171,7 +171,7 @@ const StarlinkInstallation = () => {
         <div className="text-center">
           <AnimatedSection>
             <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Add Starlink reliability.</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Keep your Starlink. Add 4G failover for £80/month. No more rain drops. 99.5% uptime SLA.</p>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Keep your Starlink. Add 4G/5G failover for £80/month. No more rain drops. 99.5% uptime SLA.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

@@ -29,7 +29,7 @@ const painPoints = [
   {
     icon: Clock,
     title: "Card Machines Dropping at the Worst Times?",
-    description: "Dual-network redundancy means if one 4G network drops, your traffic instantly moves to the other. Card machines, VoIP, EPOS — they stay online.",
+    description: "Dual-network redundancy means if one 4G/5G network drops, your traffic instantly moves to the other. Card machines, VoIP, EPOS — they stay online.",
   },
 ];
 
@@ -116,7 +116,7 @@ const RuralSMEs = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Copper is dead. Replace it properly.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The UK PSTN network switches off January 2027 — your analogue lines are going away regardless. Our cellular SD-WAN replaces copper with two bonded 4G connections delivering up to 350Mbps. No more copper. No more contention. No more excuses from your ISP.
+              The UK PSTN network switches off January 2027 — your analogue lines are going away regardless. Our cellular SD-WAN replaces copper with two bonded 4G/5G connections delivering up to 350Mbps. No more copper. No more contention. No more excuses from your ISP.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -157,7 +157,7 @@ const RuralSMEs = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Card machines that never go down.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our dual-network SD-WAN uses two different 4G operators simultaneously. If one network has an issue, your traffic automatically fails over to the other in milliseconds. Your customers never see a "card machine offline" sign again.
+              Our dual-network SD-WAN uses two different 4G/5G operators simultaneously. If one network has an issue, your traffic automatically fails over to the other in milliseconds. Your customers never see a "card machine offline" sign again.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

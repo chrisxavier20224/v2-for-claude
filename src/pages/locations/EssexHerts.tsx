@@ -18,11 +18,11 @@ const EssexHerts = () => {
   const faqs = [
     {
       q: "I'm near Stansted Airport area. Can you reach me?",
-      a: "Yes. The Stansted corridor has excellent EE and Vodafone coverage. We've completed multiple installations in villages around the airport—Saffron Walden, Takeley, Great Dunmow. Bonded 4G typically delivers 200-250Mbps. Send us your coordinates and we'll confirm coverage within 24 hours.",
+      a: "Yes. The Stansted corridor has excellent EE and Vodafone coverage. We've completed multiple installations in villages around the airport—Saffron Walden, Takeley, Great Dunmow. Bonded 4G/5G typically delivers 200-250Mbps. Send us your coordinates and we'll confirm coverage within 24 hours.",
     },
     {
       q: "How much does a typical Essex or Herts installation cost?",
-      a: "Installation is £2,200. Monthly service is £135/month for Integra Pro (bonded 4G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or engineer callout charges.",
+      a: "Installation is £2,200. Monthly service is £135/month for Integra Pro (bonded 4G/5G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or engineer callout charges.",
     },
     {
       q: "What if my property has weak mobile signal?",
@@ -34,7 +34,7 @@ const EssexHerts = () => {
     },
     {
       q: "What happens if I'm temporarily without broadband?",
-      a: "We offer a failover service. If your primary connection drops, traffic automatically reroutes to a backup network. For Enterprise customers, this is included in your £400/month SLA service. For others, it's available as an add-on. Most rural properties on Integra Pro experience 99.5%+ uptime because bonded 4G provides built-in redundancy.",
+      a: "We offer a failover service. If your primary connection drops, traffic automatically reroutes to a backup network. For Enterprise customers, this is included in your £400/month SLA service. For others, it's available as an add-on. Most rural properties on Integra Pro experience 99.5%+ uptime because bonded 4G/5G provides built-in redundancy.",
     },
   ];
 
@@ -42,7 +42,7 @@ const EssexHerts = () => {
     <PageLayout>
       <SEO
         title="Rural Broadband Essex & Hertfordshire | Integra Networks"
-        description="Reliable broadband for Essex, Hertfordshire, and west Suffolk. Integra Pro bonded 4G, Starlink solutions. Strong local customer base. Fast 14-day installation."
+        description="Reliable broadband for Essex, Hertfordshire, and west Suffolk. Integra Pro bonded 4G/5G, Starlink solutions. Strong local customer base. Fast 14-day installation."
         keywords="rural broadband Essex, Hertfordshire internet, broadband Bishop's Stortford, Saffron Walden, Stansted broadband, rural connectivity"
         url="/locations/rural-broadband-essex-hertfordshire"
       />
@@ -117,7 +117,7 @@ const EssexHerts = () => {
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Integra Pro (Bonded 4G)
+                  Integra Pro (Bonded 4G/5G)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Essex and Hertfordshire have excellent EE and Vodafone coverage. We bond both networks, delivering redundancy and speed.
@@ -132,10 +132,10 @@ const EssexHerts = () => {
                   Starlink SD-WAN
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Properties with southern sky visibility can run Starlink + 4G backup. This gives you Starlink's speed plus cellular's reliability.
+                  Properties with southern sky visibility can run Starlink + 4G/5G backup. This gives you Starlink's speed plus cellular's reliability.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  100-150Mbps downloads plus automatic failover to 4G.
+                  100-150Mbps downloads plus automatic failover to 4G/5G.
                 </p>
               </div>
 
@@ -190,7 +190,7 @@ const EssexHerts = () => {
               <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Integra Pro (bonded 4G)</span>
+                  <span>Integra Pro (bonded 4G/5G)</span>
                   <span className="font-semibold text-foreground">£135/month</span>
                 </div>
                 <div className="flex justify-between">

@@ -18,7 +18,7 @@ const London = () => {
   const faqs = [
     {
       q: "Can you provide broadband for temporary construction sites across London?",
-      a: "Yes. We specialize in fast deployment for temporary sites—City construction, Canary Wharf projects, Stratford developments, Croydon office builds. We can have equipment installed within 48-72 hours for urgent sites. Bonded 4G delivers reliable speeds (150-280Mbps) without needing fixed infrastructure.",
+      a: "Yes. We specialize in fast deployment for temporary sites—City construction, Canary Wharf projects, Stratford developments, Croydon office builds. We can have equipment installed within 48-72 hours for urgent sites. Bonded 4G/5G delivers reliable speeds (150-280Mbps) without needing fixed infrastructure.",
     },
     {
       q: "What about site cabins and temporary office locations?",
@@ -126,7 +126,7 @@ const London = () => {
                   Integra Pro (Fast Deployment)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Bonded 4G cellular connectivity. Excellent coverage across London's urban and semi-urban areas, including major construction zones.
+                  Bonded 4G/5G cellular connectivity. Excellent coverage across London's urban and semi-urban areas, including major construction zones.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
                   Deploy in 48-72 hours. 150-280Mbps speeds. No fixed infrastructure needed. Month-to-month terms.
@@ -197,7 +197,7 @@ const London = () => {
               <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Integra Pro (bonded 4G)</span>
+                  <span>Integra Pro (bonded 4G/5G)</span>
                   <span className="font-semibold text-foreground">£135/month</span>
                 </div>
                 <div className="flex justify-between">

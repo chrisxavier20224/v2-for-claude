@@ -63,7 +63,7 @@ const solutions = [
       "Upload speeds of 80–120Mbps transform video calls and cloud backups",
       "Weather doesn't affect cellular signal like satellite",
       "Professional install with commercial-grade Integra hardware",
-      "24/7 monitoring via Nimbus platform",
+      "24/7 monitoring via Integra Cloud",
     ],
     cons: [
       "Higher monthly cost than Starlink or basic broadband",
@@ -139,7 +139,7 @@ const solutions = [
     pros: [
       "Two completely independent networks — if one fails, you're still online",
       "Starlink provides base speed, cellular adds failover and lower latency",
-      "Professional monitoring watches both paths via Nimbus",
+      "Professional monitoring watches both paths 24/7",
       "Weather impacts Starlink? Traffic automatically routes to cellular",
       "Total cost ~£180–210/month vs £400+ for a leased line",
     ],
@@ -462,7 +462,7 @@ const AlternativesToFibre = () => {
                 Starlink alone leaves you exposed. A single rainstorm, a dish failure, or temporary maintenance from Starlink's constellation leaves you offline with zero contingency.
               </p>
               <p>
-                Cellular bonding addresses that by design. Two independent paths. Professional monitoring via Nimbus. Automatic failover. Human support when things go wrong.
+                Cellular bonding addresses that by design. Two independent paths. Professional 24/7 monitoring. Automatic failover. Human support when things go wrong.
               </p>
               <p className="font-medium text-foreground">
                 It's the difference between connectivity and business continuity. Choose accordingly.

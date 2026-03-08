@@ -22,7 +22,7 @@ const Kent = () => {
     },
     {
       q: "What speeds are typical for rural Kent properties?",
-      a: "Integra Pro (bonded 4G) typically delivers 150-280Mbps depending on proximity to EE and Vodafone towers. Kent has good network coverage across most rural areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to EE and Vodafone towers. Kent has good network coverage across most rural areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
     },
     {
       q: "My property is near Ashford or Folkestone. How quickly can you reach me?",
@@ -34,7 +34,7 @@ const Kent = () => {
     },
     {
       q: "Is Starlink suitable for farm operations?",
-      a: "Starlink alone can work for basic needs, but it has limitations for farming businesses: higher latency (affects real-time monitoring systems), weather sensitivity (rain impact), and moderate upload speeds. We recommend Integra Pro (bonded 4G) or Starlink SD-WAN (Starlink plus 4G backup) for Kent farm operations needing reliability.",
+      a: "Starlink alone can work for basic needs, but it has limitations for farming businesses: higher latency (affects real-time monitoring systems), weather sensitivity (rain impact), and moderate upload speeds. We recommend Integra Pro (bonded 4G/5G) or Starlink SD-WAN (Starlink plus 4G/5G backup) for Kent farm operations needing reliability.",
     },
   ];
 
@@ -117,7 +117,7 @@ const Kent = () => {
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Integra Pro (Bonded 4G for Farmers)
+                  Integra Pro (Bonded 4G/5G for Farmers)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   We bond EE and Vodafone across Kent's rural areas. This provides redundancy: if one network drops, the other handles traffic automatically.
@@ -144,7 +144,7 @@ const Kent = () => {
                   Starlink SD-WAN (Best of Both)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  For properties with southern sky visibility, combine Starlink (speed) with our 4G backup (reliability). Automatic failover if Starlink drops in rain.
+                  For properties with southern sky visibility, combine Starlink (speed) with our 4G/5G backup (reliability). Automatic failover if Starlink drops in rain.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
                   Ideal for exposed hilltop farms with excellent Starlink sightlines.
@@ -190,7 +190,7 @@ const Kent = () => {
               <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Integra Pro (bonded 4G)</span>
+                  <span>Integra Pro (bonded 4G/5G)</span>
                   <span className="font-semibold text-foreground">£135/month</span>
                 </div>
                 <div className="flex justify-between">

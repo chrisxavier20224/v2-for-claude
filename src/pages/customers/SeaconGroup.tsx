@@ -34,14 +34,14 @@ const SeaconGroup = () => {
     <PageLayout>
       <SEO
         title="Seacon Group Case Study — Integra Networks"
-        description="How Integra's SD-WAN solution transformed connectivity for Seacon Group's port and logistics operations at Northfleet."
-        keywords="case study, Seacon Group, SD-WAN, connectivity, port logistics, Integra Networks"
+        description="How Integra delivered comprehensive SD-WAN, wireless point-to-point links, enterprise WiFi, and full surveillance coverage for Seacon Group's Port of Tilbury operations."
+        keywords="case study, Seacon Group, SD-WAN, WiFi, CCTV, wireless, port logistics, Integra Networks"
         url="/customers/seacon-group"
       />
 
       <section className="relative min-h-[85vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Seacon Group port operations at Northfleet" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Seacon Group port operations at Port of Tilbury" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -57,9 +57,9 @@ const SeaconGroup = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Docking into the Digital Age: Seacon Group's Connectivity Overhaul</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Port Operations Transformed: Integra's Comprehensive Connectivity Solution for Seacon</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              Integra's SD-WAN solution delivered high-speed, resilient connectivity to Seacon Group's busy port operations at Northfleet in the Port of London.
+              Integra delivered comprehensive connectivity across Port of Tilbury, combining SD-WAN, wireless point-to-point links, enterprise WiFi, and full surveillance coverage for seamless port operations.
             </p>
           </AnimatedSection>
         </div>
@@ -85,7 +85,7 @@ const SeaconGroup = () => {
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">Description</p>
               <p className="text-surface-dark-foreground max-w-2xl">
-                Founded in 1955, Seacon Group offers door-to-door transport solutions specialising in neo-bulk cargoes including steel, metals and forest products, operating specialist ships and handling facilities at Northfleet in the Port of London.
+                Founded in 1955, Seacon Group offers door-to-door transport solutions specialising in neo-bulk cargoes including steel, metals and forest products, operating specialist handling facilities and ships at multiple ports nationwide, including Port of Tilbury.
               </p>
             </div>
           </AnimatedSection>
@@ -98,22 +98,28 @@ const SeaconGroup = () => {
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">
-              The Challenge: Keeping a Port Connected
+              The Challenge: Scaling Connectivity Across a Major Port Transformation
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Seacon Group's operations at Northfleet span multiple berths, warehouses and office buildings spread across a large port estate. Reliable, high-speed connectivity is critical — from coordinating vessel arrivals to managing cargo logistics and real-time inventory tracking.
+              Seacon Group's operations at Port of Tilbury underwent significant expansion when the port authority assumed operations of part of their primary facility. Seacon relocated their cargo handling operations to a 230-meter by 40-meter warehouse while maintaining their offices in the original portacabin location. This meant establishing reliable, high-speed connectivity across a sprawling industrial site — connecting offices to the warehouse, enabling real-time inventory tracking, coordinating logistics operations, and maintaining security surveillance across the entire facility.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              The challenge was multifaceted. Fibre connectivity to the new warehouse was not available from the port authority's infrastructure, and traditional fibre installation would have required months of planning and substantial construction costs. The site demanded comprehensive coverage: wireless connectivity across the massive warehouse floor for mobile operations, secure point-to-point links between buildings for critical systems, and full CCTV surveillance covering all warehouse entries, internal aisles, and office perimeters.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              However, the port's industrial location and sprawling infrastructure made traditional connectivity solutions impractical. Fibre installation quotes came with lengthy lead times and significant excess construction charges, while existing services struggled to meet the bandwidth demands of modern port operations.
+              Additionally, Seacon needed to extend connectivity to other port locations that similarly lacked fibre availability — requiring a solution that could scale across multiple sites without the constraints of traditional infrastructure deployments.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">
-              Bridging the Connectivity Gap
+              Designing a Complete Connectivity Ecosystem
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              With operations running around the clock and an increasing reliance on digital systems for cargo management, vessel scheduling and compliance reporting, Seacon needed a solution that could be deployed quickly without disrupting their busy port operations.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Seacon required more than just internet connectivity — they needed a comprehensive infrastructure supporting operations, security, and mobility. The solution had to support continuous port operations without disruption, handle demanding real-time applications across multiple locations, and provide the security monitoring essential for modern logistics.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              The scale was significant: 230 meters of warehouse coverage, equipment spread across multiple buildings, comprehensive camera systems, and the need to maintain reliable connections across sites without dedicated fibre infrastructure. Speed of deployment was critical — every day of delayed connectivity affected cargo handling operations and logistics coordination.
             </p>
           </AnimatedSection>
 
@@ -125,7 +131,7 @@ const SeaconGroup = () => {
             >
               <img
                 src={terminalsImg}
-                alt="Seacon Terminals at Northfleet showing the covered berth facility"
+                alt="Port of Tilbury warehouse facility showing the scale of Seacon operations"
                 className="w-full h-auto object-cover aspect-video"
                 loading="lazy"
               />
@@ -141,7 +147,7 @@ const SeaconGroup = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "Integra delivered exactly what we needed — fast, reliable connectivity across our entire port estate, deployed without any disruption to our operations."
+              "Integra delivered a complete solution — not just connectivity, but full wireless coverage and comprehensive security across our entire warehouse. The system was deployed seamlessly without disrupting operations, and it's been rock-solid from day one."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">
               Operations Director, Seacon Group
@@ -156,13 +162,19 @@ const SeaconGroup = () => {
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">
-              The Solution: SD-WAN Across the Port Estate
+              The Solution: Integrated Infrastructure for Enterprise Port Operations
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra deployed its SD-WAN solution across Seacon's Northfleet site, bonding multiple 4G and 5G connections to deliver resilient, high-speed connectivity to every building on the estate. Point-to-point radio links connected the berths, warehouses and offices into a single unified network.
+              Integra deployed a comprehensive, multi-layered solution combining primary connectivity, wireless infrastructure, and security systems into a single managed ecosystem. The architecture was engineered to overcome the absence of fibre infrastructure while delivering enterprise-grade reliability.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              SD-WAN formed the backbone, providing primary connectivity to Seacon's offices and extending to other port locations that similarly lacked fibre availability. To bridge the gap between the relocated warehouse and the office portacabin, Integra implemented a high-capacity V Band point-to-point wireless link with clear line-of-sight between buildings. This dedicated link carried critical systems traffic with VLAN segmentation, ensuring that both Seacon and visiting logistics partners maintained secure, isolated network connections. Intelligent switches at each end managed traffic efficiently, maintaining the performance standards required for real-time operations.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              For warehouse operations, Integra designed a comprehensive WiFi infrastructure spanning the entire 230-meter facility. The system included 14 internal access points and 2 external APs, all professionally cabled to two redundant switch cabinets utilizing approximately 800 meters of commercial-grade Ethernet cabling. This distributed architecture ensured consistent coverage across the warehouse floor, enabling mobile operations, equipment tracking, and real-time inventory management without connectivity gaps.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The result was transformative — Seacon gained robust connectivity across their entire operation, enabling real-time cargo tracking, seamless VoIP communications, and reliable access to cloud-based logistics platforms. The deployment was completed in days rather than months, with zero downtime to port operations.
+              Security surveillance was equally comprehensive. A full CCTV system provided coverage of all four warehouse entries—both internal and external views—main internal aisles, and office perimeters. High-quality varifocal cameras with infrared capability enabled clear monitoring in all lighting conditions, while a 16-channel digital video recorder with approximately 550 meters of external-grade Ethernet cabling ensured reliable, persistent recording of all facility access points. All systems were professionally integrated and centrally managed, delivering the persistent security oversight essential for modern port logistics operations.
             </p>
           </AnimatedSection>
         </div>

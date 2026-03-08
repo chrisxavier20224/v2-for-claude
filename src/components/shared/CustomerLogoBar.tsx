@@ -2,18 +2,30 @@ import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import mcgeeLogo from "@/assets/case-studies/mcgee-logo.png";
+import seaconLogo from "@/assets/case-studies/seacon-logo.jpg";
+import wbPowerLogo from "@/assets/case-studies/wb-power-logo.png";
+import ukHarvestLogo from "@/assets/case-studies/uk-harvest-logo.png";
+import apjEuropeanLogo from "@/assets/case-studies/apj-european-logo.png";
+import aturaProteinsLogo from "@/assets/case-studies/atura-proteins-logo.png";
+import royleFarmLogo from "@/assets/case-studies/royle-farm-business-park-logo.png";
+import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo.png";
+import thinkingAnglersLogo from "@/assets/case-studies/thinking-anglers-logo.png";
+import littleQuarryLogo from "@/assets/case-studies/little-quarry-glamping-logo.png";
+import wsraLogo from "@/assets/case-studies/wsra-steam-rally-logo.png";
 
 const customers = [
-  { name: "McGee Group", link: "/customers/mcgee-construction", logo: "" },
-  { name: "Seacon Group", link: "/customers/seacon-group", logo: "" },
-  { name: "WB Power Services", link: "/customers/wb-power-services", logo: "" },
-  { name: "UK Harvest", link: "/customers/uk-harvest", logo: "" },
-  { name: "APJ European", link: "/customers/apj-european", logo: "" },
-  { name: "Atura Proteins", link: "/customers/atura-proteins", logo: "" },
-  { name: "Royle Farm", link: "/customers/royle-farm", logo: "" },
-  { name: "Royal Harwich YC", link: "/customers/royal-harwich-yacht-club", logo: "" },
-  { name: "Thinking Anglers", link: "/customers/thinking-anglers", logo: "" },
-  { name: "Carbee", link: "/customers/carbee", logo: "" },
+  { name: "McGee Group", link: "/customers/mcgee-construction", logo: mcgeeLogo },
+  { name: "Seacon Group", link: "/customers/seacon-group", logo: seaconLogo },
+  { name: "WB Power Services", link: "/customers/wb-power-services", logo: wbPowerLogo },
+  { name: "UK Harvest", link: "/customers/uk-harvest", logo: ukHarvestLogo },
+  { name: "APJ European", link: "/customers/apj-european", logo: apjEuropeanLogo },
+  { name: "Atura Proteins", link: "/customers/atura-proteins", logo: aturaProteinsLogo },
+  { name: "Royle Farm", link: "/customers/royle-farm", logo: royleFarmLogo },
+  { name: "Royal Harwich YC", link: "/customers/royal-harwich-yacht-club", logo: rhycLogo },
+  { name: "Thinking Anglers", link: "/customers/thinking-anglers", logo: thinkingAnglersLogo },
+  { name: "Little Quarry Glamping", link: "/customers/little-quarry-glamping", logo: littleQuarryLogo },
+  { name: "WSRA Steam Rally", link: "/customers/wsra-steam-rally", logo: wsraLogo },
 ];
 
 const CustomerLogoBar = () => {

@@ -22,7 +22,7 @@ const SussexSurrey = () => {
     },
     {
       q: "What speeds can I expect in Sussex or Surrey?",
-      a: "Integra Pro (bonded 4G) typically delivers 150-280Mbps depending on proximity to cell towers. Properties around Crawley and Guildford have excellent coverage. Starlink adds 100-150Mbps for areas with southern sky visibility. We test actual speeds at your property before you commit—not theoretical numbers.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Properties around Crawley and Guildford have excellent coverage. Starlink adds 100-150Mbps for areas with southern sky visibility. We test actual speeds at your property before you commit—not theoretical numbers.",
     },
     {
       q: "How quickly can you install at my Surrey property?",
@@ -117,7 +117,7 @@ const SussexSurrey = () => {
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Integra Pro (Discrete Bonded 4G)
+                  Integra Pro (Discrete Bonded 4G/5G)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   We bond EE and Vodafone (or other networks depending on your location). Sussex and Surrey have excellent multi-network coverage.
@@ -129,13 +129,13 @@ const SussexSurrey = () => {
 
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Starlink with 4G Backup
+                  Starlink with 4G/5G Backup
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Properties with southern sky visibility can run Starlink (premium speed) with our 4G backup for reliability. Excellent for listed buildings where pole installation is problematic.
+                  Properties with southern sky visibility can run Starlink (premium speed) with our 4G/5G backup for reliability. Excellent for listed buildings where pole installation is problematic.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  100-150Mbps downloads plus automatic failover to 4G if needed.
+                  100-150Mbps downloads plus automatic failover to 4G/5G if needed.
                 </p>
               </div>
 
@@ -193,7 +193,7 @@ const SussexSurrey = () => {
               <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Integra Pro (bonded 4G)</span>
+                  <span>Integra Pro (bonded 4G/5G)</span>
                   <span className="font-semibold text-foreground">£135/month</span>
                 </div>
                 <div className="flex justify-between">

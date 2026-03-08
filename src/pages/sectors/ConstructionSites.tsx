@@ -119,7 +119,7 @@ const ConstructionSites = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Online in days, not months.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities.
+              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -143,7 +143,7 @@ const ConstructionSites = () => {
             <div className="text-right">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">When it goes down, we pick up the phone.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                UK-based support via phone and WhatsApp, with 2-4 hour response times. We monitor your connection 24/7 via Nimbus and can fix most issues remotely before your site manager notices.
+                UK-based support via phone and WhatsApp, with 2-4 hour response times. We monitor your connection 24/7 via Integra Cloud and can fix most issues remotely before your site manager notices.
               </p>
             </div>
           </AnimatedSection>

@@ -25,12 +25,12 @@ const Yorkshire = () => {
       a: "We cover all of Yorkshire, including Sheffield, Leeds, Harrogate, Skipton, Rotherham, Doncaster, and Hull. We've completed installations across the county in both rural properties and industrial areas. If you have any mobile signal on your property, we can almost certainly deliver broadband within 14 days.",
     },
     {
-      q: "Is bonded 4G reliable for manufacturing operations?",
-      a: "Yes. Bonded 4G (Integra Pro) provides built-in redundancy: if one network drops, the other carries traffic automatically. For manufacturing and industrial operations needing guaranteed uptime, we offer Enterprise service with 99.5% SLA, priority support, and free equipment replacement.",
+      q: "Is bonded 4G/5G reliable for manufacturing operations?",
+      a: "Yes. Bonded 4G/5G (Integra Pro) provides built-in redundancy: if one network drops, the other carries traffic automatically. For manufacturing and industrial operations needing guaranteed uptime, we offer Enterprise service with 99.5% SLA, priority support, and free equipment replacement.",
     },
     {
       q: "What speeds can I expect in rural Yorkshire?",
-      a: "Integra Pro (bonded 4G) typically delivers 150-280Mbps depending on proximity to cell towers. Yorkshire has good network coverage across most rural areas and industrial sites. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your location.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Yorkshire has good network coverage across most rural areas and industrial sites. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your location.",
     },
     {
       q: "Do you support mesh WiFi and site-wide coverage?",
@@ -117,7 +117,7 @@ const Yorkshire = () => {
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Integra Pro (Bonded 4G for Business)
+                  Integra Pro (Bonded 4G/5G for Business)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   We bond EE and Vodafone across Yorkshire's rural areas, creating redundancy. If one network drops, the other handles traffic automatically.
@@ -190,7 +190,7 @@ const Yorkshire = () => {
               <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Integra Pro (bonded 4G)</span>
+                  <span>Integra Pro (bonded 4G/5G)</span>
                   <span className="font-semibold text-foreground">£135/month</span>
                 </div>
                 <div className="flex justify-between">

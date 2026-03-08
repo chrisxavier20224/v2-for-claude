@@ -37,7 +37,7 @@ const painPoints = [
 const benefitItems = [
   "Up to 350Mbps — Faster Than Most Home Fibre",
   "Full Coverage Across Every Building & Pod",
-  "24/7 Monitoring via Nimbus + WhatsApp Support",
+  "24/7 Monitoring via Integra Cloud + WhatsApp Support",
 ];
 
 const staggerContainer = {
@@ -158,7 +158,7 @@ const Airbnbs = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Installed in days. Monitored 24/7.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our engineers install your connection and WiFi in a single visit. Then we monitor it remotely via Nimbus — so if something drops while your guests are mid-stream, we're already on it.
+              Our engineers install your connection and WiFi in a single visit. Then we monitor it remotely via Integra Cloud — so if something drops while your guests are mid-stream, we're already on it.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

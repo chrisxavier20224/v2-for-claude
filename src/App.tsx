@@ -86,6 +86,8 @@ const HomeWifi = lazy(() => import("./pages/connectivity/HomeWifi"));
 const StarlinkInstallation = lazy(() => import("./pages/connectivity/StarlinkInstallation"));
 const IntegraSDWAN = lazy(() => import("./pages/connectivity/IntegraSDWAN"));
 const IntegraBridge = lazy(() => import("./pages/connectivity/IntegraBridge"));
+const CCTV = lazy(() => import("./pages/connectivity/CCTV"));
+const WirelessDistribution = lazy(() => import("./pages/connectivity/WirelessDistribution"));
 
 const queryClient = new QueryClient();
 
@@ -167,6 +169,8 @@ const App = () => (
               <Route path="/connectivity/business-wifi" element={<BusinessWifi />} />
               <Route path="/connectivity/home-wifi" element={<HomeWifi />} />
               <Route path="/connectivity/starlink-installation" element={<StarlinkInstallation />} />
+              <Route path="/connectivity/cctv" element={<CCTV />} />
+              <Route path="/connectivity/wireless-distribution" element={<WirelessDistribution />} />
               <Route path="/integra-sd-wan" element={<IntegraSDWAN />} />
               <Route path="/integra-bridge" element={<IntegraBridge />} />
 

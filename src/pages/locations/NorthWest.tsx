@@ -30,7 +30,7 @@ const NorthWest = () => {
     },
     {
       q: "Can I get speeds over 200Mbps in rural Merseyside?",
-      a: "Yes, in most areas. Bonded 4G across EE and O2 typically delivers 150-300Mbps depending on proximity to cell towers. For properties with Starlink, you'll achieve 100-150Mbps downloads. We test actual speeds at your location before confirming—not theoretical speeds.",
+      a: "Yes, in most areas. Bonded 4G/5G across EE and O2 typically delivers 150-300Mbps depending on proximity to cell towers. For properties with Starlink, you'll achieve 100-150Mbps downloads. We test actual speeds at your location before confirming—not theoretical speeds.",
     },
     {
       q: "Is there a long-term contract?",
@@ -42,7 +42,7 @@ const NorthWest = () => {
     <PageLayout>
       <SEO
         title="Rural Broadband North West | Integra Networks"
-        description="Fast, reliable broadband for Lancashire, Greater Manchester, Cheshire, Merseyside, and Cumbria. Integra Pro bonded 4G and Starlink solutions. 14-day installation."
+        description="Fast, reliable broadband for Lancashire, Greater Manchester, Cheshire, Merseyside, and Cumbria. Integra Pro bonded 4G/5G and Starlink solutions. 14-day installation."
         keywords="rural broadband North West, broadband Lancashire, Cheshire internet, Wigan broadband, Greater Manchester WiFi, rural connectivity"
         url="/locations/rural-broadband-north-west"
       />
@@ -117,7 +117,7 @@ const NorthWest = () => {
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Integra Pro (Bonded 4G)
+                  Integra Pro (Bonded 4G/5G)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   We bond EE and O2 (or O2 and Three, depending on your location). The North West has solid multi-network coverage in most rural areas.
@@ -135,7 +135,7 @@ const NorthWest = () => {
                   If you're on high ground with southern sky visibility, Starlink delivers 100-150Mbps. Perfect for Pennine hillside properties or Lake District cottages.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  We add our 4G backup for reliability—Starlink SD-WAN.
+                  We add our 4G/5G backup for reliability—Starlink SD-WAN.
                 </p>
               </div>
 
@@ -190,7 +190,7 @@ const NorthWest = () => {
               <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Integra Pro (bonded 4G)</span>
+                  <span>Integra Pro (bonded 4G/5G)</span>
                   <span className="font-semibold text-foreground">£135/month</span>
                 </div>
                 <div className="flex justify-between">

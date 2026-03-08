@@ -22,7 +22,7 @@ const Cotswolds = () => {
     },
     {
       q: "What speeds are typical for Cotswolds properties?",
-      a: "Integra Pro (bonded 4G) typically delivers 150-280Mbps depending on proximity to cell towers. The Cotswolds have solid network coverage across most areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. The Cotswolds have solid network coverage across most areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
     },
     {
       q: "Are there any conservation area constraints I should know about?",
@@ -123,7 +123,7 @@ const Cotswolds = () => {
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Integra Pro (Discreet Bonded 4G)
+                  Integra Pro (Discreet Bonded 4G/5G)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   We bond EE and Vodafone across the Cotswolds. Signal is strong in most areas around Cheltenham, Cirencester, and Stow-on-the-Wold.
@@ -135,13 +135,13 @@ const Cotswolds = () => {
 
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  Starlink with 4G Backup
+                  Starlink with 4G/5G Backup
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Properties with southern sky visibility can run Starlink (premium speed) with our 4G backup for reliability. Excellent for listed buildings where pole installation is problematic.
+                  Properties with southern sky visibility can run Starlink (premium speed) with our 4G/5G backup for reliability. Excellent for listed buildings where pole installation is problematic.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  100-150Mbps downloads plus automatic failover to 4G. No visible poles or infrastructure.
+                  100-150Mbps downloads plus automatic failover to 4G/5G. No visible poles or infrastructure.
                 </p>
               </div>
 
@@ -199,7 +199,7 @@ const Cotswolds = () => {
               <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Integra Pro (bonded 4G)</span>
+                  <span>Integra Pro (bonded 4G/5G)</span>
                   <span className="font-semibold text-foreground">£135/month</span>
                 </div>
                 <div className="flex justify-between">

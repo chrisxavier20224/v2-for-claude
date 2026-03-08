@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.jpg";
 
@@ -24,6 +24,7 @@ const connectivityLinks = [
   { type: "divider" },
   { label: "Business WiFi", path: "/connectivity/business-wifi", icon: Wifi, tagline: "High-Speed WiFi Solutions" },
   { label: "Home WiFi", path: "/connectivity/home-wifi", icon: Home, tagline: "Reliable Home Connectivity" },
+  { label: "Wireless Distribution", path: "/connectivity/wireless-distribution", icon: Radio, tagline: "Multi-Building Wireless Links" },
   { type: "divider" },
   { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration Platform" },
 ];

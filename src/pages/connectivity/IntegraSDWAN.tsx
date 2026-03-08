@@ -46,7 +46,7 @@ const features = [
     icon: Wifi,
     eyebrow: "Quick Installation",
     title: "Installed in Under 14 Days",
-    description: "Our engineer arrives, tests 4G signal from nearby towers, mounts radios, installs our commercial-grade router, and connects to your network. You're online same day.",
+    description: "Our engineer arrives, tests 4G/5G signal from nearby towers, mounts radios, installs our commercial-grade router, and connects to your network. You're online same day.",
     img: installImg,
     imgAlt: "Quick SD-WAN installation",
     reverse: true,
@@ -55,7 +55,7 @@ const features = [
     icon: Shield,
     eyebrow: "Always-On Connectivity",
     title: "Dual-Network Redundancy",
-    description: "Two 4G connections from different operators (O2, Vodafone, EE, Three). If one drops, the other takes over instantly. 99.5% uptime SLA — not 'best effort'.",
+    description: "Two 4G/5G connections from different operators (O2, Vodafone, EE, Three). If one drops, the other takes over instantly. 99.5% uptime SLA — not 'best effort'.",
     img: stableImg,
     imgAlt: "Stable internet connectivity",
     reverse: false,
@@ -79,7 +79,7 @@ const features = [
 ];
 
 const testimonials = [
-  { name: "Jason Jones", date: "4th April 2023", text: "Finally, a solution that works. We live in a rural area without viable fibre options, and too far from the cabinet for useful speeds over copper. After living with Starlink for a year we switched to a bonded 4G solution from Integra. Their installation engineer took great care to identify the best networks and optimise our speeds. We finally have a very stable, reliable and fast connection." },
+  { name: "Jason Jones", date: "4th April 2023", text: "Finally, a solution that works. We live in a rural area without viable fibre options, and too far from the cabinet for useful speeds over copper. After living with Starlink for a year we switched to a bonded 4G/5G solution from Integra. Their installation engineer took great care to identify the best networks and optimise our speeds. We finally have a very stable, reliable and fast connection." },
   { name: "Lex Butler", date: "14th July 2022", text: "Having lived in the rural country for 12 years, I have always struggled to get any decent internet. Finding Integra was life-changing. They were quick to respond, professional and seamlessly got me up and running in no time. On the day of installation, the team was polite, discreet and hard working. I finally have great internet!" },
   { name: "Andrew Briggs", date: "2nd March 2022", text: "We have been so impressed by Integra Networks... from initial enquiry, to installation and a year on, backup service, all absolutely faultless. They have enabled us to set up business in a very remote area where the best BT could offer was 0.1mps. Thanks to Integra, we enjoy up to 100mps, and have never once lost signal or service." },
   { name: "Sonja Wilmink", date: "26th Feb 2023", text: "From having had only 11mbps of internet speed to over 100mbps most days has made a huge difference to our use of the internet. We did not have to wait long for the installation (about 2 weeks) and the work was carried out fast and efficiently. It has been a pleasure dealing with Integra." },
@@ -116,8 +116,8 @@ const IntegraSDWAN = () => {
     <PageLayout>
       <SEO
         title="Integra SD-WAN — Up to 350Mbps Cellular Broadband in 14 Days"
-        description="Pure cellular. Pure reliability. Two 4G connections bonded into one. Up to 350Mbps. 100Mbps+ upload. 20-30ms latency. Better than Starlink for serious work. £99-400/month."
-        keywords="SD-WAN, rural broadband, bonded 4G, 5G internet, no fibre, fast internet, rural connectivity, cellular broadband, Integra Networks"
+        description="Pure cellular. Pure reliability. Two 4G/5G connections bonded into one. Up to 350Mbps. 100Mbps+ upload. 20-30ms latency. Better than Starlink for serious work. £99-400/month."
+        keywords="SD-WAN, rural broadband, bonded 4G/5G, 5G internet, no fibre, fast internet, rural connectivity, cellular broadband, Integra Networks"
         url="/integra-sd-wan"
       />
 
@@ -138,7 +138,7 @@ const IntegraSDWAN = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Pure cellular. Pure reliability.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              No dish. No waiting. Two 4G connections bonded into one. Up to 350Mbps download, 100Mbps+ upload, 20-30ms latency. Installed in under 14 days with 99% UK coverage.
+              No dish. No waiting. Two 4G/5G connections bonded into one. Up to 350Mbps download, 100Mbps+ upload, 20-30ms latency. Installed in under 14 days with 99% UK coverage.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">

@@ -26,7 +26,7 @@ const painPoints = [
   {
     icon: MonitorPlay,
     title: "Video Calls Freezing Mid-Sentence?",
-    description: "Two 4G connections load-balanced means your Teams call stays stable even when the kids are streaming Netflix. Dual-network redundancy, not single-line hope.",
+    description: "Two 4G/5G connections load-balanced means your Teams call stays stable even when the kids are streaming Netflix. Dual-network redundancy, not single-line hope.",
   },
   {
     icon: CloudUpload,
@@ -163,7 +163,7 @@ const Homeworkers = () => {
               No fibre? No problem.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We use two 4G networks bonded together via Integra hardware — delivering fibre-like speeds without any physical cable to your property. Installed by our engineers in a single visit, typically within 14 days.
+              We use two 4G/5G networks bonded together via Integra hardware — delivering fibre-like speeds without any physical cable to your property. Installed by our engineers in a single visit, typically within 14 days.
             </p>
           </AnimatedSection>
 
@@ -197,7 +197,7 @@ const Homeworkers = () => {
             <div className="text-right">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Miles from the exchange? That's our speciality.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                Copper degrades over distance — that's why your ADSL crawls at 2Mbps. We don't use copper or fibre. Our cellular SD-WAN works anywhere with 4G coverage, which is 99% of the UK.
+                Copper degrades over distance — that's why your ADSL crawls at 2Mbps. We don't use copper or fibre. Our cellular SD-WAN works anywhere with 4G/5G coverage, which is 99% of the UK.
               </p>
             </div>
           </AnimatedSection>
@@ -268,7 +268,7 @@ const Homeworkers = () => {
                 Internet, WiFi, and support. All included.
               </h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-8">
-                We don't just deliver a connection and leave. Our engineers install the broadband, set up your WiFi network, and monitor everything 24/7 via Nimbus. If something drops, we know before you do.
+                We don't just deliver a connection and leave. Our engineers install the broadband, set up your WiFi network, and monitor everything 24/7 via Integra Cloud. If something drops, we know before you do.
               </p>
               <motion.ul
                 className="space-y-4"

@@ -8,6 +8,7 @@ import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
 import { ArrowRight, Lightbulb, Users, Headphones } from "lucide-react";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
+import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
 // Hero
 import heroImg from "@/assets/hero-home.jpg";
@@ -90,7 +91,7 @@ const connectivityServices = [
 const wifiServices = [
   {
     title: "Business WiFi",
-    description: "Enterprise-grade mesh networks for offices, warehouses, and multi-building sites. Managed remotely, monitored 24/7 via Nimbus.",
+    description: "Enterprise-grade mesh networks for offices, warehouses, and multi-building sites. Managed remotely, monitored 24/7 via Integra Cloud.",
     img: businessWifiImg,
     link: "/connectivity/business-wifi",
   },
@@ -310,6 +311,8 @@ const Index = () => {
             </motion.div>
           </div>
         </section>
+
+        <PartnerLogoBar />
 
         {/* ── CTA ──────────────────────────────────────────────────────── */}
         <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />
