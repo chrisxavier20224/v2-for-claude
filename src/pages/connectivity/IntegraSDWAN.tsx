@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, Star, ChevronDown } from "lucide-react";
+import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, Star, ChevronDown, Radio, Home, Building2, Monitor, Phone, Landmark } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
 import speedsImg from "@/assets/connectivity/sdwan-speeds.jpg";
@@ -103,69 +104,166 @@ const faqs = [
   { q: "How can Integra help ensure consistent card payment terminal performance in rural locations?", a: "Our Business tier and above include Diversity Mode, which provides a dedicated failover connection specifically for card payment terminals." },
   { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all packages — included free on Business tier and above, or just £5/month on Lite and Homeworker tiers." },
   { q: "Will Integra's service cover my entire property, even if the walls are thick?", a: "Yes. We include WiFi mesh systems and can design custom wireless networks to ensure full coverage across your property." },
-  { q: "Can I extend Integra's service to an annex building?", a: "Absolutely. We can extend coverage to outbuildings, annexes, and garden offices using point-to-point wireless bridges." },
-  { q: "Can I use the Access Broadband Cymru Scheme with Integra's service?", a: "Yes! If you're in Wales, you may be eligible for up to £800 towards your installation through the Access Broadband Cymru scheme." },
-  { q: "Should I wait for BT's fibre service or go with Integra now?", a: "Don't wait. Fibre rollouts are often delayed. Integra can get you connected in under 14 days, and you can cancel if fibre becomes available." },
+  { q: "Do you provide CCTV services?", a: "We install and support CCTV systems — we don't monitor them. Our CCTV service includes professional installation, cloud remote access via Integra Cloud, and full technical support." },
+];
+
+const relatedServices = [
+  {
+    title: "Leased Lines",
+    description: "Dedicated fibre connectivity for businesses needing guaranteed speeds and uptime SLAs.",
+    href: "/connectivity/leased-lines",
+    icon: Landmark,
+    badge: "Enterprise",
+  },
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi networks surveyed, installed, and monitored for complete coverage.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "Starlink Installation",
+    description: "Satellite internet with quick deployment for rural areas without cellular coverage.",
+    href: "/connectivity/starlink-installation",
+    icon: Radio,
+  },
+  {
+    title: "Managed SIM Services",
+    description: "Bonded cellular backup and primary connectivity with managed monitoring.",
+    href: "/connectivity/managed-sim-services",
+    icon: Monitor,
+  },
+  {
+    title: "Unified Communications",
+    description: "Integrated voice, video, and messaging over your SD-WAN connectivity.",
+    href: "/connectivity/unified-communications",
+    icon: Phone,
+  },
 ];
 
 const IntegraSDWAN = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [visibleTestimonials, setVisibleTestimonials] = useState(3);
 
   return (
     <PageLayout>
       <SEO
-        title="Integra SD-WAN — Up to 350Mbps Cellular Broadband in 14 Days"
-        description="Pure cellular. Pure reliability. Two 4G/5G connections bonded into one. Up to 350Mbps. 100Mbps+ upload. 20-30ms latency. Better than Starlink for serious work. £99-400/month."
-        keywords="SD-WAN, rural broadband, bonded 4G/5G, 5G internet, no fibre, fast internet, rural connectivity, cellular broadband, Integra Networks"
-        url="/integra-sd-wan"
+        title="Integra SD-WAN — High-Speed Internet Without Fibre"
+        description="Fast internet without waiting for Fibre. Bonded 4G/5G, installed in 14 days, from £99/month. 99.5% SLA. No fibre needed."
+        keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to fibre, business connectivity, fast broadband"
+        url="/connectivity/integra-sdwan"
       />
 
-      {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Integra SD-WAN connectivity" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/50 to-black/20" />
+          <img src={heroImg} alt="Integra SD-WAN high-speed internet" className="w-full h-full object-cover" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
-          <AnimatedSection>
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-              <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors mb-6">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-white">
-                  Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Integra SD-WAN
-                </span>
-              </Link>
-            </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Pure cellular. Pure reliability.</h1>
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
+            <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors mb-6">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-white">
+                Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Integra SD-WAN
+              </span>
+            </Link>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
+              Fast Internet. <span className="text-primary">No Fibre Required.</span>
+            </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              No dish. No waiting. Two 4G/5G connections bonded into one. Up to 350Mbps download, 100Mbps+ upload, 20-30ms latency. Installed in under 14 days with 99% UK coverage.
+              Bonded 4G/5G cellular delivering up to 500Mbps, installed in under 14 days — with 99.5% uptime and UK-based support.
             </p>
-            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
-                <Link to="/availability-checker">Availability Checker</Link>
-              </Button>
-            </motion.div>
-          </AnimatedSection>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
+                  <Link to="/availability-checker">Check Availability <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <Button asChild variant="link" size="lg" className="text-white hover:text-white/80 font-medium">
+                  <Link to="/contact">Or get in touch</Link>
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* PAIN POINTS */}
+      <section className="bg-surface-dark py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Fibre-Free Internet</p>
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+              We solve the rural internet problem.
+            </h2>
+            <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
+              Forget waiting years for Fibre. We use bonded 4G/5G cellular networks to deliver high-speed, reliable internet in 14 days — with backup and failover built in.
+            </p>
+          </AnimatedSection>
+          <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            {painPoints.map((point, i) => (
+              <motion.div key={i} variants={fadeUp} className="text-center">
+                <h3 className="text-heading-3 text-surface-dark-foreground mb-3">{point.question}</h3>
+                <p className="text-surface-dark-muted">{point.answer}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {features.map((feature, i) => (
+        <div key={i}>
+          <GradientBand fromColor={i % 2 === 0 ? "hsl(222 47% 11%)" : "hsl(0 0% 100%)"} toColor={i % 2 === 0 ? "hsl(0 0% 100%)" : "hsl(222 47% 11%)"} />
+          <section className={i % 2 === 0 ? "bg-background py-16 md:py-24" : "bg-surface-dark py-16 md:py-24"}>
+            <div className="mx-auto max-w-6xl px-4 sm:px-6">
+              <div className={`grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center ${feature.reverse ? "lg:flex-row-reverse" : ""}`}>
+                <AnimatedSection direction={feature.reverse ? "right" : "left"} delay={0.1}>
+                  <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
+                    <feature.icon className="h-9 w-9" strokeWidth={1.5} />
+                  </motion.div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">{feature.eyebrow}</p>
+                  <h2 className={`mb-4 text-heading-1 md:text-display-sm ${i % 2 === 0 ? "text-foreground" : "text-surface-dark-foreground"}`}>{feature.title}</h2>
+                  <p className={`text-lg leading-relaxed ${i % 2 === 0 ? "text-muted-foreground" : "text-surface-dark-muted"}`}>{feature.description}</p>
+                </AnimatedSection>
+                {feature.img && (
+                  <AnimatedSection direction={feature.reverse ? "left" : "right"} delay={0.2}>
+                    <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
+                      <img src={feature.img} alt={feature.imgAlt} className="w-full h-auto object-cover aspect-video" loading="lazy" />
+                    </motion.div>
+                  </AnimatedSection>
+                )}
+              </div>
+            </div>
+          </section>
+        </div>
+      ))}
+
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">The Perfect Solution for Rural Connectivity</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Customer Reviews</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Fast, reliable broadband without fibre.
+              Real stories from real customers.
             </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              We have agreements with all four UK mobile operators. At your location, we find 2-3 towers and connect to two simultaneously — combined speed up to 350Mbps with automatic failover.
+            <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
+              We're proud to have helped hundreds of rural families and businesses get online.
             </p>
           </AnimatedSection>
-          <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            {painPoints.map((point) => (
-              <motion.div key={point.question} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">{point.question}</h3>
-                <p className="text-surface-dark-muted leading-relaxed">{point.answer}</p>
+          <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            {testimonials.map((testimonial, i) => (
+              <motion.div key={i} variants={fadeUp} className="rounded-xl bg-white/5 border border-white/10 p-8">
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="h-4 w-4 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-sm text-surface-dark-muted leading-relaxed mb-4">"{testimonial.text}"</p>
+                <div>
+                  <p className="text-sm font-semibold text-surface-dark-foreground">{testimonial.name}</p>
+                  <p className="text-xs text-surface-dark-muted">{testimonial.date}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -174,181 +272,45 @@ const IntegraSDWAN = () => {
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
-      {/* SD-WAN EXPLANATION */}
-      <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Near-Total Connectivity: 99% of the UK Covered</p>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-              How load balancing works.
-            </h2>
-            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-              Each connection handles separate traffic streams — your overall speeds stack. For 95% of homeworkers and SMEs, load balancing is plenty. Need single-stream aggregate speed? Our Enterprise tier uses Integra Bonding Technology at £400/month.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-
-      {/* FEATURES */}
-      {features.map((feature, i) => {
-        const isEven = i % 2 === 0;
-        const bgClass = isEven ? "bg-surface-dark" : "bg-background";
-        const textClass = isEven ? "text-surface-dark-foreground" : "text-foreground";
-        const mutedClass = isEven ? "text-surface-dark-muted" : "text-muted-foreground";
-
-        return (
-          <div key={feature.title}>
-            <section className={`${bgClass} py-16 md:py-24`}>
-              <div className="mx-auto max-w-6xl px-4 sm:px-6">
-                <div className={`grid gap-12 lg:gap-16 grid-cols-1 ${feature.img ? 'lg:grid-cols-2 lg:items-center' : ''}`}>
-                  <AnimatedSection className={feature.reverse && feature.img ? 'order-2' : ''}>
-                    <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
-                      <feature.icon className="h-9 w-9" strokeWidth={1.5} />
-                    </motion.div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">{feature.eyebrow}</p>
-                    <h2 className={`mb-4 text-heading-1 md:text-display-sm ${textClass}`}>{feature.title}</h2>
-                    <p className={`text-lg ${mutedClass} leading-relaxed`}>{feature.description}</p>
-                  </AnimatedSection>
-                  {feature.img && (
-                    <AnimatedSection direction={feature.reverse ? "left" : "right"} delay={0.2} className={feature.reverse ? 'order-1' : ''}>
-                      <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                        <img src={feature.img} alt={feature.imgAlt || feature.title} className="w-full h-auto object-cover aspect-video" loading="lazy" />
-                      </motion.div>
-                    </AnimatedSection>
-                  )}
-                </div>
-              </div>
-            </section>
-            {i < features.length - 1 && (
-              <GradientBand fromColor={isEven ? "hsl(222 47% 11%)" : "hsl(0 0% 100%)"} toColor={isEven ? "hsl(0 0% 100%)" : "hsl(222 47% 11%)"} />
-            )}
-          </div>
-        );
-      })}
-
-      {/* STATS + EMPOWERED HOMEWORKERS */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Real-world performance.
-            </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Not theoretical speeds — actual results from our installations. Homeworkers consistently achieve 210Mbps average, with crystal-clear VoIP calls and reliable video conferencing.
-            </p>
-          </AnimatedSection>
-          <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center mb-16" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <motion.div variants={fadeUp} className="text-center p-8 rounded-2xl border border-white/10 bg-white/5">
-              <p className="text-5xl md:text-6xl font-bold text-primary mb-2">848<span className="text-3xl">%</span></p>
-              <p className="text-surface-dark-muted text-sm">Integra SD-WAN performance compared to ADSL</p>
-            </motion.div>
-            <motion.div variants={fadeUp} className="text-center p-8 rounded-2xl border border-white/10 bg-white/5">
-              <p className="text-5xl md:text-6xl font-bold text-primary mb-2">210<span className="text-xl ml-1">Mbps</span></p>
-              <p className="text-surface-dark-muted text-sm">Average speed delivered over our Integra homeworker services</p>
-            </motion.div>
-            <motion.div variants={fadeUp} className="flex justify-center sm:col-span-2 lg:col-span-1">
-              <img src={aerialImg} alt="4G aerial installation" className="h-64 w-auto object-contain" loading="lazy" />
-            </motion.div>
-          </motion.div>
-          <p className="text-xs text-surface-dark-muted/60 text-center">Based on average UK speeds of 9.7Mbps for ADSL connections — Ofcom Home Broadband Report 2022</p>
-        </div>
-      </section>
-
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-
-      {/* TESTIMONIALS */}
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <div className="flex items-center justify-center gap-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-              ))}
-            </div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Customer Reviews</p>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-16 max-w-3xl mx-auto">
-              What our customers say
-            </h2>
-          </AnimatedSection>
-          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            {testimonials.slice(0, visibleTestimonials).map((t) => (
-              <motion.div key={t.name} variants={fadeUp} className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{t.text}"</p>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.date}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-          {visibleTestimonials < testimonials.length && (
-            <div className="text-center mt-8">
-              <Button variant="outline" onClick={() => setVisibleTestimonials(testimonials.length)}>
-                Show More Reviews
-              </Button>
-            </div>
-          )}
-        </div>
-      </section>
-
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-
-      {/* PRICING */}
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Pricing</p>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Simple pricing. Unlimited data. No surprises.
+            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
+              Plans for every scenario.
             </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-4">
-              All packages include unlimited data, 24/7 monitoring, and WhatsApp/phone support. No usage caps or throttling.
-            </p>
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <a href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
-                4.9/5 Verified on Reviews.io
-              </a>
-            </div>
-            <p className="text-surface-dark-foreground text-center font-semibold mb-16">
-              <span className="text-primary">14 Days</span> — Experience fast setup with Integra. Want it quicker? Tell us.
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
+              Choose the speed and redundancy that fits your budget. All plans include UK-based support and 99.5% SLA.
             </p>
           </AnimatedSection>
-
-          <motion.div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {pricingTiers.map((tier) => (
               <motion.div
                 key={tier.name}
                 variants={fadeUp}
-                className={`rounded-2xl p-6 flex flex-col ${
+                className={`rounded-xl p-8 border transition-all ${
                   tier.popular
-                    ? 'border-2 border-primary bg-primary/10 ring-1 ring-primary/30'
-                    : 'border border-white/10 bg-white/5'
+                    ? "border-primary bg-primary/5 ring-2 ring-primary/30"
+                    : "border-border bg-card hover:border-primary/50"
                 }`}
               >
-                {tier.popular && (
-                  <span className="text-xs font-bold uppercase tracking-wider text-primary mb-2">Most Popular</span>
-                )}
-                <h3 className="text-lg font-bold text-surface-dark-foreground mb-1">{tier.name}</h3>
-                <p className="text-sm text-surface-dark-muted mb-4">{tier.speed}</p>
-                <p className="text-3xl font-bold text-surface-dark-foreground mb-1">
-                  £{tier.price}<span className="text-base font-normal text-surface-dark-muted">pm</span>
-                </p>
-                <div className="mt-4 mb-4 flex-1">
-                  <p className="text-xs text-surface-dark-muted">{tier.staticIp}</p>
-                  {tier.features.map((f) => (
-                    <p key={f} className="text-xs text-surface-dark-muted mt-1">{f}</p>
+                <h3 className="text-heading-3 text-foreground mb-2">{tier.name}</h3>
+                <p className="text-sm text-muted-foreground mb-6">{tier.speed}</p>
+                <div className="mb-6">
+                  <span className="text-display-sm font-bold text-foreground">£{tier.price}</span>
+                  <span className="text-muted-foreground text-sm">/month</span>
+                </div>
+                <div className="space-y-3 mb-8">
+                  <p className="text-xs text-muted-foreground font-medium">{tier.staticIp}</p>
+                  <p className="text-xs text-muted-foreground font-medium">{tier.install}</p>
+                  {tier.features.map((feature, i) => (
+                    <p key={i} className="text-xs text-muted-foreground font-medium">
+                      {feature}
+                    </p>
                   ))}
                 </div>
                 <p className="text-xs font-semibold text-surface-dark-foreground mb-4">{tier.install}</p>
-                <Button asChild size="sm" variant={tier.popular ? "default" : "outline"} className={tier.popular ? '' : 'border-white/20 text-surface-dark-foreground hover:bg-white/10'}>
+                <Button asChild size="sm" variant={tier.popular ? "default" : "outline"} className={tier.popular ? "" : "border-border text-foreground hover:bg-white/5"}>
                   <Link to="/availability-checker">Check Availability</Link>
                 </Button>
               </motion.div>
@@ -356,21 +318,21 @@ const IntegraSDWAN = () => {
           </motion.div>
 
           <div className="text-center mt-8">
-            <p className="text-surface-dark-muted text-sm mb-4">Unsure what option is right for you?</p>
-            <Button asChild variant="outline" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+            <p className="text-foreground-muted text-sm mb-4">Unsure what option is right for you?</p>
+            <Button asChild variant="outline">
               <Link to="/contact">Speak to our team</Link>
             </Button>
           </div>
-          <p className="text-xs text-surface-dark-muted/60 text-center mt-6">
+          <p className="text-xs text-foreground-muted/60 text-center mt-6">
             Installation costs can vary subject to the property's size and the WiFi network requirements.
           </p>
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
       {/* FREE WIFI MESH PROMO */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <motion.div
@@ -398,13 +360,13 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
       {/* FAQ */}
-      <section className="bg-surface-dark py-20 md:py-28">
+      <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-16">FAQ's</h2>
+            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-16">FAQ's</h2>
           </AnimatedSection>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
@@ -414,14 +376,14 @@ const IntegraSDWAN = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="rounded-xl border border-white/10 bg-white/5 overflow-hidden"
+                className="rounded-xl border border-border bg-card overflow-hidden"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="flex items-center justify-between w-full px-6 py-4 text-left"
                 >
-                  <span className="text-sm font-medium text-surface-dark-foreground pr-4">{faq.q}</span>
-                  <ChevronDown className={`h-4 w-4 text-surface-dark-muted flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
+                  <span className="text-sm font-medium text-foreground pr-4">{faq.q}</span>
+                  <ChevronDown className={`h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>
                   {openFaq === i && (
@@ -431,7 +393,7 @@ const IntegraSDWAN = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="px-6 pb-4 text-sm text-surface-dark-muted leading-relaxed">{faq.a}</p>
+                      <p className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -441,12 +403,20 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
+      {/* RELATED SERVICES COMPONENT */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Enhance your SD-WAN with professional WiFi, backup connectivity, and unified communications."
+      />
+
       {/* RELATED SERVICES & SECTORS */}
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-      <section className="bg-background py-16 md:py-24">
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="border-t border-border pt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Related sectors</h3>
+          <div className="border-t border-white/20 pt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Related sectors</h3>
             <div className="flex flex-wrap gap-3">
               <Link to="/sectors/rural-smes" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
                 Rural SMEs
@@ -459,8 +429,8 @@ const IntegraSDWAN = () => {
               </Link>
             </div>
           </div>
-          <div className="border-t border-border pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Customer stories</h3>
+          <div className="border-t border-white/20 pt-8 mt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Customer stories</h3>
             <div className="flex flex-wrap gap-3">
               <Link to="/customers/seacon-group" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
                 Seacon Group
@@ -470,8 +440,8 @@ const IntegraSDWAN = () => {
               </Link>
             </div>
           </div>
-          <div className="border-t border-border pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Further reading</h3>
+          <div className="border-t border-white/20 pt-8 mt-8">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Further reading</h3>
             <div className="flex flex-wrap gap-3">
               <Link to="/alternatives-to-fibre-broadband" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
                 Alternatives to Fibre
