@@ -202,7 +202,7 @@ const ConstructionSiteBroadband = () => {
                   <li>CCTV incidents dropped to zero (better monitoring, faster response)</li>
                   <li>Site manager reputation improves (effective on-site leadership, fewer excuses)</li>
                 </ul>
-                <p className="text-muted-foreground mt-4"><strong>Scaling:</strong> McGee now deploys cellular SD-WAN on every site > 1 month duration. It's standard practice.</p>
+                <p className="text-muted-foreground mt-4"><strong>Scaling:</strong> McGee now deploys cellular SD-WAN on every site &gt; 1 month duration. It's standard practice.</p>
               </div>
             </div>
           </div>
