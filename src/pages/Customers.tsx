@@ -21,11 +21,11 @@ import mcgeeHero from "@/assets/case-studies/mcgee-hero.jpg";
 import seaconHero from "@/assets/case-studies/seacon-hero.jpg";
 
 const featured = {
-  company: "Royle Farm Business Park",
-  title: "From Farm to Fibre: Royle Farm Business Park's Digital Renaissance",
-  description: "From poor connectivity to 1000Mbps speeds, learn how Integra transformed tenant satisfaction and business potential at Royle Farm.",
-  image: royleFarmHero,
-  path: "/customers/royle-farm",
+  company: "McGee Construction",
+  title: "Engineering Success: McGee's Connectivity Leap in London",
+  description: "McGee Construction enhances project efficiency with Integra's SD-WAN, achieving 150Mbps+ across complex London construction sites.",
+  image: mcgeeHero,
+  path: "/customers/mcgee-construction",
 };
 
 const stories = [
@@ -44,11 +44,11 @@ const stories = [
     path: "/customers/wb-power-services",
   },
   {
-    company: "McGee Construction",
-    title: "Engineering Success: McGee's Connectivity Leap in London",
-    description: "McGee Construction enhances project efficiency with Integra's SD-WAN, achieving 150Mbps+ across complex London construction sites.",
-    image: mcgeeHero,
-    path: "/customers/mcgee-construction",
+    company: "Royle Farm Business Park",
+    title: "From Farm to Fibre: Royle Farm Business Park's Digital Renaissance",
+    description: "From poor connectivity to 1000Mbps speeds, learn how Integra transformed tenant satisfaction and business potential at Royle Farm.",
+    image: royleFarmHero,
+    path: "/customers/royle-farm",
   },
   {
     company: "Little Quarry Glamping",
@@ -182,7 +182,7 @@ const Customers = () => {
       {/* Stats Bar */}
       <Section size="default">
         <AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <p className="text-5xl font-bold text-foreground">99<span className="text-primary">%</span></p>
               <p className="text-sm text-muted-foreground mt-2">UK Coverage — complete our Availability Checker to find out what speeds we can provide.</p>
@@ -190,6 +190,14 @@ const Customers = () => {
             <div>
               <p className="text-5xl font-bold text-foreground">14 <span className="text-primary">days max</span></p>
               <p className="text-sm text-muted-foreground mt-2">We deliver our connectivity faster than any other service provider.</p>
+            </div>
+            <div>
+              <p className="text-5xl font-bold text-foreground">107<span className="text-primary">+</span></p>
+              <p className="text-sm text-muted-foreground mt-2">Businesses connected across the UK with proven results.</p>
+            </div>
+            <div>
+              <p className="text-5xl font-bold text-foreground">350<span className="text-primary">Mbps</span></p>
+              <p className="text-sm text-muted-foreground mt-2">Maximum speeds achieved through our SD-WAN solution.</p>
             </div>
           </div>
         </AnimatedSection>

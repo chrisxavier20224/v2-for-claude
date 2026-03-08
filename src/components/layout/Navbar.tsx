@@ -20,11 +20,12 @@ const connectivityLinks = [
   { label: "Integra SD-WAN", path: "/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
   { label: "Integra Bridge", path: "/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
   { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Premium Business-Grade Fibre" },
-  { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration Platform" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "PSTN Transition Solutions" },
+  { type: "divider" },
   { label: "Business WiFi", path: "/connectivity/business-wifi", icon: Wifi, tagline: "High-Speed WiFi Solutions" },
   { label: "Home WiFi", path: "/connectivity/home-wifi", icon: Home, tagline: "Reliable Home Connectivity" },
-  { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Professional Starlink Setup" },
+  { type: "divider" },
+  { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration Platform" },
 ];
 
 const postPlatformLinks = [
@@ -149,20 +150,24 @@ const Navbar = () => {
               {connectivityOpen && (
                 <div className="absolute top-full left-0 pt-2 w-72">
                   <div className="bg-card border border-border rounded-xl shadow-xl overflow-hidden">
-                    {connectivityLinks.map((item) => (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        className="flex items-start gap-3 px-4 py-3 hover:bg-secondary transition-colors"
-                      >
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
-                          <item.icon className="h-4 w-4" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-medium text-foreground">{item.label}</div>
-                          <div className="text-xs text-muted-foreground">{item.tagline}</div>
-                        </div>
-                      </Link>
+                    {connectivityLinks.map((item, index) => (
+                      item.type === 'divider' ? (
+                        <div key={`divider-${index}`} className="h-px bg-border my-0"></div>
+                      ) : (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="flex items-start gap-3 px-4 py-3 hover:bg-secondary transition-colors"
+                        >
+                          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
+                            <item.icon className="h-4 w-4" />
+                          </div>
+                          <div>
+                            <div className="text-sm font-medium text-foreground">{item.label}</div>
+                            <div className="text-xs text-muted-foreground">{item.tagline}</div>
+                          </div>
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>
@@ -301,16 +306,20 @@ const Navbar = () => {
               <div className="px-3 py-2">
                 <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Connectivity</div>
                 <div className="space-y-1">
-                  {connectivityLinks.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                    >
-                      <item.icon className="h-4 w-4 text-primary" />
-                      {item.label}
-                    </Link>
+                  {connectivityLinks.map((item, index) => (
+                    item.type === 'divider' ? (
+                      <div key={`divider-${index}`} className="h-px bg-border my-2"></div>
+                    ) : (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      >
+                        <item.icon className="h-4 w-4 text-primary" />
+                        {item.label}
+                      </Link>
+                    )
                   ))}
                 </div>
               </div>
