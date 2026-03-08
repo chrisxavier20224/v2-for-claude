@@ -143,7 +143,7 @@ const RuralSMEs = () => {
               </motion.div>
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">One visit. One connection. Everything works.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Our engineer arrives, installs the Teltonika hardware, positions antennas for maximum signal, configures your WiFi network, and tests everything before they leave. Typically 4-6 hours, and you're online with speeds you've never had.
+                Our engineer arrives, installs the Integra hardware, positions antennas for maximum signal, configures your WiFi network, and tests everything before they leave. Typically 4-6 hours, and you're online with speeds you've never had.
               </p>
             </AnimatedSection>
           </div>

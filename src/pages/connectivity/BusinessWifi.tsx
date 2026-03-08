@@ -19,7 +19,7 @@ const painPoints = [
   {
     icon: Wifi,
     title: "Designed for Your Building",
-    description: "We walk your property, identify dead zones, and place access points where they'll reach furthest. UniFi, Ruckus, or Mikrotik gear — built to scale.",
+    description: "We walk your property, identify dead zones, and place access points where they'll reach furthest. Commercial-grade hardware — built to scale.",
   },
   {
     icon: Shield,

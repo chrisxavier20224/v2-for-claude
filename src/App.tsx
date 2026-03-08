@@ -51,6 +51,12 @@ const StarlinkRightSolution = lazy(() => import("./pages/blog/StarlinkRightSolut
 const SingleMobileNetwork = lazy(() => import("./pages/blog/SingleMobileNetwork"));
 const AccessBroadbandCymru = lazy(() => import("./pages/resources/AccessBroadbandCymru"));
 const PSTNSwitchOff = lazy(() => import("./pages/resources/PSTNSwitchOff"));
+const AlternativesToFibre = lazy(() => import("./pages/resources/AlternativesToFibre"));
+const RuralBusinessBroadband = lazy(() => import("./pages/resources/RuralBusinessBroadband"));
+const StarlinkForBusiness = lazy(() => import("./pages/resources/StarlinkForBusiness"));
+const SDWanForSmallBusiness = lazy(() => import("./pages/resources/SDWanForSmallBusiness"));
+const ConstructionSiteBroadband = lazy(() => import("./pages/resources/ConstructionSiteBroadband"));
+const FarmBroadband = lazy(() => import("./pages/resources/FarmBroadband"));
 const LeasedLines = lazy(() => import("./pages/connectivity/LeasedLines"));
 const UnifiedCommunications = lazy(() => import("./pages/connectivity/UnifiedCommunications"));
 const ManagedSimServices = lazy(() => import("./pages/connectivity/ManagedSimServices"));
@@ -124,6 +130,12 @@ const App = () => (
 
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
               <Route path="/pstn-switch-off" element={<PSTNSwitchOff />} />
+              <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
+              <Route path="/rural-business-broadband" element={<RuralBusinessBroadband />} />
+              <Route path="/starlink-for-business" element={<StarlinkForBusiness />} />
+              <Route path="/sd-wan-for-small-business" element={<SDWanForSmallBusiness />} />
+              <Route path="/construction-site-broadband" element={<ConstructionSiteBroadband />} />
+              <Route path="/farm-broadband" element={<FarmBroadband />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/availability-checker" element={<AvailabilityChecker />} />
               <Route path="/privacy-cookies" element={<PrivacyAndCookies />} />
