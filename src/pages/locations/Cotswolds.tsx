@@ -1,0 +1,295 @@
+import { Link } from "react-router-dom";
+import { MapPin, CheckCircle, ArrowRight, HelpCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import PageLayout from "@/components/layout/PageLayout";
+import Section from "@/components/shared/Section";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import GradientBand from "@/components/shared/GradientBand";
+import SEO from "@/components/shared/SEO";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const Cotswolds = () => {
+  const faqs = [
+    {
+      q: "My Cotswolds property is listed. Can you install broadband without violating planning?",
+      a: "Yes. Listed building constraints are common in Cotswolds villages. We design discreet installations—roof-mounted antennas hidden from public view, cabling routed discretely, minimal visual impact. We've completed multiple listed property installations across Cheltenham, Cirencester, and Stow-on-the-Wold. Discuss your specific constraints during the survey.",
+    },
+    {
+      q: "What speeds are typical for Cotswolds properties?",
+      a: "Integra Pro (bonded 4G) typically delivers 150-280Mbps depending on proximity to cell towers. The Cotswolds have solid network coverage across most areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
+    },
+    {
+      q: "Are there any conservation area constraints I should know about?",
+      a: "Yes, many Cotswolds properties sit in conservation areas. We're experienced working within these constraints. We'll discuss installation options that comply with local planning—roof mounting, concealed cabling, and minimal external infrastructure. Your property's character is protected.",
+    },
+    {
+      q: "How quickly can you install at my Cotswolds home?",
+      a: "14 days from survey to installation. We've completed installations across the region and understand Cotswolds specific requirements. One engineer visit—mount equipment, run cabling, test speeds. Professional installation that respects your property.",
+    },
+    {
+      q: "Do affluent Cotswolds properties need failover systems?",
+      a: "Integra Pro includes built-in redundancy (bonded networks). If one network drops, the other automatically handles traffic. For properties where broadband is business-critical or where you want guaranteed uptime, we offer Enterprise service with 99.5% SLA and priority support.",
+    },
+  ];
+
+  return (
+    <PageLayout>
+      <SEO
+        title="Premium Broadband Cotswolds | Listed Buildings & Conservation | Integra Networks"
+        description="Premium broadband for affluent Cotswolds properties. Cheltenham, Cirencester, Stow-on-the-Wold. Listed building compatible. Integra Pro and Starlink solutions."
+        keywords="Cotswolds broadband, rural broadband, Cheltenham internet, Cirencester, Stow-on-the-Wold, listed building broadband, premium rural connectivity"
+        url="/locations/rural-broadband-cotswolds"
+      />
+
+      {/* Hero */}
+      <section className="relative -mt-[73px] pt-[73px] bg-surface-dark">
+        <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 pt-16 pb-20 md:pt-24 md:pb-32">
+          <AnimatedSection>
+            <Link
+              to="/locations"
+              className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors mb-8 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-1.5"
+            >
+              <MapPin className="h-3.5 w-3.5" /> Coverage Areas
+            </Link>
+            <h1 className="text-heading-1 md:text-display-sm text-white max-w-3xl mb-6">
+              Premium Broadband Cotswolds
+            </h1>
+            <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
+              Beautiful properties deserve beautiful solutions. Business-grade connectivity for affluent Cotswolds homes and properties in conservation areas.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+
+      {/* Main content */}
+      <Section>
+        <AnimatedSection>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-normal mb-6">
+              Cotswolds Broadband: Beauty and Connectivity
+            </h2>
+            <p className="text-base text-muted-foreground leading-relaxed mb-4">
+              The Cotswolds are among England's most beautiful and desirable areas. Yet this beauty comes with challenges: protected landscapes, listed buildings, conservation constraints, and sparse broadband infrastructure.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-4">
+              BT's fibre rollout is slow here. Many properties are promised fibre years ahead, if at all. Meanwhile, satellite is unreliable and doesn't meet professional needs.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-8">
+              We serve affluent Cotswolds properties—country homes, estates, heritage properties, and successful businesses where broadband is essential but aesthetic impact matters. Our team understands listed building constraints, conservation requirements, and the specific needs of clients who refuse to compromise on either connectivity or appearance.
+            </p>
+
+            <div className="bg-muted/30 border border-border rounded-lg p-6 mb-8">
+              <h3 className="font-semibold text-foreground mb-3">
+                Why Cotswolds Properties Face Unique Challenges
+              </h3>
+              <ul className="space-y-2 text-muted-foreground text-sm">
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>
+                    Many villages sit in conservation areas. Standard broadband pole installation may be restricted.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>
+                    Historic listed buildings have planning constraints on external infrastructure.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>
+                    Affluent property owners expect aesthetic solutions, not industrial-looking equipment.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>
+                    BT prioritises urban density. Rural Cotswolds investment is minimal.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <h2 className="text-2xl font-normal mb-6">Solutions That Blend Beauty and Performance</h2>
+
+            <div className="space-y-6 mb-8">
+              <div className="border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-foreground mb-2">
+                  Integra Pro (Discreet Bonded 4G)
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  We bond EE and Vodafone across the Cotswolds. Signal is strong in most areas around Cheltenham, Cirencester, and Stow-on-the-Wold.
+                </p>
+                <p className="text-sm text-muted-foreground font-medium text-foreground">
+                  Roof-mounted antenna hidden from street view, cabling concealed, minimal visual footprint. 180-280Mbps combined speeds.
+                </p>
+              </div>
+
+              <div className="border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-foreground mb-2">
+                  Starlink with 4G Backup
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Properties with southern sky visibility can run Starlink (premium speed) with our 4G backup for reliability. Excellent for listed buildings where pole installation is problematic.
+                </p>
+                <p className="text-sm text-muted-foreground font-medium text-foreground">
+                  100-150Mbps downloads plus automatic failover to 4G. No visible poles or infrastructure.
+                </p>
+              </div>
+
+              <div className="border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-foreground mb-2">
+                  Enterprise SLA (Premium Service)
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  For serious broadband users and business properties, we offer Service Level Agreement with 99.5% uptime and priority support.
+                </p>
+                <p className="text-sm text-muted-foreground font-medium text-foreground">
+                  Our engineers are on call. Your connectivity is premium. So is our support.
+                </p>
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-normal mb-6">Installation That Respects Your Property</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              Unlike generic ISPs, we work within your specific constraints. Listed buildings? We'll design solutions that pass planning review. Conservation area? We'll roof-mount equipment away from public view and conceal cabling. Aesthetic concerns? We'll work with you to find an elegant solution.
+            </p>
+            <ol className="space-y-4 text-muted-foreground text-sm">
+              <li className="flex gap-4">
+                <span className="font-semibold text-foreground min-w-8">1.</span>
+                <span>
+                  <strong>You send coordinates</strong> from Google Maps and mention any constraints (listed building, conservation area, aesthetic preferences).
+                </span>
+              </li>
+              <li className="flex gap-4">
+                <span className="font-semibold text-foreground min-w-8">2.</span>
+                <span>
+                  <strong>We survey on-site</strong> and discuss installation options that suit your property and meet planning requirements.
+                </span>
+              </li>
+              <li className="flex gap-4">
+                <span className="font-semibold text-foreground min-w-8">3.</span>
+                <span>
+                  <strong>We recommend a solution</strong> that delivers the connectivity you need while respecting your property.
+                </span>
+              </li>
+              <li className="flex gap-4">
+                <span className="font-semibold text-foreground min-w-8">4.</span>
+                <span>
+                  <strong>Installation within 14 days.</strong> Professional, tested, guaranteed.
+                </span>
+              </li>
+              <li className="flex gap-4">
+                <span className="font-semibold text-foreground min-w-8">5.</span>
+                <span>
+                  <strong>Ongoing support.</strong> Free engineer callouts if anything fails.
+                </span>
+              </li>
+            </ol>
+
+            <div className="bg-muted/30 border border-border rounded-lg p-6 my-8">
+              <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <div className="flex justify-between">
+                  <span>Integra Pro (bonded 4G)</span>
+                  <span className="font-semibold text-foreground">£135/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Starlink SD-WAN add-on</span>
+                  <span className="font-semibold text-foreground">£80/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Installation</span>
+                  <span className="font-semibold text-foreground">£2,200</span>
+                </div>
+                <div className="border-t border-border pt-3 mt-3 flex justify-between">
+                  <span>Enterprise (SLA + priority support)</span>
+                  <span className="font-semibold text-foreground">£400/month</span>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mt-4">
+                No long-term contract. Cancel anytime.
+              </p>
+            </div>
+
+            <h2 className="text-2xl font-normal mb-6">Real Installation: Listed House in Stow-on-the-Wold</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              An historic property in Stow-on-the-Wold had strict constraints: listed building status, conservation area designation, and strong local planning requirements.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              The owners needed professional broadband for a home-based business. BT fibre was vaguely promised years ahead. Starlink alone had latency issues for their work. Visible infrastructure was not acceptable.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              We installed Integra Pro (bonded EE and Vodafone) with roof-mounted antenna completely hidden from street view and cabling routed through the roof space. Result: 240Mbps combined speed, zero visible infrastructure changes, full compliance with conservation guidelines. Cost: £135/month. The property maintains its character while delivering world-class connectivity.
+            </p>
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      {/* FAQ */}
+      <Section className="bg-muted/30">
+        <AnimatedSection>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-normal mb-8">Frequently Asked Questions</h2>
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="rounded-xl border border-border bg-card px-6"
+                >
+                  <AccordionTrigger className="text-left text-base font-medium py-4">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-4">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      {/* CTA */}
+      <GradientBand
+        fromColor="hsl(0 0% 100%)"
+        toColor="hsl(216 100% 50%)"
+      />
+      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
+        <AnimatedSection>
+          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
+              Check What's Available at Your Location
+            </h2>
+            <p className="text-white/70 text-lg mb-8">
+              Send us your coordinates from Google Maps. We'll survey your site and send a detailed report within 24 hours.
+            </p>
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base"
+              >
+                <Link to="/availability-checker">Check Availability</Link>
+              </Button>
+            </motion.div>
+          </div>
+        </AnimatedSection>
+      </section>
+    </PageLayout>
+  );
+};
+
+export default Cotswolds;
