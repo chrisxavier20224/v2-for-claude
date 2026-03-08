@@ -25,7 +25,7 @@ const connectivityLinks = [
   { label: "Business WiFi", path: "/connectivity/business-wifi", icon: Wifi, tagline: "High-Speed WiFi Solutions" },
   { label: "Home WiFi", path: "/connectivity/home-wifi", icon: Home, tagline: "Reliable Home Connectivity" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite Internet Setup" },
-  { label: "CCTV", path: "/connectivity/cctv", icon: Camera, tagline: "Monitored Camera Systems" },
+  { label: "CCTV", path: "/connectivity/cctv", icon: Camera, tagline: "Professional Camera Systems" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution", icon: Radio, tagline: "Multi-Building Wireless Links" },
   { type: "divider" },
   { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration Platform" },

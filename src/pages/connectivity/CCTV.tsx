@@ -28,7 +28,7 @@ const painPoints = [
   {
     icon: Lock,
     title: "Worried About Liability and Security?",
-    description: "Professional CCTV with high-resolution recording, night vision, and secure storage protects your business and provides evidence when it matters. Managed by us 24/7.",
+    description: "Professional CCTV with high-resolution recording, night vision, and secure storage protects your business and provides evidence when it matters.",
   },
 ];
 
@@ -37,7 +37,7 @@ const benefitItems = [
   "Commercial-Grade Hardware — Varifocal & IR Night Vision Cameras",
   "PoE Network Infrastructure Built In — No Separate Power Cables",
   "NVR Recording with Cloud Access — View Live & Recorded Footage Remotely",
-  "24/7 Monitoring via Integra Cloud — Real-Time Alerts & Support",
+  "Remote Access via Integra Cloud — View Live & Recorded Footage Anywhere",
 ];
 
 const staggerContainer = {
@@ -59,8 +59,8 @@ const CCTV = () => {
   return (
     <PageLayout>
       <SEO
-        title="CCTV as a Service — Professional Monitoring for Warehouses & Business Sites"
-        description="Managed CCTV for warehouses, ports, construction sites, and business parks. Commercial-grade cameras, PoE network, remote cloud access, and 24/7 monitoring included."
+        title="CCTV as a Service — Professional Surveillance for Warehouses & Business Sites"
+        description="Managed CCTV for warehouses, ports, construction sites, and business parks. Commercial-grade cameras, PoE network, remote cloud access, and UK-based support included."
         keywords="CCTV service, managed CCTV, warehouse security cameras, business CCTV, port security, commercial CCTV, night vision cameras, cloud CCTV monitoring"
         url="/connectivity/cctv"
       />
@@ -83,7 +83,7 @@ const CCTV = () => {
               Complete CCTV as a Managed Service.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Professional surveillance for warehouses, ports, construction sites, and business parks. We handle the survey, installation, monitoring, and maintenance — you get security and peace of mind.
+              Professional surveillance for warehouses, ports, construction sites, and business parks. We handle the survey, installation, and maintenance — you get security and peace of mind.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -118,7 +118,7 @@ const CCTV = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <Camera className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We survey. We install. We monitor. You own the security.</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We survey. We install. We support. You own the security.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               This isn't rented CCTV that you hand back when your contract ends. We conduct a professional site survey to identify camera positions that cover entry points, aisles, external perimeters, and blind spots. Then we install commercial-grade cameras with varifocal lenses, integral IR for night vision, and weatherproof housings — all networked via PoE so you never need to run separate power cables across your site.
             </p>
@@ -161,7 +161,7 @@ const CCTV = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">See everything, from anywhere.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Your CCTV feeds record to an NVR in your comms cabinet or office — with full remote access via Integra Cloud. View live feeds from any device, any location. Retrieve recorded footage instantly. Set motion alerts and notifications. All managed through our secure cloud platform, monitored 24/7 by our UK-based team.
+              Your CCTV feeds record to an NVR in your comms cabinet or office — with full remote access via Integra Cloud. View live feeds from any device, any location. Retrieve recorded footage instantly. Set motion alerts and notifications. All managed through our secure cloud platform with UK-based support when you need it.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -185,7 +185,7 @@ const CCTV = () => {
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Service Model</p>
                 <h2 className="text-heading-1 text-surface-dark-foreground mb-4">Managed CCTV-as-a-Service or Ownership?</h2>
                 <p className="text-lg text-surface-dark-muted leading-relaxed mb-6">
-                  Choose your model. Buy the system outright and own it permanently — we install and support on a per-incident basis. Or go with Managed CCTV-as-a-Service: fixed monthly fee, everything included. We handle monitoring, maintenance, firmware updates, and 24/7 support. No surprises, no upfront capital spend. Whichever you choose, support is via phone and WhatsApp, with 2-4 hour response times from our UK-based team.
+                  Choose your model. Buy the system outright and own it permanently — we install and support on a per-incident basis. Or go with Managed CCTV-as-a-Service: fixed monthly fee, everything included. We handle maintenance, firmware updates, and ongoing support. No surprises, no upfront capital spend. Whichever you choose, support is via phone and WhatsApp, with 2-4 hour response times from our UK-based team.
                 </p>
                 <motion.ul className="space-y-4 mb-8" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
                   {benefitItems.map((item) => (
@@ -224,7 +224,7 @@ const CCTV = () => {
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Professional CCTV that actually works.</h2>
-            <p className="mb-8 text-lg text-white/80">Complete site survey, commercial-grade hardware, cloud monitoring, and UK-based support — all included.</p>
+            <p className="mb-8 text-lg text-white/80">Complete site survey, commercial-grade hardware, remote cloud access, and UK-based support — all included.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">

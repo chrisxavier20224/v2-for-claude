@@ -91,7 +91,7 @@ const connectivityServices = [
 const wifiServices = [
   {
     title: "Business WiFi",
-    description: "Enterprise-grade mesh networks for offices, warehouses, and multi-building sites. Managed remotely, monitored 24/7 via Integra Cloud.",
+    description: "Enterprise-grade mesh networks for offices, warehouses, and multi-building sites. Managed remotely via Integra Cloud with UK-based support.",
     img: businessWifiImg,
     link: "/connectivity/business-wifi",
   },

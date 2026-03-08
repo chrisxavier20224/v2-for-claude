@@ -89,6 +89,13 @@ const IntegraBridge = lazy(() => import("./pages/connectivity/IntegraBridge"));
 const CCTV = lazy(() => import("./pages/connectivity/CCTV"));
 const WirelessDistribution = lazy(() => import("./pages/connectivity/WirelessDistribution"));
 
+// PPC Landing Pages
+const BusinessBroadbandLanding = lazy(() => import("./pages/landing/BusinessBroadband"));
+const ConstructionWifiLanding = lazy(() => import("./pages/landing/ConstructionWifi"));
+const HomeworkerBroadbandLanding = lazy(() => import("./pages/landing/HomeworkerBroadband"));
+const RuralBroadbandLanding = lazy(() => import("./pages/landing/RuralBroadband"));
+const StarlinkSdwanLanding = lazy(() => import("./pages/landing/StarlinkSdwan"));
+
 const queryClient = new QueryClient();
 
 // Simple loading fallback
@@ -110,8 +117,14 @@ const App = () => (
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Index />} />
-              
-              
+
+              {/* PPC Landing Pages */}
+              <Route path="/lp/business-broadband" element={<BusinessBroadbandLanding />} />
+              <Route path="/lp/construction-wifi" element={<ConstructionWifiLanding />} />
+              <Route path="/lp/homeworker-broadband" element={<HomeworkerBroadbandLanding />} />
+              <Route path="/lp/rural-broadband" element={<RuralBroadbandLanding />} />
+              <Route path="/lp/starlink-sdwan" element={<StarlinkSdwanLanding />} />
+
               <Route path="/sectors/homeworkers" element={<Homeworkers />} />
               <Route path="/sectors/fibre-enabled-buildings" element={<FibreEnabledBuildings />} />
               <Route path="/sectors/construction-sites" element={<ConstructionSites />} />
