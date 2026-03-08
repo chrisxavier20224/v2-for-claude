@@ -13,24 +13,24 @@ const partners = [
 
 const PartnerLogoBar = () => {
   return (
-    <section className="bg-background py-12 md:py-16 border-t border-border/40">
+    <section className="bg-surface-dark py-10 md:py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <AnimatedSection>
-          <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground text-center mb-8">
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted text-center mb-8">
             Our Connectivity Partners
           </h3>
 
-          <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
+          <div className="flex items-center justify-center gap-12 md:gap-20 flex-wrap">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="group flex-shrink-0"
+                className="flex-shrink-0 h-8 w-20 md:h-10 md:w-24 flex items-center justify-center"
                 title={partner.name}
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-12 md:h-14 w-auto object-contain opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                  className="max-h-full max-w-full w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
