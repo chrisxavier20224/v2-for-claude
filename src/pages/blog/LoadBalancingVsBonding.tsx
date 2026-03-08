@@ -1,7 +1,15 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const LoadBalancingVsBonding = () => (
-  <BlogArticleLayout slug="load-balancing-vs-bonding-whats-the-difference">
+  <>
+    <SEO
+      title="Load Balancing vs Bonding"
+      description="Load balancing vs bonding for multiple internet connections: how each works, speed increases, and when to use each technology."
+      url="/blog/load-balancing-vs-bonding-whats-the-difference"
+      type="article"
+    />
+    <BlogArticleLayout slug="load-balancing-vs-bonding-whats-the-difference">
     <p>Load balancing and bonding are both ways to use multiple connections simultaneously. But they work differently, and the difference matters for performance.</p>
 
     <p>Here's the honest breakdown.</p>
@@ -180,6 +188,8 @@ const LoadBalancingVsBonding = () => (
 
     <p>Most answer "no." That's why load balancing is the standard.</p>
   </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default LoadBalancingVsBonding;

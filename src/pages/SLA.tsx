@@ -5,15 +5,22 @@ import LegalPageLayout, {
   LegalList,
   LegalInfoBox,
 } from "@/components/layout/LegalPageLayout";
+import SEO from "@/components/shared/SEO";
 
 const SLA = () => {
   return (
-    <LegalPageLayout
-      title="Service Level Agreement"
-      description="Integra Networks Service Level Agreement detailing availability targets, repair times, service credits and fault management process."
-      url="/sla"
-      lastUpdated="1 January 2026"
-    >
+    <>
+      <SEO
+        title="Service Level Agreement"
+        description="Integra Networks SLA guarantees 99.95% availability, details repair times for critical faults, and covers service credits for outages."
+        url="/sla"
+      />
+      <LegalPageLayout
+        title="Service Level Agreement"
+        description="Integra Networks Service Level Agreement detailing availability targets, repair times, service credits and fault management process."
+        url="/sla"
+        lastUpdated="1 January 2026"
+      >
       <LegalHeading number={1}>Definitions and Interpretation</LegalHeading>
       <LegalParagraph>
         Capitalised expressions shall have the meanings given in the General Terms and Conditions. The following additional definitions apply:
@@ -121,6 +128,7 @@ const SLA = () => {
         The Company shall be responsible for maintaining the Network up to the Points of Connection. The Company shall use reasonable endeavours to ensure that maintenance and upgrade work is planned in advance and shall provide at least 24 hours' notice prior to the commencement of any Planned Works that will affect the availability of the Services.
       </LegalParagraph>
     </LegalPageLayout>
+    </>
   );
 };
 

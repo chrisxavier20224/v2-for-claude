@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const MultiBuildingWifi = () => (
+  <>
+    <SEO
+      title="Multi-Building WiFi for Rural Properties"
+      description="WiFi solutions for multiple buildings on rural properties. Point-to-point wireless, mesh networks, and wired options. No cable digging needed."
+      url="/blog/multi-building-wifi-rural-properties"
+      type="article"
+    />
   <BlogArticleLayout slug="multi-building-wifi-rural-properties">
     <p>Your main house has WiFi. But your barn is out of range. Your office building (300m away) has no signal. Your guest cottage needs connectivity but wiring 300m of cable is crazy expensive.</p>
 
@@ -206,7 +214,8 @@ const MultiBuildingWifi = () => (
     </ul>
 
     <p>We'll design a mesh system and quote installation.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default MultiBuildingWifi;

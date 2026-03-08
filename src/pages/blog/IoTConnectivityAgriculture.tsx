@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const IoTConnectivityAgriculture = () => (
+  <>
+    <SEO
+      title="IoT Connectivity for UK Agriculture"
+      description="IoT solutions for UK farms: soil sensors, livestock tracking, weather monitoring. Fast reliable connectivity for automated agriculture systems."
+      url="/blog/iot-connectivity-agriculture-uk"
+      type="article"
+    />
   <BlogArticleLayout slug="iot-connectivity-agriculture-uk">
     <p>Modern farming runs on data. Soil sensors, water monitors, livestock trackers, weather stations, and automated gates all send information back to a central system.</p>
 
@@ -245,7 +253,8 @@ const IoTConnectivityAgriculture = () => (
     </ul>
 
     <p>We'll design a connectivity plan with costs.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default IoTConnectivityAgriculture;

@@ -1,7 +1,15 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const SatelliteVsFixedWireless = () => (
-  <BlogArticleLayout slug="satellite-internet-vs-fixed-wireless-pros-and-cons">
+  <>
+    <SEO
+      title="Satellite vs Fixed Wireless Internet"
+      description="Satellite vs fixed wireless broadband comparison: speed, latency, cost, and reliability. Which rural internet solution is right for you?"
+      url="/blog/satellite-internet-vs-fixed-wireless-pros-and-cons"
+      type="article"
+    />
+    <BlogArticleLayout slug="satellite-internet-vs-fixed-wireless-pros-and-cons">
     <p>Satellite and fixed wireless are the two leading alternatives to fibre for rural properties. Both can work. Both have distinct trade-offs.</p>
 
     <p>Which one should you choose? It depends on what matters most: cost, speed, reliability, or latency.</p>
@@ -139,6 +147,8 @@ const SatelliteVsFixedWireless = () => (
 
     <p>No obligation, no site visit needed. Just your coordinates and 24 hours of analysis.</p>
   </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default SatelliteVsFixedWireless;

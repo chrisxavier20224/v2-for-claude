@@ -1,7 +1,15 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const PortableWifiConstruction = () => (
-  <BlogArticleLayout slug="portable-wifi-solutions-construction-sites">
+  <>
+    <SEO
+      title="Portable WiFi for Construction Sites"
+      description="Portable WiFi solutions for construction sites: bonded 4G routers, temporary installations, and safety cameras. Includes costs and recommendations."
+      url="/blog/portable-wifi-solutions-construction-sites"
+      type="article"
+    />
+    <BlogArticleLayout slug="portable-wifi-solutions-construction-sites">
     <p>Construction sites need internet: site managers checking CAD files, crew communicating via phones and radios, automated systems monitoring equipment, safety cameras logging incidents.</p>
 
     <p>But construction sites move. You can't wait for a fixed broadband installation. You need portable WiFi that works today, moves tomorrow.</p>
@@ -220,6 +228,8 @@ const PortableWifiConstruction = () => (
 
     <p>We'll survey the site and send you a custom quote.</p>
   </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default PortableWifiConstruction;

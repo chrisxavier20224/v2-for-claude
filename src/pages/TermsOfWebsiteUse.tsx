@@ -4,15 +4,22 @@ import LegalPageLayout, {
   LegalList,
   LegalInfoBox,
 } from "@/components/layout/LegalPageLayout";
+import SEO from "@/components/shared/SEO";
 
 const TermsOfWebsiteUse = () => {
   return (
-    <LegalPageLayout
-      title="Terms of Website Use"
-      description="Terms governing your use of the Integra Networks website. These terms apply to the website only, not the Integra Networks platform or software."
-      url="/terms-of-use"
-      lastUpdated="January 2026"
-    >
+    <>
+      <SEO
+        title="Terms of Website Use"
+        description="Terms of use for the Integra Networks website. Covers website access, content, intellectual property, and liability limitations."
+        url="/terms-of-use"
+      />
+      <LegalPageLayout
+        title="Terms of Website Use"
+        description="Terms governing your use of the Integra Networks website. These terms apply to the website only, not the Integra Networks platform or software."
+        url="/terms-of-use"
+        lastUpdated="January 2026"
+      >
       {/* Introduction */}
       <LegalParagraph>
         These Terms of Website Use govern your use of the Integra Networks website.
@@ -149,6 +156,7 @@ const TermsOfWebsiteUse = () => {
         The latest version will always be published on this page.
       </LegalParagraph>
     </LegalPageLayout>
+    </>
   );
 };
 

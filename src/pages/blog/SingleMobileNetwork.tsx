@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const SingleMobileNetwork = () => (
+  <>
+    <SEO
+      title="Single Mobile Network Solutions for Business"
+      description="Single 4G network connectivity compared to fibre broadband. Learn when 4G is viable and when you need bonding or other solutions."
+      url="/blog/single-mobile-network-connectivity-solutions-a-reliable-option"
+      type="article"
+    />
   <BlogArticleLayout slug="single-mobile-network-connectivity-solutions-a-reliable-option">
     <p>In the world of internet connectivity, a common question often surfaces: Can single network 4G solutions serve as a solid alternative to traditional broadband when fibre isn't available and ADSL offers limited speeds? The answer is complex — it's both Yes and No, and it largely depends on specific circumstances.</p>
 
@@ -27,7 +35,8 @@ const SingleMobileNetwork = () => (
 
     <h2>Conclusion</h2>
     <p>Single mobile network connectivity can work well for casual home use where occasional drops in service are acceptable. However, for anyone who relies on their internet connection — whether for business, remote work, or critical applications — the limitations of a single network make it a risky choice. SD-WAN provides the reliability, speed, and resilience that modern connectivity demands.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default SingleMobileNetwork;

@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const StarlinkVsFourGBonding = () => (
+  <>
+    <SEO
+      title="Starlink vs 4G Bonding Comparison"
+      description="Starlink vs 4G bonding: speed, latency, cost, and reliability compared. Which rural broadband technology is right for your business?"
+      url="/blog/starlink-vs-4g-bonding-honest-comparison"
+      type="article"
+    />
   <BlogArticleLayout slug="starlink-vs-4g-bonding-honest-comparison">
     <p>Starlink vs 4G bonding (SD-WAN) is the biggest rural broadband decision right now. Both can work. Both have real trade-offs.</p>
 
@@ -135,7 +143,8 @@ const StarlinkVsFourGBonding = () => (
     <p>But for businesses, we lean toward Integra Pro because upload speed and latency are worth the extra £35-40/month.</p>
 
     <p>For consumers? Starlink is fine, cheaper, and simpler.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default StarlinkVsFourGBonding;

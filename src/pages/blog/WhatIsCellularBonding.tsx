@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const WhatIsCellularBonding = () => (
+  <>
+    <SEO
+      title="What is Cellular Bonding?"
+      description="Cellular bonding explained: combining multiple mobile networks for faster, more reliable rural broadband. SD-WAN technology for businesses."
+      url="/blog/what-is-cellular-bonding-simple-explanation"
+      type="article"
+    />
   <BlogArticleLayout slug="what-is-cellular-bonding-simple-explanation">
     <p>"Cellular bonding" sounds technical. It's actually simple: combining two or more mobile connections into one faster, more reliable connection.</p>
 
@@ -138,7 +146,8 @@ const WhatIsCellularBonding = () => (
     </ul>
 
     <p>Unsure? Get a site survey. We'll measure actual speeds from each operator at your location and tell you if bonding is worth it.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default WhatIsCellularBonding;

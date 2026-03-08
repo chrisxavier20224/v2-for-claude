@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const CheckBroadbandAvailability = () => (
+  <>
+    <SEO
+      title="Check Broadband Availability in Rural Areas"
+      description="How to check what broadband is available in rural areas. Beyond BT and Openreach: Starlink, 4G, fixed wireless, and bonding options."
+      url="/blog/how-to-check-broadband-availability-rural-areas"
+      type="article"
+    />
   <BlogArticleLayout slug="how-to-check-broadband-availability-rural-areas">
     <p>You've got a postcode and a property, but you don't know what broadband options are actually available. BT's checker says "no fibre." Openreach says "4-6 years away." Starlink might work, but you're not sure.</p>
 
@@ -141,7 +149,8 @@ const CheckBroadbandAvailability = () => (
       <li>We'll send back a detailed site survey in 24 hours</li>
       <li>You'll finally have the truth about what's actually available</li>
     </ol>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default CheckBroadbandAvailability;

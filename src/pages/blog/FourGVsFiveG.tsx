@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const FourGVsFiveG = () => (
+  <>
+    <SEO
+      title="4G vs 5G Broadband for Business"
+      description="4G vs 5G comparison: speeds, latency, coverage, and cost. Which mobile broadband technology suits your business connectivity needs?"
+      url="/blog/4g-vs-5g-broadband-which-is-better-for-business"
+      type="article"
+    />
   <BlogArticleLayout slug="4g-vs-5g-broadband-which-is-better-for-business">
     <p>The race between 4G and 5G broadband is heating up. If you're a rural business waiting for fibre that BT promised you years ago, you might be looking at 4G or 5G as a bridge solution — or even a permanent replacement.</p>
 
@@ -91,7 +99,8 @@ const FourGVsFiveG = () => (
     <p>4G is mature and reliable. 5G is faster but less consistent in rural areas. The smart move is to use whichever works best at your specific location — or combine both.</p>
 
     <p>Before you decide, get a proper site survey. Send us your coordinates from Google Maps, and we'll map your property to nearby towers and tell you exactly what's possible.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default FourGVsFiveG;

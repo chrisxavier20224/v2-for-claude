@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const StarlinkUploadSpeed = () => (
+  <>
+    <SEO
+      title="Starlink Upload Speed for Business"
+      description="Starlink upload speed explained: typically 5-10Mbps. Why this matters for video conferencing, file uploads, and cloud applications."
+      url="/blog/starlink-upload-speed-why-it-matters-for-business"
+      type="article"
+    />
   <BlogArticleLayout slug="starlink-upload-speed-why-it-matters-for-business">
     <p>Starlink is famous for download speeds — 100-200Mbps in rural areas. That sounds amazing.</p>
 
@@ -154,7 +162,8 @@ const StarlinkUploadSpeed = () => (
     </ol>
 
     <p>We'd recommend a site survey before deciding. We'll test actual upload speeds at your location and recommend the product that matches your real needs.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default StarlinkUploadSpeed;

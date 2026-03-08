@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const TemporaryBroadbandEvents = () => (
+  <>
+    <SEO
+      title="Temporary Broadband for UK Events"
+      description="Temporary broadband solutions for events: 4G hotspots, bonded routers, fixed installations. Covers costs and use cases for event WiFi."
+      url="/blog/temporary-broadband-for-events-uk"
+      type="article"
+    />
   <BlogArticleLayout slug="temporary-broadband-for-events-uk">
     <p>Running an event needs internet: card machines, ticketing systems, live streaming, staff communications, exhibitor WiFi.</p>
 
@@ -202,7 +210,8 @@ const TemporaryBroadbandEvents = () => (
     <h2>Next Step</h2>
 
     <p>Got an event coming up? Email us the venue postcode + event dates. We'll survey coverage and send you a quote.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default TemporaryBroadbandEvents;

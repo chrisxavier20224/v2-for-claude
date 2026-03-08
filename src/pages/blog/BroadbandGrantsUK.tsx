@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const BroadbandGrantsUK = () => (
+  <>
+    <SEO
+      title="UK Business Broadband Grants 2026"
+      description="2026 UK business broadband grants and schemes. Openreach vouchers, Gigabit-Capable, and rural funding programmes available now."
+      url="/blog/business-broadband-grants-uk-2026"
+      type="article"
+    />
   <BlogArticleLayout slug="business-broadband-grants-uk-2026">
     <p>The Government committed billions to reaching rural properties with broadband. The money is flowing. But which schemes are open right now? Which ones apply to your business?</p>
 
@@ -125,7 +133,8 @@ const BroadbandGrantsUK = () => (
     <p>But we're often faster and cheaper than waiting for grant-funded fibre.</p>
 
     <p>If you've been waiting for BT's grant-funded installation date and it keeps slipping, let's talk. We might have you online while you're waiting.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default BroadbandGrantsUK;

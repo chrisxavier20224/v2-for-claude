@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const RuralBusinessesSdwan = () => (
+  <>
+    <SEO
+      title="SD-WAN for Rural Businesses"
+      description="SD-WAN solutions for rural businesses: bonding multiple connections, failover redundancy, and reducing costs. Reliable broadband for remote locations."
+      url="/blog/managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses"
+      type="article"
+    />
   <BlogArticleLayout slug="managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses">
     <p>If you're a rural business owner, chances are you've faced unreliable internet. Whether it's handling card payments, managing VoIP systems, or keeping critical services online, staying connected is essential — but fibre broadband isn't always an option.</p>
     <p>Many rural businesses turn to multiple broadband connections as a workaround. While this can help spread the load, it often leads to inefficiencies, wasted resources, and unreliable service. That's where SD-WAN technology comes in.</p>
@@ -34,7 +42,8 @@ const RuralBusinessesSdwan = () => (
 
     <h2>Conclusion</h2>
     <p>For rural businesses struggling with unreliable internet, SD-WAN offers a practical, cost-effective solution. By combining multiple broadband connections into one intelligent network, businesses can enjoy faster speeds, greater resilience, and simplified management — all without the need for expensive fibre installations.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default RuralBusinessesSdwan;

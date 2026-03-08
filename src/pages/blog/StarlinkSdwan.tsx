@@ -1,6 +1,14 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import SEO from "@/components/shared/SEO";
 
 const StarlinkSdwan = () => (
+  <>
+    <SEO
+      title="Starlink + SD-WAN for Business Connectivity"
+      description="Starlink combined with SD-WAN creates resilient business internet with failover, load balancing, and reduced costs. Enterprise-grade reliability."
+      url="/blog/starlink-sd-wan-a-reliable-solution-for-business-connectivity"
+      type="article"
+    />
   <BlogArticleLayout slug="starlink-sd-wan-a-reliable-solution-for-business-connectivity">
     <p>In the modern business world, internet downtime is not an option. Whether you're running critical applications, managing CCTV systems, or maintaining seamless communication, consistent and reliable connectivity is essential.</p>
     <p>While Starlink offers revolutionary satellite internet for remote and underserved areas, businesses reliant on critical services may hesitate to adopt it due to concerns about potential outages.</p>
@@ -32,7 +40,8 @@ const StarlinkSdwan = () => (
 
     <h2>Conclusion</h2>
     <p>Starlink SD-WAN represents the best of both worlds: the revolutionary speed and coverage of satellite internet, combined with the reliability and intelligence of SD-WAN technology. For businesses that can't afford downtime, it's a practical, proven solution that delivers peace of mind.</p>
-  </BlogArticleLayout>
+    </BlogArticleLayout>
+  </>
 );
 
 export default StarlinkSdwan;

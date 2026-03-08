@@ -5,15 +5,22 @@ import LegalPageLayout, {
   LegalList,
   LegalInfoBox,
 } from "@/components/layout/LegalPageLayout";
+import SEO from "@/components/shared/SEO";
 
 const TermsOfService = () => {
   return (
-    <LegalPageLayout
-      title="Terms & Conditions"
-      description="Integra Networks General Terms and Conditions applicable to all Order Forms and service agreements."
-      url="/terms"
-      lastUpdated="1 January 2026"
-    >
+    <>
+      <SEO
+        title="Terms of Service"
+        description="Integra Networks Terms of Service covering service delivery, payment terms, warranties, liability, and termination conditions."
+        url="/terms"
+      />
+      <LegalPageLayout
+        title="Terms & Conditions"
+        description="Integra Networks General Terms and Conditions applicable to all Order Forms and service agreements."
+        url="/terms"
+        lastUpdated="1 January 2026"
+      >
       <LegalParagraph>
         These General Terms and Conditions are applicable to Order Forms agreed and executed by the Company and the Customer. Each Order Form, when agreed and executed by the Company, shall incorporate and shall be subject to these General Terms and Conditions.
       </LegalParagraph>
@@ -254,6 +261,7 @@ const TermsOfService = () => {
         The Customer shall not use the Services or Network to store, distribute or transmit any viruses, or any material that is unlawful, harmful, threatening, defamatory, obscene, or infringing. The Customer shall not transmit spam, intercept data, or attempt unauthorised access to systems.
       </LegalParagraph>
     </LegalPageLayout>
+    </>
   );
 };
 

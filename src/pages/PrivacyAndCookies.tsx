@@ -4,15 +4,22 @@ import LegalPageLayout, {
   LegalList,
   LegalInfoBox,
 } from "@/components/layout/LegalPageLayout";
+import SEO from "@/components/shared/SEO";
 
 const PrivacyAndCookies = () => {
   return (
-    <LegalPageLayout
-      title="Privacy Policy"
-      description="Integra Networks Privacy Policy — how we collect, hold and process your personal information under GDPR."
-      url="/privacy-cookies"
-      lastUpdated="1 January 2026"
-    >
+    <>
+      <SEO
+        title="Privacy & Cookie Policy"
+        description="Integra Networks privacy policy and cookie statement. Learn how we protect your data under GDPR and UK data protection legislation."
+        url="/privacy-cookies"
+      />
+      <LegalPageLayout
+        title="Privacy Policy"
+        description="Integra Networks Privacy Policy — how we collect, hold and process your personal information under GDPR."
+        url="/privacy-cookies"
+        lastUpdated="1 January 2026"
+      >
       <LegalHeading number={1}>Introduction</LegalHeading>
       <LegalParagraph>
         At Integra Networks Limited we take your privacy very seriously and this policy outlines how we will hold and process your personal information under the Data Protection Act 1998, the UK Data Protection Bill and the General Data Protection Regulation (GDPR) effective from the 25th May 2018. This policy contains important information about what to expect when we collect personal information via all platforms, including when you visit our website, or when you subscribe to our marketing communications.
@@ -106,6 +113,7 @@ const PrivacyAndCookies = () => {
         </p>
       </LegalInfoBox>
     </LegalPageLayout>
+    </>
   );
 };
 
