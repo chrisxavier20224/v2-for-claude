@@ -49,6 +49,26 @@ const StarlinkSdwan = lazy(() => import("./pages/blog/StarlinkSdwan"));
 const StarlinkInstallers = lazy(() => import("./pages/blog/StarlinkInstallers"));
 const StarlinkRightSolution = lazy(() => import("./pages/blog/StarlinkRightSolution"));
 const SingleMobileNetwork = lazy(() => import("./pages/blog/SingleMobileNetwork"));
+const FourGVsFiveG = lazy(() => import("./pages/blog/FourGVsFiveG"));
+const SatelliteVsFixedWireless = lazy(() => import("./pages/blog/SatelliteVsFixedWireless"));
+const CheckBroadbandAvailability = lazy(() => import("./pages/blog/CheckBroadbandAvailability"));
+const BroadbandGrantsUK = lazy(() => import("./pages/blog/BroadbandGrantsUK"));
+const StarlinkUploadSpeed = lazy(() => import("./pages/blog/StarlinkUploadSpeed"));
+const StarlinkVsFourGBonding = lazy(() => import("./pages/blog/StarlinkVsFourGBonding"));
+const WhatIsCellularBonding = lazy(() => import("./pages/blog/WhatIsCellularBonding"));
+const LoadBalancingVsBonding = lazy(() => import("./pages/blog/LoadBalancingVsBonding"));
+const TemporaryBroadbandEvents = lazy(() => import("./pages/blog/TemporaryBroadbandEvents"));
+const PortableWifiConstruction = lazy(() => import("./pages/blog/PortableWifiConstruction"));
+const IoTConnectivityAgriculture = lazy(() => import("./pages/blog/IoTConnectivityAgriculture"));
+const MultiBuildingWifi = lazy(() => import("./pages/blog/MultiBuildingWifi"));
+const LocationNorthWest = lazy(() => import("./pages/locations/NorthWest"));
+const LocationEssexHerts = lazy(() => import("./pages/locations/EssexHerts"));
+const LocationSussexSurrey = lazy(() => import("./pages/locations/SussexSurrey"));
+const LocationKent = lazy(() => import("./pages/locations/Kent"));
+const LocationSomersetDevon = lazy(() => import("./pages/locations/SomersetDevon"));
+const LocationYorkshire = lazy(() => import("./pages/locations/Yorkshire"));
+const LocationLondon = lazy(() => import("./pages/locations/London"));
+const LocationCotswolds = lazy(() => import("./pages/locations/Cotswolds"));
 const Resources = lazy(() => import("./pages/resources/Resources"));
 const AccessBroadbandCymru = lazy(() => import("./pages/resources/AccessBroadbandCymru"));
 const PSTNSwitchOff = lazy(() => import("./pages/resources/PSTNSwitchOff"));
@@ -119,6 +139,27 @@ const App = () => (
               <Route path="/blog/starlink-installers-near-me-finding-the-best-solution-for-high-speed-satellite-internet" element={<StarlinkInstallers />} />
               <Route path="/blog/starlink-is-it-the-right-solution-for-me" element={<StarlinkRightSolution />} />
               <Route path="/blog/single-mobile-network-connectivity-solutions-a-reliable-option" element={<SingleMobileNetwork />} />
+              <Route path="/blog/4g-vs-5g-broadband-which-is-better-for-business" element={<FourGVsFiveG />} />
+              <Route path="/blog/satellite-internet-vs-fixed-wireless-pros-and-cons" element={<SatelliteVsFixedWireless />} />
+              <Route path="/blog/how-to-check-broadband-availability-rural-areas" element={<CheckBroadbandAvailability />} />
+              <Route path="/blog/business-broadband-grants-uk-2026" element={<BroadbandGrantsUK />} />
+              <Route path="/blog/starlink-upload-speed-why-it-matters-for-business" element={<StarlinkUploadSpeed />} />
+              <Route path="/blog/starlink-vs-4g-bonding-honest-comparison" element={<StarlinkVsFourGBonding />} />
+              <Route path="/blog/what-is-cellular-bonding-simple-explanation" element={<WhatIsCellularBonding />} />
+              <Route path="/blog/load-balancing-vs-bonding-whats-the-difference" element={<LoadBalancingVsBonding />} />
+              <Route path="/blog/temporary-broadband-for-events-uk" element={<TemporaryBroadbandEvents />} />
+              <Route path="/blog/portable-wifi-solutions-construction-sites" element={<PortableWifiConstruction />} />
+              <Route path="/blog/iot-connectivity-agriculture-uk" element={<IoTConnectivityAgriculture />} />
+              <Route path="/blog/multi-building-wifi-rural-properties" element={<MultiBuildingWifi />} />
+
+              <Route path="/locations/rural-broadband-north-west" element={<LocationNorthWest />} />
+              <Route path="/locations/rural-broadband-essex-hertfordshire" element={<LocationEssexHerts />} />
+              <Route path="/locations/rural-broadband-sussex-surrey" element={<LocationSussexSurrey />} />
+              <Route path="/locations/rural-broadband-kent" element={<LocationKent />} />
+              <Route path="/locations/rural-broadband-somerset-devon" element={<LocationSomersetDevon />} />
+              <Route path="/locations/rural-broadband-yorkshire" element={<LocationYorkshire />} />
+              <Route path="/locations/construction-site-broadband-london" element={<LocationLondon />} />
+              <Route path="/locations/rural-broadband-cotswolds" element={<LocationCotswolds />} />
 
               <Route path="/connectivity/leased-lines" element={<LeasedLines />} />
               <Route path="/connectivity/unified-communications" element={<UnifiedCommunications />} />
