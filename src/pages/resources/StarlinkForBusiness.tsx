@@ -300,7 +300,7 @@ const StarlinkForBusiness = () => {
                 That's more expensive than Starlink alone (£80 extra per month = £960/year). But if Starlink alone costs you one EPOS outage per month (£200-500 in lost sales + reputation damage), the failover pays for itself.
               </p>
               <p>
-                <strong>The business case:</strong> If your business loses >£100 per hour of downtime, add the cellular layer. The insurance is worth it.
+                <strong>The business case:</strong> If your business loses &gt;£100 per hour of downtime, add the cellular layer. The insurance is worth it.
               </p>
             </div>
           </div>
