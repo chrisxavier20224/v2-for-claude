@@ -388,7 +388,7 @@ const SustainabilityEfficiencyArticle = () => {
           {/* Footer / Author */}
           <footer className="mt-20 pt-10 border-t border-border print:border-gray-200">
             <div className="text-sm text-muted-foreground">
-              <p className="font-medium text-foreground mb-1">NEXR Research</p>
+              <p className="font-medium text-foreground mb-1">Integra Networks Research</p>
               <p>Thought leadership on critical power operations</p>
             </div>
           </footer>

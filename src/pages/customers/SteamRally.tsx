@@ -72,9 +72,9 @@ const SteamRally = () => {
               <motion.div key={item.label} variants={fadeUp}>
                 <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">{item.label}</p>
                 {item.href ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-surface-dark-foreground font-semibold hover:text-primary transition-colors inline-flex items-center gap-1.5">
+                  <Link href={item.href} target="_blank" rel="noopener noreferrer" className="text-surface-dark-foreground font-semibold hover:text-primary transition-colors inline-flex items-center gap-1.5">
                     {item.value} <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
+                  </Link>
                 ) : (
                   <p className="text-surface-dark-foreground font-semibold">{item.value}</p>
                 )}
@@ -159,9 +159,9 @@ const SteamRally = () => {
           <div className="mt-12 pt-8 border-t border-border">
             <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Solutions delivered</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="#" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+              <Link to="/blog/temporary-broadband-for-events-uk" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
                 Temporary Broadband
-              </a>
+              </Link>
               <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
                 Business WiFi
               </Link>

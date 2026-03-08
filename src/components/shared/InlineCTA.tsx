@@ -15,7 +15,7 @@ const InlineCTA = ({ variant = "default" }: InlineCTAProps) => {
           <ArrowRight className="ml-1 h-4 w-4" />
         </Button>
       </Link>
-      <Link to="/platform">
+      <Link to="/connectivity/integra-sd-wan">
         <Button 
           size="lg" 
           variant="outline"

@@ -173,7 +173,7 @@ const AnimatedSelect = ({
 // ─── Frame 1: Checklist ──────────────────────────────────────────────────────
 
 const CHECKLIST = [
-  "Unboxed the NEXR Gateway Device",
+  "Unboxed the Integra Gateway Device",
   "Install cable connecting controller to gateway",
   "Power up both devices",
 ];
@@ -191,7 +191,7 @@ const Frame1 = ({ elapsed }: { elapsed: number }) => {
         <StepTitle />
       </div>
       <p className="text-xs font-medium text-foreground text-center mb-1">
-        Welcome to the NEXR Onboarding Wizard
+        Welcome to the Integra Onboarding Wizard
       </p>
       <p className="text-[11px] text-muted-foreground text-center mb-4">
         Before we get started, please go through the steps below:
@@ -350,7 +350,7 @@ const Frame3 = ({ elapsed }: { elapsed: number }) => {
             >
               <Check className="w-2.5 h-2.5 text-primary-foreground" strokeWidth={3} />
             </motion.div>
-            <span className="text-[11px] text-foreground/80">Install NEXR Configuration Firmware</span>
+            <span className="text-[11px] text-foreground/80">Install Integra Configuration Firmware</span>
           </motion.div>
         )}
       </div>
@@ -424,7 +424,7 @@ const Frame5 = () => (
       className="text-center"
     >
       <p className="text-sm font-medium text-status-ok mb-3">Device Successfully Onboarded</p>
-      <img src={nexrOneLogo} alt="NEXR One" className="w-64 mx-auto opacity-70" />
+      <img src={nexrOneLogo} alt="Integra One" className="w-64 mx-auto opacity-70" />
     </motion.div>
     {/* Glow */}
     <motion.div

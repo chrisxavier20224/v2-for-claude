@@ -3,13 +3,13 @@ import { Helmet } from "react-helmet-async";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "NEXR",
-  url: "https://nexr-iot.co.uk",
-  logo: "https://nexr-iot.co.uk/favicon.png",
+  name: "Integra Networks",
+  url: "https://integra-networks.co.uk",
+  logo: "https://integra-networks.co.uk/favicon.png",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+44-204-626-6880",
-    email: "connect@nexr-iot.co.uk",
+    telephone: "+44-203-388-7111",
+    email: "connect@integra-networks.co.uk",
     contactType: "sales",
   },
   address: {
@@ -24,8 +24,8 @@ const organizationSchema = {
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "NEXR",
-  url: "https://nexr-iot.co.uk",
+  name: "Integra Networks",
+  url: "https://integra-networks.co.uk",
 };
 
 const StructuredData = () => (

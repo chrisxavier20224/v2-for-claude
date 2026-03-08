@@ -128,7 +128,7 @@ const ResilientCloudVisual = () => {
           <div className="w-2 h-2 rounded-full bg-primary/60" />
         </div>
         <span className="mt-2 text-[9px] uppercase tracking-[0.15em] text-primary/50 font-medium">
-          NEXR Platform
+          Integra Platform
         </span>
       </div>
     </div>

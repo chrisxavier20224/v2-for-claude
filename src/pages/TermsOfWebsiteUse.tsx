@@ -9,20 +9,20 @@ const TermsOfWebsiteUse = () => {
   return (
     <LegalPageLayout
       title="Terms of Website Use"
-      description="Terms governing your use of the NEXR website. These terms apply to the website only, not the NEXR platform or software."
+      description="Terms governing your use of the Integra Networks website. These terms apply to the website only, not the Integra Networks platform or software."
       url="/terms-of-use"
       lastUpdated="January 2026"
     >
       {/* Introduction */}
       <LegalParagraph>
-        These Terms of Website Use govern your use of the NEXR website.
+        These Terms of Website Use govern your use of the Integra Networks website.
       </LegalParagraph>
       <LegalParagraph>
         By accessing or using this website, you agree to these terms. If you do not agree, 
         please do not use the website.
       </LegalParagraph>
       <LegalParagraph>
-        This website is provided for general information about NEXR and its products and services.
+        This website is provided for general information about Integra Networks and its products and services.
       </LegalParagraph>
 
       {/* Section 1: About Us */}
@@ -31,7 +31,7 @@ const TermsOfWebsiteUse = () => {
         This website is operated by:
       </LegalParagraph>
       <LegalInfoBox>
-        <p className="font-medium text-foreground">NEXR IoT Ltd</p>
+        <p className="font-medium text-foreground">Integra Networks Ltd</p>
         <p className="text-sm mt-2">
           3rd Floor, 86-90 Paul Street<br />
           London, EC2A 4NE<br />
@@ -39,13 +39,13 @@ const TermsOfWebsiteUse = () => {
         </p>
         <p className="text-sm mt-3">
           <strong>Email:</strong>{" "}
-          <a href="mailto:connect@nexr-iot.co.uk" className="text-primary hover:underline">
-            connect@nexr-iot.co.uk
+          <a href="mailto:connect@integra-networks.co.uk" className="text-primary hover:underline">
+            connect@integra-networks.co.uk
           </a><br />
-          <strong>Phone:</strong> 0204 626 6880<br />
+          <strong>Phone:</strong> 0203 388 7111<br />
           <strong>Website:</strong>{" "}
-          <a href="https://nexr-iot.co.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-            nexr-iot.co.uk
+          <a href="https://integra-networks.co.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+            integra-networks.co.uk
           </a>
         </p>
         <p className="text-sm mt-3 text-muted-foreground">
@@ -86,7 +86,7 @@ const TermsOfWebsiteUse = () => {
       <LegalHeading number={4}>Intellectual Property</LegalHeading>
       <LegalParagraph>
         All content on this website, including text, graphics, logos, layout, and design, 
-        is owned by or licensed to NEXR IoT Ltd.
+        is owned by or licensed to Integra Networks Ltd.
       </LegalParagraph>
       <LegalParagraph>
         You may view and print pages for your own internal business use only.

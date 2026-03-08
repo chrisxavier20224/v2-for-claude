@@ -10,9 +10,9 @@ const alignedIndices = new Set([1, 3, 5]);
 const EdgeSecurityVisual = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-full h-full min-h-[340px] rounded-xl border border-border/30 bg-[hsl(var(--background))] overflow-hidden select-none">
-      {/* NEXR ONE Logo — stable at top */}
+      {/* Integra Logo — stable at top */}
       <div className="relative z-10 mb-6">
-        <img src={nexrOneLogo} alt="NEXR ONE" className="h-8 opacity-80" />
+        <img src={nexrOneLogo} alt="Integra Logo" className="h-8 opacity-80" />
       </div>
 
       {/* Boundary line */}

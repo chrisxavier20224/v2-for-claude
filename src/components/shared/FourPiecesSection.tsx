@@ -64,7 +64,7 @@ const FourPiecesSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="absolute left-0 top-0 w-[280px]"
           >
-            <Link to="/predict" className="group block border-t-2 border-border hover:border-primary pt-4 transition-colors" onMouseEnter={() => setHoveredSection('before')} onMouseLeave={() => setHoveredSection(null)}>
+            <Link to="/connectivity/integra-sd-wan" className="group block border-t-2 border-border hover:border-primary pt-4 transition-colors" onMouseEnter={() => setHoveredSection('before')} onMouseLeave={() => setHoveredSection(null)}>
               <motion.div 
                 className="relative"
                 animate={hasPulsed ? { 
@@ -169,7 +169,7 @@ const FourPiecesSection = () => {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-8"
             >
-              <Link to="/command" className="block group/command" onMouseEnter={() => setHoveredSection('now')} onMouseLeave={() => setHoveredSection(null)}>
+              <Link to="/connectivity/integra-sd-wan" className="block group/command" onMouseEnter={() => setHoveredSection('now')} onMouseLeave={() => setHoveredSection(null)}>
                 <div className="border-l-2 border-border hover:border-primary pl-6 py-2 transition-colors">
                   <div className="flex items-baseline gap-3 mb-2">
                      <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover/command:text-primary transition-colors">
@@ -202,7 +202,7 @@ const FourPiecesSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="absolute right-0 top-0 w-[280px] text-right"
           >
-            <Link to="/insight" className="group block border-t-2 border-border hover:border-primary pt-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
+            <Link to="/resources" className="group block border-t-2 border-border hover:border-primary pt-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
               <motion.div 
                 className="relative"
                 animate={hasPulsed ? { 
@@ -246,7 +246,7 @@ const FourPiecesSection = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="mt-32 max-w-xl mx-auto"
           >
-            <Link to="/fleet" className="group block border-t-2 border-border hover:border-primary pt-8 transition-colors">
+            <Link to="/connectivity/managed-sim-services" className="group block border-t-2 border-border hover:border-primary pt-8 transition-colors">
               <motion.div 
                 className="relative"
                 animate={hasPulsed ? { 
@@ -313,7 +313,7 @@ const FourPiecesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <Link to="/predict" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('before')} onMouseLeave={() => setHoveredSection(null)}>
+          <Link to="/connectivity/integra-sd-wan" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('before')} onMouseLeave={() => setHoveredSection(null)}>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-2 transition-colors">Before</div>
             <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Predict</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Anticipate operational risk before it escalates.</p>
@@ -368,7 +368,7 @@ const FourPiecesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <Link to="/command" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('now')} onMouseLeave={() => setHoveredSection(null)}>
+          <Link to="/connectivity/integra-sd-wan" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('now')} onMouseLeave={() => setHoveredSection(null)}>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-2 transition-colors">Now</div>
             <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Command</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Maintain live operational authority.</p>
@@ -382,7 +382,7 @@ const FourPiecesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Link to="/insight" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
+          <Link to="/resources" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-2 transition-colors">After</div>
             <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Insight</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Turn operational history into structured intelligence.</p>
@@ -397,7 +397,7 @@ const FourPiecesSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="pt-8 mt-4"
         >
-          <Link to="/fleet" className="group block border-l-2 border-border hover:border-primary pl-6 transition-colors">
+          <Link to="/connectivity/managed-sim-services" className="group block border-l-2 border-border hover:border-primary pl-6 transition-colors">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg border border-border/50 bg-card/30 flex items-center justify-center flex-shrink-0 group-hover:border-primary/50 transition-colors">
                 <MapPin className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />

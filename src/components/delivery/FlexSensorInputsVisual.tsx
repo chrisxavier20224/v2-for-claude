@@ -94,7 +94,7 @@ const FlexSensorInputsVisual = () => {
         </div>
 
         {/* NEXR logo */}
-        <img src={nexrLogo} alt="NEXR ONE" style={{ height: 160, width: "auto" }} />
+        <img src={nexrLogo} alt="Integra One" style={{ height: 160, width: "auto" }} />
       </motion.div>
     </div>
   );

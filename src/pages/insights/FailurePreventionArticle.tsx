@@ -7,7 +7,7 @@ const FailurePreventionArticle = () => {
   return (
     <PageLayout>
       <SEO
-        title="Failure Prevention Starts Long Before Alarms | NEXR Insights"
+        title="Failure Prevention Starts Long Before Alarms | Integra Networks Insights"
         description="A practical view of predictive maintenance for critical power assets. Learn how to detect emerging risks in generators, MDUs, and battery systems before alarms trigger."
         url="/insights/failure-prevention-starts-long-before-alarms"
         type="article"

@@ -41,7 +41,7 @@ const ModuleHub = () => {
         {/* Centre hub */}
         <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded glass-card">
           <div className="text-center">
-            <span className="block text-lg font-bold text-foreground">NEXR</span>
+            <span className="block text-lg font-bold text-foreground">Integra</span>
             <span className="block text-sm font-medium text-primary">One</span>
           </div>
         </div>

@@ -12,7 +12,7 @@ import { Printer, Check, X, Download, FileType, Palette, Type, Lock, Copy } from
 import { toast } from "sonner";
 
 
-const BRAND_ACCESS_KEY = "nexr-brand-access";
+const BRAND_ACCESS_KEY = "integra-brand-access";
 const ACCESS_PASSWORD = "M1llionaire2027";
 
 const BrandGuidelines = () => {
