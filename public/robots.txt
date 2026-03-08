@@ -1,0 +1,23 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Temporarily block blog/insights pages
+Disallow: /blog
+Disallow: /blog/
+
+# Block brand guidelines
+Disallow: /brand-guidelines
+
+Sitemap: https://integra-networks.co.uk/sitemap.xml
