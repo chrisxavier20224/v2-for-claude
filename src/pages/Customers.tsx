@@ -138,10 +138,10 @@ const Customers = () => {
           <AnimatedSection>
             <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Customer Stories</p>
             <h1 className="text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Amplifying Connectivity for Businesses and Homeworkers
+              107 businesses. Real results.
             </h1>
             <p className="text-lg text-white/80 max-w-xl mt-6 leading-relaxed">
-              See how organisations across the UK have transformed their connectivity with Integra's SD-WAN and fibre solutions — from rural business parks to major live events.
+              From rural farms to London construction sites, from glamping pods to yacht clubs — these are the businesses that stopped waiting for fibre and chose Integra instead.
             </p>
             <p className="text-white/60 mt-4">Read our customer stories below ↓</p>
           </AnimatedSection>
@@ -242,7 +242,7 @@ const Customers = () => {
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Unlock the Power of Integra SD-WAN</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Ready to join them?</h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Link

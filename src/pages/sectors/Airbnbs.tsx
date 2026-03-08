@@ -19,25 +19,25 @@ import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.jpg";
 const painPoints = [
   {
     icon: Wifi,
-    title: "Sluggish Internet Deterring Potential Bookings?",
-    description: "Don't lose guests due to slow internet. Speed matters in a connected world.",
+    title: "Slow Internet Costing You Bookings?",
+    description: "Guests check WiFi speed before booking. If yours is slow or unreliable, they'll book somewhere else.",
   },
   {
     icon: WifiOff,
-    title: "WiFi Dead Zones Irritating Guests?",
-    description: "Ensure complete WiFi coverage across your property, eliminating frustrating connection drops.",
+    title: "Dead Zones Across Your Property?",
+    description: "One router doesn't cover a barn conversion, glamping field, or multi-building site. You need proper coverage, not a longer cable.",
   },
   {
     icon: Star,
-    title: "Bad Reviews Due to Poor Internet?",
-    description: "Enhance guest satisfaction and your Airbnb rating with seamless internet connectivity.",
+    title: "One-Star WiFi Reviews Dragging You Down?",
+    description: "\"Great property, terrible internet\" kills your rating. We fix that permanently — not with a better router, but a better connection.",
   },
 ];
 
 const benefitItems = [
-  "Ultra-fast, Reliable Internet Connection",
-  "Coverage Across Entire Property",
-  "Expert Network Troubleshooting & Support",
+  "Up to 350Mbps — Faster Than Most Home Fibre",
+  "Full Coverage Across Every Building & Pod",
+  "24/7 Monitoring via Nimbus + WhatsApp Support",
 ];
 
 const staggerContainer = {
@@ -59,9 +59,9 @@ const Airbnbs = () => {
   return (
     <PageLayout>
       <SEO
-        title="Airbnb Connectivity — High-Speed WiFi for Holiday Rentals"
-        description="Maximize bookings and reviews with unparalleled, reliable, and speedy internet connectivity for your Airbnb, regardless of location."
-        keywords="airbnb wifi, holiday rental internet, guest wifi, glamping connectivity, vacation rental broadband"
+        title="Airbnb & Holiday Let WiFi — Fast Guest Internet in 14 Days"
+        description="Stop losing bookings to bad WiFi. Guest-ready internet for Airbnbs, glamping sites, and holiday lets — delivered in under 14 days, wherever you are."
+        keywords="airbnb wifi, holiday rental internet, guest wifi, glamping connectivity, vacation rental broadband, holiday let internet, rural airbnb wifi"
         url="/sectors/airbnbs"
       />
 
@@ -80,10 +80,10 @@ const Airbnbs = () => {
               </Link>
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Revolutionize Your Airbnb Experience with Integra
+              WiFi that earns five-star reviews.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Maximize bookings and reviews with unparalleled, reliable, and speedy internet connectivity, regardless of location.
+              Guests expect fast, reliable internet. We deliver it — to Airbnbs, glamping pods, holiday cottages, and rural lets. Installed in under 14 days, wherever your property is.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -118,9 +118,9 @@ const Airbnbs = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <Radio className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Boost Your Airbnb with High-Speed Internet</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Fast internet, even in the middle of nowhere.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Experience 99% UK coverage with our speedy Integra SD-WAN, regardless of location. Watch your bookings increase with our guaranteed fast connectivity, delivered in under 14 days.
+              Our cellular SD-WAN delivers up to 350Mbps — no fibre required. Works on 99% of UK properties, installed in under 14 days. Your guests get fast, reliable internet from check-in to checkout.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -142,9 +142,9 @@ const Airbnbs = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 py-12 md:py-16 flex justify-end">
           <AnimatedSection>
             <div className="text-right">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Circumvent the Need for Costly Leased Lines</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Multiple buildings? We link them wirelessly.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                Our robust wireless network delivery ensures fast connectivity, even in rural areas, avoiding unnecessary costs. Multiple buildings? We've got you covered with radio links between units.
+                Main house, barn conversion, glamping pods — we use point-to-point radio links to extend your connection across your entire property. No trenching, no cables across fields.
               </p>
             </div>
           </AnimatedSection>
@@ -156,9 +156,9 @@ const Airbnbs = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Ultrafast Connectivity Delivered in Days</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Installed in days. Monitored 24/7.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Boost your occupancy rates and reviews by offering super fast internet. Enhance guest experience with our quick, reliable, and high-speed connectivity.
+              Our engineers install your connection and WiFi in a single visit. Then we monitor it remotely via Nimbus — so if something drops while your guests are mid-stream, we're already on it.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -183,9 +183,9 @@ const Airbnbs = () => {
               <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
                 <MonitorPlay className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Enjoy Uninterrupted Virtual Meetings</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Guests who work remotely love you.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-8">
-                Guarantee your guests the comfort of seamless Microsoft Teams calls, enabling them to stay connected while enjoying your property.
+                Remote workers are the highest-value Airbnb guests — longer stays, midweek bookings, repeat visits. Give them stable video calls, fast uploads, and reliable streaming, and they'll come back.
               </p>
               <motion.ul className="space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
                 {benefitItems.map((item) => (
@@ -232,8 +232,8 @@ const Airbnbs = () => {
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Ready to boost your Airbnb ratings?</h2>
-            <p className="mb-8 text-lg text-white/80">Get fast, reliable WiFi for your guests delivered in under 14 days.</p>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Stop losing bookings to bad WiFi.</h2>
+            <p className="mb-8 text-lg text-white/80">Guest-ready internet installed in under 14 days. Works wherever your property is.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">

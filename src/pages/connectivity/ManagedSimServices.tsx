@@ -17,7 +17,7 @@ const painPoints = [
   {
     icon: Rocket,
     title: "Rapid Deployment",
-    description: "Our managed SIM solution, independent of the UK fibre network, ensures swift deployments, especially beneficial for estates with numerous devices.",
+    description: "Independent of the UK fibre network, our managed SIM solution deploys in days — not weeks. Especially beneficial for estates with hundreds of devices needing migration.",
   },
   {
     icon: PiggyBank,
@@ -38,8 +38,8 @@ const ManagedSimServices = () => {
   return (
     <PageLayout>
       <SEO
-        title="Managed SIM Services — PSTN Transition Solutions"
-        description="Efficient solutions for transitioning from PSTN. Affordable, no upfront cost managed SIM service for residential customers and SMEs."
+        title="Managed SIM Services — PSTN Switch-Off Solutions from £2.90/month"
+        description="PSTN switching off January 2027. Our managed SIM service replaces analogue lines for lifts, alarms, and EPOS — no upfront costs, 3-day monitoring, complete estate visibility."
         keywords="managed SIM, PSTN switch off, SOGEA alternative, lift line migration, SIM connectivity, IoT SIM"
         url="/connectivity/managed-sim-services"
       />
@@ -59,9 +59,9 @@ const ManagedSimServices = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Efficient Solutions for Transitioning from PSTN</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">PSTN is switching off. Are you ready?</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              SOGEA may be costly for single line PSTN replacement. Integra provides an affordable, no upfront cost solution for residential customers and SMEs.
+              SOGEA is costly for single-line PSTN replacement. Our managed SIM service delivers an affordable, no upfront cost solution — with complete estate visibility, proactive monitoring, and SIMs from £2.90/month.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -78,10 +78,10 @@ const ManagedSimServices = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Managed SIM Services</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Streamlined connectivity and cost savings
+              Replace analogue. Save money. See everything.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Our managed SIM service offers superior connectivity, compliance, reporting, and significant cost savings compared to traditional analogue landline management.
+              Our managed SIM service offers superior connectivity, compliance, proactive monitoring, and significant cost savings. Our Multinet SIM connects to all four UK mobile operators for maximum resilience.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -106,7 +106,7 @@ const ManagedSimServices = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Simplify Your Lift Service Migration</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our Managed SIM Service is designed to simplify your life and provide complete control. The service includes line rental and call rates, freeing you from management hassles. It's a comprehensive solution including technical and on-site support, 3-day line test monitoring, and constant GSM connectivity monitoring.
+              Our Managed SIM Service includes line rental and call rates in one bill — no separate management. Technical and on-site support, 3-day line test monitoring, constant GSM connectivity monitoring, and a 3-year Device-as-a-Service model with advanced replacement and no upfront costs.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -134,7 +134,7 @@ const ManagedSimServices = () => {
               </motion.div>
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Gain Complete Network Visibility</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Consolidate your network with our Managed SIM solution and gain clear visibility of your entire estate. With proactive network monitoring, you can ensure optimal performance and quickly address any issues.
+                Consolidate your estate onto one platform and see every SIM, every device, every connection in real time. Proactive monitoring means we spot issues before they become outages — no more guessing which lines are active.
               </p>
             </AnimatedSection>
           </div>
@@ -152,10 +152,10 @@ const ManagedSimServices = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Replace PSTN Voice Traffic</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Our Multinet SIM connects to all four UK mobile network operators and can be exclusively used for voice traffic. Our Managed SIM service is a valuable tool for PSTN network migrations.
+              Our Multinet SIM connects to all four UK mobile operators (O2, Vodafone, EE, Three) and can be used exclusively for voice traffic — a direct replacement for PSTN lines on lifts, alarms, door entry systems, and EPOS terminals.
             </p>
             <p className="text-muted-foreground">
-              We offer a 3-year term on a Device as a Service model with advanced replacement, in-term upgrades, and no upfront costs.
+              IoT SIMs from £2.90/month with pooled data options. 3-year term, Device-as-a-Service model, advanced replacement, in-term upgrades, and no upfront costs.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -171,8 +171,8 @@ const ManagedSimServices = () => {
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Ready to transition from PSTN?</h2>
-            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">Get in touch to discuss how our managed SIM services can simplify your migration.</p>
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">PSTN switches off January 2027. Start now.</h2>
+            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">Get in touch to discuss how our managed SIM services can simplify your migration — before the deadline hits.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

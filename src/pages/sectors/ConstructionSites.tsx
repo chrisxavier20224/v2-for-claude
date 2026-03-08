@@ -18,25 +18,25 @@ import mcgeeHero from "@/assets/case-studies/mcgee-hero.jpg";
 const painPoints = [
   {
     icon: Truck,
-    title: "Relocating Internet Setup — A Nightmare?",
-    description: "Worried about the complexity of shifting internet setups from one site to the next?",
+    title: "Site Moving? Your Internet Moves Too.",
+    description: "Our kit is portable. When you finish one phase and move to the next, we redeploy your connection — same day if needed.",
   },
   {
     icon: FileText,
-    title: "Frustrated with Inflexible ISPs?",
-    description: "Tired of traditional ISPs and their inflexible contracts, unsatisfactory support?",
+    title: "No 12-Month Contracts. Flexible Terms.",
+    description: "Construction projects don't run to ISP contract schedules. We offer monthly agreements that match your programme, not the other way around.",
   },
   {
     icon: Zap,
-    title: "Struggling with Internet Speed?",
-    description: "Lagging internet slowing progress? Make file transfers and communication effortless.",
+    title: "CCTV, BIM, and File Sharing Need Speed.",
+    description: "Up to 350Mbps download and 100Mbps+ upload. Static IP included for remote CCTV access and secure file sharing from site.",
   },
 ];
 
 const benefitItems = [
-  "Secure for Sensitive File Sharing",
-  "Rapid Deployment in Days",
-  "Static IP for Security & Monitoring",
+  "Encrypted Connection for BIM & File Sharing",
+  "Deployed in Days — Redeployed When You Move",
+  "Static IP for Remote CCTV & VPN Access",
 ];
 
 const staggerContainer = {
@@ -58,9 +58,9 @@ const ConstructionSites = () => {
   return (
     <PageLayout>
       <SEO
-        title="Construction Site Connectivity — High-Speed Internet for Construction"
-        description="Next-gen connectivity solutions for construction sites. Rapid deployment, flexible contracts, and fibre-like speeds without waiting for Openreach."
-        keywords="construction site internet, construction WiFi, site connectivity, SD-WAN construction, temporary internet"
+        title="Construction Site Internet — Deployed in Days, Moves with You"
+        description="Internet for construction sites deployed in days, not months. Flexible monthly agreements, static IP for CCTV, and portable kit that moves when you do."
+        keywords="construction site internet, construction WiFi, site connectivity, SD-WAN construction, temporary internet, portable broadband, site office internet"
         url="/sectors/construction-sites"
       />
 
@@ -79,10 +79,10 @@ const ConstructionSites = () => {
               </Link>
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Empowering Construction Projects with High-Speed Connectivity
+              Internet that deploys when you do.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Next-gen connectivity solutions, specifically designed for construction landscapes.
+              No utilities on site yet? No problem. We deploy high-speed internet to construction sites in days — with flexible monthly agreements and kit that moves when you do.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -117,9 +117,9 @@ const ConstructionSites = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <Zap className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Rapid Connectivity, Swift Delivery</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Online in days, not months.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Experience lightning-fast connectivity without the wait. With Integra, you bypass the delays and complications of fibre and Openreach. We deliver swift connectivity and a secure wireless network on-site, all set up and ready to go in just a few days.
+              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -141,9 +141,9 @@ const ConstructionSites = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 py-12 md:py-16 flex justify-end">
           <AnimatedSection>
             <div className="text-right">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Uninterrupted Support</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">When it goes down, we pick up the phone.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                Enjoy our exceptional UK-based support. Our dedicated team is always ready to promptly resolve any issues, ensuring your connectivity needs are met efficiently and effectively.
+                UK-based support via phone and WhatsApp, with 2-4 hour response times. We monitor your connection 24/7 via Nimbus and can fix most issues remotely before your site manager notices.
               </p>
             </div>
           </AnimatedSection>
@@ -156,10 +156,10 @@ const ConstructionSites = () => {
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">
-              Experience Fibre-Like Speeds for your Construction Sites
+              Built for how construction actually works.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Enjoy fibre-like speeds without the wait time or excessive construction charges. We offer flexible monthly agreements tailored to your needs.
+              Fibre-like speeds without digging a trench. Monthly agreements that flex with your programme. Static IP for CCTV remote access. And kit that redeploys to your next site.
             </p>
             <motion.ul className="space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
               {benefitItems.map((item) => (
@@ -212,8 +212,8 @@ const ConstructionSites = () => {
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Ready to power up your construction site?</h2>
-            <p className="mb-8 text-lg text-white/80">Get connected in days with flexible monthly agreements and fibre-like speeds.</p>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Get your site online this week.</h2>
+            <p className="mb-8 text-lg text-white/80">Flexible monthly agreements. Portable kit. Deployed in days, not months.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">

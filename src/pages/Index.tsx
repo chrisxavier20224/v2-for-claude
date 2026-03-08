@@ -45,43 +45,43 @@ const fadeUp = {
 const aboutPoints = [
   {
     icon: Lightbulb,
-    title: "Innovative Approaches to Connectivity Delivery",
-    description: "We deliver connectivity solutions differently from most, which allows us to bring challenging sites on-net within weeks rather than months.",
+    title: "Installed in Under 14 Days",
+    description: "No excess construction charges. No 8-week BT wait. We layer satellite, cellular, and fibre to get your site online in days, not months.",
   },
   {
     icon: Users,
-    title: "Full Network Solution Specialists",
-    description: "Beyond fast connectivity, we offer key services, managing and supporting clients with a single point of contact.",
+    title: "99% UK Coverage",
+    description: "Our SD-WAN technology works anywhere with a mobile signal or clear sky. Rural farms, construction sites, business parks — we've connected them all.",
   },
   {
     icon: Headphones,
-    title: "A Dedicated UK Support Team",
-    description: "Integra's UK-based team delivers tailored, secure solutions for diverse IT and network needs of SMEs and large organisations.",
+    title: "Real UK Engineers, Not a Call Centre",
+    description: "When something goes wrong, you speak to the engineers who built your network. No ticket queues, no offshore support, no runaround.",
   },
 ];
 
 const connectivityServices = [
   {
     title: "Integra SD-WAN",
-    description: "Experience superior internet speeds with our unique SD-WAN service. The perfect solution for businesses and homeworkers where Fibre is not available.",
+    description: "Satellite + cellular, bonded together. 100–350Mbps where fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
     img: sdwanImg,
     link: "/integra-sd-wan",
   },
   {
     title: "Fibre Enabled Buildings",
-    description: "Future-proof your development with our pre-connected hyperfast internet. Custom system designs and flexible contracts for immediate connectivity.",
+    description: "Pre-connected hyperfast internet for new developments. Custom system designs, flexible contracts, and immediate connectivity from day one.",
     img: fibreImg,
     link: "/sectors/fibre-enabled-buildings",
   },
   {
-    title: "Leased Line Connectivity",
-    description: "Uninterrupted, high-speed fibre connectivity with our premium Leased Lines. Perfect for businesses prioritising their connectivity.",
+    title: "Leased Lines",
+    description: "Dedicated fibre, symmetric speeds, guaranteed SLA. From £250/month. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
     link: "/connectivity/leased-lines",
   },
   {
     title: "Managed SIM Services",
-    description: "Transition from PSTN with our efficient, cost-saving Managed SIM Services. Ideal for SMEs and Commercial landlords.",
+    description: "From £28+VAT/month. Temporary connectivity for construction sites, events, and IoT. PSTN switch-off ready. Deploy in days.",
     img: simImg,
     link: "/connectivity/managed-sim-services",
   },
@@ -90,13 +90,13 @@ const connectivityServices = [
 const wifiServices = [
   {
     title: "Business WiFi",
-    description: "Boost your operations with our high-speed, secure Business WiFi solutions. Tailored for reliability, performance, and uninterrupted connectivity.",
+    description: "Enterprise-grade mesh networks for offices, warehouses, and multi-building sites. Managed remotely, monitored 24/7 via Nimbus.",
     img: businessWifiImg,
     link: "/connectivity/business-wifi",
   },
   {
     title: "Home WiFi",
-    description: "Experience seamless, high-speed home WiFi solutions. Ideal for remote workers demanding reliable connectivity.",
+    description: "Whole-home mesh WiFi that reaches every room. No dead spots, no buffering. Designed for remote workers who can't afford dropped calls.",
     img: homeWifiImg,
     link: "/connectivity/home-wifi",
   },
@@ -114,9 +114,9 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Rural Connectivity Experts — Integra Networks"
-        description="Don't let slow internet hold you back. Integra Networks delivers connectivity to even the most challenging locations. SD-WAN, Leased Lines, WiFi and more."
-        keywords="rural broadband, SD-WAN, business connectivity, home WiFi, leased lines, managed SIM, construction WiFi"
+        title="Business-Grade Connectivity Where You Need It — Integra Networks"
+        description="We've connected 100+ rural properties with speeds up to 350Mbps in places where BT said it would take years. SD-WAN, Starlink, Leased Lines. Installed in 14 days."
+        keywords="rural broadband, SD-WAN, Starlink SD-WAN, business connectivity, leased lines, construction WiFi, 4G bonding, rural internet UK"
         url="/"
       />
       <StructuredData />
@@ -131,14 +131,14 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Integra Networks</p>
               <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-                Rural Connectivity Experts: Connecting Businesses & Remote Workers
+                Business-grade connectivity where you need it most.
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-                Don't let slow internet hold you back. Integra Networks delivers connectivity to even the most challenging locations. Contact us today.
+                Your internet shouldn't depend on how close you are to London. We've connected 100+ rural properties with speeds up to 350Mbps — in places where BT said it would take years.
               </p>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
-                  <Link to="/contact">Get In Touch</Link>
+                  <Link to="/availability-checker">Check Your Availability</Link>
                 </Button>
               </motion.div>
             </AnimatedSection>
@@ -151,12 +151,12 @@ const Index = () => {
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">About Integra Networks</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Why Integra</p>
               <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-                Delivering connectivity to 99% of the UK in under 14 days
+                The opposite of waiting 8 weeks for BT.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-                Our passion lies in delivering connectivity to even the most challenging locations.
+                We connect businesses and remote workers where traditional broadband fails. 100+ installs, 99% UK coverage, real engineers on every call.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -181,10 +181,10 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Internet Connectivity</p>
               <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-                Getting you online, fast…
+                Four ways to get you online. One that's perfect for you.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-                At Integra, we take ownership of delivering internet connectivity. Our vast array of connectivity solutions allows us to bring properties online quickly, even in places where others say it isn't possible.
+                We layer satellite, cellular, and fibre to bring properties online in under 14 days — even in places where BT, Virgin, and Vodafone say it isn't possible.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -214,12 +214,12 @@ const Index = () => {
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">WiFi and Managed Networks</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">WiFi & Managed Networks</p>
               <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-                Fast internet is worthless without a bulletproof network to use it.
+                Fast internet is worthless without a bulletproof network.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-                Connectivity is just one piece of the puzzle. For a fast, reliable network, you need robust infrastructure. We cater to everyone, from serious homeworkers to business parks and events.
+                Getting connected is step one. Distributing that connection across your home, office, or multi-building site — reliably — is step two. We handle both.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -251,10 +251,10 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Unified Communications</p>
               <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-                Evolved communication tools for a changed world.
+                One platform for calls, video, and messaging.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-                As the workplace evolves, so should your communication tools. Enhance productivity, flexibility, and collaboration with Integra's Unified Communications products.
+                The PSTN switches off January 2027. Move to VoIP now and get better call quality, lower costs, and a system that works from any device, anywhere.
               </p>
             </AnimatedSection>
             <AnimatedSection>
@@ -265,7 +265,7 @@ const Index = () => {
                   </div>
                 </motion.div>
                 <h3 className="text-heading-3 text-surface-dark-foreground mt-5 mb-2 group-hover:text-primary transition-colors">Unified Communications</h3>
-                <p className="text-surface-dark-muted text-sm leading-relaxed mb-3">Seamless collaboration with Unified Communications. Facilitate remote work and business continuity.</p>
+                <p className="text-surface-dark-muted text-sm leading-relaxed mb-3">VoIP, video conferencing, and team messaging in one platform. Works over any Integra connection. PSTN switch-off ready.</p>
                 <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
                   Unified Communications <ArrowRight className="h-3.5 w-3.5" />
                 </span>
@@ -280,12 +280,12 @@ const Index = () => {
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Some Sectors We Work In</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Sectors We Serve</p>
               <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-                Solving connectivity challenges across various sectors.
+                Built for the sites everyone else says no to.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-                Our custom connectivity solutions empower our customers to work efficiently. We serve various sectors, each with unique challenges.
+                Construction sites that move every 6 months. Farms with no line of sight. Business parks with 30 tenants sharing one connection. We've solved them all.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -316,9 +316,9 @@ const Index = () => {
         <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
           <AnimatedSection>
             <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Ready to get connected?</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Stop waiting. Start connecting.</h2>
               <p className="mb-8 text-lg text-white/80">
-                Submit your details and we'll get to work evaluating your requirements. Or call us on 0203 388 7111.
+                Enter your postcode and we'll tell you what speeds you can get, what it costs, and how fast we can install. Or call us on 0203 388 7111.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

@@ -18,25 +18,25 @@ import carbeeHero from "@/assets/case-studies/carbee-hero.jpg";
 const painPoints = [
   {
     icon: WifiOff,
-    title: "Trouble with Multiple ADSL Broadband Lines?",
-    description: "Multiple broadband lines not solving your internet issues?",
+    title: "Stacking ADSL Lines That Still Don't Work?",
+    description: "Two or three copper lines bonded together still give you 10Mbps on a good day. We replace them all with a single 350Mbps cellular connection.",
   },
   {
     icon: PoundSterling,
-    title: "Exorbitant Fibre Installation Costs?",
-    description: "Dismayed by unreachable exchanges or exorbitant quotes from providers?",
+    title: "Quoted £20k+ for Fibre Installation?",
+    description: "Openreach excess construction charges for rural properties are often £15-50k. Our SD-WAN delivers similar speeds for a fraction of the cost.",
   },
   {
     icon: Clock,
-    title: "Critical Services Failing in Peak Times?",
-    description: "Does unreliable connectivity cause stress during peak hours?",
+    title: "Card Machines Dropping at the Worst Times?",
+    description: "Dual-network redundancy means if one 4G network drops, your traffic instantly moves to the other. Card machines, VoIP, EPOS — they stay online.",
   },
 ];
 
 const benefitItems = [
-  "Experience Fibre-like Speeds with SD-WAN",
-  "Expert Installation in Under 14 Days",
-  "Professional Network Troubleshooting & Support",
+  "Up to 350Mbps via Cellular SD-WAN",
+  "Installed by Our Engineers in Under 14 Days",
+  "99.5% Uptime SLA with Phone & WhatsApp Support",
 ];
 
 const staggerContainer = {
@@ -58,9 +58,9 @@ const RuralSMEs = () => {
   return (
     <PageLayout>
       <SEO
-        title="Rural SMEs — Reliable Internet for Rural Businesses"
-        description="Transform your rural business with reliable internet. Fast, dependable connectivity that accelerates growth, improves efficiency, and boosts customer satisfaction."
-        keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity"
+        title="Rural Business Internet — Up to 350Mbps, No Fibre Required"
+        description="107 UK businesses run on Integra. Up to 350Mbps via cellular SD-WAN, installed in 14 days. 99.5% uptime SLA. PSTN switches off January 2027 — we handle the migration."
+        keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
         url="/sectors/rural-smes"
       />
 
@@ -79,10 +79,10 @@ const RuralSMEs = () => {
               </Link>
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Transform Your Rural Business with Reliable Internet
+              Your business can't grow on 2Mbps ADSL.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Discover how fast, dependable internet can accelerate your business growth, improve operational efficiency, and boost customer satisfaction.
+              107 rural UK businesses already run on Integra. Up to 350Mbps via cellular SD-WAN, installed in 14 days. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -114,9 +114,9 @@ const RuralSMEs = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Say Goodbye to Copper Broadband</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Copper is dead. Replace it properly.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Your business deserves a swift, reliable connection. We provide this over a well-structured network, designed to meet your specific needs. With Integra, you can enjoy the benefits of a high-speed connection without the limitations of traditional copper broadband.
+              The UK PSTN network switches off January 2027 — your analogue lines are going away regardless. Our cellular SD-WAN replaces copper with two bonded 4G connections delivering up to 350Mbps. No more copper. No more contention. No more excuses from your ISP.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -141,9 +141,9 @@ const RuralSMEs = () => {
               <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
                 <Network className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Expert Installation for Optimal Performance</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">One visit. One connection. Everything works.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Eliminate the clutter of cables and the inefficiency of multiple broadband lines. Our experts handle the installation, ensuring optimal performance for your business.
+                Our engineer arrives, installs the Teltonika hardware, positions antennas for maximum signal, configures your WiFi network, and tests everything before they leave. Typically 4-6 hours, and you're online with speeds you've never had.
               </p>
             </AnimatedSection>
           </div>
@@ -155,9 +155,9 @@ const RuralSMEs = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Consistent Multi-Network Connectivity</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Card machines that never go down.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Ensure smooth card payment transactions even during peak hours with our multi-network connectivity. We provide a reliable, consistent connection that keeps your business running smoothly.
+              Our dual-network SD-WAN uses two different 4G operators simultaneously. If one network has an issue, your traffic automatically fails over to the other in milliseconds. Your customers never see a "card machine offline" sign again.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -174,9 +174,9 @@ const RuralSMEs = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Prioritise Your Business, We'll Handle the Tech</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Focus on your business. We handle the tech.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                Concentrate on your business growth while we take care of the technical aspects. Future-proof your business against the 2025 PSTN switch-off.
+                The PSTN switches off January 2027 — we future-proof your business now. SD-WAN broadband, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
               </p>
             </div>
             <motion.ul className="max-w-md mx-auto space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
@@ -223,8 +223,8 @@ const RuralSMEs = () => {
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Ready to transform your rural business?</h2>
-            <p className="mb-8 text-lg text-white/80">Get fast, reliable connectivity installed in under 14 days.</p>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Stop losing money to bad internet.</h2>
+            <p className="mb-8 text-lg text-white/80">Up to 350Mbps. 99.5% uptime SLA. Installed in 14 days. No fibre required.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">

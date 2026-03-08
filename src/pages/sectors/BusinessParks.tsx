@@ -18,25 +18,25 @@ import royleFarmHero from "@/assets/case-studies/royle-farm-hero.jpg";
 const painPoints = [
   {
     icon: PoundSterling,
-    title: "High Fibre Costs Limiting Your Development?",
-    description: "Excessive construction charges hindering fibre delivery? Let Integra transform your connectivity without breaking your budget.",
+    title: "Quoted £20k+ by Openreach?",
+    description: "Excess construction charges for rural business parks are often eye-watering. We've saved clients like Royle Farm over £20,000 using creative alternatives.",
   },
   {
     icon: Navigation,
-    title: "Navigating Connectivity Solutions Overwhelming?",
-    description: "Unsure of the right connectivity strategy? Integra simplifies the process, making it easy to meet tenant demands.",
+    title: "Not Sure What Your Tenants Need?",
+    description: "We design the connectivity strategy for your park — fibre where it's available, microwave links where it's not, SD-WAN as a rapid fallback. One provider manages everything.",
   },
   {
     icon: WifiOff,
-    title: "Poor Internet Speeds Upsetting Your Tenants?",
-    description: "Slow connectivity can disappoint tenants. Integra boosts speed and reliability, ensuring tenant satisfaction.",
+    title: "Empty Units Because of Bad Internet?",
+    description: "Modern businesses won't sign a lease without fast internet. Pre-connected parks fill faster and retain tenants longer. We've seen it firsthand.",
   },
 ];
 
 const benefitItems = [
-  "Immediate Online Access for Tenants",
-  "Enhanced Tenant Satisfaction for Optimal Occupancy",
-  "Professional Network Troubleshooting & Support",
+  "Internet Live from Move-In Day",
+  "Higher Occupancy Through Better Connectivity",
+  "24/7 Monitoring & UK-Based Support",
 ];
 
 const staggerContainer = {
@@ -58,9 +58,9 @@ const BusinessParks = () => {
   return (
     <PageLayout>
       <SEO
-        title="Business Parks — High-Speed Connectivity for Rural Business Parks"
-        description="Empower your business park with high-speed connectivity. Say goodbye to high construction charges and slow internet speeds with Integra's innovative solutions."
-        keywords="business park internet, business park connectivity, tenant broadband, fibre business park, SD-WAN"
+        title="Business Park Internet — Fibre & SD-WAN for Multi-Tenant Sites"
+        description="Connect your business park tenants with fibre, microwave links, or bonded SD-WAN. Avoid £20k+ Openreach excess construction charges. Managed connectivity from day one."
+        keywords="business park internet, business park connectivity, tenant broadband, fibre business park, SD-WAN, multi-tenant internet, managed connectivity"
         url="/sectors/business-parks"
       />
 
@@ -79,10 +79,10 @@ const BusinessParks = () => {
               </Link>
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Empowering Rural Business Parks with High-Speed Connectivity
+              Your tenants need internet on day one.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Experience seamless internet access with Integra's innovative solutions. Say goodbye to high construction charges and slow internet speeds.
+              Openreach quoted you £20k+ in excess construction charges? We connect your business park for a fraction of the cost — fibre, microwave links, or bonded SD-WAN. Tenants get internet from move-in day.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -117,9 +117,9 @@ const BusinessParks = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <PoundSterling className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Affordable Fibre Access Solutions</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We find ways around the big fibre quotes.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Partner with Integra to bring fibre into your development without astronomical excess construction charges. We ensure cost-effectiveness in 90% of cases.
+              At Royle Farm Business Park, Openreach quoted over £20,000 for fibre. We delivered 1000Mbps for a fraction of that cost using a combination of fibre and microwave links. We do the same for business parks across the UK.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -144,9 +144,9 @@ const BusinessParks = () => {
               <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
                 <Network className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Outperform Competitors, Attract Tenants</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Fill units faster with pre-connected internet.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                With Integra, bring your park online quickly. Our diverse solutions, including Fibre, Microwave links, and bonded SD-WAN ensure rapid connectivity.
+                Tenants want to move in and start working immediately — not wait 6-8 weeks for an ISP installation. We pre-connect every unit so internet is live from day one. Fibre, microwave, or SD-WAN — whatever your park needs.
               </p>
             </AnimatedSection>
           </div>
@@ -161,9 +161,9 @@ const BusinessParks = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <Building2 className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Seamless Managed Connectivity</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We manage the connectivity. You manage the park.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Integra provides comprehensive connectivity management, ensuring your tenants enjoy swift online access and continuous support throughout their tenancy.
+              Tenant onboarding, network monitoring, support tickets, and billing — we handle all of it. You get a single point of contact for every unit's connectivity. No more chasing multiple ISPs.
             </p>
             <motion.ul className="space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
               {benefitItems.map((item) => (
@@ -216,8 +216,8 @@ const BusinessParks = () => {
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Ready to empower your business park?</h2>
-            <p className="mb-8 text-lg text-white/80">Get affordable, high-speed connectivity for your tenants with Integra.</p>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Pre-connect your park. Fill units faster.</h2>
+            <p className="mb-8 text-lg text-white/80">One provider. Every unit. Internet from move-in day.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
