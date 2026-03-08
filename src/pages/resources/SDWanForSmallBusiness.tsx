@@ -48,7 +48,7 @@ const scenarios = [
   {
     title: "Scenario 2: Construction Site (Pure Cellular)",
     description: "Temporary site, 6 months only. No Starlink (overkill). Just dual 4G bonded from different carriers. Load balancing.",
-    result: "200Mbps download, works everywhere the site operates. Equipment moves to next site. Cost £135/month.",
+    result: "200Mbps download, works everywhere the site operates. We redeploy equipment to your next site at no extra cost. Cost £135/month.",
   },
   {
     title: "Scenario 3: Small Office (Pure Cellular, Premium)",

@@ -68,7 +68,7 @@ const solutions = [
     cons: [
       "Higher monthly cost than Starlink or basic broadband",
       "Requires decent 4G coverage (desktop survey confirms this upfront)",
-      "Equipment investment from £2,200",
+      "Professional installation from £2,200 (we own and maintain all hardware)",
     ],
   },
   {
@@ -181,8 +181,8 @@ const faqs = [
     a: "Our desktop survey identifies this upfront. We map your property to nearby towers and test line of sight. Some remote properties genuinely can't get usable 4G/5G — in those cases, Starlink alone or leased line are the only options. We'll tell you honestly before you commit.",
   },
   {
-    q: "Do I own the equipment or rent it?",
-    a: "You own the router and external equipment. We install and maintain it. Equipment stays with you, so if you upgrade or relocate, you don't restart from zero.",
+    q: "Who owns the equipment?",
+    a: "We do — and that's a good thing. Integra owns, maintains, and monitors all hardware. If something breaks, we send an engineer to fix or replace it at no cost to you. No worrying about warranties, no sourcing replacement parts, no downtime while you figure it out.",
   },
   {
     q: "What about ADSL — is it still viable?",
