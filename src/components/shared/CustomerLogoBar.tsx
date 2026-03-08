@@ -91,11 +91,13 @@ const CustomerLogoBar = () => {
                   title={c.name}
                 >
                   {c.logo ? (
-                    <img
-                      src={c.logo}
-                      alt={c.name}
-                      className="h-8 md:h-10 max-w-[120px] md:max-w-[140px] w-auto object-contain brightness-0 opacity-60 group-hover:brightness-100 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
-                    />
+                    <div className="h-10 w-28 md:w-32 flex items-center justify-center">
+                      <img
+                        src={c.logo}
+                        alt={c.name}
+                        className="max-h-10 max-w-full w-auto object-contain brightness-0 opacity-60 group-hover:brightness-100 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                      />
+                    </div>
                   ) : (
                     <div className="h-10 md:h-12 w-24 md:w-32 rounded-md border-2 border-dashed border-border bg-muted/50 flex items-center justify-center">
                       <span className="text-[10px] text-muted-foreground font-medium text-center leading-tight px-1">
