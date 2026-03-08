@@ -46,7 +46,7 @@ const features = [
     icon: Wifi,
     eyebrow: "Quick Installation",
     title: "Installed in Under 14 Days",
-    description: "Our engineer arrives, tests 4G signal from nearby towers, mounts radios, installs our Teltonika router, and connects to your network. You're online same day.",
+    description: "Our engineer arrives, tests 4G signal from nearby towers, mounts radios, installs our commercial-grade router, and connects to your network. You're online same day.",
     img: installImg,
     imgAlt: "Quick SD-WAN installation",
     reverse: true,
@@ -183,7 +183,7 @@ const IntegraSDWAN = () => {
               How load balancing works.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-              Each connection handles separate traffic streams — your overall speeds stack. For 95% of homeworkers and SMEs, load balancing is plenty. Need single-stream aggregate speed? Our Enterprise tier uses Bondix bonding at £400/month.
+              Each connection handles separate traffic streams — your overall speeds stack. For 95% of homeworkers and SMEs, load balancing is plenty. Need single-stream aggregate speed? Our Enterprise tier uses Integra Bonding Technology at £400/month.
             </p>
           </AnimatedSection>
         </div>

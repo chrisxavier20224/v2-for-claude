@@ -63,7 +63,7 @@ const securityPractices = [
 ];
 
 const partners = [
-  { category: "Network Hardware", items: ["Teltonika", "Peplink / Pepwave", "UniFi (Ubiquiti)", "Ruckus & Mikrotik"] },
+  { category: "Network Hardware", items: ["Integra SD-WAN Hardware", "Integra Managed WiFi", "Commercial-Grade Access Points", "Enterprise Routers & Switches"] },
   { category: "Connectivity", items: ["EE / BT", "Vodafone", "Three", "O2 / Virgin Media"] },
   { category: "Services", items: ["Starlink (SpaceX)", "Microsoft Teams", "VoIP providers", "Nimbus monitoring"] },
 ];

@@ -163,7 +163,7 @@ const Homeworkers = () => {
               No fibre? No problem.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We use two 4G networks bonded together via Teltonika hardware — delivering fibre-like speeds without any physical cable to your property. Installed by our engineers in a single visit, typically within 14 days.
+              We use two 4G networks bonded together via Integra hardware — delivering fibre-like speeds without any physical cable to your property. Installed by our engineers in a single visit, typically within 14 days.
             </p>
           </AnimatedSection>
 
@@ -221,7 +221,7 @@ const Homeworkers = () => {
               WiFi that reaches the garden office.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We design your WiFi network for your exact property — main house, garden office, outbuildings. UniFi or Ruckus access points, properly placed, with seamless roaming between rooms.
+              We design your WiFi network for your exact property — main house, garden office, outbuildings. Commercial-grade access points, properly placed, with seamless roaming between rooms.
             </p>
           </AnimatedSection>
 

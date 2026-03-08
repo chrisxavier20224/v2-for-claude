@@ -22,7 +22,7 @@ const painPoints = [
   {
     icon: Brain,
     title: "Professional-Grade Gear",
-    description: "UniFi, Ruckus, Mikrotik — not consumer extenders that just slow things down. Handles 20+ devices simultaneously with optimal channel routing.",
+    description: "Commercial-grade access points — not consumer extenders that just slow things down. Handles 20+ devices simultaneously with optimal channel routing.",
   },
   {
     icon: Plug,
