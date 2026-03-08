@@ -150,7 +150,7 @@ const SeaconGroup = () => {
               "Integra delivered a complete solution — not just connectivity, but full wireless coverage and comprehensive security across our entire warehouse. The system was deployed seamlessly without disrupting operations, and it's been rock-solid from day one."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">
-              Operations Director, Seacon Group
+              Martin Phillips, CEO — Seacon Group
             </p>
           </div>
         </AnimatedSection>
