@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Radio, Target, Map, Shield, Zap, Users, CheckCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Radio, Target, Map, Shield, Zap, Users, CheckCircle, Wifi, Network, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,11 +7,39 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/business-wifi-hero.jpg";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
+
+const relatedServices = [
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi networks to complement your wireless distribution.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "Integra Bridge",
+    description: "Enterprise SD-WAN for rapid deployment between locations.",
+    href: "/connectivity/integra-bridge",
+    icon: Network,
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Bonded 4G/5G connectivity alternative to line-of-sight wireless.",
+    href: "/connectivity/integra-sdwan",
+    icon: Network,
+  },
+  {
+    title: "Pricing",
+    description: "View our service tiers and installation costs.",
+    href: "/pricing",
+    icon: Monitor,
+  },
+];
 
 const painPoints = [
   {
@@ -381,7 +409,15 @@ const WirelessDistribution = () => {
         </div>
       </Section>
 
-      {/* RELATED SERVICES & SECTORS */}
+      {/* RELATED SERVICES */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Enhance your wireless distribution with professional WiFi and connectivity solutions."
+      />
+
+      {/* RELATED SECTORS */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
@@ -390,17 +426,6 @@ const WirelessDistribution = () => {
             <div className="flex flex-wrap gap-3">
               <Link to="/customers/seacon-group" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
                 Seacon Group
-              </Link>
-            </div>
-          </div>
-          <div className="border-t border-border pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Complementary services</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                Business WiFi
-              </Link>
-              <Link to="/connectivity/cctv" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                CCTV
               </Link>
             </div>
           </div>

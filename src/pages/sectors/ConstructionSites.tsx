@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Truck, FileText, Zap, CircleCheckBig, ArrowLeft, Shield, ArrowRight } from "lucide-react";
+import { Truck, FileText, Zap, CircleCheckBig, ArrowLeft, Shield, ArrowRight, Wifi, Camera, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroImg from "@/assets/sectors/construction-hero.jpg";
@@ -53,6 +54,33 @@ const checklistItem = {
   hidden: { opacity: 0, x: -16 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
+
+const relatedServices = [
+  {
+    title: "Integra SD-WAN",
+    description: "Bonded 4G/5G connectivity deployed in days across multiple sites.",
+    href: "/connectivity/integra-sdwan",
+    icon: Zap,
+  },
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi for site offices and welfare facilities.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "CCTV as a Service",
+    description: "Remote site surveillance with static IP access.",
+    href: "/connectivity/cctv",
+    icon: Camera,
+  },
+  {
+    title: "Pricing",
+    description: "View our transparent pricing and flexible terms.",
+    href: "/pricing",
+    icon: Monitor,
+  },
+];
 
 const ConstructionSites = () => {
   return (
@@ -208,7 +236,15 @@ const ConstructionSites = () => {
 
       <CustomerLogoBar />
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
+      {/* RELATED SERVICES */}
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Explore solutions that enhance site connectivity and security."
+      />
+
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">

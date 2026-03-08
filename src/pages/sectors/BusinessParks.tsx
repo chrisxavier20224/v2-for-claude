@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PoundSterling, Navigation, WifiOff, CircleCheckBig, ArrowLeft, ArrowRight, Network, Building2 } from "lucide-react";
+import { PoundSterling, Navigation, WifiOff, CircleCheckBig, ArrowLeft, ArrowRight, Network, Building2, Wifi, Radio, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroImg from "@/assets/sectors/business-parks-hero.jpg";
@@ -53,6 +54,33 @@ const checklistItem = {
   hidden: { opacity: 0, x: -16 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
+
+const relatedServices = [
+  {
+    title: "Integra Bridge",
+    description: "Enterprise interim connectivity for multi-site deployment.",
+    href: "/connectivity/integra-bridge",
+    icon: Network,
+  },
+  {
+    title: "Wireless Distribution",
+    description: "Point-to-point links for distributed connectivity.",
+    href: "/connectivity/wireless-distribution",
+    icon: Radio,
+  },
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi for common areas and units.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "Pricing",
+    description: "View our transparent pricing and service tiers.",
+    href: "/pricing",
+    icon: Monitor,
+  },
+];
 
 const BusinessParks = () => {
   return (
@@ -212,7 +240,15 @@ const BusinessParks = () => {
 
       <CustomerLogoBar />
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
+      {/* RELATED SERVICES */}
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Explore solutions for multi-site deployment and tenant connectivity."
+      />
+
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">

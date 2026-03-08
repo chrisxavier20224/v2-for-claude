@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, WifiOff, Star, CircleCheckBig, ArrowLeft, Radio, MonitorPlay, ArrowRight } from "lucide-react";
+import { Wifi, WifiOff, Star, CircleCheckBig, ArrowLeft, Radio, MonitorPlay, ArrowRight, Network, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroImg from "@/assets/sectors/airbnb-hero.jpg";
@@ -54,6 +55,33 @@ const checklistItem = {
   hidden: { opacity: 0, x: -16 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
+
+const relatedServices = [
+  {
+    title: "Integra SD-WAN",
+    description: "Bonded 4G/5G connectivity for remote properties.",
+    href: "/connectivity/integra-sdwan",
+    icon: Network,
+  },
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi for guest areas and common spaces.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "Starlink Installation",
+    description: "Satellite internet for properties without cellular coverage.",
+    href: "/connectivity/starlink-installation",
+    icon: Radio,
+  },
+  {
+    title: "Pricing",
+    description: "View our transparent pricing and service tiers.",
+    href: "/pricing",
+    icon: Monitor,
+  },
+];
 
 const Airbnbs = () => {
   return (
@@ -227,6 +255,14 @@ const Airbnbs = () => {
       </Section>
 
       <CustomerLogoBar />
+
+      {/* RELATED SERVICES */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Explore connectivity solutions and pricing options."
+      />
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">

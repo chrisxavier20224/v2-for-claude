@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Clock, Shield, Zap, Server, CircleCheckBig, Satellite, Radio } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Shield, Zap, Server, CircleCheckBig, Satellite, Radio, Network, Wifi, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-
+import RelatedServices from "@/components/shared/RelatedServices";
 import SEO from "@/components/shared/SEO";
 
 import heroImg from "@/assets/connectivity/bridge-hero.jpg";
@@ -70,6 +70,33 @@ const otherSolutions = [
     title: "Starlink Installation",
     description: "Professional Starlink setup with static IP and SD-WAN integration.",
     link: "/connectivity/starlink-installation",
+  },
+];
+
+const relatedServices = [
+  {
+    title: "Integra SD-WAN",
+    description: "Enterprise 4G/5G bonding without Starlink component.",
+    href: "/connectivity/integra-sdwan",
+    icon: Network,
+  },
+  {
+    title: "Wireless Distribution",
+    description: "Point-to-point radio links for multi-site coverage.",
+    href: "/connectivity/wireless-distribution",
+    icon: Radio,
+  },
+  {
+    title: "Leased Lines",
+    description: "Permanent dedicated fibre when Bridge transitions to failover.",
+    href: "/connectivity/leased-lines",
+    icon: Monitor,
+  },
+  {
+    title: "Business WiFi",
+    description: "Extend your Bridge connection with professional WiFi.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
   },
 ];
 
@@ -326,7 +353,14 @@ const IntegraBridge = () => {
 
       <div className="border-t border-white/5" />
 
-      {/* RELATED SERVICES & SECTORS */}
+      {/* RELATED SERVICES */}
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Explore alternative connectivity solutions and failover options."
+      />
+
+      {/* RELATED SECTORS */}
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div className="border-t border-white/20 pt-8">

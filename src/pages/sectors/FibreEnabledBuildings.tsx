@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Building2, Zap, Network, Wifi, CircleCheckBig, ArrowLeft, ArrowRight } from "lucide-react";
+import { Building2, Zap, Network, Wifi, CircleCheckBig, ArrowLeft, ArrowRight, Radio, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroImg from "@/assets/sectors/fibre-building-hero.jpg";
@@ -60,6 +61,33 @@ const checklistItem = {
   hidden: { opacity: 0, x: -16 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
+
+const relatedServices = [
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi design and installation for units.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "Wireless Distribution",
+    description: "Point-to-point links for multi-building connectivity.",
+    href: "/connectivity/wireless-distribution",
+    icon: Radio,
+  },
+  {
+    title: "Leased Lines",
+    description: "Dedicated fibre circuits for high-demand users.",
+    href: "/connectivity/leased-lines",
+    icon: Network,
+  },
+  {
+    title: "Pricing",
+    description: "View our transparent pricing and service tiers.",
+    href: "/pricing",
+    icon: Monitor,
+  },
+];
 
 // ─── Page Component ───────────────────────────────────────────────────────────
 
@@ -381,6 +409,14 @@ const FibreEnabledBuildings = () => {
       </Section>
 
       <CustomerLogoBar />
+
+      {/* RELATED SERVICES */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Explore solutions for building-wide connectivity and tenant services."
+      />
 
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap, Shield, Network, ArrowLeft, ArrowRight, Wifi } from "lucide-react";
+import { Zap, Shield, Network, ArrowLeft, ArrowRight, Wifi, Radio, Monitor, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/leased-lines-hero.jpg";
 import sdwanImg from "@/assets/connectivity/leased-lines-sdwan.jpg";
@@ -40,6 +41,33 @@ const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
+
+const relatedServices = [
+  {
+    title: "Integra SD-WAN",
+    description: "Bonded 4G/5G connectivity for faster deployment and flexible redundancy.",
+    href: "/connectivity/integra-sdwan",
+    icon: Network,
+  },
+  {
+    title: "Integra Bridge",
+    description: "Point-to-point wireless connectivity when line of sight is available.",
+    href: "/connectivity/integra-bridge",
+    icon: Radio,
+  },
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi networks to complement your leased line infrastructure.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "Pricing",
+    description: "View our transparent pricing and service tiers.",
+    href: "/pricing",
+    icon: Monitor,
+  },
+];
 
 const LeasedLines = () => {
   return (
@@ -163,7 +191,15 @@ const LeasedLines = () => {
         </div>
       </Section>
 
-      {/* RELATED SERVICES & SECTORS */}
+      {/* RELATED SERVICES */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Explore alternative connectivity solutions and pricing options."
+      />
+
+      {/* RELATED SECTORS & CTA */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
@@ -175,14 +211,6 @@ const LeasedLines = () => {
               </Link>
               <Link to="/sectors/business-parks" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
                 Business Parks
-              </Link>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Alternative solutions</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 text-surface-dark-foreground text-sm font-medium hover:bg-white/10 transition-colors">
-                Integra SD-WAN
               </Link>
             </div>
           </div>

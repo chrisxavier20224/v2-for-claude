@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { WifiOff, MonitorPlay, CloudUpload, Router, Satellite, House, CircleCheckBig, ArrowLeft, Star, ExternalLink } from "lucide-react";
+import { WifiOff, MonitorPlay, CloudUpload, Router, Satellite, House, CircleCheckBig, ArrowLeft, Star, ExternalLink, Network, Wifi, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroImg from "@/assets/sectors/homeworker-remote-work.avif";
@@ -16,6 +17,33 @@ import ruralImg from "@/assets/sectors/homeworker-rural-property.avif";
 import wifiImg from "@/assets/sectors/homeworker-wifi-setup.avif";
 
 // ─── Pain-point cards ─────────────────────────────────────────────────────────
+
+const relatedServices = [
+  {
+    title: "Integra SD-WAN",
+    description: "Bonded 4G/5G connectivity with 99.5% uptime SLA.",
+    href: "/connectivity/integra-sdwan",
+    icon: Network,
+  },
+  {
+    title: "Business WiFi",
+    description: "Professional WiFi for your entire property.",
+    href: "/connectivity/business-wifi",
+    icon: Wifi,
+  },
+  {
+    title: "Availability Checker",
+    description: "Check coverage at your location instantly.",
+    href: "/availability-checker",
+    icon: Monitor,
+  },
+  {
+    title: "Pricing",
+    description: "View our transparent pricing and service tiers.",
+    href: "/pricing",
+    icon: Router,
+  },
+];
 
 const painPoints = [
   {
@@ -334,6 +362,14 @@ const Homeworkers = () => {
       </section>
 
       <CustomerLogoBar />
+
+      {/* RELATED SERVICES */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <RelatedServices
+        services={relatedServices}
+        heading="Complementary Services"
+        subheading="Explore connectivity solutions and check coverage at your location."
+      />
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
