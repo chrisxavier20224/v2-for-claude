@@ -140,6 +140,20 @@ const APJEuropean = () => {
 
       <RelatedCaseStudies currentPath="/customers/revitalising-global-distribution-apj-europeans-digital-transformation" />
 
+      {/* Solutions Delivered */}
+      <Section size="large">
+        <div className="mx-auto max-w-3xl">
+          <div className="mt-12 pt-8 border-t border-border">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Solutions delivered</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
+                Integra SD-WAN
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
       <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
         <AnimatedSection>

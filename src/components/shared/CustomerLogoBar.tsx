@@ -94,7 +94,7 @@ const CustomerLogoBar = () => {
                     <img
                       src={c.logo}
                       alt={c.name}
-                      className="h-10 md:h-12 w-auto object-contain opacity-50 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                      className="h-8 md:h-10 max-w-[120px] md:max-w-[140px] w-auto object-contain brightness-0 opacity-60 group-hover:brightness-100 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
                     />
                   ) : (
                     <div className="h-10 md:h-12 w-24 md:w-32 rounded-md border-2 border-dashed border-border bg-muted/50 flex items-center justify-center">
