@@ -227,7 +227,6 @@ const PortableWifiConstruction = () => (
     </ul>
 
     <p>We'll survey the site and send you a custom quote.</p>
-  </BlogArticleLayout>
     </BlogArticleLayout>
   </>
 );

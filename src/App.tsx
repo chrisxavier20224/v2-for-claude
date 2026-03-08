@@ -89,6 +89,7 @@ const IntegraSDWAN = lazy(() => import("./pages/connectivity/IntegraSDWAN"));
 const IntegraBridge = lazy(() => import("./pages/connectivity/IntegraBridge"));
 const CCTV = lazy(() => import("./pages/connectivity/CCTV"));
 const WirelessDistribution = lazy(() => import("./pages/connectivity/WirelessDistribution"));
+const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 
 // PPC Landing Pages
 const BusinessBroadbandLanding = lazy(() => import("./pages/landing/BusinessBroadband"));
@@ -187,6 +188,9 @@ const App = () => (
               <Route path="/connectivity/wireless-distribution" element={<WirelessDistribution />} />
               <Route path="/connectivity/integra-sd-wan" element={<IntegraSDWAN />} />
               <Route path="/connectivity/integra-bridge" element={<IntegraBridge />} />
+
+              {/* Proposal Pages */}
+              <Route path="/proposal/:id" element={<ProposalDetail />} />
 
               {/* Redirect old routes to new paths */}
               <Route path="/integra-sd-wan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />

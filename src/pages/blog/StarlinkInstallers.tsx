@@ -31,7 +31,6 @@ const StarlinkInstallers = () => (
 
     <h2>Conclusion</h2>
     <p>Starlink is a game-changer for rural and remote connectivity, but professional installation ensures you get the most out of the service. From optimal dish placement to seamless network integration, expert installers take the complexity out of the process and deliver a reliable, high-performance internet solution.</p>
-  </BlogArticleLayout>
     </BlogArticleLayout>
   </>
 );

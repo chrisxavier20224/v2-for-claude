@@ -187,7 +187,6 @@ const LoadBalancingVsBonding = () => (
     <p>If yes: True bonding makes sense.</p>
 
     <p>Most answer "no." That's why load balancing is the standard.</p>
-  </BlogArticleLayout>
     </BlogArticleLayout>
   </>
 );

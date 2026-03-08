@@ -146,7 +146,6 @@ const SatelliteVsFixedWireless = () => (
     <p>Not sure what's possible at your location? Send us your property's coordinates from Google Maps. We'll map your nearest cell towers, assess signal strength, and tell you whether fixed wireless, satellite, or a hybrid approach will work best.</p>
 
     <p>No obligation, no site visit needed. Just your coordinates and 24 hours of analysis.</p>
-  </BlogArticleLayout>
     </BlogArticleLayout>
   </>
 );
