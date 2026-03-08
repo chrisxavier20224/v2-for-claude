@@ -14,7 +14,7 @@ import customImg from "@/assets/connectivity/starlink-custom.jpg";
 import staticIpImg from "@/assets/connectivity/starlink-staticip.jpg";
 import sdwanImg from "@/assets/connectivity/starlink-sdwan.jpg";
 
-const sdwanBenefits = ["Higher upload speeds", "Eliminates downtime", "UK based support"];
+const sdwanBenefits = ["Higher combined speeds via bonding", "Automatic failover eliminates downtime", "UK-based phone & WhatsApp support"];
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const checklistItem = { hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -23,9 +23,9 @@ const StarlinkInstallation = () => {
   return (
     <PageLayout>
       <SEO
-        title="Starlink Installation — Professional Setup by IT Experts"
-        description="Ensure optimal performance with our professionally installed Starlink services, delivered by experienced IT professionals dedicated to reliable, high-speed connectivity."
-        keywords="Starlink installation, Starlink installer, Starlink setup, Starlink SD-WAN, Starlink static IP, satellite internet"
+        title="Starlink Installation — Starlink Meets Reliability with 4G Failover"
+        description="Keep your Starlink. Add 4G failover for £80/month. No more rain drops. 99.5% uptime SLA. Professional installation by certified network engineers."
+        keywords="Starlink installation, Starlink installer, Starlink SD-WAN, Starlink failover, Starlink static IP, satellite internet, Starlink 4G backup"
         url="/connectivity/starlink-installation"
       />
 
@@ -44,9 +44,9 @@ const StarlinkInstallation = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Professional Starlink Installation by IT Experts</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Starlink meets reliability.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Ensure optimal performance with our professionally installed Starlink services, delivered by experienced IT professionals dedicated to reliable, high-speed connectivity.
+              You've got Starlink or you're thinking about it. We know its weakness: it drops in rain. We've fixed it. Keep your Starlink. Add our 4G failover. Done.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -63,10 +63,10 @@ const StarlinkInstallation = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Starlink Installation</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Satellite Internet for Hard-to-Reach Locations
+              What Starlink gets right. What it doesn't.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Starlink is a satellite-based internet service by SpaceX, designed to provide high-speed internet to underserved and hard-to-reach locations worldwide. With its network of low-Earth orbit satellites, Starlink delivers low-latency, high-bandwidth connectivity.
+              Starlink delivers 50-150Mbps almost anywhere — impressive for rural locations. But heavy rain degrades signal, latency spikes disrupt VoIP calls, and there's no SLA. Our solution: add 4G cellular as automatic failover. When Starlink drops, you switch in 100ms.
             </p>
           </AnimatedSection>
         </div>
@@ -81,9 +81,9 @@ const StarlinkInstallation = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
               <Satellite className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Experienced Network Engineers</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">What happens on install day.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our certified engineers bring years of expertise in network infrastructure, ensuring your Starlink system is installed to the highest standards. From signal optimisation to seamless hardware setup, we make sure your network is reliable and efficient.
+              Our engineer arrives, mounts your Starlink dish (if you haven't already), installs the 4G modem and our router, tests both connections, and configures SD-WAN settings. Typically 4 hours, and you're online. We then monitor both connections 24/7.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -105,9 +105,9 @@ const StarlinkInstallation = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 py-12 md:py-16 flex justify-end">
           <AnimatedSection>
             <div className="text-right">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Custom Setup for Your Needs</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">What you gain by adding us.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                Every property and network is unique. Our team tailors the Starlink installation to fit your specific requirements, whether it's connecting to a complex LAN, integrating with existing systems, or ensuring compatibility with advanced networking solutions.
+                Rain no longer drops you offline — switches to 4G automatically. Latency stays stable at 20-30ms average. Support via phone and WhatsApp in 2-4 hours, not email in 48-72. Plus a 99.5% uptime SLA that Starlink alone can't offer.
               </p>
             </div>
           </AnimatedSection>
@@ -125,7 +125,7 @@ const StarlinkInstallation = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Starlink Static IP Solutions</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Need a Static IP but don't want to upgrade to Starlink's priority service? Integra offers tailored solutions to meet your requirements without additional hassle.
+              Need a Static IP for VPN, CCTV, or remote access but don't want to upgrade to Starlink's priority service? We provide static IPs through our SD-WAN layer — no Starlink priority plan required. Just £5/month added to your service.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -148,9 +148,9 @@ const StarlinkInstallation = () => {
               </motion.div>
             </AnimatedSection>
             <AnimatedSection className="order-1 lg:order-2">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Advanced Networking with Starlink SD-WAN</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">The simple version.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-6">
-                Take your connectivity to the next level with Integra's Starlink SD-WAN solutions. Perfect for businesses and homeworkers that need reliable, multi-site connectivity or enhanced network resilience.
+                Your Starlink dish delivers 50-150Mbps. We add a 4G modem on a second network. Our router talks to both and routes traffic to whichever is better. If Starlink drops, it switches to 4G instantly. You get speed from Starlink, reliability from cellular, one connection to your devices.
               </p>
               <motion.ul className="space-y-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
                 {sdwanBenefits.map((item) => (
@@ -170,8 +170,8 @@ const StarlinkInstallation = () => {
       <Section size="large">
         <div className="text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Ready for professional Starlink installation?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Get in touch to discuss your Starlink setup and how we can optimise your satellite connectivity.</p>
+            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Add Starlink reliability.</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Keep your Starlink. Add 4G failover for £80/month. No more rain drops. 99.5% uptime SLA.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

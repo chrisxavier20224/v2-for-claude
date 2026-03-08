@@ -102,13 +102,13 @@ const Contact = () => {
           <AnimatedSection>
             <EyebrowLabel>Contact</EyebrowLabel>
             <h1 className="mb-8 text-heading-1 md:text-display-sm text-foreground">
-              Let's Talk Connectivity
+              Let's talk about your internet.
             </h1>
             <p className="mb-6 text-xl md:text-2xl text-muted-foreground">
-              Whether you need broadband, SD-WAN, managed SIMs, or IoT solutions — we're here to help.
+              Whether you need SD-WAN broadband, WiFi, managed SIMs, or leased lines — tell us what you're dealing with and we'll recommend the right solution.
             </p>
             <p className="text-muted-foreground">
-              Tell us about your requirements and we'll come back to you with a tailored recommendation.
+              No pressure, no hard sell. If we're not the right fit, we'll tell you.
             </p>
           </AnimatedSection>
         </div>

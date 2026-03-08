@@ -18,13 +18,13 @@ import surveysImg from "@/assets/connectivity/business-wifi-surveys.jpg";
 const painPoints = [
   {
     icon: Wifi,
-    title: "Professionally Designed Networks",
-    description: "Our team of WiFi experts meticulously design and build your network to meet both your current and future needs.",
+    title: "Designed for Your Building",
+    description: "We walk your property, identify dead zones, and place access points where they'll reach furthest. UniFi, Ruckus, or Mikrotik gear — built to scale.",
   },
   {
     icon: Shield,
-    title: "Monitored WiFi Security",
-    description: "We vigilantly monitor every aspect of our deployed solutions, providing real-time insights into WiFi coverage, usage, and system health.",
+    title: "Monitored 24/7 via Nimbus",
+    description: "Real-time insights into coverage, usage, and system health. We spot issues before they affect your operations — and fix them remotely where possible.",
   },
   {
     icon: CreditCard,
@@ -40,8 +40,8 @@ const BusinessWifi = () => {
   return (
     <PageLayout>
       <SEO
-        title="Business WiFi — High-Speed WiFi Solutions"
-        description="Superior business connectivity with high-speed WiFi solutions. Professionally designed networks, monitored security, and WiFi-as-a-Service."
+        title="Business WiFi — Professional WiFi That Works Everywhere"
+        description="Professionally designed WiFi networks from £400. Site survey, AP placement, mesh configuration. Monitored 24/7 via Nimbus. WiFi-as-a-Service available."
         keywords="business WiFi, commercial WiFi, public WiFi, guest WiFi, event WiFi, WiFi survey, managed WiFi"
         url="/connectivity/business-wifi"
       />
@@ -61,9 +61,9 @@ const BusinessWifi = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Superior Business Connectivity: High-Speed WiFi Solutions</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Professional WiFi that works everywhere.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Experience seamless connectivity with our tailored WiFi solutions, designed to meet the unique needs of your business.
+              We design and install WiFi networks for your exact building layout. Site survey, professional-grade access points, mesh configuration — and 24/7 monitoring via Nimbus. From £400.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -80,10 +80,10 @@ const BusinessWifi = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Business WiFi</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Unleash the Power of High-Speed, Secure Business WiFi
+              WiFi that scales with your business.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Boost your business operations with our high-speed, secure WiFi solutions designed for reliability and performance.
+              Home networks from £400-800. Commercial-grade from £1,500-3,000+. Enterprise custom-quoted. All professionally designed, installed, and monitored.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -108,7 +108,7 @@ const BusinessWifi = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Public WiFi</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Experience unparalleled coverage with our Public WiFi solutions, perfect for holiday parks, caravan sites, and other wide, remote spaces. Our wireless hotspots ensure guests and tenants remain connected, regardless of local mobile network signal.
+              Holiday parks, caravan sites, marinas, and wide rural spaces. Our outdoor access points deliver reliable coverage across large areas — guests and tenants stay connected regardless of mobile signal strength.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -132,7 +132,7 @@ const BusinessWifi = () => {
             <div className="text-right">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Indoor WiFi</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                From small businesses to corporate facilities, our Indoor WiFi solutions cater to all. We ensure strong connectivity and seamless access to cloud services, tailored to your company's needs.
+                From retail shops to corporate offices and thick-walled listed buildings. We handle the hard environments — proper AP placement, channel optimisation, and seamless device roaming between floors.
               </p>
             </div>
           </AnimatedSection>
@@ -148,9 +148,9 @@ const BusinessWifi = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
               <Users className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Guest WiFi</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Guest WiFi with Branding</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Offer your visitors secure, fast internet access while gaining valuable insights. Our guest WiFi portal allows you to build detailed visitor profiles, deliver effective real-time advertising, and drive revenue through enhanced engagement.
+              Branded login portal, bandwidth management, and analytics. Separate guest traffic from your business network. From £120/year per gateway — perfect for retail, hospitality, and offices.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -178,7 +178,7 @@ const BusinessWifi = () => {
               </motion.div>
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Event WiFi Solutions</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Whether you're hosting a small gathering or a large-scale event, our Event WiFi solutions have you covered. We design, configure, and install complex high-density networks in challenging environments.
+                From 50-person gatherings to multi-thousand attendee events. We design and install high-density networks for challenging environments — steam rallies, agricultural shows, corporate events. EPOS terminals keep processing payments throughout.
               </p>
             </AnimatedSection>
           </div>
@@ -206,8 +206,8 @@ const BusinessWifi = () => {
       <Section size="large">
         <div className="text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Need a WiFi solution for your business?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Get in touch to discuss your requirements and let us design the perfect WiFi solution.</p>
+            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Schedule a WiFi survey.</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Free, no-obligation site survey. We'll walk your property, identify dead zones, and recommend the right system for your budget.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

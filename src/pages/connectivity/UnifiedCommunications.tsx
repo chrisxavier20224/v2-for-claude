@@ -15,18 +15,18 @@ import ccaasImg from "@/assets/connectivity/unified-comms-ccaas.jpg";
 const painPoints = [
   {
     icon: Users,
-    title: "Efficient Remote Operations",
-    description: "Adopt remote work with our unified communications solution. Foster employee wellbeing, reduce environmental impact, and boost productivity.",
+    title: "Works From Any Device, Anywhere",
+    description: "Call, meet, message from any device. Your team stays productive whether they're in the office, at home, or on site. One app, one number.",
   },
   {
     icon: Phone,
-    title: "Smooth Handset Migration",
-    description: "After understanding your business processes, we construct your communication network off-site, ensuring a seamless transition.",
+    title: "Seamless Migration",
+    description: "We build your communication network off-site and switch you over in one go. Port your existing numbers, keep your call flow, zero disruption.",
   },
   {
     icon: Shield,
-    title: "Assured Business Continuity",
-    description: "In a changing world, ensure consistency with our unified communications solution. Foster business continuity and promote agile working.",
+    title: "PSTN-Ready Before 2027",
+    description: "The UK PSTN network switches off January 2027. Move to cloud VoIP now — call recording, IVR, voicemail-to-email, and Teams integration included.",
   },
 ];
 
@@ -44,9 +44,9 @@ const UnifiedCommunications = () => {
   return (
     <PageLayout>
       <SEO
-        title="Unified Communications — Cloud Collaboration Platform"
-        description="Powering collaboration across multiple workspaces. Cloud-based unified communications for teams of any size, anywhere."
-        keywords="unified communications, UCaaS, cloud phone, video conferencing, CCaaS, business phone system"
+        title="Unified Communications — Hosted VoIP from £10/handset/month"
+        description="PSTN switches off January 2027. Move to cloud-hosted VoIP with Teams integration, call routing, and PSTN backup. From £10/handset/month."
+        keywords="unified communications, UCaaS, cloud phone, hosted VoIP, video conferencing, CCaaS, business phone system, PSTN switch off"
         url="/connectivity/unified-communications"
       />
 
@@ -65,9 +65,9 @@ const UnifiedCommunications = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Powering Collaboration Across Multiple Workspaces</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Hosted VoIP for your business.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Experience unified communications with our cloud platform. Facilitate collaboration among teams, regardless of location.
+              PSTN switches off January 2027. From £10/handset/month — Teams integration, call routing, voicemail-to-email, and PSTN backup. Deployed in days, not weeks.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -84,10 +84,10 @@ const UnifiedCommunications = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Unified Communications</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Tailored Cloud Communications for All Business Sizes
+              From £10/handset/month. No big upfront costs.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Equip your team with our versatile app for continuous productivity. Call, meet, message, and more from any device, anywhere.
+              Handsets, softphones, and setup all included. Scale up or down as needed — you only pay for what you use. Works with your existing broadband or our connectivity.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -110,9 +110,9 @@ const UnifiedCommunications = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Quick Deployment, Easy Understanding</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Deployed in days. Simple to use.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Many businesses appreciate unified communications but prefer simplicity. We offer a quick, straightforward deployment solution for small businesses looking to transition, one step at a time.
+              We understand most businesses want a phone system that just works. No complicated setup, no IT degree required. We handle configuration off-site and deploy everything in a single visit.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -171,8 +171,8 @@ const UnifiedCommunications = () => {
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Ready to unify your communications?</h2>
-            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">Get in touch to discuss how our cloud platform can transform your team's collaboration.</p>
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Get a phone system quote.</h2>
+            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">From £10/handset/month. PSTN switches off January 2027 — start your migration now.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

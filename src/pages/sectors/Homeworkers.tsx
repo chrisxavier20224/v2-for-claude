@@ -20,27 +20,27 @@ import wifiImg from "@/assets/sectors/homeworker-wifi-setup.avif";
 const painPoints = [
   {
     icon: WifiOff,
-    title: "Moving to a Fibre-less Property?",
-    description: "Discovering your new home lacks adequate internet speeds?",
+    title: "No Fibre at Your New Property?",
+    description: "You've moved somewhere beautiful — but Openreach says fibre is years away. We bypass them entirely with cellular broadband.",
   },
   {
     icon: MonitorPlay,
-    title: "Family Streaming Eating Your Bandwidth?",
-    description: "Important calls buffering due to household internet demand?",
+    title: "Video Calls Freezing Mid-Sentence?",
+    description: "Two 4G connections load-balanced means your Teams call stays stable even when the kids are streaming Netflix. Dual-network redundancy, not single-line hope.",
   },
   {
     icon: CloudUpload,
-    title: "Struggling with Large File Uploads?",
-    description: "Frequent dropouts disrupting your crucial document uploads?",
+    title: "Uploads Taking Hours?",
+    description: "Our SD-WAN delivers 100Mbps+ upload speeds. Send large files, back up to the cloud, and share screen without the spinning wheel.",
   },
 ];
 
 // ─── Solution checklist ───────────────────────────────────────────────────────
 
 const solutionItems = [
-  "Quick Installation",
-  "Full Network Setup",
-  "Dedicated UK Support",
+  "Installed in Under 14 Days — Single Visit",
+  "Full WiFi Design — House, Office, Outbuildings",
+  "UK-Based Support via Phone & WhatsApp",
 ];
 
 // ─── Animation variants ──────────────────────────────────────────────────────
@@ -66,9 +66,9 @@ const Homeworkers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Homeworkers - Reliable Rural Broadband & SD-WAN"
-        description="Work from home worry-free with Integra SD-WAN. Fibre-like speeds for remote workers, no matter where you live. Quick installation, full network setup."
-        keywords="homeworker broadband, rural internet, SD-WAN, remote work connectivity, fibre alternative"
+        title="Homeworkers — Up to 350Mbps Without Fibre, Installed in 14 Days"
+        description="Your job depends on your internet. We deliver up to 350Mbps via cellular SD-WAN — no fibre required. Installed by our engineers in under 14 days."
+        keywords="homeworker broadband, rural internet, SD-WAN, remote work connectivity, fibre alternative, work from home internet, rural broadband"
         url="/sectors/homeworkers"
       />
 
@@ -101,10 +101,10 @@ const Homeworkers = () => {
               </Link>
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Work from Home, Worry-Free with Integra SD-WAN
+              Your job depends on your internet. We fix that.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Experience stress-free remote work with fibre-like speeds, no matter where you live.
+              Up to 350Mbps via cellular SD-WAN. No fibre required. No Openreach delays. Installed by our engineers in under 14 days — so you can stop apologising for frozen video calls.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button
@@ -160,10 +160,10 @@ const Homeworkers = () => {
               <Router className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">
-              Bypass Openreach with Integra
+              No fibre? No problem.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Integra delivers independent connectivity, installed at your home by our engineers in under 14 days.
+              We use two 4G networks bonded together via Teltonika hardware — delivering fibre-like speeds without any physical cable to your property. Installed by our engineers in a single visit, typically within 14 days.
             </p>
           </AnimatedSection>
 
@@ -195,9 +195,9 @@ const Homeworkers = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 py-12 md:py-16 flex justify-end">
           <AnimatedSection>
             <div className="text-right">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Too far from the Exchange? No Problem</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Miles from the exchange? That's our speciality.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                Experience fibre-like speeds without the need for copper or fibre. No more waiting for the fibre rollout.
+                Copper degrades over distance — that's why your ADSL crawls at 2Mbps. We don't use copper or fibre. Our cellular SD-WAN works anywhere with 4G coverage, which is 99% of the UK.
               </p>
             </div>
           </AnimatedSection>
@@ -218,10 +218,10 @@ const Homeworkers = () => {
               <House className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">
-              Full WiFi Coverage, Everywhere
+              WiFi that reaches the garden office.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From your main property to outbuildings, we ensure a strong connection everywhere. Let us handle your connectivity needs.
+              We design your WiFi network for your exact property — main house, garden office, outbuildings. UniFi or Ruckus access points, properly placed, with seamless roaming between rooms.
             </p>
           </AnimatedSection>
 
@@ -265,10 +265,10 @@ const Homeworkers = () => {
 
             <AnimatedSection className="order-1 lg:order-2">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">
-                A Complete Network Solution
+                Internet, WiFi, and support. All included.
               </h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-8">
-                We provide more than just connectivity. Our end-to-end solution includes WiFi installation, ensuring you're up and running quickly and smoothly.
+                We don't just deliver a connection and leave. Our engineers install the broadband, set up your WiFi network, and monitor everything 24/7 via Nimbus. If something drops, we know before you do.
               </p>
               <motion.ul
                 className="space-y-4"
@@ -297,10 +297,10 @@ const Homeworkers = () => {
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
-              Ready to work from home without compromise?
+              Stop apologising for your internet.
             </h2>
             <p className="mb-8 text-lg text-white/80">
-              Get connected in under 14 days with fibre-like speeds and full WiFi coverage.
+              Up to 350Mbps. Installed in 14 days. No fibre required. No Openreach wait.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

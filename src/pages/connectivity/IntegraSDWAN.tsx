@@ -19,16 +19,16 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const painPoints = [
   {
-    question: "Tired of waiting for the Fibre rollout in your area?",
-    answer: "Say goodbye to slow internet speeds with Integra. We can enhance your connectivity in just a few weeks.",
+    question: "Tired of waiting for the Fibre rollout?",
+    answer: "Fibre rollouts are often delayed by years. We install in under 14 days — and you can cancel if fibre becomes available.",
   },
   {
-    question: "Frustrated with excessive construction charges?",
-    answer: "Don't pay thousands to Openreach. Integra offers a flat rate installation fee with no hidden costs.",
+    question: "Paying thousands for Openreach construction?",
+    answer: "We offer flat-rate installation from £1,700 with no hidden costs. No excess construction charges, no wayleave delays.",
   },
   {
-    question: "Worried about losing critical services during an internet outage?",
-    answer: "Integra's resilient service ensures that your essential services remain active, giving you peace of mind.",
+    question: "Can't afford internet outages?",
+    answer: "We use multiple networks for built-in redundancy. If one drops, the other takes over automatically. 99.5% uptime SLA backed by compensation.",
   },
 ];
 
@@ -36,8 +36,8 @@ const features = [
   {
     icon: Zap,
     eyebrow: "SD-WAN Technology",
-    title: "Fibre-Like Speeds, Reinvented",
-    description: "Experience Integra SD-WAN, a powerful tool that unifies multiple connections through our datacentre, pushing out fibre-like speed of up to 500Mbps.",
+    title: "Fibre-Like Speeds, No Fibre Required",
+    description: "We bond multiple 4G/5G connections through our datacentre, delivering combined speeds up to 350Mbps. Rain doesn't affect cellular — unlike satellite alternatives.",
     img: speedsImg,
     imgAlt: "SD-WAN fibre-like speeds",
     reverse: false,
@@ -45,8 +45,8 @@ const features = [
   {
     icon: Wifi,
     eyebrow: "Quick Installation",
-    title: "Fast, Efficient Setup",
-    description: "Our engineers conduct on-site installations, integrating Integra's connection into your network. We ensure a seamless transition to superior connectivity.",
+    title: "Installed in Under 14 Days",
+    description: "Our engineer arrives, tests 4G signal from nearby towers, mounts radios, installs our Teltonika router, and connects to your network. You're online same day.",
     img: installImg,
     imgAlt: "Quick SD-WAN installation",
     reverse: true,
@@ -54,8 +54,8 @@ const features = [
   {
     icon: Shield,
     eyebrow: "Always-On Connectivity",
-    title: "Stable Internet, Always",
-    description: "Integra uses multiple networks for a resilient, always-on service. Ideal for remote workers and businesses needing consistent, reliable connectivity.",
+    title: "Dual-Network Redundancy",
+    description: "Two 4G connections from different operators (O2, Vodafone, EE, Three). If one drops, the other takes over instantly. 99.5% uptime SLA — not 'best effort'.",
     img: stableImg,
     imgAlt: "Stable internet connectivity",
     reverse: false,
@@ -63,16 +63,16 @@ const features = [
   {
     icon: Upload,
     eyebrow: "Lightning Fast Uploads",
-    title: "Secure and speedy file transfers",
-    description: "Effortlessly upload large files, like construction/CAD files and graphic designs. With Integra, secure and speedy data transfers keep your projects moving.",
+    title: "100Mbps+ Upload Speeds",
+    description: "Upload large CAD files, construction plans, and designs in minutes — not hours. 100Mbps+ upload is significantly faster than Starlink's 10-20Mbps.",
     img: null,
     reverse: true,
   },
   {
     icon: Globe,
     eyebrow: "Seamless IP Integration",
-    title: "Connectivity for your security needs",
-    description: "Connect your CCTV, VPN, and firewall systems with ease. Our dedicated team is ready to assist with your IP address needs.",
+    title: "Static IP for CCTV, VPN & More",
+    description: "Static IPs available on all packages — included free on Business tier and above, or just £5/month on Lite and Homeworker tiers. Perfect for CCTV, VPN, and remote access.",
     img: null,
     reverse: false,
   },
@@ -115,9 +115,9 @@ const IntegraSDWAN = () => {
   return (
     <PageLayout>
       <SEO
-        title="Integra SD-WAN — Fast Internet Without Fibre"
-        description="Tired of waiting for Fibre? Enjoy fast internet in under 14 days with 99% UK coverage. Integra SD-WAN delivers up to 500Mbps using bonded 4G/5G."
-        keywords="SD-WAN, rural broadband, bonded 4G, 5G internet, no fibre, fast internet, rural connectivity, Integra Networks"
+        title="Integra SD-WAN — Up to 350Mbps Cellular Broadband in 14 Days"
+        description="Pure cellular. Pure reliability. Two 4G connections bonded into one. Up to 350Mbps. 100Mbps+ upload. 20-30ms latency. Better than Starlink for serious work. £99-400/month."
+        keywords="SD-WAN, rural broadband, bonded 4G, 5G internet, no fibre, fast internet, rural connectivity, cellular broadband, Integra Networks"
         url="/integra-sd-wan"
       />
 
@@ -136,9 +136,9 @@ const IntegraSDWAN = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Tired of waiting for Fibre?</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Pure cellular. Pure reliability.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Enjoy fast internet in under 14 days. With 99% UK Coverage, Integra can transform your internet connectivity. Stop waiting for Fibre and go live with Integra.
+              No dish. No waiting. Two 4G connections bonded into one. Up to 350Mbps download, 100Mbps+ upload, 20-30ms latency. Installed in under 14 days with 99% UK coverage.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
@@ -155,10 +155,10 @@ const IntegraSDWAN = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">The Perfect Solution for Rural Connectivity</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Say goodbye to slow internet with Integra SD-WAN
+              Fast, reliable broadband without fibre.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Integra provides fast and reliable connectivity solutions for businesses and consumers without access to fibre internet.
+              We have agreements with all four UK mobile operators. At your location, we find 2-3 towers and connect to two simultaneously — combined speed up to 350Mbps with automatic failover.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -180,10 +180,10 @@ const IntegraSDWAN = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Near-Total Connectivity: 99% of the UK Covered</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-              Integra SD-WAN: Enhancing Your Connectivity
+              How load balancing works.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-              Integra's SD-WAN service merges multiple network connections, providing faster 4G/5G speeds than a single network operator. Experience superior connectivity with Integra.
+              Each connection handles separate traffic streams — your overall speeds stack. For 95% of homeworkers and SMEs, load balancing is plenty. Need single-stream aggregate speed? Our Enterprise tier uses Bondix bonding at £400/month.
             </p>
           </AnimatedSection>
         </div>
@@ -234,10 +234,10 @@ const IntegraSDWAN = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Empowered Homeworkers
+              Real-world performance.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Explore the power of Integra SD-WAN — propelling remote workforces with unrivalled speed where Fibre cannot. Experience continuity for all your online engagements.
+              Not theoretical speeds — actual results from our installations. Homeworkers consistently achieve 210Mbps average, with crystal-clear VoIP calls and reliable video conferencing.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center mb-16" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -307,10 +307,10 @@ const IntegraSDWAN = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Pricing</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Integra SD-WAN: Revolutionising remote connectivity.
+              Simple pricing. Unlimited data. No surprises.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-4">
-              Enjoy unlimited data, reduced latency, and dependable support with Integra.
+              All packages include unlimited data, 24/7 monitoring, and WhatsApp/phone support. No usage caps or throttling.
             </p>
             <div className="flex items-center justify-center gap-2 mb-4">
               <a href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">

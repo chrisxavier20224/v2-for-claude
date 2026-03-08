@@ -16,13 +16,13 @@ import remoteImg from "@/assets/connectivity/home-wifi-remote.jpg";
 const painPoints = [
   {
     icon: Wifi,
-    title: "Seamless Coverage",
-    description: "Navigate your home freely, confident that your important conference call won't be interrupted.",
+    title: "5 Bars Everywhere",
+    description: "No more dead zones. We place access points where they'll reach furthest — bedrooms, outbuildings, garden offices. Devices roam seamlessly between APs.",
   },
   {
     icon: Brain,
-    title: "Intelligent WiFi Management",
-    description: "Our system ensures optimal data routing for high-speed connectivity and self-heals in case of network errors.",
+    title: "Professional-Grade Gear",
+    description: "UniFi, Ruckus, Mikrotik — not consumer extenders that just slow things down. Handles 20+ devices simultaneously with optimal channel routing.",
   },
   {
     icon: Plug,
@@ -47,8 +47,8 @@ const HomeWifi = () => {
   return (
     <PageLayout>
       <SEO
-        title="Home WiFi — Reliable Home Connectivity Solutions"
-        description="Are your critical team calls disrupted due to poor home WiFi? Integra offers robust wireless and wired WiFi solutions for remote workers."
+        title="Home WiFi — Professional Mesh Networks for Homes & Farms"
+        description="WiFi that works everywhere. Professional mesh WiFi installation from £400. Covers 2,000+ sq ft. Thick walls, outbuildings, and garden offices — all connected."
         keywords="home WiFi, home network, remote working WiFi, WiFi dead zones, mesh WiFi, home office connectivity"
         url="/connectivity/home-wifi"
       />
@@ -68,9 +68,9 @@ const HomeWifi = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Are Your Critical Calls Disrupted by Poor Home WiFi?</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">WiFi that reaches everywhere.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Struggling with WiFi dead zones at home? Integra offers robust wireless and wired WiFi solutions for remote workers demanding reliable, high-speed connectivity.
+              Your router is in the office. Your bedroom doesn't have signal. We design and install WiFi mesh networks that actually work in large homes, barns, and multi-building properties. From £400.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -87,10 +87,10 @@ const HomeWifi = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Home WiFi</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Unleash the power of seamless home WiFi
+              Why your WiFi isn't working.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Superfast internet is only as good as its distribution throughout your property. Selecting the right solution is crucial.
+              WiFi range is 50-100m in open space — much less through walls. Old routers can't handle multiple devices. WiFi extenders usually just slow things down. You need a properly designed mesh network.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -156,9 +156,9 @@ const HomeWifi = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Simplify Your Remote Working Experience</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">No more coffee shop video calls.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Say goodbye to the stress of poor home internet. No more resorting to your local coffee shop for that crucial video call.
+              Work from home confidently. Crystal-clear Zoom calls, fast file uploads, and reliable connections that don't drop when it rains.
             </p>
             <motion.ul className="space-y-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
               {benefitItems.map((item) => (
@@ -182,8 +182,8 @@ const HomeWifi = () => {
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Ready to upgrade your home WiFi?</h2>
-            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">Get in touch to discuss how we can transform your home connectivity.</p>
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Need WiFi everywhere?</h2>
+            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">Schedule a free WiFi survey — no obligation. We'll walk your property and recommend the right system for your budget.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

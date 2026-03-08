@@ -15,44 +15,44 @@ import SEO from "@/components/shared/SEO";
 const field2 = "/assets/backgrounds/field-2.jpg";
 
 const purpose = [
-  { 
-    title: "One place to see everything", 
+  {
+    title: "We go where fibre doesn't",
     icon: Target,
-    description: "Clarity over complexity",
-    detail: "No more logging into five different portals. See your entire fleet—regardless of brand—in one view."
+    description: "Coverage over convenience",
+    detail: "Rural farms, construction sites, holiday parks — we connect the places big ISPs ignore. 99% UK coverage via cellular SD-WAN."
   },
-  { 
-    title: "Know before it fails", 
+  {
+    title: "We monitor before you notice",
     icon: Shield,
     description: "Prevention over reaction",
-    detail: "Use operational data to catch problems early. Fewer surprises. Fewer callouts."
+    detail: "Nimbus watches every connection 24/7. If something drops, we're usually fixing it before you've picked up the phone."
   },
-  { 
-    title: "Make decisions with confidence", 
+  {
+    title: "We install it properly",
     icon: Heart,
-    description: "Insight over guesswork",
-    detail: "Real-time data means you know what's happening now—not what happened yesterday."
+    description: "Engineering over guesswork",
+    detail: "Our engineers install, configure, and test everything on-site. No self-install kits. No guesswork. Professional-grade from day one."
   },
-  { 
-    title: "Works at any scale", 
+  {
+    title: "We support like a small company should",
     icon: Users,
-    description: "Simplicity at scale",
-    detail: "Whether you manage 10 generators or 10,000, the experience stays the same."
+    description: "People over tickets",
+    detail: "Phone and WhatsApp support with 2-4 hour response times. You talk to real engineers, not a chatbot."
   },
 ];
 
 const values = [
   {
-    title: "We build for uptime",
-    description: "The systems we monitor can't go down. Neither can we. We hold ourselves to the same standard as the infrastructure we serve."
+    title: "We deliver what we promise",
+    description: "99.5% uptime SLA with real compensation if we miss it. Not 'best effort' — actual accountability for your connection."
   },
   {
-    title: "We listen before we build",
-    description: "Our roadmap comes from operators, not trends. We spend time understanding real problems before writing a single line of code."
+    title: "We design before we install",
+    description: "Every installation starts with understanding your property, your needs, and your budget. Then we design the right solution — not the most expensive one."
   },
   {
-    title: "We say what we mean",
-    description: "No hidden fees, no vague promises. If we can do something, we'll tell you. If we can't, we'll tell you that too."
+    title: "We tell you the truth",
+    description: "If fibre is cheaper for your location, we'll tell you. If our SD-WAN isn't the right fit, we'll say so. No hard sell. Just honest advice."
   },
 ];
 
@@ -63,18 +63,18 @@ const securityPractices = [
 ];
 
 const partners = [
-  { category: "Controller Manufacturers", items: ["DeepSea Electronics", "ComAp", "DEIF", "Major generator OEMs"] },
-  { category: "Technology", items: ["Cloud infrastructure", "Connectivity providers", "Security partners"] },
-  { category: "Integration", items: ["CMMS platforms", "Enterprise systems", "Telco operators"] },
+  { category: "Network Hardware", items: ["Teltonika", "Peplink / Pepwave", "UniFi (Ubiquiti)", "Ruckus & Mikrotik"] },
+  { category: "Connectivity", items: ["EE / BT", "Vodafone", "Three", "O2 / Virgin Media"] },
+  { category: "Services", items: ["Starlink (SpaceX)", "Microsoft Teams", "VoIP providers", "Nimbus monitoring"] },
 ];
 
 const About = () => {
   return (
     <PageLayout>
       <SEO
-        title="About Us"
-        description="Built for critical power reliability. We build software for the people responsible for keeping generators running when failure isn't an option."
-        keywords="about NEXR, critical power, generator monitoring company, IoT platform"
+        title="About Integra Networks — Connectivity That Just Works"
+        description="107 UK businesses trust Integra for their internet. We deliver SD-WAN, WiFi, managed SIMs, and leased lines — installed in 14 days, monitored 24/7."
+        keywords="about Integra Networks, UK ISP, SD-WAN provider, rural broadband, managed connectivity"
         url="/about"
       />
       {/* Hero */}
@@ -84,13 +84,13 @@ const About = () => {
           <AnimatedSection>
             <EyebrowLabel>About Us</EyebrowLabel>
             <h1 className="mb-8 text-heading-1 md:text-display-sm text-foreground">
-              Built for critical power reliability
+              Connectivity that just works.
             </h1>
             <p className="mb-6 text-xl md:text-2xl text-muted-foreground">
-              Critical power systems are relied on when failure isn't an option.
+              107 UK businesses trust Integra for their internet. We deliver what the big ISPs won't.
             </p>
             <p className="text-muted-foreground">
-              We build software for the people responsible for keeping them running.
+              SD-WAN, WiFi, managed SIMs, leased lines — installed in 14 days, monitored 24/7, supported by real people.
             </p>
           </AnimatedSection>
         </div>
@@ -102,9 +102,9 @@ const About = () => {
       <Section>
         <AnimatedSection>
           <div className="mx-auto max-w-5xl">
-            <Placeholder label="NEXR IoT Team" category="team" className="h-64 md:h-[420px]" />
+            <Placeholder label="Integra Networks Team" category="team" className="h-64 md:h-[420px]" />
             <p className="mt-6 text-center text-muted-foreground">
-              Headquartered in London
+              Headquartered in London, operating UK-wide
             </p>
           </div>
         </AnimatedSection>
@@ -125,12 +125,11 @@ const About = () => {
               Why We Exist
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Hospitals, data centres, and telecommunications networks depend on backup power 
-              that works when it matters most. Without visibility, things get missed. 
-              Without warning, things fail.
+              Too many UK businesses are stuck with broadband that doesn't work —
+              slow ADSL, unreliable mobile dongles, or fibre that's years away from arriving.
             </p>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground mt-4">
-              We exist to give operators the tools to prevent that.
+              We exist to give every business reliable, fast internet — regardless of postcode.
             </p>
           </div>
         </AnimatedSection>
@@ -161,8 +160,8 @@ const About = () => {
                 How We Work
               </h2>
               <p className="mb-10 text-lg text-muted-foreground">
-                These aren't slogans. They're how we actually behave—with each other, 
-                with customers, and when making difficult decisions.
+                These aren't slogans. They're how we treat every customer,
+                every installation, and every support call.
               </p>
               <div className="space-y-6">
                 {values.map((value) => (
@@ -224,8 +223,8 @@ const About = () => {
               Who We Work With
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Our platform is built to be open. We collaborate with controller manufacturers, 
-              technology providers, and integrators to work with what you already have.
+              We work with the best hardware and network providers to deliver reliable connectivity.
+              No vendor lock-in — we choose the right equipment for your specific situation.
             </p>
           </div>
         </AnimatedSection>

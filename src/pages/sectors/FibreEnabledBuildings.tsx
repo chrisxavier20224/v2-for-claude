@@ -21,27 +21,27 @@ import royleFarmHero from "@/assets/case-studies/royle-farm-hero.jpg";
 const painPoints = [
   {
     icon: Zap,
-    title: "Need immediate fibre internet for new tenants?",
-    description: "Ensure immediate connectivity without delays or setup hassle. Move-in ready connectivity is just a click away.",
+    title: "Tenants Demanding Internet on Day One?",
+    description: "We install fibre infrastructure during your build phase. When tenants sign the lease, they plug in and they're online. No waiting for ISP orders.",
   },
   {
     icon: Network,
-    title: "Challenges of fibre availability in remote locations?",
-    description: "We bridge geographical gaps, bringing high-speed fibre connections where traditional ISPs don't reach.",
+    title: "ISPs Won't Come to Your Location?",
+    description: "Rural developments get overlooked by the big ISPs. We bring fibre ourselves — from centralised meet-me rooms to individual units, all managed in-house.",
   },
   {
     icon: Building2,
-    title: "ISP's won't pre-connect to your estate?",
-    description: "Integra delivers fibre ahead of time, guaranteeing connectivity upon tenant occupancy, without dependence on ISP orders.",
+    title: "Losing Tenants Over Connectivity Delays?",
+    description: "A 6-8 week ISP wait costs you rent. Pre-connected fibre eliminates that gap and makes your development more attractive than the competition.",
   },
 ];
 
 // ─── Benefits checklist ───────────────────────────────────────────────────────
 
 const benefitItems = [
-  "Guaranteed Symmetrical Speeds",
-  "Transparent, Affordable Pricing",
-  "Instant Hyperfast Internet Delivery",
+  "Up to 1Gbps Symmetrical — Same Upload as Download",
+  "Transparent Pricing with No Hidden Charges",
+  "Internet Live from Practical Completion",
 ];
 
 // ─── Animation variants ──────────────────────────────────────────────────────
@@ -67,9 +67,9 @@ const FibreEnabledBuildings = () => {
   return (
     <PageLayout>
       <SEO
-        title="Fibre Enabled Buildings — Full Fibre Networks for Business Parks"
-        description="Comprehensive start-to-finish connectivity solutions ensuring immediate, ready-to-use internet for you and your tenants. Pre-connected hyperfast internet for business parks."
-        keywords="fibre enabled buildings, business park internet, full fibre, pre-connected, ultrafast broadband, tenant connectivity"
+        title="Fibre Enabled Buildings — Pre-Connected Internet for New Developments"
+        description="Pre-deliver fibre to every unit before tenants arrive. Symmetrical speeds up to 1Gbps, custom system design, and contracts that match your lease terms."
+        keywords="fibre enabled buildings, pre-connected fibre, new development internet, tenant connectivity, full fibre business park, ultrafast broadband"
         url="/sectors/fibre-enabled-buildings"
       />
 
@@ -102,10 +102,10 @@ const FibreEnabledBuildings = () => {
               </Link>
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Full Fibre Networks for Business Parks
+              Fibre pre-delivered. Tenants online from day one.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Comprehensive, start-to-finish connectivity solutions ensuring immediate, ready-to-use internet for you and your tenants.
+              We install fibre to every unit before practical completion. When your tenants move in, internet is already live — symmetrical speeds up to 1Gbps, with contracts that match your lease terms.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button
@@ -128,10 +128,10 @@ const FibreEnabledBuildings = () => {
               Fibre Enabled Buildings
             </p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Future-proof business parks with pre-connected hyperfast internet
+              The connectivity problem developers didn't plan for.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Experience lightning-fast, pre-connected internet for your business park with Integra. Enjoy our custom system designs, flexible contracts, and superior connectivity.
+              You've built the units. Now tenants want internet on move-in day — but ISPs take 6-8 weeks. We solve this by pre-delivering fibre infrastructure during construction, so every unit is live from practical completion.
             </p>
           </AnimatedSection>
 
@@ -173,10 +173,10 @@ const FibreEnabledBuildings = () => {
               <Zap className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">
-              Predelivered Fibre: Seamless Internet from Day One
+              Fibre installed during construction. Live at handover.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Integra delivers fibre to your estate, ensuring ready-to-use internet upon practical completion. Say goodbye to waiting for tenant orders and hello to immediate connectivity.
+              We work with your construction programme to install fibre ducting and cabling during the build. By practical completion, every unit has a live connection — symmetrical speeds up to 1Gbps, ready for your tenants.
             </p>
           </AnimatedSection>
 
@@ -227,10 +227,10 @@ const FibreEnabledBuildings = () => {
                 <Network className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">
-                Custom Fibre System Design
+                Designed around your development, not a template.
               </h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Integra designs and installs fibre systems tailored to each office unit. No mess, no fuss — just ready-to-go connections from a centralised meet-me room, minimising disruption.
+                Every development is different. We design bespoke fibre networks from a centralised meet-me room to each unit — with dedicated circuits, not shared lines. Clean installation, minimal disruption, professional finish.
               </p>
             </AnimatedSection>
           </div>
@@ -251,10 +251,10 @@ const FibreEnabledBuildings = () => {
               <Wifi className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">
-              Ultrafast Internet, Ready On Arrival
+              Symmetrical speeds that attract premium tenants.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Boost occupancy and revenue with immediate ultrafast connectivity. Avoid internet uncertainty and let tenants begin work the moment they move in.
+              Up to 1Gbps symmetrical — same upload as download. That matters for businesses running VoIP, cloud apps, and video conferencing. It's a genuine differentiator when tenants compare your development to others.
             </p>
           </AnimatedSection>
 
@@ -297,11 +297,11 @@ const FibreEnabledBuildings = () => {
             </AnimatedSection>
 
             <AnimatedSection className="order-1 lg:order-2">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">
-                Instant Connectivity, Improved Occupancy
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">
+                Higher occupancy. Less void time. Better tenants.
               </h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-8">
-                Outperform the competition with instant, superfast connectivity. Offering immediate internet access is a game-changer — don't lose tenants over connectivity delays.
+                Pre-connected developments fill faster because tenants can start working immediately. No 6-8 week ISP wait. No connection uncertainty. Just sign the lease and plug in.
               </p>
               <motion.ul
                 className="space-y-4 mb-8"
@@ -388,10 +388,10 @@ const FibreEnabledBuildings = () => {
         <AnimatedSection>
           <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
-              Ready to future-proof your business park?
+              Pre-connect your development. Fill units faster.
             </h2>
             <p className="mb-8 text-lg text-white/80">
-              Get pre-connected hyperfast internet for your tenants with Integra's full fibre solutions.
+              Fibre infrastructure installed during your build. Every unit online from day one.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

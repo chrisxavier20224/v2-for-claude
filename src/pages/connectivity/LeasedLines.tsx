@@ -16,18 +16,18 @@ import wirelessImg from "@/assets/connectivity/leased-lines-wireless.jpg";
 const painPoints = [
   {
     icon: Zap,
-    title: "Uninterrupted Direct Internet Access",
-    description: "Assured internet speed at peak times, supporting your evolving technological demands for your team and clients.",
+    title: "Exact Same Upload & Download",
+    description: "Symmetric speeds for mission-critical operations. No contention, no throttling — your dedicated pipe delivers consistently.",
   },
   {
     icon: Network,
-    title: "Symmetrical Upload & Download Speeds",
-    description: "Experience seamless uploading and downloading, enhancing your team's productivity as they adapt to modern work methods.",
+    title: "Private Circuit Security",
+    description: "A leased line is yours alone. No shared bandwidth, no public infrastructure risks. Ideal for high-security environments and regulatory compliance.",
   },
   {
     icon: Shield,
     title: "High-Speed Fibre up to 10Gbps",
-    description: "Ultra-fast connectivity for businesses where internet speed is essential, enabling efficient operations and increased productivity.",
+    description: "From 100Mbps to 10Gbps, scaled to your requirements. Bespoke pricing typically ranges £500-2,000/month depending on speed and location.",
   },
 ];
 
@@ -45,9 +45,9 @@ const LeasedLines = () => {
   return (
     <PageLayout>
       <SEO
-        title="Leased Lines — Premium Business-Grade Fibre"
-        description="Premium business-grade fibre connectivity solutions. Dedicated internet access up to 10Gbps with 99.995% SLA reliability."
-        keywords="leased lines, business fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps"
+        title="Leased Lines — Dedicated Circuits for Mission-Critical Business"
+        description="Business leased lines. Symmetric speeds. Dedicated circuit. SLA-backed. Bespoke pricing from £500/month. Desktop survey first."
+        keywords="leased lines, business fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
         url="/connectivity/leased-lines"
       />
 
@@ -66,9 +66,9 @@ const LeasedLines = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Premium Business-Grade Fibre Connectivity</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">When you need a dedicated circuit.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              While our reputation is built on unique connectivity solutions for remote locations, we also offer standard connectivity options wherever they're available.
+              Symmetric, bespoke, and sometimes the only answer. When your business demands exact same upload and download speeds with zero contention, we handle the entire process from desktop survey to installation.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -85,10 +85,10 @@ const LeasedLines = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Leased Lines</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Delivering superior internet solutions for businesses valuing their connectivity
+              When leased lines make sense.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              As connectivity specialists, we offer a range of wired and wireless solutions tailored to your business needs with dedicated services up to 10Gbps.
+              Leased lines are the right choice when you need exact same upload and download speeds, zero failover tolerance on a single mission-critical pipe, high-security private circuits, or guaranteed SLA-backed performance.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -111,9 +111,9 @@ const LeasedLines = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Rapid On-net Deployment</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Creative solutions that save thousands.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              While leased lines offer excellent connectivity, they can take time to install. Our Integra SD-WAN solution can get your site up and running in days, bridging the gap until your fibre connection is ready. With Integra, you're covered.
+              Leased lines can take 8-12 weeks to install. Our Integra SD-WAN or Bridge solution gets you online in days, bridging the gap until fibre is ready. And we find creative routing — like Royle Farm, where we ran fibre 500m to a cattle grid then distributed via P2P radio, saving £20k versus trenching 3km.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -135,9 +135,9 @@ const LeasedLines = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 py-12 md:py-16 flex justify-end">
           <AnimatedSection>
             <div className="text-right">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Unrivalled Service Level Agreement</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Industry-Leading 99.995% SLA</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                Our DIA products offer an industry-leading 99.995% reliability and SLA, giving you the peace of mind that your business will remain connected, always.
+                Our DIA products are backed by a 99.995% uptime guarantee with compensation if we fail. Dedicated escalation line — not an email queue. Your business stays connected, always.
               </p>
             </div>
           </AnimatedSection>
@@ -152,7 +152,7 @@ const LeasedLines = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Dedicated Wireless Leased Lines</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Where Line of Sight is available, we provide dedicated wireless connectivity for your business. With fixed installation costs and superfast setup — typically under 25 working days, and as fast as 5 working days.
+              Where line of sight is available, we deliver dedicated wireless connectivity with fixed installation costs. Setup is typically under 25 working days — as fast as 5 working days. No trenching, no wayleave delays, no surprises.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -168,8 +168,8 @@ const LeasedLines = () => {
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Ready to upgrade your business connectivity?</h2>
-            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">Get in touch to discuss your leased line requirements and find the perfect solution for your business.</p>
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Get a Leased Line Assessment</h2>
+            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">We start with a desktop survey and feasibility assessment before quoting. Bespoke pricing, honest advice — if a leased line isn't the right answer, we'll tell you.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>
