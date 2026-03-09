@@ -14,7 +14,7 @@ import carbeeLogo from "@/assets/case-studies/carbee-logo.png";
 const customers = [
   { name: "McGee Group", link: "/customers/mcgee-construction", logo: mcgeeLogo, wide: false },
   { name: "Seacon Group", link: "/customers/seacon-group", logo: seaconLogo, wide: true },
-  { name: "WB Power Services", link: "/customers/wb-power-services", logo: wbPowerLogo, wide: false },
+  { name: "WB Power Services", link: "/customers/wb-power-services", logo: wbPowerLogo, wide: true },
   { name: "UK Harvest", link: "/customers/uk-harvest", logo: ukHarvestLogo, wide: false },
   { name: "Royle Farm", link: "/customers/royle-farm", logo: royleFarmLogo, wide: false },
   { name: "Royal Harwich YC", link: "/customers/royal-harwich-yacht-club", logo: rhycLogo, wide: true },
@@ -34,7 +34,7 @@ const LogoItem = ({ customer }: { customer: typeof customers[0] }) => (
       <img
         src={customer.logo}
         alt={customer.name}
-        className="max-h-14 max-w-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+        className="max-h-14 max-w-full w-auto object-contain grayscale opacity-60 group-hover:opacity-80 transition-all duration-300"
       />
     </div>
   </Link>
