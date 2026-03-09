@@ -34,11 +34,11 @@ const LogoItem = ({ customer }: { customer: typeof customers[0] }) => (
     className="flex-shrink-0 group px-6 md:px-8"
     title={customer.name}
   >
-    <div className="h-12 w-32 md:w-36 flex items-center justify-center">
+    <div className="h-14 w-36 md:w-44 flex items-center justify-center">
       <img
         src={customer.logo}
         alt={customer.name}
-        className="max-h-12 max-w-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+        className="max-h-14 max-w-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
       />
     </div>
   </Link>
