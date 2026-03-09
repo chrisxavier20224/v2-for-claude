@@ -134,7 +134,7 @@ const SDWanForSmallBusiness = () => {
                 <h3 className="text-base font-semibold text-foreground mb-4">The Setup</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Starlink connection: 100Mbps download, 20Mbps upload, 40ms latency, sometimes drops during rain</li>
-                  <li>4G cellular connection: 80Mbps download, 50Mbps upload, 25ms latency, never drops</li>
+                  <li>4G/5G cellular connection: 80Mbps download, 50Mbps upload, 25ms latency, never drops</li>
                 </ul>
               </div>
 
@@ -143,7 +143,7 @@ const SDWanForSmallBusiness = () => {
                 <p className="text-muted-foreground mb-3">You choose one:</p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Use Starlink: Fast for downloads, but EPOS tills fail during rain</li>
-                  <li>Use 4G: More reliable, but slower uploads for your CCTV backup</li>
+                  <li>Use 4G/5G: More reliable, but slower uploads for your CCTV backup</li>
                 </ul>
               </div>
 
@@ -151,10 +151,10 @@ const SDWanForSmallBusiness = () => {
                 <h3 className="text-base font-semibold text-foreground mb-4">With SD-WAN Bonding</h3>
                 <p className="text-muted-foreground mb-3">Both work together:</p>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>Real-time traffic (EPOS, video calls): prefer 4G (lower latency, no rain issues)</li>
-                  <li>Upload-heavy traffic (CCTV, backups): prefer Starlink (higher upload speed) unless Starlink is raining, then switch to 4G</li>
+                  <li>Real-time traffic (EPOS, video calls): prefer 4G/5G (lower latency, no rain issues)</li>
+                  <li>Upload-heavy traffic (CCTV, backups): prefer Starlink (higher upload speed) unless Starlink is raining, then switch to 4G/5G</li>
                   <li>Regular browsing: split between both (uses full bandwidth of both pipes simultaneously)</li>
-                  <li>If Starlink drops: EPOS transactions automatically route through 4G. Zero downtime.</li>
+                  <li>If Starlink drops: EPOS transactions automatically route through 4G/5G. Zero downtime.</li>
                 </ul>
               </div>
             </div>

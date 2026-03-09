@@ -70,22 +70,22 @@ const RuralBroadband = () => {
     {
       question: "Is Starlink reliable enough for running a business?",
       answer:
-        "Starlink alone has ~95% uptime. Our SD-WAN solution adds 4G failover, bringing reliability to 99.5% — matching traditional leased lines. We manage everything, monitor it 24/7, and you get dedicated UK support.",
+        "Starlink alone has ~95% uptime. Our SD-WAN solution adds 4G/5G failover, bringing reliability to 99.5% — matching traditional leased lines. We manage everything, monitor it 24/7, and you get dedicated UK support.",
     },
     {
       question: "How many buildings can you cover?",
       answer:
-        "Starlink covers a wide area once installed. We can add multiple 4G boosters for larger estates. Most rural estates with buildings within 500m of each other can be covered with a single Starlink + distributed mesh WiFi.",
+        "Starlink covers a wide area once installed. We can add multiple 4G/5G boosters for larger estates. Most rural estates with buildings within 500m of each other can be covered with a single Starlink + distributed mesh WiFi.",
     },
     {
       question: "Will this work in really bad weather?",
       answer:
-        "Starlink continues in heavy rain, though speeds may dip slightly. Our 4G failover kicks in automatically during extreme weather. Overall uptime remains 99.5% even in harsh rural conditions.",
+        "Starlink continues in heavy rain, though speeds may dip slightly. Our 4G/5G failover kicks in automatically during extreme weather. Overall uptime remains 99.5% even in harsh rural conditions.",
     },
     {
       question: "What happens if Starlink goes down?",
       answer:
-        "Your 4G connection automatically takes over. You stay online. Our SD-WAN load balances traffic, so even during outages you remain connected. It's built for reliability.",
+        "Your 4G/5G connection automatically takes over. You stay online. Our SD-WAN load balances traffic, so even during outages you remain connected. It's built for reliability.",
     },
   ];
 
@@ -93,7 +93,7 @@ const RuralBroadband = () => {
     <PageLayout>
       <SEO
         title="Rural Broadband UK | Fast Internet Where Fibre Can't Reach | Integra Networks"
-        description="Fast, reliable broadband for rural businesses and farms. No fibre? No problem. Starlink SD-WAN with 4G failover. 99% UK coverage. Installed in 14 days."
+        description="Fast, reliable broadband for rural businesses and farms. No fibre? No problem. Starlink SD-WAN with 4G/5G failover. 99% UK coverage. Installed in 14 days."
         keywords="rural broadband, countryside internet, farm broadband, rural wifi, Starlink UK"
         url="/lp/rural-broadband"
       />
@@ -212,7 +212,7 @@ const RuralBroadband = () => {
               <ul className="text-surface-dark-muted space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Starlink + 4G failover</span>
+                  <span>Starlink + 4G/5G failover</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
@@ -241,7 +241,7 @@ const RuralBroadband = () => {
               <ul className="text-surface-dark-muted space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Dual 4G SIMs load balanced</span>
+                  <span>Dual 4G/5G SIMs load balanced</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>

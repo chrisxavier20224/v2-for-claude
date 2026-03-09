@@ -70,7 +70,7 @@ const BusinessBroadband = () => {
     {
       question: "What speeds will I get with Integra Pro?",
       answer:
-        "Integra Pro delivers 100-350 Mbps with dual 4G SIMs load balanced. Upload speeds match download. This is fast enough for video conferencing, cloud backups, and file syncing without any lag.",
+        "Integra Pro delivers 100-350 Mbps with dual 4G/5G SIMs load balanced. Upload speeds match download. This is fast enough for video conferencing, cloud backups, and file syncing without any lag.",
     },
     {
       question: "Is a leased line or SD-WAN better for my office?",
@@ -238,7 +238,7 @@ const BusinessBroadband = () => {
               <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">Leased Lines</h3>
               <p className="text-surface-dark-muted mb-4">For guaranteed, dedicated capacity</p>
               <div className="text-4xl font-bold text-white mb-6">
-                £250-1,500<span className="text-lg text-surface-dark-muted">/month +VAT</span>
+                From £400<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
                 <li className="flex items-start gap-3">
@@ -271,7 +271,7 @@ const BusinessBroadband = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-12 rounded-2xl bg-white/5 border border-white/10 p-8">
             <h3 className="text-2xl font-bold text-surface-dark-foreground mb-4">Need Multi-Site Redundancy?</h3>
             <p className="text-surface-dark-muted mb-4">
-              Our Enterprise SD-WAN service (£400/month) combines multiple connections (leased lines, 4G, SD-WAN) with intelligent load balancing and failover. Perfect for organizations requiring maximum reliability across multiple locations.
+              Our Enterprise SD-WAN service (£400/month +VAT) combines multiple connections (leased lines, 4G/5G, SD-WAN) with intelligent load balancing and failover. Perfect for organizations requiring maximum reliability across multiple locations.
             </p>
             <Button asChild variant="outline" className="border-primary/40 text-surface-dark-foreground hover:bg-white/10">
               <Link to="/contact?source=business-broadband&product=enterprise-sdwan">Call us to discuss</Link>

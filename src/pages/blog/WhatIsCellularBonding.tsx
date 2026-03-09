@@ -61,11 +61,11 @@ const WhatIsCellularBonding = () => (
 
     <h2>Real-World Analogy</h2>
 
-    <p>You've got two internet connections: one via satellite, one via 4G.</p>
+    <p>You've got two internet connections: one via satellite, one via 4G/5G.</p>
 
     <ul>
       <li><strong>Satellite</strong> gives good download speed but weak upload.</li>
-      <li><strong>4G</strong> gives fast upload but lower download.</li>
+      <li><strong>4G/5G</strong> gives fast upload but lower download.</li>
     </ul>
 
     <p>Bonding combines them: download mostly routes through satellite, upload through 4G. You get both benefits.</p>
@@ -129,9 +129,9 @@ const WhatIsCellularBonding = () => (
 
     <p>A farm had Starlink. In winter, heavy snow knocked out the satellite signal for 2-3 days.</p>
 
-    <p>Solution: Add bonded 4G via Integra Pro.</p>
+    <p>Solution: Add bonded 4G/5G via Integra Pro.</p>
 
-    <p><strong>Result:</strong> Snow blocks Starlink? Cellular keeps them working. Summer good 4G signal? Use bonded speeds for fast uploads.</p>
+    <p><strong>Result:</strong> Snow blocks Starlink? Cellular keeps them working. Summer good 4G/5G signal? Use bonded speeds for fast uploads.</p>
 
     <h2>When It Doesn't Make Sense</h2>
 

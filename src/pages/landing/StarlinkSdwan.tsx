@@ -65,17 +65,17 @@ const StarlinkSdwan = () => {
     {
       question: "How much faster is SD-WAN failover than Starlink alone?",
       answer:
-        "Starlink alone has ~95% uptime with occasional 10-30 second dropouts. Our SD-WAN adds 4G failover, seamlessly switching traffic in under 1 second. Net result: 99.5% uptime with zero noticeable drops.",
+        "Starlink alone has ~95% uptime with occasional 10-30 second dropouts. Our SD-WAN adds 4G/5G failover, seamlessly switching traffic in under 1 second. Net result: 99.5% uptime with zero noticeable drops.",
     },
     {
       question: "Will I need a separate 4G contract?",
       answer:
-        "No. We bundle 4G as part of the SD-WAN service. It's included in your monthly fee. You get Starlink + 4G managed as one service by our UK team.",
+        "No. We bundle 4G/5G as part of the SD-WAN service. It's included in your monthly fee. You get Starlink + 4G/5G managed as one service by our UK team.",
     },
     {
       question: "What if I lose power? Do I still stay online?",
       answer:
-        "Great question. Our SD-WAN router can run on battery backup (optional add-on). With backup, you stay online for 2-4 hours during power loss. 4G failover keeps working for as long as the cell network is up.",
+        "Great question. Our SD-WAN router can run on battery backup (optional add-on). With backup, you stay online for 2-4 hours during power loss. 4G/5G failover keeps working for as long as the cell network is up.",
     },
     {
       question: "Can I upgrade to a higher Starlink plan if I need more speed?",
@@ -85,15 +85,15 @@ const StarlinkSdwan = () => {
     {
       question: "How does pricing compare to traditional leased lines?",
       answer:
-        "Leased lines cost £250-1,500/month. Our Starlink SD-WAN is £80/month with 99.5% SLA. For areas without fibre, we deliver enterprise reliability at a fraction of the cost.",
+        "Leased lines cost from £400/month. Our Starlink SD-WAN is £80/month +VAT (managed service) with 99.5% SLA. For areas without fibre, we deliver enterprise reliability at a fraction of the cost. You pay Starlink directly for your dish and subscription.",
     },
   ];
 
   return (
     <PageLayout>
       <SEO
-        title="Starlink SD-WAN | Managed Starlink with 4G Failover | Integra Networks"
-        description="Reliable Starlink for business. 99.5% uptime SLA with 4G failover. Fully managed by UK engineers. From £80/month."
+        title="Starlink SD-WAN | Managed Starlink with 4G/5G Failover | Integra Networks"
+        description="Reliable Starlink for business. 99.5% uptime SLA with 4G/5G failover. Fully managed by UK engineers. From £80/month +VAT."
         keywords="Starlink business, managed Starlink, Starlink UK, Starlink failover, SD-WAN"
         url="/lp/starlink-sdwan"
       />
@@ -107,7 +107,7 @@ const StarlinkSdwan = () => {
               Starlink Made Reliable — SD-WAN Failover Ensures You Never Drop
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              Want Starlink's affordability with enterprise reliability? Our SD-WAN solution adds 4G failover and UK support. 99.5% uptime guaranteed. All managed for you.
+              Want Starlink's affordability with enterprise reliability? Our SD-WAN solution adds 4G/5G failover and UK support. 99.5% uptime guaranteed. All managed for you.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
@@ -206,7 +206,7 @@ const StarlinkSdwan = () => {
                 <ul className="text-surface-dark-muted space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold">✓</span>
-                    <span>Starlink + 4G bonded</span>
+                    <span>Starlink + 4G/5G bonded</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold">✓</span>
@@ -268,7 +268,7 @@ const StarlinkSdwan = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-surface-dark-foreground mb-3">What's Included</h4>
                   <p className="text-surface-dark-muted">
-                    Starlink hardware, 4G SIM, SD-WAN router, installation, monthly monitoring, and 24/7 UK support. No hidden costs.
+                    4G/5G SIM, SD-WAN router, installation, monthly monitoring, and 24/7 UK support. You pay Starlink directly for your dish and subscription.
                   </p>
                 </div>
               </div>
@@ -294,7 +294,7 @@ const StarlinkSdwan = () => {
                 <span className="text-3xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Verify Coverage</h3>
-              <p className="text-muted-foreground">Check that Starlink and 4G are available at your location. Takes 2 minutes.</p>
+              <p className="text-muted-foreground">Check that Starlink and 4G/5G are available at your location. Takes 2 minutes.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">

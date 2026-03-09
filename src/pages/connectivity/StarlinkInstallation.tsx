@@ -67,8 +67,8 @@ const starlinkServiceSchema = {
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
-    lowPrice: "950",
-    highPrice: "1500",
+    lowPrice: "80",
+    highPrice: "2200",
   },
 };
 
@@ -205,7 +205,7 @@ const StarlinkInstallation = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Starlink Static IP Solutions</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Need a Static IP for VPN, CCTV, or remote access but don't want to upgrade to Starlink's priority service? We provide static IPs through our SD-WAN layer — no Starlink priority plan required. Just £5/month added to your service.
+              Need a Static IP for VPN, CCTV, or remote access but don't want to upgrade to Starlink's priority service? We provide static IPs through our SD-WAN layer — no Starlink priority plan required. Just £10/month added to your service.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -287,7 +287,7 @@ const StarlinkInstallation = () => {
         <div className="text-center">
           <AnimatedSection>
             <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Add Starlink reliability.</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Keep your Starlink. Add 4G/5G failover for £80/month. No more rain drops. 99.5% uptime SLA.</p>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Keep your Starlink. Add 4G/5G failover from £80/month +VAT. No more rain drops. 99.5% uptime SLA.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

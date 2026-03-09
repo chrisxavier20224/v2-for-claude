@@ -216,7 +216,7 @@ const HomeworkerBroadband = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>4G failover (always online)</span>
+                  <span>4G/5G failover (always online)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
@@ -246,7 +246,7 @@ const HomeworkerBroadband = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Dual 4G load balanced</span>
+                  <span>Dual 4G/5G load balanced</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
@@ -324,9 +324,9 @@ const HomeworkerBroadband = () => {
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="font-semibold text-surface-dark-foreground mb-2">No Setup Costs</h3>
+                <h3 className="font-semibold text-surface-dark-foreground mb-2">Installation Is a Business Expense Too</h3>
                 <p className="text-surface-dark-muted">
-                  We cover installation. You only pay monthly for the service, which goes straight on your tax return.
+                  Your one-off installation cost is also deductible. Monthly service goes straight on your tax return.
                 </p>
               </motion.div>
 

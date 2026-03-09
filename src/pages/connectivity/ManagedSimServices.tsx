@@ -66,8 +66,8 @@ const ManagedSimServices = () => {
   return (
     <PageLayout>
       <SEO
-        title="Managed SIM Services — PSTN Switch-Off Solutions from £2.90/month"
-        description="PSTN switching off January 2027. Our managed SIM service replaces analogue lines for lifts, alarms, and EPOS — no upfront costs, 3-day monitoring, complete estate visibility."
+        title="Managed SIM Services — PSTN Switch-Off Solutions"
+        description="PSTN switching off January 2027. Our managed SIM service replaces analogue lines for lifts, alarms, and EPOS — no upfront costs, 3-day monitoring, complete estate visibility. Custom quoted."
         keywords="managed SIM, PSTN switch off, SOGEA alternative, lift line migration, SIM connectivity, IoT SIM"
         url="/connectivity/managed-sim-services"
       />
@@ -89,7 +89,7 @@ const ManagedSimServices = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">PSTN is switching off. Are you ready?</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              SOGEA is costly for single-line PSTN replacement. Our managed SIM service delivers an affordable, no upfront cost solution — with complete estate visibility, proactive monitoring, and SIMs from £2.90/month.
+              SOGEA is costly for single-line PSTN replacement. Our managed SIM service delivers an affordable, no upfront cost solution — with complete estate visibility and proactive monitoring. Custom priced for your needs.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">

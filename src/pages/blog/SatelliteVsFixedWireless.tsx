@@ -90,16 +90,16 @@ const SatelliteVsFixedWireless = () => (
     <h3>How it works:</h3>
     <ul>
       <li>Customer supplies a Starlink dish (or we can arrange it via our Starlink B2B channel)</li>
-      <li>We add one or two 4G SIMs via SD-WAN</li>
-      <li>If Starlink latency or weather causes issues, 4G automatically takes over</li>
+      <li>We add one or two 4G/5G SIMs via SD-WAN</li>
+      <li>If Starlink latency or weather causes issues, 4G/5G automatically takes over</li>
       <li>You get satellite speed and cellular reliability</li>
     </ul>
 
     <h3>Pros of Starlink SD-WAN:</h3>
     <ul>
       <li><strong>You get Starlink's speed and cellular's reliability.</strong> Best of both worlds.</li>
-      <li><strong>Latency issues solved.</strong> When you need low-latency work (VoIP, EPOS), traffic routes through 4G. When it's web browsing, you use Starlink's speed.</li>
-      <li><strong>Weather protection.</strong> Rain disrupts Starlink? Connection switches to 4G. You don't notice.</li>
+      <li><strong>Latency issues solved.</strong> When you need low-latency work (VoIP, EPOS), traffic routes through 4G/5G. When it's web browsing, you use Starlink's speed.</li>
+      <li><strong>Weather protection.</strong> Rain disrupts Starlink? Connection switches to 4G/5G. You don't notice.</li>
       <li><strong>Affordable hybrid.</strong> Just £80/month to add to your existing Starlink bill.</li>
     </ul>
 
@@ -107,7 +107,7 @@ const SatelliteVsFixedWireless = () => (
     <ul>
       <li><strong>Requires Starlink first.</strong> You need to already have Starlink or be willing to buy it.</li>
       <li><strong>More complex setup.</strong> Two services, two routers, SD-WAN management. Not a "plug and play" from one vendor.</li>
-      <li><strong>Still uses 4G as backup.</strong> If cellular coverage is weak at your site, the backup isn't very useful.</li>
+      <li><strong>Still uses 4G/5G as backup.</strong> If cellular coverage is weak at your site, the backup isn't very useful.</li>
     </ul>
 
     <h2>Cost Comparison (Monthly)</h2>
@@ -115,7 +115,7 @@ const SatelliteVsFixedWireless = () => (
     <div style={{ marginBottom: "20px" }}>
       <p><strong>Starlink Direct:</strong> £90-100 per month. Includes just satellite. No backup, no SLA.</p>
       <p><strong>Integra Pro (Fixed Wireless):</strong> £135 per month. Includes 2 SIMs bonded. Low latency, SLA available.</p>
-      <p><strong>Starlink SD-WAN (Hybrid):</strong> £80 plus Starlink cost per month. Includes Starlink and 4G backup. Best for mixed workloads.</p>
+      <p><strong>Starlink SD-WAN (Hybrid):</strong> £80 plus Starlink cost per month. Includes Starlink and 4G/5G backup. Best for mixed workloads.</p>
       <p>Add installation: £2,200 for Integra Pro or Starlink SD-WAN.</p>
     </div>
 
@@ -123,9 +123,9 @@ const SatelliteVsFixedWireless = () => (
 
     <div style={{ marginBottom: "20px" }}>
       <p><strong>Download Speed:</strong> Satellite (Starlink) 50-150Mbps | Fixed Wireless (Integra Pro) 80-350Mbps | Starlink SD-WAN 150Mbps and above (Starlink peak)</p>
-      <p><strong>Upload Speed:</strong> Satellite (Starlink) 5-10Mbps | Fixed Wireless (Integra Pro) 50-100Mbps | Starlink SD-WAN 5-10Mbps (Starlink) / 50Mbps (4G backup)</p>
-      <p><strong>Latency:</strong> Satellite (Starlink) 25-60ms | Fixed Wireless (Integra Pro) 20-30ms | Starlink SD-WAN 20-30ms (via 4G)</p>
-      <p><strong>Weather Impact:</strong> Satellite (Starlink) High | Fixed Wireless (Integra Pro) None | Starlink SD-WAN Protected by 4G backup</p>
+      <p><strong>Upload Speed:</strong> Satellite (Starlink) 5-10Mbps | Fixed Wireless (Integra Pro) 50-100Mbps | Starlink SD-WAN 5-10Mbps (Starlink) / 50Mbps (4G/5G backup)</p>
+      <p><strong>Latency:</strong> Satellite (Starlink) 25-60ms | Fixed Wireless (Integra Pro) 20-30ms | Starlink SD-WAN 20-30ms (via 4G/5G)</p>
+      <p><strong>Weather Impact:</strong> Satellite (Starlink) High | Fixed Wireless (Integra Pro) None | Starlink SD-WAN Protected by 4G/5G backup</p>
       <p><strong>SLA Available:</strong> Satellite (Starlink) No | Fixed Wireless (Integra Pro) Yes (99.5% Enterprise) | Starlink SD-WAN Yes (via cellular component)</p>
     </div>
 

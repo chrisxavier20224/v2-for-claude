@@ -14,105 +14,134 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const mainProducts = [
   {
-    name: "Integra SD-WAN",
+    name: "Starlink SD-WAN",
     price: "80",
     period: "/month",
-    installation: "950",
-    description: "Single-site businesses needing reliable internet",
+    installation: "2,200",
+    description: "Starlink satellite + 4G/5G cellular failover, professionally installed and managed",
     features: [
-      "Up to 150Mbps bonded 4G/5G",
+      "Starlink + 4G/5G bonded connectivity",
       "Enterprise-grade SD-WAN router included",
-      "99.9% uptime SLA",
-      "Free engineer callouts",
+      "You pay Starlink direct for dish & subscription",
+      "Free engineer callouts for life",
     ],
     cta: "Check Availability",
     ctaLink: "/availability-checker",
     popular: false,
     accent: "from-blue-900/40 to-blue-800/40 border-primary/40",
+    note: null,
   },
   {
     name: "Integra Pro",
     price: "135",
     period: "/month",
-    installation: "1,500",
-    description: "Businesses needing maximum speed and reliability",
+    installation: "2,200",
+    description: "Multi-network bonding with up to 350Mbps — our most popular business solution",
     features: [
-      "Up to 400Mbps multi-network bonding",
+      "Up to 350Mbps multi-network bonding",
       "Advanced load balancing + failover",
       "Priority support",
-      "Cloud management portal",
+      "Static IP available (£10/mo)",
     ],
     cta: "Check Availability",
     ctaLink: "/availability-checker",
     popular: true,
     accent: "from-blue-600/60 to-primary/50 border-primary/60",
+    note: "Already have Starlink? Add it to your Pro setup for triple-connection resilience — same price, more redundancy.",
   },
   {
-    name: "Integra Bridge",
-    price: "250",
+    name: "Integra Ultrafast",
+    price: "195",
     period: "/month",
-    installation: "2,500",
-    description: "Multi-building estates and campus networks",
+    installation: "2,800",
+    description: "Three-network bonding for maximum speed and resilience",
     features: [
-      "Point-to-point wireless connectivity",
-      "Connect multiple buildings",
-      "Up to 1Gbps link speeds",
-      "Ideal for farms and construction",
+      "Up to 450Mbps across 3 networks",
+      "Triple-network redundancy",
+      "Priority support + SLA",
+      "Static IP available (£10/mo)",
+    ],
+    cta: "Check Availability",
+    ctaLink: "/availability-checker",
+    popular: false,
+    accent: "from-cyan-900/40 to-cyan-800/40 border-cyan-600/40",
+    note: null,
+  },
+  {
+    name: "Starlink B2B",
+    price: "300",
+    pricePrefix: "From ",
+    period: "/month",
+    installation: "1,300",
+    description: "Managed Starlink with Integra SLA — subject to data usage requirements",
+    features: [
+      "Professional Starlink installation",
+      "4G/5G cellular failover included",
+      "Integra SLA-backed service",
+      "Dedicated account management",
     ],
     cta: "Get a Quote",
     ctaLink: "/contact",
     popular: false,
     accent: "from-emerald-900/40 to-emerald-800/40 border-emerald-600/40",
+    note: null,
   },
   {
-    name: "Leased Lines",
+    name: "Enterprise",
     price: "400",
     period: "/month",
-    installation: "Site survey required",
-    description: "Data-heavy businesses and offices with 50+ users",
+    installation: "3,300",
+    description: "Up to 500Mbps bonded — for businesses that demand the best",
     features: [
-      "Dedicated fibre connection",
-      "Symmetrical upload/download",
+      "Up to 500Mbps bonded connectivity",
       "99.99% uptime SLA",
-      "Uncontended bandwidth",
+      "Dedicated account manager",
+      "Custom configuration & support",
     ],
     cta: "Get a Quote",
     ctaLink: "/contact",
     popular: false,
     accent: "from-purple-900/40 to-purple-800/40 border-purple-600/40",
+    note: null,
   },
 ];
 
 const addOns = [
   {
-    name: "Business WiFi",
-    price: "350",
-    period: "one-off",
-    description: "Or included with connectivity packages",
-  },
-  {
-    name: "CCTV Installation",
-    price: "1,500",
-    period: "one-off",
-    description: "Install, configure & support (we do not monitor)",
-  },
-  {
-    name: "Starlink Installation",
-    price: "950",
-    period: "one-off",
-    description: "Satellite internet setup for remote locations",
+    name: "Static IP",
+    price: "10",
+    period: "/month",
+    description: "Essential for CCTV, VPNs, firewalls and remote access",
   },
   {
     name: "4G/5G Backup",
-    price: "50",
-    period: "/month add-on",
-    description: "Extra resilience for critical connections",
+    price: "60",
+    period: "/month",
+    description: "Cellular backup for extra resilience on any connection",
   },
   {
-    name: "Wireless Distribution",
+    name: "VoIP",
+    price: "From 10",
+    period: "/handset/month",
+    description: "Business phone system over your Integra connection",
+  },
+  {
+    name: "Managed WiFi",
+    price: "120",
+    period: "/year",
+    description: "£95 gateway + ongoing management and support",
+  },
+  {
+    name: "Business WiFi",
     price: "Custom",
-    period: "pricing",
-    description: "Contact us for tailored solutions",
+    period: "quoted",
+    description: "Consultative — tailored to your premises and requirements",
+  },
+  {
+    name: "CCTV",
+    price: "Custom",
+    period: "quoted",
+    description: "Professional install and configuration — priced after site survey",
   },
 ];
 
@@ -120,7 +149,7 @@ const whatsIncluded = [
   { label: "All Hardware Owned by Integra", description: "No leasing charges ever" },
   { label: "Free Engineer Callouts", description: "For life — whenever you need help" },
   { label: "24/7 Monitoring & Support", description: "Your connection is watched constantly" },
-  { label: "99.9% or 99.99% SLA", description: "Backed by service credits if we fail" },
+  { label: "Uptime SLA on Every Package", description: "Backed by service credits — up to 99.99% on Enterprise" },
   { label: "Month-to-Month Terms", description: "No long contracts, cancel anytime" },
   { label: "14-Day Money Back Guarantee", description: "If you're not happy, we'll refund you" },
 ];
@@ -148,7 +177,7 @@ const faqs = [
   },
   {
     q: "Can I upgrade my package later?",
-    a: "Yes, seamlessly. Start with Integra SD-WAN, then upgrade to Integra Pro or a leased line as your business grows. We handle the migration without service disruption. No penalty for upgrading.",
+    a: "Yes, seamlessly. Start with Starlink SD-WAN, then upgrade to Integra Pro, Ultrafast, or Enterprise as your business grows. We handle the migration without service disruption. No penalty for upgrading.",
   },
 ];
 
@@ -201,7 +230,7 @@ const faqSchemaData = {
       name: "Can I upgrade my package later?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, seamlessly. Start with Integra SD-WAN, then upgrade to Integra Pro or a leased line as your business grows. We handle the migration without service disruption. No penalty for upgrading.",
+        text: "Yes, seamlessly. Start with Starlink SD-WAN, then upgrade to Integra Pro, Ultrafast, or Enterprise as your business grows. We handle the migration without service disruption. No penalty for upgrading.",
       },
     },
   ],
@@ -247,41 +276,47 @@ const Pricing = () => {
             </p>
           </AnimatedSection>
 
-          <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {mainProducts.map((product, idx) => (
               <motion.div
                 key={idx}
                 variants={fadeUp}
-                className={`rounded-2xl bg-gradient-to-br ${product.accent} border p-8 relative transition-transform hover:scale-105 duration-300`}
+                className={`rounded-2xl bg-gradient-to-br ${product.accent} border p-6 relative transition-transform hover:scale-105 duration-300 flex flex-col`}
               >
                 {product.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">{product.name}</h3>
-                <p className="text-surface-dark-muted mb-6 text-sm">{product.description}</p>
+                <h3 className="text-xl font-bold text-surface-dark-foreground mb-2">{product.name}</h3>
+                <p className="text-surface-dark-muted mb-4 text-sm">{product.description}</p>
 
-                <div className="mb-2">
-                  <div className="text-4xl font-bold text-white">
+                <div className="mb-1">
+                  <div className="text-3xl font-bold text-white">
+                    {product.pricePrefix && <span className="text-lg">{product.pricePrefix}</span>}
                     £{product.price}
-                    <span className="text-lg text-surface-dark-muted">{product.period}</span>
+                    <span className="text-sm text-surface-dark-muted">{product.period}</span>
                   </div>
                 </div>
-                <div className="text-sm text-surface-dark-muted mb-8">
-                  Installation from £{product.installation}
+                <div className="text-xs text-surface-dark-muted mb-1">+VAT</div>
+                <div className="text-sm text-surface-dark-muted mb-6">
+                  Installation from £{product.installation} +VAT
                 </div>
 
-                <ul className="text-surface-dark-muted space-y-3 mb-8">
+                <ul className="text-surface-dark-muted space-y-2 mb-6 flex-grow">
                   {product.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <Check className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Button asChild size="sm" className="w-full" variant={product.popular ? "default" : "outline"}>
+                {product.note && (
+                  <p className="text-xs text-primary/80 italic mb-4">{product.note}</p>
+                )}
+
+                <Button asChild size="sm" className="w-full mt-auto" variant={product.popular ? "default" : "outline"}>
                   <Link to={product.ctaLink}>{product.cta}</Link>
                 </Button>
               </motion.div>
@@ -330,7 +365,7 @@ const Pricing = () => {
             </p>
           </AnimatedSection>
 
-          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {addOns.map((addon, idx) => (
               <motion.div key={idx} variants={fadeUp} className="rounded-xl border border-white/10 bg-white/5 p-6 hover:bg-white/8 transition-colors">
                 <h3 className="text-lg font-semibold text-surface-dark-foreground mb-1">{addon.name}</h3>

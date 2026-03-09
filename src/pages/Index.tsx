@@ -77,13 +77,13 @@ const connectivityServices = [
   },
   {
     title: "Leased Lines",
-    description: "Dedicated fibre, symmetric speeds, guaranteed SLA. From £250/month. The gold standard for businesses that can't afford downtime.",
+    description: "Dedicated fibre, symmetric speeds, guaranteed SLA. From £400/month. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
     link: "/connectivity/leased-lines",
   },
   {
     title: "Managed SIM Services",
-    description: "From £28+VAT/month. Temporary connectivity for construction sites, events, and IoT. PSTN switch-off ready. Deploy in days.",
+    description: "Custom quoted. Temporary connectivity for construction sites, events, and IoT. PSTN switch-off ready. Deploy in days.",
     img: simImg,
     link: "/connectivity/managed-sim-services",
   },
@@ -144,7 +144,7 @@ const Index = () => {
       <SEO
         title="Business-Grade Connectivity Where You Need It — Integra Networks"
         description="We've connected 100+ rural properties with speeds up to 350Mbps in places where BT said it would take years. SD-WAN, Starlink, Leased Lines. Installed in 14 days."
-        keywords="rural broadband, SD-WAN, Starlink SD-WAN, business connectivity, leased lines, construction WiFi, 4G bonding, rural internet UK"
+        keywords="rural broadband, SD-WAN, Starlink SD-WAN, business connectivity, leased lines, construction WiFi, 4G/5G bonding, rural internet UK"
         url="/"
       />
       <StructuredData />

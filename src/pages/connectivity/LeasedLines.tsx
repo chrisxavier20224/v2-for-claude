@@ -29,7 +29,7 @@ const painPoints = [
   {
     icon: Shield,
     title: "High-Speed Fibre up to 10Gbps",
-    description: "From 100Mbps to 10Gbps, scaled to your requirements. Bespoke pricing typically ranges £500-2,000/month depending on speed and location.",
+    description: "From 100Mbps to 10Gbps, scaled to your requirements. Pricing from £400/month depending on speed and location.",
   },
 ];
 

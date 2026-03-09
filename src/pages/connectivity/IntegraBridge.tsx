@@ -37,24 +37,6 @@ const includes = [
   "24/7 Monitoring",
 ];
 
-const pricingTiers = [
-  {
-    name: "Bridge Max 500",
-    speed: "Up to 500 Mbps Down",
-    upload: "200 Mbps Up",
-    price: "250",
-    install: "£3,500",
-  },
-  {
-    name: "Bridge Pro 1000",
-    speed: "Up to 1 Gbps Down",
-    upload: "300 Mbps Up",
-    price: "800",
-    install: "£6,500",
-    popular: true,
-  },
-];
-
 const otherSolutions = [
   {
     title: "Integra SD-WAN",
@@ -254,67 +236,48 @@ const IntegraBridge = () => {
 
       <div className="border-t border-white/5" />
 
-      {/* PRICING */}
+      {/* WHAT'S INCLUDED + CTA */}
       <section className="relative bg-surface-dark py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/assets/backgrounds/datacentre-hires-bg.webp" alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Integra Bridge Pricing</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Enterprise-Grade</p>
             <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Two Simple Packages. One Promise: <span className="text-primary">Fibre-class Internet without the wait</span>
+              Fibre-class Internet <span className="text-primary">without the wait</span>
             </h2>
             <p className="text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
               Bonded Starlink + 4G/5G presented over Layer-2 from our data centre for Fibre-like stability, static IPs and no CGNAT issues. Live in ~10 days; remains as failover post-Fibre.
             </p>
           </AnimatedSection>
 
-          <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto mb-12" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {pricingTiers.map((tier) => (
-              <motion.div
-                key={tier.name}
-                variants={fadeUp}
-                className={`rounded-2xl p-8 flex flex-col text-center ${
-                  tier.popular
-                    ? 'border-2 border-primary bg-primary/10 ring-1 ring-primary/30'
-                    : 'border border-white/10 bg-white/5'
-                }`}
-              >
-                {tier.popular && (
-                  <span className="text-xs font-bold uppercase tracking-wider text-primary mb-2">Recommended</span>
-                )}
-                <h3 className="text-xl font-normal text-surface-dark-foreground mb-2">{tier.name}</h3>
-                <p className="text-sm text-surface-dark-muted mb-1">{tier.speed}</p>
-                <p className="text-sm text-surface-dark-muted mb-6">{tier.upload}</p>
-                <p className="text-4xl font-normal text-surface-dark-foreground mb-1">
-                  £{tier.price}<span className="text-base font-normal text-surface-dark-muted"> / pm</span>
-                </p>
-                <div className="border-t border-white/10 my-6" />
-                <p className="text-sm text-surface-dark-muted mb-6">
-                  Installation cost: <span className="font-semibold text-surface-dark-foreground">{tier.install}</span>
-                </p>
-                <Button asChild className="mt-auto">
-                  <Link to="/contact">Get Started</Link>
-                </Button>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Both packages include */}
           <AnimatedSection>
-            <div className="max-w-xl mx-auto">
-              <h3 className="text-lg font-normal text-surface-dark-foreground mb-4 text-center">Both packages include:</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {includes.map((item) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <CircleCheckBig className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-surface-dark-foreground">{item}</span>
-                  </div>
-                ))}
+            <div className="max-w-2xl mx-auto">
+              <div className="rounded-2xl border-2 border-primary bg-primary/10 ring-1 ring-primary/30 p-8 text-center mb-8">
+                <h3 className="text-xl font-normal text-surface-dark-foreground mb-4">Every Integra Bridge deployment includes:</h3>
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {includes.map((item) => (
+                    <div key={item} className="flex items-center gap-2 justify-center">
+                      <CircleCheckBig className="h-5 w-5 text-primary flex-shrink-0" />
+                      <span className="text-sm text-surface-dark-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-surface-dark-muted text-sm mb-6">
+                  Integra Bridge is a premium wholesale solution. Pricing is tailored to each deployment based on site requirements, data usage, and contract terms.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button asChild size="lg">
+                    <Link to="/contact">Book a Meeting <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  </Button>
+                  <p className="text-surface-dark-muted text-sm">
+                    Or call <a href="tel:02033887111" className="text-primary font-semibold hover:underline">0203 388 7111</a>
+                  </p>
+                </div>
               </div>
-              <p className="text-xs text-surface-dark-muted/60 text-center mt-8">
-                <strong>Contract:</strong> 39-month effective term — 3 months for Fibre install + 36-month fixed from Fibre handover. Bridge then stays active as permanent failover.
+              <p className="text-xs text-surface-dark-muted/60 text-center">
+                <strong>Typical contract:</strong> 39-month effective term — 3 months for Fibre install + 36-month fixed from Fibre handover. Bridge then stays active as permanent failover.
               </p>
             </div>
           </AnimatedSection>

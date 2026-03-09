@@ -130,17 +130,17 @@ const StarlinkUploadSpeed = () => (
     <h3>How it works:</h3>
     <ul>
       <li>Downloads route through Starlink (fast)</li>
-      <li>Uploads route through 4G (faster than Starlink's upload)</li>
-      <li>If Starlink drops, everything switches to 4G</li>
+      <li>Uploads route through 4G/5G (faster than Starlink's upload)</li>
+      <li>If Starlink drops, everything switches to 4G/5G</li>
     </ul>
 
     <p><strong>Result:</strong> You get Starlink's download speed and cellular's upload speed and reliability.</p>
 
-    <p><strong>Example:</strong> 150Mbps down (Starlink) and 100Mbps up (4G) and failover.</p>
+    <p><strong>Example:</strong> 150Mbps down (Starlink) and 100Mbps up (4G/5G) and failover.</p>
 
     <p><strong>Cost:</strong> £80/month added to Starlink.</p>
 
-    <p><strong>The Catch:</strong> You need decent 4G coverage. If cellular is weak at your location, the upload boost doesn't help.</p>
+    <p><strong>The Catch:</strong> You need decent 4G/5G coverage. If cellular is weak at your location, the upload boost doesn't help.</p>
 
     <h2>Real Example: Farm With CCTV</h2>
 
@@ -153,7 +153,7 @@ const StarlinkUploadSpeed = () => (
     <h3>Result:</h3>
     <ul>
       <li>Download speed: unchanged (still got Starlink's 120Mbps for general browsing)</li>
-      <li>Upload speed: 80Mbps via 4G cellular</li>
+      <li>Upload speed: 80Mbps via 4G/5G cellular</li>
       <li>CCTV: Now 4 cameras streaming simultaneously</li>
       <li>Failover: If Starlink dropped, video calls switched to cellular. Farm staff never noticed.</li>
     </ul>

@@ -26,7 +26,7 @@ const painPoints = [
   },
   {
     question: "Paying thousands for Openreach construction?",
-    answer: "We offer flat-rate installation from £1,700 with no hidden costs. No excess construction charges, no wayleave delays.",
+    answer: "We offer flat-rate installation from £2,200 with no hidden costs. No excess construction charges, no wayleave delays.",
   },
   {
     question: "Can't afford internet outages?",
@@ -74,7 +74,7 @@ const features = [
     icon: Globe,
     eyebrow: "Seamless IP Integration",
     title: "Static IP for CCTV, VPN & More",
-    description: "Static IPs available on all packages — included free on Business tier and above, or just £5/month on Lite and Homeworker tiers. Perfect for CCTV, VPN, and remote access.",
+    description: "Static IPs available from £10/month on any tier. Perfect for CCTV, VPN, firewalls, and remote access.",
     img: null,
     reverse: false,
   },
@@ -90,11 +90,11 @@ const testimonials = [
 ];
 
 const pricingTiers = [
-  { name: "Lite", speed: "Up to 70Mbps", price: "99", staticIp: "Static IP £5pm", install: "Install Cost from £1,700", features: [] },
-  { name: "Homeworker", speed: "Up to 250Mbps", price: "110", staticIp: "Static IP £5pm", install: "Install Cost from £2,200", features: [], popular: true },
-  { name: "Business", speed: "Up to 300Mbps", price: "120", staticIp: "Includes Static IP", install: "Install Cost from £2,450", features: ["Diversity Mode for card payments"] },
-  { name: "Ultrafast", speed: "Up to 400Mbps", price: "160", staticIp: "Includes Static IP", install: "Install Cost from £2,900", features: ["Diversity Mode for card payments"] },
-  { name: "Enterprise", speed: "Up to 500Mbps", price: "400", staticIp: "Includes Static IP", install: "Install Cost from £3,300", features: ["Diversity Mode for card payments"] },
+  { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
+  { name: "Integra Pro", speed: "Up to 350Mbps", price: "135", staticIp: "Static IP £10/month", install: "£2,200", features: ["Multi-network bonding", "Priority support"], popular: true },
+  { name: "Integra Ultrafast", speed: "Up to 450Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },
+  { name: "Starlink B2B", speed: "Variable + Integra SLA", price: "300", pricePrefix: "From ", staticIp: "Static IP £10/month", install: "£1,300", features: ["Managed Starlink with SLA", "Subject to data usage"] },
+  { name: "Enterprise", speed: "Up to 500Mbps", price: "400", staticIp: "Static IP £10/month", install: "£3,300", features: ["99.99% uptime SLA", "Dedicated account manager"] },
 ];
 
 const faqs = [
@@ -102,8 +102,8 @@ const faqs = [
   { q: "How can I determine the speed you can offer at my property?", a: "Use our free Availability Checker tool or get in touch with our team. We'll assess your location and provide an estimated speed range." },
   { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a site survey." },
   { q: "Does Integra offer unlimited data?", a: "Yes, all Integra SD-WAN packages include unlimited data with no usage caps or throttling." },
-  { q: "How can Integra help ensure consistent card payment terminal performance in rural locations?", a: "Our Business tier and above include Diversity Mode, which provides a dedicated failover connection specifically for card payment terminals." },
-  { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all packages — included free on Business tier and above, or just £5/month on Lite and Homeworker tiers." },
+  { q: "How can Integra ensure consistent card payment terminal performance in rural locations?", a: "Our Integra Pro and Ultrafast tiers include automatic failover, which provides dedicated redundancy specifically for point-of-sale systems and card payment terminals." },
+  { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers for £10/month. Essential for CCTV, VPNs, firewalls, and remote access." },
   { q: "Will Integra's service cover my entire property, even if the walls are thick?", a: "Yes. We include WiFi mesh systems and can design custom wireless networks to ensure full coverage across your property." },
   { q: "Do you provide CCTV services?", a: "We install and support CCTV systems — we don't monitor them. Our CCTV service includes professional installation, cloud remote access via Integra Cloud, and full technical support." },
 ];
@@ -151,7 +151,7 @@ const sdwanServiceSchema = {
     name: "Integra Networks",
     url: "https://integra-networks.co.uk",
   },
-  description: "Bonded 4G/5G connectivity delivering fibre-like speeds up to 400Mbps without requiring fixed fibre infrastructure. Installed in under 14 days with 99.5% uptime SLA.",
+  description: "Bonded 4G/5G connectivity delivering fibre-like speeds up to 500Mbps without requiring fixed fibre infrastructure. Installed in under 14 days with 99.5% uptime SLA.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -162,7 +162,7 @@ const sdwanServiceSchema = {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
     offerCount: "5",
-    lowPrice: "99",
+    lowPrice: "80",
     highPrice: "400",
   },
 };
@@ -199,7 +199,7 @@ const IntegraSDWAN = () => {
     <PageLayout>
       <SEO
         title="Integra SD-WAN — High-Speed Internet Without Fibre"
-        description="Fast internet without waiting for Fibre. Bonded 4G/5G, installed in 14 days, from £99/month. 99.5% SLA. No fibre needed."
+        description="Fast internet without waiting for Fibre. Bonded 4G/5G, installed in 14 days, from £80/month. 99.5% SLA. No fibre needed."
         keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to fibre, business connectivity, fast broadband"
         url="/connectivity/integra-sdwan"
       />
@@ -336,33 +336,36 @@ const IntegraSDWAN = () => {
               Choose the speed and redundancy that fits your budget. All plans include UK-based support and 99.5% SLA.
             </p>
           </AnimatedSection>
-          <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {pricingTiers.map((tier) => (
               <motion.div
                 key={tier.name}
                 variants={fadeUp}
-                className={`rounded-xl p-8 border transition-all ${
+                className={`rounded-xl p-6 border transition-all ${
                   tier.popular
                     ? "border-primary bg-primary/5 ring-2 ring-primary/30"
                     : "border-border bg-card hover:border-primary/50"
                 }`}
               >
-                <h3 className="text-heading-3 text-foreground mb-2">{tier.name}</h3>
-                <p className="text-sm text-muted-foreground mb-6">{tier.speed}</p>
-                <div className="mb-6">
-                  <span className="text-display-sm font-bold text-foreground">£{tier.price}</span>
+                <h3 className="text-lg font-bold text-foreground mb-2">{tier.name}</h3>
+                <p className="text-sm text-muted-foreground mb-4">{tier.speed}</p>
+                <div className="mb-1">
+                  <span className="text-3xl font-bold text-foreground">
+                    {tier.pricePrefix && <span className="text-lg">{tier.pricePrefix}</span>}
+                    £{tier.price}
+                  </span>
                   <span className="text-muted-foreground text-sm">/month</span>
                 </div>
-                <div className="space-y-3 mb-8">
+                <p className="text-xs text-muted-foreground mb-4">+VAT</p>
+                <div className="space-y-2 mb-6">
                   <p className="text-xs text-muted-foreground font-medium">{tier.staticIp}</p>
-                  <p className="text-xs text-muted-foreground font-medium">{tier.install}</p>
+                  <p className="text-xs text-muted-foreground font-medium">Installation: {tier.install} +VAT</p>
                   {tier.features.map((feature, i) => (
                     <p key={i} className="text-xs text-muted-foreground font-medium">
                       {feature}
                     </p>
                   ))}
                 </div>
-                <p className="text-xs font-semibold text-surface-dark-foreground mb-4">{tier.install}</p>
                 <Button asChild size="sm" variant={tier.popular ? "default" : "outline"} className={tier.popular ? "" : "border-border text-foreground hover:bg-white/5"}>
                   <Link to="/availability-checker">Check Availability</Link>
                 </Button>
@@ -371,13 +374,13 @@ const IntegraSDWAN = () => {
           </motion.div>
 
           <div className="text-center mt-8">
-            <p className="text-foreground-muted text-sm mb-4">Unsure what option is right for you?</p>
+            <p className="text-muted-foreground text-sm mb-4">Unsure what option is right for you?</p>
             <Button asChild variant="outline">
               <Link to="/contact">Speak to our team</Link>
             </Button>
           </div>
-          <p className="text-xs text-foreground-muted/60 text-center mt-6">
-            Installation costs can vary subject to the property's size and the WiFi network requirements.
+          <p className="text-xs text-muted-foreground/60 text-center mt-6">
+            All prices exclude VAT. Installation costs can vary subject to the property's size and WiFi network requirements.
           </p>
         </div>
       </section>

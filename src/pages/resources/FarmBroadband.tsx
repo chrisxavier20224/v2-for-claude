@@ -302,7 +302,7 @@ const FarmBroadband = () => {
                   <li>Farm shop: WiFi from farmhouse (stable, password protected)</li>
                   <li>Milking parlour: P2P radio link to remote shed (30Mbps)</li>
                   <li>Grazing shed: Second P2P link (30Mbps)</li>
-                  <li>Backup: 4G cellular (100Mbps) if main connection drops</li>
+                  <li>Backup: 4G/5G cellular (100Mbps) if main connection drops</li>
                 </ul>
               </div>
 
