@@ -230,8 +230,8 @@ const FarmBroadband = () => {
       <section className="relative py-32 md:py-44 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&q=80"
-            alt="Modern farm with technology"
+            src="https://images.unsplash.com/photo-1595429035839-c99c298ffdde?w=1920&q=80"
+            alt="British countryside farmland"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -286,8 +286,8 @@ const FarmBroadband = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&q=80"
-                  alt="Farm buildings with connectivity equipment"
+                  src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=900&q=80"
+                  alt="British farm buildings and barns"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -389,8 +389,8 @@ const FarmBroadband = () => {
       <section className="relative py-28 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?w=1920&q=80"
-            alt="Cattle on a modern farm"
+            src="https://images.unsplash.com/photo-1516367971920-2a99e5e4a955?w=1920&q=80"
+            alt="Cattle grazing on British farmland"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -431,8 +431,8 @@ const FarmBroadband = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&q=80"
-                  alt="Farm outbuildings and barns"
+                  src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?w=900&q=80"
+                  alt="Stone farm outbuildings in rural Britain"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -532,8 +532,8 @@ const FarmBroadband = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <img
-                src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&q=80"
-                alt="Farm technology and equipment"
+                src="https://images.unsplash.com/photo-1530836176759-510f58baebf4?w=1200&q=80"
+                alt="Rolling green British countryside fields"
                 className="w-full h-auto object-cover aspect-video"
                 loading="lazy"
               />
