@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Truck, FileText, Zap, CircleCheckBig, ArrowLeft, Shield, ArrowRight, Wifi, Camera, Monitor } from "lucide-react";
+import { Truck, FileText, Zap, CircleCheckBig, ArrowLeft, Shield, ArrowRight, Wifi, Camera } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -73,12 +73,6 @@ const relatedServices = [
     description: "Remote site surveillance with static IP access.",
     href: "/connectivity/cctv",
     icon: Camera,
-  },
-  {
-    title: "Pricing",
-    description: "View our transparent pricing and flexible terms.",
-    href: "/pricing",
-    icon: Monitor,
   },
 ];
 

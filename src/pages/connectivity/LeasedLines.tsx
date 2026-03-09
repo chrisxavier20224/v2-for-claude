@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap, Shield, Network, ArrowLeft, ArrowRight, Wifi, Radio, Monitor, Phone } from "lucide-react";
+import { Zap, Shield, Network, ArrowLeft, ArrowRight, Wifi, Radio, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -62,12 +62,6 @@ const relatedServices = [
     description: "Professional WiFi networks to complement your leased line infrastructure.",
     href: "/connectivity/business-wifi",
     icon: Wifi,
-  },
-  {
-    title: "Pricing",
-    description: "View our transparent pricing and service tiers.",
-    href: "/pricing",
-    icon: Monitor,
   },
 ];
 

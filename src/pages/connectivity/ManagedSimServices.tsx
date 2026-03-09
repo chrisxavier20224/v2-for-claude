@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Rocket, PiggyBank, Store, ArrowLeft, ArrowRight, Eye, Phone, Smartphone, Zap, Building2, TrendingUp } from "lucide-react";
+import { Rocket, PiggyBank, Store, ArrowLeft, ArrowRight, Eye, Phone, Smartphone, Zap, Building2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -54,12 +54,6 @@ const relatedServices = [
     title: "SoGEA Broadband",
     description: "Fibre-based connectivity as an alternative to managed SIM.",
     href: "/connectivity/sogea",
-  },
-  {
-    icon: TrendingUp,
-    title: "Pricing",
-    description: "Transparent costs and flexible payment options.",
-    href: "/pricing",
   },
 ];
 

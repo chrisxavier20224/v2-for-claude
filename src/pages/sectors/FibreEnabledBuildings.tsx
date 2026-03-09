@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Building2, Zap, Network, Wifi, CircleCheckBig, ArrowLeft, ArrowRight, Radio, Monitor } from "lucide-react";
+import { Building2, Zap, Network, Wifi, CircleCheckBig, ArrowLeft, ArrowRight, Radio } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -80,12 +80,6 @@ const relatedServices = [
     description: "Dedicated fibre circuits for high-demand users.",
     href: "/connectivity/leased-lines",
     icon: Network,
-  },
-  {
-    title: "Pricing",
-    description: "View our transparent pricing and service tiers.",
-    href: "/pricing",
-    icon: Monitor,
   },
 ];
 

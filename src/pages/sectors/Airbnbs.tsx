@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, WifiOff, Star, CircleCheckBig, ArrowLeft, Radio, MonitorPlay, ArrowRight, Network, Monitor } from "lucide-react";
+import { Wifi, WifiOff, Star, CircleCheckBig, ArrowLeft, Radio, MonitorPlay, ArrowRight, Network } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -74,12 +74,6 @@ const relatedServices = [
     description: "Satellite internet for properties without cellular coverage.",
     href: "/connectivity/starlink-installation",
     icon: Radio,
-  },
-  {
-    title: "Pricing",
-    description: "View our transparent pricing and service tiers.",
-    href: "/pricing",
-    icon: Monitor,
   },
 ];
 

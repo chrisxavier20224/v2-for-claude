@@ -64,12 +64,6 @@ const relatedServices = [
     description: "Connectivity solutions designed for remote workers.",
     href: "/sectors/homeworkers",
   },
-  {
-    icon: Smartphone,
-    title: "4G/5G Backup",
-    description: "Reliable mobile backup connectivity.",
-    href: "/connectivity/4g-5g-backup",
-  },
 ];
 
 const HomeWifi = () => {

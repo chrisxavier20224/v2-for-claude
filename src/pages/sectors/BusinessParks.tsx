@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PoundSterling, Navigation, WifiOff, CircleCheckBig, ArrowLeft, ArrowRight, Network, Building2, Wifi, Radio, Monitor } from "lucide-react";
+import { PoundSterling, Navigation, WifiOff, CircleCheckBig, ArrowLeft, ArrowRight, Network, Building2, Wifi, Radio } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -73,12 +73,6 @@ const relatedServices = [
     description: "Professional WiFi for common areas and units.",
     href: "/connectivity/business-wifi",
     icon: Wifi,
-  },
-  {
-    title: "Pricing",
-    description: "View our transparent pricing and service tiers.",
-    href: "/pricing",
-    icon: Monitor,
   },
 ];
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Users, Shield, ArrowLeft, ArrowRight, Monitor, Headphones, Wifi, Zap, TrendingUp } from "lucide-react";
+import { Phone, Users, Shield, ArrowLeft, ArrowRight, Monitor, Headphones, Wifi, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -59,12 +59,6 @@ const relatedServices = [
     title: "Integra SD-WAN",
     description: "Secure, intelligent networking for organisations.",
     href: "/connectivity/integra-sd-wan",
-  },
-  {
-    icon: TrendingUp,
-    title: "Pricing",
-    description: "Transparent costs and flexible payment options.",
-    href: "/pricing",
   },
 ];
 

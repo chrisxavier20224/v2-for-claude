@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Clock, Shield, Zap, Server, CircleCheckBig, Satellite, Radio, Network, Wifi, Monitor } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Shield, Zap, Server, CircleCheckBig, Satellite, Radio, Network, Wifi } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -73,12 +73,6 @@ const relatedServices = [
     title: "Leased Lines",
     description: "Permanent dedicated fibre when Bridge transitions to failover.",
     href: "/connectivity/leased-lines",
-    icon: Monitor,
-  },
-  {
-    title: "Business WiFi",
-    description: "Extend your Bridge connection with professional WiFi.",
-    href: "/connectivity/business-wifi",
     icon: Wifi,
   },
 ];

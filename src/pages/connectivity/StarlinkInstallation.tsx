@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Satellite, Settings, Globe, ArrowLeft, ArrowRight, CircleCheckBig, Network, Wifi, Monitor } from "lucide-react";
+import { Satellite, Settings, Globe, ArrowLeft, ArrowRight, CircleCheckBig, Network, Wifi } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -40,12 +40,6 @@ const relatedServices = [
     description: "Professional WiFi to extend your Starlink connection throughout your location.",
     href: "/connectivity/business-wifi",
     icon: Wifi,
-  },
-  {
-    title: "Pricing",
-    description: "View our service tiers and add-on costs.",
-    href: "/pricing",
-    icon: Monitor,
   },
 ];
 

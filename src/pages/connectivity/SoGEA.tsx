@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Globe, PiggyBank, Clock, ArrowLeft, ArrowRight, Phone, Wifi, Zap, TrendingUp, Shield, AlertTriangle } from "lucide-react";
+import { Globe, PiggyBank, Clock, ArrowLeft, ArrowRight, Phone, Wifi, Zap, Shield, AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -73,12 +73,6 @@ const relatedServices = [
     title: "4G/5G Backup",
     description: "Cellular failover if your SoGEA line drops.",
     href: "/connectivity/4g-5g-backup",
-  },
-  {
-    icon: TrendingUp,
-    title: "Pricing",
-    description: "Transparent costs and flexible payment options.",
-    href: "/pricing",
   },
 ];
 

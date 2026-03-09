@@ -126,18 +126,6 @@ const relatedServices = [
     icon: Wifi,
   },
   {
-    title: "Starlink Installation",
-    description: "Satellite internet with quick deployment for rural areas without cellular coverage.",
-    href: "/connectivity/starlink-installation",
-    icon: Radio,
-  },
-  {
-    title: "Managed SIM Services",
-    description: "Bonded cellular backup and primary connectivity with managed monitoring.",
-    href: "/connectivity/managed-sim-services",
-    icon: Monitor,
-  },
-  {
     title: "Unified Communications",
     description: "Integrated voice, video, and messaging over your SD-WAN connectivity.",
     href: "/connectivity/unified-communications",

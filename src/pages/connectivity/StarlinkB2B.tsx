@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Satellite, CheckCircle2, Shield, Radio, Zap, TrendingUp, AlertCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { Satellite, CheckCircle2, Shield, Radio, Zap, AlertCircle, ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -81,12 +81,6 @@ const relatedServices = [
     icon: Shield,
     title: "Enterprise Connectivity",
     description: "Leased lines, business WiFi, and mission-critical links.",
-    href: "/pricing",
-  },
-  {
-    icon: TrendingUp,
-    title: "Pricing",
-    description: "Transparent costs and flexible payment options.",
     href: "/pricing",
   },
   {

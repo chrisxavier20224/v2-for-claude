@@ -35,12 +35,6 @@ const relatedServices = [
     href: "/connectivity/integra-sdwan",
     icon: Network,
   },
-  {
-    title: "Pricing",
-    description: "View our service tiers and installation costs.",
-    href: "/pricing",
-    icon: Monitor,
-  },
 ];
 
 const painPoints = [
