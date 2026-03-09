@@ -33,7 +33,7 @@ const WBPowerServices = () => {
     <PageLayout>
       <SEO
         title="WB Power Services Case Study — Integra Networks"
-        description="WB Power Services got 350Mbps+ connectivity with strong upload speeds across depots nationwide. Avoided six-figure BT installation charges."
+        description="WB Power Services avoided over £50K in BT excess construction charges by choosing Integra SD-WAN for their Chorley depot. 350Mbps+ with strong uploads."
         keywords="case study, WB Power Services, SD-WAN, connectivity, leased lines, CCTV, WiFi, Integra Networks"
         url="/customers/wb-power-services"
       />
@@ -56,9 +56,9 @@ const WBPowerServices = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Dodging the £50K Bill: How WB Power Got Nationwide Connectivity</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Dodging the £50K Bill: How WB Power Got Connected</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              BT quoted over £50K to install a leased line. WB Power got 350Mbps+ connectivity nationwide from Integra in days. No massive bills. No waiting.
+              BT quoted over £50K in excess construction charges for a leased line at Chorley. Integra delivered 350Mbps+ via SD-WAN in days — and connected the rest of their depots with leased lines, WiFi, and CCTV.
             </p>
           </AnimatedSection>
         </div>
@@ -112,7 +112,7 @@ const WBPowerServices = () => {
               What They Needed: Fast Upload Speeds and No Massive Bills
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              WB Power tried BT. BT quoted over £50K in excess construction charges to run a leased line. Unaffordable. And what if they relocated in two years? That money vanishes. They needed connectivity that was fast, affordable, and flexible. Project managers needed to upload large files instantly. Connectivity had to support their operations across multiple depots nationwide.
+              WB Power tried BT for the Chorley depot. BT quoted over £50K in excess construction charges to run a leased line. Unaffordable. And what if they relocated in two years? That money vanishes. They needed connectivity that was fast, affordable, and flexible — particularly for project managers uploading large files throughout the day.
             </p>
           </AnimatedSection>
 
@@ -155,13 +155,13 @@ const WBPowerServices = () => {
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">
-              The Solution: Multi 4G/5G SD-WAN Nationwide
+              The Solution: SD-WAN at Chorley, Leased Lines Everywhere Else
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra installed bonded 4G/5G connectivity from the roof of the Chorley depot, giving line of sight to multiple mobile towers. 350Mbps+ download with strong upload speeds—perfect for the large files project managers push throughout the day.
+              At Chorley, where excess construction charges made fibre unviable, Integra installed bonded 4G/5G SD-WAN from the depot roof — giving line of sight to multiple mobile towers. The result: 350Mbps+ download with strong upload speeds, perfect for the large files project managers push throughout the day.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              But that's just the depot. Integra also deployed leased lines, CCTV systems, and WiFi networks across WB Power's other depots nationwide. Complete coverage. One vendor. Scalable. That's what makes the real difference.
+              For WB Power's other depots where fibre was available, Integra deployed leased lines alongside CCTV systems and WiFi networks. Different solution for each site, one vendor managing everything. That's what makes the real difference — the right technology in the right place, without overpaying.
             </p>
           </AnimatedSection>
         </div>

@@ -131,7 +131,7 @@ const SDWanForSmallBusiness = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&q=80"
+                  src="https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=900&q=80"
                   alt="Network router and connectivity equipment"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -146,7 +146,7 @@ const SDWanForSmallBusiness = () => {
       <section className="relative py-28 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1595429035839-c99c298ffdde?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=80"
             alt="British rural landscape with farmland"
             className="w-full h-full object-cover"
             loading="lazy"
@@ -232,7 +232,7 @@ const SDWanForSmallBusiness = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <img
-              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
               alt="Modern British office workspace"
               className="w-full h-auto object-cover aspect-[21/9]"
               loading="lazy"
@@ -252,7 +252,7 @@ const SDWanForSmallBusiness = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80"
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80"
                   alt="Small business team in a British office"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -350,7 +350,7 @@ const SDWanForSmallBusiness = () => {
       <section className="relative py-28 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1683822119828-8dd8c90a63eb?w=1920&q=80"
             alt="UK construction site with cranes"
             className="w-full h-full object-cover"
             loading="lazy"

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Sim, Eye, Radio, PiggyBank, Smartphone, Building2, Shield, Thermometer, CreditCard, DoorOpen, Camera, Truck, Gauge, Lightbulb, MonitorSmartphone } from "lucide-react";
+import { ScanLine, Eye, Radio, PiggyBank, Smartphone, Building2, Shield, Thermometer, CreditCard, DoorOpen, Camera, Truck, Gauge, Lightbulb, MonitorSmartphone } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -25,7 +25,7 @@ const useCases = [
   { icon: Truck, title: "Fleet & Asset Tracking", description: "GPS trackers on vehicles, trailers, plant equipment, and high-value assets reporting location in real time." },
   { icon: Lightbulb, title: "Smart Building Controls", description: "HVAC systems, lighting controls, BMS panels, and occupancy sensors connected for building automation." },
   { icon: Radio, title: "Vending & Dispensing", description: "Vending machines, EV chargers, and unattended retail devices reporting stock levels and transactions." },
-  { icon: Sim, title: "Telecare & Health Devices", description: "Personal alarms, fall detectors, and remote health monitors for care homes and assisted living." },
+  { icon: ScanLine, title: "Telecare & Health Devices", description: "Personal alarms, fall detectors, and remote health monitors for care homes and assisted living." },
 ];
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
@@ -154,7 +154,7 @@ const ManagedSimServices = () => {
                 {["Multinet SIM across O2, Vodafone, EE & Three", "3-day line test monitoring on deployment", "Constant GSM connectivity monitoring", "Technical and on-site support included", "Pooled data options across your estate"].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Sim className="h-3 w-3 text-primary" />
+                      <ScanLine className="h-3 w-3 text-primary" />
                     </div>
                     <span className="text-sm text-surface-dark-muted">{item}</span>
                   </div>

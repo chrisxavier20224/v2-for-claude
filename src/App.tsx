@@ -106,6 +106,9 @@ const ConstructionWifiLanding = lazy(() => import("./pages/landing/ConstructionW
 const HomeworkerBroadbandLanding = lazy(() => import("./pages/landing/HomeworkerBroadband"));
 const RuralBroadbandLanding = lazy(() => import("./pages/landing/RuralBroadband"));
 const StarlinkSdwanLanding = lazy(() => import("./pages/landing/StarlinkSdwan"));
+const IntegraSDWanLanding = lazy(() => import("./pages/landing/IntegraSDWan"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
+const CheckingOutYourProperty = lazy(() => import("./pages/CheckingOutYourProperty"));
 
 const queryClient = new QueryClient();
 
@@ -210,8 +213,10 @@ const App = () => (
               {/* Proposal Pages */}
               <Route path="/proposal/:id" element={<ProposalDetail />} />
 
-              {/* Redirect old routes to new paths */}
-              <Route path="/integra-sd-wan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />
+              {/* Landing pages matching old Framer URLs */}
+              <Route path="/integra-sd-wan" element={<IntegraSDWanLanding />} />
+              <Route path="/thankyou" element={<ThankYou />} />
+              <Route path="/checking-out-your-property" element={<CheckingOutYourProperty />} />
               <Route path="/integra-bridge" element={<Navigate to="/connectivity/integra-bridge" replace />} />
 
               <Route path="/resources" element={<Resources />} />

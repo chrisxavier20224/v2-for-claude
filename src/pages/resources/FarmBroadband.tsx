@@ -230,7 +230,7 @@ const FarmBroadband = () => {
       <section className="relative py-32 md:py-44 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1595429035839-c99c298ffdde?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1638057733961-591fa542f718?w=1920&q=80"
             alt="British countryside farmland"
             className="w-full h-full object-cover"
             loading="lazy"
@@ -286,7 +286,7 @@ const FarmBroadband = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=900&q=80"
+                  src="https://images.unsplash.com/photo-1747691362744-dd6db051a5e9?w=900&q=80"
                   alt="British farm buildings and barns"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -389,7 +389,7 @@ const FarmBroadband = () => {
       <section className="relative py-28 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1516367971920-2a99e5e4a955?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1638215640640-c51055587778?w=1920&q=80"
             alt="Cattle grazing on British farmland"
             className="w-full h-full object-cover"
             loading="lazy"
@@ -431,7 +431,7 @@ const FarmBroadband = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?w=900&q=80"
+                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80"
                   alt="Stone farm outbuildings in rural Britain"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -532,7 +532,7 @@ const FarmBroadband = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <img
-                src="https://images.unsplash.com/photo-1530836176759-510f58baebf4?w=1200&q=80"
+                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1200&q=80"
                 alt="Rolling green British countryside fields"
                 className="w-full h-auto object-cover aspect-video"
                 loading="lazy"

@@ -36,8 +36,8 @@ const stories = [
   },
   {
     company: "WB Power Services",
-    title: "Dodging the £50K Bill: Nationwide Connectivity",
-    description: "Facing a six-figure excess construction charge for fibre, WB Power switched to Integra SD-WAN and saved tens of thousands.",
+    title: "Dodging the £50K Bill: SD-WAN at Chorley Depot",
+    description: "Facing over £50K in excess construction charges for fibre at their Chorley depot, WB Power chose Integra SD-WAN — and Integra connected the rest of their sites too.",
     image: wbPowerHero,
     path: "/customers/wb-power-services",
   },
