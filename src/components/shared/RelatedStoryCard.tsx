@@ -13,6 +13,7 @@ import mcgeeLogo from "@/assets/case-studies/mcgee-logo.png";
 import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.jpg";
 import littleQuarryLogo from "@/assets/case-studies/little-quarry-glamping-logo.png";
 import carbeeHero from "@/assets/case-studies/carbee-hero.jpg";
+import carbeeLogo from "@/assets/case-studies/carbee-logo-white.png";
 import rhycHero from "@/assets/case-studies/rhyc-hero.jpg";
 import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo.png";
 import ukharvestHero from "@/assets/case-studies/ukharvest-hero.jpg";
@@ -74,6 +75,7 @@ const storyMap: Record<string, StoryData> = {
     company: "Carbee Ltd",
     strapline: "Revving Up Connectivity: CarBee's Journey",
     image: carbeeHero,
+    logo: carbeeLogo,
     path: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet",
   },
   "royal-harwich": {

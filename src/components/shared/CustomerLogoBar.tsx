@@ -11,6 +11,7 @@ import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo.png";
 import thinkingAnglersLogo from "@/assets/case-studies/thinking-anglers-logo.png";
 import littleQuarryLogo from "@/assets/case-studies/little-quarry-glamping-logo.png";
 import wsraLogo from "@/assets/case-studies/wsra-steam-rally-logo.png";
+import carbeeLogo from "@/assets/case-studies/carbee-logo.png";
 
 const customers = [
   { name: "McGee Group", link: "/customers/mcgee-construction", logo: mcgeeLogo },
@@ -24,6 +25,7 @@ const customers = [
   { name: "Thinking Anglers", link: "/customers/thinking-anglers", logo: thinkingAnglersLogo },
   { name: "Little Quarry Glamping", link: "/customers/little-quarry-glamping", logo: littleQuarryLogo },
   { name: "WSRA Steam Rally", link: "/customers/wsra-steam-rally", logo: wsraLogo },
+  { name: "Carbee", link: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet", logo: carbeeLogo },
 ];
 
 const LogoItem = ({ customer }: { customer: typeof customers[0] }) => (
