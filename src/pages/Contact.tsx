@@ -11,6 +11,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import SEO from "@/components/shared/SEO";
 import LazyIframe from "@/components/shared/LazyIframe";
+import HubSpotMeeting from "@/components/shared/HubSpotMeeting";
 import { trackEvent } from "@/components/shared/Analytics";
 
 const Contact = () => {
@@ -236,6 +237,11 @@ const Contact = () => {
       </section>
 
       {/* Customer logos — social proof */}
+      <HubSpotMeeting
+        heading="Or Skip the Form — Book a Call"
+        subtitle="Pick a time that works and we'll walk through your options live. No obligation."
+        variant="dark"
+      />
       <CustomerLogoBar />
     </PageLayout>
   );

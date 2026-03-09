@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
+import HubSpotMeeting from "@/components/shared/HubSpotMeeting";
 import SEO from "@/components/shared/SEO";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
@@ -138,6 +139,12 @@ const CheckingOutYourProperty = () => {
           </motion.div>
         </div>
       </section>
+
+      <HubSpotMeeting
+        heading="Or Book a Call Instead"
+        subtitle="Prefer to talk it through? Pick a time and our team will review your property with you live."
+        variant="dark"
+      />
 
       {/* Contact / CTA */}
       <section className="bg-surface-dark py-16 md:py-20 border-t border-white/5">

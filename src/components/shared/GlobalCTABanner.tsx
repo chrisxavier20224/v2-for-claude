@@ -33,7 +33,7 @@ const GlobalCTABanner = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/pricing">View Pricing</Link>
+                <a href="https://meetings.hubspot.com/chris-clapham" target="_blank" rel="noopener noreferrer">Book a Call</a>
               </Button>
             </div>
           </div>

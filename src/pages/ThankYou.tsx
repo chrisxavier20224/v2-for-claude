@@ -4,6 +4,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
+import HubSpotMeeting from "@/components/shared/HubSpotMeeting";
 import SEO from "@/components/shared/SEO";
 
 const ThankYou = () => {
@@ -103,6 +104,12 @@ const ThankYou = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      <HubSpotMeeting
+        heading="Want to Speed Things Up? Book a Call"
+        subtitle="Skip the wait — pick a time and we'll discuss your property and connectivity options live."
+        variant="dark"
+      />
     </PageLayout>
   );
 };
