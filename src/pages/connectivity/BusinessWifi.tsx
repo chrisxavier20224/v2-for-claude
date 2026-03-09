@@ -118,7 +118,7 @@ const BusinessWifi = () => {
     <PageLayout>
       <SEO
         title="Business WiFi — Professional WiFi That Works Everywhere"
-        description="Professionally designed WiFi networks from £400. Site survey, AP placement, mesh configuration. Monitored 24/7 via Integra Cloud. WiFi-as-a-Service available."
+        description="Professionally designed WiFi networks, custom-quoted to your site. Site survey, AP placement, mesh configuration. Monitored 24/7 via Integra Cloud. WiFi-as-a-Service available."
         keywords="business WiFi, commercial WiFi, public WiFi, guest WiFi, event WiFi, WiFi survey, managed WiFi"
         url="/connectivity/business-wifi"
       />
@@ -142,7 +142,7 @@ const BusinessWifi = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Professional WiFi that works everywhere.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              We design and install WiFi networks for your exact building layout. Site survey, professional-grade access points, mesh configuration — and 24/7 monitoring via Integra Cloud. From £400.
+              We design and install WiFi networks for your exact building layout. Site survey, professional-grade access points, mesh configuration — and 24/7 monitoring via Integra Cloud. Every project is custom-quoted.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
@@ -162,7 +162,7 @@ const BusinessWifi = () => {
               WiFi that scales with your business.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Home networks from £400-800. Commercial-grade from £1,500-3,000+. Enterprise custom-quoted. All professionally designed, installed, and monitored.
+              Every installation is custom-quoted based on your site survey. No generic pricing — just the right solution for your building, professionally designed, installed, and monitored.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
