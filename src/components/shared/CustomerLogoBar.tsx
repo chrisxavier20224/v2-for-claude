@@ -91,7 +91,7 @@ const CustomerLogoBar = () => {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 37.5s linear infinite;
+          animation: marquee 60s linear infinite;
           width: max-content;
         }
       `}</style>

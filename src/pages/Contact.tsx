@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Mail, Headphones, Loader2, CheckCircle, Clock, Phone, ShieldCheck, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -127,8 +126,8 @@ const Contact = () => {
             {/* Right: form card */}
             <AnimatedSection delay={0.15}>
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 md:p-10 shadow-2xl shadow-black/20">
-                <h2 className="text-lg font-semibold text-surface-dark-foreground mb-1">Send us a message</h2>
-                <p className="text-sm text-surface-dark-muted mb-6">We'll get back to you within one business day.</p>
+                <h2 className="text-lg font-semibold text-white mb-1">Send us a message</h2>
+                <p className="text-sm text-white/50 mb-6">We'll get back to you within one business day.</p>
 
                 {isSubmitted ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -142,9 +141,9 @@ const Contact = () => {
                   <form className="space-y-4" onSubmit={handleSubmit}>
                     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                       <div>
-                        <Label htmlFor="firstName" className="text-xs font-medium text-surface-dark-muted">
+                        <label htmlFor="firstName" className="block text-xs font-medium text-white/70">
                           First Name *
-                        </Label>
+                        </label>
                         <Input
                           id="firstName"
                           placeholder="First name"
@@ -154,9 +153,9 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="lastName" className="text-xs font-medium text-surface-dark-muted">
+                        <label htmlFor="lastName" className="block text-xs font-medium text-white/70">
                           Last Name
-                        </Label>
+                        </label>
                         <Input
                           id="lastName"
                           placeholder="Last name"
@@ -167,9 +166,9 @@ const Contact = () => {
                       </div>
                     </div>
                     <div>
-                      <Label htmlFor="email" className="text-xs font-medium text-surface-dark-muted">
+                      <label htmlFor="email" className="block text-xs font-medium text-white/70">
                         Work Email *
-                      </Label>
+                      </label>
                       <Input
                         id="email"
                         type="email"
@@ -180,9 +179,9 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="company" className="text-xs font-medium text-surface-dark-muted">
+                      <label htmlFor="company" className="block text-xs font-medium text-white/70">
                         Company
-                      </Label>
+                      </label>
                       <Input
                         id="company"
                         placeholder="Company name"
@@ -192,9 +191,9 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="fleetSize" className="text-xs font-medium text-surface-dark-muted">
+                      <label htmlFor="fleetSize" className="block text-xs font-medium text-white/70">
                         Phone Number
-                      </Label>
+                      </label>
                       <Input
                         id="fleetSize"
                         placeholder="Your phone number (optional)"
@@ -204,9 +203,9 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="message" className="text-xs font-medium text-surface-dark-muted">
+                      <label htmlFor="message" className="block text-xs font-medium text-white/70">
                         How can we help?
-                      </Label>
+                      </label>
                       <Textarea
                         id="message"
                         placeholder="Tell us what you need — connectivity, WiFi, infrastructure, or all of the above..."
@@ -240,32 +239,28 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Customer logos — social proof */}
-      <CustomerLogoBar />
-
-      {/* Map section */}
-      <section className="bg-surface-dark border-t border-white/10">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <AnimatedSection>
-            <div className="text-center mb-8">
-              <p className="text-sm text-surface-dark-muted">Based in London, serving businesses across the UK</p>
-            </div>
-            <div className="rounded-xl overflow-hidden border border-white/10 h-72">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.08502072393676477!3d51.52527677181819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca8e4b2e7f7%3A0x5e8e6f7d4b9b7c1a!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE%2C%20UK!5e0!3m2!1sen!2sus!4v1704537600000!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Integra Networks Office Location"
-                className="grayscale contrast-125"
-              />
-            </div>
-          </AnimatedSection>
+      {/* Map */}
+      <section className="bg-surface-dark">
+        <div className="mx-auto max-w-6xl px-6 pb-12">
+          <div className="rounded-xl overflow-hidden border border-white/10 h-64">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.08502072393676477!3d51.52527677181819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca8e4b2e7f7%3A0x5e8e6f7d4b9b7c1a!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE%2C%20UK!5e0!3m2!1sen!2sus!4v1704537600000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Integra Networks Office Location"
+              className="grayscale contrast-125"
+            />
+          </div>
+          <p className="text-xs text-surface-dark-muted/50 text-center mt-4">Based in London, serving businesses across the UK</p>
         </div>
       </section>
+
+      {/* Customer logos — social proof */}
+      <CustomerLogoBar />
     </PageLayout>
   );
 };
