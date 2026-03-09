@@ -56,9 +56,9 @@ const WBPowerServices = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Dodging the Six-Figure Bill: How WB Power Got Nationwide Connectivity</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Dodging the £50K Bill: How WB Power Got Nationwide Connectivity</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              BT quoted £250K+ to install a leased line. WB Power got 350Mbps+ connectivity nationwide from Integra in days. No massive bills. No waiting.
+              BT quoted over £50K to install a leased line. WB Power got 350Mbps+ connectivity nationwide from Integra in days. No massive bills. No waiting.
             </p>
           </AnimatedSection>
         </div>
@@ -112,7 +112,7 @@ const WBPowerServices = () => {
               What They Needed: Fast Upload Speeds and No Massive Bills
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              WB Power tried BT. BT quoted £250K+ in excess construction charges to run a leased line. Unaffordable. And what if they relocated in two years? That money vanishes. They needed connectivity that was fast, affordable, and flexible. Project managers needed to upload large files instantly. Connectivity had to support their operations across multiple depots nationwide.
+              WB Power tried BT. BT quoted over £50K in excess construction charges to run a leased line. Unaffordable. And what if they relocated in two years? That money vanishes. They needed connectivity that was fast, affordable, and flexible. Project managers needed to upload large files instantly. Connectivity had to support their operations across multiple depots nationwide.
             </p>
           </AnimatedSection>
 
@@ -140,7 +140,7 @@ const WBPowerServices = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
-              "BT wanted £250K to install a leased line. Integra gave us 350Mbps with strong upload speeds in days. It's transformed how our project managers work. And we're rolling it out across our other depots. It's not even a question."
+              "Integra's solution transformed our operations, delivering fast, reliable connectivity where others couldn't. A game-changer for us."
             </blockquote>
             <p className="text-lg font-medium text-surface-dark-foreground">
               Matt Muhl, Director, WB Power Services

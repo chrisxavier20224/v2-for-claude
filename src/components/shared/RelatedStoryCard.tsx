@@ -52,7 +52,7 @@ const storyMap: Record<string, StoryData> = {
   },
   "wb-power-services": {
     company: "WB Power Services",
-    strapline: "Dodging the Six-Figure Bill: Nationwide Connectivity",
+    strapline: "Dodging the £50K Bill: Nationwide Connectivity",
     image: wbPowerHero,
     logo: wbPowerLogo,
     path: "/customers/wb-power-services",

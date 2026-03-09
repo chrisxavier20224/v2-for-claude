@@ -36,7 +36,7 @@ const stories = [
   },
   {
     company: "WB Power Services",
-    title: "Dodging the Six-Figure Bill: Nationwide Connectivity",
+    title: "Dodging the £50K Bill: Nationwide Connectivity",
     description: "Facing a six-figure excess construction charge for fibre, WB Power switched to Integra SD-WAN and saved tens of thousands.",
     image: wbPowerHero,
     path: "/customers/wb-power-services",

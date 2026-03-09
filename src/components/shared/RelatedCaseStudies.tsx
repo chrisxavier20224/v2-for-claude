@@ -20,7 +20,7 @@ import seaconHero from "@/assets/case-studies/seacon-hero.jpg";
 const allStories = [
   { company: "Royle Farm Business Park", title: "From Farm to Fibre: Royle Farm Business Park", image: royleFarmHero, path: "/customers/royle-farm" },
   { company: "WRSA Steam Rally Festival", title: "Steam at Scale: 500Mbps for 8,000 Visitors", image: steamRallyHero, path: "/customers/steaming-ahead-with-enhanced-festival-connectivity" },
-  { company: "WB Power Services", title: "Dodging the Six-Figure Bill: Nationwide Connectivity", image: wbPowerHero, path: "/customers/wb-power-services" },
+  { company: "WB Power Services", title: "Dodging the £50K Bill: Nationwide Connectivity", image: wbPowerHero, path: "/customers/wb-power-services" },
   { company: "McGee Construction", title: "Building at Speed: 350Mbps for London's Biggest Sites", image: mcgeeHero, path: "/customers/mcgee-construction" },
   { company: "Little Quarry Glamping", title: "Luxury Pods, Real Internet: Little Quarry's Breakthrough", image: littleQuarryHero, path: "/customers/little-quarry-glamping" },
   { company: "Carbee Ltd", title: "From 0.1Mbps to 300+: Rural Car Dealer Gets High-Speed", image: carbeeHero, path: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet" },
