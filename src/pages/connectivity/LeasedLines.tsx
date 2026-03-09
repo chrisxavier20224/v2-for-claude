@@ -246,7 +246,7 @@ const LeasedLines = () => {
       </Section>
 
       {/* RELATED SERVICES */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices
         services={relatedServices}
         heading="Complementary Services"

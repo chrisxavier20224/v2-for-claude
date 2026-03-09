@@ -364,14 +364,12 @@ const Homeworkers = () => {
       <CustomerLogoBar />
 
       {/* RELATED SERVICES */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices
         services={relatedServices}
         heading="Complementary Services"
         subheading="Explore connectivity solutions and check coverage at your location."
       />
-
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
       {/* ── REVIEWS SECTION ──────────────────────────────────────────────── */}
       <section className="bg-surface-dark py-16 md:py-24">
@@ -457,36 +455,27 @@ const Homeworkers = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
-
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
-        <AnimatedSection>
-          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
               Stop apologising for your internet.
             </h2>
-            <p className="mb-8 text-lg text-white/80">
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
               Up to 350Mbps. Installed in 14 days. No fibre required. No Openreach wait.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base"
-                >
-                  <Link to="/availability-checker">Check Availability</Link>
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button asChild variant="link" className="text-white hover:text-white/80 font-medium text-base">
-                  <Link to="/contact">Get In Touch</Link>
-                </Button>
-              </motion.div>
+              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
+                <Link to="/availability-checker">Check Availability</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/contact">Get In Touch</Link>
+              </Button>
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
       </section>
     </PageLayout>
   );

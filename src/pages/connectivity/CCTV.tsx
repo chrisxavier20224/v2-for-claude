@@ -299,36 +299,38 @@ const CCTV = () => {
 
       <CustomerLogoBar />
 
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
 
       {/* RELATED CONTENT */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 0%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedContent
         stories={["seacon-group"]}
         sectors={["business-parks", "construction-sites"]}
+        dark
       />
 
       {/* CTA */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />
-      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
-        <AnimatedSection>
-          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Professional CCTV that actually works.</h2>
-            <p className="mb-8 text-lg text-white/80">Complete site survey, commercial-grade hardware, remote cloud access, and UK-based support — all included.</p>
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
+              Professional CCTV that actually works.
+            </h2>
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
+              Complete site survey, commercial-grade hardware, remote cloud access, and UK-based support — all included.
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                  <Link to="/contact">Request a Survey</Link>
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button asChild variant="link" className="text-white hover:text-white/80 font-medium text-base">
-                  <Link to="/availability-checker">Check Coverage</Link>
-                </Button>
-              </motion.div>
+              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
+                <Link to="/contact">Request a Survey</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/availability-checker">Check Coverage</Link>
+              </Button>
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
       </section>
     </PageLayout>
   );

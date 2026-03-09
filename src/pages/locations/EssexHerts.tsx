@@ -278,36 +278,30 @@ const EssexHerts = () => {
         </AnimatedSection>
       </Section>
 
+      <GradientBand fromColor="hsl(0 0% 98%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices services={relatedServices} heading="Our Solutions" subheading="Enterprise-grade connectivity tailored to your region." />
 
       {/* CTA */}
-      <GradientBand
-        fromColor="hsl(0 0% 100%)"
-        toColor="hsl(216 100% 50%)"
-      />
-      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
-        <AnimatedSection>
-          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
               Check What's Available at Your Location
             </h2>
-            <p className="text-white/70 text-lg mb-8">
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
               Send us your coordinates from Google Maps. We'll survey your site and send a detailed report within 24 hours.
             </p>
-            <motion.div
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base"
-              >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
                 <Link to="/availability-checker">Check Availability</Link>
               </Button>
-            </motion.div>
-          </div>
-        </AnimatedSection>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/contact">Get In Touch</Link>
+              </Button>
+            </div>
+          </AnimatedSection>
+        </div>
       </section>
     </PageLayout>
   );

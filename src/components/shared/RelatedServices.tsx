@@ -18,44 +18,43 @@ interface RelatedServicesProps {
   subheading?: string;
 }
 
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const },
+  },
+};
+
 const RelatedServices = ({
   services,
   heading = "Related Services",
   subheading,
 }: RelatedServicesProps) => {
-  const staggerContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 16 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const },
-    },
-  };
-
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-surface-dark">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="mb-12 text-center"
+          className="mb-12"
         >
-          <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
             {heading}
+          </p>
+          <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-4 max-w-3xl">
+            Explore what else we can do for you.
           </h2>
           {subheading && (
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-surface-dark-muted max-w-2xl">
               {subheading}
             </p>
           )}
@@ -79,8 +78,8 @@ const RelatedServices = ({
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3 }}
               >
-                <Link to={link} className="block h-full">
-                  <div className="h-full rounded-2xl border border-border bg-card hover:bg-card/80 transition-colors p-6 sm:p-8 flex flex-col">
+                <Link to={link} className="group block h-full">
+                  <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-white/20 hover:bg-white/[0.05] transition-all duration-300 p-6 sm:p-8 flex flex-col">
                     {/* Icon */}
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5 flex-shrink-0">
                       <Icon className="h-6 w-6" strokeWidth={1.5} />
@@ -95,16 +94,16 @@ const RelatedServices = ({
 
                     {/* Title & Description */}
                     <div className="flex-grow">
-                      <h3 className="text-heading-3 text-foreground mb-3 font-semibold">
+                      <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">
                         {label}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-surface-dark-muted leading-relaxed">
                         {service.description}
                       </p>
                     </div>
 
                     {/* Arrow */}
-                    <div className="flex items-center justify-between mt-6 pt-6 border-t border-border/50">
+                    <div className="flex items-center justify-between mt-6 pt-6 border-t border-white/10">
                       <span className="text-xs font-semibold uppercase tracking-widest text-primary">
                         Learn More
                       </span>

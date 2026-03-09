@@ -195,10 +195,11 @@ const ManagedSimServices = () => {
         </div>
       </Section>
 
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
 
       {/* RELATED CONTENT */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
       <RelatedContent
         sectors={["construction-sites"]}
         dark

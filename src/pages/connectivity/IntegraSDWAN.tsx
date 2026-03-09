@@ -388,7 +388,7 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
       {/* FAQ */}
       <section className="bg-background py-20 md:py-28">
@@ -432,7 +432,7 @@ const IntegraSDWAN = () => {
       </section>
 
       {/* RELATED SERVICES COMPONENT */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices
         services={relatedServices}
         heading="Complementary Services"

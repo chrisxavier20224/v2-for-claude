@@ -283,12 +283,11 @@ const SoGEA = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
 
       <RelatedServices services={relatedServices} heading="Related Services" subheading="Complete your connectivity and communications stack." />
 
       {/* CTA */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimatedSection>

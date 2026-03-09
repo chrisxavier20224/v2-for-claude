@@ -416,7 +416,7 @@ const WirelessDistribution = () => {
       </Section>
 
       {/* RELATED SERVICES */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices
         services={relatedServices}
         heading="Complementary Services"
@@ -424,7 +424,7 @@ const WirelessDistribution = () => {
       />
 
       {/* RELATED CONTENT */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
       <RelatedContent
         stories={["seacon-group"]}
         sectors={["business-parks", "construction-sites", "rural-smes"]}
@@ -432,17 +432,27 @@ const WirelessDistribution = () => {
       />
 
       {/* CTA */}
-      <Section size="large">
-        <div className="text-center">
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Connect your entire site.</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Free site survey, no obligation. We'll assess your buildings, recommend the right wireless solution, and provide a quote.</p>
-            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
-            </motion.div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
+              Connect your entire site.
+            </h2>
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
+              Free site survey, no obligation. We'll assess your buildings, recommend the right wireless solution, and provide a quote.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
+                <Link to="/contact">Get in Touch</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/availability-checker">Check Availability</Link>
+              </Button>
+            </div>
           </AnimatedSection>
         </div>
-      </Section>
+      </section>
     </PageLayout>
   );
 };
