@@ -80,7 +80,7 @@ const Contact = () => {
             {/* Left: copy + contact info */}
             <AnimatedSection>
               <EyebrowLabel>Let's Talk</EyebrowLabel>
-              <h1 className="mb-6 text-4xl md:text-5xl font-bold text-surface-dark-foreground tracking-tight leading-tight">
+              <h1 className="mb-6 text-4xl md:text-5xl font-medium text-surface-dark-foreground tracking-tight leading-tight">
                 Tell us what you need. We'll make it happen.
               </h1>
               <p className="mb-8 text-lg text-surface-dark-muted leading-relaxed">
