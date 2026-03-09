@@ -53,7 +53,6 @@ const resourceLinks = [
 const companyLinks = [
   { label: "Customer Stories", path: "/customers", icon: Building2, tagline: "See how we've helped businesses" },
   { label: "Blog", path: "/blog", icon: BookOpen, tagline: "News, guides & insights" },
-  { label: "About", path: "/about", icon: Globe, tagline: "Our story & team" },
 ];
 
 const Navbar = () => {

@@ -92,7 +92,6 @@ const SoGEA = lazy(() => import("./pages/connectivity/SoGEA"));
 const CCTV = lazy(() => import("./pages/connectivity/CCTV"));
 const WirelessDistribution = lazy(() => import("./pages/connectivity/WirelessDistribution"));
 const NetworkInfrastructure = lazy(() => import("./pages/connectivity/NetworkInfrastructure"));
-const About = lazy(() => import("./pages/About"));
 const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 
 // PPC Landing Pages
@@ -219,7 +218,6 @@ const App = () => (
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/sla" element={<SLA />} />
               <Route path="/terms-of-use" element={<TermsOfWebsiteUse />} />
-              <Route path="/about" element={<About />} />
               <Route path="/brand-guidelines" element={<BrandGuidelines />} />
               <Route path="/insights/failure-prevention-starts-long-before-alarms" element={<FailurePreventionArticle />} />
               <Route path="/insights/sustainability-efficiency-critical-infrastructure" element={<SustainabilityEfficiencyArticle />} />
