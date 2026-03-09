@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
-import integraLogoWhite from "@/assets/integra-logo-white.jpg";
+import integraLogoWhite from "@/assets/integra-logo-white.png";
 
 // Fibre alternatives — solutions when you can't get fibre
 const fibreAlternativeLinks = [

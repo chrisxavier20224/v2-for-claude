@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import integraLogo from "@/assets/integra-logo-white.jpg";
+import integraLogo from "@/assets/integra-logo-white.png";
 
 
 const connectivityLinks = [

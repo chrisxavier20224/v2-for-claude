@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 import mcgeeLogo from "@/assets/case-studies/mcgee-logo.png";
-import seaconLogo from "@/assets/case-studies/seacon-logo.jpg";
+import seaconLogo from "@/assets/case-studies/seacon-logo.png";
 import wbPowerLogo from "@/assets/case-studies/wb-power-logo.png";
 import ukHarvestLogo from "@/assets/case-studies/uk-harvest-logo.png";
 import apjEuropeanLogo from "@/assets/case-studies/apj-european-logo.png";

@@ -25,7 +25,7 @@ import aturaLogo from "@/assets/case-studies/atura-proteins-logo.png";
 import apjHero from "@/assets/case-studies/apj-hero.jpg";
 import apjLogo from "@/assets/case-studies/apj-european-logo.png";
 import seaconHero from "@/assets/case-studies/seacon-hero.jpg";
-import seaconLogo from "@/assets/case-studies/seacon-logo.jpg";
+import seaconLogo from "@/assets/case-studies/seacon-logo.png";
 
 interface StoryData {
   company: string;
