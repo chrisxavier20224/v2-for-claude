@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, Shield, CreditCard, ArrowLeft, ArrowRight, Users, Radio, ClipboardCheck, Network, Camera, Monitor } from "lucide-react";
+import { Wifi, Shield, CreditCard, ArrowLeft, ArrowRight, Users, Radio, ClipboardCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -8,7 +8,6 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
-import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/business-wifi-hero.jpg";
@@ -39,32 +38,6 @@ const painPoints = [
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
-const relatedServices = [
-  {
-    title: "Integra SD-WAN",
-    description: "Complement your WiFi with reliable backbone connectivity via 4G/5G.",
-    href: "/connectivity/integra-sdwan",
-    icon: Network,
-  },
-  {
-    title: "CCTV as a Service",
-    description: "Professional surveillance systems integrated with your network.",
-    href: "/connectivity/cctv",
-    icon: Camera,
-  },
-  {
-    title: "Wireless Distribution",
-    description: "Point-to-point wireless bridges for multi-location coverage.",
-    href: "/connectivity/wireless-distribution",
-    icon: Radio,
-  },
-  {
-    title: "Pricing",
-    description: "View our service tiers and installation costs.",
-    href: "/pricing",
-    icon: Monitor,
-  },
-];
 
 const businessWifiServiceSchema = {
   "@context": "https://schema.org",
@@ -281,32 +254,38 @@ const BusinessWifi = () => {
         </div>
       </section>
 
-      {/* RELATED SERVICES */}
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-      <RelatedServices
-        services={relatedServices}
-        heading="Complementary Services"
-        subheading="Enhance your WiFi network with connectivity, security, and distribution solutions."
-      />
-
       {/* RELATED CONTENT */}
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
       <RelatedContent
-        stories={["seacon-group"]}
-        sectors={["business-parks", "fibre-enabled-buildings"]}
+        stories={["seacon-group", "royal-harwich-yacht-club"]}
+        sectors={["business-parks", "fibre-enabled-buildings", "construction-sites"]}
       />
 
       {/* CTA */}
-      <Section size="large">
-        <div className="text-center">
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Schedule a WiFi survey.</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Free, no-obligation site survey. We'll walk your property, identify dead zones, and recommend the right system for your budget.</p>
-            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
-            </motion.div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Free Site Survey</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">Schedule a WiFi survey.</h2>
+            <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+              We'll walk your property, identify dead zones, and recommend the right system for your budget. No obligation, no hard sell — just honest advice from engineers who do this every day.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
+                  <Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <Button asChild size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-medium h-12 px-8 text-base">
+                  <Link to="/pricing">View Pricing</Link>
+                </Button>
+              </motion.div>
+            </div>
           </AnimatedSection>
         </div>
-      </Section>
+      </section>
     </PageLayout>
   );
 };
