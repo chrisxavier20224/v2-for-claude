@@ -45,11 +45,11 @@ const socialLinks = [
   { icon: Youtube, href: "https://www.youtube.com/@IntegraNetworks", label: "YouTube" },
 ];
 
-const Footer = () => {
+const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
   return (
     <footer className="bg-surface-dark">
       {/* CTA Banner — built into the footer */}
-      <div className="mx-auto max-w-6xl px-6 pt-16 pb-12">
+      {!hideCTA && <div className="mx-auto max-w-6xl px-6 pt-16 pb-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const Footer = () => {
             </motion.div>
           </div>
         </motion.div>
-      </div>
+      </div>}
 
       {/* MAIN FOOTER */}
       <div className="border-t border-white/10">

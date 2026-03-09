@@ -18,6 +18,25 @@ import StepPhone from './steps/StepPhone';
 import StepEmployees from './steps/StepEmployees';
 import StepResults from './steps/StepResults';
 
+/**
+ * CSS variable overrides to make semantic Tailwind classes (text-foreground,
+ * border-border, etc.) render in light-on-dark within this component's scope.
+ */
+const darkScopeStyle: React.CSSProperties = {
+  // @ts-ignore – CSS custom properties
+  '--foreground': '0 0% 100%',
+  '--muted-foreground': '220 10% 65%',
+  '--border': '220 15% 25%',
+  '--input': '220 15% 25%',
+  '--ring': '217 91% 60%',
+  '--primary': '217 91% 60%',
+  '--primary-foreground': '0 0% 100%',
+  '--secondary': '220 15% 18%',
+  '--muted': '220 15% 20%',
+  '--accent': '220 15% 18%',
+  '--destructive': '0 84% 60%',
+} as React.CSSProperties;
+
 const AvailabilityCheckerForm: React.FC = () => {
   const { formData, updateField, updateName, updateUserType, updateUrgency, togglePainPoint, updateAddress } =
     useFormState();
@@ -137,29 +156,24 @@ const AvailabilityCheckerForm: React.FC = () => {
         className="min-h-screen flex items-center justify-center px-4"
       >
         <div className="max-w-2xl w-full">
-          <div
-            className="rounded-2xl p-12 sm:p-16 text-center space-y-8"
-            style={{
-              background: 'radial-gradient(ellipse at 60% 40%, rgba(147, 197, 253, 0.5), rgba(167, 243, 208, 0.3), transparent 70%)',
-            }}
-          >
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-12 sm:p-16 text-center space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+              <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
                 Fast internet is only a few clicks away.
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/60">
                 Use our availability checker to see if Integra are installing in your area and if our service is right for you.
               </p>
             </div>
 
             <button
               onClick={handleStartClick}
-              className="inline-block px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition duration-200 transform hover:scale-105 active:scale-95"
+              className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition duration-200 transform hover:scale-105 active:scale-95 shadow-lg"
             >
               Start
             </button>
 
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground pt-4">
+            <div className="flex items-center justify-center gap-2 text-sm text-white/40 pt-4">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 11-2 0 1 1 0 012 0zm0 3.5a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd" />
               </svg>
@@ -286,22 +300,24 @@ const AvailabilityCheckerForm: React.FC = () => {
   // Show welcome screen if needed
   if (showWelcome) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
+      <div className="min-h-screen bg-surface-dark" style={darkScopeStyle}>
         {renderWelcome()}
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#f8faf9] py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-surface-dark py-8 px-4 sm:px-6 lg:px-8" style={darkScopeStyle}>
       <div className="max-w-2xl mx-auto">
         {/* Subtle Progress Bar */}
         {!formSubmitted && currentStep >= 0 && (
           <div className="mb-8">
-            <div
-              className="h-1 bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-300"
-              style={{ width: `${progressPercentage}%` }}
-            ></div>
+            <div className="h-1 w-full rounded-full bg-white/10">
+              <div
+                className="h-1 bg-primary rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${progressPercentage}%` }}
+              />
+            </div>
           </div>
         )}
 
@@ -312,11 +328,7 @@ const AvailabilityCheckerForm: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="bg-white rounded-2xl p-8 sm:p-12 space-y-8"
-          style={{
-            background: 'radial-gradient(ellipse at 60% 40%, rgba(147, 197, 253, 0.5), rgba(167, 243, 208, 0.3), transparent 70%)',
-            backdropFilter: 'blur(10px)',
-          }}
+          className="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 sm:p-12 space-y-8"
         >
           {renderStep()}
         </motion.div>
@@ -326,18 +338,18 @@ const AvailabilityCheckerForm: React.FC = () => {
           <div className="mt-8 flex justify-center">
             <button
               onClick={handleBack}
-              className="text-muted-foreground hover:text-foreground font-medium text-sm transition"
+              className="text-white/40 hover:text-white/70 font-medium text-sm transition"
             >
-              ← Back
+              &larr; Back
             </button>
           </div>
         )}
 
         {/* Footer Info */}
         <div className="mt-12 text-center space-y-4">
-          <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex items-center justify-center gap-6 text-sm text-white/40">
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-status-ok" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               <span>Takes just 2 minutes</span>
@@ -349,8 +361,8 @@ const AvailabilityCheckerForm: React.FC = () => {
               <span>Your data is secure</span>
             </div>
           </div>
-          <p className="text-xs text-muted-foreground">
-            Integra Networks Ltd. • UK Business Broadband Specialists
+          <p className="text-xs text-white/30">
+            Integra Networks Ltd. &bull; UK Business Broadband Specialists
           </p>
         </div>
       </div>

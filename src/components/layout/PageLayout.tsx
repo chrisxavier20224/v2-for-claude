@@ -5,14 +5,15 @@ import StickyCallBar from "@/components/shared/StickyCallBar";
 
 interface PageLayoutProps {
   children: React.ReactNode;
+  hideCTA?: boolean;
 }
 
-const PageLayout = ({ children }: PageLayoutProps) => {
+const PageLayout = ({ children, hideCTA }: PageLayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-1 overflow-x-hidden pb-12 md:pb-0">{children}</main>
-      <Footer />
+      <Footer hideCTA={hideCTA} />
       <CookieConsentBanner />
       <StickyCallBar />
     </div>
