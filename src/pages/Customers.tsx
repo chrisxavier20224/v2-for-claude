@@ -138,7 +138,7 @@ const Customers = () => {
           <AnimatedSection>
             <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Customer Stories</p>
             <h1 className="text-heading-1 md:text-display-sm text-white max-w-2xl">
-              107 businesses. Real results.
+              Real businesses. Real results.
             </h1>
             <p className="text-lg text-white/80 max-w-xl mt-6 leading-relaxed">
               From rural farms to London construction sites, from glamping pods to yacht clubs — these are the businesses that stopped waiting for fibre and chose Integra instead.
