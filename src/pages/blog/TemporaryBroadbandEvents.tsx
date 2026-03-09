@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const TemporaryBroadbandEvents = () => (
-  <>
   <BlogArticleLayout slug="temporary-broadband-for-events-uk">
     <p>Running an event needs internet: card machines, ticketing systems, live streaming, staff communications, exhibitor WiFi.</p>
 

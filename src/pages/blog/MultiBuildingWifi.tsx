@@ -3,7 +3,6 @@ import { Radio } from "lucide-react";
 
 
 const MultiBuildingWifi = () => (
-  <>
   <BlogArticleLayout slug="multi-building-wifi-rural-properties">
     <p>Your main house has WiFi. But your barn is out of range. Your office building (300m away) has no signal. Your guest cottage needs connectivity but wiring 300m of cable is crazy expensive.</p>
 

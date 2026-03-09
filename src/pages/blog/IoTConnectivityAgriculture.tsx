@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const IoTConnectivityAgriculture = () => (
-  <>
   <BlogArticleLayout slug="iot-connectivity-agriculture-uk">
     <p>Modern farming runs on data. Soil sensors, water monitors, livestock trackers, weather stations, and automated gates all send information back to a central system.</p>
 

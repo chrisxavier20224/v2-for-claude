@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const BroadbandGrantsUK = () => (
-  <>
   <BlogArticleLayout slug="business-broadband-grants-uk-2026">
     <p>The Government committed billions to reaching rural properties with broadband. The money is flowing. But which schemes are open right now? Which ones apply to your business?</p>
 

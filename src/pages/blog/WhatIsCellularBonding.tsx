@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const WhatIsCellularBonding = () => (
-  <>
   <BlogArticleLayout slug="what-is-cellular-bonding-simple-explanation">
     <p>"Cellular bonding" sounds technical. It's actually simple: combining two or more mobile connections into one faster, more reliable connection.</p>
 

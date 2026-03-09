@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const FourGVsFiveG = () => (
-  <>
   <BlogArticleLayout slug="4g-vs-5g-broadband-which-is-better-for-business">
     <p>The race between 4G and 5G broadband is heating up. If you're a rural business waiting for fibre that BT promised you years ago, you might be looking at 4G or 5G as a bridge solution — or even a permanent replacement.</p>
 

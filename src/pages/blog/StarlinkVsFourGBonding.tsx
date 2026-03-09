@@ -3,7 +3,6 @@ import { Satellite } from "lucide-react";
 
 
 const StarlinkVsFourGBonding = () => (
-  <>
   <BlogArticleLayout slug="starlink-vs-4g-bonding-honest-comparison">
     <p>Starlink vs 4G bonding (SD-WAN) is the biggest rural broadband decision right now. Both can work. Both have real trade-offs.</p>
 

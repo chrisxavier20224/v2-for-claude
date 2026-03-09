@@ -3,7 +3,6 @@ import { Radio } from "lucide-react";
 
 
 const ExtendingWifiOutbuildings = () => (
-  <>
   <BlogArticleLayout slug="extending-wi-fi-and-internet-to-outbuildings">
     <p>Modern homes often include outbuildings such as home offices, gyms, workshops, or guest accommodations. One common challenge is ensuring reliable internet and Wi-Fi in these spaces, especially when they are far from the main house.</p>
     <p>At Integra Networks, we deploy the same technology solutions for residential properties that we use for larger commercial projects like business parks, festival sites, and rural estates. The principles remain the same: delivering high-speed internet with zero loss of performance, even when physical cabling isn't possible.</p>

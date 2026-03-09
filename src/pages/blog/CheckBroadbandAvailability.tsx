@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const CheckBroadbandAvailability = () => (
-  <>
   <BlogArticleLayout slug="how-to-check-broadband-availability-rural-areas">
     <p>You've got a postcode and a property, but you don't know what broadband options are actually available. BT's checker says "no fibre." Openreach says "4-6 years away." Starlink might work, but you're not sure.</p>
 

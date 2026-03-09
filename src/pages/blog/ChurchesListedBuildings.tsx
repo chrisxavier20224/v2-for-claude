@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const ChurchesListedBuildings = () => (
-  <>
   <BlogArticleLayout slug="internet-and-wi-fi-solutions-for-churches-and-listed-buildings">
     <p>Installing Internet and Wi-Fi solutions in churches and listed buildings comes with unique challenges. These properties, often rich in history and architectural significance, require careful planning to balance modern connectivity needs with preservation regulations.</p>
     <p>This article explores common obstacles in installing internet in churches and listed properties, highlights practical solutions, and explains why a professional survey is often essential.</p>

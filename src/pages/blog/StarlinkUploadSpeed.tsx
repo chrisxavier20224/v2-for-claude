@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const StarlinkUploadSpeed = () => (
-  <>
   <BlogArticleLayout slug="starlink-upload-speed-why-it-matters-for-business">
     <p>Starlink is famous for download speeds — 100-200Mbps in rural areas. That sounds amazing.</p>
 

@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const SingleMobileNetwork = () => (
-  <>
   <BlogArticleLayout slug="single-mobile-network-connectivity-solutions-a-reliable-option">
     <p>In the world of internet connectivity, a common question often surfaces: Can single network 4G solutions serve as a solid alternative to traditional broadband when fibre isn't available and ADSL offers limited speeds? The answer is complex — it's both Yes and No, and it largely depends on specific circumstances.</p>
 

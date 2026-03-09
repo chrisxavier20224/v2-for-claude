@@ -2,7 +2,6 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 
 const StarlinkSdwan = () => (
-  <>
   <BlogArticleLayout slug="starlink-sd-wan-a-reliable-solution-for-business-connectivity">
     <p>In the modern business world, internet downtime is not an option. Whether you're running critical applications, managing CCTV systems, or maintaining seamless communication, consistent and reliable connectivity is essential.</p>
     <p>While Starlink offers revolutionary satellite internet for remote and underserved areas, businesses reliant on critical services may hesitate to adopt it due to concerns about potential outages.</p>
