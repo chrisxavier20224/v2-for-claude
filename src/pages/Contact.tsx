@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Headphones, Loader2, CheckCircle, Clock, Phone, ShieldCheck, MapPin } from "lucide-react";
+import { Mail, Headphones, Loader2, CheckCircle, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import PageLayout from "@/components/layout/PageLayout";
@@ -87,38 +87,34 @@ const Contact = () => {
                 SD-WAN, leased lines, business WiFi, unified comms, CCTV, network infrastructure — we design, install, and manage it all. Tell us what you're dealing with and we'll come back with a plan.
               </p>
 
-              {/* Trust signals */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
-                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <Clock className="h-4 w-4 text-primary flex-shrink-0" />
-                  <span className="text-sm text-surface-dark-muted">Reply within 24hrs</span>
+              {/* Map + Contact details */}
+              <div className="space-y-5">
+                <div className="rounded-xl overflow-hidden border border-white/10 h-44">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.08502072393676477!3d51.52527677181819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca8e4b2e7f7%3A0x5e8e6f7d4b9b7c1a!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE%2C%20UK!5e0!3m2!1sen!2sus!4v1704537600000!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Integra Networks Office Location"
+                    className="grayscale contrast-125"
+                  />
                 </div>
-                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                  <span className="text-sm text-surface-dark-muted">Real UK engineers</span>
-                </div>
-                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <ShieldCheck className="h-4 w-4 text-primary flex-shrink-0" />
-                  <span className="text-sm text-surface-dark-muted">No obligation</span>
-                </div>
-              </div>
-
-              {/* Direct contact */}
-              <div className="space-y-4 border-t border-white/10 pt-8">
-                <p className="text-xs font-semibold text-surface-dark-muted uppercase tracking-widest">Prefer to reach out directly?</p>
                 <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-surface-dark-muted">
+                    <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm">86–90 Paul Street, London, EC2A 4NE</span>
+                  </div>
                   <a href="mailto:connect@integra-networks.co.uk" className="flex items-center gap-3 text-surface-dark-muted hover:text-primary transition-colors">
-                    <Mail className="h-4 w-4 text-primary" />
+                    <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                     <span className="text-sm">connect@integra-networks.co.uk</span>
                   </a>
                   <a href="tel:02033887111" className="flex items-center gap-3 text-surface-dark-muted hover:text-primary transition-colors">
-                    <Headphones className="h-4 w-4 text-primary" />
+                    <Headphones className="h-4 w-4 text-primary flex-shrink-0" />
                     <span className="text-sm">0203 388 7111</span>
                   </a>
-                  <div className="flex items-center gap-3 text-surface-dark-muted">
-                    <MapPin className="h-4 w-4 text-primary" />
-                    <span className="text-sm">86–90 Paul Street, London, EC2A 4NE</span>
-                  </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -236,26 +232,6 @@ const Contact = () => {
               </div>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
-
-      {/* Map */}
-      <section className="bg-surface-dark">
-        <div className="mx-auto max-w-6xl px-6 pb-12">
-          <div className="rounded-xl overflow-hidden border border-white/10 h-64">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.08502072393676477!3d51.52527677181819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca8e4b2e7f7%3A0x5e8e6f7d4b9b7c1a!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE%2C%20UK!5e0!3m2!1sen!2sus!4v1704537600000!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Integra Networks Office Location"
-              className="grayscale contrast-125"
-            />
-          </div>
-          <p className="text-xs text-surface-dark-muted/50 text-center mt-4">Based in London, serving businesses across the UK</p>
         </div>
       </section>
 
