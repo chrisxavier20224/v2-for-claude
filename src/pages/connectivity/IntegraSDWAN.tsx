@@ -9,6 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
+import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
 import speedsImg from "@/assets/connectivity/sdwan-speeds.jpg";
@@ -438,48 +439,12 @@ const IntegraSDWAN = () => {
         subheading="Enhance your SD-WAN with professional WiFi, backup connectivity, and unified communications."
       />
 
-      {/* RELATED SERVICES & SECTORS */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-      <section className="bg-surface-dark py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="border-t border-white/20 pt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Related sectors</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/sectors/rural-smes" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Rural SMEs
-              </Link>
-              <Link to="/sectors/construction-sites" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Construction Sites
-              </Link>
-              <Link to="/sectors/homeworkers" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Homeworkers
-              </Link>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Customer stories</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/customers/seacon-group" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                Seacon Group
-              </Link>
-              <Link to="/customers/wb-power-services" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                WB Power Services
-              </Link>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Further reading</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/alternatives-to-fibre-broadband" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                Alternatives to Fibre
-              </Link>
-              <Link to="/sd-wan-for-small-business" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                SD-WAN for Small Business
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <RelatedContent
+        stories={["seacon-group", "wb-power-services"]}
+        sectors={["rural-smes", "construction-sites", "homeworkers"]}
+        dark
+      />
     </PageLayout>
   );
 };

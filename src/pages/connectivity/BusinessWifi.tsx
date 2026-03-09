@@ -9,6 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
+import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/business-wifi-hero.jpg";
 import publicImg from "@/assets/connectivity/business-wifi-public.jpg";
@@ -288,31 +289,11 @@ const BusinessWifi = () => {
         subheading="Enhance your WiFi network with connectivity, security, and distribution solutions."
       />
 
-      {/* RELATED SECTORS */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
-      <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="border-t border-border pt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Related sectors</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/sectors/business-parks" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Business Parks
-              </Link>
-              <Link to="/sectors/fibre-enabled-buildings" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Fibre-Enabled Buildings
-              </Link>
-            </div>
-          </div>
-          <div className="border-t border-border pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Customer stories</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/customers/seacon-group" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                Seacon Group
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* RELATED CONTENT */}
+      <RelatedContent
+        stories={["seacon-group"]}
+        sectors={["business-parks", "fibre-enabled-buildings"]}
+      />
 
       {/* CTA */}
       <Section size="large">

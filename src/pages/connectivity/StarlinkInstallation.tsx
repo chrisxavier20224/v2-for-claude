@@ -9,6 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
+import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/starlink-hero.png";
 import engineersImg from "@/assets/connectivity/starlink-engineers.jpg";
@@ -253,34 +254,11 @@ const StarlinkInstallation = () => {
         subheading="Explore connectivity solutions that work well with Starlink."
       />
 
-      {/* RELATED SECTORS */}
+      {/* RELATED CONTENT */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
-      <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="border-t border-border pt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Related sectors</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/sectors/homeworkers" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Homeworkers
-              </Link>
-              <Link to="/sectors/airbnbs" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                AirBnbs
-              </Link>
-              <Link to="/sectors/rural-smes" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Rural SMEs
-              </Link>
-            </div>
-          </div>
-          <div className="border-t border-border pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Further reading</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/starlink-for-business" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium hover:bg-secondary/80 transition-colors">
-                Starlink for Business
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <RelatedContent
+        sectors={["homeworkers", "airbnbs", "rural-smes"]}
+      />
 
       {/* CTA */}
       <Section size="large">

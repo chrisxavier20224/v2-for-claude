@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, Brain, Plug, ArrowLeft, ArrowRight, CircleCheckBig, Zap, Smartphone, TrendingUp } from "lucide-react";
+import { Wifi, Brain, Plug, ArrowLeft, ArrowRight, CircleCheckBig, Zap, Smartphone } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
+import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/home-wifi-hero.jpg";
 import newbuildImg from "@/assets/connectivity/home-wifi-newbuild.jpg";
@@ -207,31 +208,13 @@ const HomeWifi = () => {
 
       <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
 
-      {/* RELATED SERVICES & SECTORS */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-      <section className="bg-surface-dark py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="border-t border-white/20 pt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Related sectors</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/sectors/homeworkers" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Homeworkers
-              </Link>
-              <Link to="/sectors/airbnbs" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                AirBnbs
-              </Link>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-8 mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Pairing connectivity services</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/connectivity/starlink-installation" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 text-surface-dark-foreground text-sm font-medium hover:bg-white/10 transition-colors">
-                Starlink Installation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <RelatedContent
+        dark
+        sectors={["homeworkers", "airbnbs"]}
+        stories={[]}
+      />
 
       {/* CTA */}
       <section className="bg-surface-dark py-16 md:py-24">

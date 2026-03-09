@@ -9,6 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
+import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/leased-lines-hero.jpg";
 import sdwanImg from "@/assets/connectivity/leased-lines-sdwan.jpg";
@@ -252,23 +253,12 @@ const LeasedLines = () => {
         subheading="Explore alternative connectivity solutions and pricing options."
       />
 
-      {/* RELATED SECTORS & CTA */}
+      {/* RELATED CONTENT */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-      <section className="bg-surface-dark py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="border-t border-white/20 pt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Related sectors</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/sectors/fibre-enabled-buildings" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Fibre-Enabled Buildings
-              </Link>
-              <Link to="/sectors/business-parks" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Business Parks
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <RelatedContent
+        sectors={["fibre-enabled-buildings", "business-parks"]}
+        dark
+      />
 
       {/* CTA */}
       <section className="bg-surface-dark py-16 md:py-24">
