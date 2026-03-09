@@ -5,14 +5,18 @@ import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.jpg";
 
-// Internet connectivity products
-const internetLinks = [
+// Fibre alternatives — solutions when you can't get fibre
+const fibreAlternativeLinks = [
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
-  { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Premium Business-Grade Fibre" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite Internet Setup" },
   { label: "Starlink B2B", path: "/connectivity/starlink-b2b", icon: Satellite, tagline: "Managed Satellite for Business" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
+];
+
+// Standard connectivity — traditional broadband and fibre
+const standardConnectivityLinks = [
+  { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade Fibre" },
   { label: "SoGEA Broadband", path: "/connectivity/sogea", icon: Globe, tagline: "Broadband Without Line Rental" },
 ];
 
@@ -27,7 +31,7 @@ const infrastructureLinks = [
 ];
 
 // All connectivity links combined for path matching
-const allConnectivityLinks = [...internetLinks, ...infrastructureLinks];
+const allConnectivityLinks = [...fibreAlternativeLinks, ...standardConnectivityLinks, ...infrastructureLinks];
 
 const sectorLinks = [
   { label: "Homeworkers", path: "/sectors/homeworkers", icon: Home, tagline: "Rural Broadband & SD-WAN" },
@@ -97,13 +101,29 @@ const Navbar = () => {
               </button>
 
               {servicesOpen && (
-                <div className="absolute top-full -left-4 pt-2 w-[560px]">
+                <div className="absolute top-full -left-4 pt-2 w-[680px]">
                   <div className="bg-card border border-border rounded-xl shadow-xl overflow-hidden">
-                    <div className="grid grid-cols-2">
-                      {/* Internet column */}
+                    <div className="grid grid-cols-3">
+                      {/* Fibre Alternatives column */}
                       <div className="p-2">
-                        <div className="px-3 py-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Internet</div>
-                        {internetLinks.map((item) => (
+                        <div className="px-3 py-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Fibre Alternatives</div>
+                        {fibreAlternativeLinks.map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors"
+                          >
+                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
+                              <item.icon className="h-4 w-4" />
+                            </div>
+                            <div>
+                              <div className="text-sm font-medium text-foreground">{item.label}</div>
+                              <div className="text-xs text-muted-foreground">{item.tagline}</div>
+                            </div>
+                          </Link>
+                        ))}
+                        <div className="px-3 py-2 mt-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Standard Connectivity</div>
+                        {standardConnectivityLinks.map((item) => (
                           <Link
                             key={item.path}
                             to={item.path}
@@ -120,23 +140,25 @@ const Navbar = () => {
                         ))}
                       </div>
                       {/* Infrastructure column */}
-                      <div className="p-2 border-l border-border">
+                      <div className="p-2 border-l border-border col-span-2">
                         <div className="px-3 py-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Infrastructure</div>
-                        {infrastructureLinks.map((item) => (
-                          <Link
-                            key={item.path}
-                            to={item.path}
-                            className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors"
-                          >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
-                              <item.icon className="h-4 w-4" />
-                            </div>
-                            <div>
-                              <div className="text-sm font-medium text-foreground">{item.label}</div>
-                              <div className="text-xs text-muted-foreground">{item.tagline}</div>
-                            </div>
-                          </Link>
-                        ))}
+                        <div className="grid grid-cols-2">
+                          {infrastructureLinks.map((item) => (
+                            <Link
+                              key={item.path}
+                              to={item.path}
+                              className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors"
+                            >
+                              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
+                                <item.icon className="h-4 w-4" />
+                              </div>
+                              <div>
+                                <div className="text-sm font-medium text-foreground">{item.label}</div>
+                                <div className="text-xs text-muted-foreground">{item.tagline}</div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -318,9 +340,18 @@ const Navbar = () => {
 
               {/* Mobile Services Section */}
               <div className="px-3 py-2">
-                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Internet</div>
+                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Fibre Alternatives</div>
                 <div className="space-y-1">
-                  {internetLinks.map((item) => (
+                  {fibreAlternativeLinks.map((item) => (
+                    <Link key={item.path} to={item.path} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                      <item.icon className="h-4 w-4 text-primary" />
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2 mt-4">Standard Connectivity</div>
+                <div className="space-y-1">
+                  {standardConnectivityLinks.map((item) => (
                     <Link key={item.path} to={item.path} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
                       <item.icon className="h-4 w-4 text-primary" />
                       {item.label}
