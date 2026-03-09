@@ -8,16 +8,22 @@ const connectivityLinks = [
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
   { label: "Leased Lines", path: "/connectivity/leased-lines" },
+  { label: "Managed Internet", path: "/connectivity/managed-internet" },
+  { label: "Dark Fibre", path: "/connectivity/dark-fibre" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
   { label: "SoGEA Broadband", path: "/connectivity/sogea" },
   { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation" },
   { label: "Starlink B2B", path: "/connectivity/starlink-b2b" },
+  { label: "4G/5G Backup", path: "/connectivity/cellular-backup" },
+  { label: "Business Mobiles", path: "/connectivity/business-mobiles" },
 ];
 
 const solutionsLinks = [
   { label: "Business WiFi", path: "/connectivity/business-wifi" },
   { label: "Home WiFi", path: "/connectivity/home-wifi" },
   { label: "Unified Communications", path: "/connectivity/unified-communications" },
+  { label: "Managed Firewall", path: "/connectivity/managed-firewall" },
+  { label: "Business Continuity", path: "/connectivity/business-continuity" },
 ];
 
 const infrastructureLinks = [

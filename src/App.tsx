@@ -92,6 +92,12 @@ const SoGEA = lazy(() => import("./pages/connectivity/SoGEA"));
 const CCTV = lazy(() => import("./pages/connectivity/CCTV"));
 const WirelessDistribution = lazy(() => import("./pages/connectivity/WirelessDistribution"));
 const NetworkInfrastructure = lazy(() => import("./pages/connectivity/NetworkInfrastructure"));
+const ManagedFirewall = lazy(() => import("./pages/connectivity/ManagedFirewall"));
+const CellularBackup = lazy(() => import("./pages/connectivity/CellularBackup"));
+const ManagedInternet = lazy(() => import("./pages/connectivity/ManagedInternet"));
+const BusinessContinuity = lazy(() => import("./pages/connectivity/BusinessContinuity"));
+const DarkFibre = lazy(() => import("./pages/connectivity/DarkFibre"));
+const BusinessMobiles = lazy(() => import("./pages/connectivity/BusinessMobiles"));
 const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 
 // PPC Landing Pages
@@ -194,6 +200,12 @@ const App = () => (
               <Route path="/connectivity/network-infrastructure" element={<NetworkInfrastructure />} />
               <Route path="/connectivity/integra-sd-wan" element={<IntegraSDWAN />} />
               <Route path="/connectivity/integra-bridge" element={<IntegraBridge />} />
+              <Route path="/connectivity/managed-firewall" element={<ManagedFirewall />} />
+              <Route path="/connectivity/cellular-backup" element={<CellularBackup />} />
+              <Route path="/connectivity/managed-internet" element={<ManagedInternet />} />
+              <Route path="/connectivity/business-continuity" element={<BusinessContinuity />} />
+              <Route path="/connectivity/dark-fibre" element={<DarkFibre />} />
+              <Route path="/connectivity/business-mobiles" element={<BusinessMobiles />} />
 
               {/* Proposal Pages */}
               <Route path="/proposal/:id" element={<ProposalDetail />} />

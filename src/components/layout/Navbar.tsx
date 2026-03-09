@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -17,7 +17,10 @@ const fibreAlternativeLinks = [
 // Standard connectivity — traditional broadband and fibre
 const standardConnectivityLinks = [
   { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade Fibre" },
+  { label: "Managed Internet", path: "/connectivity/managed-internet", icon: Globe, tagline: "Dedicated Bandwidth, Simpler Pricing" },
   { label: "SoGEA Broadband", path: "/connectivity/sogea", icon: Globe, tagline: "Broadband Without Line Rental" },
+  { label: "Dark Fibre", path: "/connectivity/dark-fibre", icon: Cable, tagline: "Unlit Fibre for Enterprise" },
+  { label: "4G/5G Backup", path: "/connectivity/cellular-backup", icon: Signal, tagline: "Automatic Cellular Failover" },
 ];
 
 // Infrastructure & on-site services
@@ -28,6 +31,9 @@ const infrastructureLinks = [
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution", icon: Radio, tagline: "Multi-Building Links" },
   { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration" },
   { label: "Network Infrastructure", path: "/connectivity/network-infrastructure", icon: ServerCog, tagline: "Cabling, Cabinets & Fibre Links" },
+  { label: "Managed Firewall", path: "/connectivity/managed-firewall", icon: Shield, tagline: "Network Security & Protection" },
+  { label: "Business Mobiles", path: "/connectivity/business-mobiles", icon: Smartphone, tagline: "Multi-Network Mobile Plans" },
+  { label: "Business Continuity", path: "/connectivity/business-continuity", icon: Layers, tagline: "Layered Connectivity Resilience" },
 ];
 
 // All connectivity links combined for path matching
