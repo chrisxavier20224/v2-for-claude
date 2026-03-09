@@ -75,27 +75,27 @@ const solutionItems = [
 
 const reviews = [
   {
-    author: "Sarah M.",
-    role: "Freelance Designer",
-    content: "Finally found a broadband solution that actually works in our rural cottage. The installation team was professional and the support has been fantastic.",
+    author: "Verified Customer",
+    role: "via Reviews.io",
+    content: "I have had a great experience with Integra. The people I have spoken to have been understanding and very human throughout the entire process and the internet speeds I am now getting mean a huge increase in my career opportunity.",
     rating: 5,
   },
   {
-    author: "James T.",
-    role: "Remote Business Owner",
-    content: "As someone who depends on internet for video calls and file uploads, this has been a game-changer. No more frozen meetings or upload frustrations.",
+    author: "Duncan Hall",
+    role: "via Reviews.io",
+    content: "Working with Integra Networks has been a rare pleasure: they could not have been more patient, helpful, friendly and professional. They found the exact solution for our needs, and our internet provision is just excellent, despite our remote and rural location.",
     rating: 5,
   },
   {
-    author: "Emma P.",
-    role: "Work from Home Parent",
-    content: "The WiFi reaches every corner of our property now. Setup was quick, and their support team responds within minutes if we ever need help.",
+    author: "Dane",
+    role: "via Reviews.io",
+    content: "Provided a fast and friendly service for getting our Internet online. So far the service has been reliable and fast, greatly outperforming the limited connectivity we had through normal domestic Internet.",
     rating: 5,
   },
   {
-    author: "David R.",
-    role: "Architect - Home Office",
-    content: "Reliable 100Mbps+ speeds from day one. No more apologising for dropped video calls. Worth every penny.",
+    author: "Sally Wiltshire",
+    role: "via Reviews.io",
+    content: "Excellent service, both from the network design and installation team, and now the ongoing support. We have reliable, fast broadband for the first time ever in our rural location.",
     rating: 5,
   },
 ];
@@ -168,7 +168,7 @@ const Homeworkers = () => {
                       <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <span>4.8/5 on Reviews.io</span>
+                  <span>5.0/5 on Reviews.io</span>
                 </a>
               </div>
             </motion.div>
