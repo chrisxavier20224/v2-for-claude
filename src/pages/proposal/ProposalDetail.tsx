@@ -356,7 +356,7 @@ export default function ProposalDetail() {
 
         {/* Installation Section */}
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
-          <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
+          <Card className="bg-card border-border">
             <div className="p-6">
               <h2 className="text-xl font-medium mb-4 flex items-center gap-2">
                 <Building2 className="w-5 h-5 text-primary" />
@@ -377,7 +377,7 @@ export default function ProposalDetail() {
                   Please provide a video walkthrough of your property exterior to support the
                   planning process.
                 </p>
-                <p className="text-muted-foreground pt-2 border-t border-blue-200">
+                <p className="text-muted-foreground pt-2 border-t border-border">
                   Questions? Contact us at{" "}
                   <a
                     href="mailto:support@integra-networks.co.uk"
@@ -571,7 +571,7 @@ export default function ProposalDetail() {
 
         {/* Order Summary */}
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
-          <Card className="bg-gradient-to-br from-slate-50 to-blue-50 border-primary/30">
+          <Card className="bg-card border-border">
             <div className="p-6">
               <h2 className="text-xl font-medium mb-6">Order Summary</h2>
 
