@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const GlobalCTABanner = () => {
   return (
@@ -11,29 +12,30 @@ const GlobalCTABanner = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-10 md:p-14"
+          className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-10 md:p-14"
         >
-          {/* Decorative shape */}
-          <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-md bg-white/10 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-md bg-white/5" />
-
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="max-w-xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+                Get Connected
+              </p>
+              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-3">
                 Let's see what we can do for you
               </h2>
-              <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
+              <p className="text-surface-dark-muted text-base md:text-lg leading-relaxed">
                 Join the businesses switching to Integra. It feels good when your connectivity just works.
               </p>
             </div>
-            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="shrink-0">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-white text-surface-dark font-semibold h-12 px-8 text-base rounded-md hover:bg-white/90 transition-colors shadow-lg"
-              >
-                Let's talk <ArrowRight className="h-4 w-4" />
-              </Link>
-            </motion.div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
+                <Link to="/contact" className="inline-flex items-center gap-2">
+                  Let's talk <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/pricing">View Pricing</Link>
+              </Button>
+            </div>
           </div>
         </motion.div>
       </div>
