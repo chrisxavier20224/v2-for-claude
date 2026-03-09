@@ -65,7 +65,7 @@ const BusinessBroadband = () => {
     {
       question: "Why is business broadband different from residential?",
       answer:
-        "Consumer broadband is optimized for entertainment (streaming, gaming). Business broadband prioritizes reliability, upload speeds, and support. We provide 99.5% SLA guarantees, symmetric speeds, and UK engineers who understand your business. Consumer ISPs don't.",
+        "Consumer broadband is optimised for entertainment (streaming, gaming). Business broadband prioritises reliability, upload speeds, and support. We provide 99.5% SLA guarantees, symmetric speeds, and UK engineers who understand your business. Consumer ISPs don't.",
     },
     {
       question: "What speeds will I get with Integra Pro?",

@@ -106,7 +106,7 @@ const PortableWifiConstruction = () => (
 
     <p><strong>Pros:</strong></p>
     <ul>
-      <li>Best performance (fixed placement optimized for signal)</li>
+      <li>Best performance (fixed placement optimised for signal)</li>
       <li>Most reliable</li>
       <li>Professional result</li>
     </ul>

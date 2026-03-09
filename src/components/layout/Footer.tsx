@@ -31,6 +31,7 @@ const companyLinks = [
 
 const resourceLinks = [
   { label: "Availability Checker", path: "/availability-checker" },
+  { label: "Pricing", path: "/pricing" },
   { label: "Resources", path: "/resources" },
 ];
 
@@ -198,7 +199,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-6 py-3">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-surface-dark-muted/60">
-            <span>© 2025 Integra Networks Limited. All rights reserved.</span>
+            <span>© 2026 Integra Networks Limited. All rights reserved.</span>
             
             <div className="flex items-center gap-4">
               <Link to="/privacy-cookies" className="hover:text-surface-dark-foreground transition-colors">Privacy Policy</Link>

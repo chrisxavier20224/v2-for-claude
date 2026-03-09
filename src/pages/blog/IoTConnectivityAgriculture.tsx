@@ -114,7 +114,7 @@ const IoTConnectivityAgriculture = () => (
 
     <h3>Option 3: Cellular IoT (NB-IoT / LTE-M)</h3>
 
-    <p>Specialized cellular protocols for IoT devices. Slower than regular 4G, but optimized for IoT.</p>
+    <p>Specialised cellular protocols for IoT devices. Slower than regular 4G, but optimised for IoT.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>
