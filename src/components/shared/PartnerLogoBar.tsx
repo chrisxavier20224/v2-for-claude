@@ -1,8 +1,8 @@
 import AnimatedSection from "./AnimatedSection";
-import o2Logo from "@/assets/logos/o2-logo.svg";
-import vodafoneLogo from "@/assets/logos/vodafone-logo.svg";
-import eeLogo from "@/assets/logos/ee-logo.svg";
-import threeLogo from "@/assets/logos/three-logo.svg";
+import o2Logo from "@/assets/logos/o2-white.png";
+import vodafoneLogo from "@/assets/logos/vodafone-white.png";
+import eeLogo from "@/assets/logos/ee-white.png";
+import threeLogo from "@/assets/logos/three-white.png";
 
 const partners = [
   { name: "O2", logo: o2Logo },
@@ -30,7 +30,7 @@ const PartnerLogoBar = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-full max-w-full w-auto object-contain invert opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  className="max-h-full max-w-full w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}

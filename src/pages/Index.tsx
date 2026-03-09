@@ -340,10 +340,12 @@ const Index = () => {
           </div>
         </section>
 
+        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+
         <PartnerLogoBar />
 
         {/* ── CTA ──────────────────────────────────────────────────────── */}
-        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />
+        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
         <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
           <AnimatedSection>
             <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
