@@ -89,7 +89,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <Link to="/" className="flex items-center mb-4">
-                <img src={integraLogo} alt="Integra Networks" width="120" height="40" className="h-10" />
+                <img src={integraLogo} alt="Integra Networks" className="w-28 h-auto" />
               </Link>
               <p className="text-sm text-surface-dark-muted">
                 Managed connectivity and IoT solutions for businesses across the UK.
