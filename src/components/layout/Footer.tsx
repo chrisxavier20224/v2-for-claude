@@ -49,7 +49,7 @@ const resourceLinks = [
 
 
 const socialLinks = [
-  { icon: Instagram, href: "https://www.instagram.com/integra.networks/", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/integra_networks", label: "Instagram" },
   { icon: Facebook, href: "https://www.facebook.com/IntegraNetworksUK", label: "Facebook" },
   { icon: Youtube, href: "https://www.youtube.com/@IntegraNetworks", label: "YouTube" },
 ];
