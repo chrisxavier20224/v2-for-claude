@@ -92,7 +92,7 @@ const Footer = () => {
                 <img src={integraLogo} alt="Integra Networks" className="w-28 h-auto" />
               </Link>
               <p className="text-sm text-surface-dark-muted">
-                Managed connectivity and IoT solutions for businesses across the UK.
+                Managed connectivity solutions for businesses across the UK.
               </p>
             </div>
 

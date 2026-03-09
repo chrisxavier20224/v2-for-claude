@@ -83,7 +83,7 @@ const connectivityServices = [
   },
   {
     title: "Managed SIM Services",
-    description: "Custom quoted. Temporary connectivity for construction sites, events, and IoT. PSTN switch-off ready. Deploy in days.",
+    description: "Custom quoted. Temporary connectivity for construction sites, events, and remote operations. PSTN switch-off ready. Deploy in days.",
     img: simImg,
     link: "/connectivity/managed-sim-services",
   },
