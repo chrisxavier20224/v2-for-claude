@@ -4,16 +4,20 @@ import { motion } from "framer-motion";
 import integraLogo from "@/assets/integra-logo-white.png";
 
 
-const connectivityLinks = [
+const fibreAlternativeLinks = [
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
-  { label: "Leased Lines", path: "/connectivity/leased-lines" },
-  { label: "Managed Internet", path: "/connectivity/managed-internet" },
-  { label: "Dark Fibre", path: "/connectivity/dark-fibre" },
-  { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
-  { label: "SoGEA Broadband", path: "/connectivity/sogea" },
   { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation" },
   { label: "Starlink B2B", path: "/connectivity/starlink-b2b" },
+  { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
+  { label: "Pricing", path: "/pricing" },
+];
+
+const standardConnectivityLinks = [
+  { label: "Leased Lines", path: "/connectivity/leased-lines" },
+  { label: "Managed Internet", path: "/connectivity/managed-internet" },
+  { label: "SoGEA Broadband", path: "/connectivity/sogea" },
+  { label: "Dark Fibre", path: "/connectivity/dark-fibre" },
   { label: "4G/5G Backup", path: "/connectivity/cellular-backup" },
   { label: "Business Mobiles", path: "/connectivity/business-mobiles" },
 ];
@@ -40,7 +44,6 @@ const companyLinks = [
 
 const resourceLinks = [
   { label: "Availability Checker", path: "/availability-checker" },
-  { label: "Fibre Alternative Pricing", path: "/pricing" },
   { label: "Resources", path: "/resources" },
 ];
 
@@ -103,9 +106,19 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
 
             {/* Connectivity */}
             <div>
-              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Connectivity</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Fibre Alternatives</h4>
               <ul className="space-y-2">
-                {connectivityLinks.map((link) => (
+                {fibreAlternativeLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link to={link.path} className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4 mt-6">Standard Connectivity</h4>
+              <ul className="space-y-2">
+                {standardConnectivityLinks.map((link) => (
                   <li key={link.path}>
                     <Link to={link.path} className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
                       {link.label}
