@@ -50,9 +50,9 @@ const relatedServices = [
   },
   {
     icon: Building2,
-    title: "Construction Sites",
-    description: "Temporary connectivity solutions for active projects.",
-    href: "/sectors/construction-sites",
+    title: "SoGEA Broadband",
+    description: "Fibre-based connectivity as an alternative to managed SIM.",
+    href: "/connectivity/sogea",
   },
   {
     icon: TrendingUp,
@@ -89,7 +89,7 @@ const ManagedSimServices = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">PSTN is switching off. Are you ready?</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              SOGEA is costly for single-line PSTN replacement. Our managed SIM service delivers an affordable, no upfront cost solution — with complete estate visibility and proactive monitoring. Custom priced for your needs.
+              Whether you need SoGEA broadband or a managed SIM alternative, we'll recommend the right solution for your estate — with complete visibility and proactive monitoring. Custom priced for your needs.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">

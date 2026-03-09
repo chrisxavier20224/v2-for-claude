@@ -20,17 +20,17 @@ const PartnerLogoBar = () => {
             Our Connectivity Partners
           </h3>
 
-          <div className="flex items-center justify-center gap-10 md:gap-16 flex-wrap">
+          <div className="flex items-center justify-center gap-12 md:gap-20 flex-wrap">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex-shrink-0 h-10 w-24 md:h-12 md:w-28 flex items-center justify-center"
+                className="flex-shrink-0 h-12 w-28 md:h-14 md:w-36 flex items-center justify-center"
                 title={partner.name}
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-full max-w-full w-auto object-contain invert opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="max-h-full max-w-full w-auto object-contain invert opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}

@@ -55,7 +55,7 @@ const whyIntegra = [
 
 const faqs = [
   { q: "What is the PSTN switch-off?", a: "The Public Switched Telephone Network (PSTN) switch-off is a planned discontinuation of the traditional, copper-based telephone network by BT Openreach. This means everyone, including businesses, currently using PSTN-based services will need to move to another service." },
-  { q: "What are the key dates for the PSTN switch-off?", a: "BT Openreach announced its intention to switch off the PSTN by the end of 2025. From December 2023, you can't purchase any new ISDN or PSTN-based services, with many locations affected by a stop-sell much sooner." },
+  { q: "What are the key dates for the PSTN switch-off?", a: "BT Openreach announced its intention to switch off the PSTN by January 2027. From December 2023, you can't purchase any new ISDN or PSTN-based services, with many locations affected by a stop-sell much sooner." },
   { q: "What is VoIP?", a: "VoIP uses a company's existing internet connection to transmit voice calls. It requires less hardware than legacy systems and can be used on a variety of devices — from desk phones to mobiles, tablets, and computers." },
   { q: "What about special services like security alarms and payment terminals?", a: "The migration also impacts services like security and fire alarms, telecare devices, retail payment terminals, and equipment for monitoring and controlling networks. These rely on PSTN features not fully replicated in VoIP platforms." },
   { q: "What do businesses need to do now?", a: "Businesses should make sure they are fully informed on what is happening and when. They need to be aware of 'End of Sale' and 'End of Life' notifications and prepare to migrate to all-IP-ready products." },
@@ -95,7 +95,7 @@ const PSTNSwitchOff = () => {
       <SEO
         title="PSTN Switch Off — Prepare Your Business"
         description="The PSTN switch-off is here. Future-proof your business by transitioning to VoIP and modern connectivity. Integra Networks guides you through every step."
-        keywords="PSTN switch off, ISDN replacement, VoIP migration, PSTN 2025, BT Openreach, managed SIM, SD-WAN"
+        keywords="PSTN switch off, ISDN replacement, VoIP migration, PSTN 2027, BT Openreach, managed SIM, SD-WAN"
         url="/pstn-switch-off"
       />
 

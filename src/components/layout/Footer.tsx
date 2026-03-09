@@ -13,6 +13,7 @@ const connectivityLinks = [
   { label: "Business WiFi", path: "/connectivity/business-wifi" },
   { label: "Home WiFi", path: "/connectivity/home-wifi" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation" },
+  { label: "Starlink B2B", path: "/connectivity/starlink-b2b" },
   { label: "CCTV", path: "/connectivity/cctv" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution" },
   { label: "Unified Communications", path: "/connectivity/unified-communications" },
