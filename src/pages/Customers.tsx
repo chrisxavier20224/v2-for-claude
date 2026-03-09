@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
-import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
@@ -177,33 +176,28 @@ const Customers = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-
-      {/* Stats Bar */}
-      <Section size="default">
-        <AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-5xl font-bold text-foreground">99<span className="text-primary">%</span></p>
-              <p className="text-sm text-muted-foreground mt-2">UK Coverage — complete our Availability Checker to find out what speeds we can provide.</p>
+      {/* Stats Bar — integrated into dark flow */}
+      <section className="bg-surface-dark py-16 md:py-20 border-t border-white/5">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {[
+                { value: "99", accent: "%", label: "UK coverage via cellular SD-WAN" },
+                { value: "14", accent: " days", label: "Average install time — not months" },
+                { value: "107", accent: "+", label: "Businesses connected & counting" },
+                { value: "350", accent: "Mbps", label: "Peak speeds on bonded connections" },
+              ].map((stat) => (
+                <div key={stat.value} className="text-center rounded-xl border border-white/10 bg-white/[0.03] p-6">
+                  <p className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+                    {stat.value}<span className="text-primary">{stat.accent}</span>
+                  </p>
+                  <p className="text-xs md:text-sm text-surface-dark-muted mt-2 leading-relaxed">{stat.label}</p>
+                </div>
+              ))}
             </div>
-            <div>
-              <p className="text-5xl font-bold text-foreground">14 <span className="text-primary">days max</span></p>
-              <p className="text-sm text-muted-foreground mt-2">We deliver our connectivity faster than any other service provider.</p>
-            </div>
-            <div>
-              <p className="text-5xl font-bold text-foreground">107<span className="text-primary">+</span></p>
-              <p className="text-sm text-muted-foreground mt-2">Businesses connected across the UK with proven results.</p>
-            </div>
-            <div>
-              <p className="text-5xl font-bold text-foreground">350<span className="text-primary">Mbps</span></p>
-              <p className="text-sm text-muted-foreground mt-2">Maximum speeds achieved through our SD-WAN solution.</p>
-            </div>
-          </div>
-        </AnimatedSection>
-      </Section>
-
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* Stories Grid */}
       <section className="bg-surface-dark py-16 md:py-24">
