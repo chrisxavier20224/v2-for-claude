@@ -10,6 +10,7 @@ import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/business-wifi-hero.jpg";
+import seaconPortImg from "@/assets/case-studies/seacon-port.jpg";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -238,8 +239,12 @@ const WirelessDistribution = () => {
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
       {/* CASE STUDY CALLOUT */}
-      <section className="bg-surface-dark py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={seaconPortImg} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-surface-dark/85" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <motion.div
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)]"
