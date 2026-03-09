@@ -18,7 +18,12 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+// Radio indicator component (standalone, no RadioGroup wrapper needed)
+const RadioIndicator = ({ checked, className = "" }: { checked: boolean; className?: string }) => (
+  <div className={`h-4 w-4 rounded-full border-2 flex items-center justify-center ${checked ? "border-primary" : "border-muted-foreground/40"} ${className}`}>
+    {checked && <div className="h-2 w-2 rounded-full bg-primary" />}
+  </div>
+);
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
@@ -404,9 +409,7 @@ export default function ProposalDetail() {
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <RadioGroupItem
-                    value={option.id}
-                    id={option.id}
+                  <RadioIndicator
                     checked={orderSummary.selectedConnectivity === option.id}
                     className="mt-1"
                   />
