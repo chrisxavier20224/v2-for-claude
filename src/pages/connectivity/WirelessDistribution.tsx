@@ -10,7 +10,6 @@ import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/business-wifi-hero.jpg";
-import royleFarmImg from "@/assets/case-studies/royle-farm-hero.jpg";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -243,15 +242,12 @@ const WirelessDistribution = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <motion.div
-              className="relative overflow-hidden rounded-2xl"
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)]"
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.4 }}
             >
-              {/* Background image */}
-              <div className="absolute inset-0">
-                <img src={royleFarmImg} alt="" className="w-full h-full object-cover" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-blue-600/70" />
-              </div>
+              <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-full bg-white/5" />
               <div className="relative z-10 p-10 md:p-14">
                 <p className="text-xs font-semibold uppercase tracking-widest text-white/80 mb-2">Real Installations</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">

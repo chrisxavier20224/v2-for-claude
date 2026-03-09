@@ -387,38 +387,7 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-
-      {/* FREE WIFI MESH PROMO */}
-      <section className="bg-surface-dark py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
-            <motion.div
-              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-10 md:p-14 text-center"
-              whileHover={{ scale: 1.01 }}
-              transition={{ duration: 0.4 }}
-            >
-              <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-full bg-white/5" />
-              <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
-                  Free WiFi Mesh Installation <span className="text-white/70">(worth £350)</span>
-                </h2>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-                  <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90">
-                    <Link to="/availability-checker">Check Availability</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-                    <Link to="/contact">Or get in touch</Link>
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
 
       {/* FAQ */}
       <section className="bg-background py-20 md:py-28">
