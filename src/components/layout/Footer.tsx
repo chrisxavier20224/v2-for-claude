@@ -17,9 +17,12 @@ const connectivityLinks = [
 const solutionsLinks = [
   { label: "Business WiFi", path: "/connectivity/business-wifi" },
   { label: "Home WiFi", path: "/connectivity/home-wifi" },
+  { label: "Unified Communications", path: "/connectivity/unified-communications" },
+];
+
+const infrastructureLinks = [
   { label: "CCTV", path: "/connectivity/cctv" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution" },
-  { label: "Unified Communications", path: "/connectivity/unified-communications" },
 ];
 
 const companyLinks = [
@@ -66,8 +69,8 @@ const Footer = () => {
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-10 md:p-14"
         >
-          <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-full bg-white/5" />
+          <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-md bg-white/10 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-md bg-white/5" />
 
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="max-w-xl">
@@ -81,7 +84,7 @@ const Footer = () => {
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="shrink-0">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-white text-surface-dark font-semibold h-12 px-8 text-base rounded-full hover:bg-white/90 transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 bg-white text-surface-dark font-semibold h-12 px-8 text-base rounded-md hover:bg-white/90 transition-colors shadow-lg"
               >
                 Let's talk <ArrowRight className="h-4 w-4" />
               </Link>
@@ -123,6 +126,16 @@ const Footer = () => {
               <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Solutions</h4>
               <ul className="space-y-2">
                 {solutionsLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link to={link.path} className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4 mt-6">Infrastructure</h4>
+              <ul className="space-y-2">
+                {infrastructureLinks.map((link) => (
                   <li key={link.path}>
                     <Link to={link.path} className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
                       {link.label}
