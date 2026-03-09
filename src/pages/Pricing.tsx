@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
+import heroImg from "@/assets/connectivity/bridge-hero.jpg";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -158,7 +159,10 @@ const Pricing = () => {
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden -mt-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-surface-dark to-surface-dark" />
+        <div className="absolute inset-0">
+          <img src={heroImg} alt="Business connectivity infrastructure" className="w-full h-full object-cover" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/50 to-black/20" />
+        </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <AnimatedSection>
             <motion.p
@@ -428,48 +432,36 @@ const Pricing = () => {
 
       {/* ── FINAL CTA ────────────────────────────────────────────────── */}
       <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <motion.div
-              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-10 md:p-14 text-center"
-              whileHover={{ scale: 1.01 }}
-              transition={{ duration: 0.4 }}
-            >
-              <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-10 left-10 h-40 w-40 rounded-full bg-white/5" />
-              <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
-                  Ready to find your perfect fit?
-                </h2>
-                <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Check availability in 90 seconds or request a custom quote. Our team will help you choose the right solution for your business.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90 shadow-lg">
-                    <Link to="/availability-checker">Check Availability</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-                    <Link to="/contact">Request a Quote</Link>
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Ready to Get Started?</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
+              Find your perfect fit.
+            </h2>
+            <p className="text-lg text-surface-dark-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+              Check availability in 90 seconds or request a custom quote. Our team will help you choose the right solution for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
+                <Link to="/availability-checker">Check Availability</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/contact">Request a Quote</Link>
+              </Button>
+            </div>
+            <div className="border-t border-white/10 pt-8">
+              <p className="text-surface-dark-muted">
+                <span className="font-semibold text-surface-dark-foreground">Prefer to talk?</span>{" "}
+                Call our sales team:{" "}
+                <a href="tel:02033887111" className="text-primary hover:underline font-semibold">
+                  0203 388 7111
+                </a>
+              </p>
+              <p className="text-xs text-surface-dark-muted mt-2">
+                Monday–Friday, 9am–5:30pm GMT. UK-based support.
+              </p>
+            </div>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ── TRUST & CONTACT ──────────────────────────────────────────── */}
-      <section className="bg-background py-12 md:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
-          <p className="text-muted-foreground mb-4">
-            <span className="font-semibold">Have questions?</span> Call our sales team:
-            <a href="tel:02033887111" className="text-primary hover:underline ml-2 font-semibold">
-              0203 388 7111
-            </a>
-          </p>
-          <p className="text-xs text-muted-foreground">
-            Available Monday–Friday, 9am–5:30pm GMT. UK-based support team ready to help.
-          </p>
         </div>
       </section>
     </PageLayout>
