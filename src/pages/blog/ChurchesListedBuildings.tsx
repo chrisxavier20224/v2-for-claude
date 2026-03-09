@@ -1,22 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Wifi, Satellite, Zap } from "lucide-react";
 
-const relatedServices = [
-  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
-  { name: "Starlink Installation", url: "/connectivity/starlink-installation", icon: Satellite },
-  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
-];
 
 const ChurchesListedBuildings = () => (
   <>
-    <SEO
-      title="Internet for Churches & Listed Buildings"
-      description="WiFi solutions for churches and listed buildings. Overcoming conservation restrictions and technical challenges. Professional installation available."
-      url="/blog/internet-and-wi-fi-solutions-for-churches-and-listed-buildings"
-      type="article"
-    />
   <BlogArticleLayout slug="internet-and-wi-fi-solutions-for-churches-and-listed-buildings">
     <p>Installing Internet and Wi-Fi solutions in churches and listed buildings comes with unique challenges. These properties, often rich in history and architectural significance, require careful planning to balance modern connectivity needs with preservation regulations.</p>
     <p>This article explores common obstacles in installing internet in churches and listed properties, highlights practical solutions, and explains why a professional survey is often essential.</p>
@@ -61,8 +47,6 @@ const ChurchesListedBuildings = () => (
     <p>Churches and listed buildings require a careful balance of modern technology and heritage preservation. By using innovative methods like NPRMs, structured cabling, and P2P links, it's possible to deliver high-speed, reliable Wi-Fi while respecting the unique requirements of these properties.</p>
     <p>Whether it's a historic church or a listed home, taking the time to plan and implement the right solution can make all the difference.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default ChurchesListedBuildings;

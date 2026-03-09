@@ -1,37 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Zap, Signal, BarChart3 } from "lucide-react";
 
-const relatedServices = [
-  {
-    title: "Integra SD-WAN",
-    description: "Software-defined networking for resilient connectivity.",
-    icon: Zap,
-    href: "/connectivity/integra-sd-wan",
-  },
-  {
-    title: "4G/5G Backup",
-    description: "Mobile network failover for business continuity.",
-    icon: Signal,
-    href: "/connectivity/4g-5g-backup",
-  },
-  {
-    title: "Pricing",
-    description: "View our flexible connectivity plans.",
-    icon: BarChart3,
-    href: "/pricing",
-  },
-];
 
 const WhatIsCellularBonding = () => (
   <>
-    <SEO
-      title="What is Cellular Bonding?"
-      description="Cellular bonding explained: combining multiple mobile networks for faster, more reliable rural broadband. SD-WAN technology for businesses."
-      url="/blog/what-is-cellular-bonding-simple-explanation"
-      type="article"
-    />
   <BlogArticleLayout slug="what-is-cellular-bonding-simple-explanation">
     <p>"Cellular bonding" sounds technical. It's actually simple: combining two or more mobile connections into one faster, more reliable connection.</p>
 
@@ -170,8 +141,6 @@ const WhatIsCellularBonding = () => (
 
     <p>Unsure? Get a site survey. We'll measure actual speeds from each operator at your location and tell you if bonding is worth it.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default WhatIsCellularBonding;

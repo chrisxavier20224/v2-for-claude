@@ -1,38 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Satellite, Zap, ArrowLeftRight } from "lucide-react";
+import { Satellite } from "lucide-react";
 
-const relatedServices = [
-  {
-    title: "Starlink Installation",
-    description: "Professional satellite internet installation and setup.",
-    icon: Satellite,
-    href: "/connectivity/starlink-installation",
-  },
-  {
-    title: "Integra SD-WAN",
-    description: "Software-defined networking for resilient connectivity.",
-    icon: Zap,
-    href: "/connectivity/integra-sd-wan",
-  },
-  {
-    title: "Integra Bridge",
-    description: "Connection bridging and network failover solutions.",
-    icon: ArrowLeftRight,
-    href: "/connectivity/integra-bridge",
-  },
-];
 
 const SatelliteVsFixedWireless = () => (
-  <>
-    <SEO
-      title="Satellite vs Fixed Wireless Internet"
-      description="Satellite vs fixed wireless broadband comparison: speed, latency, cost, and reliability. Which rural internet solution is right for you?"
-      url="/blog/satellite-internet-vs-fixed-wireless-pros-and-cons"
-      type="article"
-    />
-    <BlogArticleLayout slug="satellite-internet-vs-fixed-wireless-pros-and-cons">
+  <BlogArticleLayout slug="satellite-internet-vs-fixed-wireless-pros-and-cons">
     <p>Satellite and fixed wireless are the two leading alternatives to fibre for rural properties. Both can work. Both have distinct trade-offs.</p>
 
     <p>Which one should you choose? It depends on what matters most: cost, speed, reliability, or latency.</p>
@@ -170,8 +141,6 @@ const SatelliteVsFixedWireless = () => (
 
     <p>No obligation, no site visit needed. Just your coordinates and 24 hours of analysis.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default SatelliteVsFixedWireless;

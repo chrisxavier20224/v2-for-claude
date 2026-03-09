@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Quote } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
@@ -168,55 +167,24 @@ const WBPowerServices = () => {
         </div>
       </Section>
 
-      <RelatedCaseStudies currentPath="/customers/wb-power-services" />
-
-      {/* Solutions Delivered */}
-      <Section size="large">
-        <div className="mx-auto max-w-3xl">
-          <div className="mt-12 pt-8 border-t border-border">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Solutions delivered</h3>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Integra SD-WAN
-              </Link>
-              <Link to="/connectivity/managed-sim-services" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors">
-                Managed SIM
-              </Link>
-            </div>
+            {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-12 border-t border-white/10">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
+              Integra SD-WAN
+              
+            </Link>
+            <Link to="/connectivity/managed-sim-services" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
+              Managed SIM
+              
+            </Link>
           </div>
         </div>
-      </Section>
-
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
-      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
-        <AnimatedSection>
-          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
-              Unlock the Power of Integra SD-WAN
-            </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base"
-                >
-                  <Link to="/contact">Check Availability</Link>
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button
-                  asChild
-                  variant="link"
-                  className="text-white hover:text-white/80 font-medium text-base"
-                >
-                  <Link to="/contact">Get In Touch</Link>
-                </Button>
-              </motion.div>
-            </div>
-          </div>
-        </AnimatedSection>
       </section>
+
+      <RelatedCaseStudies currentPath="/customers/wb-power-services" />
     </PageLayout>
   );
 };

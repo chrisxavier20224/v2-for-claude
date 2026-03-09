@@ -1,23 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Zap, Signal, Cable } from "lucide-react";
 
-const relatedServices = [
-  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
-  { name: "4G/5G Backup", url: "/connectivity/4g-5g-backup", icon: Signal },
-  { name: "Leased Lines", url: "/connectivity/leased-lines", icon: Cable },
-];
 
 const LoadBalancingVsBonding = () => (
-  <>
-    <SEO
-      title="Load Balancing vs Bonding"
-      description="Load balancing vs bonding for multiple internet connections: how each works, speed increases, and when to use each technology."
-      url="/blog/load-balancing-vs-bonding-whats-the-difference"
-      type="article"
-    />
-    <BlogArticleLayout slug="load-balancing-vs-bonding-whats-the-difference">
+  <BlogArticleLayout slug="load-balancing-vs-bonding-whats-the-difference">
     <p>Load balancing and bonding are both ways to use multiple connections simultaneously. But they work differently, and the difference matters for performance.</p>
 
     <p>Here's the honest breakdown.</p>
@@ -196,8 +181,6 @@ const LoadBalancingVsBonding = () => (
 
     <p>Most answer "no." That's why load balancing is the standard.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default LoadBalancingVsBonding;

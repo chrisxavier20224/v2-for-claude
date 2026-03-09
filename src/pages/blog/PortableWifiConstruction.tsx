@@ -1,23 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Zap, Hammer, Wifi } from "lucide-react";
 
-const relatedServices = [
-  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
-  { name: "Construction Sites", url: "/sectors/construction-sites", icon: Hammer },
-  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
-];
 
 const PortableWifiConstruction = () => (
-  <>
-    <SEO
-      title="Portable WiFi for Construction Sites"
-      description="Portable WiFi solutions for construction sites: bonded 4G routers, temporary installations, and safety cameras. Includes costs and recommendations."
-      url="/blog/portable-wifi-solutions-construction-sites"
-      type="article"
-    />
-    <BlogArticleLayout slug="portable-wifi-solutions-construction-sites">
+  <BlogArticleLayout slug="portable-wifi-solutions-construction-sites">
     <p>Construction sites need internet: site managers checking CAD files, crew communicating via phones and radios, automated systems monitoring equipment, safety cameras logging incidents.</p>
 
     <p>But construction sites move. You can't wait for a fixed broadband installation. You need portable WiFi that works today, moves tomorrow.</p>
@@ -236,8 +221,6 @@ const PortableWifiConstruction = () => (
 
     <p>We'll survey the site and send you a custom quote.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default PortableWifiConstruction;

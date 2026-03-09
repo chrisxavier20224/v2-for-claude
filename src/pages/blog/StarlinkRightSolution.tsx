@@ -1,37 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Satellite, Zap, Cable } from "lucide-react";
 
-const relatedServices = [
-  {
-    title: "Starlink Installation",
-    description: "Professional satellite internet installation and setup.",
-    icon: Satellite,
-    href: "/connectivity/starlink-installation",
-  },
-  {
-    title: "Integra SD-WAN",
-    description: "Software-defined networking for resilient connectivity.",
-    icon: Zap,
-    href: "/connectivity/integra-sd-wan",
-  },
-  {
-    title: "Leased Lines",
-    description: "Dedicated fibre connectivity for businesses.",
-    icon: Cable,
-    href: "/connectivity/leased-lines",
-  },
-];
 
 const StarlinkRightSolution = () => (
   <>
-    <SEO
-      title="Is Starlink Right for Your Business?"
-      description="Is Starlink the best internet solution for your business? Compare satellite speeds, latency, and reliability. Professional installation available."
-      url="/blog/starlink-is-it-the-right-solution-for-me"
-      type="article"
-    />
   <BlogArticleLayout slug="starlink-is-it-the-right-solution-for-me">
     <p>If you're considering Starlink as a solution for your home or business, proper setup is essential to ensure optimal performance. Our Starlink installation service is designed to take the hassle out of setup, providing you with professional guidance and support from experienced engineers.</p>
     <p>In the picturesque landscapes of rural UK, where traditional broadband services like Openreach are still playing catch-up, the advent of Starlink offers a glimmer of hope. But is it the ultimate solution for internet woes in these areas, or does it come with its own set of limitations?</p>
@@ -63,8 +34,6 @@ const StarlinkRightSolution = () => (
     <h2>Conclusion</h2>
     <p>Starlink is a revolutionary technology that has transformed connectivity for remote and rural areas. Whether it's the right solution for you depends on your specific needs, location, and how critical your internet connection is to your daily operations. For many, combining Starlink with SD-WAN represents the best of both worlds.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default StarlinkRightSolution;

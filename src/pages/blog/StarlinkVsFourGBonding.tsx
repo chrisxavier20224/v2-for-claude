@@ -1,37 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Satellite, Signal, Zap } from "lucide-react";
+import { Satellite } from "lucide-react";
 
-const relatedServices = [
-  {
-    title: "Starlink Installation",
-    description: "Professional satellite internet installation and setup.",
-    icon: Satellite,
-    href: "/connectivity/starlink-installation",
-  },
-  {
-    title: "4G/5G Backup",
-    description: "Mobile network failover for business continuity.",
-    icon: Signal,
-    href: "/connectivity/4g-5g-backup",
-  },
-  {
-    title: "Integra SD-WAN",
-    description: "Software-defined networking for resilient connectivity.",
-    icon: Zap,
-    href: "/connectivity/integra-sd-wan",
-  },
-];
 
 const StarlinkVsFourGBonding = () => (
   <>
-    <SEO
-      title="Starlink vs 4G Bonding Comparison"
-      description="Starlink vs 4G bonding: speed, latency, cost, and reliability compared. Which rural broadband technology is right for your business?"
-      url="/blog/starlink-vs-4g-bonding-honest-comparison"
-      type="article"
-    />
   <BlogArticleLayout slug="starlink-vs-4g-bonding-honest-comparison">
     <p>Starlink vs 4G bonding (SD-WAN) is the biggest rural broadband decision right now. Both can work. Both have real trade-offs.</p>
 
@@ -167,8 +139,6 @@ const StarlinkVsFourGBonding = () => (
 
     <p>For consumers? Starlink is fine, cheaper, and simpler.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default StarlinkVsFourGBonding;

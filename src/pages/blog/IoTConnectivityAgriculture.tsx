@@ -1,22 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Satellite, Leaf, Zap } from "lucide-react";
 
-const relatedServices = [
-  { name: "Starlink Installation", url: "/connectivity/starlink-installation", icon: Satellite },
-  { name: "Rural SMEs", url: "/sectors/rural-smes", icon: Leaf },
-  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
-];
 
 const IoTConnectivityAgriculture = () => (
   <>
-    <SEO
-      title="IoT Connectivity for UK Agriculture"
-      description="IoT solutions for UK farms: soil sensors, livestock tracking, weather monitoring. Fast reliable connectivity for automated agriculture systems."
-      url="/blog/iot-connectivity-agriculture-uk"
-      type="article"
-    />
   <BlogArticleLayout slug="iot-connectivity-agriculture-uk">
     <p>Modern farming runs on data. Soil sensors, water monitors, livestock trackers, weather stations, and automated gates all send information back to a central system.</p>
 
@@ -262,8 +248,6 @@ const IoTConnectivityAgriculture = () => (
 
     <p>We'll design a connectivity plan with costs.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default IoTConnectivityAgriculture;

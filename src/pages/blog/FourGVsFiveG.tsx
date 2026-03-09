@@ -1,22 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Signal, Zap, BarChart3 } from "lucide-react";
 
-const relatedServices = [
-  { name: "4G/5G Backup", url: "/connectivity/4g-5g-backup", icon: Signal },
-  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
-  { name: "Pricing", url: "/pricing", icon: BarChart3 },
-];
 
 const FourGVsFiveG = () => (
   <>
-    <SEO
-      title="4G vs 5G Broadband for Business"
-      description="4G vs 5G comparison: speeds, latency, coverage, and cost. Which mobile broadband technology suits your business connectivity needs?"
-      url="/blog/4g-vs-5g-broadband-which-is-better-for-business"
-      type="article"
-    />
   <BlogArticleLayout slug="4g-vs-5g-broadband-which-is-better-for-business">
     <p>The race between 4G and 5G broadband is heating up. If you're a rural business waiting for fibre that BT promised you years ago, you might be looking at 4G or 5G as a bridge solution — or even a permanent replacement.</p>
 
@@ -108,8 +94,6 @@ const FourGVsFiveG = () => (
 
     <p>Before you decide, get a proper site survey. Send us your coordinates from Google Maps, and we'll map your property to nearby towers and tell you exactly what's possible.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default FourGVsFiveG;

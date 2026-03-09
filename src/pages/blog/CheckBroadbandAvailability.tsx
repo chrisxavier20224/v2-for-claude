@@ -1,22 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Zap, Cable, Search } from "lucide-react";
 
-const relatedServices = [
-  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
-  { name: "Leased Lines", url: "/connectivity/leased-lines", icon: Cable },
-  { name: "Availability Checker", url: "/availability-checker", icon: Search },
-];
 
 const CheckBroadbandAvailability = () => (
   <>
-    <SEO
-      title="Check Broadband Availability in Rural Areas"
-      description="How to check what broadband is available in rural areas. Beyond BT and Openreach: Starlink, 4G, fixed wireless, and bonding options."
-      url="/blog/how-to-check-broadband-availability-rural-areas"
-      type="article"
-    />
   <BlogArticleLayout slug="how-to-check-broadband-availability-rural-areas">
     <p>You've got a postcode and a property, but you don't know what broadband options are actually available. BT's checker says "no fibre." Openreach says "4-6 years away." Starlink might work, but you're not sure.</p>
 
@@ -158,8 +144,6 @@ const CheckBroadbandAvailability = () => (
       <li>You'll finally have the truth about what's actually available</li>
     </ol>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default CheckBroadbandAvailability;

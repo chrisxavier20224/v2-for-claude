@@ -1,22 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Wifi, Radio, Building2 } from "lucide-react";
+import { Radio } from "lucide-react";
 
-const relatedServices = [
-  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
-  { name: "Wireless Distribution", url: "/connectivity/wireless-distribution", icon: Radio },
-  { name: "Business Parks", url: "/sectors/business-parks", icon: Building2 },
-];
 
 const MultiBuildingWifi = () => (
   <>
-    <SEO
-      title="Multi-Building WiFi for Rural Properties"
-      description="WiFi solutions for multiple buildings on rural properties. Point-to-point wireless, mesh networks, and wired options. No cable digging needed."
-      url="/blog/multi-building-wifi-rural-properties"
-      type="article"
-    />
   <BlogArticleLayout slug="multi-building-wifi-rural-properties">
     <p>Your main house has WiFi. But your barn is out of range. Your office building (300m away) has no signal. Your guest cottage needs connectivity but wiring 300m of cable is crazy expensive.</p>
 
@@ -223,8 +210,6 @@ const MultiBuildingWifi = () => (
 
     <p>We'll design a mesh system and quote installation.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default MultiBuildingWifi;

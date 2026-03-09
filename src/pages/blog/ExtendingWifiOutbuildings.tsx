@@ -1,22 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
-import { Wifi, Radio, ArrowLeftRight } from "lucide-react";
+import { Radio } from "lucide-react";
 
-const relatedServices = [
-  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
-  { name: "Wireless Distribution", url: "/connectivity/wireless-distribution", icon: Radio },
-  { name: "Integra Bridge", url: "/connectivity/integra-bridge", icon: ArrowLeftRight },
-];
 
 const ExtendingWifiOutbuildings = () => (
   <>
-    <SEO
-      title="Extending WiFi to Outbuildings"
-      description="WiFi solutions for outbuildings: point-to-point wireless, mesh networks, and structured cabling. Home office and guest house connectivity."
-      url="/blog/extending-wi-fi-and-internet-to-outbuildings"
-      type="article"
-    />
   <BlogArticleLayout slug="extending-wi-fi-and-internet-to-outbuildings">
     <p>Modern homes often include outbuildings such as home offices, gyms, workshops, or guest accommodations. One common challenge is ensuring reliable internet and Wi-Fi in these spaces, especially when they are far from the main house.</p>
     <p>At Integra Networks, we deploy the same technology solutions for residential properties that we use for larger commercial projects like business parks, festival sites, and rural estates. The principles remain the same: delivering high-speed internet with zero loss of performance, even when physical cabling isn't possible.</p>
@@ -75,8 +62,6 @@ const ExtendingWifiOutbuildings = () => (
     <p>Extending Wi-Fi to outbuildings doesn't need to be a challenge. From Wi-Fi extenders and mesh networks to point-to-point radio links and structured cabling, there are solutions for every property type and budget.</p>
     <p>Whether you're boosting Wi-Fi to a guesthouse, setting up internet in a home office, or connecting an outdoor workshop, the right approach ensures seamless connectivity and peace of mind.</p>
     </BlogArticleLayout>
-    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
-  </>
 );
 
 export default ExtendingWifiOutbuildings;
