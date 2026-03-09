@@ -165,10 +165,12 @@ const NetworkInfrastructure = () => {
               const Icon = service.icon;
               return (
                 <motion.div key={service.title} variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 hover:shadow-lg hover:shadow-primary/5 transition-shadow duration-300">
-                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                    <Icon className="h-6 w-6 text-primary" />
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="h-4.5 w-4.5 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-medium text-foreground">{service.title}</h3>
                   </div>
-                  <h3 className="text-lg font-medium text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
                 </motion.div>
               );
