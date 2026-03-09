@@ -158,7 +158,7 @@ const Homeworkers = () => {
                   </span>
                 </Link>
                 <a
-                  href="https://www.reviews.io/company/integra-networks"
+                  href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-white/15 transition-all group"
@@ -389,7 +389,7 @@ const Homeworkers = () => {
               Over 1,000 remote workers now rely on Integra for fast, reliable internet wherever they are.
             </p>
             <a
-              href="https://www.reviews.io/company/integra-networks"
+              href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
@@ -445,7 +445,7 @@ const Homeworkers = () => {
                 className="bg-primary text-white hover:bg-primary/90 font-medium h-12 px-8 text-base"
               >
                 <a
-                  href="https://www.reviews.io/company/integra-networks"
+                  href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
