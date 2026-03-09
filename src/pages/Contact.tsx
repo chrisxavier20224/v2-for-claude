@@ -3,16 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Headphones, Loader2, CheckCircle, Phone, Clock, ShieldCheck } from "lucide-react";
+import { Mail, Headphones, Loader2, CheckCircle, Clock, Phone, ShieldCheck, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import PageLayout from "@/components/layout/PageLayout";
-import Section from "@/components/shared/Section";
 import EyebrowLabel from "@/components/shared/EyebrowLabel";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
-import DataFlowHero from "@/components/shared/DataFlowHero";
 import SEO from "@/components/shared/SEO";
+import LazyIframe from "@/components/shared/LazyIframe";
 import { trackEvent } from "@/components/shared/Analytics";
 
 const Contact = () => {
@@ -59,61 +58,78 @@ const Contact = () => {
     <PageLayout hideCTA>
       <SEO
         title="Contact Us"
-        description="Get in touch with Integra Networks. Whether you need connectivity solutions, managed services, or just want to discuss your requirements — we're here to help."
+        description="Get in touch with Integra Networks. SD-WAN, leased lines, business WiFi, unified comms, network infrastructure — we design, install, and manage it all."
         keywords="contact Integra Networks, connectivity consultation, managed services, business broadband"
         url="/contact"
       />
 
-      {/* Hero — StoryBrand: empathise with the problem, position as guide */}
-      <section className="relative bg-surface-dark overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
-        <DataFlowHero />
-        <div className="relative z-10 mx-auto max-w-6xl px-6">
-          <div className="grid gap-16 lg:grid-cols-2 items-start">
-            {/* Left: copy */}
+      {/* Hero + Form */}
+      <section className="relative bg-surface-dark overflow-hidden">
+        {/* Satellite map background — faded */}
+        <LazyIframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9929.639613713497!2d-0.08502072393676477!3d51.52527677181819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca8e4b2e7f7%3A0x5e8e6f7d4b9b7c1a!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE%2C%20UK!5e1!3m2!1sen!2sus!4v1704537600000!5m2!1sen!2sus"
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          style={{ border: 0, scale: "1.5", filter: "grayscale(1) brightness(0.15)" }}
+          title="Map background"
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/95 to-surface-dark/70" />
+
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-32 pb-20 md:pt-40 md:pb-28">
+          <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-start">
+
+            {/* Left: copy + contact info */}
             <AnimatedSection>
-              <EyebrowLabel className="text-primary">Get Connected</EyebrowLabel>
+              <EyebrowLabel>Let's Talk</EyebrowLabel>
               <h1 className="mb-6 text-4xl md:text-5xl font-bold text-surface-dark-foreground tracking-tight leading-tight">
-                Stop losing money to bad internet.
+                Tell us what you need. We'll make it happen.
               </h1>
-              <p className="mb-6 text-lg text-surface-dark-muted leading-relaxed">
-                Every day without reliable connectivity costs you productivity, customers, and peace of mind. Tell us what you're dealing with and we'll recommend the right solution — usually installed within 14 days.
+              <p className="mb-8 text-lg text-surface-dark-muted leading-relaxed">
+                SD-WAN, leased lines, business WiFi, unified comms, CCTV, network infrastructure — we design, install, and manage it all. Tell us what you're dealing with and we'll come back with a plan.
               </p>
 
               {/* Trust signals */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                  <Clock className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-sm text-surface-dark-muted">Response within 24hrs</span>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
+                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3">
+                  <Clock className="h-4 w-4 text-primary flex-shrink-0" />
+                  <span className="text-sm text-surface-dark-muted">Reply within 24hrs</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3">
+                  <Phone className="h-4 w-4 text-primary flex-shrink-0" />
                   <span className="text-sm text-surface-dark-muted">Real UK engineers</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                  <ShieldCheck className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-sm text-surface-dark-muted">No obligation quote</span>
+                <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3">
+                  <ShieldCheck className="h-4 w-4 text-primary flex-shrink-0" />
+                  <span className="text-sm text-surface-dark-muted">No obligation</span>
                 </div>
               </div>
 
-              {/* Contact methods */}
-              <div className="mt-10 space-y-4">
-                <h3 className="text-sm font-semibold text-surface-dark-foreground uppercase tracking-wider">Other ways to reach us</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="mailto:connect@integra-networks.co.uk" className="flex items-center gap-3 text-sm text-surface-dark-muted hover:text-primary transition-colors">
+              {/* Direct contact */}
+              <div className="space-y-4 border-t border-white/10 pt-8">
+                <p className="text-xs font-semibold text-surface-dark-muted uppercase tracking-widest">Prefer to reach out directly?</p>
+                <div className="space-y-3">
+                  <a href="mailto:connect@integra-networks.co.uk" className="flex items-center gap-3 text-surface-dark-muted hover:text-primary transition-colors">
                     <Mail className="h-4 w-4 text-primary" />
-                    connect@integra-networks.co.uk
+                    <span className="text-sm">connect@integra-networks.co.uk</span>
                   </a>
-                  <a href="tel:02033887111" className="flex items-center gap-3 text-sm text-surface-dark-muted hover:text-primary transition-colors">
+                  <a href="tel:02033887111" className="flex items-center gap-3 text-surface-dark-muted hover:text-primary transition-colors">
                     <Headphones className="h-4 w-4 text-primary" />
-                    0203 388 7111
+                    <span className="text-sm">0203 388 7111</span>
                   </a>
+                  <div className="flex items-center gap-3 text-surface-dark-muted">
+                    <MapPin className="h-4 w-4 text-primary" />
+                    <span className="text-sm">86–90 Paul Street, London, EC2A 4NE</span>
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
 
-            {/* Right: form */}
+            {/* Right: form card */}
             <AnimatedSection delay={0.15}>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 md:p-10">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 md:p-10 shadow-2xl shadow-black/20">
+                <h2 className="text-lg font-semibold text-surface-dark-foreground mb-1">Send us a message</h2>
+                <p className="text-sm text-surface-dark-muted mb-6">We'll get back to you within one business day.</p>
+
                 {isSubmitted ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center">
                     <CheckCircle className="h-12 w-12 text-primary mb-4" />
@@ -123,22 +139,22 @@ const Contact = () => {
                     </p>
                   </div>
                 ) : (
-                  <form className="space-y-5" onSubmit={handleSubmit}>
-                    <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
+                  <form className="space-y-4" onSubmit={handleSubmit}>
+                    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                       <div>
-                        <Label htmlFor="firstName" className="text-sm font-medium text-surface-dark-foreground">
-                          First Name
+                        <Label htmlFor="firstName" className="text-xs font-medium text-surface-dark-muted">
+                          First Name *
                         </Label>
                         <Input
                           id="firstName"
                           placeholder="First name"
                           value={form.firstName}
                           onChange={handleChange}
-                          className="mt-2 h-12 bg-white/[0.05] border-white/10 text-surface-dark-foreground placeholder:text-surface-dark-muted/50 focus:border-primary"
+                          className="mt-1.5 h-11 bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 focus:border-primary focus:ring-primary/20"
                         />
                       </div>
                       <div>
-                        <Label htmlFor="lastName" className="text-sm font-medium text-surface-dark-foreground">
+                        <Label htmlFor="lastName" className="text-xs font-medium text-surface-dark-muted">
                           Last Name
                         </Label>
                         <Input
@@ -146,13 +162,13 @@ const Contact = () => {
                           placeholder="Last name"
                           value={form.lastName}
                           onChange={handleChange}
-                          className="mt-2 h-12 bg-white/[0.05] border-white/10 text-surface-dark-foreground placeholder:text-surface-dark-muted/50 focus:border-primary"
+                          className="mt-1.5 h-11 bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 focus:border-primary focus:ring-primary/20"
                         />
                       </div>
                     </div>
                     <div>
-                      <Label htmlFor="email" className="text-sm font-medium text-surface-dark-foreground">
-                        Work Email
+                      <Label htmlFor="email" className="text-xs font-medium text-surface-dark-muted">
+                        Work Email *
                       </Label>
                       <Input
                         id="email"
@@ -160,11 +176,11 @@ const Contact = () => {
                         placeholder="you@company.com"
                         value={form.email}
                         onChange={handleChange}
-                        className="mt-2 h-12 bg-white/[0.05] border-white/10 text-surface-dark-foreground placeholder:text-surface-dark-muted/50 focus:border-primary"
+                        className="mt-1.5 h-11 bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 focus:border-primary focus:ring-primary/20"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="company" className="text-sm font-medium text-surface-dark-foreground">
+                      <Label htmlFor="company" className="text-xs font-medium text-surface-dark-muted">
                         Company
                       </Label>
                       <Input
@@ -172,11 +188,11 @@ const Contact = () => {
                         placeholder="Company name"
                         value={form.company}
                         onChange={handleChange}
-                        className="mt-2 h-12 bg-white/[0.05] border-white/10 text-surface-dark-foreground placeholder:text-surface-dark-muted/50 focus:border-primary"
+                        className="mt-1.5 h-11 bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 focus:border-primary focus:ring-primary/20"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="fleetSize" className="text-sm font-medium text-surface-dark-foreground">
+                      <Label htmlFor="fleetSize" className="text-xs font-medium text-surface-dark-muted">
                         Phone Number
                       </Label>
                       <Input
@@ -184,26 +200,26 @@ const Contact = () => {
                         placeholder="Your phone number (optional)"
                         value={form.fleetSize}
                         onChange={handleChange}
-                        className="mt-2 h-12 bg-white/[0.05] border-white/10 text-surface-dark-foreground placeholder:text-surface-dark-muted/50 focus:border-primary"
+                        className="mt-1.5 h-11 bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 focus:border-primary focus:ring-primary/20"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="message" className="text-sm font-medium text-surface-dark-foreground">
-                        What are you dealing with?
+                      <Label htmlFor="message" className="text-xs font-medium text-surface-dark-muted">
+                        How can we help?
                       </Label>
                       <Textarea
                         id="message"
-                        placeholder="Tell us about your connectivity challenges — slow speeds, no fibre, temporary site, remote workers..."
+                        placeholder="Tell us what you need — connectivity, WiFi, infrastructure, or all of the above..."
                         value={form.message}
                         onChange={handleChange}
-                        className="mt-2 bg-white/[0.05] border-white/10 text-surface-dark-foreground placeholder:text-surface-dark-muted/50 focus:border-primary"
-                        rows={4}
+                        className="mt-1.5 bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 focus:border-primary focus:ring-primary/20"
+                        rows={3}
                       />
                     </div>
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full bg-primary text-white hover:bg-primary/90 h-12 text-base font-semibold"
+                      className="w-full bg-primary text-white hover:bg-primary/90 h-12 text-base font-semibold shadow-lg"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -211,9 +227,9 @@ const Contact = () => {
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                           Sending...
                         </>
-                      ) : "Get My Free Quote"}
+                      ) : "Get a Free Quote"}
                     </Button>
-                    <p className="text-xs text-surface-dark-muted/60 text-center">
+                    <p className="text-xs text-surface-dark-muted/50 text-center">
                       No contracts. No obligation. If we're not the right fit, we'll tell you.
                     </p>
                   </form>
@@ -226,6 +242,30 @@ const Contact = () => {
 
       {/* Customer logos — social proof */}
       <CustomerLogoBar />
+
+      {/* Map section */}
+      <section className="bg-surface-dark border-t border-white/10">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <AnimatedSection>
+            <div className="text-center mb-8">
+              <p className="text-sm text-surface-dark-muted">Based in London, serving businesses across the UK</p>
+            </div>
+            <div className="rounded-xl overflow-hidden border border-white/10 h-72">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.08502072393676477!3d51.52527677181819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca8e4b2e7f7%3A0x5e8e6f7d4b9b7c1a!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE%2C%20UK!5e0!3m2!1sen!2sus!4v1704537600000!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Integra Networks Office Location"
+                className="grayscale contrast-125"
+              />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
     </PageLayout>
   );
 };
