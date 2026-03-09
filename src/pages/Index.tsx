@@ -185,7 +185,7 @@ const Index = () => {
                 The opposite of waiting 8 weeks for BT.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-                We connect businesses and remote workers where traditional broadband fails. 100+ installs, 99% UK coverage, real engineers on every call.
+                We connect businesses and remote workers where traditional broadband fails. 99% UK coverage, average 14-day install, real engineers on every call.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
