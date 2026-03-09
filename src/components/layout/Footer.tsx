@@ -10,7 +10,7 @@ const connectivityLinks = [
   { label: "Leased Lines", path: "/connectivity/leased-lines" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
   { label: "SoGEA Broadband", path: "/connectivity/sogea" },
-  { label: "Starlink Installation", path: "/connectivity/starlink-installation" },
+  { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation" },
   { label: "Starlink B2B", path: "/connectivity/starlink-b2b" },
 ];
 

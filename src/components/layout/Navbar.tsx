@@ -9,7 +9,7 @@ import integraLogoWhite from "@/assets/integra-logo-white.png";
 const fibreAlternativeLinks = [
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
-  { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite Internet Setup" },
+  { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite + 4G/5G Bonded" },
   { label: "Starlink B2B", path: "/connectivity/starlink-b2b", icon: Satellite, tagline: "Managed Satellite for Business" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
 ];
