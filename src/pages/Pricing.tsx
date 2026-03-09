@@ -7,6 +7,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -151,6 +152,61 @@ const faqs = [
   },
 ];
 
+const faqSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Are there any hidden fees?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. The price you see is the price you pay — plus VAT. Installation fee is quoted upfront. Hardware is included. No surprise charges for support or monitoring. If something's extra, we tell you before we install it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need to sign a long contract?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. All our packages are month-to-month. You can cancel anytime with 30 days notice. We're confident in our service, so we don't need you locked in.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if I'm not happy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You have 14 days from installation to request a full refund — no questions asked. We also back all services with uptime SLAs. If we drop below the guaranteed uptime, you get a credit on your invoice.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who owns the hardware?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Integra owns all hardware. This means no leasing fees, and we maintain everything for free. If equipment breaks, we replace it. You're not on the hook for expensive hardware costs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's included in the installation fee?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Everything. Site survey, hardware delivery, installation by our engineer, configuration, and testing. You'll be shown exactly what the fee covers before we begin. After installation, all engineer visits are free for the life of your contract.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I upgrade my package later?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, seamlessly. Start with Integra SD-WAN, then upgrade to Integra Pro or a leased line as your business grows. We handle the migration without service disruption. No penalty for upgrading.",
+      },
+    },
+  ],
+};
+
 const Pricing = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -162,6 +218,7 @@ const Pricing = () => {
         keywords="pricing, SD-WAN pricing, leased line pricing, business broadband cost, connectivity pricing"
         url="/pricing"
       />
+      <SchemaMarkup data={faqSchemaData} />
 
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden -mt-20">

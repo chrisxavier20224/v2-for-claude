@@ -7,6 +7,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
@@ -141,6 +142,56 @@ const relatedServices = [
   },
 ];
 
+const sdwanServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Integra SD-WAN",
+  provider: {
+    "@type": "Organization",
+    name: "Integra Networks",
+    url: "https://integra-networks.co.uk",
+  },
+  description: "Bonded 4G/5G connectivity delivering fibre-like speeds up to 400Mbps without requiring fixed fibre infrastructure. Installed in under 14 days with 99.5% uptime SLA.",
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  serviceType: "Managed Network Connectivity",
+  url: "https://integra-networks.co.uk/connectivity/integra-sdwan",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "GBP",
+    offerCount: "5",
+    lowPrice: "99",
+    highPrice: "400",
+  },
+};
+
+const sdwanBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://integra-networks.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Integra SD-WAN",
+      item: "https://integra-networks.co.uk/connectivity/integra-sdwan",
+    },
+  ],
+};
+
 const IntegraSDWAN = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -152,6 +203,8 @@ const IntegraSDWAN = () => {
         keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to fibre, business connectivity, fast broadband"
         url="/connectivity/integra-sdwan"
       />
+      <SchemaMarkup data={sdwanServiceSchema} />
+      <SchemaMarkup data={sdwanBreadcrumbSchema} />
 
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">

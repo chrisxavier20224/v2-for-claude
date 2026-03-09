@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/leased-lines-hero.jpg";
@@ -69,6 +70,56 @@ const relatedServices = [
   },
 ];
 
+const leasedLineServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Leased Lines",
+  provider: {
+    "@type": "Organization",
+    name: "Integra Networks",
+    url: "https://integra-networks.co.uk",
+  },
+  description: "Dedicated fibre leased lines with symmetric upload and download speeds up to 10Gbps. Private circuit with 99.995% SLA. From 100Mbps to 10Gbps bespoke pricing.",
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  serviceType: "Dedicated Internet Access",
+  url: "https://integra-networks.co.uk/connectivity/leased-lines",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "GBP",
+    lowPrice: "500",
+    highPrice: "2000",
+    pricingType: "Negotiated",
+  },
+};
+
+const leasedLineBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://integra-networks.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Leased Lines",
+      item: "https://integra-networks.co.uk/connectivity/leased-lines",
+    },
+  ],
+};
+
 const LeasedLines = () => {
   return (
     <PageLayout>
@@ -78,6 +129,8 @@ const LeasedLines = () => {
         keywords="leased lines, business fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
         url="/connectivity/leased-lines"
       />
+      <SchemaMarkup data={leasedLineServiceSchema} />
+      <SchemaMarkup data={leasedLineBreadcrumbSchema} />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">

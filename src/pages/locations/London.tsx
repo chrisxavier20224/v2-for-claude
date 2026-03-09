@@ -7,12 +7,34 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+const londonLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Integra Networks - London",
+  description: "Business connectivity solutions for construction sites, offices and temporary locations across London. Fast deployment, 4G/5G bonding, site cabins.",
+  areaServed: {
+    "@type": "City",
+    name: "London",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3rd Floor, 86-90 Paul Street",
+    addressLocality: "London",
+    postalCode: "EC2A 4NE",
+    addressCountry: "GB",
+  },
+  telephone: "+44-330-043-4904",
+  email: "sales@integra-networks.co.uk",
+  url: "https://integra-networks.co.uk",
+};
 
 const London = () => {
   const faqs = [
@@ -46,6 +68,7 @@ const London = () => {
         keywords="construction broadband London, temporary internet, site broadband, Canary Wharf, City broadband, Croydon, Stratford"
         url="/locations/construction-site-broadband-london"
       />
+      <SchemaMarkup data={londonLocalBusinessSchema} />
 
       {/* Hero */}
       <section className="relative -mt-[73px] pt-[73px] bg-surface-dark">

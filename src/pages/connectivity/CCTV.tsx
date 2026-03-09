@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroImg from "@/assets/sectors/business-parks-hero.jpg";
@@ -55,6 +56,54 @@ const checklistItem = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
 
+const cctvServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "CCTV as a Service",
+  provider: {
+    "@type": "Organization",
+    name: "Integra Networks",
+    url: "https://integra-networks.co.uk",
+  },
+  description: "Managed CCTV surveillance service for warehouses, ports, construction sites and business parks. Commercial-grade cameras with night vision, PoE network infrastructure, cloud recording and remote access.",
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  serviceType: "Security Camera Installation",
+  url: "https://integra-networks.co.uk/connectivity/cctv",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "GBP",
+    lowPrice: "1500",
+  },
+};
+
+const cctvBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://integra-networks.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "CCTV as a Service",
+      item: "https://integra-networks.co.uk/connectivity/cctv",
+    },
+  ],
+};
+
 const CCTV = () => {
   return (
     <PageLayout>
@@ -64,6 +113,8 @@ const CCTV = () => {
         keywords="CCTV service, managed CCTV, warehouse security cameras, business CCTV, port security, commercial CCTV, night vision cameras, cloud CCTV monitoring"
         url="/connectivity/cctv"
       />
+      <SchemaMarkup data={cctvServiceSchema} />
+      <SchemaMarkup data={cctvBreadcrumbSchema} />
 
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">

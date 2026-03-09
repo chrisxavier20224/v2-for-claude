@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/business-wifi-hero.jpg";
@@ -64,6 +65,54 @@ const relatedServices = [
   },
 ];
 
+const businessWifiServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Business WiFi",
+  provider: {
+    "@type": "Organization",
+    name: "Integra Networks",
+    url: "https://integra-networks.co.uk",
+  },
+  description: "Professional WiFi network design and installation for offices, warehouses and multi-building sites. Enterprise-grade mesh networks monitored 24/7 via Integra Cloud.",
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  serviceType: "Managed WiFi Service",
+  url: "https://integra-networks.co.uk/connectivity/business-wifi",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "GBP",
+    lowPrice: "400",
+  },
+};
+
+const businessWifiBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://integra-networks.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Business WiFi",
+      item: "https://integra-networks.co.uk/connectivity/business-wifi",
+    },
+  ],
+};
+
 const BusinessWifi = () => {
   return (
     <PageLayout>
@@ -73,6 +122,8 @@ const BusinessWifi = () => {
         keywords="business WiFi, commercial WiFi, public WiFi, guest WiFi, event WiFi, WiFi survey, managed WiFi"
         url="/connectivity/business-wifi"
       />
+      <SchemaMarkup data={businessWifiServiceSchema} />
+      <SchemaMarkup data={businessWifiBreadcrumbSchema} />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">

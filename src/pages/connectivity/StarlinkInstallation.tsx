@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/starlink-hero.png";
@@ -47,6 +48,55 @@ const relatedServices = [
   },
 ];
 
+const starlinkServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Starlink Installation and Support",
+  provider: {
+    "@type": "Organization",
+    name: "Integra Networks",
+    url: "https://integra-networks.co.uk",
+  },
+  description: "Professional Starlink installation with 4G/5G failover to eliminate rain drops and service interruptions. Static IP support and SD-WAN bonding available.",
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  serviceType: "Satellite Internet Installation",
+  url: "https://integra-networks.co.uk/connectivity/starlink-installation",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "GBP",
+    lowPrice: "950",
+    highPrice: "1500",
+  },
+};
+
+const starlinkBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://integra-networks.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Starlink Installation",
+      item: "https://integra-networks.co.uk/connectivity/starlink-installation",
+    },
+  ],
+};
+
 const StarlinkInstallation = () => {
   return (
     <PageLayout>
@@ -56,6 +106,8 @@ const StarlinkInstallation = () => {
         keywords="Starlink installation, Starlink installer, Starlink SD-WAN, Starlink failover, Starlink static IP, satellite internet, Starlink 4G/5G backup"
         url="/connectivity/starlink-installation"
       />
+      <SchemaMarkup data={starlinkServiceSchema} />
+      <SchemaMarkup data={starlinkBreadcrumbSchema} />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">

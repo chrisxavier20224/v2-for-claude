@@ -6,6 +6,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import { ArrowRight, Lightbulb, Users, Headphones } from "lucide-react";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
@@ -111,6 +112,32 @@ const sectors = [
   { title: "Business Parks", img: businessParkImg, link: "/sectors/business-parks" },
 ];
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Integra Networks",
+  url: "https://integra-networks.co.uk",
+  logo: "https://integra-networks.co.uk/lovable-uploads/integra-logo.png",
+  description: "UK business connectivity provider specialising in SD-WAN, leased lines, and managed network solutions",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3rd Floor, 86-90 Paul Street",
+    addressLocality: "London",
+    postalCode: "EC2A 4NE",
+    addressCountry: "GB",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+44-330-043-4904",
+    contactType: "sales",
+    areaServed: "GB",
+    email: "sales@integra-networks.co.uk",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/integra-networks"
+  ],
+};
+
 const Index = () => {
   return (
     <>
@@ -121,6 +148,7 @@ const Index = () => {
         url="/"
       />
       <StructuredData />
+      <SchemaMarkup data={organizationSchema} />
       <PageLayout>
         {/* ── HERO ──────────────────────────────────────────────────────── */}
         <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
