@@ -25,7 +25,7 @@ const RelatedContent = ({ stories = [], sectors = [], dark = false }: RelatedCon
             <p className={`text-xs font-semibold uppercase tracking-widest ${dark ? "text-primary" : "text-primary"} mb-3`}>
               Customer Stories
             </p>
-            <h3 className={`text-xl md:text-2xl font-bold ${dark ? "text-surface-dark-foreground" : "text-foreground"} mb-8`}>
+            <h3 className={`text-heading-1 md:text-display-sm ${dark ? "text-surface-dark-foreground" : "text-foreground"} mb-8`}>
               See how businesses like yours solved it
             </h3>
             <div className={`grid gap-6 ${stories.length === 1 ? "grid-cols-1 max-w-2xl" : "grid-cols-1 md:grid-cols-2"}`}>
@@ -43,7 +43,7 @@ const RelatedContent = ({ stories = [], sectors = [], dark = false }: RelatedCon
               <p className={`text-xs font-semibold uppercase tracking-widest ${dark ? "text-primary" : "text-primary"} mb-3`}>
                 Related Sectors
               </p>
-              <h3 className={`text-xl md:text-2xl font-bold ${dark ? "text-surface-dark-foreground" : "text-foreground"} mb-8`}>
+              <h3 className={`text-heading-1 md:text-display-sm ${dark ? "text-surface-dark-foreground" : "text-foreground"} mb-8`}>
                 We work with businesses like yours
               </h3>
               <div className={`grid gap-6 ${
