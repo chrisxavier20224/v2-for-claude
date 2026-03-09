@@ -67,7 +67,8 @@ const features = [
     eyebrow: "Lightning Fast Uploads",
     title: "100Mbps+ Upload Speeds",
     description: "Upload large CAD files, construction plans, and designs in minutes — not hours. 100Mbps+ upload is significantly faster than Starlink's 10-20Mbps.",
-    img: null,
+    img: aerialImg,
+    imgAlt: "SD-WAN aerial connectivity infrastructure",
     reverse: true,
   },
   {
@@ -75,7 +76,8 @@ const features = [
     eyebrow: "Seamless IP Integration",
     title: "Static IP for CCTV, VPN & More",
     description: "Static IPs available from £10/month on any tier. Perfect for CCTV, VPN, firewalls, and remote access.",
-    img: null,
+    img: stableImg,
+    imgAlt: "Stable connectivity for CCTV and VPN",
     reverse: false,
   },
 ];
