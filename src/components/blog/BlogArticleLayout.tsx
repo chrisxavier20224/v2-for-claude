@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
-import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
@@ -29,9 +27,8 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
         url={`/blog/${post.slug}`}
       />
 
-      {/* Full-bleed Hero with image behind navbar */}
+      {/* Full-bleed Hero */}
       <section className="relative -mt-[73px] pt-[73px]">
-        {/* Background image */}
         <div className="absolute inset-0">
           <img
             src={post.image}
@@ -39,7 +36,6 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
             className="w-full h-full object-cover"
             loading="eager"
           />
-          {/* Multi-stop gradient overlay for legibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         </div>
 
@@ -65,32 +61,46 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
         </div>
       </section>
 
-      {/* Article Content with proper prose styling */}
-      <Section size="large">
-        <div className="mx-auto max-w-3xl prose prose-lg prose-slate dark:prose-invert
-          prose-headings:font-normal prose-headings:tracking-tight
-          prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
-          prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-          prose-h4:text-lg prose-h4:mt-6 prose-h4:mb-2
-          prose-p:text-muted-foreground prose-p:leading-relaxed
-          prose-li:text-muted-foreground
-          prose-strong:text-foreground prose-strong:font-semibold
-          prose-ul:my-4 prose-ol:my-4
-          prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-        ">
-          {children}
+      {/* Article Content */}
+      <section className="bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          {/* Reading time badge */}
+          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-10 pb-8 border-b border-border">
+            <Clock className="h-4 w-4" />
+            <span>{post.category}</span>
+            <span className="text-border">·</span>
+            <span>{post.date}</span>
+          </div>
+
+          {/* Prose content */}
+          <div className="prose prose-lg prose-slate dark:prose-invert max-w-none
+            prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-foreground
+            prose-h2:text-xl prose-h2:md:text-2xl prose-h2:mt-14 prose-h2:mb-5 prose-h2:pt-8 prose-h2:border-t prose-h2:border-border/50
+            prose-h3:text-lg prose-h3:md:text-xl prose-h3:mt-8 prose-h3:mb-3
+            prose-h4:text-base prose-h4:mt-6 prose-h4:mb-2
+            prose-p:text-muted-foreground prose-p:leading-[1.8] prose-p:text-base
+            prose-li:text-muted-foreground prose-li:leading-[1.8]
+            prose-strong:text-foreground prose-strong:font-semibold
+            prose-ul:my-5 prose-ol:my-5
+            prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+            prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:not-italic
+            prose-img:rounded-xl prose-img:shadow-lg
+            prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal
+          ">
+            {children}
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Related Posts */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
               Continue Reading
             </p>
-            <h2 className="text-2xl md:text-3xl font-normal text-surface-dark-foreground mb-10">
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-10">
               More from the Blog
             </h2>
           </AnimatedSection>
@@ -101,7 +111,7 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
                 to={`/blog/${related.slug}`}
                 className="group block"
               >
-                <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 hover:border-primary/30 transition-colors duration-300">
+                <div className="rounded-xl overflow-hidden border border-white/10 bg-white/[0.03] hover:border-primary/30 transition-colors duration-300">
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={related.image}
@@ -112,13 +122,13 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
                   </div>
                   <div className="p-5">
                     <p className="text-xs text-surface-dark-muted mb-2">
-                      {related.date}
+                      {related.category} · {related.date}
                     </p>
-                    <h3 className="text-base font-normal text-surface-dark-foreground leading-snug mb-3">
+                    <h3 className="text-base font-semibold text-surface-dark-foreground leading-snug mb-3">
                       {related.title}
                     </h3>
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-surface-dark-foreground group-hover:text-primary transition-colors">
-                      Read Story <ArrowRight className="h-3.5 w-3.5" />
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                      Read Article <ArrowRight className="h-3.5 w-3.5" />
                     </span>
                   </div>
                 </div>
@@ -129,26 +139,26 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
       </section>
 
       {/* CTA */}
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
-      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
-        <AnimatedSection>
-          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
-              Unlock the Power of Integra SD-WAN
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Connected</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
+              Ready to solve your connectivity?
             </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base"
-                >
-                  <Link to="/availability-checker">Check Availability</Link>
-                </Button>
-              </motion.div>
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
+              Check availability in 90 seconds or speak to our team about the right solution for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
+                <Link to="/availability-checker">Check Availability</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/contact">Get In Touch</Link>
+              </Button>
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
       </section>
     </PageLayout>
   );
