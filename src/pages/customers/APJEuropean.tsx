@@ -32,8 +32,8 @@ const APJEuropean = () => {
     <PageLayout>
       <SEO
         title="APJ European Case Study — Integra Networks"
-        description="APJ European breaks free from digital constraints, accelerating their global distribution with Integra's SD-WAN solution."
-        keywords="case study, APJ European, refrigeration, SD-WAN, connectivity, Integra Networks"
+        description="Warehoused in a digital blackspot, APJ European now operates at over 300Mbps. Their distribution network is no longer bottlenecked by their internet."
+        keywords="case study, APJ European, refrigeration, distribution, SD-WAN, connectivity, Integra Networks"
         url="/customers/revitalising-global-distribution-apj-europeans-digital-transformation"
       />
 
@@ -55,9 +55,9 @@ const APJEuropean = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Revitalising Global Distribution: APJ European's Digital Transformation</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">A Warehouse in a Digital Blackspot: Solved</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              APJ European breaks free from digital constraints, accelerating their global distribution and customer engagement with Integra's SD-WAN solution.
+              Global distributor operating from a location with no infrastructure. Now they have over 300Mbps and actually work like a modern business.
             </p>
           </AnimatedSection>
         </div>
@@ -83,7 +83,7 @@ const APJEuropean = () => {
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">Description</p>
               <p className="text-surface-dark-foreground max-w-2xl">
-                APJ European, a global distributor in the refrigeration and air conditioning industry, faced significant digital challenges due to their location.
+                APJ European: global refrigeration and air conditioning distributor, based in Portsmouth. Growing fast. But their warehouse was in a digital dead zone.
               </p>
             </div>
           </AnimatedSection>
@@ -94,16 +94,16 @@ const APJEuropean = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Setting the Digital Stage for Global Distribution</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Problem: Infrastructure Blackout</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              APJ European, a major player in the global refrigeration and air conditioning industry, found themselves grappling with digital obstacles. Despite their commitment to operational excellence and customer service, their South Coast warehouse was plagued by slow internet speeds and high latency due to collapsed ducts in their region. This digital roadblock impeded their ability to use multiple applications and caused delays in processing customer orders.
+              APJ European is a global distributor. But their warehouse was in a location with no infrastructure. The ducts that should carry fibre were collapsed. The available internet was unusable—slow and unreliable. As a result, their whole operation was crippled. Staff couldn't access the systems they needed. Customer calls were dropped. Order processing was glacially slow. They were a global distributor operating like a business from the 1990s.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
-            <h2 className="text-heading-1 text-foreground mb-6">Navigating the Digital Icebergs</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">Two Crises: Systems Crawling, Phones Failing</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The company's digital challenges were twofold. Firstly, their use of remote platforms like Quicken and SAP became taxing due to frequent disconnections and excessive response times. This resulted in operational inefficiencies and customer service delays. Secondly, poor quality and often dropped voice calls were not just a source of frustration for staff but also had a negative impact on their customer relationships. These issues necessitated the urgent need for a robust, reliable, and efficient solution.
+              Their ERP (Quicken, SAP) would time out constantly. Disconnections were routine. Staff couldn't do their jobs. And then there were the phones: dropped calls to customers and suppliers. A distributor whose customers can't reach them reliably is losing business. They needed a solution that actually worked—fast.
             </p>
           </AnimatedSection>
         </div>
@@ -126,26 +126,29 @@ const APJEuropean = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Integra's SD-WAN: The Digital Lifeline</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Three Networks, Bonded Into One</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra provided an SD-WAN solution that harnessed the capabilities of three out of four UK cellular networks, including the newly accessible 5G. This allowed APJ to achieve impressive download speeds exceeding 100 Mbps and upload speeds of over 80 Mbps.
+              Integra deployed their SD-WAN solution, bonding three of the four major UK mobile networks (including 5G) into a single, resilient connection. No waiting for fibre infrastructure. No reliance on a single network. Just real, fast internet.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Moreover, APJ could now operate all of their applications on one infrastructure without issues of latency and low bandwidth, marking a significant transformation in their operations. Integra installed the solution within two weeks and has been a consistent support during the implementation process and beyond, helping APJ with configuration and troubleshooting.
+              Result: over 300Mbps download speeds. All their applications—Quicken, SAP, everything—now work smoothly. Phone calls don't drop. Customer service is back. Installed in two weeks. APJ European is no longer a warehouse in a blackspot. They're a modern distributor.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

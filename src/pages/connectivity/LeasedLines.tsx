@@ -189,7 +189,7 @@ const LeasedLines = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Creative solutions that save thousands.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Leased lines can take 8-12 weeks to install. Our Integra SD-WAN or Bridge solution gets you online in days, bridging the gap until fibre is ready. And we find creative routing — like Royle Farm, where we ran fibre 500m to a cattle grid then distributed via P2P radio, saving £20k versus trenching 3km.
+              Leased lines can take 8-12 weeks to install. Our Integra SD-WAN or Bridge solution gets you online in days, bridging the gap until fibre is ready. And we find creative routing solutions — combining fibre with P2P radio links or wireless distribution to reach remote buildings without expensive trenching.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

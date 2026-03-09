@@ -194,7 +194,7 @@ const FarmBroadband = () => {
     <PageLayout>
       <SEO
         title="Farm Broadband UK: Reliable Internet for Livestock, Equipment, and Business"
-        description="Farms need broadband for CCTV, milking parlours, livestock monitoring, and business ops. Practical guide. Case study: Royle Farm. Solutions that actually work."
+        description="Farms need broadband for CCTV, milking parlours, livestock monitoring, and business ops. Practical guide to farm connectivity solutions that actually work."
         keywords="farm broadband UK, agricultural broadband, livestock monitoring broadband, farm WiFi, rural farm internet, precision agriculture connectivity"
         url="/farm-broadband"
       />
@@ -258,73 +258,60 @@ const FarmBroadband = () => {
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
 
-      {/* Royle Farm Case Study */}
+      {/* Typical Deployment */}
       <Section className="bg-secondary">
         <AnimatedSection>
           <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Case Study</p>
+            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">How It Works</p>
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-8">
-              Royle Farm: Distributed Geography Solved with Hybrid Infrastructure
+              Typical Farm Deployment: Distributed Geography Solved with Hybrid Infrastructure
             </h2>
             <div className="space-y-6">
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">The Farm</h3>
-                <p className="text-muted-foreground">Royle Farm is a mixed beef and dairy operation in Herefordshire, 40 acres, 80 head of cattle, plus farm shop.</p>
+                <h3 className="text-base font-medium text-foreground mb-3">The Scenario</h3>
+                <p className="text-muted-foreground">A mixed livestock operation with buildings spread across the estate — farmhouse, milking parlour, equipment sheds, and a farm shop or office. Fibre has been promised for years but never arrives. The farm is running on ADSL or basic broadband that can't support modern operations.</p>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Challenge</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Typical Challenges</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>Farmhouse 1km from main road</li>
-                  <li>Grazing land spread across 2km (two separate fields, each with equipment sheds)</li>
-                  <li>BT promised fibre in 2021, then 2022, then 2023 — still waiting</li>
-                  <li>Operating on ADSL (0.5Mbps down, unusable for modern farm ops)</li>
-                  <li>Struggling with herd management software (uploads time out, monitoring real-time features unusable)</li>
-                  <li>Farm shop (on property) needs point-of-sale (EPOS dependent on farmhouse broadband)</li>
-                  <li>Equipment monitoring (tractors, feed systems) requires live telemetry (impossible on ADSL)</li>
+                  <li>Farmhouse set back from the road — fibre excess construction charges are prohibitive</li>
+                  <li>Outbuildings spread across the estate, each needing connectivity</li>
+                  <li>Herd management software and monitoring systems need reliable, always-on internet</li>
+                  <li>Farm shop or office EPOS systems dependent on the farmhouse broadband</li>
+                  <li>Equipment telemetry and compliance reporting require consistent upload speeds</li>
                 </ul>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Solution & Implementation</h3>
-                <p className="text-muted-foreground mb-3"><strong>Leased line + wireless distribution (P2P radio links)</strong></p>
+                <h3 className="text-base font-medium text-foreground mb-3">Our Approach</h3>
+                <p className="text-muted-foreground mb-3"><strong>Cellular SD-WAN + wireless distribution (P2P radio links)</strong></p>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li><strong>Phase 1:</strong> Fibre from road junction (1km trench). Excess construction charges were high (usual for rural). Integrated instead: fibre to cattle grid (0.5km), then distributed via high-powered P2P radio links to barn (2km away via wireless).</li>
-                  <li><strong>Phase 2:</strong> WiFi mesh in farmhouse and shop, access points in outbuildings.</li>
-                  <li><strong>Phase 3:</strong> Backup cellular bonding (in case fibre fails or weather impacts radio).</li>
+                  <li><strong>Phase 1:</strong> Deploy bonded 4G/5G cellular SD-WAN at the farmhouse — online within days, delivering 100-300Mbps depending on coverage.</li>
+                  <li><strong>Phase 2:</strong> P2P radio links from the farmhouse to remote buildings — milking parlour, equipment shed, farm shop. Each link delivers 30-100Mbps.</li>
+                  <li><strong>Phase 3:</strong> WiFi access points in key buildings. Business WiFi in the farmhouse and shop, coverage in outbuildings for IoT devices and monitoring.</li>
                 </ul>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Results</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">What Changes</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>Farmhouse: 50Mbps symmetrical (leased line)</li>
-                  <li>Farm shop: WiFi from farmhouse (stable, password protected)</li>
-                  <li>Milking parlour: P2P radio link to remote shed (30Mbps)</li>
-                  <li>Grazing shed: Second P2P link (30Mbps)</li>
-                  <li>Backup: 4G/5G cellular (100Mbps) if main connection drops</li>
+                  <li>Herd management software works properly — real-time monitoring, live alerts, cloud sync</li>
+                  <li>EPOS systems in the farm shop process transactions instantly</li>
+                  <li>Equipment telemetry uploads diagnostic data in real time</li>
+                  <li>Compliance records upload daily to cloud — herd health, milk quality, environmental data</li>
+                  <li>Entire estate connected under one managed solution with proactive monitoring</li>
                 </ul>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Performance</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Typical Costs</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>Herd management software: Works seamlessly, real-time monitoring, live alerts</li>
-                  <li>EPOS: Zero timeouts, transactions processed instantly</li>
-                  <li>Equipment telemetry: Tractors upload diagnostic data in real-time</li>
-                  <li>Compliance: Farm records upload daily to cloud (herd health, milk quality, environmental data)</li>
-                </ul>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Cost & ROI</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>Leased line: £400/month</li>
-                  <li>P2P radio installation: £1,500 (one-time)</li>
-                  <li>WiFi mesh: £1,000 (one-time)</li>
-                  <li>Cellular backup: £80/month</li>
-                  <li><strong>Total first year:</strong> £400×12 + £1,500 + £1,000 + £80×12 = £5,860</li>
-                  <li><strong>Ongoing annual:</strong> £400×12 + £80×12 = £5,760</li>
+                  <li>Cellular SD-WAN: from £135/month</li>
+                  <li>P2P radio links: £400-600 per link pair (one-time)</li>
+                  <li>WiFi access points: £300-800 per building</li>
+                  <li><strong>Typical annual cost:</strong> £2,500-3,500 depending on scale</li>
+                  <li>No long waits for fibre, no trenching, deployed in days not months</li>
                 </ul>
               </div>
             </div>
@@ -382,8 +369,8 @@ const FarmBroadband = () => {
 
         <AnimatedSection delay={0.2}>
           <div className="max-w-3xl mx-auto mt-8 p-6 rounded-2xl border border-border bg-card">
-            <p className="text-muted-foreground"><strong>For Royle Farm specifically,</strong> leased line was best because: (1) Fibre became available (existing Openreach ducts), (2) Budget allowed, (3) Multiple outbuildings needed permanent, reliable solution.</p>
-            <p className="text-muted-foreground mt-3"><strong>For most farms,</strong> Cellular + P2P radio is the sweet spot: faster to deploy, cheaper than leased line, solves the outbuilding problem.</p>
+            <p className="text-muted-foreground"><strong>If fibre is available and budget allows,</strong> a leased line gives you symmetric speeds and maximum reliability — ideal for larger operations with multiple outbuildings and SLA requirements.</p>
+            <p className="text-muted-foreground mt-3"><strong>For most farms,</strong> Cellular SD-WAN + P2P radio is the sweet spot: faster to deploy, cheaper than a leased line, and it solves the outbuilding problem without waiting months for fibre.</p>
           </div>
         </AnimatedSection>
       </Section>

@@ -14,7 +14,7 @@ const companyDetails = [
   { label: "Company", value: "Carbee Ltd" },
   { label: "Industry", value: "Automotive" },
   { label: "Location", value: "Boston, Lincolnshire" },
-  { label: "Website", value: "carbee.uk", href: "https://carbee.uk" },
+  { label: "Website", value: "carbee.uk" },
 ];
 
 const fadeUp = {
@@ -32,8 +32,8 @@ const Carbee = () => {
     <PageLayout>
       <SEO
         title="CarBee Case Study — Integra Networks"
-        description="CarBee races ahead with Integra's SD-WAN service, leaving slow internet in the dust and shifting their business into high gear."
-        keywords="case study, CarBee, automotive, SD-WAN, connectivity, Integra Networks"
+        description="CarBee got 300Mbps+ with radio links, CCTV, and WiFi across office, workshop, and home. From 0.1Mbps to reliable high-speed connectivity."
+        keywords="case study, CarBee, automotive, SD-WAN, connectivity, radio links, CCTV, Integra Networks"
         url="/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet"
       />
 
@@ -55,9 +55,9 @@ const Carbee = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Revving Up Connectivity: CarBee's Journey to High-Speed Internet</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">From 0.1Mbps to 300+: How a Rural Car Dealer Got High-Speed Internet</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              CarBee races ahead with Integra's SD-WAN service, leaving slow internet in the dust and shifting their business and home operations into high gear.
+              CarBee connected office, workshop, and home across 300+ metres. Radio links, CCTV, WiFi. All from a remote Lincolnshire site where BT offered nothing.
             </p>
           </AnimatedSection>
         </div>
@@ -70,11 +70,11 @@ const Carbee = () => {
               <motion.div key={item.label} variants={fadeUp}>
                 <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">{item.label}</p>
                 {item.href ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-surface-dark-foreground font-semibold hover:text-primary transition-colors inline-flex items-center gap-1.5">
+                  <a href={item.href} target="_blank" rel="nofollow noopener noreferrer" className="text-surface-dark-foreground font-medium hover:text-primary transition-colors inline-flex items-center gap-1.5">
                     {item.value} <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 ) : (
-                  <p className="text-surface-dark-foreground font-semibold">{item.value}</p>
+                  <p className="text-surface-dark-foreground font-medium">{item.value}</p>
                 )}
               </motion.div>
             ))}
@@ -94,19 +94,19 @@ const Carbee = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">The Starting Line: CarBee's Race for Connectivity</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Business: Cars and Parts in the Middle of Nowhere</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              CarBee, a family-owned business, is not just about selling top-quality pre-owned cars. They are also a hub for car enthusiasts, offering a wide range of performance and styling parts for various car brands, making them a key player in the automotive aftermarket industry in Lincolnshire.
+              CarBee sells premium pre-owned cars and high-performance parts from rural Lincolnshire. They run an office, a workshop, and even a home 300 metres away. Three separate locations that need to talk to each other.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              However, operating from a rural location, CarBee found itself in the slow lane of the digital highway. With a bustling on-site office, a large workshop requiring Wi-Fi, and a home located 300 meters away, CarBee needed a robust internet solution to ensure smooth operations and a comfortable home environment.
+              But they're miles from fibre. Miles from proper infrastructure. When you're in the middle of the countryside trying to run a modern business, connectivity isn't optional—it's everything.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
-            <h2 className="text-heading-1 text-foreground mb-6">Speed Bumps: CarBee's Connectivity Challenges</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Problem: BT's Best Offer Was Useless</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              CarBee's rural location posed a significant hurdle. Traditional internet service providers could only offer a few Mbps due to the lack of fibre infrastructure. This sluggish connectivity was insufficient for their growing business operations and their home needs. Moreover, they required a reliable IP configuration for their CCTV system to ensure continuous surveillance of their car lot. The need for a fast, reliable solution was immediate.
+              BT offered 0.1Mbps. That's not a typo. In the 21st century, BT's best effort was essentially nothing. CarBee needed to monitor their car lot with CCTV. They needed WiFi in the workshop. Their home needed reliable internet. One tenth of a megabyte per second wouldn't do any of that.
             </p>
           </AnimatedSection>
         </div>
@@ -118,7 +118,7 @@ const Carbee = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "We have been so impressed by Integra Networks. They have enabled us to set up business in a very remote area where the best BT could offer was 0.1Mbps. Thanks to Integra, we enjoy up to 100Mbps, and have never once lost signal or service. Cannot recommend enough."
+              "BT offered 0.1Mbps. Integra gave us over 300Mbps. Now our office, workshop, and home all have fast, reliable connectivity. CCTV works perfectly. Never a dropped connection. We wouldn't operate without Integra."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">Andrew Briggs, Managing Director, Carbee Ltd</p>
           </div>
@@ -129,30 +129,32 @@ const Carbee = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Crossing the Finish Line: CarBee's Internet Upgrade with Integra</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Radio Links, CCTV, and WiFi Across the Whole Site</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra Networks stepped in with their innovative SD-WAN service. After a successful connectivity survey, Integra utilized local mobile network operator transmitters to provide a bonded 4G connectivity solution. This solution delivered 100Mbps, with the potential to reach over 200Mbps when needed.
+              Integra bonded 4G/5G connections over SD-WAN to deliver over 300Mbps. But that's just the start. They installed radio links across 300 metres to connect the workshop. They set up CCTV monitoring for the car lot. WiFi blanketed the office. And the home got its own secure connection.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Integra installed the primary connectivity in their office unit and connected their workshop using point-to-point radios. After coordinating with their security company, a secure path was established for the CCTV system. Finally, their home was connected to the network, ensuring high-speed internet for the family.
+              Now every part of the site works together seamlessly. Business moves at the speed of the internet, not the slow creep of 0.1Mbps.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
-            <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Business WiFi
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+              { label: "Business WiFi", href: "/connectivity/business-wifi" },
+              { label: "Wireless Distribution", href: "/connectivity/wireless-distribution" },
+              { label: "CCTV", href: "/connectivity/cctv" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

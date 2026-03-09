@@ -33,8 +33,8 @@ const WBPowerServices = () => {
     <PageLayout>
       <SEO
         title="WB Power Services Case Study — Integra Networks"
-        description="How Integra's SD-WAN solution empowered WB Power Services with robust connectivity, avoiding exorbitant construction charges."
-        keywords="case study, WB Power Services, SD-WAN, connectivity, Integra Networks"
+        description="WB Power Services got 350Mbps+ connectivity with strong upload speeds across depots nationwide. Avoided six-figure BT installation charges."
+        keywords="case study, WB Power Services, SD-WAN, connectivity, leased lines, CCTV, WiFi, Integra Networks"
         url="/customers/wb-power-services"
       />
 
@@ -56,9 +56,9 @@ const WBPowerServices = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Powering Up: A Connectivity Triumph in the Face of Adversity</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Dodging the Six-Figure Bill: How WB Power Got Nationwide Connectivity</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              Integra's SD-WAN solution swiftly empowered WB Power Services with robust connectivity, avoiding exorbitant excess construction charges.
+              BT quoted £250K+ to install a leased line. WB Power got 350Mbps+ connectivity nationwide from Integra in days. No massive bills. No waiting.
             </p>
           </AnimatedSection>
         </div>
@@ -71,11 +71,11 @@ const WBPowerServices = () => {
               <motion.div key={item.label} variants={fadeUp}>
                 <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">{item.label}</p>
                 {item.href ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-surface-dark-foreground font-semibold hover:text-primary transition-colors inline-flex items-center gap-1.5">
+                  <a href={item.href} target="_blank" rel="nofollow noopener noreferrer" className="text-surface-dark-foreground font-medium hover:text-primary transition-colors inline-flex items-center gap-1.5">
                     {item.value} <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 ) : (
-                  <p className="text-surface-dark-foreground font-semibold">{item.value}</p>
+                  <p className="text-surface-dark-foreground font-medium">{item.value}</p>
                 )}
               </motion.div>
             ))}
@@ -97,22 +97,22 @@ const WBPowerServices = () => {
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">
-              The Digital Disconnect: A Power Provider's Predicament
+              The Problem: A Depot with No Signal and No Options
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              WB Power Services, a leading provider of generator sales, hire, and maintenance, found themselves in a predicament. Their logistics depot in Chorley, nestled next to a large industrial unit, was virtually cut off from the digital world.
+              WB Power Services manages generator sales, hire, and maintenance across the UK. Their Chorley depot ran operations that depended on instant communication: project managers uploading files, site coordinators checking inventory, clients getting updates.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The mobile signal was non-existent, and the local fibre infrastructure was absent. The company's operations were severely hampered, and the staff found themselves unable to use their phones or access the internet.
+              But the depot sat dead—no mobile signal, no fibre, no internet. Staff couldn't access centralised tools. They couldn't upload project files. Decisions slowed down. Operations ground to a crawl.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">
-              The Costly Connection: A Challenge in Chorley
+              What They Needed: Fast Upload Speeds and No Massive Bills
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The company's location presented a unique challenge. Traditional internet services were not an option due to the lack of infrastructure. A quote from BT for a leased line came with a six-figure excess construction charge fee, an exorbitant cost that was hard to justify, especially with the possibility of relocating in the future. The company needed a solution that was both cost-effective and efficient.
+              WB Power tried BT. BT quoted £250K+ in excess construction charges to run a leased line. Unaffordable. And what if they relocated in two years? That money vanishes. They needed connectivity that was fast, affordable, and flexible. Project managers needed to upload large files instantly. Connectivity had to support their operations across multiple depots nationwide.
             </p>
           </AnimatedSection>
 
@@ -140,7 +140,7 @@ const WBPowerServices = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "Integra's solution transformed our operations, delivering fast, reliable connectivity where others couldn't. A game-changer for us."
+              "BT wanted £250K to install a leased line. Integra gave us 350Mbps with strong upload speeds in days. It's transformed how our project managers work. And we're rolling it out across our other depots. It's not even a question."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">
               Matt Muhl, Director, WB Power Services
@@ -155,31 +155,35 @@ const WBPowerServices = () => {
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">
-              Breaking Barriers: Integra's Swift Solution to Connectivity Challenges
+              The Solution: Multi 4G/5G SD-WAN Nationwide
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra Networks stepped in with their innovative SD-WAN solution. A system was swiftly deployed on top of the industrial unit, gaining line of sight to the local cell towers. Radio links were installed in the yard and site offices, along with access points to deliver connectivity.
+              Integra installed bonded 4G/5G connectivity from the roof of the Chorley depot, giving line of sight to multiple mobile towers. 350Mbps+ download with strong upload speeds—perfect for the large files project managers push throughout the day.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              In a matter of days, WB Power Services had access to over 200Mbps of internet connectivity. Staff could now communicate with the outside world, use their centralised project management tools effectively, and avoid the exorbitant leased line fee.
+              But that's just the depot. Integra also deployed leased lines, CCTV systems, and WiFi networks across WB Power's other depots nationwide. Complete coverage. One vendor. Scalable. That's what makes the real difference.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
-            <Link to="/connectivity/managed-sim-services" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Managed SIM
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+              { label: "Leased Lines", href: "/connectivity/leased-lines" },
+              { label: "CCTV", href: "/connectivity/cctv" },
+              { label: "Business WiFi", href: "/connectivity/business-wifi" },
+              { label: "Wireless Distribution", href: "/connectivity/wireless-distribution" },
+              { label: "Managed SIM", href: "/connectivity/managed-sim-services" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

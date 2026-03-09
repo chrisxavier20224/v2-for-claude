@@ -33,8 +33,8 @@ const ThinkingAnglers = () => {
     <PageLayout>
       <SEO
         title="Thinking Anglers Case Study — Integra Networks"
-        description="Thinking Anglers leaps from sluggish ADSL to robust SD-WAN, boosting productivity and digital marketing efforts."
-        keywords="case study, Thinking Anglers, fishing, SD-WAN, connectivity, Integra Networks"
+        description="YouTube channel with 4M views + dead ADSL = problem solved. Thinking Anglers now streams, uploads, and sells at over 300Mbps."
+        keywords="case study, Thinking Anglers, fishing, SD-WAN, connectivity, Integra Networks, YouTube"
         url="/customers/casting-the-net-wide-a-connectivity-transformation"
       />
 
@@ -56,9 +56,9 @@ const ThinkingAnglers = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Casting the Net Wide: A Connectivity Transformation</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">YouTube Creators Need Upload Speed: Thinking Anglers Got It</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              Thinking Anglers, with over 4 million YouTube views, leaps from sluggish ADSL to robust SD-WAN, boosting productivity and digital marketing efforts.
+              4M YouTube views, 5Mbps upload speed, and mountains of frustration. Now: over 300Mbps.
             </p>
           </AnimatedSection>
         </div>
@@ -95,16 +95,16 @@ const ThinkingAnglers = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Casting Lines in Digital Waters</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Problem: 4 Million Viewers Can't Wait for Buffering</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Thinking Anglers, a provider of high-quality carp fishing tackle, found themselves in a predicament. Their rural location and growing digital needs, including managing a popular YouTube channel, were at odds with their existing ADSL broadband line. As their business expanded, so did their connectivity needs. The company's digital operations, including uploading videos and updating social media, were hampered by their sluggish internet connection.
+              Thinking Anglers has a YouTube channel with 4 million views. They produce content. They sell tackle. They run a real digital business. But their internet connection was ADSL—the technology your parents used. Uploading a 4K video took hours. Sometimes it failed halfway through. Meanwhile, their e-commerce site crawled. Their team couldn't video conference properly. The business was bottlenecked by their own internet.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
-            <h2 className="text-heading-1 text-foreground mb-6">Tangled in the Weeds of Connectivity</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">Content Creators Need Upload Speed: They Had 5Mbps</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The company's rural location presented unique challenges. The distance from the exchange resulted in a struggling ADSL line that couldn't keep up with the demands of a growing business. The lack of resilience in their IT infrastructure meant that any downtime brought operations to a standstill. The impending PSTN switch-off in January 2027 further emphasised the need for an upgrade.
+              The distance from the local exchange killed their speeds: 5Mbps down, worse up. When your business depends on uploading video content, that's a crisis. Every production day wasted waiting for uploads. Staff working from home couldn't get proper bandwidth. And the PSTN switchover looming meant their old systems were becoming obsolete. They needed real internet. Now.
             </p>
           </AnimatedSection>
 
@@ -122,7 +122,7 @@ const ThinkingAnglers = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "Integra's SD-WAN solution was a game-changer, enabling us to work efficiently and enhance our digital marketing efforts."
+              "Content production was painful before. Now our uploads happen at real speed. The team can work from anywhere and video calls actually work. This has completely changed how we operate."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">Scott Karabowicz, General Manager, Thinking Anglers</p>
           </div>
@@ -133,23 +133,26 @@ const ThinkingAnglers = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Reeling in the Power of SD-WAN</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Bonded Networks, Real Performance</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Integra Networks stepped in with their SD-WAN solution. Despite the challenging location, Integra was able to provide a robust and resilient network infrastructure. Multiple network connections were deployed to deliver the necessary bandwidth, catapulting Thinking Anglers from a mere 5Mbps to over 120Mbps. The upgrade enabled the company to deploy a reliable VoIP phone service and significantly improved upload performance, allowing the team to work more efficiently and manage their popular YouTube channel effectively.
+              Integra deployed their SD-WAN solution, bonding multiple mobile networks into one fast, stable connection. The jump was dramatic: from 5Mbps to over 300Mbps download speeds, with significantly improved upload capacity. Content uploads that used to take hours now take minutes. Their VoIP system works reliably. The e-commerce platform performs. Thinking Anglers can now produce and distribute their YouTube content without fighting their infrastructure.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

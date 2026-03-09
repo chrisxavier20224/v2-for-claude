@@ -33,7 +33,7 @@ const LittleQuarry = () => {
     <PageLayout>
       <SEO
         title="Little Quarry Glamping Case Study — Integra Networks"
-        description="Integra's SD-WAN service brought high-speed internet to the heart of Little Quarry Glamping, enhancing the tranquil retreat."
+        description="How Little Quarry Glamping went from no internet to near-300Mbps speeds in 2 weeks. Their guests can now stream, work, and stay connected in the wilderness."
         keywords="case study, Little Quarry, glamping, SD-WAN, connectivity, Integra Networks"
         url="/customers/little-quarry-glamping"
       />
@@ -56,9 +56,9 @@ const LittleQuarry = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Glamping Goes Digital: Little Quarry's Internet Revolution</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Luxury Pods, Real Internet: Little Quarry's Breakthrough</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              Integra's SD-WAN service brought high-speed internet to the heart of Little Quarry Glamping, enhancing the tranquil retreat.
+              5-star glamping needs 5-star connectivity. We delivered it in two weeks.
             </p>
           </AnimatedSection>
         </div>
@@ -84,7 +84,7 @@ const LittleQuarry = () => {
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">Description</p>
               <p className="text-surface-dark-foreground max-w-2xl">
-                Little Quarry Glamping offers luxury, adults-only pods on a 13-acre farm in Goudhurst, providing a private, stylish retreat for nature-lovers and outdoor enthusiasts year-round.
+                Little Quarry Glamping: luxury adults-only pods on 13 acres in Goudhurst, Kent. Nature. Style. Tranquillity. Plus now—seamless connectivity.
               </p>
             </div>
           </AnimatedSection>
@@ -95,19 +95,19 @@ const LittleQuarry = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Welcoming Comfort Amidst Wilderness</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Problem: Digital Dead Zone</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Little Quarry Glamping, a luxury glamping destination nestled in the tranquil Weald of Kent, offers guests an immersive escape into nature without compromising on comfort.
+              Picture this: guests pay premium rates for a luxury pod retreat. They arrive ready to disconnect—but then reality hits. Their streaming buffers. Their video calls drop. Their Zoom meetings freeze.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Despite their idyllic location and well-equipped pods, they faced a significant hurdle — the lack of reliable internet connectivity. This limitation threatened to tarnish the charm of their retreat, as the modern traveller views high-speed internet as a necessity, not a luxury.
+              Little Quarry's location near Goudhurst was idyllic for guests seeking peace. But it was a digital desert. No fibre. Minimal mobile signal. The existing connectivity was slower than dial-up. Guests could escape the world—but they couldn't actually stay connected when they needed to. That's a problem for modern travellers.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
-            <h2 className="text-heading-1 text-foreground mb-6">Fast Internet: A Luxury Not to Be Spared</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Cost: Lost Bookings, Bad Reviews</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The rural setting of Little Quarry Glamping presented a unique challenge. Traditional broadband infrastructure was inadequate, delivering only a few Mbps, insufficient for guests' needs. The owner, Nick Parr, feared this digital deficit could detract from their luxury glamping experience, potentially affecting bookings and customer satisfaction.
+              Owner Nick Parr watched guests leave negative reviews. "No WiFi in the pods." "Couldn't work from here." "Internet is useless." Sure, they loved the scenery—but they'd book elsewhere next time. In luxury accommodation, connectivity isn't a nice-to-have. It's table stakes.
             </p>
           </AnimatedSection>
 
@@ -125,7 +125,7 @@ const LittleQuarry = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "Integra's solution revolutionised our connectivity, enhancing our guest experience and exceeding our expectations."
+              "Integra transformed our entire offering. Guests can now do everything they need—stream, work, video call. And then they can actually relax. It's been transformational."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">Nick Parr, Owner, Little Quarry Glamping</p>
           </div>
@@ -136,30 +136,30 @@ const LittleQuarry = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">The Wi-Fi Win: Integra's Internet Intervention</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Bonded 4G, Hidden Infrastructure</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Recognizing the challenge, Integra Networks stepped in with their specialised SD-WAN service. Leveraging local mobile network transmitters, they created a high-speed, bonded 4G connection. The team conducted an in-depth site survey, identified the best networks, and found the optimal transmitter location, preserving the farm's aesthetic appeal.
+              Integra surveyed the site. No fibre possible. No point waiting. They went after nearby mobile signals—the invisible infrastructure already covering the area. Using SD-WAN technology, they bonded multiple 4G connections into one seamless, fast network. And they hid it all: antennas positioned to blend with the landscape, equipment tucked away. The glamping vibe remained untouched.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Within two weeks, Integra had installed the antennas, routers, and switches. After integrating these with the existing infrastructure and conducting thorough testing, the solution achieved download speeds close to 300Mbps. This digital transformation exceeded the demands of tech-savvy guests, ensuring Little Quarry Glamping remains an attractive destination throughout the year.
+              Result: 14 days from decision to live. Guests now get close to 300Mbps download speeds. Video calls work. Streaming works. Zoom calls don't freeze. Little Quarry pods now have everything: luxury, peace, and real internet.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
-            <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Business WiFi
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+              { label: "Business WiFi", href: "/connectivity/business-wifi" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

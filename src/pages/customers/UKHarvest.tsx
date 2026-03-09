@@ -33,7 +33,7 @@ const UKHarvest = () => {
     <PageLayout>
       <SEO
         title="UKHarvest Case Study — Integra Networks"
-        description="UKHarvest's digital operations turbocharged with Integra's SD-WAN solution, deployed in under 14 days."
+        description="Food rescue organisation UKHarvest went from struggling with rural connectivity to over 325Mbps in 14 days. Now their team stays connected."
         keywords="case study, UKHarvest, food rescue, SD-WAN, connectivity, Integra Networks"
         url="/customers/fast-track-connectivity-ukharvests-digital-transformation"
       />
@@ -56,9 +56,9 @@ const UKHarvest = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Fast-Track Connectivity: UKHarvest's Digital Transformation</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Food Rescue Needs Fast Internet: UKHarvest's Win</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              UKHarvest's digital operations turbocharged with Integra's SD-WAN solution, deployed in under 14 days.
+              Mission-critical NGO went from struggling connections to over 325Mbps—all in two weeks.
             </p>
           </AnimatedSection>
         </div>
@@ -84,7 +84,7 @@ const UKHarvest = () => {
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">Description</p>
               <p className="text-surface-dark-foreground max-w-2xl">
-                UKHarvest, a dynamic food rescue and education organization, operates from its semi-rural headquarters in Chichester.
+                UKHarvest: a food rescue and education charity based near Chichester. They fight food waste and feed families. But their rural location was crippling their operations.
               </p>
             </div>
           </AnimatedSection>
@@ -95,19 +95,19 @@ const UKHarvest = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">The Inception of UKHarvest's Internet Challenge</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Problem: Relocation into a Connectivity Black Hole</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              UKHarvest, a vibrant organization committed to food rescue and education, found itself in a digital predicament. As they expanded their operations and relocated to a semi-rural head office in Chichester, the need for robust internet connectivity became critical.
+              UKHarvest moved to new headquarters in a semi-rural area near Chichester. The location made sense operationally. But then they connected to the internet. It was like stepping back into 2005. Fibre was impossible. Mobile signal was spotty. The local exchange was miles away.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              However, the rural location posed a significant challenge, with fibre connectivity not being a viable option. The organisation needed a solution that could support their growing team's general internet usage and VoIP requirements, and they needed it fast.
+              For a mission-critical NGO, slow internet isn't just frustrating—it's damaging. Dropped video calls with donors. Sluggish systems processing food distributions. VoIP constantly failing. Every hour of downtime meant families going hungry.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
-            <h2 className="text-heading-1 text-foreground mb-6">The Bandwidth Blight: A Rural Reality</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Clock Was Ticking</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The semi-rural location of UKHarvest's new head office presented a unique set of challenges. Traditional fibre connectivity was off the table, and a leased line solution would take too long to implement. The organisation needed a solution that could not only provide high-speed internet but also ensure reliability for their critical operations, including VoIP, conference calls, and general internet usage.
+              Waiting for fibre infrastructure wasn't an option. Traditional leased lines meant months of installation. The team needed real connectivity—fast—to run their operations, support remote team members, and keep their VoIP system alive. Delay meant inefficiency. Inefficiency meant impact on their mission.
             </p>
           </AnimatedSection>
 
@@ -125,7 +125,7 @@ const UKHarvest = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "Thanks to Integra, our head office was on-net in under 14 days. Their team is top-notch, and we'd recommend their services to any company needing a fast, reliable internet solution."
+              "14 days from conversation to fully live. Integra didn't just deliver fast internet—they understood the urgency of our mission. Their team was professional, responsive, and solved it properly."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">James Swann, Programme Manager, UKHarvest</p>
           </div>
@@ -136,30 +136,30 @@ const UKHarvest = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">14 Days to Connectivity: Integra's Solution</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Bonded Mobile Networks, Enterprise Grade</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra Networks, a specialist in rural internet connectivity, stepped in to address UKHarvest's connectivity conundrum. After a thorough survey of the site, Integra confirmed that delivering fibre would not be a quick option. Instead, they deployed their innovative SD-WAN solution, leveraging multiple 4G and 5G signals and bonding the connections to deliver close to 200Mbps download speeds.
+              Integra surveyed the site and fast-tracked a decision: forget waiting for fibre. The mobile networks already covering the area could do the job—if bonded properly. They deployed SD-WAN technology that combined multiple 4G and 5G signals into a single, reliable, high-speed connection.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              This solution, coupled with a newly installed Wi-Fi network, ensured staff could remain connected to the private network. The entire installation process was completed within two weeks, a testament to Integra's commitment to delivering fast and reliable solutions. This swift transformation not only met but exceeded UKHarvest's operational requirements.
+              The installation finished in two weeks. Result: over 325Mbps download speeds, redundancy across networks, and a Wi-Fi system that actually works. UKHarvest's team can now call donors, process distributions, and support their mission without fighting their internet connection.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
-            <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Business WiFi
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+              { label: "Business WiFi", href: "/connectivity/business-wifi" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

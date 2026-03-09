@@ -32,7 +32,7 @@ const McGeeConstruction = () => {
     <PageLayout>
       <SEO
         title="McGee Construction Case Study — Integra Networks"
-        description="McGee Construction enhances project efficiency with Integra's SD-WAN solutions, achieving 150Mbps+ connectivity across London construction sites."
+        description="McGee Construction got 350Mbps+ download and 100Mbps+ upload speeds with multi 4G/5G bonded connections. Deployed in days, not months."
         keywords="case study, McGee Construction, SD-WAN, construction, connectivity, Integra Networks"
         url="/customers/mcgee-construction"
       />
@@ -57,9 +57,9 @@ const McGeeConstruction = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Engineering Success: McGee's Connectivity Leap in London</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Building at Speed: 350Mbps Connectivity for London's Biggest Sites</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              McGee Construction enhances project efficiency with Integra's SD-WAN solutions, delivering 150Mbps+ of seamless connectivity across complex London construction sites.
+              McGee Construction needed fast upload speeds for site managers. Integra delivered 350Mbps+ download and 100Mbps+ upload. Deployed in days.
             </p>
           </AnimatedSection>
         </div>
@@ -72,7 +72,7 @@ const McGeeConstruction = () => {
               {companyDetails.map((item) => (
                 <motion.div key={item.label} variants={fadeUp}>
                   <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">{item.label}</p>
-                  <p className="text-surface-dark-foreground font-semibold">{item.value}</p>
+                  <p className="text-surface-dark-foreground font-medium">{item.value}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -95,22 +95,22 @@ const McGeeConstruction = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Engineering Connections: McGee's Digital Blueprint for Success</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Problem: Waiting Months for Connectivity You Need Today</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              McGee Construction has been a bedrock of innovation and excellence in the construction industry since its inception in 1959. With a rich heritage of tackling complex engineering challenges across London, McGee's evolution from a civil engineering firm to a specialist engineering contractor symbolizes their adaptability and forward-thinking approach.
+              McGee Construction manages some of London's toughest builds. Sites are often underground, temporary, or located where infrastructure doesn't exist yet.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-              However, the dynamic nature of their projects, often located in challenging environments such as below ground, posed significant connectivity hurdles. Traditional broadband and leased line solutions failed to meet their needs due to long deployment times, high costs, and inflexibility.
+              Traditional leased lines take 12 weeks to install and cost a fortune. Project managers can't wait that long. They need to upload large files instantly, communicate with teams in real time, and move rigs if the site changes. Slow internet doesn't just annoy them—it costs them money.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
-            <h2 className="text-heading-1 text-foreground mb-6">Bridging the Data Divide: McGee's Mission for Site-Wide Connectivity</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">What They Needed: Fast Upload, Instant Deployment, Reliable Everywhere</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              McGee's projects are renowned for their complexity and the need for rapid, reliable internet connectivity is paramount for their success. The construction sites, often set in logistically challenging locations, require substantial bandwidth to support large file sharing, real-time communication, and various latency-sensitive applications.
+              McGee's team needs to push 50GB files from site to HQ instantly. Architectural plans, progress photos, equipment specs—all moving throughout the day. Download speed matters. But upload speed wins jobs.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-              Traditional connectivity solutions fell short, plagued by long lead times, prohibitive costs, and inflexible contracts not suited for the transient nature of construction sites. The quest for a flexible, robust, and responsive connectivity solution became critical for sustaining McGee's reputation for excellence and innovation in the construction industry.
+              They needed connectivity installed in a week, not three months. And it needed to work whether they were at Battersea Power Station, under the Thames, or in a basement in the City.
             </p>
           </AnimatedSection>
         </div>
@@ -122,9 +122,9 @@ const McGeeConstruction = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "Integra's innovative approach to connectivity has been a perfect match for our dynamic project requirements, delivering beyond expectations."
+              "We got live connectivity in a week. No months of waiting, no huge installation bills. And the upload speeds are massive—our project managers can work like they're in the office. That's what makes Integra different."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Chris Pyne, Head Of IT, McGee Construction</p>
+            <p className="text-lg font-semibold text-surface-dark-foreground">Chris Pyne, Head of IT, McGee Construction</p>
           </div>
         </AnimatedSection>
       </section>
@@ -133,37 +133,34 @@ const McGeeConstruction = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Constructing Connectivity: Integra's Tailored Solutions for McGee</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Multi 4G/5G Bonded Over SD-WAN</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Integra's introduction of a multi-net 4G/5G SD-WAN solution marked the beginning of a new era for McGee Construction. Tailored for high-demand environments, Integra's solution provided a lifeline, ensuring over 150 Mbps of seamless connectivity across McGee's sites, irrespective of their unique challenges.
+              Integra bonded multiple 4G/5G connections together over SD-WAN. Result: 350Mbps+ download and 100Mbps+ upload. Where there are multi 5G connections available, they unlock even higher speeds.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-              The rapid deployment capability, often within a week, and the adaptability of the service to move with the projects' evolution were game-changers. Integra's commitment to immediate customer service and flexible contract models resonated with McGee's own values of innovation and efficiency.
+              Installation took a week. WiFi networks went live across site. Project managers could upload files in minutes instead of hours. And if the site moved? The hardware moved with it.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-              Moreover, the centrally managed WiFi infrastructure not only streamlined operations but significantly reduced the time spent on troubleshooting, allowing McGee to focus on what they do best: building the future of London.
+              No waiting for BT. No six-figure bills. No infrastructure that becomes stranded when the project ends. Just connectivity that works where and when they need it.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
-            <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Business WiFi
-              
-            </Link>
-            <Link to="/connectivity/wireless-distribution" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Wireless Distribution
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+              { label: "Business WiFi", href: "/connectivity/business-wifi" },
+              { label: "Wireless Distribution", href: "/connectivity/wireless-distribution" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

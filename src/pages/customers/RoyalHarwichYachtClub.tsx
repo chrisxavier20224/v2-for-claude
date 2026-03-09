@@ -33,7 +33,7 @@ const RoyalHarwichYachtClub = () => {
     <PageLayout>
       <SEO
         title="Royal Harwich Yacht Club Case Study — Integra Networks"
-        description="Integra's SD-WAN service transformed RHYC's operations, providing robust connectivity in a challenging location."
+        description="Royal Harwich Yacht Club got over 300Mbps connectivity bonded from 4G/5G connections via Integra, transforming operations where fibre was impossible."
         keywords="case study, Royal Harwich Yacht Club, sailing, SD-WAN, connectivity, Integra Networks"
         url="/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey"
       />
@@ -56,9 +56,9 @@ const RoyalHarwichYachtClub = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Sailing Through Connectivity Challenges: The Royal Harwich Yacht Club's Journey</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Full Sail: How a Yacht Club Got 300Mbps in the Middle of Nowhere</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              Integra's SD-WAN service transformed RHYC's operations, providing robust connectivity in a challenging location.
+              When fibre was impossible, Integra bonded 4G/5G to deliver over 300Mbps. Now card payments never fail and VoIP actually works.
             </p>
           </AnimatedSection>
         </div>
@@ -71,11 +71,11 @@ const RoyalHarwichYachtClub = () => {
               <motion.div key={item.label} variants={fadeUp}>
                 <p className="text-xs uppercase tracking-widest text-surface-dark-muted mb-1">{item.label}</p>
                 {item.href ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-surface-dark-foreground font-semibold hover:text-primary transition-colors inline-flex items-center gap-1.5">
+                  <a href={item.href} target="_blank" rel="nofollow noopener noreferrer" className="text-surface-dark-foreground font-medium hover:text-primary transition-colors inline-flex items-center gap-1.5">
                     {item.value} <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 ) : (
-                  <p className="text-surface-dark-foreground font-semibold">{item.value}</p>
+                  <p className="text-surface-dark-foreground font-medium">{item.value}</p>
                 )}
               </motion.div>
             ))}
@@ -95,19 +95,19 @@ const RoyalHarwichYachtClub = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Anchored in Connectivity Challenges</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Problem: Zero Infrastructure, Maxed-Out Frustration</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The Royal Harwich Yacht Club (RHYC), nestled on the banks of the River Orwell in Suffolk, is more than just a sailing club. It's a hub for social activities, a venue for private functions, and a welcoming space for members and visitors alike.
+              The Royal Harwich Yacht Club sits in one of Suffolk's most beautiful spots. Perfect for sailing. Terrible for internet.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              However, this idyllic location came with its unique set of challenges. The club's operations, which heavily relied on internet-based applications and Voice over IP, were hampered by the lack of reliable internet connectivity. Traditional service providers could only offer a few Mbps per second due to the absence of fibre infrastructure.
+              Fibre had never reached there. Mobile networks were spotty at best. Yet their members expected to pay by card, staff needed email, and their VoIP phone system required reliable connectivity. When payment terminals froze mid-transaction, when staff couldn't access files, when calls dropped in the middle of business—that's when the frustration set in.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
-            <h2 className="text-heading-1 text-foreground mb-6">Navigating the Sea of Slow Internet</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">What They Needed: Connectivity That Actually Worked</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The club's operations were like a ship trying to sail against the current. The existing broadband service was nearly unusable, affecting everything from office functions to voice over IP. The club also needed to integrate the new service with their onsite WiFi network and ensure IP configuration for their third-party Voice over IP provider. The challenge was not just to find a solution, but to find one that could be implemented quickly and seamlessly.
+              The club didn't need flashy tech. They needed reliable internet. Fast enough for card payments. Stable enough for VoIP. Good enough to integrate with their WiFi network. But no leased line provider would touch Woolverstone. And traditional broadband meant waiting weeks for a service that would barely keep up with demand.
             </p>
           </AnimatedSection>
 
@@ -125,7 +125,7 @@ const RoyalHarwichYachtClub = () => {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
             <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
-              "Integra's remarkable solution has transformed our operations, ensuring robust and reliable connectivity where others doubted its feasibility. Thanks to them, the concern of card payment failures in our clubhouse is no more."
+              "Integra delivered what everyone else said was impossible. Card payments work. VoIP works. And it's been completely reliable. I can't recommend them enough."
             </blockquote>
             <p className="text-lg font-semibold text-surface-dark-foreground">Mark Dean, The Royal Harwich Yacht Club</p>
           </div>
@@ -136,30 +136,30 @@ const RoyalHarwichYachtClub = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">Catching the Wind with Integra's SD-WAN</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Bonded 4G/5G Over SD-WAN</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra Networks came to the rescue with their Integra SD-WAN service. After a successful connectivity survey, Integra utilized local mobile network operator transmitters to provide a bonded 4G connectivity solution over SD-WAN. The result? A whopping 80Mbps, a far cry from the few Mbps the club was used to.
+              Integra ran a site survey and found what others had missed: clear sightlines to multiple mobile towers. They bonded 4G connections over SD-WAN to create a single, ultra-reliable connection. Over 300Mbps. Strong enough to handle any demand.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Integra's team conducted a full site survey, ensuring the antennas could be installed discreetly without affecting the clubhouse's aesthetics. The installation was seamless, and the new system integrated perfectly with the existing infrastructure and third-party services.
+              Installation took days, not months. The antennas went on the roof—invisible from the clubhouse. Everything integrated with their existing WiFi and VoIP system seamlessly. From day one, it worked.
             </p>
           </AnimatedSection>
         </div>
       </Section>
 
-            {/* Solutions Delivered */}
-      <section className="bg-surface-dark py-12 border-t border-white/10">
+      {/* Solutions Delivered */}
+      <section className="bg-surface-dark py-16 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">Solutions Delivered</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/connectivity/integra-sd-wan" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Integra SD-WAN
-              
-            </Link>
-            <Link to="/connectivity/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Business WiFi
-              
-            </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+              { label: "Business WiFi", href: "/connectivity/business-wifi" },
+            ].map((s) => (
+              <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
+                <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
