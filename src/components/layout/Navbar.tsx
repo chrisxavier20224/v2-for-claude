@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -12,6 +12,7 @@ const fibreAlternativeLinks = [
   { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite + 4G/5G Bonded" },
   { label: "Starlink B2B", path: "/connectivity/starlink-b2b", icon: Satellite, tagline: "Managed Satellite for Business" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
+  { label: "Pricing", path: "/pricing", icon: CreditCard, tagline: "Transparent, Fixed Monthly Pricing" },
 ];
 
 // Standard connectivity — traditional broadband and fibre
@@ -251,18 +252,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Pricing Link */}
-            <Link
-              to="/pricing"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === "/pricing"
-                  ? isDarkNav ? "text-white" : "text-foreground"
-                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Pricing
-            </Link>
-
             {/* Company Dropdown */}
             <div
               className="relative"
@@ -398,13 +387,6 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </div>
-              </div>
-
-              {/* Mobile Pricing Link */}
-              <div className="px-3 py-2">
-                <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
-                  Pricing
-                </Link>
               </div>
 
               {/* Mobile Company Section */}

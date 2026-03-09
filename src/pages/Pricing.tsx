@@ -150,9 +150,9 @@ const Pricing = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pricing"
-        description="Transparent, fixed pricing for business connectivity. SD-WAN, leased lines, wireless bridges, and add-on services. No hidden fees, month-to-month terms, 14-day money-back guarantee."
-        keywords="pricing, SD-WAN pricing, leased line pricing, business broadband cost, connectivity pricing"
+        title="Fibre Alternative Pricing"
+        description="Transparent, fixed pricing for SD-WAN and Starlink business connectivity. No hidden fees, month-to-month terms, 14-day money-back guarantee. Hardware included."
+        keywords="SD-WAN pricing, Starlink business pricing, fibre alternative pricing, business broadband cost, cellular broadband pricing"
         url="/pricing"
       />
       <SchemaMarkup data={faqSchemaData} />
@@ -171,7 +171,8 @@ const Pricing = () => {
               transition={{ duration: 0.5 }}
               className="text-xs font-semibold uppercase tracking-widest text-primary mb-4"
             >
-              Pricing
+
+              Fibre Alternative Pricing
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

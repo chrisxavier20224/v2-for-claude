@@ -366,9 +366,14 @@ const IntegraSDWAN = () => {
 
           <div className="text-center mt-8">
             <p className="text-muted-foreground text-sm mb-4">Unsure what option is right for you?</p>
-            <Button asChild variant="outline">
-              <Link to="/contact">Speak to our team</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild variant="outline">
+                <Link to="/contact">Speak to our team</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/pricing">See All Pricing</Link>
+              </Button>
+            </div>
           </div>
           <p className="text-xs text-muted-foreground/60 text-center mt-6">
             All prices exclude VAT. Installation costs can vary subject to the property's size and WiFi network requirements.

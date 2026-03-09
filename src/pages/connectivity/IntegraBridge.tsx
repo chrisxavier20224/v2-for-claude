@@ -342,10 +342,13 @@ const IntegraBridge = () => {
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg"><Link to="/contact">Book a Meeting <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
               </motion.div>
-              <p className="text-surface-dark-muted text-sm">
-                Can't wait? Call us on <a href="tel:02033887111" className="text-primary font-semibold hover:underline">0203 388 7111</a>
-              </p>
+              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
+                <Link to="/pricing">See All Pricing</Link>
+              </Button>
             </div>
+            <p className="text-surface-dark-muted text-sm mt-4">
+              Can't wait? Call us on <a href="tel:02033887111" className="text-primary font-semibold hover:underline">0203 388 7111</a>
+            </p>
           </AnimatedSection>
         </div>
       </section>

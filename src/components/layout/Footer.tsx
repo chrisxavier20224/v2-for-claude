@@ -40,7 +40,7 @@ const companyLinks = [
 
 const resourceLinks = [
   { label: "Availability Checker", path: "/availability-checker" },
-  { label: "Pricing", path: "/pricing" },
+  { label: "Fibre Alternative Pricing", path: "/pricing" },
   { label: "Resources", path: "/resources" },
 ];
 
