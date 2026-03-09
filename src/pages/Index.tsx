@@ -17,7 +17,7 @@ import heroImg from "@/assets/hero-home.jpg";
 // Connectivity service images
 import sdwanImg from "@/assets/sectors/rural-sme-hero.jpg";
 import fibreImg from "@/assets/sectors/fibre-building-hero.jpg";
-import leasedImg from "@/assets/connectivity/leased-lines-sdwan.jpg";
+import leasedImg from "@/assets/connectivity/leased-lines-hero.jpg";
 import simImg from "@/assets/connectivity/managed-sim-hero.jpg";
 
 // WiFi images
