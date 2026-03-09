@@ -149,7 +149,7 @@ const StarlinkB2B = () => {
               Business-grade satellite connectivity with SLA, dedicated support, and cellular bonding. From £300 per month. Installation £1,300.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
+              <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
                 <Link to="/contact">Get a Quote</Link>
               </Button>
             </motion.div>

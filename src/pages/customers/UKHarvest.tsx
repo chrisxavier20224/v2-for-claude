@@ -174,7 +174,7 @@ const UKHarvest = () => {
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Unlock the Power of Integra SD-WAN</h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
+                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
                   <Link to="/contact">Check Availability</Link>
                 </Button>
               </motion.div>

@@ -139,7 +139,7 @@ const FibreEnabledBuildings = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base"
+                className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base"
               >
                 <Link to="/contact">Get in Touch</Link>
               </Button>
@@ -434,7 +434,7 @@ const FibreEnabledBuildings = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base"
+                  className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base"
                 >
                   <Link to="/availability-checker">Check Availability</Link>
                 </Button>
