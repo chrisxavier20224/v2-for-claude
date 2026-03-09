@@ -16,15 +16,15 @@ const PartnerLogoBar = () => {
     <section className="bg-surface-dark py-10 md:py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <AnimatedSection>
-          <h3 className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted text-center mb-8">
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-white text-center mb-10">
             Our Connectivity Partners
           </h3>
 
-          <div className="flex items-center justify-center gap-12 md:gap-20 flex-wrap">
+          <div className="flex items-center justify-center gap-16 md:gap-24 flex-wrap">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex-shrink-0 h-12 w-28 md:h-14 md:w-36 flex items-center justify-center"
+                className="flex-shrink-0 h-16 w-36 md:h-20 md:w-44 flex items-center justify-center"
                 title={partner.name}
               >
                 <img
