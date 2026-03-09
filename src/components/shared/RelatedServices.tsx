@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { LucideIcon, ArrowRight } from "lucide-react";
+import { LucideIcon, ArrowRight, Globe } from "lucide-react";
 
 export interface RelatedService {
-  title: string;
+  title?: string;
+  name?: string;
   description: string;
-  href: string;
-  icon: LucideIcon;
+  href?: string;
+  url?: string;
+  icon?: LucideIcon;
   badge?: string;
 }
 
@@ -67,15 +69,17 @@ const RelatedServices = ({
           viewport={{ once: true, margin: "-80px" }}
         >
           {services.map((service) => {
-            const Icon = service.icon;
+            const Icon = service.icon || Globe;
+            const link = service.href || service.url || "#";
+            const label = service.title || service.name || "Service";
             return (
               <motion.div
-                key={service.href}
+                key={link}
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3 }}
               >
-                <Link to={service.href} className="block h-full">
+                <Link to={link} className="block h-full">
                   <div className="h-full rounded-2xl border border-border bg-card hover:bg-card/80 transition-colors p-6 sm:p-8 flex flex-col">
                     {/* Icon */}
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5 flex-shrink-0">
@@ -92,7 +96,7 @@ const RelatedServices = ({
                     {/* Title & Description */}
                     <div className="flex-grow">
                       <h3 className="text-heading-3 text-foreground mb-3 font-semibold">
-                        {service.title}
+                        {label}
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         {service.description}
