@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Rocket, PiggyBank, Store, ArrowLeft, ArrowRight, Eye, Phone, Smartphone, Zap, Building2 } from "lucide-react";
+import { Sim, Eye, Radio, PiggyBank, Smartphone, Building2, Shield, Thermometer, CreditCard, DoorOpen, Camera, Truck, Gauge, Lightbulb, MonitorSmartphone } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,70 +7,44 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/managed-sim-hero.jpg";
-import liftImg from "@/assets/connectivity/managed-sim-lift.jpg";
 import visibilityImg from "@/assets/connectivity/managed-sim-visibility.jpg";
 import voiceImg from "@/assets/connectivity/managed-sim-voice.jpg";
 
-const painPoints = [
-  {
-    icon: Rocket,
-    title: "Rapid Deployment",
-    description: "Independent of the UK fibre network, our managed SIM solution deploys in days — not weeks. Especially beneficial for estates with hundreds of devices needing migration.",
-  },
-  {
-    icon: PiggyBank,
-    title: "Significant Cost Savings",
-    description: "Transitioning to our Managed SIM service often results in substantial cost savings for businesses, beyond just a technology upgrade.",
-  },
-  {
-    icon: Store,
-    title: "Perfect for Small Retailers",
-    description: "The transition to a managed SIM service is affordable, making it an excellent solution for small operators seeking a quick and efficient solution.",
-  },
+const useCases = [
+  { icon: Building2, title: "Lift Auto-Diallers", description: "Lift emergency lines connected across all four UK mobile networks — no landline required." },
+  { icon: Shield, title: "Fire & Intruder Alarms", description: "Security panels, fire alarms, and monitoring systems connected via cellular with proactive alerting." },
+  { icon: CreditCard, title: "EPOS & Payment Terminals", description: "Card machines and point-of-sale devices that stay online regardless of your primary broadband." },
+  { icon: DoorOpen, title: "Door Entry & Access Control", description: "Gate systems, intercoms, barriers, and access panels connected without fixed-line dependencies." },
+  { icon: Camera, title: "CCTV & Remote Monitoring", description: "IP cameras and NVRs at remote or temporary sites where wired connectivity isn't available." },
+  { icon: Thermometer, title: "Environmental Sensors", description: "Temperature, humidity, air quality, and water leak sensors reporting data from anywhere on your estate." },
+  { icon: Gauge, title: "Smart Meters & Utilities", description: "Energy meters, water meters, and utility monitoring devices feeding back real-time consumption data." },
+  { icon: MonitorSmartphone, title: "Digital Signage & Kiosks", description: "Advertising displays, wayfinding screens, and self-service kiosks connected independently of local WiFi." },
+  { icon: Truck, title: "Fleet & Asset Tracking", description: "GPS trackers on vehicles, trailers, plant equipment, and high-value assets reporting location in real time." },
+  { icon: Lightbulb, title: "Smart Building Controls", description: "HVAC systems, lighting controls, BMS panels, and occupancy sensors connected for building automation." },
+  { icon: Radio, title: "Vending & Dispensing", description: "Vending machines, EV chargers, and unattended retail devices reporting stock levels and transactions." },
+  { icon: Sim, title: "Telecare & Health Devices", description: "Personal alarms, fall detectors, and remote health monitors for care homes and assisted living." },
 ];
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
-const relatedServices = [
-  {
-    icon: Smartphone,
-    title: "4G/5G Backup",
-    description: "Reliable mobile backup connectivity for business continuity.",
-    href: "/connectivity/4g-5g-backup",
-  },
-  {
-    icon: Zap,
-    title: "Integra SD-WAN",
-    description: "Secure, intelligent networking for organisations.",
-    href: "/connectivity/integra-sd-wan",
-  },
-  {
-    icon: Building2,
-    title: "SoGEA Broadband",
-    description: "Fibre-based connectivity as an alternative to managed SIM.",
-    href: "/connectivity/sogea",
-  },
-];
-
 const ManagedSimServices = () => {
   return (
     <PageLayout>
       <SEO
-        title="Managed SIM Services — PSTN Switch-Off Solutions"
-        description="PSTN switching off January 2027. Our managed SIM service replaces analogue lines for lifts, alarms, and EPOS — no upfront costs, 3-day monitoring, complete estate visibility. Custom quoted."
-        keywords="managed SIM, PSTN switch off, SOGEA alternative, lift line migration, SIM connectivity, IoT SIM"
+        title="Managed SIM Services — IoT & M2M Connectivity"
+        description="Managed IoT SIMs for lifts, alarms, EPOS, CCTV, sensors, smart meters, fleet tracking, and more. Multinet SIM across all four UK operators. Estate-wide visibility, no upfront costs."
+        keywords="managed SIM, IoT SIM, M2M SIM, lift line SIM, alarm SIM, EPOS SIM, CCTV SIM, smart meter SIM, fleet tracking, environmental sensor, Multinet SIM"
         url="/connectivity/managed-sim-services"
       />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Managed SIM services for PSTN transition" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Managed SIM services for IoT devices" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -78,13 +52,13 @@ const ManagedSimServices = () => {
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
               <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors mb-6">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-white">
-                  Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Managed SIM
+                  Connectivity <span className="mx-1">›</span> Managed SIM
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">PSTN is switching off. Are you ready?</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">IoT SIMs for every device on your estate</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Whether you need SoGEA broadband or a managed SIM alternative, we'll recommend the right solution for your estate — with complete visibility and proactive monitoring. Custom priced for your needs.
+              Lifts, alarms, payment terminals, door entry — one managed SIM platform with visibility across your entire estate. No upfront costs, no fixed-line dependencies.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -95,26 +69,28 @@ const ManagedSimServices = () => {
         </div>
       </section>
 
-      {/* PAIN POINTS */}
+      {/* WHAT IT CONNECTS */}
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Managed SIM Services</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">What It Connects</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Replace analogue. Save money. See everything.
+              One SIM. Four networks. Every device.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Our managed SIM service offers superior connectivity, compliance, proactive monitoring, and significant cost savings. Our Multinet SIM connects to all four UK mobile operators for maximum resilience.
+              Our Multinet SIM connects to all four UK mobile operators — O2, Vodafone, EE, and Three — so your devices stay online even if one network drops. Managed from a single platform with real-time monitoring.
             </p>
           </AnimatedSection>
-          <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            {painPoints.map((point) => (
-              <motion.div key={point.title} variants={fadeUp} className="text-center">
-                <motion.div className="flex h-14 w-14 mx-auto items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
-                  <point.icon className="h-10 w-10" strokeWidth={1.5} />
-                </motion.div>
-                <h3 className="text-heading-3 text-surface-dark-foreground mb-3">{point.title}</h3>
-                <p className="text-surface-dark-muted">{point.description}</p>
+          <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            {useCases.map((item) => (
+              <motion.div key={item.title} variants={fadeUp} className="rounded-xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-8 w-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="h-4 w-4 text-primary" />
+                  </div>
+                  <h3 className="text-sm font-medium text-surface-dark-foreground">{item.title}</h3>
+                </div>
+                <p className="text-sm text-surface-dark-muted leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -123,18 +99,27 @@ const ManagedSimServices = () => {
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
-      {/* LIFT MIGRATION */}
+      {/* ESTATE VISIBILITY */}
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Simplify Your Lift Service Migration</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Our Managed SIM Service includes line rental and call rates in one bill — no separate management. Technical and on-site support, 3-day line test monitoring, constant GSM connectivity monitoring, and a 3-year Device-as-a-Service model with advanced replacement and no upfront costs.
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Eye className="h-4 w-4 text-primary" />
+              </div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary">Estate Visibility</p>
+            </div>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">See every SIM, every device, in real time</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              Consolidate your entire estate onto one platform. Every SIM, every device, every connection — visible in real time. Proactive monitoring means we spot issues before they become outages, so you're never guessing which lines are active and which have gone dark.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Whether you manage a handful of devices or hundreds across multiple sites, the dashboard gives you a single view of your whole estate with alerts, usage data, and connection status.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
-            <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={liftImg} alt="Lift PSTN migration" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+            <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
+              <img src={visibilityImg} alt="SIM estate visibility dashboard" className="w-full h-auto object-cover aspect-video" loading="lazy" />
             </motion.div>
           </AnimatedSection>
         </div>
@@ -142,23 +127,39 @@ const ManagedSimServices = () => {
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
-      {/* NETWORK VISIBILITY */}
+      {/* HOW IT WORKS */}
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
             <AnimatedSection direction="left" delay={0.2} className="order-2 lg:order-1">
               <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <img src={visibilityImg} alt="Network visibility dashboard" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+                <img src={voiceImg} alt="Managed SIM deployment" className="w-full h-auto object-cover aspect-video" loading="lazy" />
               </motion.div>
             </AnimatedSection>
             <AnimatedSection className="order-1 lg:order-2">
-              <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
-                <Eye className="h-9 w-9" strokeWidth={1.5} />
-              </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Gain Complete Network Visibility</h2>
-              <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Consolidate your estate onto one platform and see every SIM, every device, every connection in real time. Proactive monitoring means we spot issues before they become outages — no more guessing which lines are active.
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-9 w-9 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <PiggyBank className="h-4 w-4 text-primary" />
+                </div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary">How It Works</p>
+              </div>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">No upfront costs. No fixed-line dependency.</h2>
+              <p className="text-lg text-surface-dark-muted leading-relaxed mb-4">
+                Delivered on a 3-year Device-as-a-Service model with no upfront hardware costs. Line rental and call rates are rolled into a single bill — no separate management, no hidden charges. Advanced replacement and in-term upgrades are included as standard.
               </p>
+              <p className="text-surface-dark-muted leading-relaxed mb-6">
+                IoT SIMs from £2.90/month with pooled data options. Rapid deployment that's completely independent of the UK fibre network — we can get devices live in days, not weeks.
+              </p>
+              <div className="space-y-3">
+                {["Multinet SIM across O2, Vodafone, EE & Three", "3-day line test monitoring on deployment", "Constant GSM connectivity monitoring", "Technical and on-site support included", "Pooled data options across your estate"].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Sim className="h-3 w-3 text-primary" />
+                    </div>
+                    <span className="text-sm text-surface-dark-muted">{item}</span>
+                  </div>
+                ))}
+              </div>
             </AnimatedSection>
           </div>
         </div>
@@ -166,47 +167,41 @@ const ManagedSimServices = () => {
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
-      {/* REPLACE PSTN */}
-      <Section size="large">
-        <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
-          <AnimatedSection>
-            <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
-              <Phone className="h-9 w-9" strokeWidth={1.5} />
-            </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Replace PSTN Voice Traffic</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Our Multinet SIM connects to all four UK mobile operators (O2, Vodafone, EE, Three) and can be used exclusively for voice traffic — a direct replacement for PSTN lines on lifts, alarms, door entry systems, and EPOS terminals.
-            </p>
-            <p className="text-muted-foreground">
-              IoT SIMs from £2.90/month with pooled data options. 3-year term, Device-as-a-Service model, advanced replacement, in-term upgrades, and no upfront costs.
-            </p>
-          </AnimatedSection>
-          <AnimatedSection direction="right" delay={0.2}>
-            <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={voiceImg} alt="Voice PSTN replacement" className="w-full h-auto object-cover aspect-video" loading="lazy" />
-            </motion.div>
-          </AnimatedSection>
-        </div>
-      </Section>
+      {/* RELATED CONTENT */}
+      <RelatedContent
+        stories={["wb-power-services"]}
+        sectors={["construction-sites"]}
+      />
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-      <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
-
-      {/* RELATED CONTENT */}
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
-      <RelatedContent
-        sectors={["construction-sites"]}
-        dark
-      />
 
       {/* CTA */}
       <section className="bg-surface-dark py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">PSTN switches off January 2027. Start now.</h2>
-            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">Get in touch to discuss how our managed SIM services can simplify your migration — before the deadline hits.</p>
-            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+            <motion.div
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-10 md:p-14 text-center"
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-10 left-10 h-40 w-40 rounded-full bg-white/5" />
+              <div className="relative z-10">
+                <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
+                  Got devices that need connecting?
+                </h2>
+                <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+                  Tell us what you've got on your estate and we'll put together a managed SIM solution — custom priced, no obligation.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90 shadow-lg">
+                    <Link to="/contact">Get in Touch</Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+                    <Link to="/pricing">View Pricing</Link>
+                  </Button>
+                </div>
+              </div>
             </motion.div>
           </AnimatedSection>
         </div>
