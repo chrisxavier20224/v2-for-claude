@@ -9,6 +9,7 @@ const connectivityLinks = [
   { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
   { label: "Leased Lines", path: "/connectivity/leased-lines" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
+  { label: "SoGEA Broadband", path: "/connectivity/sogea" },
   { label: "Business WiFi", path: "/connectivity/business-wifi" },
   { label: "Home WiFi", path: "/connectivity/home-wifi" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation" },

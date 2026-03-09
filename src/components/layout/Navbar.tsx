@@ -12,6 +12,7 @@ const internetLinks = [
   { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Premium Business-Grade Fibre" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite Internet Setup" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
+  { label: "SoGEA Broadband", path: "/connectivity/sogea", icon: Globe, tagline: "Broadband Without Line Rental" },
 ];
 
 // Infrastructure & on-site services
