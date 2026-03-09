@@ -184,11 +184,11 @@ const Customers = () => {
               {[
                 { value: "99", accent: "%", label: "UK coverage via cellular SD-WAN" },
                 { value: "14", accent: " days", label: "Average install time — not months" },
-                { value: "107", accent: "+", label: "Businesses connected & counting" },
-                { value: "350", accent: "Mbps", label: "Peak speeds on bonded connections" },
+                { value: "24", accent: "/7", label: "Proactive monitoring & UK support" },
+                { value: "350", accent: "Mbps", label: "Average speeds on bonded connections" },
               ].map((stat) => (
                 <div key={stat.value} className="text-center rounded-xl border border-white/10 bg-white/[0.03] p-6">
-                  <p className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+                  <p className="text-4xl md:text-5xl font-medium text-white tracking-tight">
                     {stat.value}<span className="text-primary">{stat.accent}</span>
                   </p>
                   <p className="text-xs md:text-sm text-surface-dark-muted mt-2 leading-relaxed">{stat.label}</p>
