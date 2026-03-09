@@ -117,10 +117,10 @@ const AturaProteins = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "Our facility now has the internet it deserves. Systems are fast. VoIP is stable. The team can work properly. Integra delivered a real solution."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Lee Betts, Plant & Operations Manager</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Lee Betts, Plant & Operations Manager</p>
           </div>
         </AnimatedSection>
       </section>

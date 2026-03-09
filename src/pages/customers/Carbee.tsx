@@ -117,10 +117,10 @@ const Carbee = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "BT offered 0.1Mbps. Integra gave us over 300Mbps. Now our office, workshop, and home all have fast, reliable connectivity. CCTV works perfectly. Never a dropped connection. We wouldn't operate without Integra."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Andrew Briggs, Managing Director, Carbee Ltd</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Andrew Briggs, Managing Director, Carbee Ltd</p>
           </div>
         </AnimatedSection>
       </section>

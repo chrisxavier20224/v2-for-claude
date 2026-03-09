@@ -121,10 +121,10 @@ const McGeeConstruction = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "We got live connectivity in a week. No months of waiting, no huge installation bills. And the upload speeds are massive—our project managers can work like they're in the office. That's what makes Integra different."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Chris Pyne, Head of IT, McGee Construction</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Chris Pyne, Head of IT, McGee Construction</p>
           </div>
         </AnimatedSection>
       </section>

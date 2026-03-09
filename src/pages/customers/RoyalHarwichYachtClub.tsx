@@ -124,10 +124,10 @@ const RoyalHarwichYachtClub = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "Integra delivered what everyone else said was impossible. Card payments work. VoIP works. And it's been completely reliable. I can't recommend them enough."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Mark Dean, The Royal Harwich Yacht Club</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Mark Dean, The Royal Harwich Yacht Club</p>
           </div>
         </AnimatedSection>
       </section>

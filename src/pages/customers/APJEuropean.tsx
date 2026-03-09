@@ -114,10 +114,10 @@ const APJEuropean = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "Despite being in the middle of a major city we found ourselves in a digital blackspot, unable to function as a modern online business. In that respect, Integra became a lifeline for us and allowed us to progress and grow as a business."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Simon Bane, IT & Infrastructure Manager, APJ European</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Simon Bane, IT & Infrastructure Manager, APJ European</p>
           </div>
         </AnimatedSection>
       </section>

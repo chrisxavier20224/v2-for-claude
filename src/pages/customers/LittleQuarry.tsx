@@ -124,10 +124,10 @@ const LittleQuarry = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "Integra transformed our entire offering. Guests can now do everything they need—stream, work, video call. And then they can actually relax. It's been transformational."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Nick Parr, Owner, Little Quarry Glamping</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Nick Parr, Owner, Little Quarry Glamping</p>
           </div>
         </AnimatedSection>
       </section>

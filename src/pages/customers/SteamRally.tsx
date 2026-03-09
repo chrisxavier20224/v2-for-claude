@@ -10,6 +10,7 @@ import SEO from "@/components/shared/SEO";
 import heroImg from "@/assets/case-studies/steam-rally-hero.png";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
 import eventImg from "@/assets/case-studies/steam-rally-event.png";
+import bridgeMastImg from "@/assets/case-studies/steam-rally-bridge-mast.png";
 
 const companyDetails = [
   { label: "Company", value: "WRSA Steam Rally Festival" },
@@ -127,10 +128,10 @@ const SteamRally = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "Integra Bridge delivered 500Mbps to a field with zero infrastructure. Not a single dropped payment all day. That reliability directly translates to record sales. We've hired them for three years running for a reason."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Jackie Green, General Manager, WSRA</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Jackie Green, General Manager, WSRA</p>
           </div>
         </AnimatedSection>
       </section>
@@ -146,6 +147,13 @@ const SteamRally = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               The result: 500Mbps+ throughout the site. Secure payment network with zero downtime. Radio links blanketed the entire venue—drinks tent, ticket booth, exhibition areas. All accessible. All fast. Zero dropped transactions. That's how they hit record sales.
             </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.15} className="mt-10">
+            <motion.div className="overflow-hidden rounded-2xl" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4, ease: "easeOut" }}>
+              <img src={bridgeMastImg} alt="Integra Bridge mast with Starlink dish deployed at the Steam Rally" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+            </motion.div>
+            <p className="text-sm text-muted-foreground mt-3">Integra Bridge mast deployed on-site, delivering 500Mbps+ across the festival grounds.</p>
           </AnimatedSection>
         </div>
       </Section>

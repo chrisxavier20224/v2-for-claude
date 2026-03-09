@@ -145,10 +145,10 @@ const SeaconGroup = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "Integra delivered a complete solution — not just connectivity, but full wireless coverage and comprehensive security across our entire warehouse. The system was deployed seamlessly without disrupting operations, and it's been rock-solid from day one."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">
+            <p className="text-lg font-medium text-surface-dark-foreground">
               Martin Phillips, CEO — Seacon Group
             </p>
           </div>

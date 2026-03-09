@@ -18,18 +18,18 @@ import apjHero from "@/assets/case-studies/apj-hero.jpg";
 import seaconHero from "@/assets/case-studies/seacon-hero.jpg";
 
 const allStories = [
-  { company: "Royle Farm Business Park", title: "From Farm to Fibre: Royle Farm's Digital Renaissance", image: royleFarmHero, path: "/customers/royle-farm" },
-  { company: "WRSA Steam Rally Festival", title: "Steaming Ahead with Enhanced Festival Connectivity", image: steamRallyHero, path: "/customers/steaming-ahead-with-enhanced-festival-connectivity" },
-  { company: "WB Power Services", title: "Powering Up: A Connectivity Triumph", image: wbPowerHero, path: "/customers/wb-power-services" },
-  { company: "McGee Construction", title: "Engineering Success: McGee's Connectivity Leap", image: mcgeeHero, path: "/customers/mcgee-construction" },
-  { company: "Little Quarry Glamping", title: "Glamping Goes Digital: Internet Revolution", image: littleQuarryHero, path: "/customers/little-quarry-glamping" },
-  { company: "Carbee Ltd", title: "Revving Up Connectivity: CarBee's Journey", image: carbeeHero, path: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet" },
-  { company: "Royal Harwich Yacht Club", title: "Sailing Through Connectivity Challenges", image: rhycHero, path: "/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey" },
-  { company: "UKHarvest", title: "Fast-Track Connectivity: Digital Transformation", image: ukharvestHero, path: "/customers/fast-track-connectivity-ukharvests-digital-transformation" },
-  { company: "Thinking Anglers", title: "Casting the Net Wide: A Connectivity Transformation", image: thinkingAnglersHero, path: "/customers/casting-the-net-wide-a-connectivity-transformation" },
-  { company: "Atura Proteins", title: "Revolutionising Connectivity for Plant Protein Pioneers", image: aturaHero, path: "/customers/revolutionising-connectivity-for-plant-protein-pioneers" },
-  { company: "APJ European", title: "Revitalising Global Distribution: Digital Transformation", image: apjHero, path: "/customers/revitalising-global-distribution-apj-europeans-digital-transformation" },
-  { company: "Seacon Group", title: "Docking into the Digital Age: Connectivity Overhaul", image: seaconHero, path: "/customers/seacon-group" },
+  { company: "Royle Farm Business Park", title: "From Farm to Fibre: Royle Farm Business Park", image: royleFarmHero, path: "/customers/royle-farm" },
+  { company: "WRSA Steam Rally Festival", title: "Steam at Scale: 500Mbps for 8,000 Visitors", image: steamRallyHero, path: "/customers/steaming-ahead-with-enhanced-festival-connectivity" },
+  { company: "WB Power Services", title: "Dodging the Six-Figure Bill: Nationwide Connectivity", image: wbPowerHero, path: "/customers/wb-power-services" },
+  { company: "McGee Construction", title: "Building at Speed: 350Mbps for London's Biggest Sites", image: mcgeeHero, path: "/customers/mcgee-construction" },
+  { company: "Little Quarry Glamping", title: "Luxury Pods, Real Internet: Little Quarry's Breakthrough", image: littleQuarryHero, path: "/customers/little-quarry-glamping" },
+  { company: "Carbee Ltd", title: "From 0.1Mbps to 300+: Rural Car Dealer Gets High-Speed", image: carbeeHero, path: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet" },
+  { company: "Royal Harwich Yacht Club", title: "Full Sail: 300Mbps in the Middle of Nowhere", image: rhycHero, path: "/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey" },
+  { company: "UKHarvest", title: "Food Rescue Needs Fast Internet: UKHarvest's Win", image: ukharvestHero, path: "/customers/fast-track-connectivity-ukharvests-digital-transformation" },
+  { company: "Thinking Anglers", title: "YouTube Creators Need Upload Speed: They Got It", image: thinkingAnglersHero, path: "/customers/casting-the-net-wide-a-connectivity-transformation" },
+  { company: "Atura Proteins", title: "Plant Proteins Powered by Real Connectivity", image: aturaHero, path: "/customers/revolutionising-connectivity-for-plant-protein-pioneers" },
+  { company: "APJ European", title: "A Warehouse in a Digital Blackspot: Solved", image: apjHero, path: "/customers/revitalising-global-distribution-apj-europeans-digital-transformation" },
+  { company: "Seacon Group", title: "Port Operations Transformed: Comprehensive Connectivity", image: seaconHero, path: "/customers/seacon-group" },
 ];
 
 interface RelatedCaseStudiesProps {

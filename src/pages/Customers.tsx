@@ -20,8 +20,8 @@ import seaconHero from "@/assets/case-studies/seacon-hero.jpg";
 
 const featured = {
   company: "McGee Construction",
-  title: "Engineering Success: McGee's Connectivity Leap in London",
-  description: "McGee Construction enhances project efficiency with Integra's SD-WAN, achieving 150Mbps+ across complex London construction sites.",
+  title: "Building at Speed: 350Mbps for London's Biggest Sites",
+  description: "McGee needed reliable connectivity across active London construction sites. Integra's SD-WAN delivered 350Mbps without waiting for fibre.",
   image: mcgeeHero,
   path: "/customers/mcgee-construction",
 };
@@ -29,78 +29,78 @@ const featured = {
 const stories = [
   {
     company: "WRSA Steam Rally Festival",
-    title: "Steaming Ahead with Enhanced Festival Connectivity",
-    description: "Integra provided robust, temporary connectivity for this large-scale outdoor festival, keeping thousands of visitors connected.",
+    title: "Steam at Scale: 500Mbps for 8,000 Visitors",
+    description: "500Mbps in a field with zero infrastructure. Card machines, live streams, and 8,000 visitors — all connected in one weekend.",
     image: steamRallyHero,
     path: "/customers/steaming-ahead-with-enhanced-festival-connectivity",
   },
   {
     company: "WB Power Services",
-    title: "Powering Up: A Connectivity Triumph in the Face of Adversity",
-    description: "Integra's SD-WAN solution swiftly empowered WB Power Services with robust connectivity, avoiding exorbitant excess construction charges.",
+    title: "Dodging the Six-Figure Bill: Nationwide Connectivity",
+    description: "Facing a six-figure excess construction charge for fibre, WB Power switched to Integra SD-WAN and saved tens of thousands.",
     image: wbPowerHero,
     path: "/customers/wb-power-services",
   },
   {
     company: "Royle Farm Business Park",
-    title: "From Farm to Fibre: Royle Farm Business Park's Digital Renaissance",
-    description: "From poor connectivity to 1000Mbps speeds, learn how Integra transformed tenant satisfaction and business potential at Royle Farm.",
+    title: "From Farm to Fibre: Royle Farm Business Park",
+    description: "From poor connectivity to 1Gbps speeds across a multi-tenant rural business park. Every unit now has enterprise-grade internet.",
     image: royleFarmHero,
     path: "/customers/royle-farm",
   },
   {
     company: "Little Quarry Glamping",
-    title: "Glamping Goes Digital: Little Quarry's Internet Revolution",
-    description: "Integra's SD-WAN service brought high-speed internet to the heart of Little Quarry Glamping, enhancing the tranquil retreat.",
+    title: "Luxury Pods, Real Internet: Little Quarry's Breakthrough",
+    description: "Guests expect luxury — including fast WiFi. Integra brought high-speed internet to glamping pods in rural Cornwall.",
     image: littleQuarryHero,
     path: "/customers/little-quarry-glamping",
   },
   {
     company: "Carbee Ltd",
-    title: "Revving Up Connectivity: CarBee's Journey to High-Speed Internet",
-    description: "CarBee races ahead with Integra's SD-WAN service, leaving slow internet in the dust and shifting their business into high gear.",
+    title: "From 0.1Mbps to 300+: Rural Car Dealer Gets High-Speed",
+    description: "Carbee's rural dealership went from 0.1Mbps to over 300Mbps overnight. Online listings, video uploads, and card payments all fixed.",
     image: carbeeHero,
     path: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet",
   },
   {
-    company: "The Royal Harwich Yacht Club",
-    title: "Sailing Through Connectivity Challenges",
-    description: "Integra's SD-WAN service transformed RHYC's operations, providing robust connectivity in a challenging coastal location.",
+    company: "Royal Harwich Yacht Club",
+    title: "Full Sail: 300Mbps in the Middle of Nowhere",
+    description: "A yacht club on a remote estuary with no fibre options. Integra delivered 300Mbps via bonded cellular SD-WAN.",
     image: rhycHero,
     path: "/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey",
   },
   {
     company: "UKHarvest",
-    title: "Fast-Track Connectivity: UKHarvest's Digital Transformation",
-    description: "UKHarvest's digital operations turbocharged with Integra's SD-WAN solution, deployed in under 14 days.",
+    title: "Food Rescue Needs Fast Internet: UKHarvest's Win",
+    description: "UKHarvest coordinates food rescue across the UK. Integra deployed high-speed connectivity in under 14 days.",
     image: ukharvestHero,
     path: "/customers/fast-track-connectivity-ukharvests-digital-transformation",
   },
   {
     company: "Thinking Anglers",
-    title: "Casting the Net Wide: A Connectivity Transformation",
-    description: "Thinking Anglers leaps from sluggish ADSL to robust SD-WAN, boosting productivity and digital marketing efforts.",
+    title: "YouTube Creators Need Upload Speed: They Got It",
+    description: "Thinking Anglers needed upload speed for YouTube content. Integra replaced sluggish ADSL with fast, reliable SD-WAN.",
     image: thinkingAnglersHero,
     path: "/customers/casting-the-net-wide-a-connectivity-transformation",
   },
   {
     company: "Atura Proteins",
-    title: "Revolutionising Connectivity for Plant Protein Pioneers",
-    description: "Propelled Atura's internet from 7Mbps to 100Mbps, without additional Excess Construction Charges.",
+    title: "Plant Proteins Powered by Real Connectivity",
+    description: "Atura's internet went from 7Mbps to 100Mbps — no excess construction charges, no six-month wait for fibre.",
     image: aturaHero,
     path: "/customers/revolutionising-connectivity-for-plant-protein-pioneers",
   },
   {
     company: "APJ European",
-    title: "Revitalising Global Distribution: APJ European's Digital Transformation",
-    description: "APJ European breaks free from digital constraints, accelerating global distribution with Integra's SD-WAN solution.",
+    title: "A Warehouse in a Digital Blackspot: Solved",
+    description: "APJ's global distribution warehouse sat in a digital blackspot. Integra's SD-WAN brought it online in days, not months.",
     image: apjHero,
     path: "/customers/revitalising-global-distribution-apj-europeans-digital-transformation",
   },
   {
     company: "Seacon Group",
-    title: "Docking into the Digital Age: Seacon Group's Connectivity Overhaul",
-    description: "Integra's SD-WAN solution delivered resilient, high-speed connectivity across Seacon Group's busy port estate at Northfleet.",
+    title: "Port Operations Transformed: Comprehensive Connectivity",
+    description: "Seacon's busy port estate at Northfleet needed resilient connectivity across multiple buildings. Integra delivered end-to-end.",
     image: seaconHero,
     path: "/customers/seacon-group",
   },
@@ -222,7 +222,7 @@ const Customers = () => {
                     </div>
                     <div className="p-6 flex flex-col flex-1">
                       <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Customer Story</span>
-                      <p className="text-sm font-semibold text-surface-dark-foreground mb-1">{story.company}</p>
+                      <p className="text-sm font-medium text-surface-dark-foreground mb-1">{story.company}</p>
                       <h3 className="text-lg font-medium text-surface-dark-foreground mb-3 leading-snug">{story.title}</h3>
                       <p className="text-sm text-surface-dark-muted mb-4 flex-1">{story.description}</p>
                       <span className="inline-flex items-center gap-2 text-sm font-semibold text-surface-dark-foreground group-hover:text-primary transition-colors">

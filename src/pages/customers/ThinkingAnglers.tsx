@@ -121,10 +121,10 @@ const ThinkingAnglers = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "Content production was painful before. Now our uploads happen at real speed. The team can work from anywhere and video calls actually work. This has completely changed how we operate."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">Scott Karabowicz, General Manager, Thinking Anglers</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">Scott Karabowicz, General Manager, Thinking Anglers</p>
           </div>
         </AnimatedSection>
       </section>

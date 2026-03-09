@@ -124,10 +124,10 @@ const UKHarvest = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "14 days from conversation to fully live. Integra didn't just deliver fast internet—they understood the urgency of our mission. Their team was professional, responsive, and solved it properly."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">James Swann, Programme Manager, UKHarvest</p>
+            <p className="text-lg font-medium text-surface-dark-foreground">James Swann, Programme Manager, UKHarvest</p>
           </div>
         </AnimatedSection>
       </section>

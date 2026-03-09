@@ -139,10 +139,10 @@ const WBPowerServices = () => {
         <AnimatedSection>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
-            <blockquote className="text-2xl md:text-3xl font-semibold text-surface-dark-foreground leading-snug mb-6">
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
               "BT wanted £250K to install a leased line. Integra gave us 350Mbps with strong upload speeds in days. It's transformed how our project managers work. And we're rolling it out across our other depots. It's not even a question."
             </blockquote>
-            <p className="text-lg font-semibold text-surface-dark-foreground">
+            <p className="text-lg font-medium text-surface-dark-foreground">
               Matt Muhl, Director, WB Power Services
             </p>
           </div>

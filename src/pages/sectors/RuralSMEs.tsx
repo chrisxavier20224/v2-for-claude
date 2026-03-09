@@ -223,7 +223,7 @@ const RuralSMEs = () => {
             </motion.div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Case Study</p>
-              <h2 className="text-heading-1 text-foreground mb-4">Revving Up Connectivity: Carbee's Journey</h2>
+              <h2 className="text-heading-1 text-foreground mb-4">From 0.1Mbps to 300+: Carbee's Breakthrough</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 See how Integra delivered high-speed internet to Carbee's rural location, transforming their business operations and customer experience.
               </p>
