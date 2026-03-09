@@ -166,7 +166,7 @@ const Index = () => {
                 Your internet shouldn't depend on how close you are to London. We've connected 100+ rural properties with speeds up to 350Mbps — in places where BT said it would take years.
               </p>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button asChild size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 font-medium h-12 px-8 text-base">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
                   <Link to="/availability-checker">Check Your Availability</Link>
                 </Button>
               </motion.div>
