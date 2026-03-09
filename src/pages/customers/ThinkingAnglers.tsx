@@ -105,7 +105,7 @@ const ThinkingAnglers = () => {
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">Tangled in the Weeds of Connectivity</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The company's rural location presented unique challenges. The distance from the exchange resulted in a struggling ADSL line that couldn't keep up with the demands of a growing business. The lack of resilience in their IT infrastructure meant that any downtime brought operations to a standstill. The impending PSTN switch-off in 2025 further emphasised the need for an upgrade.
+              The company's rural location presented unique challenges. The distance from the exchange resulted in a struggling ADSL line that couldn't keep up with the demands of a growing business. The lack of resilience in their IT infrastructure meant that any downtime brought operations to a standstill. The impending PSTN switch-off in January 2027 further emphasised the need for an upgrade.
             </p>
           </AnimatedSection>
 

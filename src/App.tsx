@@ -216,7 +216,6 @@ const App = () => (
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/sla" element={<SLA />} />
               <Route path="/terms-of-use" element={<TermsOfWebsiteUse />} />
-              <Route path="/terms-of-use" element={<TermsOfWebsiteUse />} />
               <Route path="/brand-guidelines" element={<BrandGuidelines />} />
               <Route path="/insights/failure-prevention-starts-long-before-alarms" element={<FailurePreventionArticle />} />
               <Route path="/insights/sustainability-efficiency-critical-infrastructure" element={<SustainabilityEfficiencyArticle />} />

@@ -55,7 +55,7 @@ const PortableWifiConstruction = () => (
 
     <h3>Option 2: 4G Portable Router</h3>
 
-    <p>Dedicated portable router with 4G/5G SIM. Examples: Cradlepoint, TP-Link Archer.</p>
+    <p>Dedicated portable router with 4G/5G SIM. Commercial-grade units designed for temporary deployments.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>

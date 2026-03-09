@@ -64,7 +64,7 @@ const TemporaryBroadbandEvents = () => (
 
     <h3>Option 2: Portable 4G Router</h3>
 
-    <p>Rent or buy a 4G router (like a Cradlepoint). Uses a high-speed mobile SIM. Better than a hotspot.</p>
+    <p>Rent or buy a commercial-grade 4G router. Uses a high-speed mobile SIM. Better than a hotspot.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>
