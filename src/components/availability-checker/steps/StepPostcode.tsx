@@ -54,19 +54,19 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
   };
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
       <div>
         <h2 className="text-2xl font-bold text-foreground mb-2">
-          {FORM_TITLES[5]}
+          What's your <span className="font-bold">postcode</span>?
         </h2>
-        <p className="text-muted-foreground">
-          {FORM_DESCRIPTIONS[5]}
+        <p className="text-sm text-muted-foreground">
+          We'll check availability at your address.
         </p>
       </div>
 
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          <label className="block text-sm font-medium text-foreground mb-3">
             Enter Postcode
           </label>
           <div className="relative">
@@ -75,12 +75,12 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
               placeholder="e.g., SW1A 1AA"
-              className={`w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition ${
-                error ? 'border-destructive' : ''
+              className={`w-full px-0 py-2 bg-transparent border-0 border-b-2 text-foreground placeholder-muted-foreground focus:outline-none transition ${
+                error ? 'border-b-destructive' : 'border-b-border focus:border-b-primary'
               }`}
             />
             {isLoading && (
-              <div className="absolute right-3 top-3">
+              <div className="absolute right-0 top-2">
                 <div className="animate-spin">
                   <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -90,7 +90,7 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
             )}
           </div>
           {error && (
-            <p className="mt-1 text-sm text-destructive">{error}</p>
+            <p className="mt-2 text-sm text-destructive">{error}</p>
           )}
         </div>
 
@@ -103,7 +103,7 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
             </p>
 
             {addresses.length > 0 && (
-              <div className="max-h-64 overflow-y-auto space-y-2 border border-border rounded-lg p-3 bg-card">
+              <div className="max-h-64 overflow-y-auto space-y-2 border border-border rounded-lg p-3 bg-muted/20">
                 {addresses.map((addr, index) => (
                   <button
                     key={`${addr.postcode}-${index}`}
@@ -113,8 +113,8 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
                     }}
                     className={`w-full p-3 text-left rounded-lg transition border-2 ${
                       selectedAddress?.full === addr.full
-                        ? 'border-primary bg-primary/5'
-                        : 'border-border bg-muted/50 hover:border-border'
+                        ? 'border-primary bg-primary/10'
+                        : 'border-border bg-transparent hover:border-border/60'
                     }`}
                   >
                     <p className="text-foreground font-medium">{addr.address}</p>
@@ -127,7 +127,7 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
         )}
 
         {selectedAddress && (
-          <div className="p-3 bg-primary/5 border border-primary rounded-lg">
+          <div className="p-3 bg-primary/10 border border-primary rounded-lg">
             <p className="text-sm text-muted-foreground">Selected:</p>
             <p className="text-foreground font-medium">{selectedAddress.address}</p>
             <p className="text-sm text-muted-foreground">{selectedAddress.postcode}</p>
@@ -138,13 +138,13 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
       <button
         onClick={handleNext}
         disabled={!selectedAddress}
-        className={`w-full px-6 py-3 font-semibold rounded-lg transition duration-200 transform hover:scale-105 active:scale-95 ${
+        className={`inline-block px-6 py-2 font-semibold rounded-lg transition duration-200 transform hover:scale-105 active:scale-95 ${
           selectedAddress
-            ? 'bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer'
+            ? 'bg-foreground hover:bg-foreground/90 text-background cursor-pointer'
             : 'bg-muted text-muted-foreground cursor-not-allowed'
         }`}
       >
-        Continue
+        OK
       </button>
     </div>
   );

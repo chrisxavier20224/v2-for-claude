@@ -20,13 +20,13 @@ const StepEmployees: React.FC<StepEmployeesProps> = ({ employeeCount = '', onNex
   };
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
       <div>
         <h2 className="text-2xl font-bold text-foreground mb-2">
-          {FORM_TITLES[8]}
+          How many <span className="font-bold">employees</span> do you have?
         </h2>
-        <p className="text-muted-foreground">
-          {FORM_DESCRIPTIONS[8]}
+        <p className="text-sm text-muted-foreground">
+          This helps us recommend the right business package.
         </p>
       </div>
 
@@ -40,21 +40,21 @@ const StepEmployees: React.FC<StepEmployeesProps> = ({ employeeCount = '', onNex
             }}
             className={`w-full p-4 text-left border-2 rounded-lg transition duration-200 ${
               localCount === option.value
-                ? 'border-primary bg-primary/5'
-                : 'border-border bg-card hover:border-border'
+                ? 'border-primary bg-primary/10'
+                : 'border-border bg-transparent hover:border-border/60'
             }`}
           >
             <div className="flex items-center justify-between">
               <p className="font-semibold text-foreground">{option.label}</p>
               <div
-                className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition ${
+                className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition flex-shrink-0 ${
                   localCount === option.value
                     ? 'border-primary bg-primary'
                     : 'border-border'
                 }`}
               >
                 {localCount === option.value && (
-                  <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
                 )}
               </div>
             </div>
@@ -69,13 +69,13 @@ const StepEmployees: React.FC<StepEmployeesProps> = ({ employeeCount = '', onNex
       <button
         onClick={handleNext}
         disabled={!localCount}
-        className={`w-full px-6 py-3 font-semibold rounded-lg transition duration-200 transform hover:scale-105 active:scale-95 ${
+        className={`inline-block px-6 py-2 font-semibold rounded-lg transition duration-200 transform hover:scale-105 active:scale-95 ${
           localCount
-            ? 'bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer'
+            ? 'bg-foreground hover:bg-foreground/90 text-background cursor-pointer'
             : 'bg-muted text-muted-foreground cursor-not-allowed'
         }`}
       >
-        Continue
+        OK
       </button>
     </div>
   );

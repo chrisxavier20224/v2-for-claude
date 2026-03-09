@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { useFormState } from './hooks/useFormState';
 import { useUTMCapture } from './hooks/useUTMCapture';
 import { useHubSpotSubmit } from './hooks/useHubSpotSubmit';
@@ -23,7 +24,8 @@ const AvailabilityCheckerForm: React.FC = () => {
   const { submit, isSubmitting } = useHubSpotSubmit();
   const utmParams = useUTMCapture();
 
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(-1); // Start at -1 to show welcome screen
+  const [showWelcome, setShowWelcome] = useState(true);
   const [recommendation, setRecommendation] = useState<RecommendationResponse | null>(null);
   const [isLoadingRecommendation, setIsLoadingRecommendation] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -125,6 +127,50 @@ const AvailabilityCheckerForm: React.FC = () => {
     window.location.href = NATIONAL_BROADBAND_REFERRAL;
   };
 
+  const renderWelcome = () => {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.4 }}
+        className="min-h-screen flex items-center justify-center px-4"
+      >
+        <div className="max-w-2xl w-full">
+          <div
+            className="rounded-2xl p-12 sm:p-16 text-center space-y-8"
+            style={{
+              background: 'radial-gradient(ellipse at 60% 40%, rgba(147, 197, 253, 0.5), rgba(167, 243, 208, 0.3), transparent 70%)',
+            }}
+          >
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+                Fast internet is only a few clicks away.
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                Use our availability checker to see if Integra are installing in your area and if our service is right for you.
+              </p>
+            </div>
+
+            <button
+              onClick={handleStartClick}
+              className="inline-block px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition duration-200 transform hover:scale-105 active:scale-95"
+            >
+              Start
+            </button>
+
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground pt-4">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 11-2 0 1 1 0 012 0zm0 3.5a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd" />
+              </svg>
+              <span>Takes 2 minutes</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  };
+
   const renderStep = () => {
     switch (currentStep) {
       case 0:
@@ -224,6 +270,12 @@ const AvailabilityCheckerForm: React.FC = () => {
     }
   }, [currentStep]);
 
+  // Handle welcome screen
+  const handleStartClick = () => {
+    setShowWelcome(false);
+    setCurrentStep(0);
+  };
+
   // Handle back button
   const handleBack = () => {
     if (currentStep > 0 && !formSubmitted) {
@@ -231,47 +283,47 @@ const AvailabilityCheckerForm: React.FC = () => {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-background py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto">
-        {/* Header */}
-        <div className="mb-8 space-y-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-foreground">Check Your Coverage</h1>
-              <p className="text-muted-foreground mt-2">
-                Find the perfect broadband solution for your needs
-              </p>
-            </div>
-          </div>
+  // Show welcome screen if needed
+  if (showWelcome) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
+        {renderWelcome()}
+      </div>
+    );
+  }
 
-          {/* Progress Bar */}
-          {!formSubmitted && (
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">
-                  Step {Math.min(currentStep + 1, totalSteps - 1)} of {totalSteps - 1}
-                </span>
-                <span className="text-primary font-semibold">{progressPercentage}%</span>
-              </div>
-              <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                <div
-                  className="bg-gradient-to-r from-primary to-accent h-full transition-all duration-300"
-                  style={{ width: `${progressPercentage}%` }}
-                ></div>
-              </div>
-            </div>
-          )}
-        </div>
+  return (
+    <div className="min-h-screen bg-[#f8faf9] py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto">
+        {/* Subtle Progress Bar */}
+        {!formSubmitted && currentStep >= 0 && (
+          <div className="mb-8">
+            <div
+              className="h-1 bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-300"
+              style={{ width: `${progressPercentage}%` }}
+            ></div>
+          </div>
+        )}
 
         {/* Main Form Area */}
-        <div className="bg-card rounded-xl border border-border p-8 space-y-6">
+        <motion.div
+          key={`step-${currentStep}`}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+          className="bg-white rounded-2xl p-8 sm:p-12 space-y-8"
+          style={{
+            background: 'radial-gradient(ellipse at 60% 40%, rgba(147, 197, 253, 0.5), rgba(167, 243, 208, 0.3), transparent 70%)',
+            backdropFilter: 'blur(10px)',
+          }}
+        >
           {renderStep()}
-        </div>
+        </motion.div>
 
         {/* Back Button */}
         {!formSubmitted && currentStep > 0 && (
-          <div className="mt-6 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <button
               onClick={handleBack}
               className="text-muted-foreground hover:text-foreground font-medium text-sm transition"
