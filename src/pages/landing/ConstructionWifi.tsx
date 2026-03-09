@@ -138,7 +138,7 @@ const ConstructionWifi = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {painPoints.map((point, i) => (
               <motion.div key={i} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">{point.title}</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">{point.title}</h3>
                 <p className="text-surface-dark-muted leading-relaxed">{point.description}</p>
               </motion.div>
             ))}
@@ -162,24 +162,24 @@ const ConstructionWifi = () => {
 
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">48h</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Live in 2 Days</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">48h</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Live in 2 Days</h3>
               <p className="text-muted-foreground">
                 Equipment shipped next day. Installed and live by day 2. No waiting for fibre crews.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">50+</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Sites Connected</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">50+</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Sites Connected</h3>
               <p className="text-muted-foreground">
                 We've deployed to construction sites from London to the Scottish Borders.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">Flexible</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">No Lock-in</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">Flexible</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">No Lock-in</h3>
               <p className="text-muted-foreground">
                 Month-to-month. Pause, resume, or redeploy to other sites anytime.
               </p>
@@ -204,9 +204,9 @@ const ConstructionWifi = () => {
 
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             <motion.div variants={fadeUp} className="rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-800/40 border border-primary/40 p-8">
-              <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">Managed SIM Services</h3>
+              <h3 className="text-2xl font-medium text-surface-dark-foreground mb-2">Managed SIM Services</h3>
               <p className="text-surface-dark-muted mb-4">Best for small to medium sites</p>
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-medium text-white mb-6">
                 From £28<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
@@ -233,9 +233,9 @@ const ConstructionWifi = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl bg-gradient-to-br from-green-900/40 to-green-800/40 border border-green-600/40 p-8">
-              <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">Enterprise SD-WAN</h3>
+              <h3 className="text-2xl font-medium text-surface-dark-foreground mb-2">Enterprise SD-WAN</h3>
               <p className="text-surface-dark-muted mb-4">Best for large, multi-site projects</p>
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-medium text-white mb-6">
                 £400<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
@@ -278,25 +278,25 @@ const ConstructionWifi = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">1</span>
+                <span className="text-3xl font-medium">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Site Survey</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Site Survey</h3>
               <p className="text-muted-foreground">We visit your site, check coverage, and design the best setup for your layout.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">2</span>
+                <span className="text-3xl font-medium">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Equipment Ships</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Equipment Ships</h3>
               <p className="text-muted-foreground">Pre-configured hotspots and equipment ship to your site office within 24 hours.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">3</span>
+                <span className="text-3xl font-medium">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Live & Monitored</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Live & Monitored</h3>
               <p className="text-muted-foreground">Installation takes 30 minutes. Your site is online within 48 hours. We monitor 24/7.</p>
             </motion.div>
           </motion.div>
@@ -319,11 +319,11 @@ const ConstructionWifi = () => {
                   </p>
                   <div className="flex gap-4">
                     <div>
-                      <div className="text-3xl font-bold text-primary mb-1">12</div>
+                      <div className="text-3xl font-medium text-primary mb-1">12</div>
                       <p className="text-sm text-surface-dark-muted">Sites Connected</p>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-primary mb-1">48h</div>
+                      <div className="text-3xl font-medium text-primary mb-1">48h</div>
                       <p className="text-sm text-surface-dark-muted">Deployment Time</p>
                     </div>
                   </div>
@@ -387,7 +387,7 @@ const ConstructionWifi = () => {
             <motion.div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-blue-600 p-10 md:p-14 text-center" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4 }}>
               <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
                   Connect Your Site in 48 Hours
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">

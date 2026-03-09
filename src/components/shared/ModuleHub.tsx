@@ -41,7 +41,7 @@ const ModuleHub = () => {
         {/* Centre hub */}
         <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded glass-card">
           <div className="text-center">
-            <span className="block text-lg font-bold text-foreground">Integra</span>
+            <span className="block text-lg font-medium text-foreground">Integra</span>
             <span className="block text-sm font-medium text-primary">One</span>
           </div>
         </div>
@@ -62,12 +62,12 @@ const ModuleHub = () => {
               </div>
 
               {/* Name */}
-              <h3 className="mb-1 text-lg font-semibold text-foreground">
+              <h3 className="mb-1 text-lg font-medium text-foreground">
                 {module.name}
               </h3>
 
               {/* Description */}
-              <p className="mb-4 text-sm font-bold text-primary uppercase tracking-wide">
+              <p className="mb-4 text-sm font-medium text-primary uppercase tracking-wide">
                 {module.description}
               </p>
 

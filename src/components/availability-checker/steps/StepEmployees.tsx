@@ -22,7 +22,7 @@ const StepEmployees: React.FC<StepEmployeesProps> = ({ employeeCount = '', onNex
   return (
     <div className="space-y-8 animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold text-foreground mb-2">
+        <h2 className="text-2xl font-medium text-foreground mb-2">
           How many <span className="font-bold">employees</span> do you have?
         </h2>
         <p className="text-sm text-muted-foreground">

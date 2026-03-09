@@ -177,7 +177,7 @@ const Pricing = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl"
+              className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl font-medium"
             >
               Transparent Pricing. No Hidden Fees.
             </motion.h1>
@@ -198,7 +198,7 @@ const Pricing = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Our Products</p>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
               Choose your connection
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
@@ -231,14 +231,14 @@ const Pricing = () => {
                   </div>
                 )}
 
-                <h3 className="text-lg font-bold text-surface-dark-foreground mb-2 mt-1">{product.name}</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-2 mt-1">{product.name}</h3>
                 <p className="text-surface-dark-muted text-sm mb-5 leading-relaxed">{product.description}</p>
 
                 {/* Price block */}
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
                     {product.pricePrefix && <span className="text-sm text-surface-dark-muted">{product.pricePrefix}</span>}
-                    <span className="text-4xl font-bold text-white tracking-tight">£{product.price}</span>
+                    <span className="text-4xl font-medium text-white tracking-tight">£{product.price}</span>
                     <span className="text-sm text-surface-dark-muted">{product.period}</span>
                   </div>
                   <p className="text-xs text-surface-dark-muted mt-1">+VAT · Installation from £{product.installation} +VAT</p>
@@ -289,7 +289,7 @@ const Pricing = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Included as Standard</p>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
               Every package. No exceptions.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
@@ -311,7 +311,7 @@ const Pricing = () => {
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-base font-semibold text-foreground mb-2">{item.label}</h3>
+                  <h3 className="text-base font-medium text-foreground mb-2">{item.label}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </motion.div>
               );
@@ -327,7 +327,7 @@ const Pricing = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Extend Your Setup</p>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
               Add-On Services
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
@@ -349,10 +349,10 @@ const Pricing = () => {
                 className="rounded-xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/20 hover:bg-white/[0.05] transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-base font-semibold text-surface-dark-foreground">{addon.name}</h3>
+                  <h3 className="text-base font-medium text-surface-dark-foreground">{addon.name}</h3>
                 </div>
                 <div className="flex items-baseline gap-1 mb-3">
-                  <span className="text-2xl font-bold text-white">
+                  <span className="text-2xl font-medium text-white">
                     {addon.price.startsWith("From") || addon.price === "Custom" ? addon.price : `£${addon.price}`}
                   </span>
                   <span className="text-sm text-surface-dark-muted">{addon.period}</span>

@@ -158,7 +158,7 @@ const AvailabilityCheckerForm: React.FC = () => {
         <div className="max-w-2xl w-full">
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-12 sm:p-16 text-center space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
+              <h1 className="text-4xl sm:text-5xl font-medium text-white tracking-tight">
                 Fast internet is only a few clicks away.
               </h1>
               <p className="text-lg text-white/60">

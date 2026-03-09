@@ -115,7 +115,7 @@ const Cotswolds = () => {
             </p>
 
             <div className="bg-muted/30 border border-border rounded-lg p-6 mb-8">
-              <h3 className="font-semibold text-foreground mb-3">
+              <h3 className="font-medium text-foreground mb-3">
                 Why Cotswolds Properties Face Unique Challenges
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
@@ -150,7 +150,7 @@ const Cotswolds = () => {
 
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-medium text-foreground mb-2">
                   Integra Pro (Discreet Bonded 4G/5G)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
@@ -162,7 +162,7 @@ const Cotswolds = () => {
               </div>
 
               <div className="border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-medium text-foreground mb-2">
                   Starlink with 4G/5G Backup
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
@@ -174,7 +174,7 @@ const Cotswolds = () => {
               </div>
 
               <div className="border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-medium text-foreground mb-2">
                   Enterprise SLA (Premium Service)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
@@ -224,7 +224,7 @@ const Cotswolds = () => {
             </ol>
 
             <div className="bg-muted/30 border border-border rounded-lg p-6 my-8">
-              <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
+              <h3 className="font-medium text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>

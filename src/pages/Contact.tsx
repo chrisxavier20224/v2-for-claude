@@ -122,13 +122,13 @@ const Contact = () => {
             {/* Right: form card */}
             <AnimatedSection delay={0.15}>
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 md:p-10 shadow-2xl shadow-black/20">
-                <h2 className="text-lg font-semibold text-white mb-1">Send us a message</h2>
+                <h2 className="text-lg font-medium text-white mb-1">Send us a message</h2>
                 <p className="text-sm text-white/50 mb-6">We'll get back to you within one business day.</p>
 
                 {isSubmitted ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center">
                     <CheckCircle className="h-12 w-12 text-primary mb-4" />
-                    <h3 className="text-xl font-semibold text-surface-dark-foreground mb-2">Request Received</h3>
+                    <h3 className="text-xl font-medium text-surface-dark-foreground mb-2">Request Received</h3>
                     <p className="text-surface-dark-muted max-w-sm">
                       Thanks, {form.firstName}. We'll be in touch within one business day.
                     </p>

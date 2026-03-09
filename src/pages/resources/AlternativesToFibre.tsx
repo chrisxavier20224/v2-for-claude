@@ -334,7 +334,7 @@ const AlternativesToFibre = () => {
                 {/* Pros and cons */}
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="rounded-2xl border border-border bg-card p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                    <h3 className="text-lg font-medium text-foreground mb-4 flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-500" /> Strengths
                     </h3>
                     <ul className="space-y-3">
@@ -347,7 +347,7 @@ const AlternativesToFibre = () => {
                     </ul>
                   </div>
                   <div className="rounded-2xl border border-border bg-card p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                    <h3 className="text-lg font-medium text-foreground mb-4 flex items-center gap-2">
                       <XCircle className="h-5 w-5 text-red-500" /> Limitations
                     </h3>
                     <ul className="space-y-3">
@@ -364,11 +364,11 @@ const AlternativesToFibre = () => {
                 {/* Who for / not for */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="rounded-2xl border border-green-200 bg-green-50/50 dark:border-green-900/30 dark:bg-green-950/20 p-6">
-                    <h3 className="text-base font-semibold text-foreground mb-2">Who's it for?</h3>
+                    <h3 className="text-base font-medium text-foreground mb-2">Who's it for?</h3>
                     <p className="text-muted-foreground leading-relaxed">{sol.whoFor}</p>
                   </div>
                   <div className="rounded-2xl border border-red-200 bg-red-50/50 dark:border-red-900/30 dark:bg-red-950/20 p-6">
-                    <h3 className="text-base font-semibold text-foreground mb-2">Who's it not for?</h3>
+                    <h3 className="text-base font-medium text-foreground mb-2">Who's it not for?</h3>
                     <p className="text-muted-foreground leading-relaxed">{sol.whoNotFor}</p>
                   </div>
                 </div>
@@ -459,7 +459,7 @@ const AlternativesToFibre = () => {
                 },
               ].map((item, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">
-                  <h3 className="text-base font-semibold text-primary mb-2">If {item.scenario}:</h3>
+                  <h3 className="text-base font-medium text-primary mb-2">If {item.scenario}:</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.recommendation}</p>
                 </div>
               ))}

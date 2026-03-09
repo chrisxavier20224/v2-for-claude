@@ -184,21 +184,21 @@ const WirelessDistribution = () => {
           </AnimatedSection>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">V Band (60GHz)</h3>
+              <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">V Band (60GHz)</h3>
               <p className="text-surface-dark-muted text-sm leading-relaxed mb-4">
                 Ultra-high capacity for short links (up to 2km). 2Gbps+ full duplex. Weather-sensitive but incredible speed for sites with clear line of sight.
               </p>
               <p className="text-xs text-primary font-semibold">Best for: High-capacity point-to-point between main buildings.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">5GHz Mesh</h3>
+              <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">5GHz Mesh</h3>
               <p className="text-surface-dark-muted text-sm leading-relaxed mb-4">
                 Lower frequency, better range and weather resilience. 500Mbps+ per sector. Cascades across multiple hops for complex topologies.
               </p>
               <p className="text-xs text-primary font-semibold">Best for: Multi-hop distribution, estates, and fallback resilience.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">60GHz Licensed Band</h3>
+              <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">60GHz Licensed Band</h3>
               <p className="text-surface-dark-muted text-sm leading-relaxed mb-4">
                 For critical links, dedicated licensed spectrum eliminates interference. Regulatory approval required but ultimate reliability.
               </p>
@@ -250,7 +250,7 @@ const WirelessDistribution = () => {
               <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-full bg-white/5" />
               <div className="relative z-10 p-10 md:p-14">
                 <p className="text-xs font-semibold uppercase tracking-widest text-white/80 mb-2">Real Installations</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <h2 className="text-2xl md:text-3xl font-medium text-white mb-4">
                   Royle Farm & Seacon Tilbury: V Band in Action
                 </h2>
                 <p className="text-white/90 leading-relaxed max-w-2xl">
@@ -326,7 +326,7 @@ const WirelessDistribution = () => {
           </AnimatedSection>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-lg font-semibold text-surface-dark-foreground mb-4">What's Included</h3>
+              <h3 className="text-lg font-medium text-surface-dark-foreground mb-4">What's Included</h3>
               <ul className="space-y-3">
                 {[
                   "Commercial-grade radios and networking equipment",
@@ -344,19 +344,19 @@ const WirelessDistribution = () => {
               </ul>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-lg font-semibold text-surface-dark-foreground mb-4">Typical Pricing</h3>
+              <h3 className="text-lg font-medium text-surface-dark-foreground mb-4">Typical Pricing</h3>
               <div className="space-y-4">
                 <div className="pb-4 border-b border-white/10">
                   <p className="text-sm text-surface-dark-muted mb-1">Point-to-Point (up to 5km)</p>
-                  <p className="text-2xl font-bold text-primary">£400-600/month</p>
+                  <p className="text-2xl font-medium text-primary">£400-600/month</p>
                 </div>
                 <div className="pb-4 border-b border-white/10">
                   <p className="text-sm text-surface-dark-muted mb-1">Point-to-Multipoint (1 master + 3 sectors)</p>
-                  <p className="text-2xl font-bold text-primary">£800-1,200/month</p>
+                  <p className="text-2xl font-medium text-primary">£800-1,200/month</p>
                 </div>
                 <div>
                   <p className="text-sm text-surface-dark-muted mb-1">Installation (varies by complexity)</p>
-                  <p className="text-2xl font-bold text-primary">£2,500-6,000</p>
+                  <p className="text-2xl font-medium text-primary">£2,500-6,000</p>
                 </div>
               </div>
               <p className="text-xs text-surface-dark-muted mt-6 italic">Installation includes site survey, design, equipment, and commissioning. Prices quoted per site after survey.</p>

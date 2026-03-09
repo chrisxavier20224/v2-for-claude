@@ -139,7 +139,7 @@ const Resources = () => {
                     {page.tag}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
                   {page.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -187,7 +187,7 @@ const Resources = () => {
                     {page.tag}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
                   {page.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">

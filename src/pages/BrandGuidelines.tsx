@@ -677,11 +677,11 @@ const BrandGuidelines = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="h-1 w-1 rounded-full bg-status-critical mt-2 shrink-0" />
-                <span>Never use <code className="text-status-critical bg-status-critical/10 px-1.5 py-0.5 rounded text-xs line-through">font-bold</code> on display or heading text—it makes Space Grotesk appear heavy</span>
+                <span>Never use <code className="text-status-critical bg-status-critical/10 px-1.5 py-0.5 rounded text-xs line-through">font-medium</code> on display or heading text—it makes Space Grotesk appear heavy</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="h-1 w-1 rounded-full bg-status-critical mt-2 shrink-0" />
-                <span>Never use <code className="text-status-critical bg-status-critical/10 px-1.5 py-0.5 rounded text-xs line-through">text-4xl font-bold</code>—use the semantic classes instead</span>
+                <span>Never use <code className="text-status-critical bg-status-critical/10 px-1.5 py-0.5 rounded text-xs line-through">text-4xl font-medium</code>—use the semantic classes instead</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="h-1 w-1 rounded-full bg-status-critical mt-2 shrink-0" />
@@ -1098,7 +1098,7 @@ const BrandGuidelines = () => {
                   <p className="text-xs text-muted-foreground mt-1">600</p>
                 </div>
                 <div className="bg-muted/30 rounded-lg p-3">
-                  <p className="font-bold text-lg">Aa</p>
+                  <p className="font-medium text-lg">Aa</p>
                   <p className="text-xs text-muted-foreground mt-1">700</p>
                 </div>
               </div>

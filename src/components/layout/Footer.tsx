@@ -62,7 +62,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
 
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="max-w-xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+              <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
                 Let's see what we can do for you
               </h2>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
@@ -97,7 +97,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
 
             {/* Connectivity */}
             <div>
-              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Connectivity</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Connectivity</h4>
               <ul className="space-y-2">
                 {connectivityLinks.map((link) => (
                   <li key={link.path}>
@@ -111,7 +111,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
 
             {/* Solutions */}
             <div>
-              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Solutions</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Solutions</h4>
               <ul className="space-y-2">
                 {solutionsLinks.map((link) => (
                   <li key={link.path}>
@@ -121,7 +121,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                   </li>
                 ))}
               </ul>
-              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4 mt-6">Infrastructure</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4 mt-6">Infrastructure</h4>
               <ul className="space-y-2">
                 {infrastructureLinks.map((link) => (
                   <li key={link.path}>
@@ -135,7 +135,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
 
             {/* Company */}
             <div>
-              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Company</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Company</h4>
               <ul className="space-y-2">
                 {companyLinks.map((link) => (
                   <li key={link.path}>
@@ -145,7 +145,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                   </li>
                 ))}
               </ul>
-              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4 mt-6">Resources</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4 mt-6">Resources</h4>
               <ul className="space-y-2">
                 {resourceLinks.map((link) => (
                   <li key={link.path}>
@@ -159,7 +159,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
 
             {/* Contact */}
             <div>
-              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Get in Touch</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Get in Touch</h4>
               <a href="mailto:connect@integra-networks.co.uk" className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors block mb-1">connect@integra-networks.co.uk</a>
               <a href="tel:02033887111" className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors block mb-4">0203 388 7111</a>
 

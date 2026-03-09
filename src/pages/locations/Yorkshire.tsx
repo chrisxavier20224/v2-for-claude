@@ -115,7 +115,7 @@ const Yorkshire = () => {
             </p>
 
             <div className="bg-muted/30 border border-border rounded-lg p-6 mb-8">
-              <h3 className="font-semibold text-foreground mb-3">
+              <h3 className="font-medium text-foreground mb-3">
                 Why Yorkshire Farming and Manufacturing Needs Reliability
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
@@ -144,7 +144,7 @@ const Yorkshire = () => {
 
             <div className="space-y-6 mb-8">
               <div className="border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-medium text-foreground mb-2">
                   Integra Pro (Bonded 4G/5G for Business)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
@@ -156,7 +156,7 @@ const Yorkshire = () => {
               </div>
 
               <div className="border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-medium text-foreground mb-2">
                   Enterprise SLA (99.5% Uptime Guarantee)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
@@ -168,7 +168,7 @@ const Yorkshire = () => {
               </div>
 
               <div className="border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-medium text-foreground mb-2">
                   Mesh WiFi for Multi-Building Sites
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
@@ -215,7 +215,7 @@ const Yorkshire = () => {
             </ol>
 
             <div className="bg-muted/30 border border-border rounded-lg p-6 my-8">
-              <h3 className="font-semibold text-foreground mb-4">Pricing</h3>
+              <h3 className="font-medium text-foreground mb-4">Pricing</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>

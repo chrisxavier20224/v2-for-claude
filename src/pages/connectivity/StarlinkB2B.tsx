@@ -188,35 +188,35 @@ const StarlinkB2B = () => {
               <div className="flex gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Managed Hardware</h3>
+                  <h3 className="font-medium text-foreground mb-1">Managed Hardware</h3>
                   <p className="text-muted-foreground">Enterprise, Standard, or Mini kit — fully managed by Integra with monitoring and updates.</p>
                 </div>
               </div>
               <div className="flex gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">24/7 Support</h3>
+                  <h3 className="font-medium text-foreground mb-1">24/7 Support</h3>
                   <p className="text-muted-foreground">Dedicated Integra support team with guaranteed response times and technical escalation.</p>
                 </div>
               </div>
               <div className="flex gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Cellular Bonding</h3>
+                  <h3 className="font-medium text-foreground mb-1">Cellular Bonding</h3>
                   <p className="text-muted-foreground">Automatic failover and load balancing with 4G/5G for redundancy without manual intervention.</p>
                 </div>
               </div>
               <div className="flex gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Single Bill</h3>
+                  <h3 className="font-medium text-foreground mb-1">Single Bill</h3>
                   <p className="text-muted-foreground">One invoice from Integra covering satellite, device, data, installation, and support.</p>
                 </div>
               </div>
               <div className="flex gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Service-Level Agreement</h3>
+                  <h3 className="font-medium text-foreground mb-1">Service-Level Agreement</h3>
                   <p className="text-muted-foreground">Guaranteed uptime, response times, and resolution targets tailored to your business.</p>
                 </div>
               </div>
@@ -293,7 +293,7 @@ const StarlinkB2B = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-muted-foreground text-sm mb-1">Managed Satellite</p>
-                  <p className="text-2xl font-bold text-foreground">From £300/month</p>
+                  <p className="text-2xl font-medium text-foreground">From £300/month</p>
                   <p className="text-xs text-muted-foreground mt-1">Plus VAT, based on usage and users</p>
                 </div>
                 <div className="border-t border-border pt-4">
@@ -310,7 +310,7 @@ const StarlinkB2B = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-muted-foreground text-sm mb-1">Installation</p>
-                  <p className="text-2xl font-bold text-foreground">£1,300</p>
+                  <p className="text-2xl font-medium text-foreground">£1,300</p>
                   <p className="text-xs text-muted-foreground mt-1">Plus VAT, includes survey and training</p>
                 </div>
                 <div className="border-t border-border pt-4">

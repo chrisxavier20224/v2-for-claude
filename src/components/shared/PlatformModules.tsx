@@ -47,7 +47,7 @@ const PlatformModules = () => {
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
               <module.icon className="h-6 w-6" />
             </div>
-            <h3 className="mb-2 text-xl font-semibold text-foreground">{module.name}</h3>
+            <h3 className="mb-2 text-xl font-medium text-foreground">{module.name}</h3>
             <p className="mb-6 text-muted-foreground">{module.tagline}</p>
             <div className="flex items-center text-sm font-medium text-primary group-hover:text-primary">
               Learn more

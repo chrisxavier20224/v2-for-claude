@@ -56,7 +56,7 @@ const StepPostcode: React.FC<StepPostcodeProps> = ({ postcode, address, onNext }
   return (
     <div className="space-y-8 animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold text-foreground mb-2">
+        <h2 className="text-2xl font-medium text-foreground mb-2">
           What's your <span className="font-bold">postcode</span>?
         </h2>
         <p className="text-sm text-muted-foreground">

@@ -131,7 +131,7 @@ const SDWanForSmallBusiness = () => {
             </h2>
             <div className="space-y-6">
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-4">The Setup</h3>
+                <h3 className="text-base font-medium text-foreground mb-4">The Setup</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Starlink connection: 100Mbps download, 20Mbps upload, 40ms latency, sometimes drops during rain</li>
                   <li>4G/5G cellular connection: 80Mbps download, 50Mbps upload, 25ms latency, never drops</li>
@@ -139,7 +139,7 @@ const SDWanForSmallBusiness = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-4">Without SD-WAN</h3>
+                <h3 className="text-base font-medium text-foreground mb-4">Without SD-WAN</h3>
                 <p className="text-muted-foreground mb-3">You choose one:</p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Use Starlink: Fast for downloads, but EPOS tills fail during rain</li>
@@ -148,7 +148,7 @@ const SDWanForSmallBusiness = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-4">With SD-WAN Bonding</h3>
+                <h3 className="text-base font-medium text-foreground mb-4">With SD-WAN Bonding</h3>
                 <p className="text-muted-foreground mb-3">Both work together:</p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>Real-time traffic (EPOS, video calls): prefer 4G/5G (lower latency, no rain issues)</li>
@@ -178,7 +178,7 @@ const SDWanForSmallBusiness = () => {
         <AnimatedSection delay={0.1}>
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-medium text-foreground mb-4 flex items-center gap-2">
                 <GitBranch className="h-5 w-5 text-primary" /> Load Balancing (Standard)
               </h3>
               <p className="text-muted-foreground mb-4">Split traffic between connections. Connection 1 handles some traffic, Connection 2 handles other traffic. Like two lanes on a highway — one lane for each connection.</p>
@@ -188,7 +188,7 @@ const SDWanForSmallBusiness = () => {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-medium text-foreground mb-4 flex items-center gap-2">
                 <BarChart3 className="h-5 w-5 text-primary" /> Bonding (Premium)
               </h3>
               <p className="text-muted-foreground mb-4">Fuse all connections into one logical pipe. A single file upload uses all available bandwidth from both connections simultaneously.</p>
@@ -212,7 +212,7 @@ const SDWanForSmallBusiness = () => {
             </h2>
             <div className="space-y-6">
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-4">Cellular SD-WAN (What We Offer Small Business)</h3>
+                <h3 className="text-base font-medium text-foreground mb-4">Cellular SD-WAN (What We Offer Small Business)</h3>
                 <p className="text-muted-foreground mb-3">Bonding multiple 4G/5G cellular connections from different carriers or different towers.</p>
                 <ul className="space-y-2 text-muted-foreground mb-4 text-sm">
                   <li><strong>Cost:</strong> £135-400/month for service + equipment</li>
@@ -224,7 +224,7 @@ const SDWanForSmallBusiness = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-4">Enterprise SD-WAN (What Large Corporations Use)</h3>
+                <h3 className="text-base font-medium text-foreground mb-4">Enterprise SD-WAN (What Large Corporations Use)</h3>
                 <p className="text-muted-foreground mb-3">Bonding multiple types of connections (MPLS, broadband, cellular, fibre) across multiple sites using enterprise routers and centralised management.</p>
                 <ul className="space-y-2 text-muted-foreground mb-4 text-sm">
                   <li><strong>Cost:</strong> £1,000s/month for service + equipment + management</li>
@@ -259,7 +259,7 @@ const SDWanForSmallBusiness = () => {
         <AnimatedSection delay={0.1}>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-base font-semibold text-red-600 mb-4 flex items-center gap-2">
+              <h3 className="text-base font-medium text-red-600 mb-4 flex items-center gap-2">
                 <XCircle className="h-5 w-5" /> Don't Need It If
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
@@ -271,7 +271,7 @@ const SDWanForSmallBusiness = () => {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-base font-semibold text-green-600 mb-4 flex items-center gap-2">
+              <h3 className="text-base font-medium text-green-600 mb-4 flex items-center gap-2">
                 <CheckCircle className="h-5 w-5" /> Do Need It If
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
@@ -283,7 +283,7 @@ const SDWanForSmallBusiness = () => {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-base font-semibold text-blue-600 mb-4 flex items-center gap-2">
+              <h3 className="text-base font-medium text-blue-600 mb-4 flex items-center gap-2">
                 <Cpu className="h-5 w-5" /> Nice-to-Have If
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
@@ -313,7 +313,7 @@ const SDWanForSmallBusiness = () => {
           <div className="grid gap-6 max-w-5xl mx-auto">
             {scenarios.map((scenario, i) => (
               <div key={i} className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">{scenario.title}</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">{scenario.title}</h3>
                 <p className="text-muted-foreground mb-4">{scenario.description}</p>
                 <div className="border-t border-border pt-4">
                   <p className="text-sm text-muted-foreground"><strong>Result:</strong> {scenario.result}</p>
@@ -336,19 +336,19 @@ const SDWanForSmallBusiness = () => {
             </h2>
             <div className="space-y-6">
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">How a Standard Router Works</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">How a Standard Router Works</h3>
                 <p className="text-muted-foreground">Router has two SIM cards (or connections). Software creates a routing table: "If destination is 192.168.1.100, use Connection A. If destination is external, use Connection B."</p>
                 <p className="text-muted-foreground mt-3">Result: One destination uses one connection. No overlap. Speeds max at whichever connection is slower.</p>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">How Bonding Works</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">How Bonding Works</h3>
                 <p className="text-muted-foreground">Router creates a virtual tunnel using both connections. Data is split at the application layer. Large files are chopped into chunks: Chunk 1→Connection A, Chunk 2→Connection B, Chunk 3→Connection A, etc. Chunks arrive out of order, get reassembled at the destination.</p>
                 <p className="text-muted-foreground mt-3">Result: Single data stream uses both connections simultaneously. Speeds approach sum of both (some overhead).</p>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Transparent Failover</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Transparent Failover</h3>
                 <p className="text-muted-foreground">If Connection A drops, remaining chunks go through Connection B. Destination reassembles successfully. Application never knew one connection failed.</p>
                 <p className="text-muted-foreground mt-3">This is why bonding is powerful for critical applications (EPOS, VoIP, VPN). One connection failing doesn't break the transaction.</p>
               </div>

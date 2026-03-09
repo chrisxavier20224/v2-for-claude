@@ -268,12 +268,12 @@ const FarmBroadband = () => {
             </h2>
             <div className="space-y-6">
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">The Farm</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">The Farm</h3>
                 <p className="text-muted-foreground">Royle Farm is a mixed beef and dairy operation in Herefordshire, 40 acres, 80 head of cattle, plus farm shop.</p>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Challenge</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Challenge</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>Farmhouse 1km from main road</li>
                   <li>Grazing land spread across 2km (two separate fields, each with equipment sheds)</li>
@@ -286,7 +286,7 @@ const FarmBroadband = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Solution & Implementation</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Solution & Implementation</h3>
                 <p className="text-muted-foreground mb-3"><strong>Leased line + wireless distribution (P2P radio links)</strong></p>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li><strong>Phase 1:</strong> Fibre from road junction (1km trench). Excess construction charges were high (usual for rural). Integrated instead: fibre to cattle grid (0.5km), then distributed via high-powered P2P radio links to barn (2km away via wireless).</li>
@@ -296,7 +296,7 @@ const FarmBroadband = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Results</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Results</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>Farmhouse: 50Mbps symmetrical (leased line)</li>
                   <li>Farm shop: WiFi from farmhouse (stable, password protected)</li>
@@ -307,7 +307,7 @@ const FarmBroadband = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Performance</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Performance</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>Herd management software: Works seamlessly, real-time monitoring, live alerts</li>
                   <li>EPOS: Zero timeouts, transactions processed instantly</li>
@@ -317,7 +317,7 @@ const FarmBroadband = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Cost & ROI</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Cost & ROI</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>Leased line: £400/month</li>
                   <li>P2P radio installation: £1,500 (one-time)</li>
@@ -353,7 +353,7 @@ const FarmBroadband = () => {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
                     <sol.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-base font-semibold text-foreground">{sol.name}</h3>
+                  <h3 className="text-base font-medium text-foreground">{sol.name}</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                   <div>
@@ -405,7 +405,7 @@ const FarmBroadband = () => {
           <div className="grid gap-4 max-w-5xl mx-auto">
             {livestockTech.map((tech, i) => (
               <div key={i} className="rounded-xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">{tech.title}</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">{tech.title}</h3>
                 <p className="text-muted-foreground text-sm">{tech.description}</p>
               </div>
             ))}
@@ -437,7 +437,7 @@ const FarmBroadband = () => {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
                     <approach.icon className="h-5 w-5" />
                   </div>
-                  <h3 className="text-base font-semibold text-foreground">{approach.title}</h3>
+                  <h3 className="text-base font-medium text-foreground">{approach.title}</h3>
                 </div>
                 <div className="space-y-2 mb-4 text-sm">
                   <p><span className="text-muted-foreground">Cost:</span> <span className="font-medium text-foreground">{approach.cost}</span></p>
@@ -481,7 +481,7 @@ const FarmBroadband = () => {
               <div key={i} className="rounded-2xl border border-border bg-card p-6">
                 <div className="flex items-start gap-4">
                   <div>
-                    <h3 className="text-base font-semibold text-foreground mb-1">{guide.size}</h3>
+                    <h3 className="text-base font-medium text-foreground mb-1">{guide.size}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{guide.livestock}</p>
                   </div>
                 </div>
@@ -509,7 +509,7 @@ const FarmBroadband = () => {
           </div>
 
           <div className="max-w-3xl mx-auto mt-8 p-6 rounded-2xl border border-border bg-card">
-            <h3 className="text-base font-semibold text-foreground mb-4">ROI Calculation</h3>
+            <h3 className="text-base font-medium text-foreground mb-4">ROI Calculation</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>One missed calving alert (one lost calf): £500+</li>
               <li>One day of EPOS downtime in farm shop: £200-500</li>

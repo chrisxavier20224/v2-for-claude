@@ -338,10 +338,10 @@ const IntegraSDWAN = () => {
                     : "border-border bg-card hover:border-primary/50"
                 }`}
               >
-                <h3 className="text-lg font-bold text-foreground mb-2">{tier.name}</h3>
+                <h3 className="text-lg font-medium text-foreground mb-2">{tier.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{tier.speed}</p>
                 <div className="mb-1">
-                  <span className="text-3xl font-bold text-foreground">
+                  <span className="text-3xl font-medium text-foreground">
                     {tier.pricePrefix && <span className="text-lg">{tier.pricePrefix}</span>}
                     £{tier.price}
                   </span>

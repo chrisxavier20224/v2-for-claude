@@ -138,7 +138,7 @@ const HomeworkerBroadband = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {painPoints.map((point, i) => (
               <motion.div key={i} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">{point.title}</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">{point.title}</h3>
                 <p className="text-surface-dark-muted leading-relaxed">{point.description}</p>
               </motion.div>
             ))}
@@ -162,24 +162,24 @@ const HomeworkerBroadband = () => {
 
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">0</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Video Call Drops</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">0</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Video Call Drops</h3>
               <p className="text-muted-foreground">
                 Symmetric speeds mean uploads don't choke your connection. Video calls run smooth.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">100%</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Tax Deductible</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">100%</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Tax Deductible</h3>
               <p className="text-muted-foreground">
                 Self-employed? Home office broadband is a business expense. Claim it on your tax return.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">1 Hour</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Support Response</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">1 Hour</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Support Response</h3>
               <p className="text-muted-foreground">
                 Real UK engineers. Real phone support. Not chatbots. Same-day resolution.
               </p>
@@ -204,9 +204,9 @@ const HomeworkerBroadband = () => {
 
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             <motion.div variants={fadeUp} className="rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-800/40 border border-primary/40 p-8">
-              <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">Starlink SD-WAN</h3>
+              <h3 className="text-2xl font-medium text-surface-dark-foreground mb-2">Starlink SD-WAN</h3>
               <p className="text-surface-dark-muted mb-4">Best for: Rural areas or budget-conscious</p>
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-medium text-white mb-6">
                 £80<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
@@ -234,9 +234,9 @@ const HomeworkerBroadband = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl bg-gradient-to-br from-green-900/40 to-green-800/40 border border-green-600/40 p-8">
-              <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">Integra Pro</h3>
+              <h3 className="text-2xl font-medium text-surface-dark-foreground mb-2">Integra Pro</h3>
               <p className="text-surface-dark-muted mb-4">Best for: Premium performance & speed</p>
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-medium text-white mb-6">
                 £135<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
@@ -280,25 +280,25 @@ const HomeworkerBroadband = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">1</span>
+                <span className="text-3xl font-medium">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Coverage Check</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Coverage Check</h3>
               <p className="text-muted-foreground">Check if our service is available at your home. Takes 90 seconds.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">2</span>
+                <span className="text-3xl font-medium">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Order & Install</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Order & Install</h3>
               <p className="text-muted-foreground">We handle everything. Installation within 2-3 weeks. Simple setup.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">3</span>
+                <span className="text-3xl font-medium">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Work Reliably</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Work Reliably</h3>
               <p className="text-muted-foreground">No more call drops. Crystal-clear video calls. Professional confidence.</p>
             </motion.div>
           </motion.div>
@@ -317,21 +317,21 @@ const HomeworkerBroadband = () => {
 
             <div className="space-y-4">
               <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="font-semibold text-surface-dark-foreground mb-2">100% Tax Deductible</h3>
+                <h3 className="font-medium text-surface-dark-foreground mb-2">100% Tax Deductible</h3>
                 <p className="text-surface-dark-muted">
                   HMRC allows home office broadband as a business expense. Keep your invoice and claim it on your self-assessment return.
                 </p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="font-semibold text-surface-dark-foreground mb-2">Installation Is a Business Expense Too</h3>
+                <h3 className="font-medium text-surface-dark-foreground mb-2">Installation Is a Business Expense Too</h3>
                 <p className="text-surface-dark-muted">
                   Your one-off installation cost is also deductible. Monthly service goes straight on your tax return.
                 </p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="font-semibold text-surface-dark-foreground mb-2">Instant Monthly Invoices</h3>
+                <h3 className="font-medium text-surface-dark-foreground mb-2">Instant Monthly Invoices</h3>
                 <p className="text-surface-dark-muted">
                   Digital invoices every month. Perfect for your accountant. Makes tax time easy.
                 </p>
@@ -397,7 +397,7 @@ const HomeworkerBroadband = () => {
             <motion.div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-blue-600 p-10 md:p-14 text-center" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4 }}>
               <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
                   Start Working From Home With Confidence
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">

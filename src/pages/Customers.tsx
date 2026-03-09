@@ -135,7 +135,7 @@ const Customers = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <AnimatedSection>
             <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Customer Stories</p>
-            <h1 className="text-heading-1 md:text-display-sm text-white max-w-2xl">
+            <h1 className="text-heading-1 md:text-display-sm text-white max-w-2xl font-medium">
               Real businesses. Real results.
             </h1>
             <p className="text-lg text-white/80 max-w-xl mt-6 leading-relaxed">
@@ -162,8 +162,8 @@ const Customers = () => {
                 </div>
                 <div className="p-8 md:p-12 flex flex-col justify-center">
                   <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Customer Story</span>
-                  <p className="text-sm font-semibold text-primary mb-2">{featured.company}</p>
-                  <h2 className="text-2xl md:text-3xl font-normal text-surface-dark-foreground mb-4 leading-tight">{featured.title}</h2>
+                  <p className="text-sm font-medium text-primary mb-2">{featured.company}</p>
+                  <h2 className="text-2xl md:text-3xl font-medium text-surface-dark-foreground mb-4 leading-tight">{featured.title}</h2>
                   <p className="text-surface-dark-muted mb-6">{featured.description}</p>
                   <span className="inline-flex items-center gap-2 text-sm font-semibold text-surface-dark-foreground group-hover:text-primary transition-colors">
                     Read Story <ArrowRight className="h-4 w-4" />
@@ -223,7 +223,7 @@ const Customers = () => {
                     <div className="p-6 flex flex-col flex-1">
                       <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Customer Story</span>
                       <p className="text-sm font-semibold text-surface-dark-foreground mb-1">{story.company}</p>
-                      <h3 className="text-lg font-bold text-surface-dark-foreground mb-3 leading-snug">{story.title}</h3>
+                      <h3 className="text-lg font-medium text-surface-dark-foreground mb-3 leading-snug">{story.title}</h3>
                       <p className="text-sm text-surface-dark-muted mb-4 flex-1">{story.description}</p>
                       <span className="inline-flex items-center gap-2 text-sm font-semibold text-surface-dark-foreground group-hover:text-primary transition-colors">
                         Read Story <ArrowRight className="h-4 w-4" />

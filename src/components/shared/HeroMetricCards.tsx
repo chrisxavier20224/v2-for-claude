@@ -66,7 +66,7 @@ const MetricCardItem = ({ metric, index }: { metric: MetricCard; index: number }
         <p className="text-xs text-foreground/60 mb-1 tracking-widest uppercase font-semibold">
           {metric.label}
         </p>
-        <p className="text-3xl font-extrabold text-white tabular-nums">
+        <p className="text-3xl font-semibold text-white tabular-nums">
           {metric.prefix}{formatValue(count)}{metric.suffix}
         </p>
       </motion.div>

@@ -138,7 +138,7 @@ const StarlinkSdwan = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {painPoints.map((point, i) => (
               <motion.div key={i} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">{point.title}</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">{point.title}</h3>
                 <p className="text-surface-dark-muted leading-relaxed">{point.description}</p>
               </motion.div>
             ))}
@@ -162,24 +162,24 @@ const StarlinkSdwan = () => {
 
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-red-500 mb-2">95%</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Starlink Uptime</h3>
+              <div className="text-5xl md:text-6xl font-medium text-red-500 mb-2">95%</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Starlink Uptime</h3>
               <p className="text-muted-foreground">
                 5% downtime = ~36 hours per year. Small for home use. Catastrophic for business.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-red-500 mb-2">No SLA</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">No Guarantees</h3>
+              <div className="text-5xl md:text-6xl font-medium text-red-500 mb-2">No SLA</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">No Guarantees</h3>
               <p className="text-muted-foreground">
                 Starlink publishes no uptime guarantees. You can't claim downtime compensation.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-red-500 mb-2">Chatbot</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">No Real Support</h3>
+              <div className="text-5xl md:text-6xl font-medium text-red-500 mb-2">Chatbot</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">No Real Support</h3>
               <p className="text-muted-foreground">
                 Starlink support is automated. No UK engineers. No emergency escalation.
               </p>
@@ -202,7 +202,7 @@ const StarlinkSdwan = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-800/40 border border-primary/40 p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div>
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-4">What You Get</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-4">What You Get</h3>
                 <ul className="text-surface-dark-muted space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold">✓</span>
@@ -220,7 +220,7 @@ const StarlinkSdwan = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-4">How It Works</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-4">How It Works</h3>
                 <ul className="text-surface-dark-muted space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold">✓</span>
@@ -238,7 +238,7 @@ const StarlinkSdwan = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-4">Your Support</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-4">Your Support</h3>
                 <ul className="text-surface-dark-muted space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold">✓</span>
@@ -259,14 +259,14 @@ const StarlinkSdwan = () => {
             <div className="border-t border-white/10 pt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-lg font-semibold text-surface-dark-foreground mb-3">Pricing</h4>
-                  <p className="text-4xl font-bold text-white mb-2">
+                  <h4 className="text-lg font-medium text-surface-dark-foreground mb-3">Pricing</h4>
+                  <p className="text-4xl font-medium text-white mb-2">
                     £80<span className="text-lg text-surface-dark-muted">/month +VAT</span>
                   </p>
                   <p className="text-surface-dark-muted">50-220 Mbps • 99.5% SLA • Fully managed</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-surface-dark-foreground mb-3">What's Included</h4>
+                  <h4 className="text-lg font-medium text-surface-dark-foreground mb-3">What's Included</h4>
                   <p className="text-surface-dark-muted">
                     4G/5G SIM, SD-WAN router, installation, monthly monitoring, and 24/7 UK support. You pay Starlink directly for your dish and subscription.
                   </p>
@@ -291,25 +291,25 @@ const StarlinkSdwan = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">1</span>
+                <span className="text-3xl font-medium">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Verify Coverage</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Verify Coverage</h3>
               <p className="text-muted-foreground">Check that Starlink and 4G/5G are available at your location. Takes 2 minutes.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">2</span>
+                <span className="text-3xl font-medium">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Order & Install</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Order & Install</h3>
               <p className="text-muted-foreground">We ship everything pre-configured. Installation within 10-14 days.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">3</span>
+                <span className="text-3xl font-medium">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Always Online</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Always Online</h3>
               <p className="text-muted-foreground">99.5% uptime guaranteed. We manage everything. You focus on your business.</p>
             </motion.div>
           </motion.div>
@@ -332,11 +332,11 @@ const StarlinkSdwan = () => {
                   </p>
                   <div className="flex gap-4">
                     <div>
-                      <div className="text-3xl font-bold text-primary mb-1">Zero</div>
+                      <div className="text-3xl font-medium text-primary mb-1">Zero</div>
                       <p className="text-sm text-surface-dark-muted">Downtime</p>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-primary mb-1">2,000+</div>
+                      <div className="text-3xl font-medium text-primary mb-1">2,000+</div>
                       <p className="text-sm text-surface-dark-muted">Attendees Connected</p>
                     </div>
                   </div>
@@ -400,7 +400,7 @@ const StarlinkSdwan = () => {
             <motion.div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-blue-600 p-10 md:p-14 text-center" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4 }}>
               <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
                   Get Enterprise Reliability from Starlink
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">

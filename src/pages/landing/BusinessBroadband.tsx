@@ -136,7 +136,7 @@ const BusinessBroadband = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {painPoints.map((point, i) => (
               <motion.div key={i} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">{point.title}</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">{point.title}</h3>
                 <p className="text-surface-dark-muted leading-relaxed">{point.description}</p>
               </motion.div>
             ))}
@@ -160,24 +160,24 @@ const BusinessBroadband = () => {
 
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">107+</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Business Customers</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">107+</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Business Customers</h3>
               <p className="text-muted-foreground">
                 From small agencies to multi-site enterprises. All with 99.5% uptime SLA backing.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">14</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Days Average Install</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">14</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Days Average Install</h3>
               <p className="text-muted-foreground">
                 Fast deployment. You're not waiting 8 weeks for traditional fibre. Live in 2-3 weeks.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">99.5%</div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Uptime SLA</h3>
+              <div className="text-5xl md:text-6xl font-medium text-primary mb-2">99.5%</div>
+              <h3 className="text-xl font-medium text-foreground mb-3">Uptime SLA</h3>
               <p className="text-muted-foreground">
                 Guaranteed uptime backed by credits. If we drop below 99.5%, you get paid.
               </p>
@@ -202,9 +202,9 @@ const BusinessBroadband = () => {
 
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             <motion.div variants={fadeUp} className="rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-800/40 border border-primary/40 p-8">
-              <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">Integra Pro</h3>
+              <h3 className="text-2xl font-medium text-surface-dark-foreground mb-2">Integra Pro</h3>
               <p className="text-surface-dark-muted mb-4">For SMEs and multiple offices</p>
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-medium text-white mb-6">
                 £135<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
@@ -235,9 +235,9 @@ const BusinessBroadband = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl bg-gradient-to-br from-green-900/40 to-green-800/40 border border-green-600/40 p-8">
-              <h3 className="text-2xl font-bold text-surface-dark-foreground mb-2">Leased Lines</h3>
+              <h3 className="text-2xl font-medium text-surface-dark-foreground mb-2">Leased Lines</h3>
               <p className="text-surface-dark-muted mb-4">For guaranteed, dedicated capacity</p>
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-medium text-white mb-6">
                 From £400<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
@@ -269,7 +269,7 @@ const BusinessBroadband = () => {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="mt-12 rounded-2xl bg-white/5 border border-white/10 p-8">
-            <h3 className="text-2xl font-bold text-surface-dark-foreground mb-4">Need Multi-Site Redundancy?</h3>
+            <h3 className="text-2xl font-medium text-surface-dark-foreground mb-4">Need Multi-Site Redundancy?</h3>
             <p className="text-surface-dark-muted mb-4">
               Our Enterprise SD-WAN service (£400/month +VAT) combines multiple connections (leased lines, 4G/5G, SD-WAN) with intelligent load balancing and failover. Perfect for organizations requiring maximum reliability across multiple locations.
             </p>
@@ -294,25 +294,25 @@ const BusinessBroadband = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">1</span>
+                <span className="text-3xl font-medium">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Coverage Check</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Coverage Check</h3>
               <p className="text-muted-foreground">Tell us your location and we provide estimated speeds in 90 seconds. No strings attached.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">2</span>
+                <span className="text-3xl font-medium">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Site Survey</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Site Survey</h3>
               <p className="text-muted-foreground">Our engineer visits, tests signal quality, and designs the optimal setup for your office.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <span className="text-3xl font-bold">3</span>
+                <span className="text-3xl font-medium">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Live & Monitored</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Live & Monitored</h3>
               <p className="text-muted-foreground">Installation takes 1-2 days. We monitor your connection 24/7 and provide round-the-clock support.</p>
             </motion.div>
           </motion.div>
@@ -405,7 +405,7 @@ const BusinessBroadband = () => {
             <motion.div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-blue-600 p-10 md:p-14 text-center" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4 }}>
               <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
                   Ready for Reliable Business Broadband?
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">

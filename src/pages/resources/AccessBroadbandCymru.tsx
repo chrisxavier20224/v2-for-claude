@@ -181,7 +181,7 @@ const AccessBroadbandCymru = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
                 <Check className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{b.title}</h3>
+              <h3 className="text-lg font-medium text-foreground mb-2">{b.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{b.description}</p>
             </motion.div>
           ))}
@@ -209,13 +209,13 @@ const AccessBroadbandCymru = () => {
           <AnimatedSection delay={0.15}>
             <div className="rounded-2xl border border-border bg-card p-8 space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Financial Support: Broadband for All</h3>
+                <h3 className="text-lg font-medium text-foreground mb-2">Financial Support: Broadband for All</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   We're passionate about connectivity. That's why we're proud to be part of the Access Broadband Cymru Scheme, helping to bring superfast broadband to more homes and businesses in Wales.
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Our Promise: Reliable Service</h3>
+                <h3 className="text-lg font-medium text-foreground mb-2">Our Promise: Reliable Service</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Integra Networks is dedicated to delivering reliable, high-speed broadband services. Our commitment extends beyond installation, providing comprehensive customer support for a seamless experience.
                 </p>

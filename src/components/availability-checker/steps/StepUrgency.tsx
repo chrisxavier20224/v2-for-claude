@@ -18,7 +18,7 @@ const StepUrgency: React.FC<StepUrgencyProps> = ({ urgency, onNext }) => {
   return (
     <div className="space-y-8 animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold text-foreground mb-2">
+        <h2 className="text-2xl font-medium text-foreground mb-2">
           How <span className="font-bold">urgent</span> is your need?
         </h2>
         <p className="text-sm text-muted-foreground">

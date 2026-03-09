@@ -18,7 +18,7 @@ const StepUserType: React.FC<StepUserTypeProps> = ({ userType, onNext }) => {
   return (
     <div className="space-y-8 animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold text-foreground mb-2">
+        <h2 className="text-2xl font-medium text-foreground mb-2">
           What best describes <span className="font-bold">you</span>?
         </h2>
         <p className="text-sm text-muted-foreground">

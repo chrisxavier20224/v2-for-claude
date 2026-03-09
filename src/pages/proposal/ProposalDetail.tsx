@@ -248,7 +248,7 @@ export default function ProposalDetail() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-foreground">Customer Proposal</h1>
+              <h1 className="text-2xl font-medium text-foreground">Customer Proposal</h1>
               <p className="text-muted-foreground text-sm">Integra Networks Limited</p>
             </div>
             <Badge variant="secondary" className="no-print">
@@ -264,7 +264,7 @@ export default function ProposalDetail() {
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
+              <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-4">
                 Integra Networks
               </h2>
               <div className="space-y-2 text-sm">
@@ -277,7 +277,7 @@ export default function ProposalDetail() {
               </div>
             </div>
             <div>
-              <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
+              <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-4">
                 Proposal For
               </h2>
               <div className="space-y-2 text-sm">
@@ -310,7 +310,7 @@ export default function ProposalDetail() {
           animate="visible"
           className="py-8 border-y border-border"
         >
-          <h2 className="text-2xl font-bold mb-2">Why Choose Integra Networks?</h2>
+          <h2 className="text-2xl font-medium mb-2">Why Choose Integra Networks?</h2>
           <p className="text-muted-foreground mb-8">
             We deliver premium connectivity solutions backed by industry-leading service guarantees.
           </p>
@@ -347,7 +347,7 @@ export default function ProposalDetail() {
                 className="p-6 bg-background-alt rounded-lg border border-border hover:border-primary/30 transition-colors"
               >
                 <item.icon className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-semibold mb-2">{item.title}</h3>
+                <h3 className="font-medium mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
               </motion.div>
             ))}
@@ -358,7 +358,7 @@ export default function ProposalDetail() {
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
           <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
             <div className="p-6">
-              <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <h2 className="text-xl font-medium mb-4 flex items-center gap-2">
                 <Building2 className="w-5 h-5 text-primary" />
                 Your Installation
               </h2>
@@ -393,7 +393,7 @@ export default function ProposalDetail() {
 
         {/* Connectivity Options - Interactive Pricing */}
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
-          <h2 className="text-2xl font-bold mb-6">Connectivity Options</h2>
+          <h2 className="text-2xl font-medium mb-6">Connectivity Options</h2>
           <div className="space-y-3">
             {CONNECTIVITY_OPTIONS.map((option) => (
               <motion.div
@@ -451,7 +451,7 @@ export default function ProposalDetail() {
 
         {/* WiFi Add-On Section */}
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
-          <h2 className="text-xl font-bold mb-4">WiFi Add-Ons</h2>
+          <h2 className="text-xl font-medium mb-4">WiFi Add-Ons</h2>
           <p className="text-muted-foreground mb-6 text-sm">
             Connect Effortlessly: Superior WiFi Unleashed
           </p>
@@ -487,7 +487,7 @@ export default function ProposalDetail() {
 
         {/* Multi-Site Add-On */}
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
-          <h2 className="text-xl font-bold mb-4">Multi-Site / P2P Connectivity</h2>
+          <h2 className="text-xl font-medium mb-4">Multi-Site / P2P Connectivity</h2>
           <p className="text-muted-foreground mb-6 text-sm">
             Extend connectivity to outbuildings, workshops, or separate properties
           </p>
@@ -573,7 +573,7 @@ export default function ProposalDetail() {
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
           <Card className="bg-gradient-to-br from-slate-50 to-blue-50 border-primary/30">
             <div className="p-6">
-              <h2 className="text-xl font-bold mb-6">Order Summary</h2>
+              <h2 className="text-xl font-medium mb-6">Order Summary</h2>
 
               <div className="space-y-3 mb-6 pb-6 border-b border-border">
                 {selectedOption && (
@@ -612,15 +612,15 @@ export default function ProposalDetail() {
               </div>
 
               <div className="flex justify-between mb-6">
-                <span className="font-bold text-lg">Total Installation</span>
-                <span className="font-bold text-xl text-primary">£{total.toFixed(2)}</span>
+                <span className="font-medium text-lg">Total Installation</span>
+                <span className="font-medium text-xl text-primary">£{total.toFixed(2)}</span>
               </div>
 
               {monthlyTotal > 0 && (
                 <div className="pt-4 border-t border-border">
                   <div className="flex justify-between">
                     <span className="font-semibold text-foreground">Monthly Commitment</span>
-                    <span className="font-bold text-lg">£{monthlyTotal.toFixed(2)}</span>
+                    <span className="font-medium text-lg">£{monthlyTotal.toFixed(2)}</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-2">(exc VAT)</p>
                 </div>
@@ -634,7 +634,7 @@ export default function ProposalDetail() {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             {/* Primary Address */}
             <div>
-              <h2 className="text-xl font-bold mb-4">Customer Details</h2>
+              <h2 className="text-xl font-medium mb-4">Customer Details</h2>
               <Card className="p-6 border-border">
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="col-span-2">
@@ -709,7 +709,7 @@ export default function ProposalDetail() {
                 </div>
 
                 <div className="border-t border-border pt-4 mt-4">
-                  <h3 className="font-semibold mb-3">Service Address</h3>
+                  <h3 className="font-medium mb-3">Service Address</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="buildingNumber" className="text-sm font-semibold">
@@ -779,7 +779,7 @@ export default function ProposalDetail() {
 
             {/* Installation Address */}
             <div>
-              <h2 className="text-xl font-bold mb-4">Installation Address</h2>
+              <h2 className="text-xl font-medium mb-4">Installation Address</h2>
               <Card className="p-6 border-border">
                 <div className="mb-4 flex items-center gap-2">
                   <Checkbox
@@ -844,7 +844,7 @@ export default function ProposalDetail() {
 
             {/* Landlord Details */}
             <div>
-              <h2 className="text-xl font-bold mb-4">Landlord Details (Optional)</h2>
+              <h2 className="text-xl font-medium mb-4">Landlord Details (Optional)</h2>
               <Card className="p-6 border-border">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="col-span-2">
@@ -886,11 +886,11 @@ export default function ProposalDetail() {
 
             {/* Installation & Technical Contacts */}
             <div>
-              <h2 className="text-xl font-bold mb-4">Contact Details</h2>
+              <h2 className="text-xl font-medium mb-4">Contact Details</h2>
               <div className="space-y-6">
                 {/* Installation Contact */}
                 <Card className="p-6 border-border">
-                  <h3 className="font-semibold mb-4 flex items-center gap-2">
+                  <h3 className="font-medium mb-4 flex items-center gap-2">
                     <Phone className="w-4 h-4 text-primary" />
                     Installation Contact *
                   </h3>
@@ -948,7 +948,7 @@ export default function ProposalDetail() {
 
                 {/* Technical Contact */}
                 <Card className="p-6 border-border">
-                  <h3 className="font-semibold mb-4 flex items-center gap-2">
+                  <h3 className="font-medium mb-4 flex items-center gap-2">
                     <Mail className="w-4 h-4 text-primary" />
                     Technical Contact *
                   </h3>
@@ -1008,7 +1008,7 @@ export default function ProposalDetail() {
 
             {/* Acceptance Section */}
             <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
-              <h2 className="text-xl font-bold mb-4">Acceptance & Signature</h2>
+              <h2 className="text-xl font-medium mb-4">Acceptance & Signature</h2>
               <Card className="p-6 border-border bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
@@ -1067,7 +1067,7 @@ export default function ProposalDetail() {
 
                   <div className="grid grid-cols-2 gap-6">
                     <div>
-                      <h3 className="font-semibold mb-4">Customer Signature</h3>
+                      <h3 className="font-medium mb-4">Customer Signature</h3>
                       <div className="space-y-3">
                         <div>
                           <Label htmlFor="signatureName" className="text-sm font-semibold">
@@ -1133,7 +1133,7 @@ export default function ProposalDetail() {
                     </div>
 
                     <div>
-                      <h3 className="font-semibold mb-4">Integra Networks</h3>
+                      <h3 className="font-medium mb-4">Integra Networks</h3>
                       <div className="space-y-3 text-sm">
                         <div>
                           <p className="text-muted-foreground">Authorised By</p>

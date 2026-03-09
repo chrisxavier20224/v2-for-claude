@@ -103,7 +103,7 @@ const Blog = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">More Articles</p>
-            <h2 className="text-2xl md:text-3xl font-normal text-foreground mb-10">New Articles</h2>
+            <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-10">New Articles</h2>
           </AnimatedSection>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -152,7 +152,7 @@ const Blog = () => {
       <section className="bg-surface-dark py-24 md:py-32">
         <AnimatedSection>
           <div className="mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground font-medium">
               Explore our connectivity solutions
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">

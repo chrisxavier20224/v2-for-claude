@@ -188,14 +188,14 @@ const ConstructionSiteBroadband = () => {
             </h2>
             <div className="space-y-6">
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">The Challenge</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">The Challenge</h3>
                 <p className="text-muted-foreground">McGee Construction operates across London and South East building sites. Typical project: 3-6 months duration, 10-50 person crew, multiple subcontractors.</p>
                 <p className="text-muted-foreground mt-2">They managed site CCTV via expensive mobile hotspots (£60/month, 2Mbps average). CCTV feeds were unreliable. Site manager couldn't check cameras remotely without frustration. One incident where CCTV dropped at critical moment, no footage recorded.</p>
                 <p className="text-muted-foreground mt-2">Additionally, timesheets were paper-based (inefficient), communication was ad-hoc (WhatsApp groups), and equipment tracking was manual.</p>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Previous Solutions Tried</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Previous Solutions Tried</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>Switched ISPs three times (all bad in rural areas)</li>
                   <li>Hired local WISPs when available (coverage too limited, speeds 5-10Mbps)</li>
@@ -204,7 +204,7 @@ const ConstructionSiteBroadband = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Solution & Implementation</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Solution & Implementation</h3>
                 <p className="text-muted-foreground mb-3"><strong>The need:</strong> Professional broadband that deploys per-site, works during the project, leaves when site finishes.</p>
                 <p className="text-muted-foreground mb-3"><strong>Solution:</strong> Cellular SD-WAN. Single router per site, 4-hour install, 150Mbps+ speeds, £135/month.</p>
                 <ul className="space-y-2 text-muted-foreground text-sm">
@@ -217,7 +217,7 @@ const ConstructionSiteBroadband = () => {
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">Results</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">Results</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>150Mbps+ at 9 different sites over 12 months</li>
                   <li>£135/month per site × 12 sites = £1,620/year per site</li>
@@ -267,7 +267,7 @@ const ConstructionSiteBroadband = () => {
                 },
               ].map((item, i) => (
                 <div key={i} className="rounded-xl border border-border bg-card p-4">
-                  <h3 className="text-base font-semibold text-foreground mb-1">{item.title}</h3>
+                  <h3 className="text-base font-medium text-foreground mb-1">{item.title}</h3>
                   <p className="text-muted-foreground text-sm">{item.description}</p>
                 </div>
               ))}
@@ -298,7 +298,7 @@ const ConstructionSiteBroadband = () => {
                     <Clock className="h-5 w-5" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-base font-semibold text-foreground">{step.week}: {step.title}</h3>
+                    <h3 className="text-base font-medium text-foreground">{step.week}: {step.title}</h3>
                     <ul className="mt-3 space-y-1">
                       {step.items.map((item, j) => (
                         <li key={j} className="text-sm text-muted-foreground flex items-start gap-2">
@@ -316,7 +316,7 @@ const ConstructionSiteBroadband = () => {
 
         <AnimatedSection delay={0.2}>
           <div className="max-w-3xl mx-auto mt-8 rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-base font-semibold text-foreground mb-3">Total Cost</h3>
+            <h3 className="text-base font-medium text-foreground mb-3">Total Cost</h3>
             <p className="text-muted-foreground text-sm">Install labour (engineer, 4 hours) + monthly service (£135) + any upgrades (Starlink add-on, second SIM, WiFi mesh). No setup fees, no equipment purchase, no decommissioning penalties.</p>
           </div>
         </AnimatedSection>

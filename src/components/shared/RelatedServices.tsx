@@ -50,7 +50,7 @@ const RelatedServices = ({
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
             {heading}
           </p>
-          <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-4 max-w-3xl">
+          <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-4 max-w-3xl font-medium">
             Explore what else we can do for you.
           </h2>
           {subheading && (
@@ -94,7 +94,7 @@ const RelatedServices = ({
 
                     {/* Title & Description */}
                     <div className="flex-grow">
-                      <h3 className="text-lg font-semibold text-surface-dark-foreground mb-3">
+                      <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">
                         {label}
                       </h3>
                       <p className="text-sm text-surface-dark-muted leading-relaxed">

@@ -19,7 +19,7 @@ const GlobalCTABanner = () => {
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
                 Get Connected
               </p>
-              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-3">
+              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-3 font-medium">
                 Let's see what we can do for you
               </h2>
               <p className="text-surface-dark-muted text-base md:text-lg leading-relaxed">

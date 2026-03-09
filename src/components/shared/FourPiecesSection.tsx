@@ -42,15 +42,15 @@ const FourPiecesSection = () => {
           transition={{ duration: 0.8 }}
           className="flex justify-between items-center mb-16 px-8"
         >
-          <span className={`text-xs font-bold uppercase tracking-[0.3em] transition-colors duration-300 ${hoveredSection === 'before' ? 'text-primary' : 'text-primary/80'}`}>
+          <span className={`text-xs font-semibold uppercase tracking-[0.3em] transition-colors duration-300 ${hoveredSection === 'before' ? 'text-primary' : 'text-primary/80'}`}>
             Before
           </span>
           <div className="flex-1 mx-8 h-px bg-gradient-to-r from-muted-foreground/20 via-primary/30 to-muted-foreground/20" />
-          <span className={`text-xs font-bold uppercase tracking-[0.3em] transition-colors duration-300 ${hoveredSection === 'now' || hoveredSection === 'platform' ? 'text-primary' : 'text-primary/80'}`}>
+          <span className={`text-xs font-semibold uppercase tracking-[0.3em] transition-colors duration-300 ${hoveredSection === 'now' || hoveredSection === 'platform' ? 'text-primary' : 'text-primary/80'}`}>
             Now
           </span>
           <div className="flex-1 mx-8 h-px bg-gradient-to-r from-muted-foreground/20 via-primary/30 to-muted-foreground/20" />
-          <span className={`text-xs font-bold uppercase tracking-[0.3em] transition-colors duration-300 ${hoveredSection === 'after' ? 'text-primary' : 'text-primary/80'}`}>
+          <span className={`text-xs font-semibold uppercase tracking-[0.3em] transition-colors duration-300 ${hoveredSection === 'after' ? 'text-primary' : 'text-primary/80'}`}>
             After
           </span>
         </motion.div>
@@ -76,7 +76,7 @@ const FourPiecesSection = () => {
                 <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-3 transition-colors">
                   Before
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
                   Predict
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-1 font-medium">
@@ -177,7 +177,7 @@ const FourPiecesSection = () => {
                      </div>
                     <div className="flex-1 h-px bg-border" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-1 group-hover/command:text-primary transition-colors">
+                  <h3 className="text-xl font-medium text-foreground mb-1 group-hover/command:text-primary transition-colors">
                     Command
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-1 font-medium">
@@ -214,7 +214,7 @@ const FourPiecesSection = () => {
                 <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-3 transition-colors">
                   After
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
                   Insight
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-1 font-medium">
@@ -274,7 +274,7 @@ const FourPiecesSection = () => {
                      <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary transition-colors">
                         Where
                       </div>
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      <h3 className="text-xl font-medium text-foreground group-hover:text-primary transition-colors">
                         Fleet
                       </h3>
                     </div>
@@ -315,7 +315,7 @@ const FourPiecesSection = () => {
         >
           <Link to="/connectivity/integra-sd-wan" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('before')} onMouseLeave={() => setHoveredSection(null)}>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-2 transition-colors">Before</div>
-            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Predict</h3>
+            <h3 className="text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Predict</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Anticipate operational risk before it escalates.</p>
             <p className="text-sm text-muted-foreground/70 leading-relaxed">Surface early degradation patterns across fuel, runtime, and performance — before alarms dictate action.</p>
           </Link>
@@ -370,7 +370,7 @@ const FourPiecesSection = () => {
         >
           <Link to="/connectivity/integra-sd-wan" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('now')} onMouseLeave={() => setHoveredSection(null)}>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-2 transition-colors">Now</div>
-            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Command</h3>
+            <h3 className="text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Command</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Maintain live operational authority.</p>
             <p className="text-sm text-muted-foreground/70 leading-relaxed">Immediate visibility, structured escalation, and decisive response across every generator in service.</p>
           </Link>
@@ -384,7 +384,7 @@ const FourPiecesSection = () => {
         >
           <Link to="/resources" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-2 transition-colors">After</div>
-            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Insight</h3>
+            <h3 className="text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Insight</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Turn operational history into structured intelligence.</p>
             <p className="text-sm text-muted-foreground/70 leading-relaxed">Analyse usage, performance, and event data across fleets — and refine strategy with evidence.</p>
           </Link>
@@ -404,7 +404,7 @@ const FourPiecesSection = () => {
               </div>
               <div>
                 <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-1 transition-colors">Where</div>
-                <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">Fleet</h3>
+                <h3 className="text-lg font-medium text-foreground mb-1 group-hover:text-primary transition-colors">Fleet</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Govern distributed assets with precision.</p>
                 <p className="text-sm text-muted-foreground/70 leading-relaxed">Structure deployments across sites, clients, and regions — without losing control as you scale.</p>
               </div>

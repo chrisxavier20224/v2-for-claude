@@ -181,7 +181,7 @@ const Index = () => {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Why Integra</p>
-              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
+              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
                 The opposite of waiting 8 weeks for BT.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
@@ -194,7 +194,7 @@ const Index = () => {
                   <motion.div className="flex h-14 w-14 mx-auto items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
                     <point.icon className="h-10 w-10" strokeWidth={1.5} />
                   </motion.div>
-                  <h3 className="text-heading-3 text-foreground mb-3">{point.title}</h3>
+                  <h3 className="text-heading-3 text-foreground mb-3 font-medium">{point.title}</h3>
                   <p className="text-muted-foreground">{point.description}</p>
                 </motion.div>
               ))}
@@ -209,7 +209,7 @@ const Index = () => {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Internet Connectivity</p>
-              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
                 Four ways to get you online. One that's perfect for you.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
@@ -225,7 +225,7 @@ const Index = () => {
                         <img src={service.img} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                       </div>
                     </motion.div>
-                    <h3 className="text-heading-3 text-surface-dark-foreground mt-5 mb-2 group-hover:text-primary transition-colors">{service.title}</h3>
+                    <h3 className="text-heading-3 text-surface-dark-foreground mt-5 mb-2 group-hover:text-primary transition-colors font-medium">{service.title}</h3>
                     <p className="text-surface-dark-muted text-sm leading-relaxed mb-3">{service.description}</p>
                     <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
                       {service.title} <ArrowRight className="h-3.5 w-3.5" />
@@ -244,7 +244,7 @@ const Index = () => {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">WiFi & Managed Networks</p>
-              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
+              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
                 Fast internet is worthless without a bulletproof network.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
@@ -260,7 +260,7 @@ const Index = () => {
                         <img src={service.img} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                       </div>
                     </motion.div>
-                    <h3 className="text-heading-3 text-foreground mt-5 mb-2 group-hover:text-primary transition-colors">{service.title}</h3>
+                    <h3 className="text-heading-3 text-foreground mt-5 mb-2 group-hover:text-primary transition-colors font-medium">{service.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">{service.description}</p>
                     <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
                       {service.title} <ArrowRight className="h-3.5 w-3.5" />
@@ -279,7 +279,7 @@ const Index = () => {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Unified Communications</p>
-              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
                 One platform for calls, video, and messaging.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
@@ -293,7 +293,7 @@ const Index = () => {
                     <img src={ucImg} alt="Unified Communications" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   </div>
                 </motion.div>
-                <h3 className="text-heading-3 text-surface-dark-foreground mt-5 mb-2 group-hover:text-primary transition-colors">Unified Communications</h3>
+                <h3 className="text-heading-3 text-surface-dark-foreground mt-5 mb-2 group-hover:text-primary transition-colors font-medium">Unified Communications</h3>
                 <p className="text-surface-dark-muted text-sm leading-relaxed mb-3">VoIP, video conferencing, and team messaging in one platform. Works over any Integra connection. PSTN switch-off ready.</p>
                 <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
                   Unified Communications <ArrowRight className="h-3.5 w-3.5" />
@@ -310,7 +310,7 @@ const Index = () => {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Sectors We Serve</p>
-              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
+              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
                 Built for the sites everyone else says no to.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
@@ -326,7 +326,7 @@ const Index = () => {
                         <img src={sector.img} alt={sector.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-4">
-                          <h3 className="text-white font-semibold text-sm sm:text-base">{sector.title}</h3>
+                          <h3 className="text-white font-medium text-sm sm:text-base">{sector.title}</h3>
                           <span className="inline-flex items-center gap-1 text-white/70 text-xs font-medium mt-1 group-hover:text-white transition-colors">
                             Learn More <ArrowRight className="h-3 w-3" />
                           </span>

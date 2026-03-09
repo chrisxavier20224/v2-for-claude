@@ -145,7 +145,7 @@ const PSTNSwitchOff = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
                 <c.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{c.title}</h3>
+              <h3 className="text-lg font-medium text-foreground mb-2">{c.title}</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">{c.description}</p>
               {c.cta && (
                 <Link to={c.cta.path} className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
@@ -176,7 +176,7 @@ const PSTNSwitchOff = () => {
             <div className="space-y-6">
               {whyIntegra.map((item) => (
                 <div key={item.title} className="rounded-2xl border border-border bg-card p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-medium text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
               ))}
@@ -205,7 +205,7 @@ const PSTNSwitchOff = () => {
             { title: "Managed SIM Services", desc: "Our Managed SIM service provides superior connectivity, compliance, and reporting, offering significant cost savings compared to traditional analogue landlines.", path: "/connectivity/managed-sim-services" },
           ].map((s) => (
             <motion.div key={s.title} variants={staggerItem} className="rounded-2xl border border-border bg-card p-8 hover:shadow-lg transition-shadow flex flex-col">
-              <h3 className="text-lg font-semibold text-foreground mb-3">{s.title}</h3>
+              <h3 className="text-lg font-medium text-foreground mb-3">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed flex-1 mb-4">{s.desc}</p>
               <Link to={s.path} className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
                 Learn more <ArrowRight className="h-3.5 w-3.5" />

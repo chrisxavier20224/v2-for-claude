@@ -124,7 +124,7 @@ const BlogPost = () => {
       } else if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
         flushList();
         elements.push(
-          <p key={index} className="font-semibold text-foreground mb-2">
+          <p key={index} className="font-medium text-foreground mb-2">
             {trimmed.replace(/\*\*/g, "")}
           </p>
         );

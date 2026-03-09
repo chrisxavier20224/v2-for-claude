@@ -232,7 +232,7 @@ const StarlinkForBusiness = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {weaknesses.map((weakness, i) => (
               <div key={i} className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-semibold text-foreground mb-3">{weakness.title}</h3>
+                <h3 className="text-base font-medium text-foreground mb-3">{weakness.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{weakness.description}</p>
               </div>
             ))}
@@ -284,7 +284,7 @@ const StarlinkForBusiness = () => {
                 },
               ].map((example, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">
-                  <h3 className="text-base font-semibold text-foreground mb-4">{example.title}</h3>
+                  <h3 className="text-base font-medium text-foreground mb-4">{example.title}</h3>
                   <ol className="space-y-2 mb-4">
                     {example.steps.map((step, j) => (
                       <li key={j} className="text-muted-foreground text-sm">
@@ -357,7 +357,7 @@ const StarlinkForBusiness = () => {
                 },
               ].map((rung, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">
-                  <h3 className="text-base font-semibold text-foreground mb-2">{rung.title}</h3>
+                  <h3 className="text-base font-medium text-foreground mb-2">{rung.title}</h3>
                   <p className="text-muted-foreground">{rung.description}</p>
                 </div>
               ))}

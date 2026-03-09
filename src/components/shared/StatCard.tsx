@@ -7,7 +7,7 @@ interface StatCardProps {
 const StatCard = ({ stat, description, linkText }: StatCardProps) => {
   return (
     <div className="rounded border border-border bg-card p-6">
-      <p className="mb-2 text-4xl font-bold tracking-tight text-foreground">
+      <p className="mb-2 text-4xl font-medium tracking-tight text-foreground">
         {stat}
       </p>
       <p className="mb-4 text-sm text-muted-foreground">{description}</p>

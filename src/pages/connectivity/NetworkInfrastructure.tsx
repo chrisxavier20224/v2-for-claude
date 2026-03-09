@@ -168,7 +168,7 @@ const NetworkInfrastructure = () => {
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{service.title}</h3>
+                  <h3 className="text-lg font-medium text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
                 </motion.div>
               );
@@ -185,7 +185,7 @@ const NetworkInfrastructure = () => {
           <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-center">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Structured Cabling</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-surface-dark-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl font-medium text-surface-dark-foreground mb-6">
                 Every cable planned. Every run certified.
               </h2>
               <p className="text-surface-dark-muted mb-6 leading-relaxed">
@@ -227,7 +227,7 @@ const NetworkInfrastructure = () => {
             </AnimatedSection>
             <AnimatedSection className="order-1 md:order-2">
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">WiFi Surveys</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-6">
                 Signal strength isn't a guess. It's a measurement.
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -259,7 +259,7 @@ const NetworkInfrastructure = () => {
           <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-center">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Cabinets & Switching</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-surface-dark-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl font-medium text-surface-dark-foreground mb-6">
                 Tidy cabinets. Proper switches. Room to grow.
               </h2>
               <p className="text-surface-dark-muted mb-6 leading-relaxed">
@@ -312,8 +312,8 @@ const NetworkInfrastructure = () => {
           >
             {processSteps.map((step) => (
               <motion.div key={step.step} variants={fadeUp} className="relative">
-                <div className="text-5xl font-bold text-primary/10 mb-4">{step.step}</div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">{step.title}</h3>
+                <div className="text-5xl font-medium text-primary/10 mb-4">{step.step}</div>
+                <h3 className="text-lg font-medium text-foreground mb-3">{step.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
@@ -357,7 +357,7 @@ const NetworkInfrastructure = () => {
                   <div className="h-10 w-10 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
                     <Icon className="h-5 w-5 text-primary" />
                   </div>
-                  <h3 className="text-base font-semibold text-surface-dark-foreground mb-2">{item.title}</h3>
+                  <h3 className="text-base font-medium text-surface-dark-foreground mb-2">{item.title}</h3>
                   <p className="text-sm text-surface-dark-muted leading-relaxed">{item.description}</p>
                 </motion.div>
               );
@@ -389,7 +389,7 @@ const NetworkInfrastructure = () => {
               <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
               <div className="pointer-events-none absolute -bottom-10 left-10 h-40 w-40 rounded-full bg-white/5" />
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
                   Book a free site survey.
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">

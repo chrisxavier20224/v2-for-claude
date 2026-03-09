@@ -124,7 +124,7 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
                     <p className="text-xs text-surface-dark-muted mb-2">
                       {related.category} · {related.date}
                     </p>
-                    <h3 className="text-base font-semibold text-surface-dark-foreground leading-snug mb-3">
+                    <h3 className="text-base font-medium text-surface-dark-foreground leading-snug mb-3">
                       {related.title}
                     </h3>
                     <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">

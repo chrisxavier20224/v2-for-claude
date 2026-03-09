@@ -44,7 +44,7 @@ const StepResults: React.FC<StepResultsProps> = ({
     <div className="space-y-8 animate-fade-in">
       {/* Header */}
       <div className="text-center space-y-2">
-        <h2 className="text-3xl font-bold text-foreground">Thanks, {formData.firstName}!</h2>
+        <h2 className="text-3xl font-medium text-foreground">Thanks, {formData.firstName}!</h2>
         <p className="text-muted-foreground">
           Here's what we recommend for <strong className="text-foreground">{formData.postcode}</strong>
         </p>
@@ -54,11 +54,11 @@ const StepResults: React.FC<StepResultsProps> = ({
       {recommendation && (
         <div className="bg-gradient-to-br from-primary to-primary/80 rounded-xl p-6 space-y-4 text-primary-foreground">
           <div>
-            <h3 className="text-2xl font-bold mb-2">{recommendation.product}</h3>
+            <h3 className="text-2xl font-medium mb-2">{recommendation.product}</h3>
             <p className="text-primary-foreground/90">{recommendation.description}</p>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold">{recommendation.price}</span>
+            <span className="text-4xl font-medium">{recommendation.price}</span>
             <span className="text-primary-foreground/90">per month +VAT</span>
           </div>
           <p className="text-primary-foreground/80 italic text-sm">
@@ -81,7 +81,7 @@ const StepResults: React.FC<StepResultsProps> = ({
 
       {/* Next Steps */}
       <div className="bg-card rounded-xl p-6 space-y-3 border border-border">
-        <h4 className="font-semibold text-foreground text-lg">What happens next?</h4>
+        <h4 className="font-medium text-foreground text-lg">What happens next?</h4>
         <p className="text-foreground">
           A member of our team will call you within <strong>{callbackTime}</strong> to discuss your needs and provide a tailored solution.
         </p>
@@ -99,7 +99,7 @@ const StepResults: React.FC<StepResultsProps> = ({
       {/* Consumer-Only Routing */}
       {formData.userType === 'consumer' && (
         <div className="bg-status-warning/10 border border-status-warning rounded-xl p-6 space-y-4">
-          <h4 className="font-semibold text-foreground">Pricing Information</h4>
+          <h4 className="font-medium text-foreground">Pricing Information</h4>
           <p className="text-foreground">
             Our services start from <strong>£80/month+VAT for Starlink SD-WAN</strong>, which includes professional installation, UK-based support, and enterprise-grade equipment.
           </p>
@@ -146,15 +146,15 @@ const StepResults: React.FC<StepResultsProps> = ({
       {/* Trust Indicators */}
       <div className="grid grid-cols-3 gap-4 text-center">
         <div className="space-y-1">
-          <div className="text-2xl font-bold text-primary">24/7</div>
+          <div className="text-2xl font-medium text-primary">24/7</div>
           <p className="text-xs text-muted-foreground">UK Support</p>
         </div>
         <div className="space-y-1">
-          <div className="text-2xl font-bold text-primary">99.9%</div>
+          <div className="text-2xl font-medium text-primary">99.9%</div>
           <p className="text-xs text-muted-foreground">Uptime SLA</p>
         </div>
         <div className="space-y-1">
-          <div className="text-2xl font-bold text-primary">15+</div>
+          <div className="text-2xl font-medium text-primary">15+</div>
           <p className="text-xs text-muted-foreground">Years Experience</p>
         </div>
       </div>

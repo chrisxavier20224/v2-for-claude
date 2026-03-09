@@ -30,7 +30,7 @@ const StepPainPoints: React.FC<StepPainPointsProps> = ({ painPoints, onNext }) =
   return (
     <div className="space-y-8 animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold text-foreground mb-2">
+        <h2 className="text-2xl font-medium text-foreground mb-2">
           What <span className="font-bold">challenges</span> are you facing?
         </h2>
         <p className="text-sm text-muted-foreground">
