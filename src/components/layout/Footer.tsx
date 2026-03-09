@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import integraLogo from "@/assets/integra-logo.svg";
+import integraLogo from "@/assets/integra-logo-white.jpg";
 
 
 const connectivityLinks = [
@@ -23,6 +23,7 @@ const solutionsLinks = [
 const infrastructureLinks = [
   { label: "CCTV", path: "/connectivity/cctv" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution" },
+  { label: "Network Infrastructure", path: "/connectivity/network-infrastructure" },
 ];
 
 const companyLinks = [

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.jpg";
 
@@ -23,6 +23,7 @@ const infrastructureLinks = [
   { label: "CCTV", path: "/connectivity/cctv", icon: Camera, tagline: "Professional Camera Systems" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution", icon: Radio, tagline: "Multi-Building Links" },
   { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration" },
+  { label: "Network Infrastructure", path: "/connectivity/network-infrastructure", icon: ServerCog, tagline: "Cabling, Cabinets & Fibre Links" },
 ];
 
 // All connectivity links combined for path matching

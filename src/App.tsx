@@ -91,6 +91,7 @@ const IntegraBridge = lazy(() => import("./pages/connectivity/IntegraBridge"));
 const SoGEA = lazy(() => import("./pages/connectivity/SoGEA"));
 const CCTV = lazy(() => import("./pages/connectivity/CCTV"));
 const WirelessDistribution = lazy(() => import("./pages/connectivity/WirelessDistribution"));
+const NetworkInfrastructure = lazy(() => import("./pages/connectivity/NetworkInfrastructure"));
 const About = lazy(() => import("./pages/About"));
 const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 
@@ -191,6 +192,7 @@ const App = () => (
               <Route path="/connectivity/starlink-b2b" element={<StarlinkB2B />} />
               <Route path="/connectivity/cctv" element={<CCTV />} />
               <Route path="/connectivity/wireless-distribution" element={<WirelessDistribution />} />
+              <Route path="/connectivity/network-infrastructure" element={<NetworkInfrastructure />} />
               <Route path="/connectivity/integra-sd-wan" element={<IntegraSDWAN />} />
               <Route path="/connectivity/integra-bridge" element={<IntegraBridge />} />
 
