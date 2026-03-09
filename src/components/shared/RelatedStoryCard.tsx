@@ -15,7 +15,7 @@ import littleQuarryLogo from "@/assets/case-studies/little-quarry-glamping-logo.
 import carbeeHero from "@/assets/case-studies/carbee-hero.jpg";
 import carbeeLogo from "@/assets/case-studies/carbee-logo-white.png";
 import rhycHero from "@/assets/case-studies/rhyc-hero.jpg";
-import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo.png";
+import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo-white.png";
 import ukharvestHero from "@/assets/case-studies/ukharvest-hero.jpg";
 import ukharvestLogo from "@/assets/case-studies/uk-harvest-logo.png";
 import thinkingAnglersHero from "@/assets/case-studies/thinking-anglers-hero.jpg";
