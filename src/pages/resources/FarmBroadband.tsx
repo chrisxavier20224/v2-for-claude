@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, Radio, Cable, AlertTriangle, TrendingUp, Zap, ArrowRight, HelpCircle } from "lucide-react";
+import { Wifi, Radio, Cable, ArrowRight, HelpCircle, Quote, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
+import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
 import {
   Accordion,
   AccordionContent,
@@ -163,9 +164,6 @@ const faqs = [
   },
 ];
 
-const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
-const staggerItem = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] as const } } };
-
 const relatedServices = [
   {
     name: "Starlink Installation",
@@ -200,20 +198,25 @@ const FarmBroadband = () => {
       />
 
       {/* Hero */}
-      <section className="relative min-h-[75vh] flex items-end overflow-hidden -mt-20">
+      <section className="relative min-h-[85vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
           <img src={heroImg} alt="Farm broadband solutions" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/50 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
-        <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-20 pt-40">
           <AnimatedSection>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur px-3 py-1 text-xs font-medium text-white mb-6">
-              Resources <ArrowRight className="h-3 w-3" /> Pillar Guide
+            <Link to="/resources" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-8">
+              <ArrowLeft className="h-4 w-4" /> Back to Resources
+            </Link>
+            <span className="block mb-4">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur px-3 py-1 text-xs font-medium text-white">
+                Resources <ArrowRight className="h-3 w-3" /> Pillar Guide
+              </span>
             </span>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl font-normal">
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl font-normal leading-tight">
               Farm Broadband UK: Reliable Internet for Livestock, Equipment, and Business
             </h1>
-            <p className="max-w-2xl text-lg text-white/80 mb-8 font-normal">
+            <p className="max-w-xl text-lg text-white/80 mb-10 font-normal leading-relaxed">
               Modern farms are precision-technology operations. This guide shows how to get reliable broadband that serves the farmhouse, outbuildings, livestock monitoring, and business operations.
             </p>
             <Button size="lg" asChild>
@@ -223,109 +226,116 @@ const FarmBroadband = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-
-      {/* Intro */}
-      <Section className="bg-background">
-        <AnimatedSection>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Context</p>
-            <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
+      {/* Context — full-bleed image section */}
+      <section className="relative py-32 md:py-44 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&q=80"
+            alt="Modern farm with technology"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black/65" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Context</p>
+            <h2 className="text-2xl md:text-3xl text-white font-normal mb-8 leading-snug">
               Farming is a technology business now
             </h2>
-            <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
+            <div className="space-y-5 text-lg text-white/80 leading-relaxed">
               <p>
-                The image of farming as manual labour is outdated. Modern farms are precision-technology operations:
-              </p>
-              <ul>
-                <li>Livestock monitoring: Calving sensors, health monitoring apps, feed automation systems</li>
-                <li>Milking parlour tech: Automated systems, milk meters, bulk tank monitoring</li>
-                <li>Grazing management: GPS tracking of cattle, smart gates, virtual fencing</li>
-                <li>Equipment: Tractors and harvesters with telematics, GPS guidance, real-time diagnostics</li>
-                <li>Outbuildings: Grain storage, feed sheds, equipment barns — all need remote monitoring</li>
-                <li>Regulatory compliance: Cloud-based herd records, milk quality data, environmental logs</li>
-              </ul>
-              <p>
-                All of this requires reliable, fast broadband. Fibre takes years. Mobile hotspot fails constantly. Farms are stuck.
+                The image of farming as manual labour is outdated. Modern farms run on precision technology — calving sensors, automated milking systems, GPS tracking, real-time diagnostics. Grain storage, feed sheds, and equipment barns all need remote monitoring. Cloud-based herd records and environmental logs keep you compliant.
               </p>
               <p>
-                Additionally, farms operate businesses: they sell product, manage suppliers, handle invoicing, coordinate with merchants. That business runs from an office building that's often 1-5km from the farmhouse. One connectivity solution serving both the house and outbuildings is the challenge.
+                All of this requires reliable, fast broadband. Fibre takes years. Mobile hotspot fails constantly. And your farm office is often 1-5km from the farmhouse. One connectivity solution serving both the house and outbuildings is the challenge.
               </p>
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Typical Deployment — 2-column image + text */}
+      <Section size="large" className="bg-background">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">How It Works</p>
+                <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
+                  Typical Farm Deployment
+                </h2>
+                <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    A mixed livestock operation with buildings spread across the estate — farmhouse, milking parlour, equipment sheds, and a farm shop. Fibre has been promised for years but never arrives.
+                  </p>
+                  <p>
+                    <span className="text-foreground font-medium">Phase 1:</span> Deploy bonded 4G/5G cellular SD-WAN at the farmhouse — online within days, delivering 100-300Mbps.
+                  </p>
+                  <p>
+                    <span className="text-foreground font-medium">Phase 2:</span> P2P radio links from the farmhouse to remote buildings — milking parlour, equipment shed, farm shop. Each link delivers 30-100Mbps.
+                  </p>
+                  <p>
+                    <span className="text-foreground font-medium">Phase 3:</span> WiFi access points in key buildings. Business WiFi in the farmhouse and shop, coverage in outbuildings for IoT devices and monitoring.
+                  </p>
+                </div>
+              </div>
+              <motion.div
+                className="rounded-2xl overflow-hidden aspect-[4/3]"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&q=80"
+                  alt="Farm buildings with connectivity equipment"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </motion.div>
+            </div>
+          </AnimatedSection>
+
+          {/* What changes — cards below */}
+          <AnimatedSection delay={0.15}>
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "Herd management software works properly — real-time monitoring, live alerts, cloud sync",
+                "EPOS systems in the farm shop process transactions instantly",
+                "Equipment telemetry uploads diagnostic data in real time",
+                "Compliance records upload daily — herd health, milk quality, environmental data",
+                "Entire estate connected under one managed solution",
+                "Deployed in days, not months — no trenching required",
+              ].map((item, i) => (
+                <div key={i} className="rounded-xl border border-border bg-card p-5 flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
       </Section>
 
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
-
-      {/* Typical Deployment */}
-      <Section className="bg-secondary">
+      {/* Expert quote */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-surface-dark py-24 md:py-36">
         <AnimatedSection>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">How It Works</p>
-            <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-8">
-              Typical Farm Deployment: Distributed Geography Solved with Hybrid Infrastructure
-            </h2>
-            <div className="space-y-6">
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">The Scenario</h3>
-                <p className="text-muted-foreground">A mixed livestock operation with buildings spread across the estate — farmhouse, milking parlour, equipment sheds, and a farm shop or office. Fibre has been promised for years but never arrives. The farm is running on ADSL or basic broadband that can't support modern operations.</p>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Typical Challenges</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>Farmhouse set back from the road — fibre excess construction charges are prohibitive</li>
-                  <li>Outbuildings spread across the estate, each needing connectivity</li>
-                  <li>Herd management software and monitoring systems need reliable, always-on internet</li>
-                  <li>Farm shop or office EPOS systems dependent on the farmhouse broadband</li>
-                  <li>Equipment telemetry and compliance reporting require consistent upload speeds</li>
-                </ul>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Our Approach</h3>
-                <p className="text-muted-foreground mb-3"><strong>Cellular SD-WAN + wireless distribution (P2P radio links)</strong></p>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li><strong>Phase 1:</strong> Deploy bonded 4G/5G cellular SD-WAN at the farmhouse — online within days, delivering 100-300Mbps depending on coverage.</li>
-                  <li><strong>Phase 2:</strong> P2P radio links from the farmhouse to remote buildings — milking parlour, equipment shed, farm shop. Each link delivers 30-100Mbps.</li>
-                  <li><strong>Phase 3:</strong> WiFi access points in key buildings. Business WiFi in the farmhouse and shop, coverage in outbuildings for IoT devices and monitoring.</li>
-                </ul>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">What Changes</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>Herd management software works properly — real-time monitoring, live alerts, cloud sync</li>
-                  <li>EPOS systems in the farm shop process transactions instantly</li>
-                  <li>Equipment telemetry uploads diagnostic data in real time</li>
-                  <li>Compliance records upload daily to cloud — herd health, milk quality, environmental data</li>
-                  <li>Entire estate connected under one managed solution with proactive monitoring</li>
-                </ul>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">Typical Costs</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>Cellular SD-WAN: from £135/month</li>
-                  <li>P2P radio links: £400-600 per link pair (one-time)</li>
-                  <li>WiFi access points: £300-800 per building</li>
-                  <li><strong>Typical annual cost:</strong> £2,500-3,500 depending on scale</li>
-                  <li>No long waits for fibre, no trenching, deployed in days not months</li>
-                </ul>
-              </div>
-            </div>
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <Quote className="h-10 w-10 text-primary mb-6" strokeWidth={1.5} />
+            <blockquote className="text-2xl md:text-3xl font-medium text-surface-dark-foreground leading-snug mb-6">
+              "One missed calving alert costs £500+. One day of EPOS downtime in the farm shop costs £200-500. Farm broadband isn't a luxury — it's operational infrastructure."
+            </blockquote>
+            <p className="text-lg font-medium text-surface-dark-foreground">Integra Networks — Farm Connectivity Team</p>
           </div>
         </AnimatedSection>
-      </Section>
-
-      <GradientBand fromColor="hsl(210 40% 96%)" toColor="hsl(0 0% 100%)" />
+      </section>
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
       {/* Connectivity solutions */}
-      <Section className="bg-background">
+      <Section size="large" className="bg-background">
         <AnimatedSection>
           <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Options</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Options</p>
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal">
               Connectivity solutions for farms
             </h2>
@@ -334,7 +344,7 @@ const FarmBroadband = () => {
 
         <AnimatedSection delay={0.1}>
           <div className="grid gap-6 max-w-5xl mx-auto">
-            {solutions.map((sol, i) => (
+            {solutions.map((sol) => (
               <div key={sol.name} className="rounded-2xl border border-border bg-card p-6">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
@@ -360,8 +370,8 @@ const FarmBroadband = () => {
                     <p className="font-medium text-foreground">{sol.reaches}</p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground mb-2"><strong>Suitable for:</strong> {sol.suitable}</p>
-                <p className="text-sm text-red-600"><strong>Bottleneck:</strong> {sol.bottleneck}</p>
+                <p className="text-sm text-muted-foreground mb-2"><span className="text-foreground font-medium">Suitable for:</span> {sol.suitable}</p>
+                <p className="text-sm text-red-600"><span className="font-medium">Bottleneck:</span> {sol.bottleneck}</p>
               </div>
             ))}
           </div>
@@ -369,151 +379,177 @@ const FarmBroadband = () => {
 
         <AnimatedSection delay={0.2}>
           <div className="max-w-3xl mx-auto mt-8 p-6 rounded-2xl border border-border bg-card">
-            <p className="text-muted-foreground"><strong>If fibre is available and budget allows,</strong> a leased line gives you symmetric speeds and maximum reliability — ideal for larger operations with multiple outbuildings and SLA requirements.</p>
-            <p className="text-muted-foreground mt-3"><strong>For most farms,</strong> Cellular SD-WAN + P2P radio is the sweet spot: faster to deploy, cheaper than a leased line, and it solves the outbuilding problem without waiting months for fibre.</p>
+            <p className="text-muted-foreground"><span className="text-foreground font-medium">If fibre is available and budget allows,</span> a leased line gives you symmetric speeds and maximum reliability — ideal for larger operations with multiple outbuildings and SLA requirements.</p>
+            <p className="text-muted-foreground mt-3"><span className="text-foreground font-medium">For most farms,</span> Cellular SD-WAN + P2P radio is the sweet spot: faster to deploy, cheaper than a leased line, and it solves the outbuilding problem without waiting months for fibre.</p>
           </div>
         </AnimatedSection>
       </Section>
 
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
-
-      {/* Livestock tech */}
-      <Section className="bg-secondary">
-        <AnimatedSection>
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Operations</p>
-            <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal">
+      {/* Livestock tech — full-bleed image section */}
+      <section className="relative py-28 md:py-40 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?w=1920&q=80"
+            alt="Cattle on a modern farm"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Operations</p>
+            <h2 className="text-2xl md:text-3xl text-white font-normal mb-10 leading-snug max-w-2xl">
               Livestock tech that requires broadband
             </h2>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
 
-        <AnimatedSection delay={0.1}>
-          <div className="grid gap-4 max-w-5xl mx-auto">
-            {livestockTech.map((tech, i) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-6">
-                <h3 className="text-base font-medium text-foreground mb-3">{tech.title}</h3>
-                <p className="text-muted-foreground text-sm">{tech.description}</p>
+          <AnimatedSection delay={0.1}>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {livestockTech.map((tech, i) => (
+                <div key={i} className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-5">
+                  <h3 className="text-base font-medium text-white mb-2">{tech.title}</h3>
+                  <p className="text-sm text-white/70 leading-relaxed">{tech.description}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-white/70 mt-8 max-w-3xl text-center mx-auto leading-relaxed">
+              All of these depend on reliable, always-on broadband. One hour of outage might mean missing a calving alert (£500+ loss) or failing to detect health issues. Farm broadband isn't a luxury; it's operational infrastructure.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Outbuilding approaches — 2-column reversed */}
+      <Section size="large" className="bg-background">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+              <motion.div
+                className="rounded-2xl overflow-hidden aspect-[4/3] order-2 lg:order-1"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&q=80"
+                  alt="Farm outbuildings and barns"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </motion.div>
+              <div className="order-1 lg:order-2">
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Distribution</p>
+                <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-8">
+                  Remote outbuildings: getting signal everywhere
+                </h2>
+                <div className="space-y-4">
+                  {outbuildingApproaches.map((approach, i) => (
+                    <div key={i} className="rounded-xl border border-border bg-card p-5">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                          <approach.icon className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <h3 className="text-sm font-medium text-foreground">{approach.title}</h3>
+                          <p className="text-xs text-muted-foreground mt-0.5">{approach.cost} · {approach.speed} · {approach.range}</p>
+                        </div>
+                      </div>
+                      <p className="text-xs text-green-600 mb-1">{approach.advantages}</p>
+                      <p className="text-xs text-red-600">{approach.disadvantages}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-muted-foreground mt-6 text-sm">
+                  Most farms use <span className="text-foreground font-medium">radio links for outbuildings + cellular for the main house.</span>
+                </p>
               </div>
-            ))}
-          </div>
-          <p className="text-center text-muted-foreground mt-8 max-w-3xl mx-auto">
-            <strong>Common thread:</strong> All of these depend on reliable, always-on broadband. One hour of outage might mean missing a calving alert (£500+ loss) or failing to detect health issues (veterinary cost + productivity loss). Farm broadband isn't a luxury; it's operational infrastructure.
-          </p>
-        </AnimatedSection>
+            </div>
+          </AnimatedSection>
+        </div>
       </Section>
-
-      <GradientBand fromColor="hsl(210 40% 96%)" toColor="hsl(0 0% 100%)" />
-
-      {/* Outbuilding approaches */}
-      <Section className="bg-background">
-        <AnimatedSection>
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Distribution</p>
-            <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal">
-              Remote outbuildings: getting signal everywhere
-            </h2>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection delay={0.1}>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {outbuildingApproaches.map((approach, i) => (
-              <div key={i} className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
-                    <approach.icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-base font-medium text-foreground">{approach.title}</h3>
-                </div>
-                <div className="space-y-2 mb-4 text-sm">
-                  <p><span className="text-muted-foreground">Cost:</span> <span className="font-medium text-foreground">{approach.cost}</span></p>
-                  <p><span className="text-muted-foreground">Speed:</span> <span className="font-medium text-foreground">{approach.speed}</span></p>
-                  <p><span className="text-muted-foreground">Range:</span> <span className="font-medium text-foreground">{approach.range}</span></p>
-                  <p><span className="text-muted-foreground">Setup:</span> <span className="font-medium text-foreground">{approach.setup}</span></p>
-                </div>
-                <div className="mb-4 pb-4 border-t border-border">
-                  <p className="text-xs font-medium text-green-600 mb-1">Advantages</p>
-                  <p className="text-xs text-muted-foreground">{approach.advantages}</p>
-                </div>
-                <div>
-                  <p className="text-xs font-medium text-red-600 mb-1">Disadvantages</p>
-                  <p className="text-xs text-muted-foreground">{approach.disadvantages}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-muted-foreground mt-8 max-w-3xl mx-auto text-sm">
-            Most farms use <strong>Approach 1 (radio links) for outbuildings + fibre or cellular for the main house.</strong>
-          </p>
-        </AnimatedSection>
-      </Section>
-
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
 
       {/* Budget guidance */}
-      <Section className="bg-secondary">
-        <AnimatedSection>
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Planning</p>
-            <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal">
-              Budget guidance for farms
-            </h2>
-          </div>
-        </AnimatedSection>
+      <section className="bg-secondary py-20 md:py-28 border-t border-border">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="max-w-3xl mx-auto mb-12">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Planning</p>
+              <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal">
+                Budget guidance for farms
+              </h2>
+            </div>
+          </AnimatedSection>
 
-        <AnimatedSection delay={0.1}>
-          <div className="space-y-4 max-w-5xl mx-auto">
-            {budgetGuidance.map((guide, i) => (
-              <div key={i} className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-base font-medium text-foreground mb-1">{guide.size}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{guide.livestock}</p>
+          <AnimatedSection delay={0.1}>
+            <div className="space-y-4">
+              {budgetGuidance.map((guide, i) => (
+                <div key={i} className="rounded-2xl border border-border bg-card p-6">
+                  <div className="flex items-start gap-4">
+                    <div>
+                      <h3 className="text-base font-medium text-foreground mb-1">{guide.size}</h3>
+                      <p className="text-sm text-muted-foreground mb-3">{guide.livestock}</p>
+                    </div>
                   </div>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4 text-sm">
+                    <div>
+                      <p className="text-xs uppercase text-muted-foreground mb-1">Solution</p>
+                      <p className="font-medium text-foreground">{guide.solution}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase text-muted-foreground mb-1">Monthly</p>
+                      <p className="font-medium text-foreground">{guide.monthlyDost}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase text-muted-foreground mb-1">Setup</p>
+                      <p className="font-medium text-foreground">{guide.setupCost}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase text-muted-foreground mb-1">Annual</p>
+                      <p className="font-medium text-foreground">{guide.annualCost}</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Good for: {guide.goodFor}</p>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4 text-sm">
-                  <div>
-                    <p className="text-xs uppercase text-muted-foreground mb-1">Solution</p>
-                    <p className="font-medium text-foreground">{guide.solution}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase text-muted-foreground mb-1">Monthly</p>
-                    <p className="font-medium text-foreground">{guide.monthlyDost}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase text-muted-foreground mb-1">Setup</p>
-                    <p className="font-medium text-foreground">{guide.setupCost}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase text-muted-foreground mb-1">Annual</p>
-                    <p className="font-medium text-foreground">{guide.annualCost}</p>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground">Good for: {guide.goodFor}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div className="max-w-3xl mx-auto mt-8 p-6 rounded-2xl border border-border bg-card">
-            <h3 className="text-base font-medium text-foreground mb-4">ROI Calculation</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>One missed calving alert (one lost calf): £500+</li>
-              <li>One day of EPOS downtime in farm shop: £200-500</li>
-              <li>One day of herd record system downtime: Regulatory fine risk + productivity loss</li>
-            </ul>
-            <p className="text-sm text-foreground mt-4">Broadband investment pays for itself rapidly if it prevents even one incident per year.</p>
-          </div>
-        </AnimatedSection>
+            <div className="max-w-3xl mx-auto mt-8 p-6 rounded-2xl border border-border bg-card">
+              <h3 className="text-base font-medium text-foreground mb-4">ROI Calculation</h3>
+              <p className="text-sm text-muted-foreground mb-3">One missed calving alert (one lost calf): £500+. One day of EPOS downtime in farm shop: £200-500. One day of herd record system downtime: regulatory fine risk + productivity loss.</p>
+              <p className="text-sm text-foreground">Broadband investment pays for itself rapidly if it prevents even one incident per year.</p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Inline image break */}
+      <Section size="large" className="bg-background">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <AnimatedSection>
+            <motion.div
+              className="rounded-2xl overflow-hidden"
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&q=80"
+                alt="Farm technology and equipment"
+                className="w-full h-auto object-cover aspect-video"
+                loading="lazy"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground mt-3 text-center">Modern farm operations depend on reliable connectivity across the entire estate.</p>
+          </AnimatedSection>
+        </div>
       </Section>
 
-      <GradientBand fromColor="hsl(210 40% 96%)" toColor="hsl(222 47% 11%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
       {/* FAQs */}
       <Section className="bg-surface-dark">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">FAQs</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">FAQs</p>
             <h2 className="text-heading-2 md:text-heading-1 text-surface-dark-foreground font-normal">
               Frequently Asked Questions
             </h2>
@@ -548,13 +584,13 @@ const FarmBroadband = () => {
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
       {/* CTA */}
-      <Section className="bg-background">
+      <Section size="large" className="bg-background">
         <AnimatedSection>
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
               Ready to connect your farm?
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Our team can assess your farm's connectivity needs and design a solution that serves the farmhouse, outbuildings, and your livestock operations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -569,11 +605,15 @@ const FarmBroadband = () => {
         </AnimatedSection>
       </Section>
 
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
+      {/* Related case studies */}
+      <RelatedCaseStudies currentPath="/farm-broadband" />
 
-      <Section className="bg-secondary">
-        <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
-      </Section>
+      {/* Related services */}
+      <section className="bg-secondary py-16 border-t border-border">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
+        </div>
+      </section>
     </PageLayout>
   );
 };
