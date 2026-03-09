@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Zap, Signal, Cable } from "lucide-react";
+
+const relatedServices = [
+  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
+  { name: "4G/5G Backup", url: "/connectivity/4g-5g-backup", icon: Signal },
+  { name: "Leased Lines", url: "/connectivity/leased-lines", icon: Cable },
+];
 
 const LoadBalancingVsBonding = () => (
   <>
@@ -188,6 +196,7 @@ const LoadBalancingVsBonding = () => (
 
     <p>Most answer "no." That's why load balancing is the standard.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

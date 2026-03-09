@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Signal, Zap, BarChart3 } from "lucide-react";
+
+const relatedServices = [
+  { name: "4G/5G Backup", url: "/connectivity/4g-5g-backup", icon: Signal },
+  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
+  { name: "Pricing", url: "/pricing", icon: BarChart3 },
+];
 
 const FourGVsFiveG = () => (
   <>
@@ -100,6 +108,7 @@ const FourGVsFiveG = () => (
 
     <p>Before you decide, get a proper site survey. Send us your coordinates from Google Maps, and we'll map your property to nearby towers and tell you exactly what's possible.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, CheckCircle, ArrowRight, HelpCircle } from "lucide-react";
+import { MapPin, CheckCircle, ArrowRight, HelpCircle, Zap, Wifi, Code, Tag } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,12 +7,40 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+const relatedServices = [
+  {
+    title: "Leased Lines",
+    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
+    icon: Zap,
+    href: "/connectivity/leased-lines",
+  },
+  {
+    title: "Business WiFi",
+    description: "Enterprise-grade wireless networks for your office and operations.",
+    icon: Wifi,
+    href: "/connectivity/business-wifi",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Intelligent network optimisation for multi-site connectivity.",
+    icon: Code,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "Pricing",
+    description: "Transparent, competitive pricing for all our connectivity services.",
+    icon: Tag,
+    href: "/pricing",
+  },
+];
 
 const Kent = () => {
   const faqs = [
@@ -249,6 +277,8 @@ const Kent = () => {
           </div>
         </AnimatedSection>
       </Section>
+
+      <RelatedServices services={relatedServices} heading="Our Solutions" subheading="Enterprise-grade connectivity tailored to your region." />
 
       {/* CTA */}
       <GradientBand

@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Wifi, Satellite, Zap } from "lucide-react";
+
+const relatedServices = [
+  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
+  { name: "Starlink Installation", url: "/connectivity/starlink-installation", icon: Satellite },
+  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
+];
 
 const ChurchesListedBuildings = () => (
   <>
@@ -53,6 +61,7 @@ const ChurchesListedBuildings = () => (
     <p>Churches and listed buildings require a careful balance of modern technology and heritage preservation. By using innovative methods like NPRMs, structured cabling, and P2P links, it's possible to deliver high-speed, reliable Wi-Fi while respecting the unique requirements of these properties.</p>
     <p>Whether it's a historic church or a listed home, taking the time to plan and implement the right solution can make all the difference.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, Brain, Plug, ArrowLeft, ArrowRight, CircleCheckBig } from "lucide-react";
+import { Wifi, Brain, Plug, ArrowLeft, ArrowRight, CircleCheckBig, Zap, Smartphone, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/home-wifi-hero.jpg";
 import newbuildImg from "@/assets/connectivity/home-wifi-newbuild.jpg";
@@ -42,6 +43,33 @@ const benefitItems = [
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 const checklistItem = { hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const } } };
+
+const relatedServices = [
+  {
+    icon: Wifi,
+    title: "Business WiFi",
+    description: "Enterprise-grade mesh networks for commercial spaces.",
+    href: "/connectivity/business-wifi",
+  },
+  {
+    icon: Zap,
+    title: "Integra SD-WAN",
+    description: "Secure, intelligent networking for organisations.",
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    icon: Brain,
+    title: "Homeworkers",
+    description: "Connectivity solutions designed for remote workers.",
+    href: "/sectors/homeworkers",
+  },
+  {
+    icon: Smartphone,
+    title: "4G/5G Backup",
+    description: "Reliable mobile backup connectivity.",
+    href: "/connectivity/4g-5g-backup",
+  },
+];
 
 const HomeWifi = () => {
   return (
@@ -176,6 +204,8 @@ const HomeWifi = () => {
           </AnimatedSection>
         </div>
       </Section>
+
+      <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
 
       {/* RELATED SERVICES & SECTORS */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />

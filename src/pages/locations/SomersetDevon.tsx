@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, CheckCircle, ArrowRight, HelpCircle } from "lucide-react";
+import { MapPin, CheckCircle, ArrowRight, HelpCircle, Satellite, Code, Users, Signal } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,12 +7,40 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+const relatedServices = [
+  {
+    title: "Starlink Installation",
+    description: "Fast satellite connectivity for rural properties with clear southern sky.",
+    icon: Satellite,
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Bonded 4G/5G with automatic failover for enterprise-grade reliability.",
+    icon: Code,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "Rural SMEs",
+    description: "Tailored broadband solutions designed for rural small businesses.",
+    icon: Users,
+    href: "/sectors/rural-smes",
+  },
+  {
+    title: "4G/5G Backup",
+    description: "Redundant cellular backup ensures uninterrupted connectivity.",
+    icon: Signal,
+    href: "/connectivity/4g-5g-backup",
+  },
+];
 
 const SomersetDevon = () => {
   const faqs = [
@@ -255,6 +283,8 @@ const SomersetDevon = () => {
           </div>
         </AnimatedSection>
       </Section>
+
+      <RelatedServices services={relatedServices} heading="Our Solutions" subheading="Enterprise-grade connectivity tailored to your region." />
 
       {/* CTA */}
       <GradientBand

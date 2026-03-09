@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Camera, Eye, Wifi, CircleCheckBig, ArrowLeft, Lock, ArrowRight } from "lucide-react";
+import { Camera, Eye, Wifi, CircleCheckBig, ArrowLeft, Lock, ArrowRight, Zap, Building2, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -9,6 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/sectors/business-parks-hero.jpg";
 import surveyImg from "@/assets/sectors/business-parks-outdoor.jpg";
@@ -103,6 +104,33 @@ const cctvBreadcrumbSchema = {
     },
   ],
 };
+
+const relatedServices = [
+  {
+    icon: Wifi,
+    title: "Business WiFi",
+    description: "Professional mesh networks for commercial properties.",
+    href: "/connectivity/business-wifi",
+  },
+  {
+    icon: Zap,
+    title: "Integra SD-WAN",
+    description: "Secure, intelligent networking for enterprises.",
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    icon: Building2,
+    title: "Construction Sites",
+    description: "Temporary connectivity solutions for active projects.",
+    href: "/sectors/construction-sites",
+  },
+  {
+    icon: TrendingUp,
+    title: "Pricing",
+    description: "Transparent costs and flexible payment options.",
+    href: "/pricing",
+  },
+];
 
 const CCTV = () => {
   return (
@@ -269,6 +297,8 @@ const CCTV = () => {
       </Section>
 
       <CustomerLogoBar />
+
+      <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
 
       {/* RELATED SERVICES */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 0%)" />

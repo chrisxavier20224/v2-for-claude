@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Satellite, Zap, Signal } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Starlink Installation",
+    description: "Professional satellite internet installation and setup.",
+    icon: Satellite,
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "4G/5G Backup",
+    description: "Mobile network failover for business continuity.",
+    icon: Signal,
+    href: "/connectivity/4g-5g-backup",
+  },
+];
 
 const StarlinkInstallers = () => (
   <>
@@ -32,6 +55,7 @@ const StarlinkInstallers = () => (
     <h2>Conclusion</h2>
     <p>Starlink is a game-changer for rural and remote connectivity, but professional installation ensures you get the most out of the service. From optimal dish placement to seamless network integration, expert installers take the complexity out of the process and deliver a reliable, high-performance internet solution.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

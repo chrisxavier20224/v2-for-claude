@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Wifi, Radio, ArrowLeftRight } from "lucide-react";
+
+const relatedServices = [
+  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
+  { name: "Wireless Distribution", url: "/connectivity/wireless-distribution", icon: Radio },
+  { name: "Integra Bridge", url: "/connectivity/integra-bridge", icon: ArrowLeftRight },
+];
 
 const ExtendingWifiOutbuildings = () => (
   <>
@@ -67,6 +75,7 @@ const ExtendingWifiOutbuildings = () => (
     <p>Extending Wi-Fi to outbuildings doesn't need to be a challenge. From Wi-Fi extenders and mesh networks to point-to-point radio links and structured cabling, there are solutions for every property type and budget.</p>
     <p>Whether you're boosting Wi-Fi to a guesthouse, setting up internet in a home office, or connecting an outdoor workshop, the right approach ensures seamless connectivity and peace of mind.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

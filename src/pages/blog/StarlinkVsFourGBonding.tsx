@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Satellite, Signal, Zap } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Starlink Installation",
+    description: "Professional satellite internet installation and setup.",
+    icon: Satellite,
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    title: "4G/5G Backup",
+    description: "Mobile network failover for business continuity.",
+    icon: Signal,
+    href: "/connectivity/4g-5g-backup",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+];
 
 const StarlinkVsFourGBonding = () => (
   <>
@@ -144,6 +167,7 @@ const StarlinkVsFourGBonding = () => (
 
     <p>For consumers? Starlink is fine, cheaper, and simpler.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

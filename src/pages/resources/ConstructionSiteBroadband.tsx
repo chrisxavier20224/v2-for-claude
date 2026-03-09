@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
   AccordionContent,
@@ -92,6 +93,29 @@ const faqs = [
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const staggerItem = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] as const } } };
+
+const relatedServices = [
+  {
+    name: "Integra SD-WAN",
+    description: "Bonded cellular connectivity ideal for temporary construction sites.",
+    url: "/connectivity/integra-sd-wan",
+  },
+  {
+    name: "Construction Sites",
+    description: "Purpose-built broadband solutions for construction operations.",
+    url: "/sectors/construction-sites",
+  },
+  {
+    name: "Business WiFi",
+    description: "Secure WiFi for staff access on construction sites.",
+    url: "/connectivity/business-wifi",
+  },
+  {
+    name: "CCTV",
+    description: "Live site monitoring and recording over reliable broadband.",
+    url: "/connectivity/cctv",
+  },
+];
 
 const ConstructionSiteBroadband = () => {
   return (
@@ -429,6 +453,12 @@ const ConstructionSiteBroadband = () => {
             </div>
           </div>
         </AnimatedSection>
+      </Section>
+
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
+
+      <Section className="bg-secondary">
+        <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
       </Section>
     </PageLayout>
   );

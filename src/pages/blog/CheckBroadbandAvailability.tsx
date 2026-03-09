@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Zap, Cable, Search } from "lucide-react";
+
+const relatedServices = [
+  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
+  { name: "Leased Lines", url: "/connectivity/leased-lines", icon: Cable },
+  { name: "Availability Checker", url: "/availability-checker", icon: Search },
+];
 
 const CheckBroadbandAvailability = () => (
   <>
@@ -150,6 +158,7 @@ const CheckBroadbandAvailability = () => (
       <li>You'll finally have the truth about what's actually available</li>
     </ol>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

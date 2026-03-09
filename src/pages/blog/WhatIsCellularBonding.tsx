@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Zap, Signal, BarChart3 } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "4G/5G Backup",
+    description: "Mobile network failover for business continuity.",
+    icon: Signal,
+    href: "/connectivity/4g-5g-backup",
+  },
+  {
+    title: "Pricing",
+    description: "View our flexible connectivity plans.",
+    icon: BarChart3,
+    href: "/pricing",
+  },
+];
 
 const WhatIsCellularBonding = () => (
   <>
@@ -147,6 +170,7 @@ const WhatIsCellularBonding = () => (
 
     <p>Unsure? Get a site survey. We'll measure actual speeds from each operator at your location and tell you if bonding is worth it.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

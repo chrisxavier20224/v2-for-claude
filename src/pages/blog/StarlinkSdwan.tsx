@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Satellite, Zap, Signal } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Starlink Installation",
+    description: "Professional satellite internet installation and setup.",
+    icon: Satellite,
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "4G/5G Backup",
+    description: "Mobile network failover for business continuity.",
+    icon: Signal,
+    href: "/connectivity/4g-5g-backup",
+  },
+];
 
 const StarlinkSdwan = () => (
   <>
@@ -41,6 +64,7 @@ const StarlinkSdwan = () => (
     <h2>Conclusion</h2>
     <p>Starlink SD-WAN represents the best of both worlds: the revolutionary speed and coverage of satellite internet, combined with the reliability and intelligence of SD-WAN technology. For businesses that can't afford downtime, it's a practical, proven solution that delivers peace of mind.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

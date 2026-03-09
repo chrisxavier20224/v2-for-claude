@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Users, Shield, ArrowLeft, ArrowRight, Monitor, Headphones } from "lucide-react";
+import { Phone, Users, Shield, ArrowLeft, ArrowRight, Monitor, Headphones, Wifi, Zap, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/unified-comms-hero.jpg";
 import deployImg from "@/assets/connectivity/unified-comms-deploy.jpg";
@@ -39,6 +40,33 @@ const faqs = [
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
+
+const relatedServices = [
+  {
+    icon: Monitor,
+    title: "Leased Lines",
+    description: "Dedicated, high-bandwidth connectivity for enterprise use.",
+    href: "/connectivity/leased-lines",
+  },
+  {
+    icon: Wifi,
+    title: "Business WiFi",
+    description: "Professional mesh networks for commercial properties.",
+    href: "/connectivity/business-wifi",
+  },
+  {
+    icon: Zap,
+    title: "Integra SD-WAN",
+    description: "Secure, intelligent networking for organisations.",
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    icon: TrendingUp,
+    title: "Pricing",
+    description: "Transparent costs and flexible payment options.",
+    href: "/pricing",
+  },
+];
 
 const UnifiedCommunications = () => {
   return (
@@ -165,6 +193,8 @@ const UnifiedCommunications = () => {
           ))}
         </div>
       </Section>
+
+      <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
 
       {/* CTA */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />

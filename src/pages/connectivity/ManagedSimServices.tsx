@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Rocket, PiggyBank, Store, ArrowLeft, ArrowRight, Eye, Phone } from "lucide-react";
+import { Rocket, PiggyBank, Store, ArrowLeft, ArrowRight, Eye, Phone, Smartphone, Zap, Building2, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 import heroImg from "@/assets/connectivity/managed-sim-hero.jpg";
 import liftImg from "@/assets/connectivity/managed-sim-lift.jpg";
@@ -33,6 +34,33 @@ const painPoints = [
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
+
+const relatedServices = [
+  {
+    icon: Smartphone,
+    title: "4G/5G Backup",
+    description: "Reliable mobile backup connectivity for business continuity.",
+    href: "/connectivity/4g-5g-backup",
+  },
+  {
+    icon: Zap,
+    title: "Integra SD-WAN",
+    description: "Secure, intelligent networking for organisations.",
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    icon: Building2,
+    title: "Construction Sites",
+    description: "Temporary connectivity solutions for active projects.",
+    href: "/sectors/construction-sites",
+  },
+  {
+    icon: TrendingUp,
+    title: "Pricing",
+    description: "Transparent costs and flexible payment options.",
+    href: "/pricing",
+  },
+];
 
 const ManagedSimServices = () => {
   return (
@@ -165,6 +193,8 @@ const ManagedSimServices = () => {
           </AnimatedSection>
         </div>
       </Section>
+
+      <RelatedServices services={relatedServices} heading="Related Services" subheading="Explore our full range of connectivity solutions." />
 
       {/* RELATED SERVICES & SECTORS */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />

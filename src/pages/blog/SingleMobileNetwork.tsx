@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Signal, Zap, BarChart3 } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "4G/5G Backup",
+    description: "Mobile network failover for business continuity.",
+    icon: Signal,
+    href: "/connectivity/4g-5g-backup",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "Pricing",
+    description: "View our flexible connectivity plans.",
+    icon: BarChart3,
+    href: "/pricing",
+  },
+];
 
 const SingleMobileNetwork = () => (
   <>
@@ -36,6 +59,7 @@ const SingleMobileNetwork = () => (
     <h2>Conclusion</h2>
     <p>Single mobile network connectivity can work well for casual home use where occasional drops in service are acceptable. However, for anyone who relies on their internet connection — whether for business, remote work, or critical applications — the limitations of a single network make it a risky choice. SD-WAN provides the reliability, speed, and resilience that modern connectivity demands.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

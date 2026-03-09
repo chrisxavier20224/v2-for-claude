@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Zap, Leaf, Satellite } from "lucide-react";
+
+const relatedServices = [
+  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
+  { name: "Rural SMEs", url: "/sectors/rural-smes", icon: Leaf },
+  { name: "Starlink Installation", url: "/connectivity/starlink-installation", icon: Satellite },
+];
 
 const RuralBusinessesSdwan = () => (
   <>
@@ -43,6 +51,7 @@ const RuralBusinessesSdwan = () => (
     <h2>Conclusion</h2>
     <p>For rural businesses struggling with unreliable internet, SD-WAN offers a practical, cost-effective solution. By combining multiple broadband connections into one intelligent network, businesses can enjoy faster speeds, greater resilience, and simplified management — all without the need for expensive fibre installations.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

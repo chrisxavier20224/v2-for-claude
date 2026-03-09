@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
   AccordionContent,
@@ -127,6 +128,29 @@ const faqs = [
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const staggerItem = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] as const } } };
+
+const relatedServices = [
+  {
+    name: "Starlink Installation",
+    description: "Rapid deployment of satellite broadband as interim solution.",
+    url: "/connectivity/starlink-installation",
+  },
+  {
+    name: "Integra SD-WAN",
+    description: "Business-grade cellular bonding with automatic failover.",
+    url: "/connectivity/integra-sd-wan",
+  },
+  {
+    name: "Rural SMEs",
+    description: "Tailored connectivity solutions for rural small businesses.",
+    url: "/sectors/rural-smes",
+  },
+  {
+    name: "4G/5G Backup",
+    description: "Reliable secondary connection for critical operations.",
+    url: "/connectivity/4g-5g-backup",
+  },
+];
 
 const RuralBusinessBroadband = () => {
   return (
@@ -445,6 +469,12 @@ const RuralBusinessBroadband = () => {
             </div>
           </div>
         </AnimatedSection>
+      </Section>
+
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
+
+      <Section className="bg-secondary">
+        <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
       </Section>
     </PageLayout>
   );

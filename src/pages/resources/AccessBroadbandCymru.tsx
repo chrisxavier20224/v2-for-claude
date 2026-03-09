@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +17,30 @@ import {
 
 // ─── Hero background (reuse a scenic Welsh-looking image) ─────────────────────
 import heroImg from "@/assets/sectors/homeworker-rural-property.avif";
+
+// ─── Related Services ─────────────────────────────────────────────────────────
+const relatedServices = [
+  {
+    name: "Starlink Installation",
+    description: "Fast satellite connectivity available almost anywhere in Wales.",
+    url: "/connectivity/starlink-installation",
+  },
+  {
+    name: "Integra SD-WAN",
+    description: "Business-grade bonded cellular with automatic failover.",
+    url: "/connectivity/integra-sd-wan",
+  },
+  {
+    name: "Rural SMEs",
+    description: "Tailored connectivity solutions for rural small businesses.",
+    url: "/sectors/rural-smes",
+  },
+  {
+    name: "Pricing",
+    description: "Transparent pricing for all our connectivity solutions.",
+    url: "/pricing",
+  },
+];
 
 // ─── Benefits ─────────────────────────────────────────────────────────────────
 const benefits = [
@@ -260,6 +285,12 @@ const AccessBroadbandCymru = () => {
             </div>
           </div>
         </AnimatedSection>
+      </Section>
+
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+
+      <Section className="bg-background">
+        <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
       </Section>
     </PageLayout>
   );

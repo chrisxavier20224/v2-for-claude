@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Zap, Wifi, Hammer } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "Business WiFi",
+    description: "Professional wireless networking solutions.",
+    icon: Wifi,
+    href: "/connectivity/business-wifi",
+  },
+  {
+    title: "Construction Sites",
+    description: "Connectivity solutions for temporary work locations.",
+    icon: Hammer,
+    href: "/sectors/construction-sites",
+  },
+];
 
 const TemporaryBroadbandEvents = () => (
   <>
@@ -211,6 +234,7 @@ const TemporaryBroadbandEvents = () => (
 
     <p>Got an event coming up? Email us the venue postcode + event dates. We'll survey coverage and send you a quote.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Zap, Hammer, Wifi } from "lucide-react";
+
+const relatedServices = [
+  { name: "Integra SD-WAN", url: "/connectivity/integra-sd-wan", icon: Zap },
+  { name: "Construction Sites", url: "/sectors/construction-sites", icon: Hammer },
+  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
+];
 
 const PortableWifiConstruction = () => (
   <>
@@ -228,6 +236,7 @@ const PortableWifiConstruction = () => (
 
     <p>We'll survey the site and send you a custom quote.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

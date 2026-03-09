@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
   AccordionContent,
@@ -64,6 +65,29 @@ const faqs = [
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const staggerItem = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] as const } } };
+
+const relatedServices = [
+  {
+    name: "Unified Communications",
+    description: "Modern VoIP solutions to replace traditional phone lines.",
+    url: "/connectivity/unified-communications",
+  },
+  {
+    name: "Leased Lines",
+    description: "Dedicated fibre connectivity with business-grade SLA.",
+    url: "/connectivity/leased-lines",
+  },
+  {
+    name: "Integra SD-WAN",
+    description: "Alternative broadband for areas without fibre availability.",
+    url: "/connectivity/integra-sd-wan",
+  },
+  {
+    name: "Pricing",
+    description: "Transparent pricing for all our PSTN replacement solutions.",
+    url: "/pricing",
+  },
+];
 
 const PSTNSwitchOff = () => {
   return (
@@ -251,6 +275,12 @@ const PSTNSwitchOff = () => {
             </div>
           </div>
         </AnimatedSection>
+      </Section>
+
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
+
+      <Section className="bg-secondary">
+        <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
       </Section>
     </PageLayout>
   );

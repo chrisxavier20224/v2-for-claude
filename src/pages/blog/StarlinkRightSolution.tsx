@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Satellite, Zap, Cable } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Starlink Installation",
+    description: "Professional satellite internet installation and setup.",
+    icon: Satellite,
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "Leased Lines",
+    description: "Dedicated fibre connectivity for businesses.",
+    icon: Cable,
+    href: "/connectivity/leased-lines",
+  },
+];
 
 const StarlinkRightSolution = () => (
   <>
@@ -40,6 +63,7 @@ const StarlinkRightSolution = () => (
     <h2>Conclusion</h2>
     <p>Starlink is a revolutionary technology that has transformed connectivity for remote and rural areas. Whether it's the right solution for you depends on your specific needs, location, and how critical your internet connection is to your daily operations. For many, combining Starlink with SD-WAN represents the best of both worlds.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

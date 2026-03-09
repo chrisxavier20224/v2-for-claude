@@ -1,5 +1,13 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Wifi, Radio, Building2 } from "lucide-react";
+
+const relatedServices = [
+  { name: "Business WiFi", url: "/connectivity/business-wifi", icon: Wifi },
+  { name: "Wireless Distribution", url: "/connectivity/wireless-distribution", icon: Radio },
+  { name: "Business Parks", url: "/sectors/business-parks", icon: Building2 },
+];
 
 const MultiBuildingWifi = () => (
   <>
@@ -215,6 +223,7 @@ const MultiBuildingWifi = () => (
 
     <p>We'll design a mesh system and quote installation.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

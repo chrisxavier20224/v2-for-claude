@@ -1,15 +1,43 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Satellite, Zap, Leaf, Radio } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
+
+const relatedServices = [
+  {
+    icon: Satellite,
+    title: "Starlink Installation",
+    description: "Quick deployment satellite broadband for rural properties",
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    icon: Zap,
+    title: "Integra SD-WAN",
+    description: "Redundant connectivity with 99.5% uptime guarantee",
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    icon: Leaf,
+    title: "Rural SMEs",
+    description: "Business solutions tailored for countryside enterprises",
+    href: "/sectors/rural-smes",
+  },
+  {
+    icon: Radio,
+    title: "Integra Bridge",
+    description: "Extended range connectivity for distributed rural locations",
+    href: "/connectivity/integra-bridge",
+  },
+];
 
 const RuralBroadband = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -382,6 +410,15 @@ const RuralBroadband = () => {
       </section>
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+
+      {/* RELATED SERVICES */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <RelatedServices services={relatedServices} heading="Explore More Solutions" subheading="Discover how Integra Networks keeps businesses connected." />
+        </div>
+      </section>
+
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
       {/* CONTACT */}
       <section className="bg-background py-12 md:py-16">

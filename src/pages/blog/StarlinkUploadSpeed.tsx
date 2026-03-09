@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Satellite, Zap, Cable } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Starlink Installation",
+    description: "Professional satellite internet installation and setup.",
+    icon: Satellite,
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "Leased Lines",
+    description: "Dedicated fibre connectivity for businesses.",
+    icon: Cable,
+    href: "/connectivity/leased-lines",
+  },
+];
 
 const StarlinkUploadSpeed = () => (
   <>
@@ -163,6 +186,7 @@ const StarlinkUploadSpeed = () => (
 
     <p>We'd recommend a site survey before deciding. We'll test actual upload speeds at your location and recommend the product that matches your real needs.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 

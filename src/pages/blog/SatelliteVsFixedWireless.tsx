@@ -1,5 +1,28 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import SEO from "@/components/shared/SEO";
+import RelatedServices from "@/components/shared/RelatedServices";
+import { Satellite, Zap, ArrowLeftRight } from "lucide-react";
+
+const relatedServices = [
+  {
+    title: "Starlink Installation",
+    description: "Professional satellite internet installation and setup.",
+    icon: Satellite,
+    href: "/connectivity/starlink-installation",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Software-defined networking for resilient connectivity.",
+    icon: Zap,
+    href: "/connectivity/integra-sd-wan",
+  },
+  {
+    title: "Integra Bridge",
+    description: "Connection bridging and network failover solutions.",
+    icon: ArrowLeftRight,
+    href: "/connectivity/integra-bridge",
+  },
+];
 
 const SatelliteVsFixedWireless = () => (
   <>
@@ -147,6 +170,7 @@ const SatelliteVsFixedWireless = () => (
 
     <p>No obligation, no site visit needed. Just your coordinates and 24 hours of analysis.</p>
     </BlogArticleLayout>
+    <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Explore connectivity options for your business." />
   </>
 );
 
