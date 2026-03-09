@@ -6,6 +6,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import heroImg from "@/assets/connectivity/bridge-hero.jpg";
 
 const pillarPages = [
   {
@@ -85,20 +86,23 @@ const Resources = () => {
       />
 
       {/* Hero */}
-      <Section variant="gradient" size="xlarge" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-        <div className="mx-auto max-w-4xl text-center relative z-10">
+      <section className="relative min-h-[60vh] flex items-end overflow-hidden -mt-20">
+        <div className="absolute inset-0">
+          <img src={heroImg} alt="UK broadband connectivity infrastructure" className="w-full h-full object-cover" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/50 to-black/20" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Resource Centre</p>
-            <h1 className="text-display-sm md:text-display-lg text-foreground mb-6">
+            <h1 className="text-display-sm md:text-display-lg text-white mb-6">
               Straight-talking guides for UK businesses
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
               No jargon, no sales pitch. In-depth guides covering everything from broadband alternatives to industry changes — written to help you make informed decisions.
             </p>
           </AnimatedSection>
         </div>
-      </Section>
+      </section>
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
