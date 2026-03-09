@@ -269,8 +269,8 @@ const IntegraSDWAN = () => {
           <GradientBand fromColor={i % 2 === 0 ? "hsl(222 47% 11%)" : "hsl(0 0% 100%)"} toColor={i % 2 === 0 ? "hsl(0 0% 100%)" : "hsl(222 47% 11%)"} />
           <section className={i % 2 === 0 ? "bg-background py-16 md:py-24" : "bg-surface-dark py-16 md:py-24"}>
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
-              <div className={`grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center ${feature.reverse ? "lg:flex-row-reverse" : ""}`}>
-                <AnimatedSection direction={feature.reverse ? "right" : "left"} delay={0.1}>
+              <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
+                <AnimatedSection direction={feature.reverse ? "right" : "left"} delay={0.1} className={feature.reverse ? "order-2 lg:order-2" : ""}>
                   <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
                     <feature.icon className="h-9 w-9" strokeWidth={1.5} />
                   </motion.div>
@@ -279,7 +279,7 @@ const IntegraSDWAN = () => {
                   <p className={`text-lg leading-relaxed ${i % 2 === 0 ? "text-muted-foreground" : "text-surface-dark-muted"}`}>{feature.description}</p>
                 </AnimatedSection>
                 {feature.img && (
-                  <AnimatedSection direction={feature.reverse ? "left" : "right"} delay={0.2}>
+                  <AnimatedSection direction={feature.reverse ? "left" : "right"} delay={0.2} className={feature.reverse ? "order-1 lg:order-1" : ""}>
                     <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
                       <img src={feature.img} alt={feature.imgAlt} className="w-full h-auto object-cover aspect-video" loading="lazy" />
                     </motion.div>

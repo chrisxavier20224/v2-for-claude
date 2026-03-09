@@ -10,10 +10,13 @@ const connectivityLinks = [
   { label: "Leased Lines", path: "/connectivity/leased-lines" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
   { label: "SoGEA Broadband", path: "/connectivity/sogea" },
-  { label: "Business WiFi", path: "/connectivity/business-wifi" },
-  { label: "Home WiFi", path: "/connectivity/home-wifi" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation" },
   { label: "Starlink B2B", path: "/connectivity/starlink-b2b" },
+];
+
+const solutionsLinks = [
+  { label: "Business WiFi", path: "/connectivity/business-wifi" },
+  { label: "Home WiFi", path: "/connectivity/home-wifi" },
   { label: "CCTV", path: "/connectivity/cctv" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution" },
   { label: "Unified Communications", path: "/connectivity/unified-communications" },
@@ -23,10 +26,10 @@ const companyLinks = [
   { label: "Customer Stories", path: "/customers" },
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
+  { label: "About", path: "/about" },
 ];
 
 const resourceLinks = [
-  { label: "About", path: "/about" },
   { label: "Availability Checker", path: "/availability-checker" },
   { label: "Resources", path: "/resources" },
 ];
@@ -89,7 +92,7 @@ const Footer = () => {
       {/* MAIN FOOTER */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-6 py-12">
-          <div className="grid gap-8 grid-cols-2 md:grid-cols-5">
+          <div className="grid gap-8 grid-cols-2 md:grid-cols-6">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <Link to="/" className="flex items-center mb-4">
@@ -114,6 +117,20 @@ const Footer = () => {
               </ul>
             </div>
 
+            {/* Solutions */}
+            <div>
+              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Solutions</h4>
+              <ul className="space-y-2">
+                {solutionsLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link to={link.path} className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Company */}
             <div>
               <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Company</h4>
@@ -126,11 +143,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4">Resources</h4>
+              <h4 className="text-sm font-semibold text-surface-dark-foreground mb-4 mt-6">Resources</h4>
               <ul className="space-y-2">
                 {resourceLinks.map((link) => (
                   <li key={link.path}>
