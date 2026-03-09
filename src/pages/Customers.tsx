@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 
 import royleFarmHero from "@/assets/case-studies/royle-farm-hero.jpg";
@@ -238,13 +237,11 @@ const Customers = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(216 100% 50%)" />
-
       {/* CTA */}
-      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
+      <section className="bg-surface-dark py-24 md:py-32">
         <AnimatedSection>
-          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Ready to join them?</h2>
+          <div className="mx-auto max-w-3xl text-center px-6">
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Ready to join them?</h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Link

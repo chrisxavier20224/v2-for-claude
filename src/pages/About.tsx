@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Check, Target, Heart, Shield, Users } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import Section from "@/components/shared/Section";
 import Placeholder from "@/components/shared/Placeholder";
@@ -11,8 +10,6 @@ import DataFlowHero from "@/components/shared/DataFlowHero";
 import DataFlowDivider from "@/components/shared/DataFlowDivider";
 import SEO from "@/components/shared/SEO";
 
-// Field images
-const field2 = "/assets/backgrounds/field-2.jpg";
 
 const purpose = [
   {
@@ -246,30 +243,27 @@ const About = () => {
         </StaggeredContainer>
       </Section>
 
-      {/* CTA - Blue */}
-      <Section variant="primary" size="compact" className="relative overflow-hidden">
-        {/* Faded background image */}
-        <div className="absolute inset-0 opacity-[0.08]">
-          <img src={field2} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
-        </div>
+      {/* CTA */}
+      <section className="bg-surface-dark py-24 md:py-32">
         <AnimatedSection>
-          <div className="mx-auto max-w-3xl text-center relative z-10">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-primary-foreground">
+          <div className="mx-auto max-w-3xl text-center px-6">
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">
               Curious?
             </h2>
-            <p className="mb-8 text-lg text-primary-foreground/80">
+            <p className="mb-8 text-lg text-surface-dark-muted">
               If this sounds like a fit, we'd be happy to show you how it works.
             </p>
             <div className="flex justify-center">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                <Link to="/contact">
-                  Get in Touch
-                </Link>
-              </Button>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base rounded-md transition-colors"
+              >
+                Get in Touch
+              </Link>
             </div>
           </div>
         </AnimatedSection>
-      </Section>
+      </section>
     </PageLayout>
   );
 };

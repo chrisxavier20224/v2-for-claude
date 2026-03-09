@@ -5,7 +5,6 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
-import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogPosts";
 
 const fadeUp = {
@@ -149,22 +148,21 @@ const Blog = () => {
       </section>
 
       {/* CTA */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(216 100% 50%)" />
-      <section className="relative overflow-hidden bg-primary-enhanced py-28 md:py-36">
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-surface-dark py-24 md:py-32">
         <AnimatedSection>
-          <div className="relative z-10 mx-auto max-w-3xl text-center px-6">
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">
-              Unlock the Power of Integra SD-WAN
+          <div className="mx-auto max-w-3xl text-center px-6">
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">
+              Explore our connectivity solutions
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base"
+                <Link
+                  to="/availability-checker"
+                  className="inline-flex items-center justify-center bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base rounded-md transition-colors"
                 >
-                  <Link to="/availability-checker">Check Availability</Link>
-                </Button>
+                  Check Availability
+                </Link>
               </motion.div>
             </div>
           </div>
