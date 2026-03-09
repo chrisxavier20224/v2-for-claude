@@ -11,16 +11,20 @@ interface HubSpotMeetingProps {
   variant?: "dark" | "light";
   /** Whether to show the section wrapper (heading + padding) or just the raw embed */
   bare?: boolean;
+  /** Custom meeting URL. Defaults to Chris Clapham's general link */
+  meetingUrl?: string;
 }
 
-const MEETING_URL = "https://meetings.hubspot.com/chris-clapham?embed=true";
+const DEFAULT_MEETING_URL = "https://meetings.hubspot.com/chris-clapham?embed=true";
 
 const HubSpotMeeting = ({
   heading = "Book a Call",
   subtitle = "Pick a time that works for you and we'll walk through your connectivity options — no obligation.",
   variant = "dark",
   bare = false,
+  meetingUrl,
 }: HubSpotMeetingProps) => {
+  const url = meetingUrl ? `${meetingUrl}${meetingUrl.includes('?') ? '&' : '?'}embed=true` : DEFAULT_MEETING_URL;
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,7 +48,7 @@ const HubSpotMeeting = ({
       <div
         ref={containerRef}
         className="meetings-iframe-container"
-        data-src={MEETING_URL}
+        data-src={url}
         style={{ minHeight: "660px" }}
       />
     );
@@ -85,7 +89,7 @@ const HubSpotMeeting = ({
           <div
             ref={containerRef}
             className="meetings-iframe-container"
-            data-src={MEETING_URL}
+            data-src={url}
             style={{ minHeight: "660px" }}
           />
         </motion.div>
