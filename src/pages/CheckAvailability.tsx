@@ -535,8 +535,8 @@ const CheckAvailability = () => {
                   </form>
                 </div>
 
-                <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} size="lg" className="w-full h-13 text-base font-semibold shadow-lg shadow-primary/30">
-                  Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
+                <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                  Check My Availability <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
 
                 {/* Social proof nudge */}
@@ -620,8 +620,8 @@ const CheckAvailability = () => {
                   </div>
                 </div>
 
-                <Button onClick={() => goTo(3)} disabled={!step2Valid} size="lg" className="w-full h-13 text-base font-semibold shadow-lg shadow-primary/30">
-                  Continue to Pin Drop <MapPin className="ml-2 h-4 w-4" />
+                <Button onClick={() => goTo(3)} disabled={!step2Valid} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                  Continue to Pin Drop <MapPin className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" onClick={() => goTo(1)} className="w-full mt-2 h-11">
                   <ArrowLeft className="mr-2 h-4 w-4" /> Back
@@ -716,7 +716,7 @@ const CheckAvailability = () => {
                       )}
                     </div>
 
-                    <Button onClick={() => goTo(4)} disabled={!coords || submitting} size="lg" className="w-full h-13 text-base font-semibold shadow-lg shadow-primary/30">
+                    <Button onClick={() => goTo(4)} disabled={!coords || submitting} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
                       {submitting ? (
                         <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</>
                       ) : (
