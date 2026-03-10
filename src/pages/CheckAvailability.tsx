@@ -269,8 +269,14 @@ const CheckAvailability = () => {
   const mapRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
 
+  const [step1Touched, setStep1Touched] = useState(false);
+
   const phoneDigits = phone.replace(/[^0-9]/g, "");
-  const step1Valid = firstName.trim() && lastName.trim() && email.trim().includes("@") && phoneDigits.length >= 10 && phoneDigits.length <= 13;
+  const phoneValid = phoneDigits.length >= 10 && phoneDigits.length <= 13;
+  const emailValid = email.trim().includes("@") && email.trim().includes(".");
+  const firstNameValid = !!firstName.trim();
+  const lastNameValid = !!lastName.trim();
+  const step1Valid = firstNameValid && lastNameValid && emailValid && phoneValid;
   const step2Valid = !!service;
 
   const togglePain = (p: PainPoint) => {
@@ -427,31 +433,35 @@ const CheckAvailability = () => {
                     </div>
                   </div>
 
-                  <form autoComplete="on" onSubmit={(e) => { e.preventDefault(); if (step1Valid) goTo(2); }} className="space-y-4">
+                  <form autoComplete="on" onSubmit={(e) => { e.preventDefault(); setStep1Touched(true); if (step1Valid) goTo(2); }} className="space-y-4">
                     <div className="grid grid-cols-2 gap-3">
                       <div>
                         <label htmlFor="fname" className="block text-sm font-medium text-foreground mb-1.5">First name</label>
-                        <Input id="fname" name="given-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Sarah" autoComplete="given-name" />
+                        <Input id="fname" name="given-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Sarah" autoComplete="given-name" className={step1Touched && !firstNameValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                        {step1Touched && !firstNameValid && <p className="text-xs text-red-500 mt-1">Required</p>}
                       </div>
                       <div>
                         <label htmlFor="lname" className="block text-sm font-medium text-foreground mb-1.5">Last name</label>
-                        <Input id="lname" name="family-name" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Thompson" autoComplete="family-name" />
+                        <Input id="lname" name="family-name" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Thompson" autoComplete="family-name" className={step1Touched && !lastNameValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                        {step1Touched && !lastNameValid && <p className="text-xs text-red-500 mt-1">Required</p>}
                       </div>
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email address</label>
-                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="sarah@example.com" autoComplete="email" />
+                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="sarah@example.com" autoComplete="email" className={step1Touched && !emailValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      {step1Touched && !emailValid && <p className="text-xs text-red-500 mt-1">Please enter a valid email address</p>}
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Phone number</label>
-                      <Input id="phone" name="tel" type="tel" inputMode="numeric" pattern="[0-9]*" maxLength={15} value={phone} onChange={(e) => { const digits = e.target.value.replace(/[^0-9+ ]/g, ""); setPhone(digits); }} placeholder="07700 900 000" autoComplete="tel" />
+                      <Input id="phone" name="tel" type="tel" inputMode="numeric" pattern="[0-9]*" maxLength={15} value={phone} onChange={(e) => { const digits = e.target.value.replace(/[^0-9+ ]/g, ""); setPhone(digits); }} placeholder="07700 900 000" autoComplete="tel" className={step1Touched && !phoneValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      {step1Touched && !phoneValid && <p className="text-xs text-red-500 mt-1">{phone.trim() ? "Please enter a valid UK phone number (10-11 digits)" : "Required"}</p>}
                     </div>
                     {/* Hidden submit button allows Enter key and helps autocomplete */}
                     <button type="submit" className="hidden" />
                   </form>
                 </div>
 
-                <Button onClick={() => goTo(2)} disabled={!step1Valid} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
                   Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
 
