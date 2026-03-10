@@ -489,7 +489,7 @@ const CheckAvailability = () => {
       </section>
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className="relative z-10 -mt-16 bg-gradient-to-b from-surface-dark via-surface-dark to-background pt-4">
+      <section className="relative z-10 -mt-16 bg-surface-dark pt-4">
         <div className="mx-auto max-w-lg px-4 pb-20">
           <AnimatePresence mode="wait">
 
