@@ -87,7 +87,7 @@ const UnifiedCommunications = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Hosted VoIP for your business.</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Hosted VoIP, PSTN Replacement.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
               PSTN switches off January 2027. From £10/handset/month — Teams integration, call routing, voicemail-to-email, and PSTN backup. Deployed in days, not weeks.
             </p>

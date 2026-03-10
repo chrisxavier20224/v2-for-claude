@@ -151,7 +151,7 @@ const SteamRally = () => {
 
           <AnimatedSection delay={0.15} className="mt-10">
             <motion.div className="overflow-hidden rounded-2xl" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={bridgeMastImg} alt="Integra Bridge mast with Starlink dish deployed at the Steam Rally" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+              <img src={bridgeMastImg} alt="Integra Bridge mast with Starlink dish deployed at the Steam Rally" className="w-full h-auto object-contain" loading="lazy" />
             </motion.div>
             <p className="text-sm text-muted-foreground mt-3">Integra Bridge mast deployed on-site, delivering 500Mbps+ across the festival grounds.</p>
           </AnimatedSection>

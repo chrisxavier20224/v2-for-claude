@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Satellite, Settings, ArrowLeft, ArrowRight, CircleCheckBig, Network, Wifi } from "lucide-react";
+import { Satellite, Settings, ArrowLeft, ArrowRight, CircleCheckBig, Network, Wifi, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

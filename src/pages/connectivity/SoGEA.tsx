@@ -110,9 +110,9 @@ const SoGEA = () => {
   return (
     <PageLayout>
       <SEO
-        title="SoGEA Business Broadband — No Phone Line Required"
-        description="SoGEA broadband without line rental. Save £10-15/month. PSTN switches off January 2027 — get ahead now. Up to 80Mbps, 90%+ UK coverage."
-        keywords="SoGEA, SOGEA broadband, business broadband no phone line, PSTN switch off, broadband only, FTTC no line rental, single order generic ethernet access"
+        title="SoGEA & FTTP Business Broadband — No Phone Line Required"
+        description="SoGEA and FTTP broadband without line rental. PSTN switches off January 2027 — get ahead now. SoGEA up to 80Mbps, FTTP up to 1Gbps. 90%+ UK coverage."
+        keywords="SoGEA, SOGEA broadband, FTTP, fibre to the premises, business broadband no phone line, PSTN switch off, broadband only, FTTC no line rental, full fibre"
         url="/connectivity/sogea"
       />
       <SchemaMarkup schema={sogeaSchema} />
@@ -255,6 +255,29 @@ const SoGEA = () => {
           </AnimatedSection>
         </div>
       </Section>
+
+      {/* FTTP UPGRADE PATH */}
+      <section className="bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Full Fibre Available?</p>
+              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">FTTP — Fibre to the Premises</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                If FTTP is available at your address, it replaces copper entirely with fibre all the way to your door. Speeds from 40Mbps to 1Gbps, lower latency than SoGEA, and no distance degradation. It's the best standard broadband option available.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Not sure which you need? We check availability at your address and recommend the best option — SoGEA if you're on copper, FTTP if full fibre has reached you, or one of our SD-WAN solutions if neither delivers enough.
+              </p>
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <Button asChild size="lg">
+                  <Link to="/availability-checker">Check What's Available at Your Address <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </motion.div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 

@@ -109,7 +109,7 @@ const WirelessDistribution = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Wireless links that connect your entire site.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Point-to-point and point-to-multipoint wireless distribution across buildings, estates, and business parks. Up to 2Gbps speeds, professional site survey, VLAN segmentation, and 24/7 monitoring. From £400/month.
+              Point-to-point and point-to-multipoint wireless distribution across buildings, estates, and business parks. Up to 2Gbps speeds, professional site survey, VLAN segmentation, and 24/7 monitoring. Custom-quoted per site.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -344,22 +344,29 @@ const WirelessDistribution = () => {
               </ul>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-lg font-medium text-surface-dark-foreground mb-4">Typical Pricing</h3>
+              <h3 className="text-lg font-medium text-surface-dark-foreground mb-4">Custom-Quoted Per Site</h3>
+              <p className="text-surface-dark-muted leading-relaxed mb-6">
+                Every wireless distribution project is unique — distance, terrain, throughput, and multi-tenant requirements all affect the design. We quote after a free site survey so you get an accurate price based on your exact needs.
+              </p>
               <div className="space-y-4">
                 <div className="pb-4 border-b border-white/10">
-                  <p className="text-sm text-surface-dark-muted mb-1">Point-to-Point (up to 5km)</p>
-                  <p className="text-2xl font-medium text-primary">£400-600/month</p>
+                  <p className="text-sm text-surface-dark-muted mb-1">Point-to-Point Links</p>
+                  <p className="text-lg font-medium text-primary">Quoted per link after survey</p>
                 </div>
                 <div className="pb-4 border-b border-white/10">
-                  <p className="text-sm text-surface-dark-muted mb-1">Point-to-Multipoint (1 master + 3 sectors)</p>
-                  <p className="text-2xl font-medium text-primary">£800-1,200/month</p>
+                  <p className="text-sm text-surface-dark-muted mb-1">Point-to-Multipoint Distribution</p>
+                  <p className="text-lg font-medium text-primary">Quoted per sector after survey</p>
                 </div>
                 <div>
-                  <p className="text-sm text-surface-dark-muted mb-1">Installation (varies by complexity)</p>
-                  <p className="text-2xl font-medium text-primary">£2,500-6,000</p>
+                  <p className="text-sm text-surface-dark-muted mb-1">Installation & Commissioning</p>
+                  <p className="text-lg font-medium text-primary">Included in every quote</p>
                 </div>
               </div>
-              <p className="text-xs text-surface-dark-muted mt-6 italic">Installation includes site survey, design, equipment, and commissioning. Prices quoted per site after survey.</p>
+              <div className="mt-6">
+                <Button asChild size="lg" className="w-full">
+                  <Link to="/contact">Request a Free Site Survey <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </div>
             </motion.div>
           </div>
         </div>

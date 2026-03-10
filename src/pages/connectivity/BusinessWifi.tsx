@@ -15,7 +15,7 @@ import publicImg from "@/assets/connectivity/business-wifi-public.jpg";
 import indoorImg from "@/assets/connectivity/business-wifi-indoor.jpg";
 import guestImg from "@/assets/connectivity/business-wifi-guest.jpg";
 import eventImg from "@/assets/connectivity/business-wifi-event.jpg";
-import surveysImg from "@/assets/connectivity/business-wifi-surveys.jpg";
+import surveysImg from "@/assets/connectivity/business-wifi-surveys.png";
 
 const painPoints = [
   {
@@ -48,7 +48,7 @@ const businessWifiServiceSchema = {
     name: "Integra Networks",
     url: "https://integra-networks.co.uk",
   },
-  description: "Professional WiFi network design and installation for offices, warehouses and multi-building sites. Enterprise-grade mesh networks monitored 24/7 via Integra Cloud.",
+  description: "Professional WiFi network design and installation for offices, warehouses and multi-building sites. Enterprise-grade wireless networks monitored 24/7 via Integra Cloud.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -92,7 +92,7 @@ const BusinessWifi = () => {
     <PageLayout>
       <SEO
         title="Business WiFi — Professional WiFi That Works Everywhere"
-        description="Professionally designed WiFi networks, custom-quoted to your site. Site survey, AP placement, mesh configuration. Monitored 24/7 via Integra Cloud. WiFi-as-a-Service available."
+        description="Professionally designed WiFi networks, custom-quoted to your site. Site survey, AP placement, network configuration. Monitored 24/7 via Integra Cloud. WiFi-as-a-Service available."
         keywords="business WiFi, commercial WiFi, public WiFi, guest WiFi, event WiFi, WiFi survey, managed WiFi"
         url="/connectivity/business-wifi"
       />
@@ -116,7 +116,7 @@ const BusinessWifi = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Professional WiFi that works everywhere.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              We design and install WiFi networks for your exact building layout. Site survey, professional-grade access points, mesh configuration — and 24/7 monitoring via Integra Cloud. Every project is custom-quoted.
+              We design and install WiFi networks for your exact building layout. Site survey, professional-grade access points, enterprise configuration — and 24/7 monitoring via Integra Cloud. Every project is custom-quoted.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -247,7 +247,7 @@ const BusinessWifi = () => {
             </AnimatedSection>
             <AnimatedSection direction="right" delay={0.2} className="order-2">
               <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <img src={surveysImg} alt="WiFi site survey" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+                <img src={surveysImg} alt="WiFi survey heat map showing signal strength coverage" className="w-full h-auto object-contain rounded-xl" loading="lazy" />
               </motion.div>
             </AnimatedSection>
           </div>

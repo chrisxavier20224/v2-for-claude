@@ -17,7 +17,6 @@ const standardConnectivityLinks = [
   { label: "Leased Lines", path: "/connectivity/leased-lines" },
   { label: "Managed Internet", path: "/connectivity/managed-internet" },
   { label: "SoGEA Broadband", path: "/connectivity/sogea" },
-  { label: "Dark Fibre", path: "/connectivity/dark-fibre" },
   { label: "4G/5G Backup", path: "/connectivity/cellular-backup" },
   { label: "Business Mobiles", path: "/connectivity/business-mobiles" },
 ];

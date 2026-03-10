@@ -20,8 +20,7 @@ const standardConnectivityLinks = [
   { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade Fibre" },
   { label: "Managed Internet", path: "/connectivity/managed-internet", icon: Globe, tagline: "Dedicated Bandwidth, Simpler Pricing" },
   { label: "SoGEA Broadband", path: "/connectivity/sogea", icon: Globe, tagline: "Broadband Without Line Rental" },
-  { label: "Dark Fibre", path: "/connectivity/dark-fibre", icon: Cable, tagline: "Unlit Fibre for Enterprise" },
-  { label: "4G/5G Backup", path: "/connectivity/cellular-backup", icon: Signal, tagline: "Automatic Cellular Failover" },
+{ label: "4G/5G Backup", path: "/connectivity/cellular-backup", icon: Signal, tagline: "Automatic Cellular Failover" },
 ];
 
 // Infrastructure & on-site services

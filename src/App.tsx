@@ -104,7 +104,7 @@ const ManagedFirewall = lazy(() => import("./pages/connectivity/ManagedFirewall"
 const CellularBackup = lazy(() => import("./pages/connectivity/CellularBackup"));
 const ManagedInternet = lazy(() => import("./pages/connectivity/ManagedInternet"));
 const BusinessContinuity = lazy(() => import("./pages/connectivity/BusinessContinuity"));
-const DarkFibre = lazy(() => import("./pages/connectivity/DarkFibre"));
+
 const BusinessMobiles = lazy(() => import("./pages/connectivity/BusinessMobiles"));
 const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 
@@ -224,7 +224,7 @@ const App = () => (
               <Route path="/connectivity/cellular-backup" element={<CellularBackup />} />
               <Route path="/connectivity/managed-internet" element={<ManagedInternet />} />
               <Route path="/connectivity/business-continuity" element={<BusinessContinuity />} />
-              <Route path="/connectivity/dark-fibre" element={<DarkFibre />} />
+
               <Route path="/connectivity/business-mobiles" element={<BusinessMobiles />} />
 
               {/* Proposal Pages */}
