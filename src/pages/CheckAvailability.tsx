@@ -14,7 +14,7 @@ import SEO from "@/components/shared/SEO";
 /*  Types                                                              */
 /* ------------------------------------------------------------------ */
 type ServiceType = "business" | "home_worker" | "consumer";
-type PainPoint = "slow_connection" | "intermittent" | "no_fibre" | "need_faster" | "quoted_thousands" | "moving";
+type PainPoint = "slow_connection" | "intermittent" | "moving_no_fibre" | "need_faster" | "quoted_thousands";
 
 interface PostcodeData {
   latitude: number;
@@ -36,12 +36,11 @@ const SERVICE_OPTIONS: { value: ServiceType; icon: typeof Building2; title: stri
 ];
 
 const PAIN_POINTS: { value: PainPoint; label: string }[] = [
-  { value: "slow_connection", label: "My current broadband is painfully slow" },
-  { value: "intermittent", label: "My connection drops out at the worst times" },
-  { value: "no_fibre", label: "I'm in an area with no fibre availability" },
-  { value: "need_faster", label: "I need faster speeds for my business to grow" },
-  { value: "quoted_thousands", label: "I've been quoted thousands for a fibre install" },
-  { value: "moving", label: "I'm moving to a new location and need connectivity" },
+  { value: "slow_connection", label: "We have an existing internet connection that is simply too slow" },
+  { value: "intermittent", label: "Our critical services are working intermittently due to poor broadband" },
+  { value: "moving_no_fibre", label: "We are moving to a new location and Fibre isn't available" },
+  { value: "need_faster", label: "We need a faster connection to scale our business operations" },
+  { value: "quoted_thousands", label: "We have been quoted thousands to have a Fibre connection installed" },
 ];
 
 const TYPE_LABELS: Record<ServiceType, string> = {
@@ -69,12 +68,11 @@ const USER_TYPE_HS: Record<string, string> = {
 };
 
 const PAIN_LABEL_HS: Record<string, string> = {
-  slow_connection: "Slow broadband",
-  intermittent: "Connection drops out",
-  no_fibre: "No fibre availability",
-  need_faster: "Needs faster speeds",
-  quoted_thousands: "Quoted thousands for fibre",
-  moving: "Moving to new location",
+  slow_connection: "Existing connection too slow",
+  intermittent: "Critical services intermittent due to poor broadband",
+  moving_no_fibre: "Moving to new location, fibre not available",
+  need_faster: "Need faster connection to scale operations",
+  quoted_thousands: "Quoted thousands for fibre install",
 };
 
 async function submitToHubSpot(payload: {
