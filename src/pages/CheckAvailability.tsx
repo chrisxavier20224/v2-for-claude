@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
+import { trackEvent, identifyUser } from "@/components/shared/Analytics";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -270,6 +271,21 @@ const CheckAvailability = () => {
   const markerRef = useRef<any>(null);
 
   const [step1Touched, setStep1Touched] = useState(false);
+  const formStartedRef = useRef(false);
+
+  /* ---- Conversion tracking ---- */
+  // Track form_view on mount (equivalent to Typeform "views")
+  useEffect(() => {
+    trackEvent("form_view", { form_name: "availability_checker", form_location: "/check" });
+  }, []);
+
+  // Track form_start once (equivalent to Typeform "starts")
+  const trackFormStart = useCallback(() => {
+    if (!formStartedRef.current) {
+      formStartedRef.current = true;
+      trackEvent("form_start", { form_name: "availability_checker" });
+    }
+  }, []);
 
   const phoneDigits = phone.replace(/[^0-9]/g, "");
   const phoneValid = phoneDigits.length >= 10 && phoneDigits.length <= 13;
@@ -361,7 +377,32 @@ const CheckAvailability = () => {
 
       setSubmitting(true);
       try {
-        await submitToHubSpot(payload);
+        const ok = await submitToHubSpot(payload);
+
+        // ── Conversion tracking ──
+        // Identify user in HubSpot for future page tracking
+        identifyUser(email, {
+          firstname: firstName,
+          lastname: lastName,
+          phone,
+        });
+
+        // GA4: generate_lead is a recommended conversion event
+        trackEvent("generate_lead", {
+          form_name: "availability_checker",
+          user_type: service,
+          postcode: postcode.toUpperCase(),
+          region: pcData?.region ?? "",
+          country: pcData?.country ?? "",
+          submission_success: ok,
+        });
+
+        // GA4: form_submit for funnel analysis
+        trackEvent("form_submit", {
+          form_name: "availability_checker",
+          form_step: 3,
+          value: 1,
+        });
       } catch (err) {
         console.error("Submission error:", err);
       }
@@ -369,6 +410,14 @@ const CheckAvailability = () => {
       navigate("/thankyou");
       return;
     }
+
+    // Track step progression
+    trackEvent("form_step", {
+      form_name: "availability_checker",
+      form_step: n,
+      step_label: ["", "details", "about_you", "pin_drop"][n] || `step_${n}`,
+    });
+
     setStep(n);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -437,23 +486,23 @@ const CheckAvailability = () => {
                     <div className="grid grid-cols-2 gap-3">
                       <div>
                         <label htmlFor="fname" className="block text-sm font-medium text-foreground mb-1.5">First name</label>
-                        <Input id="fname" name="given-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Sarah" autoComplete="given-name" className={step1Touched && !firstNameValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                        <Input id="fname" name="given-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} onFocus={trackFormStart} placeholder="Sarah" autoComplete="given-name" className={step1Touched && !firstNameValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
                         {step1Touched && !firstNameValid && <p className="text-xs text-red-500 mt-1">Required</p>}
                       </div>
                       <div>
                         <label htmlFor="lname" className="block text-sm font-medium text-foreground mb-1.5">Last name</label>
-                        <Input id="lname" name="family-name" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Thompson" autoComplete="family-name" className={step1Touched && !lastNameValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                        <Input id="lname" name="family-name" value={lastName} onChange={(e) => setLastName(e.target.value)} onFocus={trackFormStart} placeholder="Thompson" autoComplete="family-name" className={step1Touched && !lastNameValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
                         {step1Touched && !lastNameValid && <p className="text-xs text-red-500 mt-1">Required</p>}
                       </div>
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email address</label>
-                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="sarah@example.com" autoComplete="email" className={step1Touched && !emailValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onFocus={trackFormStart} placeholder="sarah@example.com" autoComplete="email" className={step1Touched && !emailValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
                       {step1Touched && !emailValid && <p className="text-xs text-red-500 mt-1">Please enter a valid email address</p>}
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Phone number</label>
-                      <Input id="phone" name="tel" type="tel" inputMode="numeric" pattern="[0-9]*" maxLength={15} value={phone} onChange={(e) => { const digits = e.target.value.replace(/[^0-9+ ]/g, ""); setPhone(digits); }} placeholder="07700 900 000" autoComplete="tel" className={step1Touched && !phoneValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      <Input id="phone" name="tel" type="tel" inputMode="numeric" pattern="[0-9]*" maxLength={15} value={phone} onChange={(e) => { const digits = e.target.value.replace(/[^0-9+ ]/g, ""); setPhone(digits); }} onFocus={trackFormStart} placeholder="07700 900 000" autoComplete="tel" className={step1Touched && !phoneValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
                       {step1Touched && !phoneValid && <p className="text-xs text-red-500 mt-1">{phone.trim() ? "Please enter a valid UK phone number (10-11 digits)" : "Required"}</p>}
                     </div>
                     {/* Hidden submit button allows Enter key and helps autocomplete */}
