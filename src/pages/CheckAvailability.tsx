@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 import { trackEvent, identifyUser } from "@/components/shared/Analytics";
-import cellTowersBg from "@/assets/backgrounds/cell-towers-bg.jpg";
+import heroBg from "@/assets/sectors/homeworker-remote-work.avif";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -440,7 +440,7 @@ const CheckAvailability = () => {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src={cellTowersBg}
+            src={heroBg}
             alt=""
             className="w-full h-full object-cover"
             loading="eager"
@@ -489,7 +489,7 @@ const CheckAvailability = () => {
       </section>
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className="bg-background relative z-10 -mt-12">
+      <section className="bg-background relative z-10 -mt-12 pt-8">
         <div className="mx-auto max-w-lg px-4 pb-20">
           <AnimatePresence mode="wait">
 
