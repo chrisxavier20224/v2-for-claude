@@ -391,7 +391,7 @@ const BrandGuidelines = () => {
 
                 {/* Corner accent */}
                 <div className="absolute bottom-6 right-8">
-                  <img src={nexrLogo} alt="" className={`h-7 sm:h-8 print:hidden ${isLight ? 'invert' : ''}`} />
+                  <img src={nexrLogo} alt="Nexr IoT logo" className={`h-7 sm:h-8 print:hidden ${isLight ? 'invert' : ''}`} />
                 </div>
               </div>
             );

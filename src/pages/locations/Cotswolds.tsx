@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
@@ -73,6 +74,38 @@ const Cotswolds = () => {
         description="Premium broadband for affluent Cotswolds properties. Cheltenham, Cirencester, Stow-on-the-Wold. Listed building compatible. Integra Pro and Starlink solutions."
         keywords="Cotswolds broadband, rural broadband, Cheltenham internet, Cirencester, Stow-on-the-Wold, listed building broadband, premium rural connectivity"
         url="/locations/rural-broadband-cotswolds"
+      />
+      <SchemaMarkup
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Integra Networks — Cotswolds",
+            description: "Premium broadband for affluent Cotswolds properties. Cheltenham, Cirencester, Stow-on-the-Wold. Listed building compatible. Integra Pro and Starlink solutions.",
+            url: "https://www.integra-networks.co.uk/locations/rural-broadband-cotswolds",
+            areaServed: {
+              "@type": "Place",
+              name: "Cotswolds",
+            },
+            parentOrganization: {
+              "@type": "Organization",
+              name: "Integra Networks",
+              url: "https://www.integra-networks.co.uk",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
       />
 
       {/* Hero */}

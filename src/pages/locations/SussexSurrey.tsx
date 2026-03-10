@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
@@ -73,6 +74,38 @@ const SussexSurrey = () => {
         description="Premium broadband for affluent rural Sussex and Surrey. Crawley, Horsham, Guildford, Chichester. Integra Pro and Starlink solutions. Listed building compatible."
         keywords="rural broadband Sussex, Surrey internet, Crawley broadband, Horsham, Guildford, premium broadband, rural connectivity"
         url="/locations/rural-broadband-sussex-surrey"
+      />
+      <SchemaMarkup
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Integra Networks — Sussex & Surrey",
+            description: "Premium broadband for affluent rural Sussex and Surrey. Crawley, Horsham, Guildford, Chichester. Integra Pro and Starlink solutions. Listed building compatible.",
+            url: "https://www.integra-networks.co.uk/locations/rural-broadband-sussex-surrey",
+            areaServed: {
+              "@type": "Place",
+              name: "Sussex & Surrey",
+            },
+            parentOrganization: {
+              "@type": "Organization",
+              name: "Integra Networks",
+              url: "https://www.integra-networks.co.uk",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
       />
 
       {/* Hero */}

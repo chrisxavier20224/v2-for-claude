@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
@@ -73,6 +74,38 @@ const SomersetDevon = () => {
         description="Broadband for Devon and Somerset rural properties, farms, holiday cottages. Taunton, Exeter, Barnstaple, Torrington. 100+ installations. Integra Pro and Starlink solutions."
         keywords="rural broadband Devon, Somerset broadband, Exeter internet, Taunton, Barnstaple, holiday cottage WiFi, rural connectivity"
         url="/locations/rural-broadband-somerset-devon"
+      />
+      <SchemaMarkup
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Integra Networks — Devon & Somerset",
+            description: "Broadband for Devon and Somerset rural properties, farms, holiday cottages. Taunton, Exeter, Barnstaple, Torrington. 100+ installations. Integra Pro and Starlink solutions.",
+            url: "https://www.integra-networks.co.uk/locations/rural-broadband-somerset-devon",
+            areaServed: {
+              "@type": "Place",
+              name: "Devon & Somerset",
+            },
+            parentOrganization: {
+              "@type": "Organization",
+              name: "Integra Networks",
+              url: "https://www.integra-networks.co.uk",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
       />
 
       {/* Hero */}

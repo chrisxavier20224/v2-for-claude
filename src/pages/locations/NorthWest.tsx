@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
@@ -73,6 +74,38 @@ const NorthWest = () => {
         description="Fast, reliable broadband for Lancashire, Greater Manchester, Cheshire, Merseyside, and Cumbria. Integra Pro bonded 4G/5G and Starlink solutions. 14-day installation."
         keywords="rural broadband North West, broadband Lancashire, Cheshire internet, Wigan broadband, Greater Manchester WiFi, rural connectivity"
         url="/locations/rural-broadband-north-west"
+      />
+      <SchemaMarkup
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Integra Networks — North West",
+            description: "Fast, reliable broadband for Lancashire, Greater Manchester, Cheshire, Merseyside, and Cumbria. Integra Pro bonded 4G/5G and Starlink solutions. 14-day installation.",
+            url: "https://www.integra-networks.co.uk/locations/rural-broadband-north-west",
+            areaServed: {
+              "@type": "Place",
+              name: "North West",
+            },
+            parentOrganization: {
+              "@type": "Organization",
+              name: "Integra Networks",
+              url: "https://www.integra-networks.co.uk",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
       />
 
       {/* Hero */}

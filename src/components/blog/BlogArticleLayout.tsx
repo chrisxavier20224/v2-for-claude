@@ -5,6 +5,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import { blogPosts } from "@/data/blogPosts";
 
 interface BlogArticleLayoutProps {
@@ -25,6 +26,36 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
         description={post.excerpt}
         keywords={`${post.category}, connectivity, Integra Networks, blog`}
         url={`/blog/${post.slug}`}
+      />
+      <SchemaMarkup
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt,
+          image: `https://www.integra-networks.co.uk${post.image}`,
+          datePublished: new Date(post.date.replace(/(\d{2}) (\w{3}) (\d{4})/, "$1 $2 $3")).toISOString(),
+          dateModified: new Date(post.date.replace(/(\d{2}) (\w{3}) (\d{4})/, "$1 $2 $3")).toISOString(),
+          author: {
+            "@type": "Organization",
+            name: "Integra Networks",
+            url: "https://www.integra-networks.co.uk",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Integra Networks",
+            url: "https://www.integra-networks.co.uk",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://www.integra-networks.co.uk/integra-logo.svg",
+            },
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://www.integra-networks.co.uk/blog/${post.slug}`,
+          },
+          articleSection: post.category,
+        }}
       />
 
       {/* Full-bleed Hero */}

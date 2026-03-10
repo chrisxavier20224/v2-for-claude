@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
@@ -73,6 +74,38 @@ const Kent = () => {
         description="Broadband for Kent farms, agricultural businesses, and rural properties. Ashford, Maidstone, Canterbury, Sevenoaks. Integra Pro and Starlink solutions with uptime guarantees."
         keywords="rural broadband Kent, farm broadband, agricultural internet, Kent connectivity, Ashford internet, Canterbury, Maidstone"
         url="/locations/rural-broadband-kent"
+      />
+      <SchemaMarkup
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Integra Networks — Kent",
+            description: "Broadband for Kent farms, agricultural businesses, and rural properties. Ashford, Maidstone, Canterbury, Sevenoaks. Integra Pro and Starlink solutions with uptime guarantees.",
+            url: "https://www.integra-networks.co.uk/locations/rural-broadband-kent",
+            areaServed: {
+              "@type": "Place",
+              name: "Kent",
+            },
+            parentOrganization: {
+              "@type": "Organization",
+              name: "Integra Networks",
+              url: "https://www.integra-networks.co.uk",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
       />
 
       {/* Hero */}

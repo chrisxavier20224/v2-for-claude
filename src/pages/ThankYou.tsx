@@ -29,7 +29,7 @@ const ThankYou = () => {
         <div className="absolute inset-0">
           <img
             src={sdwanHero}
-            alt=""
+            alt="Integra Networks SD-WAN connectivity solution"
             className="w-full h-full object-cover"
             loading="eager"
           />

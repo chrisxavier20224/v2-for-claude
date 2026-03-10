@@ -96,7 +96,23 @@ const London = () => {
         keywords="construction broadband London, temporary internet, site broadband, Canary Wharf, City broadband, Croydon, Stratford"
         url="/locations/construction-site-broadband-london"
       />
-      <SchemaMarkup data={londonLocalBusinessSchema} />
+      <SchemaMarkup
+        data={[
+          londonLocalBusinessSchema,
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
+      />
 
       {/* Hero */}
       <section className="relative -mt-[73px] pt-[73px] bg-surface-dark">

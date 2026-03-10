@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import {
   Accordion,
@@ -73,6 +74,38 @@ const EssexHerts = () => {
         description="Reliable broadband for Essex, Hertfordshire, and west Suffolk. Integra Pro bonded 4G/5G, Starlink solutions. Strong local customer base. Fast 14-day installation."
         keywords="rural broadband Essex, Hertfordshire internet, broadband Bishop's Stortford, Saffron Walden, Stansted broadband, rural connectivity"
         url="/locations/rural-broadband-essex-hertfordshire"
+      />
+      <SchemaMarkup
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Integra Networks — Essex & Hertfordshire",
+            description: "Reliable broadband for Essex, Hertfordshire, and west Suffolk. Integra Pro bonded 4G/5G, Starlink solutions. Strong local customer base. Fast 14-day installation.",
+            url: "https://www.integra-networks.co.uk/locations/rural-broadband-essex-hertfordshire",
+            areaServed: {
+              "@type": "Place",
+              name: "Essex & Hertfordshire",
+            },
+            parentOrganization: {
+              "@type": "Organization",
+              name: "Integra Networks",
+              url: "https://www.integra-networks.co.uk",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
+          },
+        ]}
       />
 
       {/* Hero */}
