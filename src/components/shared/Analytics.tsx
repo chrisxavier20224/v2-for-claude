@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 // Add your tracking IDs here
 const GA_MEASUREMENT_ID = "G-YWR9JZCZP1";
+const GOOGLE_ADS_ID = "AW-344295012";
 const HUBSPOT_ID = import.meta.env.VITE_HUBSPOT_ID;
 
 declare global {
@@ -32,6 +33,11 @@ const initializeGA = () => {
   window.gtag("config", GA_MEASUREMENT_ID, {
     send_page_view: false, // We'll track page views manually
   });
+
+  // Also configure Google Ads for conversion tracking
+  if (GOOGLE_ADS_ID) {
+    window.gtag("config", GOOGLE_ADS_ID);
+  }
 };
 
 // Initialize HubSpot
@@ -88,6 +94,21 @@ export const trackHubSpotEvent = (
   }
 };
 
+// Google Ads conversion tracking
+export const trackGoogleAdsConversion = (
+  conversionLabel: string,
+  value?: number,
+  currency?: string
+) => {
+  if (GOOGLE_ADS_ID && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: `${GOOGLE_ADS_ID}/${conversionLabel}`,
+      value: value ?? 1,
+      currency: currency ?? "GBP",
+    });
+  }
+};
+
 // Identify user for HubSpot
 export const identifyUser = (email: string, properties?: Record<string, unknown>) => {
   if (HUBSPOT_ID && window._hsq) {
@@ -112,6 +133,12 @@ const Analytics = () => {
     const url = location.pathname + location.search;
     trackPageView(url);
     trackHubSpotPageView(url);
+
+    // Fire Google Ads conversion on thank-you page
+    // Matches the "Conversion Page Availability Checker" action (page load: /thankyou)
+    if (location.pathname === "/thankyou") {
+      trackGoogleAdsConversion("1TUjCO6M2LsZEOSMlqQB", 1, "GBP");
+    }
   }, [location]);
 
   return null; // This component doesn't render anything
