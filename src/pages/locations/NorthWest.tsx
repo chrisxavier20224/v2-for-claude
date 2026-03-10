@@ -55,7 +55,7 @@ const NorthWest = () => {
     },
     {
       q: "What happens if equipment breaks?",
-      a: "Engineer support is included. We own and maintain all hardware. If anything fails within 12 months, we replace it at no cost. No charges for site visits, parts, or labour. This is included in your monthly service—no hidden fees.",
+      a: "Engineer support is included. All hardware is fully maintained throughout your contract. If anything fails, we replace it at no cost. No charges for site visits, parts, or labour — it's all included in your monthly service.",
     },
     {
       q: "Can I get speeds over 200Mbps in rural Merseyside?",

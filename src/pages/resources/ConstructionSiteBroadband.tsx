@@ -251,7 +251,7 @@ const ConstructionSiteBroadband = () => {
                 },
                 {
                   title: "Mobile",
-                  description: "Sites move. We redeploy the equipment. When this site finishes, we move the hardware to your next site (different region, might be new 4G provider, but setup is the same). We own and maintain everything — if anything breaks, we send an engineer at no cost.",
+                  description: "Sites move. We redeploy the equipment. When this site finishes, we move the hardware to your next site (different region, might be new 4G provider, but setup is the same). All hardware is fully maintained — if anything breaks, we send an engineer at no cost.",
                 },
                 {
                   title: "Cost-Effective",

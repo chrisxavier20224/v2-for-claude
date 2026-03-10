@@ -362,7 +362,7 @@ const StarlinkForBusiness = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground mt-8">Each step makes sense for its time. You're not locked in. We own and maintain all hardware, so if anything breaks, we send an engineer — at no cost to you.</p>
+            <p className="text-muted-foreground mt-8">Each step makes sense for its time. You're not locked in. All hardware is included and fully maintained, so if anything breaks, we send an engineer — at no cost to you.</p>
           </div>
         </AnimatedSection>
       </Section>

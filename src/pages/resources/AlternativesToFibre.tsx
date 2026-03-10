@@ -69,7 +69,7 @@ const solutions = [
     cons: [
       "Higher monthly cost than Starlink or basic broadband",
       "Requires decent 4G coverage (desktop survey confirms this upfront)",
-      "Professional installation from £2,200 (we own and maintain all hardware)",
+      "Professional installation from £2,200 (all hardware included and maintained)",
     ],
   },
   {

@@ -69,7 +69,7 @@ const benefits = [
   {
     icon: Users,
     title: "Managed Service",
-    description: "We own and maintain all hardware. No capital expenditure — pure monthly service. Engineer support for any issues, monitoring, and remote support included.",
+    description: "All hardware included and fully maintained. No capital expenditure — pure monthly service. Engineer support for any issues, monitoring, and remote support included.",
   },
 ];
 
@@ -321,7 +321,7 @@ const WirelessDistribution = () => {
           <AnimatedSection>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-6">Managed Service Model</h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              No capital expenditure. We own all hardware — radios, switches, cabling, and mounting equipment. You get carrier-grade connectivity as a monthly service.
+              No capital expenditure. All hardware included — radios, switches, cabling, and mounting equipment. You get carrier-grade connectivity as a managed monthly service.
             </p>
           </AnimatedSection>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">

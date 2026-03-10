@@ -188,7 +188,7 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl text-white/80 leading-relaxed max-w-2xl"
             >
-              We own all hardware. You own the flexibility. Fixed pricing, simple 12-month terms, and a 14-day money-back guarantee.
+              Hardware included with every install. Fixed pricing, simple 12-month terms, and a 14-day money-back guarantee.
             </motion.p>
           </AnimatedSection>
         </div>

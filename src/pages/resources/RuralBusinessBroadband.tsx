@@ -67,7 +67,7 @@ const solutions = [
     cons: [
       "Higher monthly cost than single SIM",
       "Requires decent 4G coverage from at least two carriers (desktop survey confirms)",
-      "Professional installation ~£2,200 (we own and maintain all hardware)",
+      "Professional installation ~£2,200 (all hardware included and maintained)",
     ],
   },
   {
@@ -402,7 +402,7 @@ const RuralBusinessBroadband = () => {
                 The router handles all this automatically. You see one internet connection that's faster and more reliable than either tower alone.
               </p>
               <p>
-                <strong>Equipment:</strong> Commercial-grade Integra router with dual SIM capability, external antennas for better signal, weatherproofed outdoor box, professional install. We own and maintain all hardware — if anything breaks, we send an engineer at no cost to you. <strong>Cost:</strong> Installation from £2,200, monthly SIM costs ~£60 (two carriers).
+                <strong>Equipment:</strong> Commercial-grade Integra router with dual SIM capability, external antennas for better signal, weatherproofed outdoor box, professional install. All hardware is included and fully maintained — if anything breaks, we send an engineer at no cost to you. <strong>Cost:</strong> Installation from £2,200, monthly SIM costs ~£60 (two carriers).
               </p>
             </div>
           </div>
