@@ -206,10 +206,10 @@ const Resources = () => {
       <Section variant="gradient" size="large">
         <AnimatedSection>
           <div className="text-center">
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-4">
+            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">
               Not sure which solution fits?
             </h2>
-            <p className="text-lg text-surface-dark-muted max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Our desktop survey maps your property to nearby towers and identifies exactly what's available at your location. No obligation, no hard sell.
             </p>
             <Link to="/contact">

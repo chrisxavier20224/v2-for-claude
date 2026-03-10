@@ -1,12 +1,23 @@
-import Navbar from "@/components/layout/Navbar";
-import CookieConsentBanner from "@/components/shared/CookieConsentBanner";
+import { useEffect } from "react";
+import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
-import AvailabilityCheckerForm from "@/components/availability-checker/AvailabilityCheckerForm";
 
 const AvailabilityChecker = () => {
+  // Load Typeform embed script
+  useEffect(() => {
+    const existing = document.querySelector(
+      'script[src="//embed.typeform.com/next/embed.js"]'
+    );
+    if (!existing) {
+      const script = document.createElement("script");
+      script.src = "//embed.typeform.com/next/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <Navbar />
+    <PageLayout>
       <SEO
         title="Check Availability — Integra Networks"
         description="Use our availability checker to see if Integra are installing in your area and if our service is right for you."
@@ -14,11 +25,15 @@ const AvailabilityChecker = () => {
         url="/availability-checker"
       />
 
-      <main className="flex-1">
-        <AvailabilityCheckerForm />
-      </main>
-      <CookieConsentBanner />
-    </div>
+      <section className="bg-surface-dark min-h-[80vh] flex items-center -mt-20 pt-20">
+        <div className="mx-auto max-w-3xl w-full px-4 sm:px-6 py-16 md:py-24">
+          <div
+            data-tf-live="fMzp0OEu"
+            style={{ width: "100%", height: "600px" }}
+          />
+        </div>
+      </section>
+    </PageLayout>
   );
 };
 

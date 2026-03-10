@@ -12,31 +12,25 @@ import wsraLogo from "@/assets/case-studies/wsra-steam-rally-logo.png";
 import carbeeLogo from "@/assets/case-studies/carbee-logo.png";
 
 const customers = [
-  { name: "McGee Group", link: "/customers/mcgee-construction", logo: mcgeeLogo, size: "md" as const },
-  { name: "Seacon Group", link: "/customers/seacon-group", logo: seaconLogo, size: "xl" as const },
-  { name: "WB Power Services", link: "/customers/wb-power-services", logo: wbPowerLogo, size: "lg" as const },
-  { name: "UK Harvest", link: "/customers/uk-harvest", logo: ukHarvestLogo, size: "md" as const },
-  { name: "Royle Farm", link: "/customers/royle-farm", logo: royleFarmLogo, size: "md" as const },
-  { name: "Royal Harwich YC", link: "/customers/royal-harwich-yacht-club", logo: rhycLogo, size: "lg" as const },
-  { name: "Thinking Anglers", link: "/customers/thinking-anglers", logo: thinkingAnglersLogo, size: "md" as const },
-  { name: "Little Quarry Glamping", link: "/customers/little-quarry-glamping", logo: littleQuarryLogo, size: "md" as const },
-  { name: "WSRA Steam Rally", link: "/customers/wsra-steam-rally", logo: wsraLogo, size: "md" as const },
-  { name: "Carbee", link: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet", logo: carbeeLogo, size: "md" as const },
+  { name: "McGee Group", link: "/customers/mcgee-construction", logo: mcgeeLogo },
+  { name: "Seacon Group", link: "/customers/seacon-group", logo: seaconLogo },
+  { name: "WB Power Services", link: "/customers/wb-power-services", logo: wbPowerLogo },
+  { name: "UK Harvest", link: "/customers/uk-harvest", logo: ukHarvestLogo },
+  { name: "Royle Farm", link: "/customers/royle-farm", logo: royleFarmLogo },
+  { name: "Royal Harwich YC", link: "/customers/royal-harwich-yacht-club", logo: rhycLogo },
+  { name: "Thinking Anglers", link: "/customers/thinking-anglers", logo: thinkingAnglersLogo },
+  { name: "Little Quarry Glamping", link: "/customers/little-quarry-glamping", logo: littleQuarryLogo },
+  { name: "WSRA Steam Rally", link: "/customers/wsra-steam-rally", logo: wsraLogo },
+  { name: "Carbee", link: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet", logo: carbeeLogo },
 ];
-
-const sizeClasses = {
-  md: "w-36 md:w-44",
-  lg: "w-48 md:w-56",
-  xl: "w-56 md:w-64",
-};
 
 const LogoItem = ({ customer }: { customer: typeof customers[0] }) => (
   <Link
     to={customer.link}
-    className="flex-shrink-0 group px-6 md:px-8"
+    className="flex-shrink-0 group px-8 md:px-10"
     title={customer.name}
   >
-    <div className={`h-10 flex items-center justify-center ${sizeClasses[customer.size]}`}>
+    <div className="h-10 w-36 md:w-40 flex items-center justify-center">
       <img
         src={customer.logo}
         alt={customer.name}
