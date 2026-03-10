@@ -1,21 +1,9 @@
-import { useEffect } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 
-const AvailabilityChecker = () => {
-  // Load Typeform embed script
-  useEffect(() => {
-    const existing = document.querySelector(
-      'script[src="//embed.typeform.com/next/embed.js"]'
-    );
-    if (!existing) {
-      const script = document.createElement("script");
-      script.src = "//embed.typeform.com/next/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
+const TYPEFORM_URL = "https://form.typeform.com/to/fMzp0OEu";
 
+const AvailabilityChecker = () => {
   return (
     <PageLayout>
       <SEO
@@ -27,9 +15,13 @@ const AvailabilityChecker = () => {
 
       <section className="bg-surface-dark min-h-[80vh] flex items-center -mt-20 pt-20">
         <div className="mx-auto max-w-3xl w-full px-4 sm:px-6 py-16 md:py-24">
-          <div
-            data-tf-live="fMzp0OEu"
-            style={{ width: "100%", height: "600px" }}
+          <iframe
+            src={TYPEFORM_URL}
+            title="Integra Networks Availability Checker"
+            className="w-full border-0 rounded-xl"
+            style={{ height: "650px" }}
+            allow="camera; microphone; autoplay; encrypted-media;"
+            loading="lazy"
           />
         </div>
       </section>

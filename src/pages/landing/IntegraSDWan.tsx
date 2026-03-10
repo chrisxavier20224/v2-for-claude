@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Clock, PoundSterling, ShieldCheck, Wifi, Zap, MapPin, Star, Check, Award, ArrowRight, ExternalLink } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ChevronDown, Clock, PoundSterling, ShieldCheck, Wifi, Zap, MapPin, Star, Check, Award, ArrowRight } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
@@ -11,7 +11,6 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import SEO from "@/components/shared/SEO";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
-import sdwanInstallImg from "@/assets/connectivity/sdwan-install.jpg";
 import sdwanSpeedsImg from "@/assets/connectivity/sdwan-speeds.jpg";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
@@ -123,19 +122,10 @@ const faqItems = [
   },
 ];
 
+const TYPEFORM_URL = "https://form.typeform.com/to/fMzp0OEu";
+
 const IntegraSDWan = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  // Load Typeform embed script
-  useEffect(() => {
-    const existing = document.querySelector('script[src="//embed.typeform.com/next/embed.js"]');
-    if (!existing) {
-      const script = document.createElement("script");
-      script.src = "//embed.typeform.com/next/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   return (
     <PageLayout>
@@ -458,9 +448,13 @@ const IntegraSDWan = () => {
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4">Check Your Availability</h2>
             <p className="text-lg text-muted-foreground text-center mb-10">Enter your details below and we'll check what speeds we can deliver to your property.</p>
           </AnimatedSection>
-          <div
-            data-tf-live="fMzp0OEu"
-            style={{ width: "100%", height: "600px" }}
+          <iframe
+            src={TYPEFORM_URL}
+            title="Integra Networks Availability Checker"
+            className="w-full border-0 rounded-xl"
+            style={{ height: "650px" }}
+            allow="camera; microphone; autoplay; encrypted-media;"
+            loading="lazy"
           />
         </div>
       </section>
