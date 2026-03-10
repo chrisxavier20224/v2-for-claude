@@ -32,7 +32,7 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
         <div className="absolute inset-0">
           <img
             src={post.image}
-            alt=""
+            alt={post.title}
             className="w-full h-full object-cover"
             loading="eager"
           />
