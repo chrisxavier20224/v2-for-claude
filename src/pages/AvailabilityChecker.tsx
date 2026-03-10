@@ -15,7 +15,7 @@ const AvailabilityChecker = () => {
       <section className="bg-surface-dark min-h-[80vh] flex items-center -mt-20 pt-20">
         <div className="mx-auto max-w-3xl w-full px-4 sm:px-6 py-16 md:py-24">
           <Widget
-            id="01J1SF1YN6E4Z30C38N3GZ8G0B"
+            id="01KJF9YCNX5CXVWF335WZJ8QDR"
             style={{ width: "100%", height: "650px" }}
           />
         </div>
