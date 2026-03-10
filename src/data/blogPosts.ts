@@ -17,6 +17,13 @@ import tempBroadbandImg from "@/assets/blog/temporary-broadband-events.jpg";
 import portableWifiImg from "@/assets/blog/portable-wifi-construction.jpg";
 import iotAgricultureImg from "@/assets/blog/farm-rolling-fields.jpg";
 import multiBuildingImg from "@/assets/blog/multi-building-wifi-rural.jpg";
+import houseSaleImg from "@/assets/blog/rural-cottage-property-sale-uk.jpg";
+import fibreCheckerImg from "@/assets/blog/fibre-optic-broadband-uk.jpg";
+import constructionNightImg from "@/assets/blog/construction-site-night-connectivity-uk.jpg";
+import satelliteOrbitImg from "@/assets/blog/satellite-earth-orbit-broadband.jpg";
+import broadbandBottleneckImg from "@/assets/blog/broadband-data-streams-digital.jpg";
+import slowInternetImg from "@/assets/blog/slow-internet-laptop-troubleshooting.jpg";
+import speedTestImg from "@/assets/blog/internet-speed-test-gauge.jpg";
 
 export interface BlogPost {
   slug: string;
@@ -185,7 +192,7 @@ export const blogPosts: BlogPost[] = [
     title: "BT Openreach Fibre Checker and Other Handy Online Tools",
     excerpt: "Before searching for alternative ISPs, check what's available at your property. Here's how to use the BT Openreach Fibre Checker and other free tools.",
     date: "01 Jun 2022",
-    image: broadbandAvailabilityImg,
+    image: fibreCheckerImg,
     category: "Guides",
   },
   {
@@ -193,7 +200,7 @@ export const blogPosts: BlogPost[] = [
     title: "Satellite Internet vs Integra 4G/5G SD-WAN",
     excerpt: "Starlink or bonded 4G/5G? Both work in rural areas, but they solve different problems. Here's an honest comparison to help you choose.",
     date: "04 Apr 2023",
-    image: satelliteVsFixedImg,
+    image: satelliteOrbitImg,
     category: "Connectivity",
   },
   {
@@ -201,7 +208,7 @@ export const blogPosts: BlogPost[] = [
     title: "Revolutionising Connectivity in Construction: Integra's SD-WAN Solutions",
     excerpt: "Construction sites need fast internet that deploys in hours, not months. Integra's SD-WAN delivers 350Mbps+ to even the most remote sites.",
     date: "23 Feb 2023",
-    image: portableWifiImg,
+    image: constructionNightImg,
     category: "Construction",
   },
   {
@@ -209,7 +216,7 @@ export const blogPosts: BlogPost[] = [
     title: "Beyond the Broadband Bottleneck: A Practical Alternative for Rural SMEs",
     excerpt: "Still waiting for fibre? Rural SMEs don't have to settle for 2Mbps copper. SD-WAN delivers 150-350Mbps in 14 days.",
     date: "18 Jul 2022",
-    image: broadbandAvailabilityImg,
+    image: broadbandBottleneckImg,
     category: "Connectivity",
   },
   {
@@ -217,7 +224,7 @@ export const blogPosts: BlogPost[] = [
     title: "Unlock High-Speed, Reliable Internet in Rural Areas with Integra SD-WAN",
     excerpt: "No fibre? No problem. Integra SD-WAN bonds multiple 4G/5G connections to deliver up to 350Mbps to rural homes and businesses.",
     date: "07 Sep 2022",
-    image: broadbandAvailabilityImg,
+    image: broadbandBottleneckImg,
     category: "Connectivity",
   },
   {
@@ -225,7 +232,7 @@ export const blogPosts: BlogPost[] = [
     title: "Preparing Your House for Sale: Why Internet Speed Has Never Been More Important",
     excerpt: "Internet speed is now a key factor for property buyers. Here's why it matters and how to boost your property's connectivity before selling.",
     date: "02 Dec 2022",
-    image: broadbandAvailabilityImg,
+    image: houseSaleImg,
     category: "Guides",
   },
   {
@@ -233,7 +240,7 @@ export const blogPosts: BlogPost[] = [
     title: "DIY Guide: Performing Internet Speed Tests at Your Property",
     excerpt: "Want to know how fast your internet really is? This practical guide walks you through running proper speed tests at your property.",
     date: "19 Jan 2023",
-    image: broadbandAvailabilityImg,
+    image: speedTestImg,
     category: "Guides",
   },
   {
@@ -241,7 +248,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Is My BT Internet So Slow?",
     excerpt: "Slow BT broadband? Distance from the exchange, old copper lines, and network congestion are common culprits. Here's what you can do about it.",
     date: "15 Mar 2022",
-    image: broadbandAvailabilityImg,
+    image: slowInternetImg,
     category: "Guides",
   },
 ];
