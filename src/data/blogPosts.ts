@@ -15,7 +15,7 @@ import cellularBondingImg from "@/assets/blog/cellular-bonding.jpg";
 import loadBalancingImg from "@/assets/blog/load-balancing-vs-bonding.jpg";
 import tempBroadbandImg from "@/assets/blog/temporary-broadband-events.jpg";
 import portableWifiImg from "@/assets/blog/portable-wifi-construction.jpg";
-import iotAgricultureImg from "@/assets/blog/iot-agriculture.jpg";
+import iotAgricultureImg from "@/assets/blog/farm-rolling-fields.jpg";
 import multiBuildingImg from "@/assets/blog/multi-building-wifi-rural.jpg";
 
 export interface BlogPost {

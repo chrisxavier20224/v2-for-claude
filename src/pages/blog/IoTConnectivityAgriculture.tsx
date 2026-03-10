@@ -1,4 +1,7 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import farmHillside from "@/assets/blog/farm-hillside-cottage.jpg";
+import farmFields from "@/assets/blog/farm-rolling-fields.jpg";
+import farmValley from "@/assets/blog/farm-valley-village.jpg";
 
 
 const IoTConnectivityAgriculture = () => (
@@ -41,6 +44,8 @@ const IoTConnectivityAgriculture = () => (
       <li>Solar panel output monitors</li>
       <li>Electric fence voltage monitors</li>
     </ul>
+
+    <img src={farmFields} alt="Rolling UK farmland where IoT sensors need reliable connectivity across vast distances" className="rounded-xl w-full" loading="lazy" />
 
     <h2>Connectivity Challenge</h2>
 
@@ -148,6 +153,8 @@ const IoTConnectivityAgriculture = () => (
 
     <p><strong>Use case:</strong> Farms with multiple buildings or remote areas needing connectivity.</p>
 
+    <img src={farmHillside} alt="Rural farmhouse with surrounding fields — typical property benefiting from radio mesh IoT connectivity" className="rounded-xl w-full" loading="lazy" />
+
     <h2>Real Example: Hillcrest Farm (Herefordshire)</h2>
 
     <p>Hillcrest Farm runs a beef operation across 200 acres. They needed:</p>
@@ -234,6 +241,8 @@ const IoTConnectivityAgriculture = () => (
     </ul>
 
     <p><strong>Hybrid approach:</strong> Mix both. Livestock trackers get cellular SIMs (they roam). Barn sensors on WiFi (they're stationary).</p>
+
+    <img src={farmValley} alt="Farm village nestled in a valley — remote rural areas where Integra provides connectivity for smart agriculture" className="rounded-xl w-full" loading="lazy" />
 
     <h2>Next Step</h2>
 
