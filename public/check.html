@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Your Availability — Integra Networks</title>
+<meta name="description" content="Check if Integra Networks can bring fast broadband to your property. Drop a pin on your building and we'll run an automated coverage check.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  :root {
+    --primary: #0066FF;
+    --primary-hover: #0052cc;
+    --primary-light: rgba(0, 102, 255, 0.1);
+    --primary-ring: rgba(0, 102, 255, 0.2);
+    --surface-dark: #0f1729;
+    --surface-dark-muted: rgba(255,255,255,0.6);
+    --foreground: #0f1729;
+    --muted: #606a78;
+    --bg: #f8f9fb;
+    --bg-alt: #f3f5f8;
+    --card: #ffffff;
+    --border: #e0e4ea;
+    --input-bg: #f3f5f8;
+    --input-border: #e0e4ea;
+    --green: #22c55e;
+    --green-bg: rgba(34,197,94,0.1);
+    --green-border: rgba(34,197,94,0.25);
+    --radius: 8px;
+    --radius-sm: 4px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ====== NAVBAR ====== */
+  .navbar {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .navbar-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar img { height: 28px; }
+  .navbar-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .navbar-link:hover { text-decoration: underline; }
+
+  /* ====== HERO HEADER ====== */
+  .hero-header {
+    background: var(--surface-dark);
+    padding: 48px 24px 56px;
+    text-align: center;
+  }
+  .hero-header h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .hero-header p {
+    font-size: 16px;
+    color: var(--surface-dark-muted);
+    font-weight: 400;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ====== PROGRESS BAR ====== */
+  .progress-wrap { max-width: 480px; margin: 24px auto 0; display: flex; gap: 6px; }
+  .progress-pip { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.12); transition: background 0.4s; }
+  .progress-pip.active { background: var(--primary); }
+  .progress-pip.done { background: var(--primary); opacity: 0.4; }
+
+  /* ====== LAYOUT ====== */
+  .form-container { max-width: 540px; margin: -32px auto 0; padding: 0 16px 32px; position: relative; z-index: 10; }
+
+  /* ====== CARDS ====== */
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+  }
+  .card .sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  /* ====== FORM FIELDS ====== */
+  .field { margin-bottom: 20px; }
+  .field:last-child { margin-bottom: 0; }
+  .field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--foreground);
+    margin-bottom: 6px;
+  }
+  .field input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    background: var(--input-bg);
+    color: var(--foreground);
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  .field input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--card);
+    box-shadow: 0 0 0 3px var(--primary-ring);
+  }
+  .field input::placeholder { color: #a0a8b4; }
+
+  /* ====== BUTTONS ====== */
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 13px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s;
+  }
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-primary:hover { background: var(--primary-hover); }
+  .btn-primary:disabled { background: #94a3b8; cursor: not-allowed; }
+  .btn-back {
+    background: transparent;
+    color: var(--muted);
+    margin-top: 8px;
+    border: 1px solid var(--border);
+  }
+  .btn-back:hover { background: var(--bg-alt); }
+
+  /* ====== STEPS ====== */
+  .step { display: none; }
+  .step.active { display: block; animation: fadeUp 0.3s ease; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ====== OPTION CARDS (service type) ====== */
+  .opt-card {
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+  .opt-card:hover { border-color: #80b3ff; background: #f8fbff; }
+  .opt-card.selected { border-color: var(--primary); background: var(--primary-light); }
+  .opt-card .opt-icon {
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-alt);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+  .opt-card.selected .opt-icon { background: var(--primary-ring); }
+  .opt-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .opt-card p { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+  /* ====== CHECKBOXES (pain points) ====== */
+  .checks-heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--foreground);
+    margin: 24px 0 10px;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .check-item:hover { border-color: #80b3ff; background: #f8fbff; }
+  .check-item.checked { border-color: var(--primary); background: var(--primary-light); }
+  .check-box {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+  .check-item.checked .check-box {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+  .check-box svg { opacity: 0; transition: opacity 0.15s; }
+  .check-item.checked .check-box svg { opacity: 1; }
+  .check-item span { font-size: 14px; line-height: 1.4; }
+
+  /* ====== MAP ====== */
+  #map {
+    width: 100%;
+    height: 380px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+    border: 1.5px solid var(--border);
+  }
+  .map-hint {
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    padding: 8px;
+    line-height: 1.6;
+  }
+  .map-hint strong { color: var(--primary); }
+
+  .postcode-row { display: flex; gap: 8px; }
+  .postcode-row input { flex: 1; }
+  .postcode-row .btn { width: auto; padding: 11px 20px; white-space: nowrap; }
+
+  .info-box {
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .info-box-blue { background: var(--primary-light); border: 1.5px solid rgba(0,102,255,0.2); }
+  .info-box-blue .info-label { font-size: 11px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .info-box-blue .info-value { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 14px; }
+
+  .map-wrap { display: none; }
+  .map-wrap.visible { display: block; }
+
+  /* ====== THANK YOU PAGE ====== */
+  .ty-hero {
+    background: linear-gradient(135deg, #001a3a 0%, var(--surface-dark) 100%);
+    border-radius: var(--radius);
+    padding: 36px 24px;
+    text-align: center;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0,102,255,0.1);
+  }
+  .ty-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--green-bg);
+    border: 1px solid var(--green-border);
+    color: var(--green);
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+  .ty-badge svg { width: 14px; height: 14px; }
+  .ty-hero h2 { font-size: 28px; font-weight: 800; color: white; margin-bottom: 6px; letter-spacing: -0.5px; }
+  .ty-hero .ty-sub { font-size: 15px; color: rgba(255,255,255,0.6); }
+
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 12px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 22px; margin-bottom: 6px; }
+  .stat-val { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+  .stat-val span { font-size: 13px; font-weight: 500; }
+  .stat-lbl { font-size: 11px; color: var(--muted); margin-top: 2px; font-weight: 500; }
+
+  .reviews-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+  .reviews-stars { color: #f59e0b; font-size: 16px; letter-spacing: 2px; }
+  .reviews-score { font-weight: 700; font-size: 16px; }
+  .reviews-src { font-size: 12px; color: var(--muted); }
+
+  .cta-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .cta-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+  .cta-card p { font-size: 14px; color: var(--muted); margin-bottom: 18px; line-height: 1.6; }
+  .btn-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .btn-cta:hover { background: var(--primary-hover); }
+  .phone-line { font-size: 14px; color: var(--muted); }
+  .phone-line a { color: var(--primary); text-decoration: none; font-weight: 600; }
+  .phone-line a:hover { text-decoration: underline; }
+
+  .steps-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  .steps-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .step-row { display: flex; gap: 14px; margin-bottom: 18px; }
+  .step-row:last-child { margin-bottom: 0; }
+  .step-num {
+    width: 30px;
+    height: 30px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step-row h4 { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .step-row p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  .details-toggle {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .details-toggle summary {
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .details-toggle summary::-webkit-details-marker { display: none; }
+  .details-toggle[open] summary { border-bottom: 1px solid var(--border); }
+  .details-body { padding: 16px 18px; }
+  .sum-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--bg-alt); font-size: 13px; }
+  .sum-row:last-child { border-bottom: none; }
+  .sum-row .s-label { color: var(--muted); }
+  .sum-row .s-value { font-weight: 600; text-align: right; max-width: 55%; }
+
+  .footer-line { text-align: center; padding: 20px; font-size: 11px; color: #bbb; }
+
+  @media (max-width: 480px) {
+    .hero-header { padding: 36px 20px 44px; }
+    .hero-header h1 { font-size: 26px; }
+    .form-container { padding: 0 12px 24px; }
+    .card { padding: 22px 18px; }
+    #map { height: 300px; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .ty-hero h2 { font-size: 22px; }
+    .ty-hero { padding: 28px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="https://www.integra-networks.co.uk"><img src="https://www.integra-networks.co.uk/assets/integra-logo-C3q8Ehve.svg" alt="Integra Networks"></a>
+    <a class="navbar-link" href="https://www.integra-networks.co.uk">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to site
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-header" id="heroHeader">
+  <h1 id="heroTitle">Check your availability</h1>
+  <p id="heroSub">See if we can bring fast, reliable broadband to your property</p>
+  <div class="progress-wrap" id="progressBar">
+    <div class="progress-pip active" id="pip1"></div>
+    <div class="progress-pip" id="pip2"></div>
+    <div class="progress-pip" id="pip3"></div>
+    <div class="progress-pip" id="pip4"></div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="form-container">
+
+  <!-- STEP 1: About You -->
+  <div class="step active" id="step1">
+    <div class="card">
+      <h2>About you</h2>
+      <p class="sub">We just need a few details to get started.</p>
+      <div class="field">
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName" placeholder="Sarah" autocomplete="given-name">
+      </div>
+      <div class="field">
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" placeholder="Thompson" autocomplete="family-name">
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="sarah@example.com" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" placeholder="07700 900 000" autocomplete="tel">
+      </div>
+    </div>
+    <button class="btn btn-primary" onclick="goTo(2)">
+      Continue
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- STEP 2: Service + Pain Points -->
+  <div class="step" id="step2">
+    <div class="card">
+      <h2>What kind of user are you?</h2>
+      <p class="sub">This helps us recommend the right solution for you.</p>
+
+      <div class="opt-card" onclick="pickService(this,'business')">
+        <div class="opt-icon">🏢</div>
+        <div><h3>Business</h3><p>High-speed connection for operations, video calls and cloud services</p></div>
+      </div>
+      <div class="opt-card" onclick="pickService(this,'home_worker')">
+        <div class="opt-icon">💻</div>
+        <div><h3>Home Worker</h3><p>Reliable internet for working from home and video calls</p></div>
+      </div>
+      <div class="opt-card" onclick="pickService(this,'consumer')">
+        <div class="opt-icon">🏠</div>
+        <div><h3>Consumer</h3><p>Everyday broadband for streaming, browsing and staying connected</p></div>
+      </div>
+
+      <div class="checks-heading">Which of these apply to you?</div>
+
+      <div class="check-item" onclick="toggleCheck(this)" data-val="slow_connection">
+        <div class="check-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+        <span>My current broadband is too slow</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)" data-val="intermittent">
+        <div class="check-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+        <span>I experience intermittent or unreliable service</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)" data-val="no_fibre">
+        <div class="check-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+        <span>I'm moving to a property with no fibre</span>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)" data-val="need_faster">
+        <div class="check-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+        <span>I need a faster connection for my business</span>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="goTo(3)" id="btn2" disabled>
+      Continue
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button class="btn btn-back" onclick="goTo(1)">Back</button>
+  </div>
+
+  <!-- STEP 3: Pin Drop Map -->
+  <div class="step" id="step3">
+    <div class="card">
+      <h2>Find your property</h2>
+      <p class="sub">Enter your postcode, then tap your property on the satellite map.</p>
+
+      <div class="field">
+        <label for="postcode">Postcode</label>
+        <div class="postcode-row">
+          <input type="text" id="postcode" placeholder="e.g. GU27 1JL" autocomplete="postal-code" style="text-transform:uppercase;">
+          <button class="btn btn-primary" onclick="lookupPostcode()" id="btnPC" style="font-size:13px;">Find</button>
+        </div>
+      </div>
+
+      <div id="areaBox" class="info-box info-box-blue" style="display:none;">
+        <div class="info-label">AREA FOUND</div>
+        <div id="areaText"></div>
+      </div>
+    </div>
+
+    <div class="map-wrap" id="mapWrap">
+      <div class="card" style="padding:14px;">
+        <div id="map"></div>
+        <div class="map-hint">
+          <strong>Tap or click directly on your property</strong> to drop the pin.<br>
+          Zoom in for accuracy — try to place the pin on your roof.
+        </div>
+        <div id="coordsBox" class="info-box info-box-blue" style="display:none;">
+          <div class="info-label">PIN LOCATION</div>
+          <div class="info-value" id="coordsText"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="goTo(4)" id="btn3" disabled>
+        Check my coverage
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <button class="btn btn-back" onclick="goTo(2)">Back</button>
+  </div>
+
+  <!-- STEP 4: Thank You -->
+  <div class="step" id="step4">
+
+    <div class="ty-hero">
+      <div class="ty-badge">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        Availability Confirmed
+      </div>
+      <h2>You're eligible for our service!</h2>
+      <p class="ty-sub">We're running a full feasibility check on your property now</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-val">Up to 500<span>Mbps</span></div>
+        <div class="stat-lbl">Download Speed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">🚀</div>
+        <div class="stat-val">14 Days</div>
+        <div class="stat-lbl">Live From Order</div>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-val">4.9/5</div>
+        <div class="stat-lbl">Reviews.io</div>
+      </div>
+    </div>
+
+    <div class="reviews-bar">
+      <div class="reviews-stars">★★★★★</div>
+      <div class="reviews-score">4.9</div>
+      <div class="reviews-src">on Reviews.io</div>
+    </div>
+
+    <div class="cta-card">
+      <h3>Ready to get connected?</h3>
+      <p>Our team will be in touch with your results, but if you'd like to speak to someone now you can book a call or give us a ring.</p>
+      <button class="btn-cta" onclick="window.open('https://www.integra-networks.co.uk/contact','_blank')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Book a Call
+      </button>
+      <div class="phone-line">or call us on <a href="tel:02033887111">0203 388 7111</a></div>
+    </div>
+
+    <div class="steps-card">
+      <h3>Three steps to getting connected</h3>
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div>
+          <h4>We check your coverage</h4>
+          <p>Our system analyses mobile towers near your property, checking line-of-sight and estimating speeds. You'll hear from us shortly.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div>
+          <h4>We confirm with a site visit</h4>
+          <p>If the desktop survey looks good, we'll arrange a quick site visit to verify signal quality and plan your installation.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div>
+          <h4>You're live in 14 days</h4>
+          <p>Our engineers install your equipment and get you connected. Most installations complete within 14 days of order.</p>
+        </div>
+      </div>
+    </div>
+
+    <details class="details-toggle">
+      <summary>
+        Your submission details
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="details-body">
+        <div class="sum-row"><span class="s-label">Name</span><span class="s-value" id="sName"></span></div>
+        <div class="sum-row"><span class="s-label">Email</span><span class="s-value" id="sEmail"></span></div>
+        <div class="sum-row"><span class="s-label">Phone</span><span class="s-value" id="sPhone"></span></div>
+        <div class="sum-row"><span class="s-label">User Type</span><span class="s-value" id="sType"></span></div>
+        <div class="sum-row"><span class="s-label">Postcode</span><span class="s-value" id="sPC"></span></div>
+        <div class="sum-row"><span class="s-label">Coordinates</span><span class="s-value" id="sCoords" style="font-family:monospace;"></span></div>
+      </div>
+    </details>
+  </div>
+
+  <div class="footer-line">integra-networks.co.uk</div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  let map, marker, coords = null;
+  let service = null;
+  let pcData = null;
+
+  const typeLabels = { business:'Business', home_worker:'Home Worker', consumer:'Consumer' };
+
+  function pickService(el, val) {
+    document.querySelectorAll('.opt-card').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    service = val;
+    document.getElementById('btn2').disabled = false;
+  }
+
+  function toggleCheck(el) {
+    el.classList.toggle('checked');
+  }
+
+  function getPains() {
+    return Array.from(document.querySelectorAll('.check-item.checked')).map(el => el.dataset.val);
+  }
+
+  function goTo(n) {
+    // Validation
+    if (n === 2) {
+      const fn = document.getElementById('firstName').value.trim();
+      const ln = document.getElementById('lastName').value.trim();
+      const em = document.getElementById('email').value.trim();
+      const ph = document.getElementById('phone').value.trim();
+      if (!fn || !ln || !em || !ph) { alert('Please fill in all fields to continue.'); return; }
+      if (!em.includes('@')) { alert('Please enter a valid email address.'); return; }
+    }
+    if (n === 3 && !service) return;
+    if (n === 4) {
+      if (!coords) return;
+      // Populate summary
+      document.getElementById('sName').textContent = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
+      document.getElementById('sEmail').textContent = document.getElementById('email').value;
+      document.getElementById('sPhone').textContent = document.getElementById('phone').value || '—';
+      document.getElementById('sType').textContent = typeLabels[service] || service;
+      document.getElementById('sPC').textContent = document.getElementById('postcode').value.toUpperCase();
+      document.getElementById('sCoords').textContent = coords.lat.toFixed(6) + ', ' + coords.lng.toFixed(6);
+
+      // Hide progress on thank you
+      document.getElementById('progressBar').style.display = 'none';
+      document.getElementById('heroTitle').textContent = 'Thank you!';
+      document.getElementById('heroSub').textContent = 'Your coverage check is underway';
+
+      // Build payload
+      const payload = {
+        first_name: document.getElementById('firstName').value,
+        last_name: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        user_type: service,
+        pain_points: getPains(),
+        country: pcData ? pcData.country : null,
+        postcode: document.getElementById('postcode').value.toUpperCase(),
+        admin_ward: pcData ? pcData.admin_ward : null,
+        admin_district: pcData ? pcData.admin_district : null,
+        region: pcData ? pcData.region : null,
+        latitude: coords.lat,
+        longitude: coords.lng,
+        property_coordinates: coords.lat.toFixed(6) + ', ' + coords.lng.toFixed(6)
+      };
+      console.log('SUBMISSION PAYLOAD:', JSON.stringify(payload, null, 2));
+    }
+
+    // Switch steps
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.getElementById('step' + n).classList.add('active');
+
+    // Update progress pips
+    for (let i = 1; i <= 4; i++) {
+      const p = document.getElementById('pip' + i);
+      p.classList.remove('active','done');
+      if (i < n) p.classList.add('done');
+      if (i === n) p.classList.add('active');
+    }
+
+    // Init map when entering step 3
+    if (n === 3) {
+      if (!map) setTimeout(initMap, 200);
+      else setTimeout(() => map.invalidateSize(), 200);
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function initMap() {
+    map = L.map('map', { zoomControl: true, scrollWheelZoom: true }).setView([52.5, -1.5], 6);
+
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Esri', maxZoom: 20
+    }).addTo(map);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 20, opacity: 0.85
+    }).addTo(map);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 20, opacity: 0.6
+    }).addTo(map);
+
+    setTimeout(() => map.invalidateSize(), 300);
+    setTimeout(() => map.invalidateSize(), 600);
+
+    map.on('click', function(e) {
+      if (marker) marker.setLatLng(e.latlng);
+      else {
+        marker = L.marker(e.latlng, { draggable: true, autoPan: true }).addTo(map);
+        marker.on('dragend', function() { setCoords(marker.getLatLng()); });
+      }
+      setCoords(e.latlng);
+    });
+  }
+
+  function setCoords(ll) {
+    coords = { lat: ll.lat, lng: ll.lng };
+    document.getElementById('coordsBox').style.display = 'block';
+    document.getElementById('coordsText').textContent = ll.lat.toFixed(6) + ', ' + ll.lng.toFixed(6);
+    document.getElementById('btn3').disabled = false;
+  }
+
+  async function lookupPostcode() {
+    const pc = document.getElementById('postcode').value.trim().replace(/\s+/g, '');
+    if (!pc) return;
+    const btn = document.getElementById('btnPC');
+    btn.textContent = '...';
+    btn.disabled = true;
+    try {
+      const resp = await fetch('https://api.postcodes.io/postcodes/' + encodeURIComponent(pc));
+      const data = await resp.json();
+      if (data.status === 200 && data.result) {
+        const r = data.result;
+        pcData = r;
+        document.getElementById('areaBox').style.display = 'block';
+        document.getElementById('areaText').textContent = [r.admin_ward, r.admin_district, r.region].filter(Boolean).join(', ') + ' — ' + r.postcode;
+        document.getElementById('mapWrap').classList.add('visible');
+        setTimeout(() => {
+          if (map) { map.invalidateSize(); map.flyTo([r.latitude, r.longitude], 18, { duration: 1.5 }); }
+        }, 300);
+      } else {
+        alert('Postcode not found. Please check and try again.');
+      }
+    } catch (e) { alert('Error looking up postcode. Please try again.'); }
+    btn.textContent = 'Find';
+    btn.disabled = false;
+  }
+
+  document.getElementById('postcode').addEventListener('keypress', function(e) { if (e.key === 'Enter') lookupPostcode(); });
+</script>
+</body>
+</html>
