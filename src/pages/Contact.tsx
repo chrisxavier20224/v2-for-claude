@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Headphones, Loader2, CheckCircle, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import PageLayout from "@/components/layout/PageLayout";
 import EyebrowLabel from "@/components/shared/EyebrowLabel";
 import AnimatedSection from "@/components/shared/AnimatedSection";
@@ -13,6 +12,9 @@ import SEO from "@/components/shared/SEO";
 import LazyIframe from "@/components/shared/LazyIframe";
 import HubSpotMeeting from "@/components/shared/HubSpotMeeting";
 import { trackEvent } from "@/components/shared/Analytics";
+
+const HUBSPOT_PORTAL_ID = "20314482";
+const HUBSPOT_CONTACT_FORM_ID = "b82f1e4b-5892-42c8-b222-53a942076e1e";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -39,10 +41,35 @@ const Contact = () => {
     }
     setIsSubmitting(true);
     try {
-      const { data, error } = await supabase.functions.invoke("send-contact-form", {
-        body: form,
-      });
-      if (error) throw error;
+      // Submit to HubSpot Forms API
+      const hubspotPayload = {
+        fields: [
+          { name: "firstname", value: form.firstName },
+          { name: "lastname", value: form.lastName },
+          { name: "email", value: form.email },
+          { name: "company", value: form.company },
+          { name: "phone", value: form.fleetSize },
+          { name: "message", value: form.message },
+        ],
+        context: {
+          pageUri: window.location.href,
+          pageName: "Contact Us",
+        },
+      };
+
+      const response = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_CONTACT_FORM_ID}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(hubspotPayload),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HubSpot submission failed: ${response.status}`);
+      }
+
       setIsSubmitted(true);
       trackEvent("form_submit", { form: "contact", company: form.company });
       toast({ title: "Request sent", description: "We'll be in touch soon." });

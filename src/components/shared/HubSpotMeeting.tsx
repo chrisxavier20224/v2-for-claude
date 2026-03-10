@@ -36,7 +36,7 @@ const HubSpotMeeting = ({
         title="Book a meeting with Integra Networks"
         className="w-full border-0"
         style={{ minHeight: "700px" }}
-        loading="lazy"
+        loading="eager"
       />
     );
   }
@@ -78,7 +78,7 @@ const HubSpotMeeting = ({
             title="Book a meeting with Integra Networks"
             className="w-full border-0"
             style={{ minHeight: "700px" }}
-            loading="lazy"
+            loading="eager"
           />
         </motion.div>
       </div>

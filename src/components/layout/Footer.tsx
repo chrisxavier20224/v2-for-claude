@@ -40,6 +40,7 @@ const companyLinks = [
   { label: "Customer Stories", path: "/customers" },
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
+  { label: "Support", path: "/support" },
 ];
 
 const resourceLinks = [

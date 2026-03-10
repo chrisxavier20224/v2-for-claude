@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, Headphones } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -51,11 +51,13 @@ const sectorLinks = [
 
 const resourceLinks = [
   { label: "All Resources", path: "/resources", icon: BookOpen, tagline: "Guides, comparisons & industry updates" },
-  { label: "Blog", path: "/blog", icon: FileText, tagline: "News, guides & insights" },
 ];
 
 const companyLinks = [
   { label: "Customer Stories", path: "/customers", icon: Building2, tagline: "See how we've helped businesses" },
+  { label: "Blog", path: "/blog", icon: FileText, tagline: "News, guides & insights" },
+  { label: "Contact", path: "/contact", icon: Phone, tagline: "Get in touch with our team" },
+  { label: "Support", path: "/support", icon: Headphones, tagline: "Help & technical support" },
 ];
 
 const Navbar = () => {
@@ -65,14 +67,14 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [sectorsOpen, setSectorsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
-  // companyOpen removed — Company is now a standalone "Customers" link
+  const [companyOpen, setCompanyOpen] = useState(false);
 
   const isDarkNav = location.pathname === "/connectivity/integra-bridge";
 
   const isSectorPath = sectorLinks.some(s => location.pathname === s.path);
   const isServicesPath = allConnectivityLinks.some(c => location.pathname === c.path);
-  const isResourcePath = resourceLinks.some(r => location.pathname === r.path) || location.pathname === "/blog";
-  const isCompanyPath = companyLinks.some(c => location.pathname === c.path);
+  const isResourcePath = resourceLinks.some(r => location.pathname === r.path);
+  const isCompanyPath = companyLinks.some(c => location.pathname === c.path) || location.pathname === "/support";
 
   return (
     <nav className={`sticky top-0 z-50 backdrop-blur-xl border-b ${isDarkNav ? 'bg-surface-dark border-white/10' : 'bg-white border-border'}`}>
@@ -208,38 +210,50 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Resources Dropdown */}
+            {/* Resources — standalone link */}
+            <Link
+              to="/resources"
+              className={`text-sm font-medium transition-colors ${
+                isResourcePath
+                  ? isDarkNav ? "text-white" : "text-foreground"
+                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Resources
+            </Link>
+
+            {/* Company Dropdown */}
             <div
               className="relative"
-              onMouseEnter={() => setResourcesOpen(true)}
-              onMouseLeave={() => setResourcesOpen(false)}
+              onMouseEnter={() => setCompanyOpen(true)}
+              onMouseLeave={() => setCompanyOpen(false)}
             >
               <button
                 className={`flex items-center gap-1 text-sm font-medium transition-colors ${
-                  isResourcePath
+                  isCompanyPath
                     ? isDarkNav ? "text-white" : "text-foreground"
                     : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Resources
-                <ChevronDown className={`h-4 w-4 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />
+                Company
+                <ChevronDown className={`h-4 w-4 transition-transform ${companyOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {resourcesOpen && (
-                <div className="absolute top-full left-0 pt-2 w-72">
+              {companyOpen && (
+                <div className="absolute top-full right-0 pt-2 w-72">
                   <div className="bg-card border border-border rounded-xl shadow-xl overflow-hidden">
-                    {resourceLinks.map((resource) => (
+                    {companyLinks.map((item) => (
                       <Link
-                        key={resource.path}
-                        to={resource.path}
+                        key={item.path}
+                        to={item.path}
                         className="flex items-start gap-3 px-4 py-3 hover:bg-secondary transition-colors"
                       >
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
-                          <resource.icon className="h-4 w-4" />
+                          <item.icon className="h-4 w-4" />
                         </div>
                         <div>
-                          <div className="text-sm font-medium text-foreground">{resource.label}</div>
-                          <div className="text-xs text-muted-foreground">{resource.tagline}</div>
+                          <div className="text-sm font-medium text-foreground">{item.label}</div>
+                          <div className="text-xs text-muted-foreground">{item.tagline}</div>
                         </div>
                       </Link>
                     ))}
@@ -247,29 +261,6 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-
-            {/* Customers — standalone link */}
-            <Link
-              to="/customers"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === "/customers" || location.pathname.startsWith("/customers/")
-                  ? isDarkNav ? "text-white" : "text-foreground"
-                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Customers
-            </Link>
-            {/* Contact — standalone link */}
-            <Link
-              to="/contact"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === "/contact"
-                  ? isDarkNav ? "text-white" : "text-foreground"
-                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Contact
-            </Link>
           </div>
 
           <div className="flex items-center gap-3">
@@ -341,29 +332,25 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Mobile Resources Section */}
+              {/* Mobile Resources Link */}
               <div className="px-3 py-2">
-                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Resources</div>
+                <Link to="/resources" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                  <BookOpen className="h-4 w-4 text-primary" />
+                  Resources
+                </Link>
+              </div>
+
+              {/* Mobile Company Section */}
+              <div className="px-3 py-2">
+                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Company</div>
                 <div className="space-y-1">
-                  {resourceLinks.map((resource) => (
-                    <Link key={resource.path} to={resource.path} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
-                      <resource.icon className="h-4 w-4 text-primary" />
-                      {resource.label}
+                  {companyLinks.map((item) => (
+                    <Link key={item.path} to={item.path} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                      <item.icon className="h-4 w-4 text-primary" />
+                      {item.label}
                     </Link>
                   ))}
                 </div>
-              </div>
-
-              {/* Mobile standalone links */}
-              <div className="px-3 py-2 space-y-1">
-                <Link to="/customers" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
-                  <Building2 className="h-4 w-4 text-primary" />
-                  Customer Stories
-                </Link>
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
-                  <Phone className="h-4 w-4 text-primary" />
-                  Contact
-                </Link>
               </div>
 
               <div className="pt-2 px-3">

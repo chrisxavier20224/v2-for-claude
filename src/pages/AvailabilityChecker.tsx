@@ -1,9 +1,41 @@
+import { useEffect, useRef } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 
-const TYPEFORM_URL = "https://form.typeform.com/to/fMzp0OEu";
+const TYPEFORM_SCRIPT = "//embed.typeform.com/next/embed.js";
 
 const AvailabilityChecker = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const loadAndScan = () => {
+      // Force Typeform to re-scan the DOM for data-tf-live elements
+      if ((window as any).tf?.load) {
+        (window as any).tf.load();
+      }
+    };
+
+    const existing = document.querySelector(`script[src="${TYPEFORM_SCRIPT}"]`);
+    if (existing) {
+      // Script already loaded from a previous page — just re-scan
+      loadAndScan();
+    } else {
+      const script = document.createElement("script");
+      script.src = TYPEFORM_SCRIPT;
+      script.async = true;
+      script.onload = loadAndScan;
+      document.body.appendChild(script);
+    }
+
+    return () => {
+      // Clean up the Typeform widget when unmounting so it re-initialises on next mount
+      if (containerRef.current) {
+        const iframes = containerRef.current.querySelectorAll("iframe");
+        iframes.forEach((iframe) => iframe.remove());
+      }
+    };
+  }, []);
+
   return (
     <PageLayout>
       <SEO
@@ -15,13 +47,10 @@ const AvailabilityChecker = () => {
 
       <section className="bg-surface-dark min-h-[80vh] flex items-center -mt-20 pt-20">
         <div className="mx-auto max-w-3xl w-full px-4 sm:px-6 py-16 md:py-24">
-          <iframe
-            src={TYPEFORM_URL}
-            title="Integra Networks Availability Checker"
-            className="w-full border-0 rounded-xl"
-            style={{ height: "650px" }}
-            allow="camera; microphone; autoplay; encrypted-media;"
-            loading="lazy"
+          <div
+            ref={containerRef}
+            data-tf-live="fMzp0OEu"
+            style={{ width: "100%", height: "650px" }}
           />
         </div>
       </section>
