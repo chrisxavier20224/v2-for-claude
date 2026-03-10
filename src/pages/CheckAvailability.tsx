@@ -445,7 +445,7 @@ const CheckAvailability = () => {
             className="w-full h-full object-cover object-top"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-surface-dark" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
         </div>
 
         {/* Decorative gradient orbs */}
@@ -489,14 +489,14 @@ const CheckAvailability = () => {
       </section>
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className="bg-background relative z-10 -mt-12 pt-8">
+      <section className="relative z-10 -mt-16 bg-gradient-to-b from-surface-dark via-surface-dark to-background pt-4">
         <div className="mx-auto max-w-lg px-4 pb-20">
           <AnimatePresence mode="wait">
 
             {/* ═══ STEP 1: About You ═══ */}
             {step === 1 && (
               <motion.div key="step1" {...fadeUp}>
-                <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
+                <div className="rounded-2xl border border-border bg-card p-7 shadow-xl mb-4">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
                       <CheckCircle className="h-5 w-5 text-primary" />
