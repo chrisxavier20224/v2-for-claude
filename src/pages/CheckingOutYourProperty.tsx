@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { MapPin, Video, Upload, Phone, Mail, ArrowRight, ArrowDown, Calendar } from "lucide-react";
+import { MapPin, Video, Upload, Phone, Mail, ArrowRight, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";

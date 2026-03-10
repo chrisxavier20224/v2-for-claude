@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Camera, Eye, Wifi, CircleCheckBig, ArrowLeft, Lock, ArrowRight, Zap, Building2 } from "lucide-react";
+import { Camera, Eye, Wifi, CircleCheckBig, ArrowLeft, Lock, Zap, Building2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

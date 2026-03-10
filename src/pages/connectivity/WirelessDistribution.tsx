@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Radio, Target, Map, Shield, Zap, Users, CheckCircle, Wifi, Network, Monitor } from "lucide-react";
+import { ArrowLeft, ArrowRight, Radio, Target, Map, Shield, Zap, Users, CheckCircle, Wifi, Network } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

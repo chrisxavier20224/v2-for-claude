@@ -212,12 +212,6 @@ export default function ProposalDetail() {
   const monthlyTotal = monthlyCost;
 
   const onSubmit = (data: CustomerFormData) => {
-    console.log("Proposal accepted:", {
-      customer: data,
-      order: orderSummary,
-      totals: { installationCost: subtotal, vat, total, monthlyRecurring: monthlyTotal },
-    });
-
     toast({
       title: "Proposal Accepted",
       description: "Your proposal has been submitted. A Stripe payment link will be sent to your email.",

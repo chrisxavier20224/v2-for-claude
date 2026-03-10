@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, CheckCircle, ArrowRight, HelpCircle, Satellite, Zap, Users, Signal } from "lucide-react";
+import { MapPin, Satellite, Zap, Users, Signal } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

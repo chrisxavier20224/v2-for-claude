@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ScanLine, Eye, Radio, PiggyBank, Smartphone, Building2, Shield, Thermometer, CreditCard, DoorOpen, Camera, Truck, Gauge, Lightbulb, MonitorSmartphone } from "lucide-react";
+import { ScanLine, Eye, Radio, PiggyBank, Building2, Shield, Thermometer, CreditCard, DoorOpen, Camera, Truck, Gauge, Lightbulb, MonitorSmartphone } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

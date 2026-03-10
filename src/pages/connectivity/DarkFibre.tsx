@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Cable, Building2, Zap, Lock, Infinity, ArrowRight } from "lucide-react";
+import { Cable, Building2, Zap, Lock, Infinity } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

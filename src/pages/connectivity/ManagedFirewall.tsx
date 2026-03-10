@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Lock, Eye, AlertTriangle, Fingerprint, Globe, Server, Wifi } from "lucide-react";
+import { Shield, Lock, Eye, AlertTriangle, Fingerprint, Globe, Server } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

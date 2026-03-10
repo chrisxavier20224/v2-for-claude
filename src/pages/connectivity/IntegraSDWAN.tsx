@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, Star, ChevronDown, Radio, Home, Building2, Monitor, Phone, Landmark } from "lucide-react";
+import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, Star, ChevronDown, Home, Landmark, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";

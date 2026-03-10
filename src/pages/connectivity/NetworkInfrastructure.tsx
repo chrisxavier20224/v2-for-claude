@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Cable, Server, Wifi, ClipboardCheck, ArrowRight, Building2, Network, Wrench, Shield, Radio } from "lucide-react";
+import { Cable, Server, Wifi, ClipboardCheck, Building2, Network, Wrench, Shield, Radio } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

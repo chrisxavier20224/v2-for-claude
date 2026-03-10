@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Globe, PiggyBank, Clock, ArrowLeft, ArrowRight, Phone, Wifi, Zap, Shield, AlertTriangle } from "lucide-react";
+import { PiggyBank, Clock, ArrowLeft, ArrowRight, Phone, Wifi, Zap, Shield, AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

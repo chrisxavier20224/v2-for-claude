@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, Brain, Plug, ArrowLeft, ArrowRight, CircleCheckBig, Zap, Smartphone } from "lucide-react";
+import { Wifi, Brain, Plug, ArrowLeft, ArrowRight, CircleCheckBig, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

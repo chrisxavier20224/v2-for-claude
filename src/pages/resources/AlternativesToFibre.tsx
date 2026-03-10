@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wifi, Satellite, Radio, Cable, Zap, HelpCircle, ArrowRight, CheckCircle, XCircle, Signal } from "lucide-react";
+import { Satellite, Radio, Cable, Zap, HelpCircle, ArrowRight, CheckCircle, XCircle, Signal } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

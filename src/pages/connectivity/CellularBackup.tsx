@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Signal, ShieldCheck, Zap, Timer, ArrowRight, Wifi, RefreshCw } from "lucide-react";
+import { Signal, ShieldCheck, Zap, Timer, Wifi, RefreshCw } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Globe, Gauge, Shield, Clock, Server, Wifi } from "lucide-react";
+import { Globe, Gauge, Shield, Clock, Server } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
