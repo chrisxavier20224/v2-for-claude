@@ -442,7 +442,7 @@ const CheckAvailability = () => {
           <img
             src={heroBg}
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-surface-dark" />
