@@ -24,7 +24,7 @@ const useCases = [
     items: [
       "Home office (one person, light video calls, email, browsing, streaming)",
       "Light commercial (small shop, salon, office with minimal video conferencing, no EPOS)",
-      "Content creators (uploading large files occasionally, 50-200Mbps download is great)",
+      "Content creators (uploading large files occasionally, up to 250Mbps download is great)",
       "Remote family homes (holiday rentals, multi-property owners, retreats)",
       "Backup connection (have a primary leased line? Starlink as emergency failover is smart)",
     ],
@@ -169,7 +169,7 @@ const StarlinkForBusiness = () => {
             </h2>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
-                Two years ago, rural businesses had three choices: wait for fibre, use unreliable mobile hotspot, or pay £1,000+ per month for a leased line. Starlink changed that. For £99/month, you get 50-200Mbps from space, installed yourself, available almost everywhere.
+                Two years ago, rural businesses had three choices: wait for fibre, use unreliable mobile hotspot, or pay £1,000+ per month for a leased line. Starlink changed that. For £99/month, you get up to 250Mbps from space, installed yourself, available almost everywhere.
               </p>
               <p>
                 That's genuinely transformative. Starlink is real, it works, and it's legitimate for many use cases. But business-grade connectivity and fast connectivity are different things. This article is honest about both.
@@ -315,7 +315,7 @@ const StarlinkForBusiness = () => {
                 You're not choosing between "Starlink or cellular." You're asking: "Can I use Starlink as the primary and add cellular as failover?"
               </p>
               <p>
-                Starlink gives you base speed (50-200Mbps). Cellular adds: Lower latency (preferred for EPOS, VoIP, conferencing), Failover (if Starlink drops, stay online), Upload boost (Starlink 10-30Mbps up + cellular 40-80Mbps up = smarter routing), Weather resilience (cellular unaffected by rain at tower level).
+                Starlink gives you base speed (up to 250Mbps). Cellular adds: Lower latency (preferred for EPOS, VoIP, conferencing), Failover (if Starlink drops, stay online), Upload boost (Starlink 10-15Mbps up + cellular 40-80Mbps up = smarter routing), Weather resilience (cellular unaffected by rain at tower level).
               </p>
               <p>
                 <strong>Cost:</strong> Starlink £99/month + cellular layer £80/month = £179/month for Starlink SD-WAN.

@@ -62,6 +62,14 @@ const TemporaryBroadbandEvents = lazy(() => import("./pages/blog/TemporaryBroadb
 const PortableWifiConstruction = lazy(() => import("./pages/blog/PortableWifiConstruction"));
 const IoTConnectivityAgriculture = lazy(() => import("./pages/blog/IoTConnectivityAgriculture"));
 const MultiBuildingWifi = lazy(() => import("./pages/blog/MultiBuildingWifi"));
+const BtOpenreachFibreChecker = lazy(() => import("./pages/blog/BtOpenreachFibreChecker"));
+const SatelliteVsIntegraSDWAN = lazy(() => import("./pages/blog/SatelliteVsIntegraSDWAN"));
+const RevolutionisingConnectivityConstruction = lazy(() => import("./pages/blog/RevolutionisingConnectivityConstruction"));
+const BeyondBroadbandBottleneck = lazy(() => import("./pages/blog/BeyondBroadbandBottleneck"));
+const UnlockHighSpeedRural = lazy(() => import("./pages/blog/UnlockHighSpeedRural"));
+const PreparingHouseForSale = lazy(() => import("./pages/blog/PreparingHouseForSale"));
+const DIYInternetSpeedTests = lazy(() => import("./pages/blog/DIYInternetSpeedTests"));
+const WhyIsBTInternetSlow = lazy(() => import("./pages/blog/WhyIsBTInternetSlow"));
 const LocationNorthWest = lazy(() => import("./pages/locations/NorthWest"));
 const LocationEssexHerts = lazy(() => import("./pages/locations/EssexHerts"));
 const LocationSussexSurrey = lazy(() => import("./pages/locations/SussexSurrey"));
@@ -181,6 +189,14 @@ const App = () => (
               <Route path="/blog/portable-wifi-solutions-construction-sites" element={<PortableWifiConstruction />} />
               <Route path="/blog/iot-connectivity-agriculture-uk" element={<IoTConnectivityAgriculture />} />
               <Route path="/blog/multi-building-wifi-rural-properties" element={<MultiBuildingWifi />} />
+              <Route path="/blog/bt-openreach-fibre-checker" element={<BtOpenreachFibreChecker />} />
+              <Route path="/blog/satellite-internet-vs-integra-4g-5g-sdwan" element={<SatelliteVsIntegraSDWAN />} />
+              <Route path="/blog/revolutionising-connectivity-in-construction" element={<RevolutionisingConnectivityConstruction />} />
+              <Route path="/blog/beyond-the-broadband-bottleneck" element={<BeyondBroadbandBottleneck />} />
+              <Route path="/blog/unlock-high-speed-internet-rural-areas" element={<UnlockHighSpeedRural />} />
+              <Route path="/blog/preparing-house-for-sale-internet-speed" element={<PreparingHouseForSale />} />
+              <Route path="/blog/diy-guide-internet-speed-tests" element={<DIYInternetSpeedTests />} />
+              <Route path="/blog/why-is-my-bt-internet-so-slow" element={<WhyIsBTInternetSlow />} />
 
               <Route path="/locations/rural-broadband-north-west" element={<LocationNorthWest />} />
               <Route path="/locations/rural-broadband-essex-hertfordshire" element={<LocationEssexHerts />} />
@@ -261,6 +277,17 @@ const App = () => (
               <Route path="/airbnbs" element={<Navigate to="/sectors/airbnbs" replace />} />
               <Route path="/rural-sme's" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/rural-smes" element={<Navigate to="/sectors/rural-smes" replace />} />
+
+              {/* Blog redirects from old Framer slugs */}
+              <Route path="/blog/bt-openreach-fibre-checker-and-other-handy-online-tools-to-help-you-find-out-what-s-available-at-your-property" element={<Navigate to="/blog/bt-openreach-fibre-checker" replace />} />
+              <Route path="/blog/unraveling-internet-connectivity-satellite-internet-vs-integra-4g-5g-sdwan" element={<Navigate to="/blog/satellite-internet-vs-integra-4g-5g-sdwan" replace />} />
+              <Route path="/blog/revolutionising-connectivity-in-construction-integra-s-swift-and-reliable-sd-wan-solutions" element={<Navigate to="/blog/revolutionising-connectivity-in-construction" replace />} />
+              <Route path="/blog/beyond-the-broadband-bottleneck-unveiling-a-practical-alternative-for-rural-smes" element={<Navigate to="/blog/beyond-the-broadband-bottleneck" replace />} />
+              <Route path="/blog/unlock-the-power-of-high-speed-reliable-internet-in-rural-areas-with-integra-sd-wan" element={<Navigate to="/blog/unlock-high-speed-internet-rural-areas" replace />} />
+              <Route path="/blog/preparing-your-house-for-sale-why-your-property-s-internet-speed-has-never-been-more-important" element={<Navigate to="/blog/preparing-house-for-sale-internet-speed" replace />} />
+              <Route path="/blog/diy-guide-performing-internet-speed-tests-at-your-property" element={<Navigate to="/blog/diy-guide-internet-speed-tests" replace />} />
+              <Route path="/blog/why-is-my-bt-internet-so-slow" element={<Navigate to="/blog/why-is-my-bt-internet-so-slow" replace />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

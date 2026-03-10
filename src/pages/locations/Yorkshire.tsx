@@ -58,7 +58,7 @@ const Yorkshire = () => {
     },
     {
       q: "What speeds can I expect in rural Yorkshire?",
-      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Yorkshire has good network coverage across most rural areas and industrial sites. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your location.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Yorkshire has good network coverage across most rural areas and industrial sites. Starlink adds up to 250Mbps for properties with southern sky visibility. We test actual speeds at your location.",
     },
     {
       q: "Do you support mesh WiFi and site-wide coverage?",
@@ -235,7 +235,7 @@ const Yorkshire = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                No long-term contract. Cancel anytime.
+                12-month agreement. Shorter terms available on request.
               </p>
             </div>
 

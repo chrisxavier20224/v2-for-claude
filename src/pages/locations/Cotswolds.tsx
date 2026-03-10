@@ -50,7 +50,7 @@ const Cotswolds = () => {
     },
     {
       q: "What speeds are typical for Cotswolds properties?",
-      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. The Cotswolds have solid network coverage across most areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. The Cotswolds have solid network coverage across most areas. Starlink adds up to 250Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
     },
     {
       q: "Are there any conservation area constraints I should know about?",
@@ -169,7 +169,7 @@ const Cotswolds = () => {
                   Properties with southern sky visibility can run Starlink (premium speed) with our 4G/5G backup for reliability. Excellent for listed buildings where pole installation is problematic.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  100-150Mbps downloads plus automatic failover to 4G/5G. No visible poles or infrastructure.
+                  up to 250Mbps downloads plus automatic failover to 4G/5G. No visible poles or infrastructure.
                 </p>
               </div>
 
@@ -244,7 +244,7 @@ const Cotswolds = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                No long-term contract. Cancel anytime.
+                12-month agreement. Shorter terms available on request.
               </p>
             </div>
 

@@ -9,7 +9,7 @@ const StarlinkVsFourGBonding = () => (
 
     <h2>Starlink: The Strengths</h2>
 
-    <p><strong>Download speed:</strong> Starlink delivers 100-200Mbps in most rural areas. That's genuinely fast for downloading files, streaming video, browsing.</p>
+    <p><strong>Download speed:</strong> Starlink delivers up to 250Mbps in most rural areas. That's genuinely fast for downloading files, streaming video, browsing.</p>
 
     <p><strong>Simplicity:</strong> You order it, install the dish, it works. No engineer visit necessary (though we recommend one). No monthly contract. Refund if you don't like it.</p>
 
@@ -25,7 +25,7 @@ const StarlinkVsFourGBonding = () => (
 
     <p><strong>No failover:</strong> When Starlink drops, you're offline. No backup connection. Cellular at least uses multiple networks.</p>
 
-    <p><strong>Upload speed:</strong> 5-10Mbps upload is the constraint. Video calls get pixelated. File uploads take forever. CCTV monitoring is single-camera limited.</p>
+    <p><strong>Upload speed:</strong> 10-15Mbps upload is the constraint. Video calls get pixelated. File uploads take forever. CCTV monitoring is single-camera limited.</p>
 
     <p><strong>No SLA:</strong> It's a consumer product. No uptime guarantee. You can't say "my business needs 99.5% uptime" and expect Starlink to commit to it.</p>
 
@@ -37,7 +37,7 @@ const StarlinkVsFourGBonding = () => (
 
     <p><strong>Low latency:</strong> 20-30ms makes VoIP, EPOS, and real-time apps work smoothly.</p>
 
-    <p><strong>Fast upload:</strong> 50-100Mbps upload vs Starlink's 5-10Mbps. Huge difference for video conferencing and file transfers.</p>
+    <p><strong>Fast upload:</strong> 50-100Mbps upload vs Starlink's 10-15Mbps. Huge difference for video conferencing and file transfers.</p>
 
     <p><strong>Weather-proof:</strong> Cellular isn't degraded by rain or snow. Works in storms.</p>
 
@@ -121,7 +121,7 @@ const StarlinkVsFourGBonding = () => (
 
     <p>Upload speed, latency, and uptime are measurable. Download speed varies wildly.</p>
 
-    <p>Before choosing, get a proper site survey. We'll:</p>
+    <p>Before choosing, get a proper desktop survey. We'll:</p>
     <ul>
       <li>Test actual 4G signal strength at your location</li>
       <li>Measure real-world speeds (not theoretical)</li>

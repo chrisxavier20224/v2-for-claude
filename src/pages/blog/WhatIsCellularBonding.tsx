@@ -138,7 +138,7 @@ const WhatIsCellularBonding = () => (
       <li>Is budget my primary concern? (Yes? Skip bonding, use single connection)</li>
     </ul>
 
-    <p>Unsure? Get a site survey. We'll measure actual speeds from each operator at your location and tell you if bonding is worth it.</p>
+    <p>Unsure? Get a desktop survey. We'll measure actual speeds from each operator at your location and tell you if bonding is worth it.</p>
     </BlogArticleLayout>
 );
 

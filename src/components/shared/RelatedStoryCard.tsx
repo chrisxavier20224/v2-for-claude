@@ -145,20 +145,9 @@ const RelatedStoryCard = ({ storyKey }: RelatedStoryCardProps) => {
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-6">
-          {/* Company logo */}
-          {story.logo && (
-            <img
-              src={story.logo}
-              alt=""
-              className="h-8 md:h-10 w-auto object-contain object-left mb-3 brightness-0 invert opacity-80"
-              loading="lazy"
-            />
-          )}
-          {!story.logo && (
-            <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-1">
-              Customer Story
-            </p>
-          )}
+          <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-1">
+            Customer Story
+          </p>
           <h3 className="text-lg md:text-xl font-medium text-white leading-snug mb-1">
             {story.company}
           </h3>

@@ -58,11 +58,11 @@ const NorthWest = () => {
     },
     {
       q: "Can I get speeds over 200Mbps in rural Merseyside?",
-      a: "Yes, in most areas. Bonded 4G/5G across EE and O2 typically delivers 150-300Mbps depending on proximity to cell towers. For properties with Starlink, you'll achieve 100-150Mbps downloads. We test actual speeds at your location before confirming—not theoretical speeds.",
+      a: "Yes, in most areas. Bonded 4G/5G across EE and O2 typically delivers 150-300Mbps depending on proximity to cell towers. For properties with Starlink, you'll achieve up to 250Mbps downloads. We test actual speeds at your location before confirming—not theoretical speeds.",
     },
     {
       q: "Is there a long-term contract?",
-      a: "No. Integra Pro and Starlink SD-WAN are month-to-month. Cancel anytime, no penalties. We earn your business monthly.",
+      a: "Our standard agreement is 12 months. After that, you can cancel with 30 days' notice. Shorter initial terms are available on request.",
     },
   ];
 
@@ -160,7 +160,7 @@ const NorthWest = () => {
                   Starlink for Exposed Locations
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  If you're on high ground with southern sky visibility, Starlink delivers 100-150Mbps. Perfect for Pennine hillside properties or Lake District cottages.
+                  If you're on high ground with southern sky visibility, Starlink delivers up to 250Mbps. Perfect for Pennine hillside properties or Lake District cottages.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
                   We add our 4G/5G backup for reliability—Starlink SD-WAN.

@@ -20,7 +20,7 @@ const StarlinkInstallers = () => (
 
     <h2>Integra Networks: Professional Starlink Installation</h2>
     <p>At Integra Networks, our team of experienced engineers specialises in Starlink installation across the UK. We don't just mount the dish — we design a complete connectivity solution tailored to your property.</p>
-    <p>Our service includes a full site survey, professional dish mounting, network configuration, and integration with existing systems like Wi-Fi networks and SD-WAN.</p>
+    <p>Our service includes a full desktop survey, professional dish mounting, network configuration, and integration with existing systems like Wi-Fi networks and SD-WAN.</p>
 
     <h2>Conclusion</h2>
     <p>Starlink is a game-changer for rural and remote connectivity, but professional installation ensures you get the most out of the service. From optimal dish placement to seamless network integration, expert installers take the complexity out of the process and deliver a reliable, high-performance internet solution.</p>

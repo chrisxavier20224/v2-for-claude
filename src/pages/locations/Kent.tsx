@@ -50,7 +50,7 @@ const Kent = () => {
     },
     {
       q: "What speeds are typical for rural Kent properties?",
-      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to EE and Vodafone towers. Kent has good network coverage across most rural areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to EE and Vodafone towers. Kent has good network coverage across most rural areas. Starlink adds up to 250Mbps for properties with southern sky visibility. We test actual speeds at your property before you commit.",
     },
     {
       q: "My property is near Ashford or Folkestone. How quickly can you reach me?",
@@ -235,7 +235,7 @@ const Kent = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                No long-term contract. Cancel anytime.
+                12-month agreement. Shorter terms available on request.
               </p>
             </div>
 

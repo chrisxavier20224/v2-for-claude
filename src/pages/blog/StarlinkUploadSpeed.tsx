@@ -3,9 +3,9 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 const StarlinkUploadSpeed = () => (
   <BlogArticleLayout slug="starlink-upload-speed-why-it-matters-for-business">
-    <p>Starlink is famous for download speeds — 100-200Mbps in rural areas. That sounds amazing.</p>
+    <p>Starlink is famous for download speeds — up to 250Mbps in rural areas. That sounds amazing.</p>
 
-    <p>But Starlink's upload speed is the elephant in the room: typically just 5-10Mbps.</p>
+    <p>But Starlink's upload speed is the elephant in the room: typically just 10-15Mbps.</p>
 
     <p>For a business, that's a problem.</p>
 
@@ -33,13 +33,13 @@ const StarlinkUploadSpeed = () => (
 
     <h2>Starlink's Upload Speed Reality</h2>
 
-    <p><strong>Official specs:</strong> Starlink advertises 5-20Mbps upload depending on the plan.</p>
+    <p><strong>Official specs:</strong> Starlink advertises 10-20Mbps upload depending on the plan.</p>
 
     <p><strong>Real-world measurements:</strong> Our test data shows:</p>
     <ul>
-      <li>5-10Mbps on most customer installs</li>
-      <li>Occasionally 15Mbps on good days</li>
-      <li>Never 20Mbps unless overselling or ideal conditions</li>
+      <li>10-15Mbps on most customer installs</li>
+      <li>Occasionally 20Mbps on good days</li>
+      <li>Never exceeding 20Mbps unless ideal conditions</li>
     </ul>
 
     <p><strong>Why so low?</strong> Starlink's satellite constellation prioritizes downlink capacity. The dishes use narrow beams for download. Upload uses a different (narrower) beam, so less data fits.</p>
@@ -154,7 +154,7 @@ const StarlinkUploadSpeed = () => (
       <li>Switch to Integra Pro for consistently fast upload (£135/month)</li>
     </ol>
 
-    <p>We'd recommend a site survey before deciding. We'll test actual upload speeds at your location and recommend the product that matches your real needs.</p>
+    <p>We'd recommend a desktop survey before deciding. We'll test actual upload speeds at your location and recommend the product that matches your real needs.</p>
     </BlogArticleLayout>
 );
 

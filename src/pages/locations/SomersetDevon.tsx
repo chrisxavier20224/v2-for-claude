@@ -50,11 +50,11 @@ const SomersetDevon = () => {
     },
     {
       q: "What speeds should I expect in rural Devon or Somerset?",
-      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Devon and Somerset have good network coverage in most rural areas. Starlink adds 100-150Mbps for properties with southern sky visibility. We test actual speeds at your location before confirming—no guesses.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Devon and Somerset have good network coverage in most rural areas. Starlink adds up to 250Mbps for properties with southern sky visibility. We test actual speeds at your location before confirming—no guesses.",
     },
     {
       q: "Is Starlink SD-WAN worth it for Devon or Somerset properties?",
-      a: "Yes, especially if you have southern sky visibility and weather reliability concerns. Starlink SD-WAN combines Starlink's speed (100-150Mbps) with our 4G/5G backup. If Starlink drops in rain, traffic automatically switches to bonded 4G/5G. Ideal for rural hospitality businesses, farms, and remote workers.",
+      a: "Yes, especially if you have southern sky visibility and weather reliability concerns. Starlink SD-WAN combines Starlink's speed (up to 250Mbps) with our 4G/5G backup. If Starlink drops in rain, traffic automatically switches to bonded 4G/5G. Ideal for rural hospitality businesses, farms, and remote workers.",
     },
     {
       q: "How long from survey to installation?",
@@ -166,7 +166,7 @@ const SomersetDevon = () => {
                   Starlink SD-WAN (Speed Plus Backup)
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Your Starlink dish plus our 4G/5G bonding backup. Starlink gives you speed (100-150Mbps). Our 4G/5G backup ensures reliability if weather impacts the satellite link.
+                  Your Starlink dish plus our 4G/5G bonding backup. Starlink gives you speed (up to 250Mbps). Our 4G/5G backup ensures reliability if weather impacts the satellite link.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
                   Perfect for properties with southern sky but weather concerns.
@@ -241,7 +241,7 @@ const SomersetDevon = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                No long-term contract. Cancel anytime.
+                12-month agreement. Shorter terms available on request.
               </p>
             </div>
 

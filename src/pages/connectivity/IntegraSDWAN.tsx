@@ -67,7 +67,7 @@ const features = [
     icon: Upload,
     eyebrow: "Lightning Fast Uploads",
     title: "100Mbps+ Upload Speeds",
-    description: "Upload large CAD files, construction plans, and designs in minutes — not hours. 100Mbps+ upload is significantly faster than Starlink's 10-20Mbps.",
+    description: "Upload large CAD files, construction plans, and designs in minutes — not hours. 100Mbps+ upload is significantly faster than Starlink's 10-15Mbps.",
     img: aerialImg,
     imgAlt: "SD-WAN aerial connectivity infrastructure",
     reverse: true,
@@ -103,7 +103,7 @@ const pricingTiers = [
 const faqs = [
   { q: "Who can benefit from Integra SD-WAN?", a: "Anyone in a location where fibre broadband isn't available or where existing speeds are insufficient. This includes homeworkers, rural businesses, construction sites, holiday lets, and more." },
   { q: "How can I determine the speed you can offer at my property?", a: "Use our free Availability Checker tool or get in touch with our team. We'll assess your location and provide an estimated speed range." },
-  { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a site survey." },
+  { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a desktop survey." },
   { q: "Does Integra offer unlimited data?", a: "Yes, all Integra SD-WAN packages include unlimited data with no usage caps or throttling." },
   { q: "How can Integra ensure consistent card payment terminal performance in rural locations?", a: "Our Integra Pro and Ultrafast tiers include automatic failover, which provides dedicated redundancy specifically for point-of-sale systems and card payment terminals." },
   { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers for £10/month. Essential for CCTV, VPNs, firewalls, and remote access." },

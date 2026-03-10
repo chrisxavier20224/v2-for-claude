@@ -104,11 +104,11 @@ const faqItems = [
   },
   {
     question: "How can I determine the speed you can offer at my property?",
-    answer: "Use our Availability Checker to enter your postcode. We run a coverage analysis across all major UK mobile networks to estimate the speeds achievable at your location. For a more precise estimate, we can arrange a free site survey.",
+    answer: "Use our Availability Checker to enter your postcode. We run a coverage analysis across all major UK mobile networks to estimate the speeds achievable at your location. For a more precise estimate, we can arrange a free desktop survey.",
   },
   {
     question: "Is a property visit necessary for service assessment?",
-    answer: "For most installations, yes — we conduct a free site survey to test signal strength, plan equipment placement, and ensure optimal performance. This typically takes 30-60 minutes and there's no obligation.",
+    answer: "For most installations, yes — we conduct a free desktop survey to assess signal strength and coverage at your location. This is done remotely using our network analysis tools.",
   },
   {
     question: "How does Integra's service function as a temporary connection before fibre?",
@@ -549,6 +549,9 @@ const IntegraSDWan = () => {
                 </h2>
                 <p className="text-white/80 text-lg mb-6 max-w-xl mx-auto">
                   Sign up to any Integra SD-WAN package and receive a free WiFi mesh system to cover your entire property.
+                </p>
+                <p className="text-white/60 text-sm mb-8">
+                  Offer ends 31st March 2026
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90">

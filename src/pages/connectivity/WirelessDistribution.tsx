@@ -434,7 +434,7 @@ const WirelessDistribution = () => {
               Connect your entire site.
             </h2>
             <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
-              Free site survey, no obligation. We'll assess your buildings, recommend the right wireless solution, and provide a quote.
+              Free desktop survey, no obligation. We'll assess your buildings, recommend the right wireless solution, and provide a quote.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">

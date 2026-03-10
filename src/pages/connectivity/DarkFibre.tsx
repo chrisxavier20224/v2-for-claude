@@ -105,7 +105,7 @@ const DarkFibre = () => {
               Dark fibre is the physical fibre optic cable between two points — without any active electronics or bandwidth limitations imposed by us. You choose the transmission equipment, the protocol, and the speed. We handle the civil works, the fibre installation, and the ongoing maintenance of the physical plant.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Every dark fibre deployment starts with a detailed site survey and route design. We'll assess duct availability, wayleave requirements, and any civils work needed. Pricing is bespoke — based on distance, route complexity, and fibre count.
+              Every dark fibre deployment starts with a detailed desktop survey and route design. We'll assess duct availability, wayleave requirements, and any civils work needed. Pricing is bespoke — based on distance, route complexity, and fibre count.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               If you're not sure whether dark fibre is the right option for your requirements, talk to us. We'll give you an honest comparison against leased lines and managed internet so you can make an informed decision.

@@ -50,7 +50,7 @@ const SussexSurrey = () => {
     },
     {
       q: "What speeds can I expect in Sussex or Surrey?",
-      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Properties around Crawley and Guildford have excellent coverage. Starlink adds 100-150Mbps for areas with southern sky visibility. We test actual speeds at your property before you commit—not theoretical numbers.",
+      a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Properties around Crawley and Guildford have excellent coverage. Starlink adds up to 250Mbps for areas with southern sky visibility. We test actual speeds at your property before you commit—not theoretical numbers.",
     },
     {
       q: "How quickly can you install at my Surrey property?",
@@ -163,7 +163,7 @@ const SussexSurrey = () => {
                   Properties with southern sky visibility can run Starlink (premium speed) with our 4G/5G backup for reliability. Excellent for listed buildings where pole installation is problematic.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  100-150Mbps downloads plus automatic failover to 4G/5G if needed.
+                  up to 250Mbps downloads plus automatic failover to 4G/5G if needed.
                 </p>
               </div>
 
@@ -238,7 +238,7 @@ const SussexSurrey = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                No long-term contract. Cancel anytime.
+                12-month agreement. Shorter terms available on request.
               </p>
             </div>
 

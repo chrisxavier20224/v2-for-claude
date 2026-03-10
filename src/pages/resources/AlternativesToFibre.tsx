@@ -22,8 +22,8 @@ const solutions = [
     icon: Satellite,
     name: "Starlink (Satellite)",
     tagline: "Fast speeds, but not built for business",
-    speedDown: "50–200Mbps",
-    speedUp: "10–30Mbps",
+    speedDown: "up to 250Mbps",
+    speedUp: "10–15Mbps",
     latency: "25–60ms",
     monthlyCost: "£99–130",
     installTime: "1–2 days (DIY)",
@@ -246,7 +246,7 @@ const AlternativesToFibre = () => {
               Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses
             </h1>
             <p className="max-w-2xl text-lg text-white/80 mb-8 font-normal">
-              Fibre's years away? Your business can't wait. This guide compares every real alternative available today — with honest assessments of speed, cost, and reliability.
+              Fibre's years away? Your business can't wait. This guide compares every real alternative available today — with honest assessments of speed, cost, and reliability. Simple 12-month agreements with shorter terms on request.
             </p>
             <Button size="lg" asChild>
               <Link to="/availability-checker">Check Your Options</Link>

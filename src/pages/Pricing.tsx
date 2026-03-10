@@ -121,16 +121,16 @@ const whatsIncluded = [
   { icon: Wrench, label: "Dedicated Support", description: "Proactive monitoring and ongoing assistance" },
   { icon: Clock, label: "24/7 Monitoring & Support", description: "Your connection is watched constantly" },
   { icon: Award, label: "Uptime SLA on Every Package", description: "Backed by service credits — up to 99.99% on Enterprise" },
-  { icon: CreditCard, label: "Month-to-Month Terms", description: "No long contracts, cancel anytime" },
+  { icon: CreditCard, label: "12-Month Agreements", description: "Simple 12-month terms — shorter contracts available on request" },
   { icon: TrendingUp, label: "14-Day Money Back Guarantee", description: "If you're not happy, we'll refund you" },
 ];
 
 const faqs = [
   { q: "Are there any hidden fees?", a: "No. The price you see is the price you pay — plus VAT. Installation fee is quoted upfront. Hardware is included. No surprise charges for support or monitoring. If something's extra, we tell you before we install it." },
-  { q: "Do I need to sign a long contract?", a: "No. All our packages are month-to-month. You can cancel anytime with 30 days notice. We're confident in our service, so we don't need you locked in." },
+  { q: "Do I need to sign a long contract?", a: "Our standard agreement is 12 months. In some cases, we can offer shorter terms — just ask. After your initial term, you can cancel with 30 days' notice." },
   { q: "What happens if I'm not happy?", a: "You have 14 days from installation to request a full refund — no questions asked. We also back all services with uptime SLAs. If we drop below the guaranteed uptime, you get a credit on your invoice." },
   { q: "Who owns the hardware?", a: "Integra owns all hardware. This means no leasing fees, and we maintain everything for free. If equipment breaks, we replace it. You're not on the hook for expensive hardware costs." },
-  { q: "What's included in the installation fee?", a: "Everything. Site survey, hardware delivery, installation by our engineer, configuration, and testing. You'll be shown exactly what the fee covers before we begin. After installation, all engineer visits for support and maintenance are included in your monthly service." },
+  { q: "What's included in the installation fee?", a: "Everything. Desktop survey, hardware delivery, installation by our engineer, configuration, and testing. You'll be shown exactly what the fee covers before we begin. After installation, all engineer visits for support and maintenance are included in your monthly service." },
   { q: "Can I upgrade my package later?", a: "Yes, seamlessly. Start with Starlink SD-WAN, then upgrade to Integra Pro, Ultrafast, or Enterprise as your business grows. We handle the migration without service disruption. No penalty for upgrading." },
 ];
 
@@ -151,7 +151,7 @@ const Pricing = () => {
     <PageLayout>
       <SEO
         title="Fibre Alternative Pricing"
-        description="Transparent, fixed pricing for SD-WAN and Starlink business connectivity. No hidden fees, month-to-month terms, 14-day money-back guarantee. Hardware included."
+        description="Transparent, fixed pricing for SD-WAN and Starlink business connectivity. No hidden fees, simple 12-month terms, 14-day money-back guarantee. Hardware included."
         keywords="SD-WAN pricing, Starlink business pricing, fibre alternative pricing, business broadband cost, cellular broadband pricing"
         url="/pricing"
       />
@@ -188,7 +188,7 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl text-white/80 leading-relaxed max-w-2xl"
             >
-              We own all hardware. You own the flexibility. Fixed pricing, month-to-month terms, and a 14-day money-back guarantee.
+              We own all hardware. You own the flexibility. Fixed pricing, simple 12-month terms, and a 14-day money-back guarantee.
             </motion.p>
           </AnimatedSection>
         </div>

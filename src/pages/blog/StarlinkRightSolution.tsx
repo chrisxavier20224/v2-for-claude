@@ -11,7 +11,7 @@ const StarlinkRightSolution = () => (
     <p>For those in hyper-remote locations, Starlink is more than just an option; it's often the only choice. Without the necessary fibre or copper infrastructure, or even mobile cell towers, Starlink brings the possibility of high-speed internet to even the most isolated areas.</p>
 
     <h2>Performance and Limitations</h2>
-    <p>Starlink typically delivers download speeds ranging from 50Mbps to 250Mbps, which is impressive for satellite internet. However, there are some important considerations:</p>
+    <p>Starlink typically delivers download speeds of up to 250Mbps, which is impressive for satellite internet. However, there are some important considerations:</p>
     <ul>
       <li><strong>Variable Performance:</strong> Speeds can fluctuate based on network congestion, weather conditions, and obstructions.</li>
       <li><strong>Latency:</strong> While significantly better than traditional satellite internet, latency is still higher than fibre or 4G connections.</li>

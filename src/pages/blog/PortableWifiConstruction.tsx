@@ -202,7 +202,7 @@ const PortableWifiConstruction = () => (
 
     <p><strong>We handle:</strong></p>
     <ul>
-      <li>Site survey beforehand (cell tower mapping)</li>
+      <li>Desktop survey beforehand (cell tower mapping)</li>
       <li>Equipment delivery and setup</li>
       <li>Signal optimization (antenna placement)</li>
       <li>24/7 support during project</li>

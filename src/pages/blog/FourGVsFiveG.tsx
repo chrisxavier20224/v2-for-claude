@@ -91,7 +91,7 @@ const FourGVsFiveG = () => (
 
     <p>4G is mature and reliable. 5G is faster but less consistent in rural areas. The smart move is to use whichever works best at your specific location — or combine both.</p>
 
-    <p>Before you decide, get a proper site survey. Send us your coordinates from Google Maps, and we'll map your property to nearby towers and tell you exactly what's possible.</p>
+    <p>Before you decide, get a proper desktop survey. Send us your coordinates from Google Maps, and we'll map your property to nearby towers and tell you exactly what's possible.</p>
     </BlogArticleLayout>
 );
 

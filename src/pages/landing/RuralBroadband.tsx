@@ -65,7 +65,7 @@ const RuralBroadband = () => {
     {
       question: "What if I have no mobile signal where I am?",
       answer:
-        "We conduct a full site survey before installation. We test both Starlink and mobile coverage at your location. If there's no viable mobile signal, we may recommend a leased line or alternative solution. We never leave you guessing.",
+        "We conduct a full desktop survey before installation. We test both Starlink and mobile coverage at your location. If there's no viable mobile signal, we may recommend a leased line or alternative solution. We never leave you guessing.",
     },
     {
       question: "Is Starlink reliable enough for running a business?",
@@ -288,7 +288,7 @@ const RuralBroadband = () => {
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <span className="text-3xl font-medium">2</span>
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-3">Site Survey</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Desktop Survey</h3>
               <p className="text-muted-foreground">Our engineer tests signal at your location and designs the best setup.</p>
             </motion.div>
 

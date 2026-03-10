@@ -165,7 +165,7 @@ const SDWanForSmallBusiness = () => {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-6">
                 <h3 className="text-base font-medium text-white mb-3">The Setup</h3>
-                <p className="text-sm text-white/70 leading-relaxed mb-2">Starlink: 100Mbps down, 20Mbps up, 40ms latency — sometimes drops in rain</p>
+                <p className="text-sm text-white/70 leading-relaxed mb-2">Starlink: up to 250Mbps down, 10-15Mbps up, 40ms latency — sometimes drops in rain</p>
                 <p className="text-sm text-white/70 leading-relaxed">4G/5G cellular: 80Mbps down, 50Mbps up, 25ms latency — never drops</p>
               </div>
               <div className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-6">

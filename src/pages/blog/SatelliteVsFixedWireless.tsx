@@ -18,7 +18,7 @@ const SatelliteVsFixedWireless = () => (
       <li><strong>Fast to activate.</strong> No engineer needed to activate. Self-install is possible (though we recommend a professional install for best positioning).</li>
       <li><strong>Works anywhere.</strong> If you have a clear view of the southern sky, satellite reaches you.</li>
       <li><strong>No ground infrastructure needed.</strong> Unlike fixed wireless (which requires towers), satellite just needs sky.</li>
-      <li><strong>Decent download speeds.</strong> Starlink delivers 50-150Mbps in most rural areas. Sufficient for most uses.</li>
+      <li><strong>Decent download speeds.</strong> Starlink delivers up to 250Mbps in most rural areas. Sufficient for most uses.</li>
     </ul>
 
     <h3>Cons of Satellite:</h3>
@@ -47,7 +47,7 @@ const SatelliteVsFixedWireless = () => (
 
     <h3>Cons of Fixed Wireless:</h3>
     <ul>
-      <li><strong>Depends on tower proximity.</strong> If you're 5km from the nearest 4G tower, it might not reach you. A site survey is essential.</li>
+      <li><strong>Depends on tower proximity.</strong> If you're 5km from the nearest 4G tower, it might not reach you. A desktop survey is essential.</li>
       <li><strong>Slightly higher monthly cost.</strong> Integra Pro is £135/month vs Starlink at £90-100/month.</li>
       <li><strong>Requires professional install.</strong> We send an engineer to set up the router and test signal. It takes a day.</li>
       <li><strong>Speed varies by location.</strong> Bonded 4G might give you 150Mbps, or it might give you 80Mbps depending on tower density and signal quality.</li>
@@ -92,8 +92,8 @@ const SatelliteVsFixedWireless = () => (
     <h2>Speed and Latency Comparison</h2>
 
     <div style={{ marginBottom: "20px" }}>
-      <p><strong>Download Speed:</strong> Satellite (Starlink) 50-150Mbps | Fixed Wireless (Integra Pro) 80-350Mbps | Starlink SD-WAN 150Mbps and above (Starlink peak)</p>
-      <p><strong>Upload Speed:</strong> Satellite (Starlink) 5-10Mbps | Fixed Wireless (Integra Pro) 50-100Mbps | Starlink SD-WAN 5-10Mbps (Starlink) / 50Mbps (4G/5G backup)</p>
+      <p><strong>Download Speed:</strong> Satellite (Starlink) up to 250Mbps | Fixed Wireless (Integra Pro) 80-350Mbps | Starlink SD-WAN 150Mbps and above (Starlink peak)</p>
+      <p><strong>Upload Speed:</strong> Satellite (Starlink) 10-15Mbps | Fixed Wireless (Integra Pro) 50-100Mbps | Starlink SD-WAN 10-15Mbps (Starlink) / 50Mbps (4G/5G backup)</p>
       <p><strong>Latency:</strong> Satellite (Starlink) 25-60ms | Fixed Wireless (Integra Pro) 20-30ms | Starlink SD-WAN 20-30ms (via 4G/5G)</p>
       <p><strong>Weather Impact:</strong> Satellite (Starlink) High | Fixed Wireless (Integra Pro) None | Starlink SD-WAN Protected by 4G/5G backup</p>
       <p><strong>SLA Available:</strong> Satellite (Starlink) No | Fixed Wireless (Integra Pro) Yes (99.5% Enterprise) | Starlink SD-WAN Yes (via cellular component)</p>

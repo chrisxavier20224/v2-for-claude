@@ -75,7 +75,7 @@ const BusinessBroadband = () => {
     {
       question: "Is a leased line or SD-WAN better for my office?",
       answer:
-        "Leased lines are best for guaranteed, dedicated capacity (offices, data centres). SD-WAN is best for multi-site resilience and flexibility (multiple offices, remote workers). We'll recommend the right fit during a site survey.",
+        "Leased lines are best for guaranteed, dedicated capacity (offices, data centres). SD-WAN is best for multi-site resilience and flexibility (multiple offices, remote workers). We'll recommend the right fit during a desktop survey.",
     },
     {
       question: "What happens if there's an outage?",
@@ -304,7 +304,7 @@ const BusinessBroadband = () => {
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <span className="text-3xl font-medium">2</span>
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-3">Site Survey</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Desktop Survey</h3>
               <p className="text-muted-foreground">Our engineer visits, tests signal quality, and designs the optimal setup for your office.</p>
             </motion.div>
 
@@ -409,7 +409,7 @@ const BusinessBroadband = () => {
                   Ready for Reliable Business Broadband?
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-                  Get a free site survey and quote. We'll recommend the right solution for your needs — Integra Pro or leased line. No pressure, no jargon.
+                  Get a free desktop survey and quote. We'll recommend the right solution for your needs — Integra Pro or leased line. No pressure, no jargon.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90">

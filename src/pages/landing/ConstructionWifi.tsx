@@ -85,7 +85,7 @@ const ConstructionWifi = () => {
     {
       question: "What happens if I need more capacity mid-project?",
       answer:
-        "Easy. Just call us and we upgrade your SIM bundle or add additional hotspots. No long-term commitment. No penalties. You're paying month-to-month.",
+        "Easy. Just call us and we upgrade your SIM bundle or add additional hotspots. No penalties for changes. Standard 12-month terms, with flexible shorter agreements for construction projects.",
     },
   ];
 
@@ -93,7 +93,7 @@ const ConstructionWifi = () => {
     <PageLayout>
       <SEO
         title="Construction Site WiFi | Temporary Broadband for Sites | Integra Networks"
-        description="Fast WiFi for construction sites in 48 hours. Temporary or permanent. Weather-resistant. Multi-site coverage. No long contracts. Integra Networks."
+        description="Fast WiFi for construction sites in 48 hours. Temporary or permanent. Weather-resistant. Multi-site coverage. Simple 12-month terms. Integra Networks."
         keywords="construction site wifi, site broadband, temporary internet, construction, portable broadband"
         url="/lp/construction-wifi"
       />
@@ -179,9 +179,9 @@ const ConstructionWifi = () => {
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
               <div className="text-5xl md:text-6xl font-medium text-primary mb-2">Flexible</div>
-              <h3 className="text-xl font-medium text-foreground mb-3">No Lock-in</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Flexible Terms</h3>
               <p className="text-muted-foreground">
-                Month-to-month. Pause, resume, or redeploy to other sites anytime.
+                Flexible terms. Pause, resume, or redeploy to other sites as your project evolves.
               </p>
             </motion.div>
           </motion.div>
@@ -280,7 +280,7 @@ const ConstructionWifi = () => {
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <span className="text-3xl font-medium">1</span>
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-3">Site Survey</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Desktop Survey</h3>
               <p className="text-muted-foreground">We visit your site, check coverage, and design the best setup for your layout.</p>
             </motion.div>
 
@@ -391,7 +391,7 @@ const ConstructionWifi = () => {
                   Connect Your Site in 48 Hours
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-                  No waiting for fibre crews. No long contracts. Get reliable WiFi across all your site buildings and stay flexible as your project evolves.
+                  No waiting for fibre crews. Flexible terms. Get reliable WiFi across all your site buildings and stay flexible as your project evolves.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90">

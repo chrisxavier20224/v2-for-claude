@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     q: "How long does installation take?",
-    a: "Typical installation takes 1–2 working days from order. We schedule at your convenience. Installation includes site survey, equipment installation, configuration, testing, and staff training.",
+    a: "Typical installation takes 1–2 working days from order. We schedule at your convenience. Installation includes desktop survey, equipment installation, configuration, testing, and staff training.",
   },
   {
     q: "Can I add more data later?",

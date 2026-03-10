@@ -72,7 +72,7 @@ const London = () => {
     },
     {
       q: "What about site cabins and temporary office locations?",
-      a: "Perfect use case for Integra Pro. Construction site cabins often lack mains broadband. We install external antenna, run cable to your cabin, and you have professional-grade WiFi. No need to wait for BT. Fast deployment, competitive pricing, month-to-month terms.",
+      a: "Perfect use case for Integra Pro. Construction site cabins often lack mains broadband. We install external antenna, run cable to your cabin, and you have professional-grade WiFi. No need to wait for BT. Fast deployment, competitive pricing, flexible terms.",
     },
     {
       q: "Do you support multiple buildings on a construction site?",
@@ -84,7 +84,7 @@ const London = () => {
     },
     {
       q: "How much flexibility do you have for emergency deployment?",
-      a: "High. For urgent London projects, we can prioritize installation within 48 hours. Simply call with your site coordinates and requirements. We understand construction timelines are tight. Flexible month-to-month contracts mean you're not locked in once the project moves.",
+      a: "High. For urgent London projects, we can prioritize installation within 48 hours. Simply call with your site coordinates and requirements. We understand construction timelines are tight. Flexible terms available for construction projects.",
     },
   ];
 
@@ -180,7 +180,7 @@ const London = () => {
                   Bonded 4G/5G cellular connectivity. Excellent coverage across London's urban and semi-urban areas, including major construction zones.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  Deploy in 48-72 hours. 150-280Mbps speeds. No fixed infrastructure needed. Month-to-month terms.
+                  Deploy in 48-72 hours. 150-280Mbps speeds. No fixed infrastructure needed. Flexible terms available.
                 </p>
               </div>
 
@@ -239,7 +239,7 @@ const London = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">4.</span>
                 <span>
-                  <strong>Your site is online.</strong> Month-to-month contract, cancel anytime.
+                  <strong>Your site is online.</strong> Standard 12-month agreement, shorter terms available.
                 </span>
               </li>
             </ol>
@@ -265,7 +265,7 @@ const London = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                Month-to-month contract. Cancel anytime. No long-term commitment.
+                Standard 12-month agreement. Shorter terms available for construction projects.
               </p>
             </div>
 

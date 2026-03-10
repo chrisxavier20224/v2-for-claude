@@ -163,7 +163,7 @@ const EssexHerts = () => {
                   Properties with southern sky visibility can run Starlink + 4G/5G backup. This gives you Starlink's speed plus cellular's reliability.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  100-150Mbps downloads plus automatic failover to 4G/5G.
+                  up to 250Mbps downloads plus automatic failover to 4G/5G.
                 </p>
               </div>
 
@@ -235,7 +235,7 @@ const EssexHerts = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                No long-term contract. Cancel anytime.
+                12-month agreement. Shorter terms available on request.
               </p>
             </div>
 

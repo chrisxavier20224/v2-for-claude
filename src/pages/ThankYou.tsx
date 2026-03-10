@@ -277,7 +277,7 @@ const ThankYou = () => {
                     { icon: Shield, label: "14-Day Money Back", color: "text-green-500" },
                     { icon: Clock, label: "Live in 14 Days", color: "text-primary" },
                     { icon: Zap, label: "Up to 500Mbps", color: "text-yellow-500" },
-                    { icon: CheckCircle, label: "No Long Contracts", color: "text-primary" },
+                    { icon: CheckCircle, label: "Simple 12-Month Terms", color: "text-primary" },
                   ].map((item, i) => (
                     <motion.div
                       key={i}

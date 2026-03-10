@@ -80,7 +80,7 @@ const StarlinkSdwan = () => {
     {
       question: "Can I upgrade to a higher Starlink plan if I need more speed?",
       answer:
-        "Yes. Starlink speeds vary by your dish location (50-220 Mbps typical). If you're in a better coverage area, you can request an upgrade. We'll test your actual speeds and make sure you get the best possible performance.",
+        "Yes. Starlink speeds vary by your dish location (up to 250Mbps typical). If you're in a better coverage area, you can request an upgrade. We'll test your actual speeds and make sure you get the best possible performance.",
     },
     {
       question: "How does pricing compare to traditional leased lines?",

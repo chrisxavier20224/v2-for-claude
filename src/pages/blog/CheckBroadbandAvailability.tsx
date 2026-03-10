@@ -64,7 +64,7 @@ const CheckBroadbandAvailability = () => (
 
     <p>Starlink might say "available" even if fibre is years away. That means you have a backup option.</p>
 
-    <h3>Step 5: The Site Survey (The Critical Step)</h3>
+    <h3>Step 5: The Desktop Survey (The Critical Step)</h3>
 
     <p>This is where most people stop. They don't realize that "coverage checker says available" doesn't mean "it actually works at MY location."</p>
 
@@ -139,7 +139,7 @@ const CheckBroadbandAvailability = () => (
       <li>Find your coordinates on Google Maps</li>
       <li>Note the date when BT says fibre is coming (if ever)</li>
       <li>Email us your coordinates</li>
-      <li>We'll send back a detailed site survey in 24 hours</li>
+      <li>We'll send back a detailed desktop survey in 24 hours</li>
       <li>You'll finally have the truth about what's actually available</li>
     </ol>
     </BlogArticleLayout>

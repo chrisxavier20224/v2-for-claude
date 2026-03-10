@@ -141,7 +141,7 @@ const StarlinkInstallation = () => {
               What Starlink gets right. What it doesn't.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Starlink delivers 50-150Mbps almost anywhere — impressive for rural locations. But heavy rain degrades signal, latency spikes disrupt VoIP calls, and there's no SLA. Our solution: add 4G/5G cellular as automatic failover. When Starlink drops, you switch in 100ms.
+              Starlink delivers up to 250Mbps almost anywhere — impressive for rural locations. But heavy rain degrades signal, latency spikes disrupt VoIP calls, and there's no SLA. Our solution: add 4G/5G cellular as automatic failover. When Starlink drops, you switch in 100ms.
             </p>
           </AnimatedSection>
         </div>
@@ -225,7 +225,7 @@ const StarlinkInstallation = () => {
             <AnimatedSection className="order-1 lg:order-2">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">The simple version.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-6">
-                Your Starlink dish delivers 50-150Mbps. We add a 4G/5G modem on a second network. Our router talks to both and routes traffic to whichever is better. If Starlink drops, it switches to 4G/5G instantly. You get speed from Starlink, reliability from cellular, one connection to your devices.
+                Your Starlink dish delivers up to 250Mbps. We add a 4G/5G modem on a second network. Our router talks to both and routes traffic to whichever is better. If Starlink drops, it switches to 4G/5G instantly. You get speed from Starlink, reliability from cellular, one connection to your devices.
               </p>
               <motion.ul className="space-y-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
                 {sdwanBenefits.map((item) => (
