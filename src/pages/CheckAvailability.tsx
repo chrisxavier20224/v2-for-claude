@@ -321,7 +321,7 @@ const CheckAvailability = () => {
                     ))}
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    Rated <span className="font-semibold text-foreground">4.9/5</span> by hundreds of customers on Reviews.io
+                    Rated <span className="font-semibold text-foreground">4.9/5</span> on Reviews.io
                   </p>
                 </motion.div>
               </motion.div>
