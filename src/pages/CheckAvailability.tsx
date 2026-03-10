@@ -584,10 +584,16 @@ const CheckAvailability = () => {
                       className="flex-1 uppercase"
                       onKeyDown={(e) => e.key === "Enter" && lookupPostcode()}
                     />
-                    <Button onClick={lookupPostcode} disabled={pcLoading} className="px-5">
+                    <Button onClick={lookupPostcode} disabled={pcLoading} className={`px-5 ${postcode.trim().length >= 5 && !pcData ? "animate-pulse" : ""}`}>
                       {pcLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><Search className="h-4 w-4 mr-1" /> Find</>}
                     </Button>
                   </div>
+
+                  {!pcData && !pcLoading && (
+                    <p className="mt-2 text-xs text-muted-foreground flex items-center gap-1">
+                      <ArrowRight className="h-3 w-3" /> Enter your postcode and tap <span className="font-semibold text-primary">Find</span> to load the map
+                    </p>
+                  )}
 
                   {pcData && (
                     <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-4 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
