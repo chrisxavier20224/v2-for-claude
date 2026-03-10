@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 import { trackEvent, identifyUser } from "@/components/shared/Analytics";
+import cellTowersBg from "@/assets/backgrounds/cell-towers-bg.jpg";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -227,17 +228,17 @@ const TrustBar = () => (
   <motion.div
     initial={{ opacity: 0, y: 10 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.3 }}
+    transition={{ delay: 0.4 }}
     className="flex flex-wrap items-center justify-center gap-3 mt-8"
   >
     {[
       { icon: Zap, text: "Up to 500Mbps" },
-      { icon: Clock, text: "Live in 14 days" },
-      { icon: Shield, text: "14-day money back" },
+      { icon: Clock, text: "Live in 14 Days" },
+      { icon: Shield, text: "14-Day Money Back" },
     ].map((item) => (
-      <div key={item.text} className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3.5 py-1.5">
-        <item.icon className="h-3.5 w-3.5 text-primary" />
-        <span className="text-xs font-medium text-white/70">{item.text}</span>
+      <div key={item.text} className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3">
+        <item.icon className="h-4 w-4 text-primary" />
+        <span className="text-sm font-medium text-white">{item.text}</span>
       </div>
     ))}
   </motion.div>
@@ -435,26 +436,50 @@ const CheckAvailability = () => {
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative bg-surface-dark -mt-20 pt-32 pb-20 text-center overflow-hidden">
-        {/* Decorative glow */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-primary/10 blur-[120px]" />
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden -mt-20">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img
+            src={cellTowersBg}
+            alt=""
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-surface-dark" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-xl px-4">
+        {/* Decorative gradient orbs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 h-[500px] w-[500px] rounded-full bg-primary/15 blur-[120px]" />
+          <div className="absolute bottom-1/3 left-1/4 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-[100px]" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-xl w-full px-4 pt-40 pb-24 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-1.5 mb-6"
+            transition={{ type: "spring", stiffness: 200, damping: 20 }}
+            className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 mb-6"
           >
-            <Wifi className="h-3.5 w-3.5 text-primary" />
-            <span className="text-xs font-semibold text-primary uppercase tracking-wider">Free Coverage Check</span>
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Wifi className="h-4 w-4 text-primary" />
+            </motion.div>
+            <span className="text-xs font-semibold text-white uppercase tracking-[0.15em]">Free Coverage Check</span>
           </motion.div>
 
           <AnimatePresence mode="wait">
-            <motion.div key={`hero-${step}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
-              <h1 className="text-heading-1 md:text-display-sm text-white mb-3 leading-tight">{hero.title}</h1>
-              <p className="text-lg text-surface-dark-muted max-w-md mx-auto">{hero.sub}</p>
+            <motion.div
+              key={`hero-${step}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <h1 className="text-display-sm md:text-[3rem] text-white font-medium mb-4 leading-tight">{hero.title}</h1>
+              <p className="text-lg md:text-xl text-white/70 max-w-md mx-auto leading-relaxed">{hero.sub}</p>
             </motion.div>
           </AnimatePresence>
 
@@ -464,7 +489,7 @@ const CheckAvailability = () => {
       </section>
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className="bg-background relative z-10 -mt-8">
+      <section className="bg-background relative z-10 -mt-12">
         <div className="mx-auto max-w-lg px-4 pb-20">
           <AnimatePresence mode="wait">
 
@@ -510,20 +535,25 @@ const CheckAvailability = () => {
                   </form>
                 </div>
 
-                <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} size="lg" className="w-full h-13 text-base font-semibold shadow-lg shadow-primary/30">
                   Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
 
                 {/* Social proof nudge */}
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="mt-5 text-center">
-                  <div className="flex items-center justify-center gap-1.5 mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    Rated <span className="font-semibold text-foreground">4.9/5</span> on Reviews.io
-                  </p>
+                <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mt-5">
+                  <a
+                    href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-muted/50 border border-border px-5 py-2.5 hover:bg-muted/80 transition-all"
+                  >
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <span className="text-sm font-medium text-foreground">4.9/5 on Reviews.io</span>
+                  </a>
                 </motion.div>
               </motion.div>
             )}
@@ -595,7 +625,7 @@ const CheckAvailability = () => {
                   </div>
                 </div>
 
-                <Button onClick={() => goTo(3)} disabled={!step2Valid} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                <Button onClick={() => goTo(3)} disabled={!step2Valid} size="lg" className="w-full h-13 text-base font-semibold shadow-lg shadow-primary/30">
                   Continue to Pin Drop <MapPin className="ml-2 h-4 w-4" />
                 </Button>
                 <Button variant="outline" onClick={() => goTo(1)} className="w-full mt-2 h-11">
@@ -691,7 +721,7 @@ const CheckAvailability = () => {
                       )}
                     </div>
 
-                    <Button onClick={() => goTo(4)} disabled={!coords || submitting} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                    <Button onClick={() => goTo(4)} disabled={!coords || submitting} size="lg" className="w-full h-13 text-base font-semibold shadow-lg shadow-primary/30">
                       {submitting ? (
                         <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</>
                       ) : (
