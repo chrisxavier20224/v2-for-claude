@@ -1,5 +1,4 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import { Signal } from "lucide-react";
 
 
 const StarlinkInstallers = () => (

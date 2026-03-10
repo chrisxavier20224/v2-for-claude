@@ -1,5 +1,4 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import { Satellite } from "lucide-react";
 
 
 const StarlinkVsFourGBonding = () => (

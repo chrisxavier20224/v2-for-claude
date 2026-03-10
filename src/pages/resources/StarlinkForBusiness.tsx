@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     q: "Is Starlink more affordable than fibre if fibre were available?",
-    a: "Starlink (£99/month) vs fibre (£40-80/month) — fibre is cheaper monthly. But fibre install takes 8-12 weeks; Starlink takes 1 day. If you need connectivity now, Starlink is the afffordable bridge.",
+    a: "Starlink (£99/month) vs fibre (£40-80/month) — fibre is cheaper monthly. But fibre install takes 8-12 weeks; Starlink takes 1 day. If you need connectivity now, Starlink is the affordable bridge.",
   },
   {
     q: "Can I use Starlink in a moving vehicle (caravan, boat)?",

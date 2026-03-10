@@ -1,5 +1,4 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import { Radio } from "lucide-react";
 
 
 const ExtendingWifiOutbuildings = () => (
