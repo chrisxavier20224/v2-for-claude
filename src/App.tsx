@@ -262,6 +262,7 @@ const App = () => (
               <Route path="/privacy-policy" element={<Navigate to="/privacy-cookies" replace />} />
               <Route path="/get-in-touch" element={<Navigate to="/contact" replace />} />
               <Route path="/pricing-and-plans" element={<Navigate to="/pricing" replace />} />
+              <Route path="/integra-business" element={<Navigate to="/integra-sd-wan" replace />} />
               <Route path="/next-steps" element={<Navigate to="/checking-out-your-property" replace />} />
               <Route path="/home-wifi" element={<Navigate to="/connectivity/home-wifi" replace />} />
               <Route path="/managed-sim-services" element={<Navigate to="/connectivity/managed-sim-services" replace />} />
