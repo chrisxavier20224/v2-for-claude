@@ -290,6 +290,18 @@ const Navbar = () => {
           <div className="md:hidden pt-4 pb-2 border-t border-border mt-4 max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col space-y-2">
 
+              {/* Availability Checker — top of mobile nav */}
+              <div className="px-3 pb-2">
+                <Link
+                  to="/check"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full rounded-xl bg-primary text-primary-foreground py-3 font-semibold text-sm shadow-md hover:bg-primary/90 transition-colors"
+                >
+                  <Wifi className="h-4 w-4" />
+                  Check Your Availability
+                </Link>
+              </div>
+
               {/* Mobile Services Section */}
               <div className="px-3 py-2">
                 <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Fibre Alternatives</div>
@@ -359,11 +371,8 @@ const Navbar = () => {
                 </Link>
               </div>
 
-              <div className="pt-2 px-3">
-                <Button size="sm" className="w-full" asChild>
-                  <Link to="/check">Check Availability</Link>
-                </Button>
-              </div>
+              {/* Bottom padding so sticky bar doesn't overlap last items */}
+              <div className="h-14" />
             </div>
           </div>
         )}
