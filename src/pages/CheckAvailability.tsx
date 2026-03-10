@@ -464,6 +464,9 @@ const CheckAvailability = () => {
                         <p className="text-sm text-foreground leading-relaxed">
                           <span className="font-semibold text-primary">Tap your building</span> to drop the pin — try to place it right on your roof for the most accurate results.
                         </p>
+                        <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
+                          <span className="font-medium text-amber-600">Important:</span> Your pin location is used to calculate coverage and pricing. Selecting the wrong property may result in an inaccurate proposal, so please double-check before submitting.
+                        </p>
                       </div>
 
                       {coords && (
