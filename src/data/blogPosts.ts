@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
     slug: "bt-openreach-fibre-checker",
     title: "BT Openreach Fibre Checker and Other Handy Online Tools",
     excerpt: "Before searching for alternative ISPs, check what's available at your property. Here's how to use the BT Openreach Fibre Checker and other free tools.",
-    date: "01 Jun 2022",
+    date: "14 Jul 2025",
     image: fibreCheckerImg,
     category: "Guides",
   },
