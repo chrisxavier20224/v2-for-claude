@@ -1,7 +1,10 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowLeft, MapPin, Building2, Laptop, Home, Check, Search, Loader2 } from "lucide-react";
+import {
+  ArrowRight, ArrowLeft, Building2, Laptop, Home, Check, Search, Loader2,
+  Zap, Clock, Shield, Star, Wifi, MapPin, CheckCircle,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
@@ -26,23 +29,29 @@ interface PostcodeData {
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
-const SERVICE_OPTIONS: { value: ServiceType; icon: typeof Building2; title: string; desc: string }[] = [
-  { value: "business", icon: Building2, title: "Business", desc: "High-speed connection for operations, video calls and cloud services" },
-  { value: "home_worker", icon: Laptop, title: "Home Worker", desc: "Reliable internet for working from home and video calls" },
-  { value: "consumer", icon: Home, title: "Consumer", desc: "Everyday broadband for streaming, browsing and staying connected" },
+const SERVICE_OPTIONS: { value: ServiceType; icon: typeof Building2; title: string; desc: string; benefit: string }[] = [
+  { value: "business", icon: Building2, title: "Business", desc: "Operations, VoIP, cloud apps and video calls", benefit: "Up to 500Mbps symmetric" },
+  { value: "home_worker", icon: Laptop, title: "Home Worker", desc: "Rock-solid connection for remote working", benefit: "No more dropped Zoom calls" },
+  { value: "consumer", icon: Home, title: "Consumer", desc: "Streaming, gaming and keeping everyone connected", benefit: "Whole-home coverage" },
 ];
 
 const PAIN_POINTS: { value: PainPoint; label: string }[] = [
-  { value: "slow_connection", label: "My current broadband is too slow" },
-  { value: "intermittent", label: "I experience intermittent or unreliable service" },
-  { value: "no_fibre", label: "I'm moving to a property with no fibre" },
-  { value: "need_faster", label: "I need a faster connection for my business" },
+  { value: "slow_connection", label: "My current broadband is painfully slow" },
+  { value: "intermittent", label: "My connection drops out at the worst times" },
+  { value: "no_fibre", label: "I'm in an area with no fibre availability" },
+  { value: "need_faster", label: "I need faster speeds for my business to grow" },
 ];
 
 const TYPE_LABELS: Record<ServiceType, string> = {
   business: "Business",
   home_worker: "Home Worker",
   consumer: "Consumer",
+};
+
+const HERO_COPY: Record<number, { title: string; sub: string }> = {
+  1: { title: "Let's get you connected", sub: "It takes 60 seconds to check — and could change everything" },
+  2: { title: "Tell us about you", sub: "So we can recommend the perfect solution" },
+  3: { title: "Show us your property", sub: "Drop a pin and we'll check what speeds we can deliver" },
 };
 
 const fadeUp = {
@@ -55,22 +64,16 @@ const fadeUp = {
 /*  Leaflet helpers (loaded from CDN)                                  */
 /* ------------------------------------------------------------------ */
 declare global {
-  interface Window {
-    L: any;
-  }
+  interface Window { L: any; }
 }
 
 function loadLeaflet(): Promise<void> {
   return new Promise((resolve) => {
     if (window.L) { resolve(); return; }
-
-    // CSS
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
     document.head.appendChild(link);
-
-    // JS
     const script = document.createElement("script");
     script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
     script.onload = () => resolve();
@@ -79,19 +82,43 @@ function loadLeaflet(): Promise<void> {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Progress bar                                                       */
+/*  Sub-components                                                     */
 /* ------------------------------------------------------------------ */
 const ProgressBar = ({ step }: { step: number }) => (
-  <div className="flex gap-1.5 max-w-sm mx-auto mt-6">
-    {[1, 2, 3, 4].map((i) => (
-      <div
-        key={i}
-        className={`flex-1 h-1 rounded-full transition-all duration-500 ${
+  <div className="flex gap-1.5 max-w-xs mx-auto mt-6">
+    {[1, 2, 3].map((i) => (
+      <div key={i} className="flex-1 flex flex-col items-center gap-1.5">
+        <div className={`w-full h-1 rounded-full transition-all duration-500 ${
           i === step ? "bg-primary" : i < step ? "bg-primary/40" : "bg-white/10"
-        }`}
-      />
+        }`} />
+        <span className={`text-[10px] font-medium transition-colors ${
+          i === step ? "text-primary" : i < step ? "text-primary/50" : "text-white/20"
+        }`}>
+          {["Details", "About You", "Pin Drop"][i - 1]}
+        </span>
+      </div>
     ))}
   </div>
+);
+
+const TrustBar = () => (
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.3 }}
+    className="flex flex-wrap items-center justify-center gap-3 mt-8"
+  >
+    {[
+      { icon: Zap, text: "Up to 500Mbps" },
+      { icon: Clock, text: "Live in 14 days" },
+      { icon: Shield, text: "14-day money back" },
+    ].map((item) => (
+      <div key={item.text} className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3.5 py-1.5">
+        <item.icon className="h-3.5 w-3.5 text-primary" />
+        <span className="text-xs font-medium text-white/70">{item.text}</span>
+      </div>
+    ))}
+  </motion.div>
 );
 
 /* ------------------------------------------------------------------ */
@@ -101,17 +128,17 @@ const CheckAvailability = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
 
-  // Step 1 — About You
+  // Step 1
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  // Step 2 — Service + Pain Points
+  // Step 2
   const [service, setService] = useState<ServiceType | null>(null);
   const [pains, setPains] = useState<Set<PainPoint>>(new Set());
 
-  // Step 3 — Map
+  // Step 3
   const [postcode, setPostcode] = useState("");
   const [pcData, setPcData] = useState<PostcodeData | null>(null);
   const [pcLoading, setPcLoading] = useState(false);
@@ -120,10 +147,7 @@ const CheckAvailability = () => {
   const mapRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
 
-  // Step 1 validation
   const step1Valid = firstName.trim() && lastName.trim() && email.trim().includes("@") && phone.trim();
-
-  // Step 2 validation
   const step2Valid = !!service;
 
   const togglePain = (p: PainPoint) => {
@@ -134,23 +158,16 @@ const CheckAvailability = () => {
     });
   };
 
-  /* ---- Map initialisation ---- */
+  /* ---- Map ---- */
   const initMap = useCallback(async () => {
     await loadLeaflet();
     const L = window.L;
     if (!mapContainerRef.current || mapRef.current) return;
 
     const m = L.map(mapContainerRef.current, { zoomControl: true, scrollWheelZoom: true }).setView([52.5, -1.5], 6);
-
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-      attribution: "Esri", maxZoom: 20,
-    }).addTo(m);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {
-      maxZoom: 20, opacity: 0.85,
-    }).addTo(m);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}", {
-      maxZoom: 20, opacity: 0.6,
-    }).addTo(m);
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "Esri", maxZoom: 20 }).addTo(m);
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", { maxZoom: 20, opacity: 0.85 }).addTo(m);
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}", { maxZoom: 20, opacity: 0.6 }).addTo(m);
 
     m.on("click", (e: any) => {
       if (markerRef.current) markerRef.current.setLatLng(e.latlng);
@@ -169,7 +186,7 @@ const CheckAvailability = () => {
     setTimeout(() => m.invalidateSize(), 600);
   }, []);
 
-  /* ---- Postcode lookup ---- */
+  /* ---- Postcode ---- */
   const lookupPostcode = async () => {
     const pc = postcode.trim().replace(/\s+/g, "");
     if (!pc) return;
@@ -178,43 +195,28 @@ const CheckAvailability = () => {
       const resp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(pc)}`);
       const data = await resp.json();
       if (data.status === 200 && data.result) {
-        const r = data.result;
-        setPcData(r);
-        // Init map if not yet done
+        setPcData(data.result);
         await initMap();
         setTimeout(() => {
           if (mapRef.current) {
             mapRef.current.invalidateSize();
-            mapRef.current.flyTo([r.latitude, r.longitude], 18, { duration: 1.5 });
+            mapRef.current.flyTo([data.result.latitude, data.result.longitude], 18, { duration: 1.5 });
           }
         }, 400);
-      } else {
-        alert("Postcode not found. Please check and try again.");
-      }
-    } catch {
-      alert("Error looking up postcode. Please try again.");
-    }
+      } else { alert("Postcode not found. Please check and try again."); }
+    } catch { alert("Error looking up postcode. Please try again."); }
     setPcLoading(false);
   };
 
-  /* ---- Step navigation ---- */
+  /* ---- Navigation ---- */
   const goTo = (n: number) => {
     if (n === 4) {
-      // Submit — log payload and redirect to thank you
       const payload = {
-        first_name: firstName,
-        last_name: lastName,
-        email,
-        phone,
-        user_type: service,
-        pain_points: Array.from(pains),
-        country: pcData?.country ?? null,
-        postcode: postcode.toUpperCase(),
-        admin_ward: pcData?.admin_ward ?? null,
-        admin_district: pcData?.admin_district ?? null,
-        region: pcData?.region ?? null,
-        latitude: coords?.lat,
-        longitude: coords?.lng,
+        first_name: firstName, last_name: lastName, email, phone,
+        user_type: service, pain_points: Array.from(pains),
+        country: pcData?.country ?? null, postcode: postcode.toUpperCase(),
+        admin_ward: pcData?.admin_ward ?? null, admin_district: pcData?.admin_district ?? null,
+        region: pcData?.region ?? null, latitude: coords?.lat, longitude: coords?.lng,
         property_coordinates: coords ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}` : null,
       };
       console.log("SUBMISSION PAYLOAD:", JSON.stringify(payload, null, 2));
@@ -226,6 +228,8 @@ const CheckAvailability = () => {
   };
 
   /* ---- Render ---- */
+  const hero = HERO_COPY[step] || HERO_COPY[1];
+
   return (
     <PageLayout>
       <SEO
@@ -235,43 +239,64 @@ const CheckAvailability = () => {
         url="/check"
       />
 
-      {/* ── HERO HEADER ──────────────────────────────────────── */}
-      <section className="bg-surface-dark pt-12 pb-16 text-center -mt-20 pt-32">
-        <div className="mx-auto max-w-xl px-4">
-          <motion.h1
-            key={`title-${step}`}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-heading-1 md:text-display-sm text-white mb-2"
+      {/* ── HERO ─────────────────────────────────────────────── */}
+      <section className="relative bg-surface-dark -mt-20 pt-32 pb-20 text-center overflow-hidden">
+        {/* Decorative glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-primary/10 blur-[120px]" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-xl px-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-1.5 mb-6"
           >
-            Check your availability
-          </motion.h1>
-          <p className="text-lg text-surface-dark-muted">
-            See if we can bring fast, reliable broadband to your property
-          </p>
+            <Wifi className="h-3.5 w-3.5 text-primary" />
+            <span className="text-xs font-semibold text-primary uppercase tracking-wider">Free Coverage Check</span>
+          </motion.div>
+
+          <AnimatePresence mode="wait">
+            <motion.div key={`hero-${step}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
+              <h1 className="text-heading-1 md:text-display-sm text-white mb-3 leading-tight">{hero.title}</h1>
+              <p className="text-lg text-surface-dark-muted max-w-md mx-auto">{hero.sub}</p>
+            </motion.div>
+          </AnimatePresence>
+
           <ProgressBar step={step} />
+          {step === 1 && <TrustBar />}
         </div>
       </section>
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className="bg-background py-0 -mt-6 relative z-10">
-        <div className="mx-auto max-w-lg px-4 pb-16">
+      <section className="bg-background relative z-10 -mt-8">
+        <div className="mx-auto max-w-lg px-4 pb-20">
           <AnimatePresence mode="wait">
+
             {/* ═══ STEP 1: About You ═══ */}
             {step === 1 && (
               <motion.div key="step1" {...fadeUp}>
-                <div className="rounded-2xl border border-border bg-card p-7 shadow-sm mb-4">
-                  <h2 className="text-xl font-semibold text-foreground mb-1">About you</h2>
-                  <p className="text-sm text-muted-foreground mb-6">We just need a few details to get started.</p>
-
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-1.5">First name</label>
-                      <Input value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Sarah" autoComplete="given-name" />
+                <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <CheckCircle className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-1.5">Last name</label>
-                      <Input value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Thompson" autoComplete="family-name" />
+                      <h2 className="text-lg font-semibold text-foreground">Your details</h2>
+                      <p className="text-xs text-muted-foreground">So we can send you your results</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-1.5">First name</label>
+                        <Input value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Sarah" autoComplete="given-name" />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-1.5">Last name</label>
+                        <Input value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Thompson" autoComplete="family-name" />
+                      </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-1.5">Email address</label>
@@ -284,18 +309,37 @@ const CheckAvailability = () => {
                   </div>
                 </div>
 
-                <Button onClick={() => goTo(2)} disabled={!step1Valid} className="w-full h-12 text-base font-medium">
-                  Continue <ArrowRight className="ml-2 h-4 w-4" />
+                <Button onClick={() => goTo(2)} disabled={!step1Valid} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                  Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
+
+                {/* Social proof nudge */}
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="mt-5 text-center">
+                  <div className="flex items-center justify-center gap-1.5 mb-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Rated <span className="font-semibold text-foreground">4.9/5</span> by hundreds of customers on Reviews.io
+                  </p>
+                </motion.div>
               </motion.div>
             )}
 
             {/* ═══ STEP 2: Service Type + Pain Points ═══ */}
             {step === 2 && (
               <motion.div key="step2" {...fadeUp}>
-                <div className="rounded-2xl border border-border bg-card p-7 shadow-sm mb-4">
-                  <h2 className="text-xl font-semibold text-foreground mb-1">What kind of user are you?</h2>
-                  <p className="text-sm text-muted-foreground mb-6">This helps us recommend the right solution for you.</p>
+                <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Building2 className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-semibold text-foreground">What best describes you?</h2>
+                      <p className="text-xs text-muted-foreground">We'll tailor your results to match</p>
+                    </div>
+                  </div>
 
                   <div className="space-y-3">
                     {SERVICE_OPTIONS.map((opt) => (
@@ -304,61 +348,79 @@ const CheckAvailability = () => {
                         onClick={() => setService(opt.value)}
                         className={`w-full flex items-center gap-4 rounded-xl border-2 p-4 text-left transition-all ${
                           service === opt.value
-                            ? "border-primary bg-primary/5"
+                            ? "border-primary bg-primary/5 shadow-sm"
                             : "border-border hover:border-primary/30 hover:bg-muted/30"
                         }`}
                       >
-                        <div className={`h-11 w-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
-                          service === opt.value ? "bg-primary/15" : "bg-muted"
+                        <div className={`h-12 w-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
+                          service === opt.value ? "bg-primary text-white" : "bg-muted"
                         }`}>
-                          <opt.icon className={`h-5 w-5 ${service === opt.value ? "text-primary" : "text-muted-foreground"}`} />
+                          <opt.icon className={`h-5 w-5 ${service === opt.value ? "text-white" : "text-muted-foreground"}`} />
                         </div>
-                        <div>
-                          <p className="text-sm font-semibold text-foreground">{opt.title}</p>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between">
+                            <p className="text-sm font-semibold text-foreground">{opt.title}</p>
+                            {service === opt.value && <Check className="h-4 w-4 text-primary flex-shrink-0" />}
+                          </div>
                           <p className="text-xs text-muted-foreground leading-snug">{opt.desc}</p>
+                          <p className="text-xs font-medium text-primary mt-1">{opt.benefit}</p>
                         </div>
                       </button>
                     ))}
                   </div>
 
-                  <p className="text-sm font-medium text-foreground mt-6 mb-3">Which of these apply to you?</p>
-                  <div className="space-y-2">
-                    {PAIN_POINTS.map((pp) => (
-                      <button
-                        key={pp.value}
-                        onClick={() => togglePain(pp.value)}
-                        className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
-                          pains.has(pp.value)
-                            ? "border-primary bg-primary/5"
-                            : "border-border hover:border-primary/30"
-                        }`}
-                      >
-                        <div className={`h-5 w-5 rounded flex items-center justify-center flex-shrink-0 transition-all ${
-                          pains.has(pp.value) ? "bg-primary" : "border-2 border-border"
-                        }`}>
-                          {pains.has(pp.value) && <Check className="h-3 w-3 text-white" />}
-                        </div>
-                        <span className="text-sm text-foreground">{pp.label}</span>
-                      </button>
-                    ))}
+                  <div className="mt-6 pt-5 border-t border-border">
+                    <p className="text-sm font-medium text-foreground mb-3">Sound familiar? Tick any that apply:</p>
+                    <div className="space-y-2">
+                      {PAIN_POINTS.map((pp) => (
+                        <button
+                          key={pp.value}
+                          onClick={() => togglePain(pp.value)}
+                          className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
+                            pains.has(pp.value)
+                              ? "border-primary bg-primary/5"
+                              : "border-border hover:border-primary/30"
+                          }`}
+                        >
+                          <div className={`h-5 w-5 rounded flex items-center justify-center flex-shrink-0 transition-all ${
+                            pains.has(pp.value) ? "bg-primary" : "border-2 border-border"
+                          }`}>
+                            {pains.has(pp.value) && <Check className="h-3 w-3 text-white" />}
+                          </div>
+                          <span className="text-sm text-foreground">{pp.label}</span>
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <Button onClick={() => goTo(3)} disabled={!step2Valid} className="w-full h-12 text-base font-medium">
-                  Continue <ArrowRight className="ml-2 h-4 w-4" />
+                <Button onClick={() => goTo(3)} disabled={!step2Valid} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                  Continue to Pin Drop <MapPin className="ml-2 h-4 w-4" />
                 </Button>
                 <Button variant="outline" onClick={() => goTo(1)} className="w-full mt-2 h-11">
                   <ArrowLeft className="mr-2 h-4 w-4" /> Back
                 </Button>
+
+                {/* Reassurance */}
+                <p className="text-center text-xs text-muted-foreground mt-4">
+                  No commitment. No credit card. Just a free coverage check.
+                </p>
               </motion.div>
             )}
 
             {/* ═══ STEP 3: Pin Drop Map ═══ */}
             {step === 3 && (
               <motion.div key="step3" {...fadeUp}>
-                <div className="rounded-2xl border border-border bg-card p-7 shadow-sm mb-4">
-                  <h2 className="text-xl font-semibold text-foreground mb-1">Find your property</h2>
-                  <p className="text-sm text-muted-foreground mb-6">Enter your postcode, then tap your property on the satellite map.</p>
+                <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <MapPin className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-semibold text-foreground">Find your property</h2>
+                      <p className="text-xs text-muted-foreground">We'll check coverage for your exact location</p>
+                    </div>
+                  </div>
 
                   <label className="block text-sm font-medium text-foreground mb-1.5">Postcode</label>
                   <div className="flex gap-2">
@@ -376,40 +438,51 @@ const CheckAvailability = () => {
                   </div>
 
                   {pcData && (
-                    <div className="mt-4 rounded-lg bg-primary/5 border border-primary/20 px-4 py-3">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-0.5">Area Found</p>
-                      <p className="text-sm text-foreground">
-                        {[pcData.admin_ward, pcData.admin_district, pcData.region].filter(Boolean).join(", ")} — {pcData.postcode}
-                      </p>
-                    </div>
+                    <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-4 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                        <div>
+                          <p className="text-xs font-semibold text-green-600">Area Found</p>
+                          <p className="text-sm text-foreground">
+                            {[pcData.admin_ward, pcData.admin_district, pcData.region].filter(Boolean).join(", ")}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
                   )}
                 </div>
 
                 {pcData && (
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-                    <div className="rounded-2xl border border-border bg-card p-4 shadow-sm mb-4">
+                    <div className="rounded-2xl border border-border bg-card p-4 shadow-lg mb-4">
                       <div
                         ref={mapContainerRef}
                         className="w-full rounded-xl border border-border overflow-hidden"
                         style={{ height: 380 }}
                       />
-                      <p className="text-center text-sm text-muted-foreground mt-3 leading-relaxed">
-                        <span className="font-medium text-primary">Tap or click directly on your property</span> to drop the pin.<br />
-                        Zoom in for accuracy — try to place the pin on your roof.
-                      </p>
+                      <div className="mt-3 rounded-lg bg-primary/5 border border-primary/20 px-4 py-3 text-center">
+                        <p className="text-sm text-foreground leading-relaxed">
+                          <span className="font-semibold text-primary">Tap your building</span> to drop the pin — try to place it right on your roof for the most accurate results.
+                        </p>
+                      </div>
 
                       {coords && (
-                        <div className="mt-3 rounded-lg bg-primary/5 border border-primary/20 px-4 py-3">
-                          <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-0.5">Pin Location</p>
-                          <p className="text-sm font-mono text-foreground">
-                            {coords.lat.toFixed(6)}, {coords.lng.toFixed(6)}
-                          </p>
-                        </div>
+                        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="mt-3 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
+                          <div className="flex items-center gap-2">
+                            <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                            <div>
+                              <p className="text-xs font-semibold text-green-600">Pin Placed</p>
+                              <p className="text-sm font-mono text-foreground">
+                                {coords.lat.toFixed(6)}, {coords.lng.toFixed(6)}
+                              </p>
+                            </div>
+                          </div>
+                        </motion.div>
                       )}
                     </div>
 
-                    <Button onClick={() => goTo(4)} disabled={!coords} className="w-full h-12 text-base font-medium">
-                      Check my coverage <ArrowRight className="ml-2 h-4 w-4" />
+                    <Button onClick={() => goTo(4)} disabled={!coords} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                      Check My Coverage <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </motion.div>
                 )}
@@ -417,8 +490,22 @@ const CheckAvailability = () => {
                 <Button variant="outline" onClick={() => goTo(2)} className="w-full mt-2 h-11">
                   <ArrowLeft className="mr-2 h-4 w-4" /> Back
                 </Button>
+
+                {/* Final reassurance */}
+                <div className="mt-6 rounded-xl bg-muted/50 border border-border p-4">
+                  <div className="flex items-start gap-3">
+                    <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-medium text-foreground mb-0.5">Your data is safe</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        We only use your location to check network coverage. No spam, no obligation, and we'll never share your details.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             )}
+
           </AnimatePresence>
         </div>
       </section>
