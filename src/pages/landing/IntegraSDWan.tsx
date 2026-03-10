@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Clock, PoundSterling, ShieldCheck, Wifi, Zap, MapPin, Star, Check, Award, ArrowRight } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import { Widget } from "@typeform/embed-react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
@@ -12,8 +13,6 @@ import SEO from "@/components/shared/SEO";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
 import sdwanSpeedsImg from "@/assets/connectivity/sdwan-speeds.jpg";
-
-const TYPEFORM_SCRIPT = "//embed.typeform.com/next/embed.js";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -126,34 +125,6 @@ const faqItems = [
 
 const IntegraSDWan = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const typeformRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadAndScan = () => {
-      if ((window as any).tf?.load) {
-        (window as any).tf.load();
-      }
-    };
-
-    const existing = document.querySelector(`script[src="${TYPEFORM_SCRIPT}"]`);
-    if (existing) {
-      loadAndScan();
-    } else {
-      const script = document.createElement("script");
-      script.src = TYPEFORM_SCRIPT;
-      script.async = true;
-      script.onload = loadAndScan;
-      document.body.appendChild(script);
-    }
-
-    return () => {
-      if (typeformRef.current) {
-        const iframes = typeformRef.current.querySelectorAll("iframe");
-        iframes.forEach((iframe) => iframe.remove());
-      }
-    };
-  }, []);
-
   return (
     <PageLayout>
       <SEO
@@ -475,9 +446,8 @@ const IntegraSDWan = () => {
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4">Check Your Availability</h2>
             <p className="text-lg text-muted-foreground text-center mb-10">Enter your details below and we'll check what speeds we can deliver to your property.</p>
           </AnimatedSection>
-          <div
-            ref={typeformRef}
-            data-tf-live="fMzp0OEu"
+          <Widget
+            id="01J1SF1YN6E4Z30C38N3GZ8G0B"
             style={{ width: "100%", height: "650px" }}
           />
         </div>
