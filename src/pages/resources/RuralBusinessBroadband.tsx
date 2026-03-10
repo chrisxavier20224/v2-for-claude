@@ -141,9 +141,9 @@ const relatedServices = [
     url: "/connectivity/integra-sd-wan",
   },
   {
-    name: "Rural SMEs",
-    description: "Tailored connectivity solutions for rural small businesses.",
-    url: "/sectors/rural-smes",
+    name: "Homeworkers",
+    description: "Fast, reliable internet for remote workers in rural areas.",
+    url: "/sectors/homeworkers",
   },
   {
     name: "4G/5G Backup",
