@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, Star, ChevronDown, Home, Landmark, Phone } from "lucide-react";
+import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, ChevronDown, Home, Landmark, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -83,14 +83,6 @@ const features = [
   },
 ];
 
-const testimonials = [
-  { name: "Jason Jones", date: "4th April 2023", text: "Finally, a solution that works. We live in a rural area without viable fibre options, and too far from the cabinet for useful speeds over copper. After living with Starlink for a year we switched to a bonded 4G/5G solution from Integra. Their installation engineer took great care to identify the best networks and optimise our speeds. We finally have a very stable, reliable and fast connection." },
-  { name: "Lex Butler", date: "14th July 2022", text: "Having lived in the rural country for 12 years, I have always struggled to get any decent internet. Finding Integra was life-changing. They were quick to respond, professional and seamlessly got me up and running in no time. On the day of installation, the team was polite, discreet and hard working. I finally have great internet!" },
-  { name: "Andrew Briggs", date: "2nd March 2022", text: "We have been so impressed by Integra Networks... from initial enquiry, to installation and a year on, backup service, all absolutely faultless. They have enabled us to set up business in a very remote area where the best BT could offer was 0.1mps. Thanks to Integra, we enjoy up to 100mps, and have never once lost signal or service." },
-  { name: "Sonja Wilmink", date: "26th Feb 2023", text: "From having had only 11mbps of internet speed to over 100mbps most days has made a huge difference to our use of the internet. We did not have to wait long for the installation (about 2 weeks) and the work was carried out fast and efficiently. It has been a pleasure dealing with Integra." },
-  { name: "Jonathan Brown", date: "18th Nov 2022", text: "Integra and their solution allowed me to continue working from home in a rural area with no other internet solution. The team were fast to deliver and super responsive whenever I needed help or had a question. Once installed the technology just worked and that's exactly what I needed!" },
-  { name: "Goldwing Farm", date: "8th Jan 2022", text: "Excellent service very fast download/upload speeds. Very reliable internet and always on hand to speak to for troubleshooting. Always had issues with normal wired broadband but since having this installed we've never looked back!" },
-];
 
 const pricingTiers = [
   { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
@@ -282,39 +274,7 @@ const IntegraSDWAN = () => {
         </div>
       ))}
 
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Customer Reviews</p>
-            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Real stories from real customers.
-            </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              We're proud to have helped hundreds of rural families and businesses get online.
-            </p>
-          </AnimatedSection>
-          <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            {testimonials.map((testimonial, i) => (
-              <motion.div key={i} variants={fadeUp} className="rounded-xl bg-white/5 border border-white/10 p-8">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-sm text-surface-dark-muted leading-relaxed mb-4">"{testimonial.text}"</p>
-                <div>
-                  <p className="text-sm font-semibold text-surface-dark-foreground">{testimonial.name}</p>
-                  <p className="text-xs text-surface-dark-muted">{testimonial.date}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
 
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
