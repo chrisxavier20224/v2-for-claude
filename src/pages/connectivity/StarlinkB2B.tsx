@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Satellite, CheckCircle2, Shield, Zap, AlertCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { Satellite, CheckCircle2, Shield, Zap, AlertCircle, ArrowLeft, ArrowRight, Radio } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";

@@ -33,7 +33,7 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const ManagedSimServices = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Managed SIM Services — IoT & M2M Connectivity"
         description="Managed IoT SIMs for lifts, alarms, EPOS, CCTV, sensors, smart meters, fleet tracking, and more. Multinet SIM across all four UK operators. Estate-wide visibility, no upfront costs."
