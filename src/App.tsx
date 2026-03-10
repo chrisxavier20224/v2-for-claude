@@ -249,7 +249,7 @@ const App = () => (
               <Route path="/construction-site-broadband" element={<ConstructionSiteBroadband />} />
               <Route path="/farm-broadband" element={<FarmBroadband />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/availability-checker" element={<AvailabilityChecker />} />
+              <Route path="/availability-checker" element={<Navigate to="/check" replace />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/privacy-cookies" element={<PrivacyAndCookies />} />
               <Route path="/terms" element={<TermsOfService />} />

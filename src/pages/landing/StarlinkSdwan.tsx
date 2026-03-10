@@ -114,7 +114,7 @@ const StarlinkSdwan = () => {
                 <Link to="/contact?source=starlink-sdwan">Activate Starlink SD-WAN</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-medium h-12 px-8 text-base">
-                <Link to="/availability-checker?utm_source=lp&utm_medium=organic&utm_campaign=starlink-sdwan">
+                <Link to="/check?utm_source=lp&utm_medium=organic&utm_campaign=starlink-sdwan">
                   Check Availability
                 </Link>
               </Button>
@@ -411,7 +411,7 @@ const StarlinkSdwan = () => {
                     <Link to="/contact?source=starlink-sdwan">Activate Starlink SD-WAN</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-                    <Link to="/availability-checker?utm_source=lp&utm_medium=organic&utm_campaign=starlink-sdwan">
+                    <Link to="/check?utm_source=lp&utm_medium=organic&utm_campaign=starlink-sdwan">
                       Check Availability
                     </Link>
                   </Button>

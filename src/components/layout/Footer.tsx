@@ -43,7 +43,7 @@ const companyLinks = [
 ];
 
 const resourceLinks = [
-  { label: "Availability Checker", path: "/availability-checker" },
+  { label: "Availability Checker", path: "/check" },
   { label: "Resources", path: "/resources" },
 ];
 

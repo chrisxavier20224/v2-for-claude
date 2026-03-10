@@ -124,19 +124,6 @@ const faqItems = [
 
 const IntegraSDWan = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const typeformRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!typeformRef.current) return;
-    const tfDiv = document.createElement("div");
-    tfDiv.setAttribute("data-tf-live", "01KJF9YCNX5CXVWF335WZJ8QDR");
-    typeformRef.current.appendChild(tfDiv);
-    const script = document.createElement("script");
-    script.src = "//embed.typeform.com/next/embed.js";
-    script.async = true;
-    typeformRef.current.appendChild(script);
-    return () => { if (typeformRef.current) typeformRef.current.innerHTML = ""; };
-  }, []);
 
   return (
     <PageLayout>
@@ -452,14 +439,16 @@ const IntegraSDWan = () => {
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
-      {/* ── TYPEFORM AVAILABILITY CHECKER ─────────────────────────────── */}
+      {/* ── AVAILABILITY CHECKER CTA ─────────────────────────────── */}
       <section id="availability-checker" className="bg-background py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4">Check Your Availability</h2>
-            <p className="text-lg text-muted-foreground text-center mb-10">Enter your details below and we'll check what speeds we can deliver to your property.</p>
+            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">Check Your Availability</h2>
+            <p className="text-lg text-muted-foreground mb-10">Enter your details and we'll check what speeds we can deliver to your property.</p>
+            <Link to="/check" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg">
+              Check My Coverage <ArrowRight className="h-5 w-5" />
+            </Link>
           </AnimatedSection>
-          <div ref={typeformRef} style={{ minHeight: "650px" }} />
         </div>
       </section>
 

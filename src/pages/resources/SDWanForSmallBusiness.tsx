@@ -97,7 +97,7 @@ const SDWanForSmallBusiness = () => {
               SD-WAN stands for "Software-Defined Wide Area Network." Skip the jargon. This guide explains what it actually does, when you need it, and why your business might benefit.
             </p>
             <Button size="lg" asChild>
-              <Link to="/availability-checker">Check Your Options</Link>
+              <Link to="/check">Check Your Options</Link>
             </Button>
           </AnimatedSection>
         </div>
@@ -479,7 +479,7 @@ const SDWanForSmallBusiness = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/availability-checker">Assess Your Needs</Link>
+                <Link to="/check">Assess Your Needs</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Talk to Our Team</Link>

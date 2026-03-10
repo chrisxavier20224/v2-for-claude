@@ -114,7 +114,7 @@ const RuralBroadband = () => {
                 <Link to="/contact?source=rural-broadband">Get Rural Coverage Quote</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-medium h-12 px-8 text-base">
-                <Link to="/availability-checker?utm_source=lp&utm_medium=organic&utm_campaign=rural-broadband">
+                <Link to="/check?utm_source=lp&utm_medium=organic&utm_campaign=rural-broadband">
                   Check Rural Coverage
                 </Link>
               </Button>
@@ -398,7 +398,7 @@ const RuralBroadband = () => {
                     <Link to="/contact?source=rural-broadband">Get Rural Coverage Quote</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-                    <Link to="/availability-checker?utm_source=lp&utm_medium=organic&utm_campaign=rural-broadband">
+                    <Link to="/check?utm_source=lp&utm_medium=organic&utm_campaign=rural-broadband">
                       Check Coverage
                     </Link>
                   </Button>

@@ -373,7 +373,7 @@ const StarlinkB2B = () => {
                 <Link to="/contact">Get in Touch</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/availability-checker">Check Availability</Link>
+                <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
                 <Link to="/pricing">See All Pricing</Link>

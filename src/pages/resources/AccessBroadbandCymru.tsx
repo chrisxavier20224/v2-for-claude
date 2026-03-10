@@ -145,7 +145,7 @@ const AccessBroadbandCymru = () => {
                 <Link to="/contact">Apply Now</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
-                <Link to="/availability-checker">Check Availability</Link>
+                <Link to="/check">Check Availability</Link>
               </Button>
             </div>
           </AnimatedSection>
@@ -277,7 +277,7 @@ const AccessBroadbandCymru = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/availability-checker">Check Availability</Link>
+                <Link to="/check">Check Availability</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                 <Link to="/contact">Get In Touch</Link>

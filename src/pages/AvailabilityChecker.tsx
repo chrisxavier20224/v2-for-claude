@@ -32,7 +32,7 @@ const AvailabilityChecker = () => {
         title="Check Availability — Integra Networks"
         description="Use our availability checker to see if Integra are installing in your area and if our service is right for you."
         keywords="availability checker, coverage, Integra Networks, SD-WAN, connectivity"
-        url="/availability-checker"
+        url="/check"
       />
 
       <section className="bg-surface-dark min-h-[80vh] flex items-center -mt-20 pt-20">

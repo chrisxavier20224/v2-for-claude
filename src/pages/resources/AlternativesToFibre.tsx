@@ -249,7 +249,7 @@ const AlternativesToFibre = () => {
               Fibre's years away? Your business can't wait. This guide compares every real alternative available today — with honest assessments of speed, cost, and reliability. Simple 12-month agreements with shorter terms on request.
             </p>
             <Button size="lg" asChild>
-              <Link to="/availability-checker">Check Your Options</Link>
+              <Link to="/check">Check Your Options</Link>
             </Button>
           </AnimatedSection>
         </div>
@@ -548,7 +548,7 @@ const AlternativesToFibre = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/availability-checker">Check Your Availability</Link>
+                <Link to="/check">Check Your Availability</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Talk to Our Team</Link>

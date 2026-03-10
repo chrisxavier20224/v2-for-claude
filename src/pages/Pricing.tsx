@@ -27,7 +27,7 @@ const mainProducts = [
       "Engineer support included",
     ],
     cta: "Check Availability",
-    ctaLink: "/availability-checker",
+    ctaLink: "/check",
     popular: false,
     tier: "starter",
     note: null,
@@ -45,7 +45,7 @@ const mainProducts = [
       "Static IP available (£10/mo)",
     ],
     cta: "Check Availability",
-    ctaLink: "/availability-checker",
+    ctaLink: "/check",
     popular: true,
     tier: "popular",
     note: "Already have Starlink? Add it to your Pro setup for triple-connection resilience — same price, more redundancy.",
@@ -63,7 +63,7 @@ const mainProducts = [
       "Static IP available (£10/mo)",
     ],
     cta: "Check Availability",
-    ctaLink: "/availability-checker",
+    ctaLink: "/check",
     popular: false,
     tier: "mid",
     note: null,
@@ -444,7 +444,7 @@ const Pricing = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
-                <Link to="/availability-checker">Check Availability</Link>
+                <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
                 <Link to="/contact">Request a Quote</Link>

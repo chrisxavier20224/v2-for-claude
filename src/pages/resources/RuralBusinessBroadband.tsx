@@ -180,7 +180,7 @@ const RuralBusinessBroadband = () => {
               BT's fibre timeline keeps slipping. Your business can't wait. This guide shows rural SMEs how to get business-grade broadband today — with honest speed comparisons, real case studies, and a decision framework that actually works.
             </p>
             <Button size="lg" asChild>
-              <Link to="/availability-checker">Check Your Options</Link>
+              <Link to="/check">Check Your Options</Link>
             </Button>
           </AnimatedSection>
         </div>
@@ -461,7 +461,7 @@ const RuralBusinessBroadband = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/availability-checker">Check Your Availability</Link>
+                <Link to="/check">Check Your Availability</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Talk to Our Team</Link>

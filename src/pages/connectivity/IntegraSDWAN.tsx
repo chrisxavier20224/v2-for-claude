@@ -212,7 +212,7 @@ const IntegraSDWAN = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                  <Link to="/availability-checker">Check Availability <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link to="/check">Check Availability <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -318,7 +318,7 @@ const IntegraSDWAN = () => {
                   ))}
                 </div>
                 <Button asChild size="sm" variant={tier.popular ? "default" : "outline"} className={tier.popular ? "" : "border-border text-foreground hover:bg-white/5"}>
-                  <Link to="/availability-checker">Check Availability</Link>
+                  <Link to="/check">Check Availability</Link>
                 </Button>
               </motion.div>
             ))}

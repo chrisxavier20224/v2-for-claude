@@ -167,7 +167,7 @@ const Index = () => {
               </p>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
-                  <Link to="/availability-checker">Check Your Availability</Link>
+                  <Link to="/check">Check Your Availability</Link>
                 </Button>
               </motion.div>
             </AnimatedSection>

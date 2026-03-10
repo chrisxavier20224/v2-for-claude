@@ -151,7 +151,7 @@ const StarlinkForBusiness = () => {
               Starlink is fast and available. But business-grade connectivity and fast connectivity are different things. This guide is honest about both.
             </p>
             <Button size="lg" asChild>
-              <Link to="/availability-checker">Check Your Options</Link>
+              <Link to="/check">Check Your Options</Link>
             </Button>
           </AnimatedSection>
         </div>
@@ -444,7 +444,7 @@ const StarlinkForBusiness = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/availability-checker">Check Your Options</Link>
+                <Link to="/check">Check Your Options</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Talk to Our Team</Link>

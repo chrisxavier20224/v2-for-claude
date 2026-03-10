@@ -271,7 +271,7 @@ const Navbar = () => {
               className="hidden sm:inline-flex"
               asChild
             >
-              <Link to="/availability-checker">Availability Checker</Link>
+              <Link to="/check">Availability Checker</Link>
             </Button>
             
             {/* Mobile menu button */}
@@ -361,7 +361,7 @@ const Navbar = () => {
 
               <div className="pt-2 px-3">
                 <Button size="sm" className="w-full" asChild>
-                  <Link to="/availability-checker">Check Availability</Link>
+                  <Link to="/check">Check Availability</Link>
                 </Button>
               </div>
             </div>

@@ -220,7 +220,7 @@ const FarmBroadband = () => {
               Modern farms are precision-technology operations. This guide shows how to get reliable broadband that serves the farmhouse, outbuildings, livestock monitoring, and business operations.
             </p>
             <Button size="lg" asChild>
-              <Link to="/availability-checker">Check Your Farm's Options</Link>
+              <Link to="/check">Check Your Farm's Options</Link>
             </Button>
           </AnimatedSection>
         </div>
@@ -595,7 +595,7 @@ const FarmBroadband = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/availability-checker">Plan Your Farm Broadband</Link>
+                <Link to="/check">Plan Your Farm Broadband</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Talk to Our Team</Link>

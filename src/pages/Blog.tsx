@@ -158,7 +158,7 @@ const Blog = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Link
-                  to="/availability-checker"
+                  to="/check"
                   className="inline-flex items-center justify-center bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base rounded-md transition-colors"
                 >
                   Check Availability

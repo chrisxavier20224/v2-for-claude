@@ -145,7 +145,7 @@ const ConstructionSiteBroadband = () => {
               Construction sites need connectivity that deploys in days, works reliably, and moves with your operation. This guide compares solutions and shows the McGee Construction case study.
             </p>
             <Button size="lg" asChild>
-              <Link to="/availability-checker">Check Your Site's Options</Link>
+              <Link to="/check">Check Your Site's Options</Link>
             </Button>
           </AnimatedSection>
         </div>
@@ -445,7 +445,7 @@ const ConstructionSiteBroadband = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/availability-checker">Plan Your Site Broadband</Link>
+                <Link to="/check">Plan Your Site Broadband</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Talk to Our Team</Link>

@@ -320,7 +320,7 @@ const CCTV = () => {
                 <Link to="/contact">Request a Survey</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/availability-checker">Check Coverage</Link>
+                <Link to="/check">Check Coverage</Link>
               </Button>
             </div>
           </AnimatedSection>
