@@ -9,12 +9,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
+import { supabase } from "@/integrations/supabase/client";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
 /* ------------------------------------------------------------------ */
 type ServiceType = "business" | "home_worker" | "consumer";
-type PainPoint = "slow_connection" | "intermittent" | "no_fibre" | "need_faster";
+type PainPoint = "slow_connection" | "intermittent" | "no_fibre" | "need_faster" | "quoted_thousands" | "moving";
 
 interface PostcodeData {
   latitude: number;
@@ -40,6 +41,8 @@ const PAIN_POINTS: { value: PainPoint; label: string }[] = [
   { value: "intermittent", label: "My connection drops out at the worst times" },
   { value: "no_fibre", label: "I'm in an area with no fibre availability" },
   { value: "need_faster", label: "I need faster speeds for my business to grow" },
+  { value: "quoted_thousands", label: "I've been quoted thousands for a fibre install" },
+  { value: "moving", label: "I'm moving to a new location and need connectivity" },
 ];
 
 const TYPE_LABELS: Record<ServiceType, string> = {
@@ -143,6 +146,7 @@ const CheckAvailability = () => {
   const [pcData, setPcData] = useState<PostcodeData | null>(null);
   const [pcLoading, setPcLoading] = useState(false);
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
+  const [submitting, setSubmitting] = useState(false);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
@@ -208,18 +212,46 @@ const CheckAvailability = () => {
     setPcLoading(false);
   };
 
-  /* ---- Navigation ---- */
-  const goTo = (n: number) => {
+  /* ---- Navigation & submission ---- */
+  const goTo = async (n: number) => {
     if (n === 4) {
       const payload = {
-        first_name: firstName, last_name: lastName, email, phone,
-        user_type: service, pain_points: Array.from(pains),
-        country: pcData?.country ?? null, postcode: postcode.toUpperCase(),
-        admin_ward: pcData?.admin_ward ?? null, admin_district: pcData?.admin_district ?? null,
-        region: pcData?.region ?? null, latitude: coords?.lat, longitude: coords?.lng,
-        property_coordinates: coords ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}` : null,
+        first_name: firstName,
+        last_name: lastName,
+        email,
+        phone,
+        user_type: service,
+        pain_points: Array.from(pains),
+        country: pcData?.country ?? null,
+        postcode: postcode.toUpperCase(),
+        admin_ward: pcData?.admin_ward ?? null,
+        admin_district: pcData?.admin_district ?? null,
+        region: pcData?.region ?? null,
+        latitude: coords?.lat,
+        longitude: coords?.lng,
+        property_coordinates: coords
+          ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`
+          : null,
       };
-      console.log("SUBMISSION PAYLOAD:", JSON.stringify(payload, null, 2));
+
+      setSubmitting(true);
+      try {
+        const { data, error } = await supabase.functions.invoke(
+          "submit-availability",
+          { body: payload },
+        );
+
+        if (error) {
+          console.error("Submission error:", error);
+          // Navigate to thank you even if HubSpot fails — the lead isn't lost,
+          // Supabase logs the request for manual recovery.
+        } else {
+          console.log("HubSpot submission successful:", data);
+        }
+      } catch (err) {
+        console.error("Network error submitting:", err);
+      }
+
       navigate("/thankyou");
       return;
     }
@@ -287,26 +319,28 @@ const CheckAvailability = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-4">
+                  <form autoComplete="on" onSubmit={(e) => { e.preventDefault(); if (step1Valid) goTo(2); }} className="space-y-4">
                     <div className="grid grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-1.5">First name</label>
-                        <Input value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Sarah" autoComplete="given-name" />
+                        <label htmlFor="fname" className="block text-sm font-medium text-foreground mb-1.5">First name</label>
+                        <Input id="fname" name="given-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Sarah" autoComplete="given-name" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-1.5">Last name</label>
-                        <Input value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Thompson" autoComplete="family-name" />
+                        <label htmlFor="lname" className="block text-sm font-medium text-foreground mb-1.5">Last name</label>
+                        <Input id="lname" name="family-name" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Thompson" autoComplete="family-name" />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-1.5">Email address</label>
-                      <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="sarah@example.com" autoComplete="email" />
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email address</label>
+                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="sarah@example.com" autoComplete="email" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-1.5">Phone number</label>
-                      <Input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="07700 900 000" autoComplete="tel" />
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Phone number</label>
+                      <Input id="phone" name="tel" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="07700 900 000" autoComplete="tel" />
                     </div>
-                  </div>
+                    {/* Hidden submit button allows Enter key and helps autocomplete */}
+                    <button type="submit" className="hidden" />
+                  </form>
                 </div>
 
                 <Button onClick={() => goTo(2)} disabled={!step1Valid} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
@@ -484,8 +518,12 @@ const CheckAvailability = () => {
                       )}
                     </div>
 
-                    <Button onClick={() => goTo(4)} disabled={!coords} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
-                      Check My Coverage <ArrowRight className="ml-2 h-4 w-4" />
+                    <Button onClick={() => goTo(4)} disabled={!coords || submitting} className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20">
+                      {submitting ? (
+                        <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</>
+                      ) : (
+                        <>Check My Coverage <ArrowRight className="ml-2 h-4 w-4" /></>
+                      )}
                     </Button>
                   </motion.div>
                 )}
