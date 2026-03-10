@@ -7,6 +7,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import instagramImg from "@/assets/thankyou-instagram.avif";
 
 const MEETING_SCRIPT = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
 
@@ -82,28 +83,21 @@ const ThankYou = () => {
               </Button>
             </AnimatedSection>
 
-            {/* Right: Instagram visual */}
+            {/* Right: Instagram image from old site */}
             <AnimatedSection>
-              <div className="relative">
-                {/* Instagram-styled card */}
-                <div className="rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-purple-600/20 via-pink-500/20 to-orange-400/20 p-8 md:p-10 text-center">
-                  <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 mb-6">
-                    <Instagram className="h-10 w-10 text-white" />
-                  </div>
-                  <p className="text-3xl md:text-4xl font-bold text-white mb-3">
-                    TAG US!
-                  </p>
-                  <p className="text-lg font-medium text-white/90 mb-2">
-                    @integra_networks
-                  </p>
-                  <p className="text-xl font-bold text-primary mt-4">
-                    #TIREDOFWAITINGFORFIBRE
-                  </p>
-                  <p className="text-sm text-white/60 mt-4">
-                    Follow us on Insta
-                  </p>
-                </div>
-              </div>
+              <a
+                href="https://www.instagram.com/integra_networks/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <img
+                  src={instagramImg}
+                  alt="Follow Integra Networks on Instagram — @integra_networks #TIREDOFWAITINGFORFIBRE"
+                  className="w-full h-auto rounded-2xl group-hover:scale-[1.02] transition-transform duration-300"
+                  loading="eager"
+                />
+              </a>
             </AnimatedSection>
           </div>
         </div>
