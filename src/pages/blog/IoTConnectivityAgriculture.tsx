@@ -148,9 +148,9 @@ const IoTConnectivityAgriculture = () => (
 
     <p><strong>Use case:</strong> Farms with multiple buildings or remote areas needing connectivity.</p>
 
-    <h2>Real Example: Royle Farm (Herefordshire)</h2>
+    <h2>Real Example: Hillcrest Farm (Herefordshire)</h2>
 
-    <p>Royle Farm runs a beef operation across 200 acres. They needed:</p>
+    <p>Hillcrest Farm runs a beef operation across 200 acres. They needed:</p>
     <ul>
       <li>Livestock GPS tracking (animals across the property)</li>
       <li>Water tank monitoring (borehole 2km away)</li>
