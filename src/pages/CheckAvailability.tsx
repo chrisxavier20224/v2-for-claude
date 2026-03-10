@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
-import { supabase } from "@/integrations/supabase/client";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -56,6 +55,109 @@ const HERO_COPY: Record<number, { title: string; sub: string }> = {
   2: { title: "Tell us about you", sub: "So we can recommend the perfect solution" },
   3: { title: "Show us your property", sub: "Drop a pin and we'll check what speeds we can deliver" },
 };
+
+/* ------------------------------------------------------------------ */
+/*  HubSpot Forms API                                                  */
+/* ------------------------------------------------------------------ */
+const HUBSPOT_PORTAL_ID = "20314482";
+const HUBSPOT_FORM_GUID = "REPLACE_WITH_FORM_GUID"; // Created in HubSpot Marketing → Forms
+
+const USER_TYPE_HS: Record<string, string> = {
+  business: "Business",
+  home_worker: "Home Worker",
+  consumer: "Consumer",
+};
+
+const PAIN_LABEL_HS: Record<string, string> = {
+  slow_connection: "Slow broadband",
+  intermittent: "Connection drops out",
+  no_fibre: "No fibre availability",
+  need_faster: "Needs faster speeds",
+  quoted_thousands: "Quoted thousands for fibre",
+  moving: "Moving to new location",
+};
+
+async function submitToHubSpot(payload: {
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone: string;
+  user_type: string | null;
+  pain_points: string[];
+  country: string | null;
+  postcode: string;
+  admin_ward: string | null;
+  admin_district: string | null;
+  region: string | null;
+  property_coordinates: string | null;
+}): Promise<boolean> {
+  const fields: { objectTypeId: string; name: string; value: string }[] = [
+    { objectTypeId: "0-1", name: "firstname", value: payload.first_name },
+    { objectTypeId: "0-1", name: "lastname", value: payload.last_name },
+    { objectTypeId: "0-1", name: "email", value: payload.email },
+    { objectTypeId: "0-1", name: "phone", value: payload.phone },
+    { objectTypeId: "0-1", name: "zip", value: payload.postcode },
+  ];
+
+  if (payload.user_type) {
+    fields.push({
+      objectTypeId: "0-1",
+      name: "what_kind_of_business_are_you_",
+      value: USER_TYPE_HS[payload.user_type] || payload.user_type,
+    });
+  }
+
+  if (payload.property_coordinates) {
+    fields.push({ objectTypeId: "0-1", name: "property_coordinates", value: payload.property_coordinates });
+  }
+
+  if (payload.country) {
+    const countryMap: Record<string, string> = {
+      England: "England", Scotland: "Scotland", Wales: "Wales", "Northern Ireland": "Northern Ireland",
+    };
+    if (countryMap[payload.country]) {
+      fields.push({ objectTypeId: "0-1", name: "uk_geo_location", value: countryMap[payload.country] });
+    }
+  }
+
+  if (payload.admin_district) {
+    fields.push({ objectTypeId: "0-1", name: "city", value: payload.admin_district });
+  }
+  if (payload.region) {
+    fields.push({ objectTypeId: "0-1", name: "state", value: payload.region });
+  }
+
+  // Pain points as a semicolon-separated string
+  if (payload.pain_points.length > 0) {
+    const painText = payload.pain_points.map((p) => PAIN_LABEL_HS[p] || p).join("; ");
+    fields.push({ objectTypeId: "0-1", name: "message", value: painText });
+  }
+
+  try {
+    const resp = await fetch(
+      `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fields,
+          context: {
+            pageUri: window.location.href,
+            pageName: "Availability Checker",
+          },
+        }),
+      },
+    );
+    if (!resp.ok) {
+      const err = await resp.text();
+      console.error("HubSpot form submission error:", err);
+    }
+    return resp.ok;
+  } catch (err) {
+    console.error("HubSpot network error:", err);
+    return false;
+  }
+}
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
@@ -236,20 +338,9 @@ const CheckAvailability = () => {
 
       setSubmitting(true);
       try {
-        const { data, error } = await supabase.functions.invoke(
-          "submit-availability",
-          { body: payload },
-        );
-
-        if (error) {
-          console.error("Submission error:", error);
-          // Navigate to thank you even if HubSpot fails — the lead isn't lost,
-          // Supabase logs the request for manual recovery.
-        } else {
-          console.log("HubSpot submission successful:", data);
-        }
+        await submitToHubSpot(payload);
       } catch (err) {
-        console.error("Network error submitting:", err);
+        console.error("Submission error:", err);
       }
 
       navigate("/thankyou");
