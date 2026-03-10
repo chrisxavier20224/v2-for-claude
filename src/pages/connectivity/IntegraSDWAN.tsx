@@ -96,10 +96,10 @@ const faqs = [
   { q: "Who can benefit from Integra SD-WAN?", a: "Anyone in a location where fibre broadband isn't available or where existing speeds are insufficient. This includes homeworkers, rural businesses, construction sites, holiday lets, and more." },
   { q: "How can I determine the speed you can offer at my property?", a: "Use our free Availability Checker tool or get in touch with our team. We'll assess your location and provide an estimated speed range." },
   { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a desktop survey." },
-  { q: "Does Integra offer unlimited data?", a: "Yes, all Integra SD-WAN packages include unlimited data with no usage caps or throttling." },
+  { q: "How much data do I get?", a: "With multi-network connections, you're looking at around 1.8TB of data per month — more than enough for a busy household with kids streaming and gaming, or a business running video calls and cloud apps all day. There's a fair usage policy, but in practice the vast majority of customers never come close to hitting it." },
   { q: "How can Integra ensure consistent card payment terminal performance in rural locations?", a: "Our Integra Pro and Ultrafast tiers include automatic failover, which provides dedicated redundancy specifically for point-of-sale systems and card payment terminals." },
   { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers for £10/month. Essential for CCTV, VPNs, firewalls, and remote access." },
-  { q: "Will Integra's service cover my entire property, even if the walls are thick?", a: "Yes. We include WiFi mesh systems and can design custom wireless networks to ensure full coverage across your property." },
+  { q: "Will Integra's service cover my entire property, even if the walls are thick?", a: "In most properties, our mesh network provides full coverage. If your walls are particularly thick (old stone, solid brick), hardwired cabling may be needed — this is out of scope of the standard install but can be priced on a site visit, or identified beforehand if you share a quick video walkthrough of your property. Either way, we'll find a solution." },
   { q: "Do you provide CCTV services?", a: "We install and support CCTV systems — we don't monitor them. Our CCTV service includes professional installation, cloud remote access via Integra Cloud, and full technical support." },
 ];
 

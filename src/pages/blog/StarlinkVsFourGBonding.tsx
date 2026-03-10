@@ -43,7 +43,7 @@ const StarlinkVsFourGBonding = () => (
 
     <p><strong>Built-in redundancy:</strong> If you bond two SIMs (from different operators), losing one doesn't mean offline. You stay connected.</p>
 
-    <p><strong>No data caps:</strong> SIM contracts are truly unlimited. No throttling after X GB.</p>
+    <p><strong>Generous data allowances:</strong> With multi-network SIM connections, you're looking at around 1.8TB per month — more than enough for most businesses and households. Fair usage policy applies, but the vast majority of customers never come close.</p>
 
     <p><strong>SLA available:</strong> Enterprise customers get 99.5% uptime guarantees and dedicated support.</p>
 

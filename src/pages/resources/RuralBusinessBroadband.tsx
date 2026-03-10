@@ -36,7 +36,7 @@ const solutions = [
       "Consistent 20-30ms latency suitable for all business apps",
       "Weather-resistant (cellular unaffected by rain like satellite)",
       "Professional install and monitoring included",
-      "No data caps, no throttling",
+      "Around 1.8TB/month across multi-network SIMs (fair usage policy applies)",
     ],
     cons: [
       "Single network means one tower failure = offline",

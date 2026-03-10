@@ -220,7 +220,7 @@ const IoTConnectivityAgriculture = () => (
       <li>CCTV streaming: 5-10GB/day if continuous</li>
     </ul>
 
-    <p>Integra Pro's cellular SIMs are unlimited data, so no caps.</p>
+    <p>Integra Pro's multi-network SIMs provide around 1.8TB of data per month — far more than any farm IoT setup would use. A fair usage policy applies, but in practice agricultural IoT sensors use very little data.</p>
 
     <h2>Important: Cellular SIM vs WiFi for IoT</h2>
 
