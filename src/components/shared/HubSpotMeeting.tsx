@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
@@ -15,7 +14,7 @@ interface HubSpotMeetingProps {
   meetingUrl?: string;
 }
 
-const DEFAULT_MEETING_URL = "https://meetings.hubspot.com/chris-clapham?embed=true";
+const DEFAULT_MEETING_URL = "https://meetings.hubspot.com/chris-clapham";
 
 const HubSpotMeeting = ({
   heading = "Book a Call",
@@ -24,32 +23,20 @@ const HubSpotMeeting = ({
   bare = false,
   meetingUrl,
 }: HubSpotMeetingProps) => {
-  const url = meetingUrl ? `${meetingUrl}${meetingUrl.includes('?') ? '&' : '?'}embed=true` : DEFAULT_MEETING_URL;
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Load HubSpot meetings embed script once
-    const existingScript = document.querySelector(
-      'script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]'
-    );
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.src = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
-      script.async = true;
-      script.type = "text/javascript";
-      document.body.appendChild(script);
-    }
-  }, []);
+  // Build the iframe URL with embed=true
+  const baseUrl = meetingUrl || DEFAULT_MEETING_URL;
+  const iframeSrc = `${baseUrl}${baseUrl.includes("?") ? "&" : "?"}embed=true`;
 
   const isDark = variant === "dark";
 
   if (bare) {
     return (
-      <div
-        ref={containerRef}
-        className="meetings-iframe-container"
-        data-src={url}
-        style={{ minHeight: "660px" }}
+      <iframe
+        src={iframeSrc}
+        title="Book a meeting with Integra Networks"
+        className="w-full border-0"
+        style={{ minHeight: "700px" }}
+        loading="lazy"
       />
     );
   }
@@ -86,11 +73,12 @@ const HubSpotMeeting = ({
             isDark ? "border border-white/10 bg-white/[0.03]" : "border border-border bg-card"
           }`}
         >
-          <div
-            ref={containerRef}
-            className="meetings-iframe-container"
-            data-src={url}
-            style={{ minHeight: "660px" }}
+          <iframe
+            src={iframeSrc}
+            title="Book a meeting with Integra Networks"
+            className="w-full border-0"
+            style={{ minHeight: "700px" }}
+            loading="lazy"
           />
         </motion.div>
       </div>
