@@ -116,6 +116,7 @@ const RuralBroadbandLanding = lazy(() => import("./pages/landing/RuralBroadband"
 const StarlinkSdwanLanding = lazy(() => import("./pages/landing/StarlinkSdwan"));
 const IntegraSDWanLanding = lazy(() => import("./pages/landing/IntegraSDWan"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
+const CheckAvailability = lazy(() => import("./pages/CheckAvailability"));
 const CheckingOutYourProperty = lazy(() => import("./pages/CheckingOutYourProperty"));
 const Support = lazy(() => import("./pages/Support"));
 
@@ -233,6 +234,7 @@ const App = () => (
               {/* Landing pages matching old Framer URLs */}
               <Route path="/integra-sd-wan" element={<IntegraSDWanLanding />} />
               <Route path="/thankyou" element={<ThankYou />} />
+              <Route path="/check" element={<CheckAvailability />} />
               <Route path="/checking-out-your-property" element={<CheckingOutYourProperty />} />
               <Route path="/support" element={<Support />} />
               <Route path="/integra-bridge" element={<Navigate to="/connectivity/integra-bridge" replace />} />

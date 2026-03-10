@@ -378,7 +378,7 @@ const Homeworkers = () => {
               Trusted by Homeworkers Across the UK
             </h2>
             <p className="text-lg text-surface-dark-muted max-w-2xl mx-auto mb-8">
-              Over 1,000 remote workers now rely on Integra for fast, reliable internet wherever they are.
+              Hundreds of remote workers now rely on Integra for fast, reliable internet wherever they are.
             </p>
             <a
               href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
