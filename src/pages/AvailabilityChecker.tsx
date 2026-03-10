@@ -1,8 +1,31 @@
-import { Widget } from "@typeform/embed-react";
+import { useEffect, useRef } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 
 const AvailabilityChecker = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    // Create the data-tf-live div
+    const tfDiv = document.createElement("div");
+    tfDiv.setAttribute("data-tf-live", "01KJF9YCNX5CXVWF335WZJ8QDR");
+    containerRef.current.appendChild(tfDiv);
+
+    // Load the Typeform embed script
+    const script = document.createElement("script");
+    script.src = "//embed.typeform.com/next/embed.js";
+    script.async = true;
+    containerRef.current.appendChild(script);
+
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.innerHTML = "";
+      }
+    };
+  }, []);
+
   return (
     <PageLayout>
       <SEO
@@ -13,12 +36,11 @@ const AvailabilityChecker = () => {
       />
 
       <section className="bg-surface-dark min-h-[80vh] flex items-center -mt-20 pt-20">
-        <div className="mx-auto max-w-3xl w-full px-4 sm:px-6 py-16 md:py-24">
-          <Widget
-            id="01KJF9YCNX5CXVWF335WZJ8QDR"
-            style={{ width: "100%", height: "650px" }}
-          />
-        </div>
+        <div
+          ref={containerRef}
+          className="mx-auto max-w-3xl w-full px-4 sm:px-6 py-16 md:py-24"
+          style={{ minHeight: "650px" }}
+        />
       </section>
     </PageLayout>
   );

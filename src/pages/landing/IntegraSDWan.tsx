@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Clock, PoundSterling, ShieldCheck, Wifi, Zap, MapPin, Star, Check, Award, ArrowRight } from "lucide-react";
-import { useState } from "react";
-import { Widget } from "@typeform/embed-react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
@@ -125,6 +124,20 @@ const faqItems = [
 
 const IntegraSDWan = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const typeformRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!typeformRef.current) return;
+    const tfDiv = document.createElement("div");
+    tfDiv.setAttribute("data-tf-live", "01KJF9YCNX5CXVWF335WZJ8QDR");
+    typeformRef.current.appendChild(tfDiv);
+    const script = document.createElement("script");
+    script.src = "//embed.typeform.com/next/embed.js";
+    script.async = true;
+    typeformRef.current.appendChild(script);
+    return () => { if (typeformRef.current) typeformRef.current.innerHTML = ""; };
+  }, []);
+
   return (
     <PageLayout>
       <SEO
@@ -446,10 +459,7 @@ const IntegraSDWan = () => {
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4">Check Your Availability</h2>
             <p className="text-lg text-muted-foreground text-center mb-10">Enter your details below and we'll check what speeds we can deliver to your property.</p>
           </AnimatedSection>
-          <Widget
-            id="01KJF9YCNX5CXVWF335WZJ8QDR"
-            style={{ width: "100%", height: "650px" }}
-          />
+          <div ref={typeformRef} style={{ minHeight: "650px" }} />
         </div>
       </section>
 
