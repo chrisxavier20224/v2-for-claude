@@ -85,8 +85,8 @@ const LoadBalancingVsBonding = () => (
     <p>Bonding requires:</p>
     <ul>
       <li>Specialist Integra bonding hardware</li>
-      <li>Bonding software license (~£33/month)</li>
-      <li>Server backend to manage the tunnel (Linode ~£4/TB traffic)</li>
+      <li>Bonding software license and management</li>
+      <li>Server backend infrastructure to manage the tunnel</li>
       <li>Proper configuration (not a "set and forget" setup)</li>
     </ul>
 
@@ -114,7 +114,7 @@ const LoadBalancingVsBonding = () => (
       <li>You want "set and forget" reliability</li>
     </ul>
 
-    <p><strong>Cost:</strong> £135/month (Integra Pro) + £2,200 install</p>
+    <p><strong>Cost:</strong> Integra Pro offers competitive monthly pricing. Contact us for details.</p>
 
     <h3>Use True Bonding if:</h3>
 
@@ -125,7 +125,7 @@ const LoadBalancingVsBonding = () => (
       <li>You're running data-intensive applications (video encoding, large database operations, real-time analytics)</li>
     </ul>
 
-    <p><strong>Cost:</strong> £400/month (Enterprise) + £3,300 install</p>
+    <p><strong>Cost:</strong> Integra Enterprise offers premium pricing for advanced performance. Contact us for a quote.</p>
 
     <h2>Real Example: Video Production Company</h2>
 
@@ -135,7 +135,7 @@ const LoadBalancingVsBonding = () => (
 
     <p><strong>With true bonding:</strong> 300Mbps through a single connection to their editing system (much faster)</p>
 
-    <p><strong>Cost difference:</strong> £400/month (bonding) vs £135/month (load balancing) = £265/month premium.</p>
+    <p><strong>Cost difference:</strong> Enterprise bonding pricing is higher than our Pro tier, but the performance gains proved cost-effective for their workflow.</p>
 
     <p><strong>But:</strong> They saved 2 hours per day in render time. For a 5-person production company, that's a no-brainer ROI.</p>
 
@@ -167,9 +167,9 @@ const LoadBalancingVsBonding = () => (
 
     <p>We offer both:</p>
 
-    <p><strong>Load Balanced (Integra Pro)</strong> — £135/month. Good for 95% of businesses.</p>
+    <p><strong>Load Balanced (Integra Pro)</strong> — Our cost-effective option. Good for 95% of businesses.</p>
 
-    <p><strong>True Bonded (Enterprise)</strong> — £400/month. For companies that specifically need single-connection aggregate speeds.</p>
+    <p><strong>True Bonded (Enterprise)</strong> — Our premium tier for companies that specifically need single-connection aggregate speeds.</p>
 
     <h2>The Question to Ask Yourself</h2>
 

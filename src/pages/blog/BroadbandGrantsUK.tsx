@@ -108,7 +108,7 @@ const BroadbandGrantsUK = () => (
 
     <p><strong>The alternative:</strong> Use a private ISP like Integra. We install in 14 days. Cellular or Starlink-based solutions don't require grants because they cost less and deploy faster.</p>
 
-    <p>Over 2 years, a £135/month cellular solution (Integra Pro) costs £3,240. A grant might save you the installation fee (£2,200). Net saving: roughly equivalent. But you're online immediately instead of waiting 2 years.</p>
+    <p>With a private cellular solution (Integra Pro), you're online immediately instead of waiting 2 years. A grant might save on installation fees, but the time value of immediate connectivity often outweighs the savings.</p>
 
     <h2>If You Want to Pursue Grants</h2>
 

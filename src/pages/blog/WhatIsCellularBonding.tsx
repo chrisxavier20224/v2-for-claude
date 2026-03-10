@@ -42,10 +42,10 @@ const WhatIsCellularBonding = () => (
 
     <h2>The Cost</h2>
 
-    <p><strong>Equipment:</strong> ~£400-700 (router + SIM slots)</p>
-    <p><strong>SIM cost:</strong> ~£28/month per SIM (two SIMs = ~£56/month)</p>
-    <p><strong>Install:</strong> £2,200 for professional setup</p>
-    <p><strong>Total monthly:</strong> ~£56-135 depending on product tier.</p>
+    <p><strong>Equipment:</strong> Specialist router with SIM slots included.</p>
+    <p><strong>SIM cost:</strong> Competitive monthly cost for multiple SIMs.</p>
+    <p><strong>Install:</strong> Professional setup available with dedicated engineer support.</p>
+    <p><strong>Total monthly:</strong> Contact us for transparent pricing based on your specific needs.</p>
 
     <h2>Why Not Use WiFi Bonding?</h2>
 
@@ -82,7 +82,7 @@ const WhatIsCellularBonding = () => (
       <li>More complex setup (requires special hardware and licensing)</li>
     </ul>
 
-    <p><strong>Result:</strong> Premium feature justifying Enterprise pricing (£400/month).</p>
+    <p><strong>Result:</strong> Premium feature for enterprise customers needing maximum performance.</p>
 
     <p><strong>Most businesses don't need true bonding.</strong> Load balanced is faster and more cost-effective.</p>
 
@@ -108,7 +108,7 @@ const WhatIsCellularBonding = () => (
     <ol>
       <li><strong>You're a consumer browsing the web.</strong> One 4G connection is plenty. Bonding costs extra for little gain.</li>
       <li><strong>You're in an area with one operator only.</strong> Bonding won't help if only EE has coverage.</li>
-      <li><strong>Budget is tight.</strong> A single cellular connection is £80-135/month. Bonding is similar price but requires surveys and installation.</li>
+      <li><strong>Budget is tight.</strong> A single cellular connection is cost-effective, but bonding requires professional surveys and installation which adds value.</li>
     </ol>
 
     <h2>The Integra Approach</h2>
@@ -124,9 +124,9 @@ const WhatIsCellularBonding = () => (
 
     <h2>Common Misconception: "Bonding = Double the Cost"</h2>
 
-    <p>Nope. A bonded Integra Pro connection costs £135/month (two SIMs). A non-bonded single-SIM solution costs £80/month.</p>
+    <p>Not at all. A bonded Integra Pro connection offers excellent value with two SIMs included, while a single-SIM solution is a more basic option.</p>
 
-    <p>The difference (£55/month) is roughly the cost of a second SIM. You're not paying "double" — you're paying for an additional connection that improves reliability and speed.</p>
+    <p>The additional cost is justified by improved reliability and speed. You're not paying "double" — you're paying for an additional connection that meaningfully improves both uptime and performance.</p>
 
     <h2>Is Bonding Right for You?</h2>
 

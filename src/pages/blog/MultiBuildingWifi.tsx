@@ -21,7 +21,7 @@ const MultiBuildingWifi = () => (
     <p><strong>Common solutions that don't work:</strong></p>
     <ul>
       <li>❌ Buying a "WiFi extender" (range stays bad, speed drops)</li>
-      <li>❌ Wiring Ethernet 500m across the property (£5-10/meter = £2,500-5,000)</li>
+      <li>❌ Wiring Ethernet across the property (can be expensive for long distances)</li>
       <li>❌ Putting a second router in each building (no coordination, devices keep switching)</li>
     </ul>
 
@@ -64,7 +64,7 @@ const MultiBuildingWifi = () => (
       <li>Communal barn (no WiFi, 150m away)</li>
     </ul>
 
-    <p><strong>Problem:</strong> Guests wanted WiFi. Wiring 1,000m of Ethernet to each cottage was £5,000+. They couldn't do it.</p>
+    <p><strong>Problem:</strong> Guests wanted WiFi. Wiring Ethernet across the property to each cottage would have been prohibitively expensive.</p>
 
     <p><strong>Solution:</strong> Multi-building mesh WiFi.</p>
 
@@ -85,14 +85,14 @@ const MultiBuildingWifi = () => (
       <li>Single network to manage (not 7 separate routers)</li>
     </ul>
 
-    <p><strong>Cost:</strong> £2,500-3,500 total (main controller + 8 APs)</p>
+    <p><strong>Cost:</strong> Professional mesh WiFi system for multi-building setup. Contact us for detailed pricing.</p>
 
     <h2>Mesh WiFi Systems for Rural Properties</h2>
 
-    <p>Commercial-grade mesh systems: £300-5,000 | Professional coverage | Medium setup | Web-based controller</p>
-    <p>Enterprise mesh systems: £400-8,000 | Enterprise coverage | Hard setup | Complex management</p>
-    <p>Mid-range mesh systems: £200-3,000 | Good coverage | Medium setup | Command-line or web</p>
-    <p>Budget mesh systems: £100-1,000 | Consumer coverage | Easy setup | App-based</p>
+    <p>Commercial-grade mesh systems | Professional coverage | Medium setup | Web-based controller</p>
+    <p>Enterprise mesh systems | Enterprise coverage | Hard setup | Complex management</p>
+    <p>Mid-range mesh systems | Good coverage | Medium setup | Command-line or web</p>
+    <p>Budget mesh systems | Consumer coverage | Easy setup | App-based</p>
 
     <p><strong>Recommendation:</strong> Commercial-grade mesh for farms/estates. Best balance of price, reliability, and ease.</p>
 
@@ -111,7 +111,7 @@ const MultiBuildingWifi = () => (
       <li>Run Ethernet between buildings (underground, overhead, or through existing conduit)</li>
       <li>Each AP connects via Ethernet to main router</li>
       <li>Backhaul is dedicated, so WiFi speeds stay high</li>
-      <li>Setup is one-time cost (£500-2,000 wiring + installation)</li>
+      <li>Setup is one-time cost (professional wiring + installation)</li>
     </ul>
 
     <h3>P2P Radio Backhaul (Middle Ground):</h3>
@@ -119,7 +119,7 @@ const MultiBuildingWifi = () => (
       <li>Use point-to-point radio links between buildings instead of Ethernet</li>
       <li>Long-range (2km+), line-of-sight</li>
       <li>200-500Mbps throughput (sufficient for WiFi backhaul)</li>
-      <li>Cost: ~£400-600 per radio pair</li>
+      <li>Cost: Competitive pricing for P2P radio links per pair</li>
     </ul>
 
     <h2>Real Example: 200-Acre Farm With Multi-Building Setup</h2>
@@ -154,10 +154,10 @@ const MultiBuildingWifi = () => (
 
     <p><strong>Cost:</strong></p>
     <ul>
-      <li>Mesh system: £3,500</li>
-      <li>Buried conduit + Ethernet to barn: £1,500</li>
-      <li>Professional installation: £1,000</li>
-      <li>Total: ~£6,000 one-time + £135/month broadband</li>
+      <li>Mesh system: Commercial-grade equipment</li>
+      <li>Buried conduit + Ethernet to barn: Professional infrastructure</li>
+      <li>Professional installation: Engineering and deployment</li>
+      <li>Total: Contact us for comprehensive quote including broadband</li>
     </ul>
 
     <h2>When Multi-Building WiFi Makes Sense</h2>

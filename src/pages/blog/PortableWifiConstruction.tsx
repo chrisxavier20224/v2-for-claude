@@ -52,14 +52,12 @@ const PortableWifiConstruction = () => (
 
     <p><strong>Cons:</strong></p>
     <ul>
-      <li>Need data plan (£30-50/month)</li>
-      <li>Speeds capped by single 4G connection (50-150Mbps)</li>
+      <li>Need data plan</li>
+      <li>Speeds capped by single 4G connection</li>
       <li>Can be slow on congested towers</li>
     </ul>
 
     <p><strong>Use case:</strong> Small crew (10-30 people), basic WiFi, cost-conscious.</p>
-
-    <p><strong>Cost:</strong> Router ~£300 + SIM ~£40/month</p>
 
     <h3>Option 3: Bonded Multi-SIM Portable (Integra Recommendation)</h3>
 
@@ -83,7 +81,6 @@ const PortableWifiConstruction = () => (
 
     <p><strong>Use case:</strong> Large crew, critical uptime, data-heavy workflows.</p>
 
-    <p><strong>Cost:</strong> Router ~£700 + SIMs ~£60-80/month</p>
 
     <h3>Option 4: Temporary Fixed Installation</h3>
 
@@ -98,7 +95,7 @@ const PortableWifiConstruction = () => (
 
     <p><strong>Cons:</strong></p>
     <ul>
-      <li>Requires professional installation (£2,000-3,500)</li>
+      <li>Requires professional installation</li>
       <li>Not portable between sites</li>
       <li>Needs formal site agreement</li>
     </ul>
@@ -122,8 +119,6 @@ const PortableWifiConstruction = () => (
       <li>Follows the crew from site to site</li>
     </ul>
 
-    <p><strong>Cost:</strong> £700 equipment + £70/month SIMs = £70/month recurring</p>
-
     <p><strong>Result:</strong> Crew can download large CAD files in minutes (not hours), safety videos stream smoothly.</p>
 
     <h3>Case 2: Electrical Subcontractor</h3>
@@ -140,8 +135,6 @@ const PortableWifiConstruction = () => (
       <li>Mesh WiFi across the site</li>
       <li>Professional setup by Integra</li>
     </ul>
-
-    <p><strong>Cost:</strong> £3,000 install + £100/month (dual SIMs + professional SLA support)</p>
 
     <p><strong>Result:</strong> 50+ workers on WiFi without bottlenecks. Safety cameras stream 24/7. Inventory system tracks tools in real-time.</p>
 
@@ -195,9 +188,9 @@ const PortableWifiConstruction = () => (
     <p>For construction sites, we offer:</p>
 
     <ol>
-      <li><strong>Portable bonded router rental</strong> — £300/month (equipment) + £60-80/month (dual SIMs)</li>
-      <li><strong>Professional temporary install</strong> — £3,000-5,000 (install) + £100-150/month (support + SIMs + mesh WiFi)</li>
-      <li><strong>Monthly support</strong> — Remote monitoring, signal optimization, SIM management</li>
+      <li><strong>Portable bonded router rental</strong> — equipment and dual SIMs included</li>
+      <li><strong>Professional temporary install</strong> — full setup with support, SIMs, and mesh WiFi</li>
+      <li><strong>Monthly support</strong> — remote monitoring, signal optimisation, SIM management</li>
     </ol>
 
     <p><strong>We handle:</strong></p>

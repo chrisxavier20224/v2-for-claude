@@ -48,7 +48,7 @@ const SatelliteVsFixedWireless = () => (
     <h3>Cons of Fixed Wireless:</h3>
     <ul>
       <li><strong>Depends on tower proximity.</strong> If you're 5km from the nearest 4G tower, it might not reach you. A desktop survey is essential.</li>
-      <li><strong>Slightly higher monthly cost.</strong> Integra Pro is £135/month vs Starlink at £90-100/month.</li>
+      <li><strong>Slightly higher monthly cost.</strong> Integra Pro is competitively priced and includes 2 bonded SIMs, offering better value than basic satellite services.</li>
       <li><strong>Requires professional install.</strong> We send an engineer to set up the router and test signal. It takes a day.</li>
       <li><strong>Speed varies by location.</strong> Bonded 4G might give you 150Mbps, or it might give you 80Mbps depending on tower density and signal quality.</li>
     </ul>
@@ -70,7 +70,7 @@ const SatelliteVsFixedWireless = () => (
       <li><strong>You get Starlink's speed and cellular's reliability.</strong> Best of both worlds.</li>
       <li><strong>Latency issues solved.</strong> When you need low-latency work (VoIP, EPOS), traffic routes through 4G/5G. When it's web browsing, you use Starlink's speed.</li>
       <li><strong>Weather protection.</strong> Rain disrupts Starlink? Connection switches to 4G/5G. You don't notice.</li>
-      <li><strong>Affordable hybrid.</strong> Just £80/month to add to your existing Starlink bill.</li>
+      <li><strong>Affordable hybrid.</strong> Competitive monthly cost to add to your existing Starlink bill.</li>
     </ul>
 
     <h3>Cons of Starlink SD-WAN:</h3>
@@ -83,10 +83,10 @@ const SatelliteVsFixedWireless = () => (
     <h2>Cost Comparison (Monthly)</h2>
 
     <div style={{ marginBottom: "20px" }}>
-      <p><strong>Starlink Direct:</strong> £90-100 per month. Includes just satellite. No backup, no SLA.</p>
-      <p><strong>Integra Pro (Fixed Wireless):</strong> £135 per month. Includes 2 SIMs bonded. Low latency, SLA available.</p>
-      <p><strong>Starlink SD-WAN (Hybrid):</strong> £80 plus Starlink cost per month. Includes Starlink and 4G/5G backup. Best for mixed workloads.</p>
-      <p>Add installation: £2,200 for Integra Pro or Starlink SD-WAN.</p>
+      <p><strong>Starlink Direct:</strong> Lowest upfront cost. Includes just satellite. No backup, no SLA.</p>
+      <p><strong>Integra Pro (Fixed Wireless):</strong> Competitive monthly pricing. Includes 2 SIMs bonded. Low latency, SLA available.</p>
+      <p><strong>Starlink SD-WAN (Hybrid):</strong> Hybrid option combining satellite and cellular. Includes Starlink and 4G/5G backup. Best for mixed workloads.</p>
+      <p>Installation available for both Integra Pro and Starlink SD-WAN options. Contact us for pricing details.</p>
     </div>
 
     <h2>Speed and Latency Comparison</h2>

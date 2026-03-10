@@ -55,9 +55,9 @@ const StarlinkVsFourGBonding = () => (
 
     <p><strong>Location variability:</strong> Some properties get 200Mbps, others get 50Mbps, depending on tower density and distance.</p>
 
-    <p><strong>Professional installation required:</strong> You can't self-install. We send an engineer. Takes one day and costs £2,200.</p>
+    <p><strong>Professional installation required:</strong> You can't self-install. We send an engineer for professional setup. Contact us for installation details.</p>
 
-    <p><strong>Slightly higher monthly cost:</strong> Integra Pro is £135/month vs Starlink at £90-100/month.</p>
+    <p><strong>Monthly cost:</strong> Integra Pro offers competitive pricing that reflects the higher reliability, latency, and upload speeds provided.</p>
 
     <p><strong>Location matters more:</strong> A postcode might have 4G coverage, but your specific property might not have good signal (dead spot, valley, etc.).</p>
 
@@ -70,7 +70,7 @@ const StarlinkVsFourGBonding = () => (
       <p><strong>Weather Impact:</strong> Starlink High | Bonded 4G (Integra Pro) None | Winner: 4G</p>
       <p><strong>Consistency:</strong> Starlink Moderate (weather degrades) | Bonded 4G (Integra Pro) High (multiple networks) | Winner: 4G</p>
       <p><strong>Uptime:</strong> Starlink roughly 95-98% (no SLA) | Bonded 4G (Integra Pro) 99.5% (Enterprise SLA) | Winner: 4G</p>
-      <p><strong>Cost/month:</strong> Starlink £90-100 | Bonded 4G (Integra Pro) £135 | Winner: Starlink</p>
+      <p><strong>Cost/month:</strong> Starlink budget-friendly | Bonded 4G (Integra Pro) premium for advanced features | Winner: Depends on value priorities</p>
       <p><strong>Installation:</strong> Starlink DIY possible | Bonded 4G (Integra Pro) Professional required | Winner: Starlink</p>
     </div>
 
@@ -78,7 +78,7 @@ const StarlinkVsFourGBonding = () => (
 
     <ol style={{ paddingLeft: "20px" }}>
       <li><strong>Remote mountain property</strong> where cellular coverage is nonexistent.</li>
-      <li><strong>Budget-conscious</strong> (you can't afford £135/month).</li>
+      <li><strong>Budget-conscious</strong> (looking for the most cost-effective solution).</li>
       <li><strong>Simple setup required</strong> (you don't want an engineer visit).</li>
       <li><strong>Download-heavy use case</strong> (you mostly browse and download, upload speed doesn't matter).</li>
     </ol>
@@ -102,7 +102,7 @@ const StarlinkVsFourGBonding = () => (
 
     <p>Use both. Starlink for downloads, cellular for uploads and failover.</p>
 
-    <p><strong>Cost:</strong> Starlink (£90-100) and Starlink SD-WAN (£80) equals £170-180/month.</p>
+    <p><strong>Cost:</strong> Starlink and Starlink SD-WAN combined offer hybrid connectivity with transparent pricing available on request.</p>
 
     <p><strong>Result:</strong> You get Starlink's download speeds and cellular's upload speed and automatic failover.</p>
 
@@ -133,7 +133,7 @@ const StarlinkVsFourGBonding = () => (
 
     <p>We sell both. Starlink SD-WAN and Integra Pro are both in our lineup.</p>
 
-    <p>But for businesses, we lean toward Integra Pro because upload speed and latency are worth the extra £35-40/month.</p>
+    <p>But for businesses, we lean toward Integra Pro because upload speed and latency provide significant operational benefits and justify the investment.</p>
 
     <p>For consumers? Starlink is fine, cheaper, and simpler.</p>
     </BlogArticleLayout>

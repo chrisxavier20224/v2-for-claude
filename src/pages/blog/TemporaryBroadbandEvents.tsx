@@ -13,7 +13,7 @@ const TemporaryBroadbandEvents = () => (
 
     <h3>Option 1: 4G/5G Mobile Hotspot</h3>
 
-    <p>Simplest: Buy a mobile hotspot device (or use your phone). Costs ~£20-40/month for a SIM.</p>
+    <p>Simplest: Buy a mobile hotspot device (or use your phone). Budget-friendly SIM option available.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>
@@ -46,7 +46,7 @@ const TemporaryBroadbandEvents = () => (
 
     <p><strong>Cons:</strong></p>
     <ul>
-      <li>More expensive (£200-500 rental + SIM)</li>
+      <li>More expensive than basic hotspot (rental + SIM)</li>
       <li>Still depends on mobile signal at venue</li>
       <li>Setup takes 2-3 hours</li>
     </ul>
@@ -66,7 +66,7 @@ const TemporaryBroadbandEvents = () => (
 
     <p><strong>Cons:</strong></p>
     <ul>
-      <li>Expensive (£1,000-3,000 rental + install)</li>
+      <li>More expensive rental option + install fees</li>
       <li>Needs clear southern sky</li>
       <li>Setup takes 4-6 hours</li>
       <li>Weather can degrade signal (rain)</li>
@@ -89,7 +89,7 @@ const TemporaryBroadbandEvents = () => (
 
     <p><strong>Cons:</strong></p>
     <ul>
-      <li>More expensive (£500-1,000 rental + setup)</li>
+      <li>Premium pricing reflects the superior speed and reliability</li>
       <li>Requires decent mobile coverage at venue</li>
       <li>Professional installation</li>
     </ul>
@@ -158,7 +158,7 @@ const TemporaryBroadbandEvents = () => (
       <li>Staff comms rock solid</li>
     </ul>
 
-    <p><strong>Cost:</strong> ~£2,000 rental for the 3-day event.</p>
+    <p><strong>Cost:</strong> Bonded connectivity rental for the 3-day event. Competitive event pricing available.</p>
 
     <h2>Timeline</h2>
 
@@ -173,10 +173,10 @@ const TemporaryBroadbandEvents = () => (
 
     <h2>Budget Guide</h2>
 
-    <p>Mobile hotspot: £20-40/month | 20-40Mbps | under 20 users | Low reliability</p>
-    <p>Portable 4G router: £200-500 rental | 50-150Mbps | 50-100 users | Medium reliability</p>
-    <p>Satellite temporary: £1,000-3,000 rental | 50-150Mbps | 100-200 users | Medium reliability</p>
-    <p>Bonded 4G (Integra): £500-1,500 rental | 150-350Mbps | 200+ users | High reliability</p>
+    <p>Mobile hotspot: Budget option | 20-40Mbps | under 20 users | Low reliability</p>
+    <p>Portable 4G router: Standard rental | 50-150Mbps | 50-100 users | Medium reliability</p>
+    <p>Satellite temporary: Premium rental | 50-150Mbps | 100-200 users | Medium reliability</p>
+    <p>Bonded 4G (Integra): Professional tier | 150-350Mbps | 200+ users | High reliability</p>
 
     <h2>Red Flags to Avoid</h2>
 
@@ -197,7 +197,7 @@ const TemporaryBroadbandEvents = () => (
       <li>Bonded 4G + Starlink hybrid</li>
       <li>Professional mesh WiFi</li>
       <li>On-site 24/7 support</li>
-      <li>~£1,500-2,500</li>
+      <li>Contact us for event-specific pricing</li>
     </ul>
 
     <h2>Next Step</h2>

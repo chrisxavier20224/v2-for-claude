@@ -29,11 +29,9 @@ const FourGVsFiveG = () => (
 
     <p>5G is still stabilizing. Network operators are still optimizing capacity, coverage, and reliability. It's great near cities. In the countryside, 4G is the safer bet.</p>
 
-    <h2>Cost: 4G Is Cheaper</h2>
+    <h2>Cost: 4G Is More Affordable</h2>
 
-    <p>You'll pay more for a 5G SIM — typically £30-40/month compared to 4G at £24-29/month. Over a year, that's £120-200 extra.</p>
-
-    <p>For a small business running on margins, that matters.</p>
+    <p>5G SIMs typically cost more than 4G options. The price difference can add up over a year, which matters for small businesses with tight margins.</p>
 
     <h2>What About Bonding Both?</h2>
 
@@ -85,7 +83,7 @@ const FourGVsFiveG = () => (
 
     <p>We bonded both 4G connections. They got 150Mbps combined — way more than they needed, and infinitely more reliable than the satellite alone.</p>
 
-    <p>Cost: Integra Pro at £135/month. Installation took one day. They were happy.</p>
+    <p>Cost: Integra Pro bonded solution provided excellent value for reliable connectivity. Installation took one day. They were happy.</p>
 
     <h2>The Takeaway</h2>
 

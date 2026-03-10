@@ -69,7 +69,7 @@ const IoTConnectivityAgriculture = () => (
     <p><strong>Pros:</strong></p>
     <ul>
       <li>Uses existing broadband</li>
-      <li>Inexpensive (£100-300 per extender)</li>
+      <li>Budget-friendly equipment cost</li>
       <li>Good for close distances (outbuildings)</li>
     </ul>
 
@@ -146,7 +146,7 @@ const IoTConnectivityAgriculture = () => (
 
     <p><strong>Cons:</strong></p>
     <ul>
-      <li>Requires professional installation (£2,000-5,000)</li>
+      <li>Requires professional installation</li>
       <li>Needs line-of-sight (can't go through dense forest)</li>
       <li>Weather impact minimal but rain can reduce range</li>
     </ul>
@@ -184,18 +184,18 @@ const IoTConnectivityAgriculture = () => (
       <li>Soil moisture triggered automatic irrigation</li>
     </ul>
 
-    <p><strong>Cost:</strong> ~£4,000 P2P installation + £135/month Integra Pro + ~£20/month per livestock tracker SIM</p>
+    <p><strong>Cost:</strong> P2P radio installation + Integra Pro monthly subscription + per-device SIM costs. Contact us for a detailed quote.</p>
 
     <h2>IoT Connectivity Recommendation Framework</h2>
 
     <p><strong>Single building / under 500m distance:</strong></p>
     <ul>
-      <li>WiFi range extenders or mesh (£200-500 one-time)</li>
+      <li>WiFi range extenders or mesh (budget-friendly one-time investment)</li>
     </ul>
 
     <p><strong>Multiple buildings / 500m-2km distance:</strong></p>
     <ul>
-      <li>P2P radio mesh (£3,000-5,000 install) + your main broadband</li>
+      <li>P2P radio mesh + your main broadband</li>
     </ul>
 
     <p><strong>Remote fields / 2km+ distance:</strong></p>
@@ -229,7 +229,7 @@ const IoTConnectivityAgriculture = () => (
       <li>Work anywhere (even remote fields)</li>
       <li>No WiFi dependency</li>
       <li>Battery-powered sensors use less power than WiFi</li>
-      <li>Cost: £3-15/month per device</li>
+      <li>Cost: Competitive monthly rate per device</li>
     </ul>
 
     <p><strong>IoT devices on your WiFi:</strong></p>

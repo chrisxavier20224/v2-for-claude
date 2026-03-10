@@ -108,7 +108,7 @@ const StarlinkUploadSpeed = () => (
 
     <p><strong>Example:</strong> 150Mbps down (Starlink) and 100Mbps up (4G/5G) and failover.</p>
 
-    <p><strong>Cost:</strong> £80/month added to Starlink.</p>
+    <p><strong>Cost:</strong> Competitive monthly cost added to your Starlink subscription.</p>
 
     <p><strong>The Catch:</strong> You need decent 4G/5G coverage. If cellular is weak at your location, the upload boost doesn't help.</p>
 
@@ -128,9 +128,9 @@ const StarlinkUploadSpeed = () => (
       <li>Failover: If Starlink dropped, video calls switched to cellular. Farm staff never noticed.</li>
     </ul>
 
-    <p><strong>Monthly cost:</strong> Starlink £95 and Integra SD-WAN £80 equals £175/month.</p>
+    <p><strong>Monthly cost:</strong> Starlink and Integra SD-WAN combined provided excellent value compared to alternative solutions.</p>
 
-    <p><strong>Previous solution cost:</strong> Additional Starlink for a second property (if available) equals £150-200/month and delayed installation by months.</p>
+    <p><strong>Previous solution cost:</strong> Additional Starlink for a second property (if available) would have been more expensive and delayed installation by months.</p>
 
     <h2>The Bottom Line</h2>
 
@@ -149,9 +149,9 @@ const StarlinkUploadSpeed = () => (
     <h2>Your Options</h2>
 
     <ol style={{ paddingLeft: "20px" }}>
-      <li>Accept slow uploads (cheapest, most frustrating)</li>
-      <li>Add Starlink SD-WAN to boost upload speed (£80/month extra)</li>
-      <li>Switch to Integra Pro for consistently fast upload (£135/month)</li>
+      <li>Accept slow uploads (lowest cost option, but limiting)</li>
+      <li>Add Starlink SD-WAN to boost upload speed (mid-tier option with hybrid benefits)</li>
+      <li>Switch to Integra Pro for consistently fast upload (premium option for upload-heavy workloads)</li>
     </ol>
 
     <p>We'd recommend a desktop survey before deciding. We'll test actual upload speeds at your location and recommend the product that matches your real needs.</p>
