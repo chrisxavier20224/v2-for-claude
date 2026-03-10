@@ -212,7 +212,7 @@ const SussexSurrey = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">5.</span>
                 <span>
-                  <strong>Ongoing support.</strong> Free engineer callouts if anything fails.
+                  <strong>Ongoing support.</strong> Engineer support included if anything needs attention.
                 </span>
               </li>
             </ol>

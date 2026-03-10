@@ -24,7 +24,7 @@ const mainProducts = [
       "Starlink + 4G/5G bonded connectivity",
       "Enterprise-grade SD-WAN router included",
       "You pay Starlink direct for dish & subscription",
-      "Free engineer callouts for life",
+      "Engineer support included",
     ],
     cta: "Check Availability",
     ctaLink: "/availability-checker",
@@ -118,7 +118,7 @@ const addOns = [
 
 const whatsIncluded = [
   { icon: Shield, label: "All Hardware Owned by Integra", description: "No leasing charges ever" },
-  { icon: Wrench, label: "Free Engineer Callouts", description: "For life — whenever you need help" },
+  { icon: Wrench, label: "Dedicated Support", description: "Proactive monitoring and ongoing assistance" },
   { icon: Clock, label: "24/7 Monitoring & Support", description: "Your connection is watched constantly" },
   { icon: Award, label: "Uptime SLA on Every Package", description: "Backed by service credits — up to 99.99% on Enterprise" },
   { icon: CreditCard, label: "Month-to-Month Terms", description: "No long contracts, cancel anytime" },
@@ -130,7 +130,7 @@ const faqs = [
   { q: "Do I need to sign a long contract?", a: "No. All our packages are month-to-month. You can cancel anytime with 30 days notice. We're confident in our service, so we don't need you locked in." },
   { q: "What happens if I'm not happy?", a: "You have 14 days from installation to request a full refund — no questions asked. We also back all services with uptime SLAs. If we drop below the guaranteed uptime, you get a credit on your invoice." },
   { q: "Who owns the hardware?", a: "Integra owns all hardware. This means no leasing fees, and we maintain everything for free. If equipment breaks, we replace it. You're not on the hook for expensive hardware costs." },
-  { q: "What's included in the installation fee?", a: "Everything. Site survey, hardware delivery, installation by our engineer, configuration, and testing. You'll be shown exactly what the fee covers before we begin. After installation, all engineer visits are free for the life of your contract." },
+  { q: "What's included in the installation fee?", a: "Everything. Site survey, hardware delivery, installation by our engineer, configuration, and testing. You'll be shown exactly what the fee covers before we begin. After installation, all engineer visits for support and maintenance are included in your monthly service." },
   { q: "Can I upgrade my package later?", a: "Yes, seamlessly. Start with Starlink SD-WAN, then upgrade to Integra Pro, Ultrafast, or Enterprise as your business grows. We handle the migration without service disruption. No penalty for upgrading." },
 ];
 
@@ -203,7 +203,7 @@ const Pricing = () => {
               Choose your connection
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Start flexible, scale as you grow. Every package includes hardware, monitoring, and free engineer callouts for life.
+              Start flexible, scale as you grow. Every package includes hardware, monitoring, and dedicated support.
             </p>
           </AnimatedSection>
 

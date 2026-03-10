@@ -69,7 +69,7 @@ const benefits = [
   {
     icon: Users,
     title: "Managed Service",
-    description: "We own and maintain all hardware. No capital expenditure — pure monthly service. Free engineer callouts for any issues, monitoring, and remote support included.",
+    description: "We own and maintain all hardware. No capital expenditure — pure monthly service. Engineer support for any issues, monitoring, and remote support included.",
   },
 ];
 
@@ -332,8 +332,8 @@ const WirelessDistribution = () => {
                   "Commercial-grade radios and networking equipment",
                   "Professional installation and testing",
                   "24/7 remote monitoring via Integra Cloud",
-                  "Free hardware replacement if anything fails",
-                  "Free engineer callouts for troubleshooting",
+                  "Hardware replacement if anything fails",
+                  "Engineer support for troubleshooting",
                   "Software updates and security patches",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">

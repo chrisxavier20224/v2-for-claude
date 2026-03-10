@@ -324,8 +324,8 @@ export default function ProposalDetail() {
               },
               {
                 icon: Zap,
-                title: "Free Engineer Callouts",
-                description: "UK-based engineers with no call-out fees or hidden charges.",
+                title: "Engineer Support Included",
+                description: "UK-based engineers with no hidden charges or surprises.",
               },
               {
                 icon: CheckCircle,

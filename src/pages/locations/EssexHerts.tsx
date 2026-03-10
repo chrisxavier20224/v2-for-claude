@@ -50,7 +50,7 @@ const EssexHerts = () => {
     },
     {
       q: "How much does a typical Essex or Herts installation cost?",
-      a: "Installation is £2,200. Monthly service is £135/month for Integra Pro (bonded 4G/5G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or engineer callout charges.",
+      a: "Installation is £2,200. Monthly service is £135/month for Integra Pro (bonded 4G/5G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or support charges.",
     },
     {
       q: "What if my property has weak mobile signal?",
@@ -175,7 +175,7 @@ const EssexHerts = () => {
                   Businesses in this corridor need guaranteed uptime. We offer bonded cellular with 99.5% SLA and priority support.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  Includes free engineer callouts and equipment replacement.
+                  Includes dedicated support and equipment replacement.
                 </p>
               </div>
             </div>

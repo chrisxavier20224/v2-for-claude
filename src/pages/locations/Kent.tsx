@@ -58,7 +58,7 @@ const Kent = () => {
     },
     {
       q: "Do I need a backup system if I'm running a business?",
-      a: "For business-critical operations (farm management systems, online sales, video communication), redundancy is essential. Integra Pro includes built-in backup through bonded networks. For mission-critical needs, Enterprise service offers 99.5% SLA with automatic failover and priority support. Free engineer callouts if anything fails.",
+      a: "For business-critical operations (farm management systems, online sales, video communication), redundancy is essential. Integra Pro includes built-in backup through bonded networks. For mission-critical needs, Enterprise service offers 99.5% SLA with automatic failover and priority support. Engineer support is included if anything needs attention.",
     },
     {
       q: "Is Starlink suitable for farm operations?",
@@ -163,7 +163,7 @@ const Kent = () => {
                   For farms where downtime is unacceptable, we offer 99.5% uptime guarantee with priority support and automatic failover.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  Free engineer callouts. We replace any failed equipment immediately at no charge.
+                  Engineer support is included. We replace any failed equipment immediately.
                 </p>
               </div>
 

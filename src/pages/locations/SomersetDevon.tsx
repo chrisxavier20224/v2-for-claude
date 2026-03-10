@@ -181,7 +181,7 @@ const SomersetDevon = () => {
                   For holiday rental businesses, farms, and operations needing uptime guarantees, we offer 99.5% SLA with priority support.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  Free engineer callouts and equipment replacement if anything fails.
+                  Engineer support and equipment replacement included if anything needs attention.
                 </p>
               </div>
             </div>

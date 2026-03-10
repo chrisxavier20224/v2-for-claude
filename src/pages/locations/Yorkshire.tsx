@@ -46,7 +46,7 @@ const Yorkshire = () => {
   const faqs = [
     {
       q: "I run a manufacturing business in rural Yorkshire. Do you support commercial operations?",
-      a: "Absolutely. Yorkshire's manufacturing and industrial base depends on reliable connectivity. We've installed at farms, small factories, engineering businesses, and logistics operations across the region. Integra Pro and Enterprise SLA options deliver the uptime serious businesses need. Free engineer callouts if anything fails.",
+      a: "Absolutely. Yorkshire's manufacturing and industrial base depends on reliable connectivity. We've installed at farms, small factories, engineering businesses, and logistics operations across the region. Integra Pro and Enterprise SLA options deliver the uptime serious businesses need. Engineer support is included if anything needs attention.",
     },
     {
       q: "What about areas around Sheffield, Leeds, and Harrogate?",
@@ -163,7 +163,7 @@ const Yorkshire = () => {
                   For farms and manufacturing sites where downtime is unacceptable, we offer Service Level Agreement with priority support and guaranteed response times.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  Free engineer callouts and equipment replacement if anything fails. Your business is our priority.
+                  Engineer support and equipment replacement included if anything needs attention. Your business is our priority.
                 </p>
               </div>
 

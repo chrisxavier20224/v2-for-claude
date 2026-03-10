@@ -54,7 +54,7 @@ const NorthWest = () => {
     },
     {
       q: "What happens if equipment breaks?",
-      a: "Free engineer callouts. We own and maintain all hardware. If anything fails within 12 months, we replace it at no cost. No charges for site visits, parts, or labour. This is included in your monthly service—no hidden support fees.",
+      a: "Engineer support is included. We own and maintain all hardware. If anything fails within 12 months, we replace it at no cost. No charges for site visits, parts, or labour. This is included in your monthly service—no hidden fees.",
     },
     {
       q: "Can I get speeds over 200Mbps in rural Merseyside?",
@@ -175,7 +175,7 @@ const NorthWest = () => {
                   Farms, holiday parks, and rural businesses need uptime. We offer bonded cellular with 99.5% SLA and priority support.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
-                  Includes free engineer callouts and equipment replacement.
+                  Includes engineer support and equipment replacement.
                 </p>
               </div>
             </div>

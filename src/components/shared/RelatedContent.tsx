@@ -1,7 +1,25 @@
 import AnimatedSection from "./AnimatedSection";
 import RelatedStoryCard from "./RelatedStoryCard";
+import { storyMap } from "./RelatedStoryCard";
 import RelatedSectorCard from "./RelatedSectorCard";
 import EyebrowLabel from "./EyebrowLabel";
+
+const allStoryKeys = Object.keys(storyMap);
+const allSectorKeys = ["homeworkers", "fibre-enabled-buildings", "construction-sites", "rural-smes", "business-parks", "airbnbs"];
+
+/** Pad an array to at least `min` items by pulling from a pool, excluding already-present keys */
+function padArray(arr: string[], pool: string[], min: number): string[] {
+  if (arr.length >= min) return arr;
+  const extras = pool.filter((k) => !arr.includes(k));
+  // Deterministic shuffle based on first item to avoid random flicker
+  const seed = arr[0] || "default";
+  const sorted = extras.sort((a, b) => {
+    const ha = Array.from(a + seed).reduce((s, c) => s + c.charCodeAt(0), 0);
+    const hb = Array.from(b + seed).reduce((s, c) => s + c.charCodeAt(0), 0);
+    return ha - hb;
+  });
+  return [...arr, ...sorted.slice(0, min - arr.length)];
+}
 
 interface RelatedContentProps {
   /** Keys matching storyMap in RelatedStoryCard (e.g. "seacon-group", "wb-power-services") */
@@ -14,8 +32,12 @@ interface RelatedContentProps {
   dark?: boolean;
 }
 
-const RelatedContent = ({ stories = [], sectors = [], dark = false }: RelatedContentProps) => {
-  if (stories.length === 0 && sectors.length === 0) return null;
+const RelatedContent = ({ stories: rawStories = [], sectors: rawSectors = [], dark = false }: RelatedContentProps) => {
+  if (rawStories.length === 0 && rawSectors.length === 0) return null;
+
+  // Always show at least 2 items in each section
+  const stories = rawStories.length > 0 ? padArray(rawStories, allStoryKeys, 2) : [];
+  const sectors = rawSectors.length > 0 ? padArray(rawSectors, allSectorKeys, 2) : [];
 
   const fg = dark ? "text-surface-dark-foreground" : "text-foreground";
 
@@ -37,7 +59,7 @@ const RelatedContent = ({ stories = [], sectors = [], dark = false }: RelatedCon
             <h3 className={`text-heading-1 md:text-display-sm ${fg} mb-8`}>
               See how businesses like yours solved it
             </h3>
-            <div className={`grid gap-6 ${stories.length === 1 ? "grid-cols-1 max-w-2xl" : "grid-cols-1 md:grid-cols-2"}`}>
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
               {stories.map((key) => (
                 <RelatedStoryCard key={key} storyKey={key} />
               ))}

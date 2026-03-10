@@ -7,7 +7,6 @@ import royleFarmLogo from "@/assets/case-studies/royle-farm-business-park-logo.p
 import steamRallyHero from "@/assets/case-studies/steam-rally-hero.png";
 import wsraLogo from "@/assets/case-studies/wsra-steam-rally-logo.png";
 import wbPowerHero from "@/assets/case-studies/wb-power-hero.avif";
-import wbPowerLogo from "@/assets/case-studies/wb-power-logo.png";
 import mcgeeHero from "@/assets/case-studies/mcgee-hero.jpg";
 import mcgeeLogo from "@/assets/case-studies/mcgee-logo.png";
 import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.jpg";
@@ -54,7 +53,6 @@ const storyMap: Record<string, StoryData> = {
     company: "WB Power Services",
     strapline: "Dodging the £50K Bill: SD-WAN at Chorley Depot",
     image: wbPowerHero,
-    logo: wbPowerLogo,
     path: "/customers/wb-power-services",
   },
   "mcgee-construction": {

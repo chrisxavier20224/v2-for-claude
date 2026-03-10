@@ -51,15 +51,11 @@ const sectorLinks = [
 
 const resourceLinks = [
   { label: "All Resources", path: "/resources", icon: BookOpen, tagline: "Guides, comparisons & industry updates" },
-  { label: "Alternatives to Fibre", path: "/alternatives-to-fibre-broadband", icon: Wifi, tagline: "Compare every broadband alternative" },
-  { label: "Starlink for Business", path: "/starlink-for-business", icon: Satellite, tagline: "Honest satellite broadband assessment" },
-  { label: "Farm Broadband UK", path: "/farm-broadband", icon: Tractor, tagline: "Internet for farms & rural properties" },
-  { label: "Construction Site Broadband", path: "/construction-site-broadband", icon: HardHat, tagline: "Fast-deploy temporary broadband" },
+  { label: "Blog", path: "/blog", icon: FileText, tagline: "News, guides & insights" },
 ];
 
 const companyLinks = [
   { label: "Customer Stories", path: "/customers", icon: Building2, tagline: "See how we've helped businesses" },
-  { label: "Blog", path: "/blog", icon: BookOpen, tagline: "News, guides & insights" },
 ];
 
 const Navbar = () => {
@@ -69,13 +65,13 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [sectorsOpen, setSectorsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
-  const [companyOpen, setCompanyOpen] = useState(false);
+  // companyOpen removed — Company is now a standalone "Customers" link
 
   const isDarkNav = location.pathname === "/connectivity/integra-bridge";
 
   const isSectorPath = sectorLinks.some(s => location.pathname === s.path);
   const isServicesPath = allConnectivityLinks.some(c => location.pathname === c.path);
-  const isResourcePath = resourceLinks.some(r => location.pathname === r.path);
+  const isResourcePath = resourceLinks.some(r => location.pathname === r.path) || location.pathname === "/blog";
   const isCompanyPath = companyLinks.some(c => location.pathname === c.path);
 
   return (
@@ -252,64 +248,33 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Company Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setCompanyOpen(true)}
-              onMouseLeave={() => setCompanyOpen(false)}
+            {/* Customers — standalone link */}
+            <Link
+              to="/customers"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === "/customers" || location.pathname.startsWith("/customers/")
+                  ? isDarkNav ? "text-white" : "text-foreground"
+                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+              }`}
             >
-              <button
-                className={`flex items-center gap-1 text-sm font-medium transition-colors ${
-                  isCompanyPath
-                    ? isDarkNav ? "text-white" : "text-foreground"
-                    : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                Company
-                <ChevronDown className={`h-4 w-4 transition-transform ${companyOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {companyOpen && (
-                <div className="absolute top-full right-0 pt-2 w-64">
-                  <div className="bg-card border border-border rounded-xl shadow-xl overflow-hidden">
-                    {companyLinks.map((item) => (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        className="flex items-start gap-3 px-4 py-3 hover:bg-secondary transition-colors"
-                      >
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
-                          <item.icon className="h-4 w-4" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-medium text-foreground">{item.label}</div>
-                          <div className="text-xs text-muted-foreground">{item.tagline}</div>
-                        </div>
-                      </Link>
-                    ))}
-                    <div className="border-t border-border">
-                      <Link
-                        to="/contact"
-                        className="flex items-center gap-3 px-4 py-3 hover:bg-secondary transition-colors"
-                      >
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
-                          <Phone className="h-4 w-4" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-medium text-foreground">Contact</div>
-                          <div className="text-xs text-muted-foreground">Get in touch with our team</div>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+              Customers
+            </Link>
+            {/* Contact — standalone link */}
+            <Link
+              to="/contact"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === "/contact"
+                  ? isDarkNav ? "text-white" : "text-foreground"
+                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Contact
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
-            <Button 
-              size="sm" 
+            <Button
+              size="sm"
               className="hidden sm:inline-flex"
               asChild
             >
@@ -389,21 +354,16 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Mobile Company Section */}
-              <div className="px-3 py-2">
-                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Company</div>
-                <div className="space-y-1">
-                  {companyLinks.map((item) => (
-                    <Link key={item.path} to={item.path} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
-                      <item.icon className="h-4 w-4 text-primary" />
-                      {item.label}
-                    </Link>
-                  ))}
-                  <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
-                    <Phone className="h-4 w-4 text-primary" />
-                    Contact
-                  </Link>
-                </div>
+              {/* Mobile standalone links */}
+              <div className="px-3 py-2 space-y-1">
+                <Link to="/customers" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                  <Building2 className="h-4 w-4 text-primary" />
+                  Customer Stories
+                </Link>
+                <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                  <Phone className="h-4 w-4 text-primary" />
+                  Contact
+                </Link>
               </div>
 
               <div className="pt-2 px-3">
