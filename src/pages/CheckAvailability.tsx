@@ -75,6 +75,15 @@ const PAIN_LABEL_HS: Record<string, string> = {
   quoted_thousands: "Quoted thousands for fibre install",
 };
 
+/* CRM values for which_statement_applies_to_you_ (must match exactly, including legacy typos) */
+const PAIN_CRM_VALUE: Record<string, string> = {
+  slow_connection: "We have an existing internet connection that is simply to slow",
+  intermittent: "Our critical services are working intermittantly due to poor broadband",
+  moving_no_fibre: "We are moving to a new location and Fibre isn't available",
+  need_faster: "We need a faster connection to scale our business operations",
+  quoted_thousands: "We have been quoted thousands to have a Fibre connection installed.",
+};
+
 async function submitToHubSpot(payload: {
   first_name: string;
   last_name: string;
@@ -125,10 +134,19 @@ async function submitToHubSpot(payload: {
     fields.push({ objectTypeId: "0-1", name: "state", value: payload.region });
   }
 
-  // Pain points as a semicolon-separated string
+  // Pain points as a semicolon-separated string for the message field
   if (payload.pain_points.length > 0) {
     const painText = payload.pain_points.map((p) => PAIN_LABEL_HS[p] || p).join("; ");
     fields.push({ objectTypeId: "0-1", name: "message", value: painText });
+
+    // Also populate the legacy "Which Statement applies to you?" enumeration
+    const crmValues = payload.pain_points
+      .map((p) => PAIN_CRM_VALUE[p])
+      .filter(Boolean)
+      .join(";");
+    if (crmValues) {
+      fields.push({ objectTypeId: "0-1", name: "which_statement_applies_to_you_", value: crmValues });
+    }
   }
 
   try {
@@ -251,7 +269,8 @@ const CheckAvailability = () => {
   const mapRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
 
-  const step1Valid = firstName.trim() && lastName.trim() && email.trim().includes("@") && phone.trim();
+  const phoneDigits = phone.replace(/[^0-9]/g, "");
+  const step1Valid = firstName.trim() && lastName.trim() && email.trim().includes("@") && phoneDigits.length >= 10 && phoneDigits.length <= 13;
   const step2Valid = !!service;
 
   const togglePain = (p: PainPoint) => {
@@ -425,7 +444,7 @@ const CheckAvailability = () => {
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Phone number</label>
-                      <Input id="phone" name="tel" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="07700 900 000" autoComplete="tel" />
+                      <Input id="phone" name="tel" type="tel" inputMode="numeric" pattern="[0-9]*" maxLength={15} value={phone} onChange={(e) => { const digits = e.target.value.replace(/[^0-9+ ]/g, ""); setPhone(digits); }} placeholder="07700 900 000" autoComplete="tel" />
                     </div>
                     {/* Hidden submit button allows Enter key and helps autocomplete */}
                     <button type="submit" className="hidden" />
