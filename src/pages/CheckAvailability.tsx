@@ -60,7 +60,7 @@ const HERO_COPY: Record<number, { title: string; sub: string }> = {
 /*  HubSpot Forms API                                                  */
 /* ------------------------------------------------------------------ */
 const HUBSPOT_PORTAL_ID = "20314482";
-const HUBSPOT_FORM_GUID = "REPLACE_WITH_FORM_GUID"; // Created in HubSpot Marketing → Forms
+const HUBSPOT_FORM_GUID = "2aebddb4-ae9f-4b6a-9010-d3b47c6ef797";
 
 const USER_TYPE_HS: Record<string, string> = {
   business: "Business",
