@@ -239,9 +239,9 @@ const NorthWest = () => {
               </p>
             </div>
 
-            <h2 className="text-2xl font-normal mb-6">Real Installation: Harrogate Area</h2>
+            <h2 className="text-2xl font-normal mb-6">Real Installation: Lake District Area</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A holiday cottage business near Harrogate relied on Starlink, but guests complained about latency and streaming issues. The property had strong EE signal but weak O2.
+              A holiday cottage business near Windermere relied on Starlink, but guests complained about latency and streaming issues. The property had strong EE signal but weak O2.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               We recommended Integra Pro (bonded EE and O2). Installation: one day. Result: 250Mbps combined speed, rock-solid WiFi across the property, guests happy. Cost: £135/month.

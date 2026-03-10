@@ -223,7 +223,7 @@ const Homeworkers = () => {
               whileHover={{ scale: 1.1, rotate: -3 }}
               transition={{ type: "spring", stiffness: 300, damping: 15 }}
             >
-              <Router className="h-9 w-9" strokeWidth={1.5} />
+              <Network className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">
               No fibre? No problem.

@@ -355,8 +355,8 @@ const FibreEnabledBuildings = () => {
                     <Wifi className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="text-surface-dark-foreground font-semibold text-sm">Free Hyperfast Guest WiFi</p>
-                    <p className="text-surface-dark-muted text-sm">Complimentary hyperfast WiFi in communal areas such as reception.</p>
+                    <p className="text-surface-dark-foreground font-semibold text-sm">Hyperfast Guest WiFi</p>
+                    <p className="text-surface-dark-muted text-sm">High-speed WiFi included in communal areas such as reception.</p>
                   </div>
                 </div>
               </div>

@@ -276,7 +276,7 @@ const London = () => {
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Site manager called us on Monday. We confirmed 48-hour emergency deployment. By Wednesday morning, our engineer had installed Integra Pro (bonded EE and Vodafone) with mesh WiFi covering all compound buildings.
             </p>
-            <p className="text-muted-foregroup text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Result: 260Mbps combined speed, full site coverage, three separate WiFi networks (staff, management, security). Cost: £135/month plus £50 per mesh node. The site saved weeks of waiting and got fully productive immediately. When the project moved six months later, they cancelled without penalty.
             </p>
           </div>
