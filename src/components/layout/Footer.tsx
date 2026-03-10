@@ -76,7 +76,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 Let's see what we can do for you
               </h2>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
-                Join the businesses switching to Integra. It feels good when your connectivity just works.
+                Join the businesses and homeworkers switching to Integra. It feels good when your connectivity just works.
               </p>
             </div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="shrink-0">
