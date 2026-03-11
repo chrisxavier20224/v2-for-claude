@@ -646,7 +646,7 @@ const CheckAvailability = () => {
         user_type: service,
         pain_points: Array.from(pains),
         country: pcData?.country ?? null,
-        postcode: postcode.toUpperCase(),
+        postcode: (pcData?.postcode || postcode).toUpperCase(),
         admin_ward: pcData?.admin_ward ?? null,
         admin_district: pcData?.admin_district ?? null,
         region: pcData?.region ?? null,
