@@ -987,17 +987,19 @@ const CheckAvailability = () => {
                 {pcData && (
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
                     <div className="rounded-2xl border border-border bg-card p-4 shadow-lg mb-4">
-                      <iframe
-                        src={`https://www.google.com/maps?q=${pcData.latitude},${pcData.longitude}&z=18&output=embed`}
-                        title="Property location"
-                        className="w-full border-0"
-                        style={{ height: 380, borderRadius: 12 }}
-                        loading="lazy"
-                        allowFullScreen
+                      <div
+                        ref={mapContainerRef}
+                        className="w-full"
+                        style={{ height: 380, borderRadius: 12, overflow: "hidden" }}
                       />
+                      {coords && (
+                        <p className="mt-2 text-xs text-muted-foreground text-center">
+                          📍 {coords.lat.toFixed(6)}, {coords.lng.toFixed(6)}
+                        </p>
+                      )}
                       <div className="mt-3 rounded-lg bg-primary/5 border border-primary/20 px-4 py-3 text-center">
                         <p className="text-sm text-foreground leading-relaxed">
-                          Confirm this is the correct location for your property.
+                          Click the map to drop a pin on your exact property. This helps us check line-of-sight to nearby towers.
                         </p>
                       </div>
                     </div>
