@@ -331,6 +331,7 @@ const CheckAvailability = () => {
   const [pains, setPains] = useState<Set<PainPoint>>(new Set());
   const [urgency, setUrgency] = useState<string>("");
   const [houseBuildingNumber, setHouseBuildingNumber] = useState<string>("");
+  const [subStep, setSubStep] = useState(1); // 1=business type, 2=pain points, 3=urgency
 
   // Step 3
   const [postcode, setPostcode] = useState("");
@@ -728,6 +729,7 @@ const CheckAvailability = () => {
       step_label: ["", "details", "about_you", "pin_drop"][n] || `step_${n}`,
     });
 
+    if (n === 2) setSubStep(1); // Reset carousel when entering step 2
     setStep(n);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -865,105 +867,162 @@ const CheckAvailability = () => {
             {/* ═══ STEP 2: Service Type + Pain Points ═══ */}
             {step === 2 && (
               <motion.div key="step2" {...fadeUp}>
-                <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Building2 className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h2 className="text-lg font-semibold text-foreground">What best describes you?</h2>
-                      <p className="text-xs text-muted-foreground">We'll tailor your results to match</p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    {SERVICE_OPTIONS.map((opt) => (
-                      <button
-                        key={opt.value}
-                        onClick={() => setService(opt.value)}
-                        className={`w-full flex items-center gap-4 rounded-xl border-2 p-4 text-left transition-all ${
-                          service === opt.value
-                            ? "border-primary bg-primary/5 shadow-sm"
-                            : "border-border hover:border-primary/30 hover:bg-muted/30"
-                        }`}
-                      >
-                        <div className={`h-12 w-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
-                          service === opt.value ? "bg-primary text-white" : "bg-muted"
-                        }`}>
-                          <opt.icon className={`h-5 w-5 ${service === opt.value ? "text-white" : "text-muted-foreground"}`} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between">
-                            <p className="text-sm font-semibold text-foreground">{opt.title}</p>
-                            {service === opt.value && <Check className="h-4 w-4 text-primary flex-shrink-0" />}
-                          </div>
-                          <p className="text-xs text-muted-foreground leading-snug">{opt.desc}</p>
-                          <p className="text-xs font-medium text-primary mt-1">{opt.benefit}</p>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 pt-5 border-t border-border">
-                    <p className="text-sm font-medium text-foreground mb-3">Sound familiar? Tick any that apply:</p>
-                    <div className="space-y-2">
-                      {PAIN_POINTS.map((pp) => (
-                        <button
-                          key={pp.value}
-                          onClick={() => togglePain(pp.value)}
-                          className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
-                            pains.has(pp.value)
-                              ? "border-primary bg-primary/5"
-                              : "border-border hover:border-primary/30"
-                          }`}
-                        >
-                          <div className={`h-5 w-5 rounded flex items-center justify-center flex-shrink-0 transition-all ${
-                            pains.has(pp.value) ? "bg-primary" : "border-2 border-border"
-                          }`}>
-                            {pains.has(pp.value) && <Check className="h-3 w-3 text-white" />}
-                          </div>
-                          <span className="text-sm text-foreground">{pp.label}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Urgency question */}
-                  <div className="mt-6 pt-5 border-t border-border">
-                    <p className="text-sm font-medium text-foreground mb-3">How urgent is your need for better connectivity?</p>
-                    <div className="space-y-2">
-                      {[
-                        "I needed a solution yesterday",
-                        "It's important, but not urgent",
-                        "I'm just browsing",
-                      ].map((option) => (
-                        <button
-                          key={option}
-                          onClick={() => setUrgency(option)}
-                          className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
-                            urgency === option
-                              ? "border-primary bg-primary/5"
-                              : "border-border hover:border-primary/30"
-                          }`}
-                        >
-                          <div className={`h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 transition-all ${
-                            urgency === option ? "bg-primary" : "border-2 border-border"
-                          }`}>
-                            {urgency === option && <Check className="h-3 w-3 text-white" />}
-                          </div>
-                          <span className="text-sm text-foreground">{option}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                {/* Sub-step progress dots */}
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  {[1, 2, 3].map((s) => (
+                    <div
+                      key={s}
+                      className={`h-2 rounded-full transition-all ${
+                        s === subStep ? "w-8 bg-primary" : s < subStep ? "w-2 bg-primary/50" : "w-2 bg-border"
+                      }`}
+                    />
+                  ))}
                 </div>
 
-                <Button onClick={() => goTo(3)} disabled={!step2Valid} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
-                  Continue to Pin Drop <MapPin className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" onClick={() => goTo(1)} className="w-full mt-2 h-11">
-                  <ArrowLeft className="mr-2 h-4 w-4" /> Back
-                </Button>
+                <AnimatePresence mode="wait">
+                  {/* Sub-step 1: Business type */}
+                  {subStep === 1 && (
+                    <motion.div key="sub1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
+                      <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                            <Building2 className="h-5 w-5 text-primary" />
+                          </div>
+                          <div>
+                            <h2 className="text-lg font-semibold text-foreground">What best describes you?</h2>
+                            <p className="text-xs text-muted-foreground">We'll tailor your results to match</p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          {SERVICE_OPTIONS.map((opt) => (
+                            <button
+                              key={opt.value}
+                              onClick={() => { setService(opt.value); setTimeout(() => setSubStep(2), 300); }}
+                              className={`w-full flex items-center gap-4 rounded-xl border-2 p-4 text-left transition-all ${
+                                service === opt.value
+                                  ? "border-primary bg-primary/5 shadow-sm"
+                                  : "border-border hover:border-primary/30 hover:bg-muted/30"
+                              }`}
+                            >
+                              <div className={`h-12 w-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
+                                service === opt.value ? "bg-primary text-white" : "bg-muted"
+                              }`}>
+                                <opt.icon className={`h-5 w-5 ${service === opt.value ? "text-white" : "text-muted-foreground"}`} />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center justify-between">
+                                  <p className="text-sm font-semibold text-foreground">{opt.title}</p>
+                                  {service === opt.value && <Check className="h-4 w-4 text-primary flex-shrink-0" />}
+                                </div>
+                                <p className="text-xs text-muted-foreground leading-snug">{opt.desc}</p>
+                                <p className="text-xs font-medium text-primary mt-1">{opt.benefit}</p>
+                              </div>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      <Button variant="outline" onClick={() => goTo(1)} className="w-full mt-2 h-11">
+                        <ArrowLeft className="mr-2 h-4 w-4" /> Back
+                      </Button>
+                    </motion.div>
+                  )}
+
+                  {/* Sub-step 2: Pain points */}
+                  {subStep === 2 && (
+                    <motion.div key="sub2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
+                      <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                            <Zap className="h-5 w-5 text-primary" />
+                          </div>
+                          <div>
+                            <h2 className="text-lg font-semibold text-foreground">Sound familiar?</h2>
+                            <p className="text-xs text-muted-foreground">Tick any that apply (optional)</p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          {PAIN_POINTS.map((pp) => (
+                            <button
+                              key={pp.value}
+                              onClick={() => togglePain(pp.value)}
+                              className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
+                                pains.has(pp.value)
+                                  ? "border-primary bg-primary/5"
+                                  : "border-border hover:border-primary/30"
+                              }`}
+                            >
+                              <div className={`h-5 w-5 rounded flex items-center justify-center flex-shrink-0 transition-all ${
+                                pains.has(pp.value) ? "bg-primary" : "border-2 border-border"
+                              }`}>
+                                {pains.has(pp.value) && <Check className="h-3 w-3 text-white" />}
+                              </div>
+                              <span className="text-sm text-foreground">{pp.label}</span>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      <Button onClick={() => setSubStep(3)} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                        Continue <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                      <Button variant="outline" onClick={() => setSubStep(1)} className="w-full mt-2 h-11">
+                        <ArrowLeft className="mr-2 h-4 w-4" /> Back
+                      </Button>
+                    </motion.div>
+                  )}
+
+                  {/* Sub-step 3: Urgency */}
+                  {subStep === 3 && (
+                    <motion.div key="sub3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
+                      <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                            <Clock className="h-5 w-5 text-primary" />
+                          </div>
+                          <div>
+                            <h2 className="text-lg font-semibold text-foreground">How urgent is your need?</h2>
+                            <p className="text-xs text-muted-foreground">This helps us prioritise your enquiry</p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          {[
+                            "I needed a solution yesterday",
+                            "It's important, but not urgent",
+                            "I'm just browsing",
+                          ].map((option) => (
+                            <button
+                              key={option}
+                              onClick={() => setUrgency(option)}
+                              className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
+                                urgency === option
+                                  ? "border-primary bg-primary/5"
+                                  : "border-border hover:border-primary/30"
+                              }`}
+                            >
+                              <div className={`h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 transition-all ${
+                                urgency === option ? "bg-primary" : "border-2 border-border"
+                              }`}>
+                                {urgency === option && <Check className="h-3 w-3 text-white" />}
+                              </div>
+                              <span className="text-sm text-foreground">{option}</span>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      <Button onClick={() => goTo(3)} disabled={!step2Valid} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                        Continue to Pin Drop <MapPin className="ml-2 h-5 w-5" />
+                      </Button>
+                      <Button variant="outline" onClick={() => setSubStep(2)} className="w-full mt-2 h-11">
+                        <ArrowLeft className="mr-2 h-4 w-4" /> Back
+                      </Button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
 
                 {/* Reassurance */}
                 <p className="text-center text-xs text-muted-foreground mt-4">
