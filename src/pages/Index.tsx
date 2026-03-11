@@ -386,6 +386,28 @@ const Index = () => {
 
         <PartnerLogoBar />
 
+        {/* ── SEO CONTENT ──────────────────────────────────────────────── */}
+        <section className="bg-background py-16 md:py-20">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <AnimatedSection>
+              <h2 className="text-heading-2 text-foreground text-center mb-6 font-medium">
+                Rural Broadband That Actually Works
+              </h2>
+              <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
+                <p>
+                  Integra Networks provides fast, reliable internet to rural homes and businesses across the UK. Using a combination of SD-WAN, Starlink satellite, 4G/5G cellular bonding, and dedicated fibre leased lines, we deliver speeds of up to 350Mbps to properties where traditional broadband providers like BT, Virgin Media, and Vodafone cannot reach.
+                </p>
+                <p>
+                  Whether you're a remote worker struggling with dropped video calls, a construction company needing temporary site connectivity, or a rural SME that's been told fibre is years away — we have a solution that can be installed in under 14 days with no excess construction charges.
+                </p>
+                <p>
+                  Our network covers 99% of the UK, including hard-to-reach areas in the Cotswolds, Devon, Somerset, Yorkshire, the North West, Kent, Sussex, Surrey, and Essex. Every installation begins with a free desktop survey where our engineers analyse your exact location, nearby cell towers, and line-of-sight to determine the best connectivity option for your property.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
         <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       </PageLayout>
     </>
