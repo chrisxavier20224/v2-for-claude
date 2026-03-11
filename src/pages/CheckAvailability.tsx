@@ -35,6 +35,12 @@ interface AddressOption {
   full_address: string;
 }
 
+interface AutocompleteResult {
+  suggestion: string;
+  udprn: number;
+  urls: { udprn: string };
+}
+
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
