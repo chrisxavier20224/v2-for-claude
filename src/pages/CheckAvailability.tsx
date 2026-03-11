@@ -375,33 +375,49 @@ const CheckAvailability = () => {
 
   /* ---- Init map when pcData arrives and container is rendered ---- */
   useEffect(() => {
-    if (pcData && mapContainerRef.current && !mapRef.current) {
-      initMap().then(() => {
-        setTimeout(() => {
-          if (mapRef.current) {
-            mapRef.current.invalidateSize();
-            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
-            const L = window.L;
-            if (markerRef.current) {
-              markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
-            } else {
-              markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
-            }
-            setCoords({ lat: pcData.latitude, lng: pcData.longitude });
-          }
-        }, 400);
-      });
-    } else if (pcData && mapRef.current) {
-      // Map already exists, just fly to new location
-      mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
-      const L = window.L;
-      if (markerRef.current) {
-        markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
-      } else {
-        markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+    if (!pcData) return;
+    let cancelled = false;
+
+    const tryInit = async () => {
+      // Wait for container to be in the DOM (AnimatePresence may delay it)
+      let attempts = 0;
+      while (!mapContainerRef.current && attempts < 20 && !cancelled) {
+        await new Promise(r => setTimeout(r, 100));
+        attempts++;
       }
-      setCoords({ lat: pcData.latitude, lng: pcData.longitude });
-    }
+      if (cancelled || !mapContainerRef.current) return;
+
+      if (!mapRef.current) {
+        await initMap();
+        if (cancelled) return;
+        // Wait for map to be ready
+        await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+        if (mapRef.current) {
+          mapRef.current.invalidateSize();
+          mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+          const L = window.L;
+          if (markerRef.current) {
+            markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+          } else {
+            markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+          }
+          setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+        }
+      } else {
+        mapRef.current.invalidateSize();
+        mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+        const L = window.L;
+        if (markerRef.current) {
+          markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+        } else {
+          markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+        }
+        setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+      }
+    };
+
+    tryInit();
+    return () => { cancelled = true; };
   }, [pcData, initMap]);
 
   /* ---- Cleanup map on unmount ---- */
