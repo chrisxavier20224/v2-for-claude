@@ -190,7 +190,7 @@ async function submitToHubSpot(payload: {
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] } },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] as const } },
   exit: { opacity: 0, y: -12, transition: { duration: 0.2 } },
 };
 
@@ -376,7 +376,7 @@ const CheckAvailability = () => {
       if (data.status === 200 && data.result) {
         setPcData(data.result);
 
-        // Fetch addresses from Ideal Postcodes API in parallel
+        // Fetch addresses from Ideal Postcodes API in parallel (address lookup integration)
         const idealPostcodesKey = import.meta.env.VITE_IDEAL_POSTCODES_API_KEY;
         if (idealPostcodesKey) {
           try {

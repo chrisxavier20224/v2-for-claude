@@ -10,7 +10,7 @@ const LiveGeneratorCard = () => {
   const [voltage, setVoltage] = useState(415);
   const [frequency, setFrequency] = useState(50.0);
   const [runHours, setRunHours] = useState(4217);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const update = () => {
