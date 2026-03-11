@@ -175,6 +175,25 @@ async function submitToHubSpot(payload: {
     }
   }
 
+  // UTM fields
+  const utmFields: [string, string | undefined][] = [
+    ["utm_source", payload.utm_source],
+    ["utm_medium", payload.utm_medium],
+    ["utm_campaign", payload.utm_campaign],
+    ["utm_term", payload.utm_term],
+    ["utm_content", payload.utm_content],
+    ["gclid", payload.gclid],
+  ];
+  utmFields.forEach(([name, value]) => {
+    if (value) fields.push({ objectTypeId: "0-1", name, value });
+  });
+
+  // Read hutk cookie for HubSpot tracking
+  const hutk = document.cookie
+    .split("; ")
+    .find((c) => c.startsWith("hubspotutk="))
+    ?.split("=")[1] || undefined;
+
   try {
     const resp = await fetch(
       `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
@@ -186,6 +205,7 @@ async function submitToHubSpot(payload: {
           context: {
             pageUri: window.location.href,
             pageName: "Availability Checker",
+            ...(hutk ? { hutk } : {}),
           },
         }),
       },
