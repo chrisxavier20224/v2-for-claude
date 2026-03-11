@@ -541,14 +541,6 @@ const CheckAvailability = () => {
         } catch (err) {
           console.error("Ideal Postcodes error:", err);
         }
-
-        await initMap();
-        setTimeout(() => {
-          if (mapRef.current) {
-            mapRef.current.invalidateSize();
-            mapRef.current.flyTo([data.result.latitude, data.result.longitude], 18, { duration: 1.5 });
-          }
-        }, 400);
       } else {
         alert("Postcode not found. Please check and try again.");
       }
