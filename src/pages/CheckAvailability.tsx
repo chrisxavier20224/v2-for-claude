@@ -113,6 +113,12 @@ async function submitToHubSpot(payload: {
   region: string | null;
   property_coordinates: string | null;
   address: string | null;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+  gclid?: string;
 }): Promise<boolean> {
   const fields: { objectTypeId: string; name: string; value: string }[] = [
     { objectTypeId: "0-1", name: "firstname", value: payload.first_name },
@@ -169,6 +175,25 @@ async function submitToHubSpot(payload: {
     }
   }
 
+  // UTM fields
+  const utmFields: [string, string | undefined][] = [
+    ["utm_source", payload.utm_source],
+    ["utm_medium", payload.utm_medium],
+    ["utm_campaign", payload.utm_campaign],
+    ["utm_term", payload.utm_term],
+    ["utm_content", payload.utm_content],
+    ["gclid", payload.gclid],
+  ];
+  utmFields.forEach(([name, value]) => {
+    if (value) fields.push({ objectTypeId: "0-1", name, value });
+  });
+
+  // Read hutk cookie for HubSpot tracking
+  const hutk = document.cookie
+    .split("; ")
+    .find((c) => c.startsWith("hubspotutk="))
+    ?.split("=")[1] || undefined;
+
   try {
     const resp = await fetch(
       `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
@@ -180,6 +205,7 @@ async function submitToHubSpot(payload: {
           context: {
             pageUri: window.location.href,
             pageName: "Availability Checker",
+            ...(hutk ? { hutk } : {}),
           },
         }),
       },
@@ -295,6 +321,19 @@ const CheckAvailability = () => {
 
   const [step1Touched, setStep1Touched] = useState(false);
   const formStartedRef = useRef(false);
+  const utmParamsRef = useRef<Record<string, string>>({});
+
+  /* ---- Capture UTM params on mount ---- */
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+    const captured: Record<string, string> = {};
+    utmKeys.forEach((key) => {
+      const val = params.get(key);
+      if (val) captured[key] = val;
+    });
+    utmParamsRef.current = captured;
+  }, []);
 
   /* ---- Conversion tracking ---- */
   // Track form_view on mount (equivalent to Typeform "views")
@@ -533,6 +572,7 @@ const CheckAvailability = () => {
           ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`
           : null,
         address: selectedAddress,
+        ...utmParamsRef.current,
       };
 
       setSubmitting(true);
