@@ -1022,10 +1022,11 @@ const CheckAvailability = () => {
                                 return (
                                 <button
                                   key={idx}
-                                  onClick={() => {
-                                    setSelectedAddress(displayText);
-                                    setAddressDropdownOpen(false);
-                                  }}
+                  onClick={() => {
+                    const streetAddr = [addr.line_1, addr.line_2, addr.line_3, addr.post_town].filter(Boolean).join(", ");
+                    setSelectedAddress(streetAddr || displayText);
+                    setAddressDropdownOpen(false);
+                  }}
                                   className={`w-full text-left px-4 py-3 transition-all border-b border-border last:border-b-0 hover:bg-muted/50 ${
                                     selectedAddress === displayText ? "bg-primary/5 border-l-2 border-l-primary" : ""
                                   }`}
