@@ -35,6 +35,12 @@ interface AddressOption {
   full_address: string;
 }
 
+interface AutocompleteResult {
+  suggestion: string;
+  udprn: number;
+  urls: { udprn: string };
+}
+
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
@@ -364,34 +370,130 @@ const CheckAvailability = () => {
     setTimeout(() => m.invalidateSize(), 600);
   }, []);
 
-  /* ---- Postcode ---- */
-  const lookupPostcode = async () => {
-    const pc = postcode.trim().replace(/\s+/g, "");
-    if (!pc) return;
-    setPcLoading(true);
+  /* ---- Address autocomplete & postcode detection ---- */
+  const IDEAL_API_KEY = "ak_mmhtvflhz3HHzrt20r8xYpzM2rAqX";
+  const UK_POSTCODE_RE = /^[A-Z]{1,2}[0-9]{1,2}[A-Z]?\s?[0-9][A-Z]{2}$/i;
+  const [autocompleteResults, setAutocompleteResults] = useState<AutocompleteResult[]>([]);
+  const [showAutocomplete, setShowAutocomplete] = useState(false);
+  const [autocompleteLoading, setAutocompleteLoading] = useState(false);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const autocompleteRef = useRef<HTMLDivElement>(null);
+
+  // Close autocomplete on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (autocompleteRef.current && !autocompleteRef.current.contains(e.target as Node)) {
+        setShowAutocomplete(false);
+      }
+    };
+    if (showAutocomplete) {
+      document.addEventListener("mousedown", handler);
+      return () => document.removeEventListener("mousedown", handler);
+    }
+  }, [showAutocomplete]);
+
+  const handleAddressInput = (value: string) => {
+    setPostcode(value);
+    setPcData(null);
     setAddresses([]);
     setSelectedAddress(null);
+
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+
+    const trimmed = value.trim();
+    if (trimmed.length < 3) {
+      setAutocompleteResults([]);
+      setShowAutocomplete(false);
+      return;
+    }
+
+    // If it looks like a full UK postcode, do direct lookup
+    if (UK_POSTCODE_RE.test(trimmed)) {
+      debounceRef.current = setTimeout(() => directPostcodeLookup(trimmed), 300);
+      return;
+    }
+
+    // Otherwise autocomplete addresses
+    debounceRef.current = setTimeout(async () => {
+      setAutocompleteLoading(true);
+      try {
+        const resp = await fetch(
+          `https://api.ideal-postcodes.co.uk/v1/autocomplete/addresses?query=${encodeURIComponent(trimmed)}&api_key=${IDEAL_API_KEY}&limit=10`
+        );
+        const data = await resp.json();
+        if (data.result?.hits && Array.isArray(data.result.hits)) {
+          setAutocompleteResults(data.result.hits);
+          setShowAutocomplete(data.result.hits.length > 0);
+        } else {
+          setAutocompleteResults([]);
+          setShowAutocomplete(false);
+        }
+      } catch (err) {
+        console.error("Autocomplete error:", err);
+        setAutocompleteResults([]);
+      }
+      setAutocompleteLoading(false);
+    }, 300);
+  };
+
+  const selectAutocompleteResult = async (result: AutocompleteResult) => {
+    setShowAutocomplete(false);
+    setPostcode(result.suggestion);
+    setSelectedAddress(result.suggestion);
+    setPcLoading(true);
+
     try {
-      const resp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(pc)}`);
+      // Fetch full address details via UDPRN
+      const udprnResp = await fetch(
+        `https://api.ideal-postcodes.co.uk/v1/udprn/${result.udprn}?api_key=${IDEAL_API_KEY}`
+      );
+      const udprnData = await udprnResp.json();
+      const extractedPostcode = udprnData.result?.postcode;
+
+      if (extractedPostcode) {
+        // Now get lat/lng from postcodes.io
+        const pcResp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(extractedPostcode)}`);
+        const pcData = await pcResp.json();
+        if (pcData.status === 200 && pcData.result) {
+          setPcData(pcData.result);
+          await initMap();
+          setTimeout(() => {
+            if (mapRef.current) {
+              mapRef.current.invalidateSize();
+              mapRef.current.flyTo([pcData.result.latitude, pcData.result.longitude], 18, { duration: 1.5 });
+            }
+          }, 400);
+        }
+      }
+    } catch (err) {
+      console.error("Address detail lookup error:", err);
+      alert("Error looking up address details. Please try again.");
+    }
+    setPcLoading(false);
+  };
+
+  const directPostcodeLookup = async (pc: string) => {
+    const sanitized = pc.replace(/\s+/g, "");
+    setPcLoading(true);
+    setAutocompleteResults([]);
+    setShowAutocomplete(false);
+    try {
+      const resp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(sanitized)}`);
       const data = await resp.json();
       if (data.status === 200 && data.result) {
         setPcData(data.result);
 
-        // Fetch addresses from Ideal Postcodes API in parallel (address lookup integration)
-        const idealPostcodesKey = "ak_mmhtvflhz3HHzrt20r8xYpzM2rAqX";
-        if (idealPostcodesKey) {
-          try {
-            const idealResp = await fetch(
-              `https://api.ideal-postcodes.co.uk/v1/postcodes/${encodeURIComponent(pc)}?api_key=${encodeURIComponent(idealPostcodesKey)}`
-            );
-            const idealData = await idealResp.json();
-            if (idealData.result && Array.isArray(idealData.result)) {
-              setAddresses(idealData.result);
-            }
-          } catch (err) {
-            console.error("Error fetching from Ideal Postcodes API:", err);
-            // Gracefully continue without address list
+        // Also fetch address list from Ideal Postcodes for this postcode
+        try {
+          const idealResp = await fetch(
+            `https://api.ideal-postcodes.co.uk/v1/postcodes/${encodeURIComponent(sanitized)}?api_key=${IDEAL_API_KEY}`
+          );
+          const idealData = await idealResp.json();
+          if (idealData.result && Array.isArray(idealData.result)) {
+            setAddresses(idealData.result);
           }
+        } catch (err) {
+          console.error("Ideal Postcodes error:", err);
         }
 
         await initMap();
@@ -401,8 +503,12 @@ const CheckAvailability = () => {
             mapRef.current.flyTo([data.result.latitude, data.result.longitude], 18, { duration: 1.5 });
           }
         }, 400);
-      } else { alert("Postcode not found. Please check and try again."); }
-    } catch { alert("Error looking up postcode. Please try again."); }
+      } else {
+        alert("Postcode not found. Please check and try again.");
+      }
+    } catch {
+      alert("Error looking up postcode. Please try again.");
+    }
     setPcLoading(false);
   };
 
@@ -702,23 +808,40 @@ const CheckAvailability = () => {
                   </div>
 
                   <label className="block text-sm font-medium text-foreground mb-1.5">Address</label>
-                  <div className="flex gap-2">
-                    <Input
-                      value={postcode}
-                      onChange={(e) => setPostcode(e.target.value.toUpperCase())}
-                      placeholder="Type in your address"
-                      autoComplete="postal-code"
-                      className="flex-1 uppercase"
-                      onKeyDown={(e) => e.key === "Enter" && lookupPostcode()}
-                    />
-                    <Button onClick={lookupPostcode} disabled={pcLoading} className={`px-5 ${postcode.trim().length >= 5 && !pcData ? "animate-pulse" : ""}`}>
-                      {pcLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><Search className="h-4 w-4 mr-1" /> Find</>}
-                    </Button>
+                  <div className="relative" ref={autocompleteRef}>
+                    <div className="relative">
+                      <Input
+                        value={postcode}
+                        onChange={(e) => handleAddressInput(e.target.value)}
+                        placeholder="Type in your address or postcode"
+                        autoComplete="off"
+                        className="w-full pr-10"
+                      />
+                      {(pcLoading || autocompleteLoading) && (
+                        <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 animate-spin text-muted-foreground" />
+                      )}
+                    </div>
+
+                    {showAutocomplete && autocompleteResults.length > 0 && (
+                      <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-border bg-card shadow-lg overflow-hidden">
+                        <div className="max-h-[300px] overflow-y-auto">
+                          {autocompleteResults.map((result, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => selectAutocompleteResult(result)}
+                              className="w-full text-left px-4 py-3 text-sm text-foreground transition-colors border-b border-border last:border-b-0 hover:bg-muted/50"
+                            >
+                              {result.suggestion}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
 
-                  {!pcData && !pcLoading && (
+                  {!pcData && !pcLoading && !showAutocomplete && (
                     <p className="mt-2 text-xs text-muted-foreground flex items-center gap-1">
-                      <ArrowRight className="h-3 w-3" /> Type in your address and tap <span className="font-semibold text-primary">Find</span> to load the map
+                      <Search className="h-3 w-3" /> Start typing your address or postcode to search
                     </p>
                   )}
 
