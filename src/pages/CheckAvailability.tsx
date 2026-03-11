@@ -13,9 +13,12 @@ declare global {
   interface Window { L: any; }
 }
 
+let leafletLoadPromise: Promise<void> | null = null;
+
 function loadLeaflet(): Promise<void> {
-  return new Promise((resolve) => {
-    if (window.L) { resolve(); return; }
+  if (window.L) return Promise.resolve();
+  if (leafletLoadPromise) return leafletLoadPromise;
+  leafletLoadPromise = new Promise((resolve) => {
     const css = document.createElement("link");
     css.rel = "stylesheet";
     css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
@@ -25,6 +28,7 @@ function loadLeaflet(): Promise<void> {
     js.onload = () => resolve();
     document.head.appendChild(js);
   });
+  return leafletLoadPromise;
 }
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -358,6 +362,11 @@ const CheckAvailability = () => {
     tileLayerRef.current = esriSat;
     mapRef.current = map;
 
+    // Ensure map sizes correctly after initial render
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (mapRef.current) mapRef.current.invalidateSize();
+    }));
+
     map.on("click", (e: any) => {
       const { lat, lng } = e.latlng;
       setCoords({ lat, lng });
@@ -371,33 +380,49 @@ const CheckAvailability = () => {
 
   /* ---- Init map when pcData arrives and container is rendered ---- */
   useEffect(() => {
-    if (pcData && mapContainerRef.current && !mapRef.current) {
-      initMap().then(() => {
-        setTimeout(() => {
-          if (mapRef.current) {
-            mapRef.current.invalidateSize();
-            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
-            const L = window.L;
-            if (markerRef.current) {
-              markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
-            } else {
-              markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
-            }
-            setCoords({ lat: pcData.latitude, lng: pcData.longitude });
-          }
-        }, 400);
-      });
-    } else if (pcData && mapRef.current) {
-      // Map already exists, just fly to new location
-      mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
-      const L = window.L;
-      if (markerRef.current) {
-        markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
-      } else {
-        markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+    if (!pcData) return;
+    let cancelled = false;
+
+    const tryInit = async () => {
+      // Wait for container to be in the DOM (AnimatePresence may delay it)
+      let attempts = 0;
+      while (!mapContainerRef.current && attempts < 20 && !cancelled) {
+        await new Promise(r => setTimeout(r, 100));
+        attempts++;
       }
-      setCoords({ lat: pcData.latitude, lng: pcData.longitude });
-    }
+      if (cancelled || !mapContainerRef.current) return;
+
+      if (!mapRef.current) {
+        await initMap();
+        if (cancelled) return;
+        // Wait for map to be ready
+        await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+        if (mapRef.current) {
+          mapRef.current.invalidateSize();
+          mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+          const L = window.L;
+          if (markerRef.current) {
+            markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+          } else {
+            markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+          }
+          setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+        }
+      } else {
+        mapRef.current.invalidateSize();
+        mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+        const L = window.L;
+        if (markerRef.current) {
+          markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+        } else {
+          markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+        }
+        setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+      }
+    };
+
+    tryInit();
+    return () => { cancelled = true; };
   }, [pcData, initMap]);
 
   /* ---- Cleanup map on unmount ---- */
