@@ -4,18 +4,18 @@ import { useRef, useState, useEffect } from "react";
 import AnimatedSection from "./AnimatedSection";
 import GradientBand from "./GradientBand";
 
-import royleFarmHero from "@/assets/case-studies/royle-farm-hero.jpg";
-import steamRallyHero from "@/assets/case-studies/steam-rally-hero.png";
+import royleFarmHero from "@/assets/case-studies/royle-farm-hero.webp";
+import steamRallyHero from "@/assets/case-studies/steam-rally-hero.webp";
 import wbPowerHero from "@/assets/case-studies/wb-power-hero.avif";
-import mcgeeHero from "@/assets/case-studies/mcgee-hero.jpg";
-import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.jpg";
-import carbeeHero from "@/assets/case-studies/carbee-hero.jpg";
-import rhycHero from "@/assets/case-studies/rhyc-hero.jpg";
-import ukharvestHero from "@/assets/case-studies/ukharvest-hero.jpg";
+import mcgeeHero from "@/assets/case-studies/mcgee-hero.webp";
+import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.webp";
+import carbeeHero from "@/assets/case-studies/carbee-hero.webp";
+import rhycHero from "@/assets/case-studies/rhyc-hero.webp";
+import ukharvestHero from "@/assets/case-studies/ukharvest-hero.webp";
 import thinkingAnglersHero from "@/assets/case-studies/thinking-anglers-hero.jpg";
-import aturaHero from "@/assets/case-studies/atura-hero.jpg";
-import apjHero from "@/assets/case-studies/apj-hero.jpg";
-import seaconHero from "@/assets/case-studies/seacon-hero.jpg";
+import aturaHero from "@/assets/case-studies/atura-hero.webp";
+import apjHero from "@/assets/case-studies/apj-hero.webp";
+import seaconHero from "@/assets/case-studies/seacon-hero.webp";
 
 const allStories = [
   { company: "Royle Farm Business Park", title: "From Farm to Fibre: Royle Farm Business Park", image: royleFarmHero, path: "/customers/royle-farm" },

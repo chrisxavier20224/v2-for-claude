@@ -10,7 +10,7 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/case-studies/seacon-port.jpg";
+import heroImg from "@/assets/case-studies/seacon-port.webp";
 import cablingImg from "@/assets/sectors/fibre-preconnect.jpg";
 import cabinetImg from "@/assets/sectors/business-parks-fibre.jpg";
 import surveyImg from "@/assets/sectors/fibre-wifi-design.jpg";

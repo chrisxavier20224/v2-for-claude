@@ -15,7 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroImg from "@/assets/connectivity/managed-sim-hero.jpg";
+import heroImg from "@/assets/connectivity/managed-sim-hero.webp";
 
 const challenges = [
   {

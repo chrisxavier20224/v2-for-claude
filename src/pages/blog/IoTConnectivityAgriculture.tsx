@@ -1,7 +1,7 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-import farmHillside from "@/assets/blog/farm-hillside-cottage.jpg";
-import farmFields from "@/assets/blog/farm-rolling-fields.jpg";
-import farmValley from "@/assets/blog/farm-valley-village.jpg";
+import farmHillside from "@/assets/blog/farm-hillside-cottage.webp";
+import farmFields from "@/assets/blog/farm-rolling-fields.webp";
+import farmValley from "@/assets/blog/farm-valley-village.webp";
 
 
 const IoTConnectivityAgriculture = () => (

@@ -16,7 +16,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroImg from "@/assets/backgrounds/field-2.jpg";
+import heroImg from "@/assets/backgrounds/field-2.webp";
 
 const solutions = [
   {

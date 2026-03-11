@@ -10,11 +10,11 @@ import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
-import heroImg from "@/assets/sectors/rural-sme-hero.jpg";
+import heroImg from "@/assets/sectors/rural-sme-hero.webp";
 import copperImg from "@/assets/sectors/rural-sme-copper.jpg";
 import installImg from "@/assets/sectors/rural-sme-install.jpg";
 import paymentsImg from "@/assets/sectors/rural-sme-payments.jpg";
-import carbeeHero from "@/assets/case-studies/carbee-hero.jpg";
+import carbeeHero from "@/assets/case-studies/carbee-hero.webp";
 
 const painPoints = [
   {

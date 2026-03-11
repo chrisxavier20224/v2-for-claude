@@ -10,12 +10,12 @@ import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
-import heroImg from "@/assets/sectors/airbnb-hero.jpg";
+import heroImg from "@/assets/sectors/airbnb-hero.webp";
 import glampingImg from "@/assets/sectors/airbnb-glamping.jpg";
 import podsImg from "@/assets/sectors/airbnb-pods.jpg";
 import reviewsImg from "@/assets/sectors/airbnb-reviews.jpg";
 import meetingsImg from "@/assets/sectors/airbnb-meetings.jpg";
-import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.jpg";
+import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.webp";
 
 const painPoints = [
   {

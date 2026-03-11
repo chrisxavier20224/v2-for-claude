@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Factory, Tent, Home, Tractor, HardHat } from "lucide-react";
 
-import businessParksHero from "@/assets/sectors/business-parks-hero.jpg";
-import constructionHero from "@/assets/sectors/construction-hero.jpg";
-import ruralSmeHero from "@/assets/sectors/rural-sme-hero.jpg";
+import businessParksHero from "@/assets/sectors/business-parks-hero.webp";
+import constructionHero from "@/assets/sectors/construction-hero.webp";
+import ruralSmeHero from "@/assets/sectors/rural-sme-hero.webp";
 import homeworkerHero from "@/assets/sectors/homeworker-remote-work.avif";
-import airbnbHero from "@/assets/sectors/airbnb-hero.jpg";
-import fibreHero from "@/assets/sectors/fibre-building-hero.jpg";
+import airbnbHero from "@/assets/sectors/airbnb-hero.webp";
+import fibreHero from "@/assets/sectors/fibre-building-hero.webp";
 
 interface SectorData {
   name: string;

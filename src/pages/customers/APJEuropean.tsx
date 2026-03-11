@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 
-import heroImg from "@/assets/case-studies/apj-hero.jpg";
+import heroImg from "@/assets/case-studies/apj-hero.webp";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
 
 const companyDetails = [

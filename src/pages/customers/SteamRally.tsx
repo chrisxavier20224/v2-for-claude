@@ -7,10 +7,10 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 
-import heroImg from "@/assets/case-studies/steam-rally-hero.png";
+import heroImg from "@/assets/case-studies/steam-rally-hero.webp";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
-import eventImg from "@/assets/case-studies/steam-rally-event.png";
-import bridgeMastImg from "@/assets/case-studies/steam-rally-bridge-mast.png";
+import eventImg from "@/assets/case-studies/steam-rally-event.webp";
+import bridgeMastImg from "@/assets/case-studies/steam-rally-bridge-mast.webp";
 
 const companyDetails = [
   { label: "Company", value: "WRSA Steam Rally Festival" },

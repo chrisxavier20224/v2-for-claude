@@ -13,9 +13,9 @@ import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
 import speedsImg from "@/assets/connectivity/sdwan-speeds.jpg";
-import installImg from "@/assets/connectivity/sdwan-install.jpg";
+import installImg from "@/assets/connectivity/sdwan-install.webp";
 import stableImg from "@/assets/connectivity/sdwan-stable.jpg";
-import aerialImg from "@/assets/connectivity/sdwan-aerial.png";
+import aerialImg from "@/assets/connectivity/sdwan-aerial.webp";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };

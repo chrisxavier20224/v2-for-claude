@@ -7,9 +7,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 
-import heroImg from "@/assets/case-studies/ukharvest-hero.jpg";
+import heroImg from "@/assets/case-studies/ukharvest-hero.webp";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
-import officeImg from "@/assets/case-studies/ukharvest-office.jpg";
+import officeImg from "@/assets/case-studies/ukharvest-office.webp";
 
 const companyDetails = [
   { label: "Company", value: "UKHarvest" },

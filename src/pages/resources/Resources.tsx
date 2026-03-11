@@ -6,7 +6,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
-import heroImg from "@/assets/connectivity/bridge-hero.jpg";
+import heroImg from "@/assets/connectivity/bridge-hero.webp";
 
 const pillarPages = [
   {

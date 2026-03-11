@@ -12,7 +12,7 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/sectors/business-parks-hero.jpg";
+import heroImg from "@/assets/sectors/business-parks-hero.webp";
 import surveyImg from "@/assets/sectors/business-parks-outdoor.jpg";
 import networkImg from "@/assets/sectors/construction-sdwan.jpg";
 import monitoringImg from "@/assets/sectors/business-parks-tenants.jpg";

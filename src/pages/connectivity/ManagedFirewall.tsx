@@ -9,7 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/connectivity/leased-lines-sla.jpg";
+import heroImg from "@/assets/connectivity/leased-lines-sla.webp";
 import monitorImg from "@/assets/connectivity/managed-sim-visibility.jpg";
 
 const features = [

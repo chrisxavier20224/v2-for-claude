@@ -11,9 +11,9 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/connectivity/leased-lines-hero.jpg";
+import heroImg from "@/assets/connectivity/leased-lines-hero.webp";
 import sdwanImg from "@/assets/connectivity/leased-lines-sdwan.jpg";
-import slaImg from "@/assets/connectivity/leased-lines-sla.jpg";
+import slaImg from "@/assets/connectivity/leased-lines-sla.webp";
 import wirelessImg from "@/assets/connectivity/leased-lines-wireless.jpg";
 
 const painPoints = [

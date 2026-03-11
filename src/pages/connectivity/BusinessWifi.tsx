@@ -15,7 +15,7 @@ import publicImg from "@/assets/connectivity/business-wifi-public.jpg";
 import indoorImg from "@/assets/connectivity/business-wifi-indoor.jpg";
 import guestImg from "@/assets/connectivity/business-wifi-guest.jpg";
 import eventImg from "@/assets/connectivity/business-wifi-event.jpg";
-import surveysImg from "@/assets/connectivity/business-wifi-surveys.png";
+import surveysImg from "@/assets/connectivity/business-wifi-surveys.webp";
 
 const painPoints = [
   {

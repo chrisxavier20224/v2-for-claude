@@ -9,7 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/connectivity/leased-lines-hero.jpg";
+import heroImg from "@/assets/connectivity/leased-lines-hero.webp";
 import fibreImg from "@/assets/connectivity/leased-lines-sdwan.jpg";
 
 const useCases = [

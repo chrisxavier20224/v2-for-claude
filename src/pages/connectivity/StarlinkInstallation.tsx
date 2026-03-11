@@ -11,7 +11,7 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/connectivity/starlink-hero.png";
+import heroImg from "@/assets/connectivity/starlink-hero.webp";
 import engineersImg from "@/assets/connectivity/starlink-engineers.jpg";
 import customImg from "@/assets/connectivity/starlink-custom.jpg";
 import staticIpImg from "@/assets/connectivity/starlink-staticip.jpg";

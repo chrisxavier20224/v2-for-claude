@@ -7,10 +7,10 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 
-import heroImg from "@/assets/case-studies/royle-farm-hero.jpg";
+import heroImg from "@/assets/case-studies/royle-farm-hero.webp";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
-import aerialImg from "@/assets/case-studies/royle-farm-aerial.jpg";
-import fibreImg from "@/assets/case-studies/royle-farm-fibre.jpg";
+import aerialImg from "@/assets/case-studies/royle-farm-aerial.webp";
+import fibreImg from "@/assets/case-studies/royle-farm-fibre.webp";
 
 const companyDetails = [
   { label: "Company", value: "Royle Farm Business Park" },

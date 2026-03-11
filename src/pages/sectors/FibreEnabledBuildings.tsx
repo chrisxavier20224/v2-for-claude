@@ -10,12 +10,12 @@ import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
-import heroImg from "@/assets/sectors/fibre-building-hero.jpg";
+import heroImg from "@/assets/sectors/fibre-building-hero.webp";
 import preconnectImg from "@/assets/sectors/fibre-preconnect.jpg";
 import wifiDesignImg from "@/assets/sectors/fibre-wifi-design.jpg";
 import ultrafastImg from "@/assets/sectors/fibre-ultrafast.jpg";
 import officeWifiImg from "@/assets/sectors/fibre-office-wifi.jpg";
-import royleFarmHero from "@/assets/case-studies/royle-farm-hero.jpg";
+import royleFarmHero from "@/assets/case-studies/royle-farm-hero.webp";
 
 // ─── Pain-point cards ─────────────────────────────────────────────────────────
 

@@ -12,27 +12,27 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
 // Hero
-import heroImg from "@/assets/hero-home.jpg";
+import heroImg from "@/assets/hero-home.webp";
 
 // Connectivity service images
-import sdwanImg from "@/assets/sectors/rural-sme-hero.jpg";
-import fibreImg from "@/assets/sectors/fibre-building-hero.jpg";
-import leasedImg from "@/assets/connectivity/leased-lines-hero.jpg";
-import simImg from "@/assets/connectivity/managed-sim-hero.jpg";
+import sdwanImg from "@/assets/sectors/rural-sme-hero.webp";
+import fibreImg from "@/assets/sectors/fibre-building-hero.webp";
+import leasedImg from "@/assets/connectivity/leased-lines-hero.webp";
+import simImg from "@/assets/connectivity/managed-sim-hero.webp";
 
 // WiFi images
 import businessWifiImg from "@/assets/connectivity/business-wifi-hero.jpg";
 import homeWifiImg from "@/assets/connectivity/home-wifi-hero.jpg";
 
 // Unified Comms
-import ucImg from "@/assets/connectivity/unified-comms-hero.jpg";
+import ucImg from "@/assets/connectivity/unified-comms-hero.webp";
 
 // Sector images
-import constructionImg from "@/assets/sectors/construction-hero.jpg";
+import constructionImg from "@/assets/sectors/construction-hero.webp";
 import homeworkerImg from "@/assets/sectors/homeworker-remote-work.avif";
-import ruralImg from "@/assets/sectors/rural-sme-hero.jpg";
-import airbnbImg from "@/assets/sectors/airbnb-hero.jpg";
-import businessParkImg from "@/assets/sectors/business-parks-hero.jpg";
+import ruralImg from "@/assets/sectors/rural-sme-hero.webp";
+import airbnbImg from "@/assets/sectors/airbnb-hero.webp";
+import businessParkImg from "@/assets/sectors/business-parks-hero.webp";
 
 const staggerContainer = {
   hidden: {},

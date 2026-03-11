@@ -15,7 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroImg from "@/assets/connectivity/starlink-hero.png";
+import heroImg from "@/assets/connectivity/starlink-hero.webp";
 
 const useCases = [
   {

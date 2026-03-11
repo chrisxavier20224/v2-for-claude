@@ -9,7 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/connectivity/managed-sim-hero.jpg";
+import heroImg from "@/assets/connectivity/managed-sim-hero.webp";
 import visibilityImg from "@/assets/connectivity/managed-sim-visibility.jpg";
 import voiceImg from "@/assets/connectivity/managed-sim-voice.jpg";
 

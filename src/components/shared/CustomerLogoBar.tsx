@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 import mcgeeLogo from "@/assets/case-studies/mcgee-logo.png";
 import seaconLogo from "@/assets/case-studies/seacon-logo.png";
-import wbPowerLogo from "@/assets/case-studies/wb-power-logo.png";
+import wbPowerLogo from "@/assets/case-studies/wb-power-logo.webp";
 import ukHarvestLogo from "@/assets/case-studies/uk-harvest-logo.png";
 import royleFarmLogo from "@/assets/case-studies/royle-farm-business-park-logo.png";
 import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo.png";
 import thinkingAnglersLogo from "@/assets/case-studies/thinking-anglers-logo.png";
 import littleQuarryLogo from "@/assets/case-studies/little-quarry-glamping-logo.png";
 import wsraLogo from "@/assets/case-studies/wsra-steam-rally-logo.png";
-import carbeeLogo from "@/assets/case-studies/carbee-logo.png";
+import carbeeLogo from "@/assets/case-studies/carbee-logo.webp";
 
 const customers = [
   { name: "McGee Group", link: "/customers/mcgee-construction", logo: mcgeeLogo },

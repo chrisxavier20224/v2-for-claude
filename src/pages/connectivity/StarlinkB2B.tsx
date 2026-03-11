@@ -10,7 +10,7 @@ import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
-import heroImg from "@/assets/connectivity/starlink-hero.png";
+import heroImg from "@/assets/connectivity/starlink-hero.webp";
 import sdwanImg from "@/assets/connectivity/starlink-sdwan.jpg";
 import engineersImg from "@/assets/connectivity/starlink-engineers.jpg";
 

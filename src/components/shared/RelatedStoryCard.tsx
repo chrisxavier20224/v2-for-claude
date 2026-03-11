@@ -2,28 +2,28 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 // ── STORY DATA ──────────────────────────────────────────────────────────────
-import royleFarmHero from "@/assets/case-studies/royle-farm-hero.jpg";
+import royleFarmHero from "@/assets/case-studies/royle-farm-hero.webp";
 import royleFarmLogo from "@/assets/case-studies/royle-farm-business-park-logo.png";
-import steamRallyHero from "@/assets/case-studies/steam-rally-hero.png";
+import steamRallyHero from "@/assets/case-studies/steam-rally-hero.webp";
 import wsraLogo from "@/assets/case-studies/wsra-steam-rally-logo.png";
 import wbPowerHero from "@/assets/case-studies/wb-power-hero.avif";
-import mcgeeHero from "@/assets/case-studies/mcgee-hero.jpg";
+import mcgeeHero from "@/assets/case-studies/mcgee-hero.webp";
 import mcgeeLogo from "@/assets/case-studies/mcgee-logo.png";
-import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.jpg";
+import littleQuarryHero from "@/assets/case-studies/little-quarry-hero.webp";
 import littleQuarryLogo from "@/assets/case-studies/little-quarry-glamping-logo.png";
-import carbeeHero from "@/assets/case-studies/carbee-hero.jpg";
-import carbeeLogo from "@/assets/case-studies/carbee-logo-white.png";
-import rhycHero from "@/assets/case-studies/rhyc-hero.jpg";
-import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo-white.png";
-import ukharvestHero from "@/assets/case-studies/ukharvest-hero.jpg";
+import carbeeHero from "@/assets/case-studies/carbee-hero.webp";
+import carbeeLogo from "@/assets/case-studies/carbee-logo-white.webp";
+import rhycHero from "@/assets/case-studies/rhyc-hero.webp";
+import rhycLogo from "@/assets/case-studies/royal-harwich-yacht-club-logo-white.webp";
+import ukharvestHero from "@/assets/case-studies/ukharvest-hero.webp";
 import ukharvestLogo from "@/assets/case-studies/uk-harvest-logo.png";
 import thinkingAnglersHero from "@/assets/case-studies/thinking-anglers-hero.jpg";
 import thinkingAnglersLogo from "@/assets/case-studies/thinking-anglers-logo.png";
-import aturaHero from "@/assets/case-studies/atura-hero.jpg";
-import aturaLogo from "@/assets/case-studies/atura-proteins-logo.png";
-import apjHero from "@/assets/case-studies/apj-hero.jpg";
+import aturaHero from "@/assets/case-studies/atura-hero.webp";
+import aturaLogo from "@/assets/case-studies/atura-proteins-logo.webp";
+import apjHero from "@/assets/case-studies/apj-hero.webp";
 import apjLogo from "@/assets/case-studies/apj-european-logo.png";
-import seaconHero from "@/assets/case-studies/seacon-hero.jpg";
+import seaconHero from "@/assets/case-studies/seacon-hero.webp";
 import seaconLogo from "@/assets/case-studies/seacon-logo.png";
 
 interface StoryData {

@@ -8,8 +8,8 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
 
-import heroImg from "@/assets/case-studies/seacon-hero.jpg";
-import terminalsImg from "@/assets/case-studies/seacon-terminals.jpg";
+import heroImg from "@/assets/case-studies/seacon-hero.webp";
+import terminalsImg from "@/assets/case-studies/seacon-terminals.webp";
 
 const companyDetails = [
   { label: "Company", value: "Seacon Group" },

@@ -9,7 +9,7 @@ import SEO from "@/components/shared/SEO";
 
 import heroImg from "@/assets/case-studies/thinking-anglers-hero.jpg";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
-import tackleImg from "@/assets/case-studies/thinking-anglers-tackle.jpg";
+import tackleImg from "@/assets/case-studies/thinking-anglers-tackle.webp";
 
 const companyDetails = [
   { label: "Company", value: "Thinking Anglers" },

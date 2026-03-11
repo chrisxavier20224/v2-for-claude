@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 
-import heroImg from "@/assets/case-studies/mcgee-hero.jpg";
+import heroImg from "@/assets/case-studies/mcgee-hero.webp";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
 import mcgeeLogo from "@/assets/case-studies/mcgee-logo.png";
 

@@ -10,11 +10,11 @@ import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
-import heroImg from "@/assets/sectors/business-parks-hero.jpg";
+import heroImg from "@/assets/sectors/business-parks-hero.webp";
 import fibreImg from "@/assets/sectors/business-parks-fibre.jpg";
 import tenantsImg from "@/assets/sectors/business-parks-tenants.jpg";
 import outdoorImg from "@/assets/sectors/business-parks-outdoor.jpg";
-import royleFarmHero from "@/assets/case-studies/royle-farm-hero.jpg";
+import royleFarmHero from "@/assets/case-studies/royle-farm-hero.webp";
 
 const painPoints = [
   {

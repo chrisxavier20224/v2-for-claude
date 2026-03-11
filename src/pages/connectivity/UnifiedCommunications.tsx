@@ -9,7 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 
-import heroImg from "@/assets/connectivity/unified-comms-hero.jpg";
+import heroImg from "@/assets/connectivity/unified-comms-hero.webp";
 import deployImg from "@/assets/connectivity/unified-comms-deploy.jpg";
 import ccaasImg from "@/assets/connectivity/unified-comms-ccaas.jpg";
 

@@ -7,9 +7,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 
-import heroImg from "@/assets/case-studies/little-quarry-hero.jpg";
+import heroImg from "@/assets/case-studies/little-quarry-hero.webp";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
-import podsImg from "@/assets/case-studies/little-quarry-pods.jpg";
+import podsImg from "@/assets/case-studies/little-quarry-pods.webp";
 
 const companyDetails = [
   { label: "Company", value: "Little Quarry Glamping" },
