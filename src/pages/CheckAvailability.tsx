@@ -585,7 +585,14 @@ const CheckAvailability = () => {
         `https://api.ideal-postcodes.co.uk/v1/udprn/${result.udprn}?api_key=${IDEAL_API_KEY}`
       );
       const udprnData = await udprnResp.json();
-      const extractedPostcode = udprnData.result?.postcode;
+      const r = udprnData.result;
+      const extractedPostcode = r?.postcode;
+
+      // Build structured street address from UDPRN data
+      if (r) {
+        const streetAddress = [r.line_1, r.line_2, r.line_3, r.post_town].filter(Boolean).join(", ");
+        if (streetAddress) setSelectedAddress(streetAddress);
+      }
 
       if (extractedPostcode) {
         setPostcode(extractedPostcode);
@@ -1015,10 +1022,11 @@ const CheckAvailability = () => {
                                 return (
                                 <button
                                   key={idx}
-                                  onClick={() => {
-                                    setSelectedAddress(displayText);
-                                    setAddressDropdownOpen(false);
-                                  }}
+                  onClick={() => {
+                    const streetAddr = [addr.line_1, addr.line_2, addr.line_3, addr.post_town].filter(Boolean).join(", ");
+                    setSelectedAddress(streetAddr || displayText);
+                    setAddressDropdownOpen(false);
+                  }}
                                   className={`w-full text-left px-4 py-3 transition-all border-b border-border last:border-b-0 hover:bg-muted/50 ${
                                     selectedAddress === displayText ? "bg-primary/5 border-l-2 border-l-primary" : ""
                                   }`}
