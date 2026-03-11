@@ -227,26 +227,6 @@ const fadeUp = {
   exit: { opacity: 0, y: -12, transition: { duration: 0.2 } },
 };
 
-/* ------------------------------------------------------------------ */
-/*  Leaflet helpers (loaded from CDN)                                  */
-/* ------------------------------------------------------------------ */
-declare global {
-  interface Window { L: any; }
-}
-
-function loadLeaflet(): Promise<void> {
-  return new Promise((resolve) => {
-    if (window.L) { resolve(); return; }
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
-    document.head.appendChild(link);
-    const script = document.createElement("script");
-    script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-    script.onload = () => resolve();
-    document.head.appendChild(script);
-  });
-}
 
 /* ------------------------------------------------------------------ */
 /*  Sub-components                                                     */
