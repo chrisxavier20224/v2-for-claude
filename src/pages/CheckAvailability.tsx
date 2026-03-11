@@ -808,23 +808,40 @@ const CheckAvailability = () => {
                   </div>
 
                   <label className="block text-sm font-medium text-foreground mb-1.5">Address</label>
-                  <div className="flex gap-2">
-                    <Input
-                      value={postcode}
-                      onChange={(e) => setPostcode(e.target.value.toUpperCase())}
-                      placeholder="Type in your address"
-                      autoComplete="postal-code"
-                      className="flex-1 uppercase"
-                      onKeyDown={(e) => e.key === "Enter" && lookupPostcode()}
-                    />
-                    <Button onClick={lookupPostcode} disabled={pcLoading} className={`px-5 ${postcode.trim().length >= 5 && !pcData ? "animate-pulse" : ""}`}>
-                      {pcLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><Search className="h-4 w-4 mr-1" /> Find</>}
-                    </Button>
+                  <div className="relative" ref={autocompleteRef}>
+                    <div className="relative">
+                      <Input
+                        value={postcode}
+                        onChange={(e) => handleAddressInput(e.target.value)}
+                        placeholder="Type in your address or postcode"
+                        autoComplete="off"
+                        className="w-full pr-10"
+                      />
+                      {(pcLoading || autocompleteLoading) && (
+                        <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 animate-spin text-muted-foreground" />
+                      )}
+                    </div>
+
+                    {showAutocomplete && autocompleteResults.length > 0 && (
+                      <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-border bg-card shadow-lg overflow-hidden">
+                        <div className="max-h-[300px] overflow-y-auto">
+                          {autocompleteResults.map((result, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => selectAutocompleteResult(result)}
+                              className="w-full text-left px-4 py-3 text-sm text-foreground transition-colors border-b border-border last:border-b-0 hover:bg-muted/50"
+                            >
+                              {result.suggestion}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
 
-                  {!pcData && !pcLoading && (
+                  {!pcData && !pcLoading && !showAutocomplete && (
                     <p className="mt-2 text-xs text-muted-foreground flex items-center gap-1">
-                      <ArrowRight className="h-3 w-3" /> Type in your address and tap <span className="font-semibold text-primary">Find</span> to load the map
+                      <Search className="h-3 w-3" /> Start typing your address or postcode to search
                     </p>
                   )}
 
