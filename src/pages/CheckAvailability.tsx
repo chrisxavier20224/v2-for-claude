@@ -409,6 +409,20 @@ const CheckAvailability = () => {
     setTimeout(() => m.invalidateSize(), 600);
   }, []);
 
+  /* ---- Initialize map AFTER pcData causes the container to render ---- */
+  useEffect(() => {
+    if (pcData && mapContainerRef.current && !mapRef.current) {
+      initMap().then(() => {
+        setTimeout(() => {
+          if (mapRef.current) {
+            mapRef.current.invalidateSize();
+            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+          }
+        }, 400);
+      });
+    }
+  }, [pcData, initMap]);
+
   /* ---- Address autocomplete & postcode detection ---- */
   const IDEAL_API_KEY = "ak_mmhtvflhz3HHzrt20r8xYpzM2rAqX";
   const UK_POSTCODE_RE = /^[A-Z]{1,2}[0-9]{1,2}[A-Z]?\s?[0-9][A-Z]{2}$/i;
