@@ -500,10 +500,10 @@ const CheckAvailability = () => {
         admin_ward: pcData?.admin_ward ?? null,
         admin_district: pcData?.admin_district ?? null,
         region: pcData?.region ?? null,
-        latitude: coords?.lat,
-        longitude: coords?.lng,
-        property_coordinates: coords
-          ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`
+        latitude: pcData?.latitude,
+        longitude: pcData?.longitude,
+        property_coordinates: pcData
+          ? `${pcData.latitude.toFixed(6)}, ${pcData.longitude.toFixed(6)}`
           : null,
         address: selectedAddress,
         ...utmParamsRef.current,
