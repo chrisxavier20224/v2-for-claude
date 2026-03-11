@@ -5,6 +5,27 @@ import {
   ArrowRight, ArrowLeft, Building2, Laptop, Home, Check, Search, Loader2,
   Zap, Clock, Shield, Star, Wifi, MapPin, CheckCircle,
 } from "lucide-react";
+
+/* ------------------------------------------------------------------ */
+/*  Leaflet types & loader                                             */
+/* ------------------------------------------------------------------ */
+declare global {
+  interface Window { L: any; }
+}
+
+function loadLeaflet(): Promise<void> {
+  return new Promise((resolve) => {
+    if (window.L) { resolve(); return; }
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+    document.head.appendChild(css);
+    const js = document.createElement("script");
+    js.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    js.onload = () => resolve();
+    document.head.appendChild(js);
+  });
+}
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
@@ -295,6 +316,13 @@ const CheckAvailability = () => {
   const [submitting, setSubmitting] = useState(false);
   const addressDropdownRef = useRef<HTMLDivElement>(null);
 
+  const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
+
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<any>(null);
+  const tileLayerRef = useRef<any>(null);
+  const markerRef = useRef<any>(null);
+
   const [step1Touched, setStep1Touched] = useState(false);
   const formStartedRef = useRef(false);
   const utmParamsRef = useRef<Record<string, string>>({});
@@ -309,6 +337,79 @@ const CheckAvailability = () => {
       if (val) captured[key] = val;
     });
     utmParamsRef.current = captured;
+  }, []);
+
+  /* ---- Leaflet map ---- */
+  const initMap = useCallback(async () => {
+    if (!mapContainerRef.current || mapRef.current) return;
+    await loadLeaflet();
+    const L = window.L;
+    const map = L.map(mapContainerRef.current, {
+      center: [54.5, -2],
+      zoom: 6,
+      zoomControl: true,
+      attributionControl: false,
+    });
+    const esriSat = L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      { maxZoom: 19 }
+    );
+    esriSat.addTo(map);
+    tileLayerRef.current = esriSat;
+    mapRef.current = map;
+
+    map.on("click", (e: any) => {
+      const { lat, lng } = e.latlng;
+      setCoords({ lat, lng });
+      if (markerRef.current) {
+        markerRef.current.setLatLng([lat, lng]);
+      } else {
+        markerRef.current = L.marker([lat, lng]).addTo(map);
+      }
+    });
+  }, []);
+
+  /* ---- Init map when pcData arrives and container is rendered ---- */
+  useEffect(() => {
+    if (pcData && mapContainerRef.current && !mapRef.current) {
+      initMap().then(() => {
+        setTimeout(() => {
+          if (mapRef.current) {
+            mapRef.current.invalidateSize();
+            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+            const L = window.L;
+            if (markerRef.current) {
+              markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+            } else {
+              markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+            }
+            setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+          }
+        }, 400);
+      });
+    } else if (pcData && mapRef.current) {
+      // Map already exists, just fly to new location
+      mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+      const L = window.L;
+      if (markerRef.current) {
+        markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+      } else {
+        markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+      }
+      setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+    }
+  }, [pcData, initMap]);
+
+  /* ---- Cleanup map on unmount ---- */
+  useEffect(() => {
+    return () => {
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+        markerRef.current = null;
+        tileLayerRef.current = null;
+      }
+    };
   }, []);
 
   /* ---- Conversion tracking ---- */
@@ -500,11 +601,13 @@ const CheckAvailability = () => {
         admin_ward: pcData?.admin_ward ?? null,
         admin_district: pcData?.admin_district ?? null,
         region: pcData?.region ?? null,
-        latitude: pcData?.latitude,
-        longitude: pcData?.longitude,
-        property_coordinates: pcData
-          ? `${pcData.latitude.toFixed(6)}, ${pcData.longitude.toFixed(6)}`
-          : null,
+        latitude: coords?.lat ?? pcData?.latitude,
+        longitude: coords?.lng ?? pcData?.longitude,
+        property_coordinates: coords
+          ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`
+          : pcData
+            ? `${pcData.latitude.toFixed(6)}, ${pcData.longitude.toFixed(6)}`
+            : null,
         address: selectedAddress,
         ...utmParamsRef.current,
       };
@@ -884,17 +987,19 @@ const CheckAvailability = () => {
                 {pcData && (
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
                     <div className="rounded-2xl border border-border bg-card p-4 shadow-lg mb-4">
-                      <iframe
-                        src={`https://www.google.com/maps?q=${pcData.latitude},${pcData.longitude}&z=18&output=embed`}
-                        title="Property location"
-                        className="w-full border-0"
-                        style={{ height: 380, borderRadius: 12 }}
-                        loading="lazy"
-                        allowFullScreen
+                      <div
+                        ref={mapContainerRef}
+                        className="w-full"
+                        style={{ height: 380, borderRadius: 12, overflow: "hidden" }}
                       />
+                      {coords && (
+                        <p className="mt-2 text-xs text-muted-foreground text-center">
+                          📍 {coords.lat.toFixed(6)}, {coords.lng.toFixed(6)}
+                        </p>
+                      )}
                       <div className="mt-3 rounded-lg bg-primary/5 border border-primary/20 px-4 py-3 text-center">
                         <p className="text-sm text-foreground leading-relaxed">
-                          Confirm this is the correct location for your property.
+                          Click the map to drop a pin on your exact property. This helps us check line-of-sight to nearby towers.
                         </p>
                       </div>
                     </div>
