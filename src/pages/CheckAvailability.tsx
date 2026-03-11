@@ -227,26 +227,6 @@ const fadeUp = {
   exit: { opacity: 0, y: -12, transition: { duration: 0.2 } },
 };
 
-/* ------------------------------------------------------------------ */
-/*  Leaflet helpers (loaded from CDN)                                  */
-/* ------------------------------------------------------------------ */
-declare global {
-  interface Window { L: any; }
-}
-
-function loadLeaflet(): Promise<void> {
-  return new Promise((resolve) => {
-    if (window.L) { resolve(); return; }
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
-    document.head.appendChild(link);
-    const script = document.createElement("script");
-    script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-    script.onload = () => resolve();
-    document.head.appendChild(script);
-  });
-}
 
 /* ------------------------------------------------------------------ */
 /*  Sub-components                                                     */
@@ -312,11 +292,7 @@ const CheckAvailability = () => {
   const [addresses, setAddresses] = useState<AddressOption[]>([]);
   const [selectedAddress, setSelectedAddress] = useState<string | null>(null);
   const [addressDropdownOpen, setAddressDropdownOpen] = useState(false);
-  const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [submitting, setSubmitting] = useState(false);
-  const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<any>(null);
-  const markerRef = useRef<any>(null);
   const addressDropdownRef = useRef<HTMLDivElement>(null);
 
   const [step1Touched, setStep1Touched] = useState(false);
@@ -381,47 +357,6 @@ const CheckAvailability = () => {
     }
   }, [addressDropdownOpen]);
 
-  /* ---- Map ---- */
-  const initMap = useCallback(async () => {
-    await loadLeaflet();
-    const L = window.L;
-    if (!mapContainerRef.current || mapRef.current) return;
-
-    const m = L.map(mapContainerRef.current, { zoomControl: true, scrollWheelZoom: true }).setView([52.5, -1.5], 6);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "Esri", maxZoom: 20 }).addTo(m);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", { maxZoom: 20, opacity: 0.85 }).addTo(m);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}", { maxZoom: 20, opacity: 0.6 }).addTo(m);
-
-    m.on("click", (e: any) => {
-      if (markerRef.current) markerRef.current.setLatLng(e.latlng);
-      else {
-        markerRef.current = L.marker(e.latlng, { draggable: true, autoPan: true }).addTo(m);
-        markerRef.current.on("dragend", () => {
-          const ll = markerRef.current.getLatLng();
-          setCoords({ lat: ll.lat, lng: ll.lng });
-        });
-      }
-      setCoords({ lat: e.latlng.lat, lng: e.latlng.lng });
-    });
-
-    mapRef.current = m;
-    setTimeout(() => m.invalidateSize(), 300);
-    setTimeout(() => m.invalidateSize(), 600);
-  }, []);
-
-  /* ---- Initialize map AFTER pcData causes the container to render ---- */
-  useEffect(() => {
-    if (pcData && mapContainerRef.current && !mapRef.current) {
-      initMap().then(() => {
-        setTimeout(() => {
-          if (mapRef.current) {
-            mapRef.current.invalidateSize();
-            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
-          }
-        }, 400);
-      });
-    }
-  }, [pcData, initMap]);
 
   /* ---- Address autocomplete & postcode detection ---- */
   const IDEAL_API_KEY = "ak_mmhtvflhz3HHzrt20r8xYpzM2rAqX";
@@ -565,10 +500,10 @@ const CheckAvailability = () => {
         admin_ward: pcData?.admin_ward ?? null,
         admin_district: pcData?.admin_district ?? null,
         region: pcData?.region ?? null,
-        latitude: coords?.lat,
-        longitude: coords?.lng,
-        property_coordinates: coords
-          ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`
+        latitude: pcData?.latitude,
+        longitude: pcData?.longitude,
+        property_coordinates: pcData
+          ? `${pcData.latitude.toFixed(6)}, ${pcData.longitude.toFixed(6)}`
           : null,
         address: selectedAddress,
         ...utmParamsRef.current,
@@ -949,38 +884,24 @@ const CheckAvailability = () => {
                 {pcData && (
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
                     <div className="rounded-2xl border border-border bg-card p-4 shadow-lg mb-4">
-                      <div
-                        ref={mapContainerRef}
-                        className="w-full rounded-xl border border-border overflow-hidden"
-                        style={{ height: 380 }}
+                      <iframe
+                        src={`https://www.google.com/maps?q=${pcData.latitude},${pcData.longitude}&z=18&output=embed`}
+                        title="Property location"
+                        className="w-full border-0"
+                        style={{ height: 380, borderRadius: 12 }}
+                        loading="lazy"
+                        allowFullScreen
                       />
                       <div className="mt-3 rounded-lg bg-primary/5 border border-primary/20 px-4 py-3 text-center">
                         <p className="text-sm text-foreground leading-relaxed">
-                          <span className="font-semibold text-primary">Tap your building</span> to drop the pin — try to place it right on your roof for the most accurate results.
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          <span className="font-medium text-amber-600">Important:</span> Your pin location is used to calculate coverage and pricing. Selecting the wrong property may result in an inaccurate proposal, so please double-check before submitting.
+                          Confirm this is the correct location for your property.
                         </p>
                       </div>
-
-                      {coords && (
-                        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="mt-3 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
-                          <div className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                            <div>
-                              <p className="text-xs font-semibold text-green-600">Pin Placed</p>
-                              <p className="text-sm font-mono text-foreground">
-                                {coords.lat.toFixed(6)}, {coords.lng.toFixed(6)}
-                              </p>
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
                     </div>
 
                     <Button
                       onClick={() => goTo(4)}
-                      disabled={addresses.length > 0 ? !selectedAddress || submitting : !coords || submitting}
+                      disabled={addresses.length > 0 ? !selectedAddress || submitting : submitting}
                       size="lg"
                       className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl"
                     >
