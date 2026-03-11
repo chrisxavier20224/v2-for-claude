@@ -246,6 +246,16 @@ async function submitToHubSpot(payload: {
   }
 }
 
+/* ---- Capture UTM params at module level (before React Router processes URL) ---- */
+const INITIAL_UTM_PARAMS: Record<string, string> = {};
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
+    const val = params.get(key);
+    if (val) INITIAL_UTM_PARAMS[key] = val;
+  });
+})();
+
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] as const } },
@@ -331,16 +341,9 @@ const CheckAvailability = () => {
   const formStartedRef = useRef(false);
   const utmParamsRef = useRef<Record<string, string>>({});
 
-  /* ---- Capture UTM params on mount ---- */
+  /* ---- Capture UTM params on mount (from module-level capture) ---- */
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
-    const captured: Record<string, string> = {};
-    utmKeys.forEach((key) => {
-      const val = params.get(key);
-      if (val) captured[key] = val;
-    });
-    utmParamsRef.current = captured;
+    utmParamsRef.current = INITIAL_UTM_PARAMS;
   }, []);
 
   /* ---- Leaflet map ---- */
@@ -584,7 +587,8 @@ const CheckAvailability = () => {
       const udprnData = await udprnResp.json();
       const extractedPostcode = udprnData.result?.postcode;
 
-        if (extractedPostcode) {
+      if (extractedPostcode) {
+        setPostcode(extractedPostcode);
         // Now get lat/lng from postcodes.io
         const pcResp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(extractedPostcode)}`);
         const pcJsonData = await pcResp.json();
@@ -642,7 +646,7 @@ const CheckAvailability = () => {
         user_type: service,
         pain_points: Array.from(pains),
         country: pcData?.country ?? null,
-        postcode: postcode.toUpperCase(),
+        postcode: (pcData?.postcode || postcode).toUpperCase(),
         admin_ward: pcData?.admin_ward ?? null,
         admin_district: pcData?.admin_district ?? null,
         region: pcData?.region ?? null,
@@ -659,6 +663,7 @@ const CheckAvailability = () => {
 
       setSubmitting(true);
       try {
+        console.log("UTM params being sent:", utmParamsRef.current);
         const ok = await submitToHubSpot(payload);
 
         // ── Conversion tracking ──
@@ -1005,22 +1010,25 @@ const CheckAvailability = () => {
                         {addressDropdownOpen && (
                           <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-border bg-card shadow-lg overflow-hidden">
                             <div className="max-h-64 overflow-y-auto">
-                              {addresses.map((addr, idx) => (
+                              {addresses.map((addr: any, idx: number) => {
+                                const displayText = addr.full_address || [addr.line_1, addr.line_2, addr.line_3, addr.post_town, addr.postcode].filter(Boolean).join(", ");
+                                return (
                                 <button
                                   key={idx}
                                   onClick={() => {
-                                    setSelectedAddress(addr.full_address);
+                                    setSelectedAddress(displayText);
                                     setAddressDropdownOpen(false);
                                   }}
                                   className={`w-full text-left px-4 py-3 transition-all border-b border-border last:border-b-0 hover:bg-muted/50 ${
-                                    selectedAddress === addr.full_address ? "bg-primary/5 border-l-2 border-l-primary" : ""
+                                    selectedAddress === displayText ? "bg-primary/5 border-l-2 border-l-primary" : ""
                                   }`}
                                 >
-                                  <p className={`text-sm ${selectedAddress === addr.full_address ? "font-semibold text-primary" : "text-foreground"}`}>
-                                    {addr.full_address}
+                                  <p className={`text-sm ${selectedAddress === displayText ? "font-semibold text-primary" : "text-foreground"}`}>
+                                    {displayText}
                                   </p>
                                 </button>
-                              ))}
+                                );
+                              })}
                             </div>
                           </div>
                         )}
