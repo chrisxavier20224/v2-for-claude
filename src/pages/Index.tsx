@@ -153,8 +153,8 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Business-Grade Connectivity Solutions"
-        description="Rural broadband, SD-WAN, Starlink, leased lines, and WiFi. 100+ sites connected, up to 350Mbps, installed in 14 days."
+        title="Rural Broadband & Business Connectivity — Integra Networks"
+        description="Fast rural broadband, SD-WAN, Starlink, leased lines and WiFi. 100+ UK sites connected in 14 days."
         keywords="rural broadband, SD-WAN, Starlink SD-WAN, business connectivity, leased lines, construction WiFi, 4G/5G bonding, rural internet UK"
         url="/"
       />

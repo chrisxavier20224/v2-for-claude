@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 // Add your tracking IDs here
 const GA_MEASUREMENT_ID = "G-YWR9JZCZP1";
 const GOOGLE_ADS_ID = "AW-344295012";
-const HUBSPOT_ID = import.meta.env.VITE_HUBSPOT_ID;
+const HUBSPOT_ID = "20314482";
 
 declare global {
   interface Window {

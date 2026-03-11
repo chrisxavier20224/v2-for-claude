@@ -321,6 +321,19 @@ const CheckAvailability = () => {
 
   const [step1Touched, setStep1Touched] = useState(false);
   const formStartedRef = useRef(false);
+  const utmParamsRef = useRef<Record<string, string>>({});
+
+  /* ---- Capture UTM params on mount ---- */
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+    const captured: Record<string, string> = {};
+    utmKeys.forEach((key) => {
+      const val = params.get(key);
+      if (val) captured[key] = val;
+    });
+    utmParamsRef.current = captured;
+  }, []);
 
   /* ---- Conversion tracking ---- */
   // Track form_view on mount (equivalent to Typeform "views")
