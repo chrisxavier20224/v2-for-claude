@@ -5,6 +5,27 @@ import {
   ArrowRight, ArrowLeft, Building2, Laptop, Home, Check, Search, Loader2,
   Zap, Clock, Shield, Star, Wifi, MapPin, CheckCircle,
 } from "lucide-react";
+
+/* ------------------------------------------------------------------ */
+/*  Leaflet types & loader                                             */
+/* ------------------------------------------------------------------ */
+declare global {
+  interface Window { L: any; }
+}
+
+function loadLeaflet(): Promise<void> {
+  return new Promise((resolve) => {
+    if (window.L) { resolve(); return; }
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+    document.head.appendChild(css);
+    const js = document.createElement("script");
+    js.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    js.onload = () => resolve();
+    document.head.appendChild(js);
+  });
+}
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
