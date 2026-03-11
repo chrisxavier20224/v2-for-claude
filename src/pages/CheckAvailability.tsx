@@ -901,7 +901,7 @@ const CheckAvailability = () => {
 
                     <Button
                       onClick={() => goTo(4)}
-                      disabled={addresses.length > 0 ? !selectedAddress || submitting : !coords || submitting}
+                      disabled={addresses.length > 0 ? !selectedAddress || submitting : submitting}
                       size="lg"
                       className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl"
                     >
