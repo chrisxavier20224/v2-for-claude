@@ -341,16 +341,9 @@ const CheckAvailability = () => {
   const formStartedRef = useRef(false);
   const utmParamsRef = useRef<Record<string, string>>({});
 
-  /* ---- Capture UTM params on mount ---- */
+  /* ---- Capture UTM params on mount (from module-level capture) ---- */
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
-    const captured: Record<string, string> = {};
-    utmKeys.forEach((key) => {
-      const val = params.get(key);
-      if (val) captured[key] = val;
-    });
-    utmParamsRef.current = captured;
+    utmParamsRef.current = INITIAL_UTM_PARAMS;
   }, []);
 
   /* ---- Leaflet map ---- */
