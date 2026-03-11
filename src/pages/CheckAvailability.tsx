@@ -316,6 +316,13 @@ const CheckAvailability = () => {
   const [submitting, setSubmitting] = useState(false);
   const addressDropdownRef = useRef<HTMLDivElement>(null);
 
+  const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
+
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<any>(null);
+  const tileLayerRef = useRef<any>(null);
+  const markerRef = useRef<any>(null);
+
   const [step1Touched, setStep1Touched] = useState(false);
   const formStartedRef = useRef(false);
   const utmParamsRef = useRef<Record<string, string>>({});
