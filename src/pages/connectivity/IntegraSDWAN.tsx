@@ -181,8 +181,8 @@ const IntegraSDWAN = () => {
   return (
     <PageLayout>
       <SEO
-        title="Integra SD-WAN — High-Speed Internet Without Fibre"
-        description="Fast internet without waiting for Fibre. Bonded 4G/5G, installed in 14 days, from £80/month. 99.5% SLA. No fibre needed."
+        title="Integra SD-WAN"
+        description="Fast internet without fibre. Bonded 4G/5G, 14-day install, 99.5% SLA, from £80/month."
         keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to fibre, business connectivity, fast broadband"
         url="/connectivity/integra-sdwan"
       />

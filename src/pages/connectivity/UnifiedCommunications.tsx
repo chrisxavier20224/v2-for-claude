@@ -66,8 +66,8 @@ const UnifiedCommunications = () => {
   return (
     <PageLayout>
       <SEO
-        title="Unified Communications — Hosted VoIP from £10/handset/month"
-        description="PSTN switches off January 2027. Move to cloud-hosted VoIP with Teams integration, call routing, and PSTN backup. From £10/handset/month."
+        title="Unified Communications"
+        description="Cloud-hosted VoIP with Teams, call routing, PSTN backup. From £10/handset/month. PSTN-ready."
         keywords="unified communications, UCaaS, cloud phone, hosted VoIP, video conferencing, CCaaS, business phone system, PSTN switch off"
         url="/connectivity/unified-communications"
       />

@@ -96,8 +96,8 @@ const StarlinkInstallation = () => {
   return (
     <PageLayout>
       <SEO
-        title="Starlink Installation — Starlink Meets Reliability with 4G/5G Failover"
-        description="Keep your Starlink. Add 4G/5G failover for £80/month. No more rain drops. 99.5% uptime SLA. Professional installation by certified network engineers."
+        title="Starlink Installation"
+        description="Add 4G/5G failover to Starlink. £80/month. 99.5% uptime SLA. Professional installation."
         keywords="Starlink installation, Starlink installer, Starlink SD-WAN, Starlink failover, Starlink static IP, satellite internet, Starlink 4G/5G backup"
         url="/connectivity/starlink-installation"
       />

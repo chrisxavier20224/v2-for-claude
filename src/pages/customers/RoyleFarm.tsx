@@ -33,8 +33,8 @@ const RoyleFarm = () => {
   return (
     <PageLayout>
       <SEO
-        title="Royle Farm Business Park Case Study — Integra Networks"
-        description="How Integra brought gigabit connectivity to a rural business park in Burton upon Trent — cutting costs by over 80% with a smarter fibre route and wireless distribution."
+        title="Royle Farm Business Park Case Study"
+        description="Gigabit connectivity to rural business park in Burton upon Trent. 80% cost savings with smart fibre and wireless."
         keywords="case study, Royle Farm, business park, fibre, wireless, rural connectivity, Integra Networks, Burton upon Trent"
         url="/customers/royle-farm"
       />

@@ -151,7 +151,7 @@ const Pricing = () => {
     <PageLayout>
       <SEO
         title="Fibre Alternative Pricing"
-        description="Transparent, fixed pricing for SD-WAN and Starlink business connectivity. No hidden fees, simple 12-month terms, 14-day money-back guarantee. Hardware included."
+        description="Fixed pricing for SD-WAN and Starlink. No hidden fees, 12-month terms, 14-day guarantee. Hardware included."
         keywords="SD-WAN pricing, Starlink business pricing, fibre alternative pricing, business broadband cost, cellular broadband pricing"
         url="/pricing"
       />

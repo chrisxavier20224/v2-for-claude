@@ -91,8 +91,8 @@ const BusinessWifi = () => {
   return (
     <PageLayout>
       <SEO
-        title="Business WiFi — Professional WiFi That Works Everywhere"
-        description="Professionally designed WiFi networks, custom-quoted to your site. Site survey, AP placement, network configuration. Monitored 24/7 via Integra Cloud. WiFi-as-a-Service available."
+        title="Business WiFi"
+        description="Professional WiFi networks designed for your site. Survey, AP placement, configuration, 24/7 monitoring via Integra Cloud."
         keywords="business WiFi, commercial WiFi, public WiFi, guest WiFi, event WiFi, WiFi survey, managed WiFi"
         url="/connectivity/business-wifi"
       />

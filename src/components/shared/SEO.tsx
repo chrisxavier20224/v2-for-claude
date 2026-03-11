@@ -28,7 +28,11 @@ const SEO = ({
   author,
   noIndex = false,
 }: SEOProps) => {
-  const pageTitle = title ? `${title} | Integra Networks` : DEFAULT_TITLE;
+  const pageTitle = title
+    ? title.toLowerCase().includes("integra networks")
+      ? title
+      : `${title} | Integra Networks`
+    : DEFAULT_TITLE;
   const canonicalUrl = url ? `${SITE_URL}${url}` : SITE_URL;
 
   return (

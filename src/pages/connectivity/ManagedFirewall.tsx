@@ -28,8 +28,8 @@ const ManagedFirewall = () => {
   return (
     <PageLayout>
       <SEO
-        title="Managed Firewall & Cyber Security — Business Network Protection"
-        description="Managed firewall and cyber security for UK businesses. Next-gen threat protection, content filtering, VPN, real-time monitoring. Bundled with your connectivity or standalone."
+        title="Managed Firewall & Cyber Security"
+        description="Business firewall and cyber security. Threat protection, content filtering, VPN, monitoring. Bundled or standalone."
         keywords="managed firewall, cyber security, business firewall, network security, content filtering, VPN, threat protection, ransomware defence"
         url="/connectivity/managed-firewall"
       />

@@ -70,8 +70,8 @@ const HomeWifi = () => {
   return (
     <PageLayout>
       <SEO
-        title="Home WiFi — Professional Mesh Networks for Homes & Farms"
-        description="WiFi that works everywhere. Professional mesh WiFi installation from £400. Covers 2,000+ sq ft. Thick walls, outbuildings, and garden offices — all connected."
+        title="Home WiFi"
+        description="Professional mesh networks for homes and farms. Covers 2,000+ sq ft. No dead zones, thick walls, and outbuildings."
         keywords="home WiFi, home network, remote working WiFi, WiFi dead zones, mesh WiFi, home office connectivity"
         url="/connectivity/home-wifi"
       />

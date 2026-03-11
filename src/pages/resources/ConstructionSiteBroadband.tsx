@@ -121,8 +121,8 @@ const ConstructionSiteBroadband = () => {
   return (
     <PageLayout>
       <SEO
-        title="Construction Site Broadband Solutions UK: Temporary, Reliable, Fast Deployment"
-        description="Construction sites need connectivity that deploys in days, moves fast, and works on site. Starlink, 4G, WiFi solutions. Case study: McGee Construction."
+        title="Construction Site Broadband Solutions"
+        description="Temporary broadband for construction. Starlink, 4G, WiFi. Deploys fast, moves with you."
         keywords="construction site broadband UK, temporary broadband, construction CCTV broadband, site broadband solutions, temporary internet construction"
         url="/construction-site-broadband"
       />

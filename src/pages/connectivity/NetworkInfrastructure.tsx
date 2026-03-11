@@ -89,7 +89,7 @@ const NetworkInfrastructure = () => {
     <PageLayout>
       <SEO
         title="Network Infrastructure"
-        description="Structured cabling, data cabinets, PoE switches, WiFi surveys, and fibre links — designed, installed, and managed by Integra Networks. Full project delivery for commercial buildings across the UK."
+        description="Cabling, cabinets, PoE switches, WiFi surveys, and fibre links. Design, install, manage."
         keywords="network infrastructure, structured cabling, data cabinet, PoE switch, WiFi survey, heat map, fibre link, network installation, cable management"
         url="/connectivity/network-infrastructure"
       />

@@ -70,8 +70,8 @@ const Cotswolds = () => {
   return (
     <PageLayout>
       <SEO
-        title="Premium Broadband Cotswolds | Listed Buildings & Conservation | Integra Networks"
-        description="Premium broadband for affluent Cotswolds properties. Cheltenham, Cirencester, Stow-on-the-Wold. Listed building compatible. Integra Pro and Starlink solutions."
+        title="Broadband Cotswolds"
+        description="Premium broadband for Cotswolds. Cheltenham, Cirencester, Stow. Listed building compatible."
         keywords="Cotswolds broadband, rural broadband, Cheltenham internet, Cirencester, Stow-on-the-Wold, listed building broadband, premium rural connectivity"
         url="/locations/rural-broadband-cotswolds"
       />
@@ -322,6 +322,39 @@ const Cotswolds = () => {
 
       <GradientBand fromColor="hsl(0 0% 98%)" toColor="hsl(222 47% 11%)" />
       <RelatedServices services={relatedServices} heading="Our Solutions" subheading="Enterprise-grade connectivity tailored to your region." />
+
+      {/* Other Locations */}
+      <section className="bg-muted/30 py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <h2 className="text-2xl font-semibold mb-3 text-center">Coverage in Other Regions</h2>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">Find rural broadband solutions across the UK.</p>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link to="/locations/rural-broadband-north-west" className="px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all text-center">
+              <span className="text-sm font-medium">North West</span>
+            </Link>
+            <Link to="/locations/rural-broadband-essex-hertfordshire" className="px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all text-center">
+              <span className="text-sm font-medium">Essex & Herts</span>
+            </Link>
+            <Link to="/locations/rural-broadband-kent" className="px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all text-center">
+              <span className="text-sm font-medium">Kent</span>
+            </Link>
+            <Link to="/locations/rural-broadband-sussex-surrey" className="px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all text-center">
+              <span className="text-sm font-medium">Sussex & Surrey</span>
+            </Link>
+            <Link to="/locations/rural-broadband-somerset-devon" className="px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all text-center">
+              <span className="text-sm font-medium">Somerset & Devon</span>
+            </Link>
+            <Link to="/locations/rural-broadband-yorkshire" className="px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all text-center">
+              <span className="text-sm font-medium">Yorkshire</span>
+            </Link>
+            <Link to="/locations/construction-site-broadband-london" className="px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all text-center">
+              <span className="text-sm font-medium">London Construction</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="bg-surface-dark py-20 md:py-28">

@@ -26,8 +26,8 @@ const CellularBackup = () => {
   return (
     <PageLayout>
       <SEO
-        title="4G/5G Backup & Failover — Business Connectivity Insurance"
-        description="Automatic 4G/5G failover for business broadband and leased lines. Sub-second switchover, bonded cellular, always-on monitoring. Keep your business online when your primary connection goes down."
+        title="4G/5G Backup & Failover"
+        description="Automatic cellular failover for broadband and leased lines. Sub-second switchover, bonded connectivity, always-on monitoring."
         keywords="4G backup, 5G failover, business broadband backup, cellular failover, automatic failover, connectivity insurance, broadband resilience"
         url="/connectivity/cellular-backup"
       />

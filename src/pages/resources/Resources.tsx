@@ -79,8 +79,8 @@ const Resources = () => {
   return (
     <PageLayout>
       <SEO
-        title="Resources — Guides, Comparisons & Industry Updates"
-        description="In-depth guides to rural broadband, SD-WAN, Starlink, construction site connectivity, and more. Honest assessments to help UK businesses choose the right solution."
+        title="Resources"
+        description="Guides to rural broadband, SD-WAN, Starlink, construction, farms. Help UK businesses choose right."
         keywords="broadband guides, SD-WAN guide, rural broadband UK, Starlink business, construction broadband, farm broadband, PSTN switch off"
         url="/resources"
       />

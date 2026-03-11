@@ -117,8 +117,8 @@ const Homeworkers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Homeworkers — Up to 350Mbps Without Fibre, Installed in 14 Days"
-        description="Your job depends on your internet. We deliver up to 350Mbps via cellular SD-WAN — no fibre required. Installed by our engineers in under 14 days."
+        title="Homeworkers"
+        description="Up to 350Mbps via cellular SD-WAN. No fibre. 14-day install."
         keywords="homeworker broadband, rural internet, SD-WAN, remote work connectivity, fibre alternative, work from home internet, rural broadband"
         url="/sectors/homeworkers"
       />

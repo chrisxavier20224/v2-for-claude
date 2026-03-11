@@ -156,8 +156,8 @@ const RuralBusinessBroadband = () => {
   return (
     <PageLayout>
       <SEO
-        title="Rural Business Broadband UK: Getting Reliable Internet When BT Says 'Wait'"
-        description="BT can't deliver. Starlink alone isn't enough. Here's how rural SMEs get business-grade broadband: SD-WAN bonding, alternatives, real speed comparisons, case study."
+        title="Rural Business Broadband"
+        description="How rural SMEs get business-grade broadband when BT can't deliver. SD-WAN bonding, alternatives."
         keywords="rural business broadband UK, rural SME connectivity, SD-WAN bonding, cellular broadband business, reliable rural internet, BT fibre delays"
         url="/rural-business-broadband"
       />

@@ -86,8 +86,8 @@ const WirelessDistribution = () => {
   return (
     <PageLayout>
       <SEO
-        title="Wireless Distribution — Multi-Building Connectivity from Integra Networks"
-        description="V Band, 5GHz, 60GHz point-to-point and point-to-multipoint wireless links. Professional site survey, VLAN segmentation, SD-WAN failover. Up to 2Gbps speeds. Business parks, estates, ports, farms."
+        title="Wireless Distribution"
+        description="Point-to-point and multipoint wireless links. V Band, 5GHz, 60GHz. Survey, VLAN, failover. Up to 2Gbps."
         keywords="wireless distribution, point-to-point, point-to-multipoint, V Band, multi-building WiFi, business park connectivity, wireless network design"
         url="/connectivity/wireless-distribution"
       />

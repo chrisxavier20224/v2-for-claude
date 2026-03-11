@@ -35,8 +35,8 @@ const ManagedSimServices = () => {
   return (
     <PageLayout hideCTA>
       <SEO
-        title="Managed SIM Services — IoT & M2M Connectivity"
-        description="Managed IoT SIMs for lifts, alarms, EPOS, CCTV, sensors, smart meters, fleet tracking, and more. Multinet SIM across all four UK operators. Estate-wide visibility, no upfront costs."
+        title="Managed SIM Services"
+        description="IoT SIMs for lifts, alarms, CCTV, sensors, meters, fleet tracking. Multinet across all four UK networks."
         keywords="managed SIM, IoT SIM, M2M SIM, lift line SIM, alarm SIM, EPOS SIM, CCTV SIM, smart meter SIM, fleet tracking, environmental sensor, Multinet SIM"
         url="/connectivity/managed-sim-services"
       />

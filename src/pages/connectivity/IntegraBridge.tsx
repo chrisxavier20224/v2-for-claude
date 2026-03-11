@@ -81,8 +81,8 @@ const IntegraBridge = () => {
   return (
     <PageLayout>
       <SEO
-        title="Integra Bridge — Enterprise Internet in Days, Not Months"
-        description="When your clients can't wait for Fibre, Integra Bridge delivers enterprise-grade SD-WAN in 10 days. Bonded Starlink + 5G/4G with up to 1Gbps. Stays as permanent failover."
+        title="Integra Bridge"
+        description="Enterprise SD-WAN in 10 days. Bonded Starlink + 5G/4G with up to 1Gbps. Works as interim or permanent failover."
         keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, fibre bridge, interim connectivity, ISP wholesale"
         url="/integra-bridge"
       />

@@ -32,8 +32,8 @@ const LittleQuarry = () => {
   return (
     <PageLayout>
       <SEO
-        title="Little Quarry Glamping Case Study — Integra Networks"
-        description="How Little Quarry Glamping went from no internet to near-300Mbps speeds in 2 weeks. Their guests can now stream, work, and stay connected in the wilderness."
+        title="Little Quarry Glamping Case Study"
+        description="How Little Quarry Glamping went from no internet to 300Mbps in 2 weeks."
         keywords="case study, Little Quarry, glamping, SD-WAN, connectivity, Integra Networks"
         url="/customers/little-quarry-glamping"
       />

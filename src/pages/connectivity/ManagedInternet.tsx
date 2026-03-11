@@ -32,8 +32,8 @@ const ManagedInternet = () => {
   return (
     <PageLayout>
       <SEO
-        title="Managed Internet Access — Dedicated Bandwidth Without Leased Line Pricing"
-        description="Managed internet access from 100Mbps to 500Mbps. Dedicated bandwidth, SLA-backed, faster to deploy than leased lines. The mid-market solution for UK businesses."
+        title="Managed Internet Access"
+        description="Dedicated bandwidth 100-500Mbps. SLA-backed, faster deployment than leased lines."
         keywords="managed internet, dedicated bandwidth, business internet, DIA, ethernet first mile, EFM, managed broadband, dedicated internet access"
         url="/connectivity/managed-internet"
       />

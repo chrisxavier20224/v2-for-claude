@@ -28,6 +28,12 @@ interface PostcodeData {
   postcode: string;
 }
 
+interface AddressOption {
+  postcode: string;
+  address: string;
+  full_address: string;
+}
+
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
@@ -99,6 +105,7 @@ async function submitToHubSpot(payload: {
   admin_district: string | null;
   region: string | null;
   property_coordinates: string | null;
+  address: string | null;
 }): Promise<boolean> {
   const fields: { objectTypeId: string; name: string; value: string }[] = [
     { objectTypeId: "0-1", name: "firstname", value: payload.first_name },
@@ -134,6 +141,10 @@ async function submitToHubSpot(payload: {
   }
   if (payload.region) {
     fields.push({ objectTypeId: "0-1", name: "state", value: payload.region });
+  }
+
+  if (payload.address) {
+    fields.push({ objectTypeId: "0-1", name: "address", value: payload.address });
   }
 
   // Pain points as a semicolon-separated string for the message field
@@ -265,11 +276,15 @@ const CheckAvailability = () => {
   const [postcode, setPostcode] = useState("");
   const [pcData, setPcData] = useState<PostcodeData | null>(null);
   const [pcLoading, setPcLoading] = useState(false);
+  const [addresses, setAddresses] = useState<AddressOption[]>([]);
+  const [selectedAddress, setSelectedAddress] = useState<string | null>(null);
+  const [addressDropdownOpen, setAddressDropdownOpen] = useState(false);
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
+  const addressDropdownRef = useRef<HTMLDivElement>(null);
 
   const [step1Touched, setStep1Touched] = useState(false);
   const formStartedRef = useRef(false);
@@ -304,6 +319,22 @@ const CheckAvailability = () => {
     });
   };
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        addressDropdownRef.current &&
+        !addressDropdownRef.current.contains(event.target as Node)
+      ) {
+        setAddressDropdownOpen(false);
+      }
+    };
+    if (addressDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [addressDropdownOpen]);
+
   /* ---- Map ---- */
   const initMap = useCallback(async () => {
     await loadLeaflet();
@@ -337,11 +368,31 @@ const CheckAvailability = () => {
     const pc = postcode.trim().replace(/\s+/g, "");
     if (!pc) return;
     setPcLoading(true);
+    setAddresses([]);
+    setSelectedAddress(null);
     try {
       const resp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(pc)}`);
       const data = await resp.json();
       if (data.status === 200 && data.result) {
         setPcData(data.result);
+
+        // Fetch addresses from Ideal Postcodes API in parallel
+        const idealPostcodesKey = import.meta.env.VITE_IDEAL_POSTCODES_API_KEY;
+        if (idealPostcodesKey) {
+          try {
+            const idealResp = await fetch(
+              `https://api.ideal-postcodes.co.uk/v1/postcodes/${encodeURIComponent(pc)}?api_key=${encodeURIComponent(idealPostcodesKey)}`
+            );
+            const idealData = await idealResp.json();
+            if (idealData.result && Array.isArray(idealData.result)) {
+              setAddresses(idealData.result);
+            }
+          } catch (err) {
+            console.error("Error fetching from Ideal Postcodes API:", err);
+            // Gracefully continue without address list
+          }
+        }
+
         await initMap();
         setTimeout(() => {
           if (mapRef.current) {
@@ -374,6 +425,7 @@ const CheckAvailability = () => {
         property_coordinates: coords
           ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`
           : null,
+        address: selectedAddress,
       };
 
       setSubmitting(true);
@@ -682,6 +734,53 @@ const CheckAvailability = () => {
                       </div>
                     </motion.div>
                   )}
+
+                  {addresses.length > 0 && (
+                    <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-4">
+                      <label className="block text-sm font-medium text-foreground mb-2">Select your address</label>
+                      <div className="relative" ref={addressDropdownRef}>
+                        <button
+                          onClick={() => setAddressDropdownOpen(!addressDropdownOpen)}
+                          className="w-full flex items-center justify-between rounded-lg border border-border bg-muted/30 px-4 py-3 text-left transition-all hover:border-primary/50"
+                        >
+                          <span className={`text-sm ${selectedAddress ? "text-foreground font-medium" : "text-muted-foreground"}`}>
+                            {selectedAddress || "Choose an address..."}
+                          </span>
+                          <svg
+                            className={`h-4 w-4 text-muted-foreground transition-transform ${addressDropdownOpen ? "rotate-180" : ""}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                          </svg>
+                        </button>
+
+                        {addressDropdownOpen && (
+                          <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-border bg-card shadow-lg overflow-hidden">
+                            <div className="max-h-64 overflow-y-auto">
+                              {addresses.map((addr, idx) => (
+                                <button
+                                  key={idx}
+                                  onClick={() => {
+                                    setSelectedAddress(addr.full_address);
+                                    setAddressDropdownOpen(false);
+                                  }}
+                                  className={`w-full text-left px-4 py-3 transition-all border-b border-border last:border-b-0 hover:bg-muted/50 ${
+                                    selectedAddress === addr.full_address ? "bg-primary/5 border-l-2 border-l-primary" : ""
+                                  }`}
+                                >
+                                  <p className={`text-sm ${selectedAddress === addr.full_address ? "font-semibold text-primary" : "text-foreground"}`}>
+                                    {addr.full_address}
+                                  </p>
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
                 </div>
 
                 {pcData && (
@@ -716,7 +815,12 @@ const CheckAvailability = () => {
                       )}
                     </div>
 
-                    <Button onClick={() => goTo(4)} disabled={!coords || submitting} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                    <Button
+                      onClick={() => goTo(4)}
+                      disabled={addresses.length > 0 ? !selectedAddress || submitting : !coords || submitting}
+                      size="lg"
+                      className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl"
+                    >
                       {submitting ? (
                         <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</>
                       ) : (

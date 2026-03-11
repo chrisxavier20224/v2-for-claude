@@ -26,8 +26,8 @@ const DarkFibre = () => {
   return (
     <PageLayout>
       <SEO
-        title="Dark Fibre — Unlit Fibre for Enterprise & Campus Connectivity"
-        description="Dark fibre solutions for UK businesses. Dedicated unlit fibre pairs for campus connectivity, high-bandwidth operations, and ultra-secure private networks. Bespoke pricing."
+        title="Dark Fibre"
+        description="Unlit fibre solutions for UK businesses. Dedicated fibre pairs for campus connectivity, high-bandwidth operations, and secure networks."
         keywords="dark fibre, dark fiber, unlit fibre, dedicated fibre, campus connectivity, private fibre, enterprise fibre, fibre optic"
         url="/connectivity/dark-fibre"
       />

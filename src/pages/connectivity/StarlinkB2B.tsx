@@ -115,8 +115,8 @@ const StarlinkB2B = () => {
   return (
     <PageLayout>
       <SEO
-        title="Managed Starlink B2B — Business Satellite Internet from £300/pm"
-        description="Single-bill managed satellite for business. SLA-backed, cellular bonding, dedicated support. From £300/month. Installation £1,300. Designed for construction, events, remote sites."
+        title="Managed Starlink B2B"
+        description="Managed satellite for business. SLA-backed, cellular bonding, support. From £300/month."
         keywords="managed starlink, business satellite internet, B2B starlink, satellite broadband, construction internet, event connectivity"
         url="/connectivity/starlink-b2b"
       />

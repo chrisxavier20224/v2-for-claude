@@ -28,8 +28,8 @@ const BusinessMobiles = () => {
   return (
     <PageLayout>
       <SEO
-        title="Business Mobiles — Multi-Network Mobile Plans for UK Businesses"
-        description="Business mobile plans across all four UK networks. Pooled data, mobile device management, one bill. Managed alongside your broadband and voice services."
+        title="Business Mobiles"
+        description="Business mobiles across all four UK networks. Pooled data, device management, one bill. Integrated with broadband and voice."
         keywords="business mobiles, business mobile phones, corporate mobile plans, business SIM, pooled data, mobile device management, MDM, business phone plans"
         url="/connectivity/business-mobiles"
       />

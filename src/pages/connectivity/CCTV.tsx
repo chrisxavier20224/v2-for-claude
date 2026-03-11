@@ -131,8 +131,8 @@ const CCTV = () => {
   return (
     <PageLayout>
       <SEO
-        title="CCTV as a Service — Professional Surveillance for Warehouses & Business Sites"
-        description="Managed CCTV for warehouses, ports, construction sites, and business parks. Commercial-grade cameras, PoE network, remote cloud access, and UK-based support included."
+        title="CCTV as a Service"
+        description="Managed CCTV for warehouses, ports, and construction sites. Commercial cameras, PoE network, cloud access, UK support."
         keywords="CCTV service, managed CCTV, warehouse security cameras, business CCTV, port security, commercial CCTV, night vision cameras, cloud CCTV monitoring"
         url="/connectivity/cctv"
       />

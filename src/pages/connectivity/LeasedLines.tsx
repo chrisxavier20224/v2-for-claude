@@ -119,8 +119,8 @@ const LeasedLines = () => {
   return (
     <PageLayout>
       <SEO
-        title="Leased Lines — Dedicated Circuits for Mission-Critical Business"
-        description="Business leased lines. Symmetric speeds. Dedicated circuit. SLA-backed. Bespoke pricing from £500/month. Desktop survey first."
+        title="Leased Lines"
+        description="Dedicated circuits with symmetric speeds and SLA. Bespoke pricing from £500/month."
         keywords="leased lines, business fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
         url="/connectivity/leased-lines"
       />

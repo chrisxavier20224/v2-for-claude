@@ -27,8 +27,8 @@ const BusinessContinuity = () => {
   return (
     <PageLayout>
       <SEO
-        title="Business Continuity — Keep Your Business Running When Everything Else Stops"
-        description="Business continuity connectivity from Integra Networks. Primary connection, cellular failover, cloud voice, managed firewall — layered resilience for UK businesses."
+        title="Business Continuity Connectivity"
+        description="Layered resilience for UK businesses. Primary connection, cellular failover, cloud voice, and managed firewall."
         keywords="business continuity, disaster recovery, connectivity resilience, failover, backup broadband, cloud voice, managed firewall, business resilience"
         url="/connectivity/business-continuity"
       />

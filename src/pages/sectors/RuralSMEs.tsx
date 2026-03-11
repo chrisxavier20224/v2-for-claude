@@ -80,8 +80,8 @@ const RuralSMEs = () => {
   return (
     <PageLayout>
       <SEO
-        title="Rural Business Internet — Up to 350Mbps, No Fibre Required"
-        description="107 UK businesses run on Integra. Up to 350Mbps via cellular SD-WAN, installed in 14 days. 99.5% uptime SLA. PSTN switches off January 2027 — we handle the migration."
+        title="Rural Business Internet"
+        description="Up to 350Mbps via SD-WAN. 14-day install, 99.5% uptime SLA. PSTN migration included."
         keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
         url="/sectors/rural-smes"
       />

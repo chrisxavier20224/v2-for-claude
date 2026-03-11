@@ -110,8 +110,8 @@ const SoGEA = () => {
   return (
     <PageLayout>
       <SEO
-        title="SoGEA & FTTP Business Broadband — No Phone Line Required"
-        description="SoGEA and FTTP broadband without line rental. PSTN switches off January 2027 — get ahead now. SoGEA up to 80Mbps, FTTP up to 1Gbps. 90%+ UK coverage."
+        title="SoGEA & FTTP Broadband"
+        description="SoGEA and FTTP without line rental. SoGEA 80Mbps, FTTP 1Gbps. 90%+ UK coverage. PSTN-ready."
         keywords="SoGEA, SOGEA broadband, FTTP, fibre to the premises, business broadband no phone line, PSTN switch off, broadband only, FTTC no line rental, full fibre"
         url="/connectivity/sogea"
       />

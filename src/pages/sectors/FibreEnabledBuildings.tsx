@@ -89,8 +89,8 @@ const FibreEnabledBuildings = () => {
   return (
     <PageLayout>
       <SEO
-        title="Fibre Enabled Buildings — Pre-Connected Internet for New Developments"
-        description="Pre-deliver fibre to every unit before tenants arrive. Symmetrical speeds up to 1Gbps, custom system design, and contracts that match your lease terms."
+        title="Fibre Enabled Buildings"
+        description="Pre-connect fibre to every unit. 1Gbps symmetrical, custom design, flexible contracts."
         keywords="fibre enabled buildings, pre-connected fibre, new development internet, tenant connectivity, full fibre business park, ultrafast broadband"
         url="/sectors/fibre-enabled-buildings"
       />

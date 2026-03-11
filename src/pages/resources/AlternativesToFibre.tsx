@@ -225,8 +225,8 @@ const AlternativesToFibre = () => {
   return (
     <PageLayout>
       <SEO
-        title="Alternatives to Fibre Broadband UK — A Practical Guide for 2026"
-        description="Fibre's years away? Compare real alternatives: Starlink, 4G/5G bonding, fixed wireless, leased lines. Speeds, costs, reliability — honest comparison."
+        title="Alternatives to Fibre Broadband"
+        description="Compare Starlink, 4G/5G bonding, fixed wireless, leased lines. Honest speeds, costs, reliability."
         keywords="alternatives to fibre broadband, rural broadband UK, Starlink vs 4G, SD-WAN, cellular broadband, no fibre broadband alternatives, business broadband"
         url="/alternatives-to-fibre-broadband"
       />

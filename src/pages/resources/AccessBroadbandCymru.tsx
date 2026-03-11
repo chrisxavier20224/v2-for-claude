@@ -113,8 +113,8 @@ const AccessBroadbandCymru = () => {
   return (
     <PageLayout>
       <SEO
-        title="Access Broadband Cymru | Up to £800 Towards Broadband in Wales | Integra Networks"
-        description="Integra Networks, an approved supplier of the Access Broadband Cymru Scheme, offers up to £800 towards your broadband installation in Wales."
+        title="Access Broadband Cymru"
+        description="Up to £800 towards broadband installation in Wales via Access Broadband Cymru Scheme."
       />
 
       {/* ── Hero ───────────────────────────────────────────────────────────── */}

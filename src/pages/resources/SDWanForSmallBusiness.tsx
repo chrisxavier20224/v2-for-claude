@@ -68,8 +68,8 @@ const SDWanForSmallBusiness = () => {
   return (
     <PageLayout>
       <SEO
-        title="SD-WAN for Small Business: Plain English Explanation (No Jargon)"
-        description="SD-WAN decoded: what it is, why bonding beats load balancing, cellular vs enterprise, and when your small business actually needs it. Real examples."
+        title="SD-WAN for Small Business"
+        description="Plain English SD-WAN guide. Bonding vs load balancing, cellular vs enterprise. Real examples."
         keywords="SD-WAN for small business, what is SD-WAN, cellular SD-WAN, load balancing vs bonding, SD-WAN explained, small business broadband"
         url="/sd-wan-for-small-business"
       />

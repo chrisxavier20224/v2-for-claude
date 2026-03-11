@@ -32,8 +32,8 @@ const SeaconGroup = () => {
   return (
     <PageLayout>
       <SEO
-        title="Seacon Group Case Study — Integra Networks"
-        description="How Integra delivered comprehensive SD-WAN, wireless point-to-point links, enterprise WiFi, and full surveillance coverage for Seacon Group's Port of Tilbury operations."
+        title="Seacon Group Case Study"
+        description="SD-WAN, wireless links, enterprise WiFi, and surveillance for Port of Tilbury operations."
         keywords="case study, Seacon Group, SD-WAN, WiFi, CCTV, wireless, port logistics, Integra Networks"
         url="/customers/seacon-group"
       />

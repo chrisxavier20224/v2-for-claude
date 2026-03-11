@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard } from "lucide-react";
+import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -48,6 +48,17 @@ const sectorLinks = [
   { label: "Airbnbs", path: "/sectors/airbnbs", icon: BedDouble, tagline: "WiFi for Holiday Rentals" },
 ];
 
+const locationLinks = [
+  { label: "North West", path: "/locations/rural-broadband-north-west", icon: MapPin, tagline: "Greater Manchester, Lancashire, Cheshire" },
+  { label: "Essex & Hertfordshire", path: "/locations/rural-broadband-essex-hertfordshire", icon: MapPin, tagline: "East of London coverage" },
+  { label: "Sussex & Surrey", path: "/locations/rural-broadband-sussex-surrey", icon: MapPin, tagline: "South East rural broadband" },
+  { label: "Kent", path: "/locations/rural-broadband-kent", icon: MapPin, tagline: "South East England" },
+  { label: "Somerset & Devon", path: "/locations/rural-broadband-somerset-devon", icon: MapPin, tagline: "South West rural coverage" },
+  { label: "Yorkshire", path: "/locations/rural-broadband-yorkshire", icon: MapPin, tagline: "North East rural broadband" },
+  { label: "London Construction", path: "/locations/construction-site-broadband-london", icon: MapPin, tagline: "London building sites" },
+  { label: "Cotswolds", path: "/locations/rural-broadband-cotswolds", icon: MapPin, tagline: "Cotswolds region coverage" },
+];
+
 const resourceLinks = [
   { label: "All Resources", path: "/resources", icon: BookOpen, tagline: "Guides, comparisons & industry updates" },
   { label: "Blog", path: "/blog", icon: FileText, tagline: "News, guides & insights" },
@@ -59,12 +70,14 @@ const Navbar = () => {
 
   const [servicesOpen, setServicesOpen] = useState(false);
   const [sectorsOpen, setSectorsOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
   const isDarkNav = location.pathname === "/connectivity/integra-bridge";
 
   const isSectorPath = sectorLinks.some(s => location.pathname === s.path);
   const isServicesPath = allConnectivityLinks.some(c => location.pathname === c.path);
+  const isLocationPath = locationLinks.some(l => location.pathname === l.path);
   const isResourcePath = resourceLinks.some(r => location.pathname === r.path) || location.pathname === "/blog";
 
   return (
@@ -193,6 +206,46 @@ const Navbar = () => {
                         <div>
                           <div className="text-sm font-medium text-foreground">{sector.label}</div>
                           <div className="text-xs text-muted-foreground">{sector.tagline}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Locations Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setLocationsOpen(true)}
+              onMouseLeave={() => setLocationsOpen(false)}
+            >
+              <button
+                className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                  isLocationPath
+                    ? isDarkNav ? "text-white" : "text-foreground"
+                    : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Locations
+                <ChevronDown className={`h-4 w-4 transition-transform ${locationsOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {locationsOpen && (
+                <div className="absolute top-full left-0 pt-2 w-80">
+                  <div className="bg-card border border-border rounded-xl shadow-xl overflow-hidden">
+                    {locationLinks.map((loc) => (
+                      <Link
+                        key={loc.path}
+                        to={loc.path}
+                        className="flex items-start gap-3 px-4 py-3 hover:bg-secondary transition-colors"
+                      >
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0 mt-0.5">
+                          <loc.icon className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium text-foreground">{loc.label}</div>
+                          <div className="text-xs text-muted-foreground">{loc.tagline}</div>
                         </div>
                       </Link>
                     ))}
@@ -341,6 +394,19 @@ const Navbar = () => {
                     <Link key={sector.path} to={sector.path} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
                       <sector.icon className="h-4 w-4 text-primary" />
                       {sector.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Locations Section */}
+              <div className="px-3 py-2">
+                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Locations</div>
+                <div className="space-y-1">
+                  {locationLinks.map((loc) => (
+                    <Link key={loc.path} to={loc.path} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                      <loc.icon className="h-4 w-4 text-primary" />
+                      {loc.label}
                     </Link>
                   ))}
                 </div>

@@ -127,8 +127,8 @@ const StarlinkForBusiness = () => {
   return (
     <PageLayout>
       <SEO
-        title="Starlink for Business: Honest Assessment of Satellite Broadband Limitations"
-        description="Starlink is fast and available. But is it enough for your business? Latency, weather, uploads, SLA, and failover. When satellite works, and when it doesn't."
+        title="Starlink for Business"
+        description="Starlink assessment. Latency, weather, uploads, SLA, failover. When satellite works for you."
         keywords="Starlink for business, satellite broadband business, Starlink latency, Starlink reliability, Starlink vs cellular, Starlink EPOS, Starlink VoIP"
         url="/starlink-for-business"
       />

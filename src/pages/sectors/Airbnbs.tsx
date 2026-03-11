@@ -81,8 +81,8 @@ const Airbnbs = () => {
   return (
     <PageLayout>
       <SEO
-        title="Airbnb & Holiday Let WiFi — Fast Guest Internet in 14 Days"
-        description="Stop losing bookings to bad WiFi. Guest-ready internet for Airbnbs, glamping sites, and holiday lets — delivered in under 14 days, wherever you are."
+        title="Airbnb & Holiday Let WiFi"
+        description="Guest-ready WiFi for Airbnbs, glamping, and holiday lets. 14-day install."
         keywords="airbnb wifi, holiday rental internet, guest wifi, glamping connectivity, vacation rental broadband, holiday let internet, rural airbnb wifi"
         url="/sectors/airbnbs"
       />

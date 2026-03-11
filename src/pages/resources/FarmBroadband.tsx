@@ -191,8 +191,8 @@ const FarmBroadband = () => {
   return (
     <PageLayout>
       <SEO
-        title="Farm Broadband UK: Reliable Internet for Livestock, Equipment, and Business"
-        description="Farms need broadband for CCTV, milking parlours, livestock monitoring, and business ops. Practical guide to farm connectivity solutions that actually work."
+        title="Farm Broadband"
+        description="Broadband for farms. CCTV, milking parlours, livestock monitoring, business ops."
         keywords="farm broadband UK, agricultural broadband, livestock monitoring broadband, farm WiFi, rural farm internet, precision agriculture connectivity"
         url="/farm-broadband"
       />
