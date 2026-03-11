@@ -380,7 +380,7 @@ const CheckAvailability = () => {
 
   /* ---- Init map when pcData arrives and container is rendered ---- */
   useEffect(() => {
-    if (!pcData) return;
+    if (!pcData || step !== 3) return;
     let cancelled = false;
 
     const tryInit = async () => {
@@ -423,7 +423,7 @@ const CheckAvailability = () => {
 
     tryInit();
     return () => { cancelled = true; };
-  }, [pcData, initMap]);
+  }, [pcData, initMap, step]);
 
   /* ---- Cleanup map on unmount ---- */
   useEffect(() => {
