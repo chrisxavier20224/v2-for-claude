@@ -376,7 +376,7 @@ const CheckAvailability = () => {
       if (data.status === 200 && data.result) {
         setPcData(data.result);
 
-        // Fetch addresses from Ideal Postcodes API in parallel
+        // Fetch addresses from Ideal Postcodes API in parallel (address lookup integration)
         const idealPostcodesKey = import.meta.env.VITE_IDEAL_POSTCODES_API_KEY;
         if (idealPostcodesKey) {
           try {
