@@ -10,11 +10,11 @@ import SEO from "@/components/shared/SEO";
 import heroImg from "@/assets/case-studies/carbee-hero.webp";
 import RelatedCaseStudies from "@/components/shared/RelatedCaseStudies";
 
-const companyDetails = [
+const companyDetails: { label: string; value: string; href?: string }[] = [
   { label: "Company", value: "Carbee Ltd" },
   { label: "Industry", value: "Automotive" },
   { label: "Location", value: "Boston, Lincolnshire" },
-  { label: "Website", value: "carbee.uk" },
+  { label: "Website", value: "carbee.uk", href: "https://carbee.uk" },
 ];
 
 const fadeUp = {

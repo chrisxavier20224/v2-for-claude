@@ -115,8 +115,8 @@ const SoGEA = () => {
         keywords="SoGEA, SOGEA broadband, FTTP, fibre to the premises, business broadband no phone line, PSTN switch off, broadband only, FTTC no line rental, full fibre"
         url="/connectivity/sogea"
       />
-      <SchemaMarkup schema={sogeaSchema} />
-      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup data={sogeaSchema} />
+      <SchemaMarkup data={faqSchema} />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
