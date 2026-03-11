@@ -362,6 +362,11 @@ const CheckAvailability = () => {
     tileLayerRef.current = esriSat;
     mapRef.current = map;
 
+    // Ensure map sizes correctly after initial render
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (mapRef.current) mapRef.current.invalidateSize();
+    }));
+
     map.on("click", (e: any) => {
       const { lat, lng } = e.latlng;
       setCoords({ lat, lng });
