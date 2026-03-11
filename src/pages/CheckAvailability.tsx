@@ -246,6 +246,16 @@ async function submitToHubSpot(payload: {
   }
 }
 
+/* ---- Capture UTM params at module level (before React Router processes URL) ---- */
+const INITIAL_UTM_PARAMS: Record<string, string> = {};
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
+    const val = params.get(key);
+    if (val) INITIAL_UTM_PARAMS[key] = val;
+  });
+})();
+
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] as const } },
