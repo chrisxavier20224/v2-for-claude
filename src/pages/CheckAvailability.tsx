@@ -192,7 +192,7 @@ async function submitToHubSpot(payload: {
   }
 
   if (payload.urgency) {
-    fields.push({ objectTypeId: "0-1", name: "how_urgent_is_your_need_for_better_connectivity_", value: payload.urgency });
+    fields.push({ objectTypeId: "0-1", name: "how_urgent_is_your_need_for_a_connectivity_solution_", value: payload.urgency });
   }
 
   // Pain points as a semicolon-separated string for the message field
