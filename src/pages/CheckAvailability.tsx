@@ -447,6 +447,16 @@ const CheckAvailability = () => {
     }
   }, [step]);
 
+  /* ---- Cleanup map when pcData becomes null (address changed) ---- */
+  useEffect(() => {
+    if (!pcData && mapRef.current) {
+      mapRef.current.remove();
+      mapRef.current = null;
+      markerRef.current = null;
+      tileLayerRef.current = null;
+    }
+  }, [pcData]);
+
   /* ---- Conversion tracking ---- */
   // Track form_view on mount (equivalent to Typeform "views")
   useEffect(() => {
