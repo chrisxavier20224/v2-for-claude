@@ -663,6 +663,7 @@ const CheckAvailability = () => {
 
       setSubmitting(true);
       try {
+        console.log("UTM params being sent:", utmParamsRef.current);
         const ok = await submitToHubSpot(payload);
 
         // ── Conversion tracking ──
