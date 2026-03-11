@@ -12,6 +12,7 @@ import SEO from "@/components/shared/SEO";
 import { trackEvent, identifyUser } from "@/components/shared/Analytics";
 import heroBg from "@/assets/sectors/homeworker-remote-work.avif";
 
+// Build trigger: Address lookup v2 deployed - ensure fresh build includes label changes
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
 /* ------------------------------------------------------------------ */
