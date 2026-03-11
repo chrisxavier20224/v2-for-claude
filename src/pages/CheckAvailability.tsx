@@ -587,7 +587,8 @@ const CheckAvailability = () => {
       const udprnData = await udprnResp.json();
       const extractedPostcode = udprnData.result?.postcode;
 
-        if (extractedPostcode) {
+      if (extractedPostcode) {
+        setPostcode(extractedPostcode);
         // Now get lat/lng from postcodes.io
         const pcResp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(extractedPostcode)}`);
         const pcJsonData = await pcResp.json();
