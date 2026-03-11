@@ -138,6 +138,8 @@ async function submitToHubSpot(payload: {
   region: string | null;
   property_coordinates: string | null;
   address: string | null;
+  house_building_number?: string;
+  urgency?: string;
   utm_source?: string;
   utm_medium?: string;
   utm_campaign?: string;
@@ -183,6 +185,14 @@ async function submitToHubSpot(payload: {
 
   if (payload.address) {
     fields.push({ objectTypeId: "0-1", name: "address", value: payload.address });
+  }
+
+  if (payload.house_building_number) {
+    fields.push({ objectTypeId: "0-1", name: "house___building_number", value: payload.house_building_number });
+  }
+
+  if (payload.urgency) {
+    fields.push({ objectTypeId: "0-1", name: "how_urgent_is_your_need_for_better_connectivity_", value: payload.urgency });
   }
 
   // Pain points as a semicolon-separated string for the message field
@@ -319,6 +329,8 @@ const CheckAvailability = () => {
   // Step 2
   const [service, setService] = useState<ServiceType | null>(null);
   const [pains, setPains] = useState<Set<PainPoint>>(new Set());
+  const [urgency, setUrgency] = useState<string>("");
+  const [houseBuildingNumber, setHouseBuildingNumber] = useState<string>("");
 
   // Step 3
   const [postcode, setPostcode] = useState("");
@@ -592,6 +604,8 @@ const CheckAvailability = () => {
       if (r) {
         const streetAddress = [r.line_1, r.line_2, r.line_3, r.post_town].filter(Boolean).join(", ");
         if (streetAddress) setSelectedAddress(streetAddress);
+        // Extract building number separately for HubSpot
+        setHouseBuildingNumber(r.building_number || r.sub_building_name || "");
       }
 
       if (extractedPostcode) {
@@ -665,6 +679,8 @@ const CheckAvailability = () => {
             ? `${pcData.latitude.toFixed(6)}, ${pcData.longitude.toFixed(6)}`
             : null,
         address: selectedAddress,
+        house_building_number: houseBuildingNumber || undefined,
+        urgency: urgency || undefined,
         ...utmParamsRef.current,
       };
 
@@ -911,6 +927,35 @@ const CheckAvailability = () => {
                       ))}
                     </div>
                   </div>
+
+                  {/* Urgency question */}
+                  <div className="mt-6 pt-5 border-t border-border">
+                    <p className="text-sm font-medium text-foreground mb-3">How urgent is your need for better connectivity?</p>
+                    <div className="space-y-2">
+                      {[
+                        "I needed a solution yesterday",
+                        "It's important, but not urgent",
+                        "I'm just browsing",
+                      ].map((option) => (
+                        <button
+                          key={option}
+                          onClick={() => setUrgency(option)}
+                          className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
+                            urgency === option
+                              ? "border-primary bg-primary/5"
+                              : "border-border hover:border-primary/30"
+                          }`}
+                        >
+                          <div className={`h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 transition-all ${
+                            urgency === option ? "bg-primary" : "border-2 border-border"
+                          }`}>
+                            {urgency === option && <Check className="h-3 w-3 text-white" />}
+                          </div>
+                          <span className="text-sm text-foreground">{option}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
                 <Button onClick={() => goTo(3)} disabled={!step2Valid} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
@@ -1025,6 +1070,7 @@ const CheckAvailability = () => {
                   onClick={() => {
                     const streetAddr = [addr.line_1, addr.line_2, addr.line_3, addr.post_town].filter(Boolean).join(", ");
                     setSelectedAddress(streetAddr || displayText);
+                    setHouseBuildingNumber(addr.building_number || addr.sub_building_name || "");
                     setAddressDropdownOpen(false);
                   }}
                                   className={`w-full text-left px-4 py-3 transition-all border-b border-border last:border-b-0 hover:bg-muted/50 ${
