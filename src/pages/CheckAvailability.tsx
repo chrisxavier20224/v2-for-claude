@@ -884,33 +884,19 @@ const CheckAvailability = () => {
                 {pcData && (
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
                     <div className="rounded-2xl border border-border bg-card p-4 shadow-lg mb-4">
-                      <div
-                        ref={mapContainerRef}
-                        className="w-full rounded-xl border border-border overflow-hidden"
-                        style={{ height: 380 }}
+                      <iframe
+                        src={`https://www.google.com/maps?q=${pcData.latitude},${pcData.longitude}&z=18&output=embed`}
+                        title="Property location"
+                        className="w-full border-0"
+                        style={{ height: 380, borderRadius: 12 }}
+                        loading="lazy"
+                        allowFullScreen
                       />
                       <div className="mt-3 rounded-lg bg-primary/5 border border-primary/20 px-4 py-3 text-center">
                         <p className="text-sm text-foreground leading-relaxed">
-                          <span className="font-semibold text-primary">Tap your building</span> to drop the pin — try to place it right on your roof for the most accurate results.
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          <span className="font-medium text-amber-600">Important:</span> Your pin location is used to calculate coverage and pricing. Selecting the wrong property may result in an inaccurate proposal, so please double-check before submitting.
+                          Confirm this is the correct location for your property.
                         </p>
                       </div>
-
-                      {coords && (
-                        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="mt-3 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
-                          <div className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                            <div>
-                              <p className="text-xs font-semibold text-green-600">Pin Placed</p>
-                              <p className="text-sm font-mono text-foreground">
-                                {coords.lat.toFixed(6)}, {coords.lng.toFixed(6)}
-                              </p>
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
                     </div>
 
                     <Button
