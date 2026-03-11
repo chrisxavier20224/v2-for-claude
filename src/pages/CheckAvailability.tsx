@@ -13,9 +13,12 @@ declare global {
   interface Window { L: any; }
 }
 
+let leafletLoadPromise: Promise<void> | null = null;
+
 function loadLeaflet(): Promise<void> {
-  return new Promise((resolve) => {
-    if (window.L) { resolve(); return; }
+  if (window.L) return Promise.resolve();
+  if (leafletLoadPromise) return leafletLoadPromise;
+  leafletLoadPromise = new Promise((resolve) => {
     const css = document.createElement("link");
     css.rel = "stylesheet";
     css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
@@ -25,6 +28,7 @@ function loadLeaflet(): Promise<void> {
     js.onload = () => resolve();
     document.head.appendChild(js);
   });
+  return leafletLoadPromise;
 }
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
