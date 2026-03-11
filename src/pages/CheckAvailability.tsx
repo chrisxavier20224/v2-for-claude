@@ -357,47 +357,6 @@ const CheckAvailability = () => {
     }
   }, [addressDropdownOpen]);
 
-  /* ---- Map ---- */
-  const initMap = useCallback(async () => {
-    await loadLeaflet();
-    const L = window.L;
-    if (!mapContainerRef.current || mapRef.current) return;
-
-    const m = L.map(mapContainerRef.current, { zoomControl: true, scrollWheelZoom: true }).setView([52.5, -1.5], 6);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "Esri", maxZoom: 20 }).addTo(m);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", { maxZoom: 20, opacity: 0.85 }).addTo(m);
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}", { maxZoom: 20, opacity: 0.6 }).addTo(m);
-
-    m.on("click", (e: any) => {
-      if (markerRef.current) markerRef.current.setLatLng(e.latlng);
-      else {
-        markerRef.current = L.marker(e.latlng, { draggable: true, autoPan: true }).addTo(m);
-        markerRef.current.on("dragend", () => {
-          const ll = markerRef.current.getLatLng();
-          setCoords({ lat: ll.lat, lng: ll.lng });
-        });
-      }
-      setCoords({ lat: e.latlng.lat, lng: e.latlng.lng });
-    });
-
-    mapRef.current = m;
-    setTimeout(() => m.invalidateSize(), 300);
-    setTimeout(() => m.invalidateSize(), 600);
-  }, []);
-
-  /* ---- Initialize map AFTER pcData causes the container to render ---- */
-  useEffect(() => {
-    if (pcData && mapContainerRef.current && !mapRef.current) {
-      initMap().then(() => {
-        setTimeout(() => {
-          if (mapRef.current) {
-            mapRef.current.invalidateSize();
-            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
-          }
-        }, 400);
-      });
-    }
-  }, [pcData, initMap]);
 
   /* ---- Address autocomplete & postcode detection ---- */
   const IDEAL_API_KEY = "ak_mmhtvflhz3HHzrt20r8xYpzM2rAqX";
