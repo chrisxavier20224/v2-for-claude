@@ -700,12 +700,12 @@ const CheckAvailability = () => {
                     </div>
                   </div>
 
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Postcode</label>
+                  <label className="block text-sm font-medium text-foreground mb-1.5">Address</label>
                   <div className="flex gap-2">
                     <Input
                       value={postcode}
                       onChange={(e) => setPostcode(e.target.value.toUpperCase())}
-                      placeholder="e.g. GU27 1JL"
+                      placeholder="Type in your address"
                       autoComplete="postal-code"
                       className="flex-1 uppercase"
                       onKeyDown={(e) => e.key === "Enter" && lookupPostcode()}
@@ -717,7 +717,7 @@ const CheckAvailability = () => {
 
                   {!pcData && !pcLoading && (
                     <p className="mt-2 text-xs text-muted-foreground flex items-center gap-1">
-                      <ArrowRight className="h-3 w-3" /> Enter your postcode and tap <span className="font-semibold text-primary">Find</span> to load the map
+                      <ArrowRight className="h-3 w-3" /> Type in your address and tap <span className="font-semibold text-primary">Find</span> to load the map
                     </p>
                   )}
 
