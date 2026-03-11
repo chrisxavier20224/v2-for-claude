@@ -113,6 +113,12 @@ async function submitToHubSpot(payload: {
   region: string | null;
   property_coordinates: string | null;
   address: string | null;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+  gclid?: string;
 }): Promise<boolean> {
   const fields: { objectTypeId: string; name: string; value: string }[] = [
     { objectTypeId: "0-1", name: "firstname", value: payload.first_name },
