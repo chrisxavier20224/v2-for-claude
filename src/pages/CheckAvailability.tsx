@@ -292,11 +292,7 @@ const CheckAvailability = () => {
   const [addresses, setAddresses] = useState<AddressOption[]>([]);
   const [selectedAddress, setSelectedAddress] = useState<string | null>(null);
   const [addressDropdownOpen, setAddressDropdownOpen] = useState(false);
-  const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [submitting, setSubmitting] = useState(false);
-  const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<any>(null);
-  const markerRef = useRef<any>(null);
   const addressDropdownRef = useRef<HTMLDivElement>(null);
 
   const [step1Touched, setStep1Touched] = useState(false);
