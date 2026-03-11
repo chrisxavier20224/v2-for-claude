@@ -339,6 +339,79 @@ const CheckAvailability = () => {
     utmParamsRef.current = captured;
   }, []);
 
+  /* ---- Leaflet map ---- */
+  const initMap = useCallback(async () => {
+    if (!mapContainerRef.current || mapRef.current) return;
+    await loadLeaflet();
+    const L = window.L;
+    const map = L.map(mapContainerRef.current, {
+      center: [54.5, -2],
+      zoom: 6,
+      zoomControl: true,
+      attributionControl: false,
+    });
+    const esriSat = L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      { maxZoom: 19 }
+    );
+    esriSat.addTo(map);
+    tileLayerRef.current = esriSat;
+    mapRef.current = map;
+
+    map.on("click", (e: any) => {
+      const { lat, lng } = e.latlng;
+      setCoords({ lat, lng });
+      if (markerRef.current) {
+        markerRef.current.setLatLng([lat, lng]);
+      } else {
+        markerRef.current = L.marker([lat, lng]).addTo(map);
+      }
+    });
+  }, []);
+
+  /* ---- Init map when pcData arrives and container is rendered ---- */
+  useEffect(() => {
+    if (pcData && mapContainerRef.current && !mapRef.current) {
+      initMap().then(() => {
+        setTimeout(() => {
+          if (mapRef.current) {
+            mapRef.current.invalidateSize();
+            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+            const L = window.L;
+            if (markerRef.current) {
+              markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+            } else {
+              markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+            }
+            setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+          }
+        }, 400);
+      });
+    } else if (pcData && mapRef.current) {
+      // Map already exists, just fly to new location
+      mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+      const L = window.L;
+      if (markerRef.current) {
+        markerRef.current.setLatLng([pcData.latitude, pcData.longitude]);
+      } else {
+        markerRef.current = L.marker([pcData.latitude, pcData.longitude]).addTo(mapRef.current);
+      }
+      setCoords({ lat: pcData.latitude, lng: pcData.longitude });
+    }
+  }, [pcData, initMap]);
+
+  /* ---- Cleanup map on unmount ---- */
+  useEffect(() => {
+    return () => {
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+        markerRef.current = null;
+        tileLayerRef.current = null;
+      }
+    };
+  }, []);
+
   /* ---- Conversion tracking ---- */
   // Track form_view on mount (equivalent to Typeform "views")
   useEffect(() => {
