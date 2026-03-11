@@ -437,6 +437,16 @@ const CheckAvailability = () => {
     };
   }, []);
 
+  /* ---- Cleanup map when leaving Step 3 ---- */
+  useEffect(() => {
+    if (step !== 3 && mapRef.current) {
+      mapRef.current.remove();
+      mapRef.current = null;
+      markerRef.current = null;
+      tileLayerRef.current = null;
+    }
+  }, [step]);
+
   /* ---- Conversion tracking ---- */
   // Track form_view on mount (equivalent to Typeform "views")
   useEffect(() => {
