@@ -503,19 +503,12 @@ const CheckAvailability = () => {
       const udprnData = await udprnResp.json();
       const extractedPostcode = udprnData.result?.postcode;
 
-      if (extractedPostcode) {
+        if (extractedPostcode) {
         // Now get lat/lng from postcodes.io
         const pcResp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(extractedPostcode)}`);
-        const pcData = await pcResp.json();
-        if (pcData.status === 200 && pcData.result) {
-          setPcData(pcData.result);
-          await initMap();
-          setTimeout(() => {
-            if (mapRef.current) {
-              mapRef.current.invalidateSize();
-              mapRef.current.flyTo([pcData.result.latitude, pcData.result.longitude], 18, { duration: 1.5 });
-            }
-          }, 400);
+        const pcJsonData = await pcResp.json();
+        if (pcJsonData.status === 200 && pcJsonData.result) {
+          setPcData(pcJsonData.result);
         }
       }
     } catch (err) {
