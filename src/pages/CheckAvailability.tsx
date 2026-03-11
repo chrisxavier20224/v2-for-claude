@@ -572,6 +572,7 @@ const CheckAvailability = () => {
           ? `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`
           : null,
         address: selectedAddress,
+        ...utmParamsRef.current,
       };
 
       setSubmitting(true);
