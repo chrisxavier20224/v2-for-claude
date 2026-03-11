@@ -409,6 +409,20 @@ const CheckAvailability = () => {
     setTimeout(() => m.invalidateSize(), 600);
   }, []);
 
+  /* ---- Initialize map AFTER pcData causes the container to render ---- */
+  useEffect(() => {
+    if (pcData && mapContainerRef.current && !mapRef.current) {
+      initMap().then(() => {
+        setTimeout(() => {
+          if (mapRef.current) {
+            mapRef.current.invalidateSize();
+            mapRef.current.flyTo([pcData.latitude, pcData.longitude], 18, { duration: 1.5 });
+          }
+        }, 400);
+      });
+    }
+  }, [pcData, initMap]);
+
   /* ---- Address autocomplete & postcode detection ---- */
   const IDEAL_API_KEY = "ak_mmhtvflhz3HHzrt20r8xYpzM2rAqX";
   const UK_POSTCODE_RE = /^[A-Z]{1,2}[0-9]{1,2}[A-Z]?\s?[0-9][A-Z]{2}$/i;
@@ -489,19 +503,12 @@ const CheckAvailability = () => {
       const udprnData = await udprnResp.json();
       const extractedPostcode = udprnData.result?.postcode;
 
-      if (extractedPostcode) {
+        if (extractedPostcode) {
         // Now get lat/lng from postcodes.io
         const pcResp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(extractedPostcode)}`);
-        const pcData = await pcResp.json();
-        if (pcData.status === 200 && pcData.result) {
-          setPcData(pcData.result);
-          await initMap();
-          setTimeout(() => {
-            if (mapRef.current) {
-              mapRef.current.invalidateSize();
-              mapRef.current.flyTo([pcData.result.latitude, pcData.result.longitude], 18, { duration: 1.5 });
-            }
-          }, 400);
+        const pcJsonData = await pcResp.json();
+        if (pcJsonData.status === 200 && pcJsonData.result) {
+          setPcData(pcJsonData.result);
         }
       }
     } catch (err) {
@@ -534,14 +541,6 @@ const CheckAvailability = () => {
         } catch (err) {
           console.error("Ideal Postcodes error:", err);
         }
-
-        await initMap();
-        setTimeout(() => {
-          if (mapRef.current) {
-            mapRef.current.invalidateSize();
-            mapRef.current.flyTo([data.result.latitude, data.result.longitude], 18, { duration: 1.5 });
-          }
-        }, 400);
       } else {
         alert("Postcode not found. Please check and try again.");
       }
