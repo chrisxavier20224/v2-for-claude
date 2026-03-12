@@ -119,6 +119,42 @@ export const identifyUser = (email: string, properties?: Record<string, unknown>
   }
 };
 
+// ── Global phone-call click tracking (event delegation) ──────────────
+// Listens for clicks on any <a href="tel:..."> across the entire site
+// so we don't need to add onClick handlers to 14+ files individually.
+const initPhoneClickTracking = () => {
+  if (typeof window === "undefined") return;
+  document.addEventListener("click", (e) => {
+    const link = (e.target as HTMLElement).closest?.('a[href^="tel:"]') as HTMLAnchorElement | null;
+    if (!link) return;
+
+    const phoneNumber = link.href.replace("tel:", "");
+
+    // GA4 event — can be imported as a conversion in Google Ads
+    trackEvent("phone_call_click", {
+      phone_number: phoneNumber,
+      link_text: link.textContent?.trim() || "Call Us",
+      page_path: window.location.pathname,
+    });
+
+    // Direct Google Ads conversion — "Phone Call Click" action
+    // Label can be updated once the conversion action is created in Google Ads
+    trackGoogleAdsConversion("phone_call_click", 1, "GBP");
+  });
+};
+
+// ── Contact form conversion tracking ─────────────────────────────────
+// Call this after a successful contact form submission
+export const trackContactFormConversion = () => {
+  // GA4 event
+  trackEvent("contact_form_submit", {
+    page_path: window.location.pathname,
+  });
+
+  // Google Ads conversion — "Contact Form Submission" action
+  trackGoogleAdsConversion("contact_form_submit", 1, "GBP");
+};
+
 const Analytics = () => {
   const location = useLocation();
 
@@ -126,6 +162,7 @@ const Analytics = () => {
   useEffect(() => {
     initializeGA();
     initializeHubSpot();
+    initPhoneClickTracking();
   }, []);
 
   // Track page views on route change

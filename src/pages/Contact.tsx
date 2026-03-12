@@ -11,7 +11,7 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import SEO from "@/components/shared/SEO";
 import LazyIframe from "@/components/shared/LazyIframe";
 import HubSpotMeeting from "@/components/shared/HubSpotMeeting";
-import { trackEvent } from "@/components/shared/Analytics";
+import { trackEvent, trackContactFormConversion } from "@/components/shared/Analytics";
 
 const HUBSPOT_PORTAL_ID = "20314482";
 const HUBSPOT_CONTACT_FORM_ID = "b82f1e4b-5892-42c8-b222-53a942076e1e";
@@ -72,6 +72,7 @@ const Contact = () => {
 
       setIsSubmitted(true);
       trackEvent("form_submit", { form: "contact", company: form.company });
+      trackContactFormConversion();
       toast({ title: "Request sent", description: "We'll be in touch soon." });
     } catch (err) {
       console.error("Contact form error:", err);
