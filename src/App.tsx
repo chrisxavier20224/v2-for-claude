@@ -122,6 +122,21 @@ const Support = lazy(() => import("./pages/Support"));
 
 const queryClient = new QueryClient();
 
+/* ---- Capture UTM params on first page load (any route) into sessionStorage ---- */
+(() => {
+  if (typeof window === "undefined") return;
+  const params = new URLSearchParams(window.location.search);
+  const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+  const captured: Record<string, string> = {};
+  utmKeys.forEach((key) => {
+    const val = params.get(key);
+    if (val) captured[key] = val;
+  });
+  if (Object.keys(captured).length > 0) {
+    window.sessionStorage.setItem("integra_utm_params", JSON.stringify(captured));
+  }
+})();
+
 // Simple loading fallback
 const PageLoader = () => (
   <div className="min-h-screen bg-background flex items-center justify-center">

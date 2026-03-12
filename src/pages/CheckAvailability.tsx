@@ -256,14 +256,25 @@ async function submitToHubSpot(payload: {
   }
 }
 
-/* ---- Capture UTM params at module level (before React Router processes URL) ---- */
+/* ---- Capture UTM params: module-level from URL + sessionStorage fallback ---- */
 const INITIAL_UTM_PARAMS: Record<string, string> = {};
 (() => {
+  // First, try current URL search params (direct landing on /check with UTMs)
   const params = new URLSearchParams(window.location.search);
   ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
     const val = params.get(key);
     if (val) INITIAL_UTM_PARAMS[key] = val;
   });
+  // Fallback: read from sessionStorage (captured by App.tsx on initial landing page)
+  if (Object.keys(INITIAL_UTM_PARAMS).length === 0) {
+    try {
+      const stored = window.sessionStorage.getItem("integra_utm_params");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        Object.assign(INITIAL_UTM_PARAMS, parsed);
+      }
+    } catch { /* ignore parse errors */ }
+  }
 })();
 
 const fadeUp = {
@@ -603,10 +614,17 @@ const CheckAvailability = () => {
 
       // Build structured street address from UDPRN data
       if (r) {
-        const streetAddress = [r.line_1, r.line_2, r.line_3, r.post_town].filter(Boolean).join(", ");
+        const buildingNum = r.building_number || r.sub_building_name || "";
+        // Strip building number from line_1 to avoid duplication
+        // (Ideal Postcodes line_1 often includes it, e.g. "3 Hillside Terrace")
+        let cleanLine1 = r.line_1 || "";
+        if (buildingNum && cleanLine1.toLowerCase().startsWith(buildingNum.toLowerCase())) {
+          cleanLine1 = cleanLine1.slice(buildingNum.length).replace(/^[\s,]+/, "");
+        }
+        const streetAddress = [cleanLine1, r.line_2, r.line_3, r.post_town].filter(Boolean).join(", ");
         if (streetAddress) setSelectedAddress(streetAddress);
         // Extract building number separately for HubSpot
-        setHouseBuildingNumber(r.building_number || r.sub_building_name || "");
+        setHouseBuildingNumber(buildingNum);
       }
 
       if (extractedPostcode) {
@@ -939,7 +957,7 @@ const CheckAvailability = () => {
                           </div>
                           <div>
                             <h2 className="text-lg font-semibold text-foreground">Sound familiar?</h2>
-                            <p className="text-xs text-muted-foreground">Tick any that apply (optional)</p>
+                            <p className="text-xs text-muted-foreground">Please select at least one</p>
                           </div>
                         </div>
 
@@ -965,9 +983,12 @@ const CheckAvailability = () => {
                         </div>
                       </div>
 
-                      <Button onClick={() => setSubStep(3)} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                      <Button onClick={() => setSubStep(3)} size="lg" disabled={pains.size === 0} className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed">
                         Continue <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
+                      {pains.size === 0 && (
+                        <p className="text-xs text-muted-foreground text-center mt-2">Select at least one option to continue</p>
+                      )}
                       <Button variant="outline" onClick={() => setSubStep(1)} className="w-full mt-2 h-11">
                         <ArrowLeft className="mr-2 h-4 w-4" /> Back
                       </Button>
@@ -1127,9 +1148,14 @@ const CheckAvailability = () => {
                                 <button
                                   key={idx}
                   onClick={() => {
-                    const streetAddr = [addr.line_1, addr.line_2, addr.line_3, addr.post_town].filter(Boolean).join(", ");
+                    const buildNum = addr.building_number || addr.sub_building_name || "";
+                    let cleanL1 = addr.line_1 || "";
+                    if (buildNum && cleanL1.toLowerCase().startsWith(buildNum.toLowerCase())) {
+                      cleanL1 = cleanL1.slice(buildNum.length).replace(/^[\s,]+/, "");
+                    }
+                    const streetAddr = [cleanL1, addr.line_2, addr.line_3, addr.post_town].filter(Boolean).join(", ");
                     setSelectedAddress(streetAddr || displayText);
-                    setHouseBuildingNumber(addr.building_number || addr.sub_building_name || "");
+                    setHouseBuildingNumber(buildNum);
                     setAddressDropdownOpen(false);
                   }}
                                   className={`w-full text-left px-4 py-3 transition-all border-b border-border last:border-b-0 hover:bg-muted/50 ${
