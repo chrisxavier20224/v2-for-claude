@@ -770,7 +770,7 @@ const CheckAvailability = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 mb-6"
+            className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 mb-6 animate-pulse-glow"
           >
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -1014,7 +1014,7 @@ const CheckAvailability = () => {
                         </div>
                       </div>
 
-                      <Button onClick={() => goTo(3)} disabled={!step2Valid} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                      <Button onClick={() => goTo(3)} disabled={!urgency} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
                         Continue to Pin Drop <MapPin className="ml-2 h-5 w-5" />
                       </Button>
                       <Button variant="outline" onClick={() => setSubStep(2)} className="w-full mt-2 h-11">
