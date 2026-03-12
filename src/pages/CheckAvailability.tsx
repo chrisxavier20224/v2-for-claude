@@ -218,9 +218,6 @@ async function submitToHubSpot(payload: {
     ["utm_term", payload.utm_term],
     ["utm_content", payload.utm_content],
     ["gclid", payload.gclid],
-    // Also send gclid to HubSpot's native Google Ads field and utm_id for historical continuity
-    ["hs_google_click_id", payload.gclid],
-    ["utm_id", payload.gclid],
   ];
   utmFields.forEach(([name, value]) => {
     if (value) fields.push({ objectTypeId: "0-1", name, value });
