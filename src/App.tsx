@@ -296,6 +296,18 @@ const App = () => (
               <Route path="/rural-sme's" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/rural-smes" element={<Navigate to="/sectors/rural-smes" replace />} />
 
+              {/* Google Ads landing page redirects - old Framer URLs that no longer exist */}
+              <Route path="/rural_internet" element={<Navigate to="/check" replace />} />
+              <Route path="/rural_broadband" element={<Navigate to="/check" replace />} />
+              <Route path="/rural-internet" element={<Navigate to="/check" replace />} />
+              <Route path="/rural-broadband" element={<Navigate to="/check" replace />} />
+              <Route path="/satellite_internet" element={<Navigate to="/check" replace />} />
+              <Route path="/satellite-internet" element={<Navigate to="/check" replace />} />
+              <Route path="/construction_wifi" element={<Navigate to="/check" replace />} />
+              <Route path="/construction-wifi" element={<Navigate to="/check" replace />} />
+              <Route path="/4g_internet" element={<Navigate to="/check" replace />} />
+              <Route path="/4g-internet" element={<Navigate to="/check" replace />} />
+
               {/* Blog redirects from old Framer slugs */}
               <Route path="/blog/bt-openreach-fibre-checker-and-other-handy-online-tools-to-help-you-find-out-what-s-available-at-your-property" element={<Navigate to="/blog/bt-openreach-fibre-checker" replace />} />
               <Route path="/blog/unraveling-internet-connectivity-satellite-internet-vs-integra-4g-5g-sdwan" element={<Navigate to="/blog/satellite-internet-vs-integra-4g-5g-sdwan" replace />} />
