@@ -37,7 +37,7 @@ const pricingTiers = [
     speed: "Up to 350Mbps",
     price: "135",
     installation: "2,200",
-    description: "Multi-network bonding — our most popular business solution",
+    description: "Multi-network bonding — our most popular business & homeworker solution",
     features: [
       "Up to 350Mbps multi-network bonding",
       "Advanced load balancing + failover",
