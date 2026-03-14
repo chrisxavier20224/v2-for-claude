@@ -172,9 +172,10 @@ const Analytics = () => {
     trackHubSpotPageView(url);
 
     // Fire Google Ads conversion on thank-you page
-    // Matches the "Conversion Page Availability Checker" action (page load: /thankyou)
+    // Matches the "2026 Availability Checker" conversion action (Primary, Submit lead forms)
+    // Conversion ID: AW-344295012 | Label: GHgLCKWQt9sCEOSMlqQB
     if (location.pathname === "/thankyou") {
-      trackGoogleAdsConversion("1TUjCO6M2LsZEOSMlqQB", 1, "GBP");
+      trackGoogleAdsConversion("GHgLCKWQt9sCEOSMlqQB", 1, "GBP");
     }
   }, [location]);
 
