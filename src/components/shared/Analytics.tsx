@@ -18,11 +18,22 @@ declare global {
 const initializeGA = () => {
   if (!GA_MEASUREMENT_ID || typeof window === "undefined") return;
 
-  // Load gtag script
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  document.head.appendChild(script);
+  // Load gtag script for GA4
+  const gaScript = document.createElement("script");
+  gaScript.async = true;
+  gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(gaScript);
+
+  // Load gtag script for Google Ads conversion tracking
+  // CRITICAL: Without this explicit script tag, the AW container never loads
+  // and conversion events are silently lost (dataLayer pushes are ignored).
+  // The GA4 gtag.js does NOT dynamically load the AW container on its own.
+  if (GOOGLE_ADS_ID) {
+    const awScript = document.createElement("script");
+    awScript.async = true;
+    awScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
+    document.head.appendChild(awScript);
+  }
 
   // Initialize gtag
   window.dataLayer = window.dataLayer || [];
