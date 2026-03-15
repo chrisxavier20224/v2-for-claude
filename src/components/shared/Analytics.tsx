@@ -9,7 +9,7 @@ const HUBSPOT_ID = "20314482";
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;
-    dataLayer: unknown[];
+    dataLayer: (IArguments | Record<string, unknown>)[];
     _hsq: unknown[];
   }
 }
@@ -36,9 +36,16 @@ const initializeGA = () => {
   }
 
   // Initialize gtag
+  // CRITICAL: Must use `arguments` object, NOT rest parameters (...args).
+  // gtag.js internally checks `Object.prototype.toString.call(entry)` and only
+  // processes `[object Arguments]` entries as gtag commands. If you use
+  // `function(...args) { dataLayer.push(args) }`, it pushes a plain Array
+  // (`[object Array]`), which gtag.js silently ignores — conversion events
+  // are never sent to Google. This was the root cause of 0% conversion rate.
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
+  window.gtag = function () {
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer.push(arguments);
   };
   window.gtag("js", new Date());
   window.gtag("config", GA_MEASUREMENT_ID, {
