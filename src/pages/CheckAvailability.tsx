@@ -34,7 +34,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
-import { trackEvent, identifyUser } from "@/components/shared/Analytics";
+import { trackEvent, identifyUser, storeConversionUserData } from "@/components/shared/Analytics";
 import heroBg from "@/assets/sectors/homeworker-remote-work.avif";
 
 // Build trigger: Address lookup v2 deployed - ensure fresh build includes label changes
@@ -735,6 +735,9 @@ const CheckAvailability = () => {
       } catch (err) {
         console.error("Submission error:", err);
       }
+
+      // Store user data for Enhanced Conversions on /thankyou page
+      storeConversionUserData({ email, phone, firstName, lastName });
 
       navigate("/thankyou");
       return;

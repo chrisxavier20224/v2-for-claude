@@ -21,6 +21,7 @@ const ThankYou = () => {
         title="Thank You — Integra Networks"
         description="Thank you for completing our availability checker. The great news is you are eligible for our service!"
         url="/thankyou"
+        noIndex
       />
 
       {/* ── HERO: Full-bleed image with celebration overlay ─────────── */}

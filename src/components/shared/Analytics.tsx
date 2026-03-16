@@ -137,6 +137,45 @@ export const identifyUser = (email: string, properties?: Record<string, unknown>
   }
 };
 
+// ── Enhanced Conversions ─────────────────────────────────────────────
+// Store user data in sessionStorage before navigating to /thankyou
+// so we can send hashed first-party data with the conversion event.
+export const storeConversionUserData = (data: {
+  email: string;
+  phone?: string;
+  firstName?: string;
+  lastName?: string;
+}) => {
+  try {
+    sessionStorage.setItem("ec_user_data", JSON.stringify(data));
+  } catch {
+    // sessionStorage may be unavailable (private browsing, etc.)
+  }
+};
+
+// Send Enhanced Conversion user data to Google before firing conversion
+const sendEnhancedConversionData = () => {
+  if (!GOOGLE_ADS_ID || !window.gtag) return;
+  try {
+    const raw = sessionStorage.getItem("ec_user_data");
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    // gtag('set', 'user_data', {...}) sends hashed first-party data
+    // Google's gtag.js hashes these values automatically before transmission
+    window.gtag("set", "user_data", {
+      email: data.email?.toLowerCase().trim(),
+      phone_number: data.phone ? data.phone.replace(/\s/g, "") : undefined,
+      address: {
+        first_name: data.firstName?.trim(),
+        last_name: data.lastName?.trim(),
+      },
+    });
+    sessionStorage.removeItem("ec_user_data");
+  } catch {
+    // Fail silently — Enhanced Conversions are a bonus, not critical
+  }
+};
+
 // ── Global phone-call click tracking (event delegation) ──────────────
 // Listens for clicks on any <a href="tel:..."> across the entire site
 // so we don't need to add onClick handlers to 14+ files individually.
@@ -156,8 +195,8 @@ const initPhoneClickTracking = () => {
     });
 
     // Direct Google Ads conversion — "Phone Call Click" action
-    // Label can be updated once the conversion action is created in Google Ads
-    trackGoogleAdsConversion("phone_call_click", 1, "GBP");
+    // Conversion ID: AW-344295012 | Label: zReJCNaN8okcEOSMlqQB
+    trackGoogleAdsConversion("zReJCNaN8okcEOSMlqQB", 1, "GBP");
   });
 };
 
@@ -169,8 +208,9 @@ export const trackContactFormConversion = () => {
     page_path: window.location.pathname,
   });
 
-  // Google Ads conversion — "Contact Form Submission" action
-  trackGoogleAdsConversion("contact_form_submit", 1, "GBP");
+  // Google Ads conversion — "Contact Form Submit" action
+  // Conversion ID: AW-344295012 | Label: kTuMCNmN8okcEOSMlqQB
+  trackGoogleAdsConversion("kTuMCNmN8okcEOSMlqQB", 1, "GBP");
 };
 
 const Analytics = () => {
@@ -193,6 +233,8 @@ const Analytics = () => {
     // Matches the "2026 Availability Checker" conversion action (Primary, Submit lead forms)
     // Conversion ID: AW-344295012 | Label: GHgLCKWQt9sCEOSMlqQB
     if (location.pathname === "/thankyou") {
+      // Send Enhanced Conversion data (hashed email/phone) before the conversion event
+      sendEnhancedConversionData();
       trackGoogleAdsConversion("GHgLCKWQt9sCEOSMlqQB", 1, "GBP");
     }
   }, [location]);

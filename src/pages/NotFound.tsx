@@ -11,7 +11,7 @@ const NotFound = () => {
 
   return (
     <>
-      <SEO title="Page Not Found" description="The page you're looking for doesn't exist." />
+      <SEO title="Page Not Found" description="The page you're looking for doesn't exist." noIndex />
       <div className="flex min-h-screen items-center justify-center bg-background">
         <div className="text-center px-6">
           <h1 className="text-display-sm md:text-display text-foreground mb-4">404</h1>
