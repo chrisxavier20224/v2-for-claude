@@ -318,6 +318,18 @@ const App = () => (
               <Route path="/blog/diy-guide-performing-internet-speed-tests-at-your-property" element={<Navigate to="/blog/diy-guide-internet-speed-tests" replace />} />
               <Route path="/blog/why-is-my-bt-internet-so-slow" element={<Navigate to="/blog/why-is-my-bt-internet-so-slow" replace />} />
 
+              {/* Search Console 404/Soft 404 fix redirects - old Framer URLs found Mar 2026 */}
+              <Route path="/careers" element={<Navigate to="/contact" replace />} />
+              <Route path="/reviews" element={<Navigate to="/customers" replace />} />
+              <Route path="/test" element={<Navigate to="/check" replace />} />
+              <Route path="/ultrafast" element={<Navigate to="/pricing" replace />} />
+              <Route path="/royal-farm-signup" element={<Navigate to="/customers/royle-farm" replace />} />
+              <Route path="/customers/powering-up-a-connectivity-triumph-in-the-face-of-adversity" element={<Navigate to="/customers" replace />} />
+              <Route path="/customers/from-farm-to-fibre-royle-farm-business-parks-digital-renaissance" element={<Navigate to="/customers/royle-farm" replace />} />
+              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity-benefits-speeds-and-providers" element={<Navigate to="/blog" replace />} />
+              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity" element={<Navigate to="/blog" replace />} />
+              <Route path="/internet-connectivity/*" element={<Navigate to="/blog" replace />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
