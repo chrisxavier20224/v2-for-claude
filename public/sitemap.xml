@@ -3,155 +3,251 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.integra-networks.co.uk/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Key Conversion Pages -->
+  <url>
+    <loc>https://www.integra-networks.co.uk/pricing</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/contact</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/check</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Core Product Pages -->
+  <url>
+    <loc>https://www.integra-networks.co.uk/integra-sd-wan</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/starlink-for-business</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/sd-wan-for-small-business</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/construction-site-broadband</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/farm-broadband</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/rural-business-broadband</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/alternatives-to-fibre-broadband</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Sectors -->
   <url>
     <loc>https://www.integra-networks.co.uk/sectors/homeworkers</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/sectors/fibre-enabled-buildings</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/sectors/construction-sites</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/sectors/rural-smes</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/sectors/business-parks</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/sectors/airbnbs</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Connectivity Services -->
   <url>
+    <loc>https://www.integra-networks.co.uk/connectivity/integra-sd-wan</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.integra-networks.co.uk/connectivity/leased-lines</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/unified-communications</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/managed-sim-services</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/business-wifi</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/home-wifi</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/starlink-installation</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.integra-networks.co.uk/connectivity/cctv</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/connectivity/wireless-distribution</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/connectivity/network-infrastructure</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/connectivity/integra-sd-wan</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/connectivity/integra-bridge</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/connectivity/sogea</loc>
-    <lastmod>2026-03-11</lastmod>
+    <loc>https://www.integra-networks.co.uk/connectivity/starlink-b2b</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.integra-networks.co.uk/connectivity/starlink-b2b</loc>
-    <lastmod>2026-03-11</lastmod>
+    <loc>https://www.integra-networks.co.uk/connectivity/cctv</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/connectivity/wireless-distribution</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/connectivity/network-infrastructure</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/connectivity/integra-bridge</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/connectivity/sogea</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/managed-firewall</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/cellular-backup</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/managed-internet</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/business-continuity</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/connectivity/business-mobiles</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- PPC Landing Pages -->
+  <url>
+    <loc>https://www.integra-networks.co.uk/lp/business-broadband</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/lp/construction-wifi</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/lp/homeworker-broadband</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/lp/rural-broadband</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/lp/starlink-sdwan</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -159,381 +255,325 @@
   <!-- Customers/Case Studies -->
   <url>
     <loc>https://www.integra-networks.co.uk/customers</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/wb-power-services</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/royle-farm</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/steaming-ahead-with-enhanced-festival-connectivity</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/little-quarry-glamping</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/fast-track-connectivity-ukharvests-digital-transformation</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/casting-the-net-wide-a-connectivity-transformation</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/revolutionising-connectivity-for-plant-protein-pioneers</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/revitalising-global-distribution-apj-europeans-digital-transformation</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/mcgee-construction</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/customers/seacon-group</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <!-- Blog -->
   <url>
     <loc>https://www.integra-networks.co.uk/blog</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/extending-wi-fi-and-internet-to-outbuildings</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/internet-and-wi-fi-solutions-for-churches-and-listed-buildings</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/starlink-sd-wan-a-reliable-solution-for-business-connectivity</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/starlink-installers-near-me-finding-the-best-solution-for-high-speed-satellite-internet</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/starlink-is-it-the-right-solution-for-me</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/single-mobile-network-connectivity-solutions-a-reliable-option</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/4g-vs-5g-broadband-which-is-better-for-business</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/satellite-internet-vs-fixed-wireless-pros-and-cons</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/how-to-check-broadband-availability-rural-areas</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/business-broadband-grants-uk-2026</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/starlink-upload-speed-why-it-matters-for-business</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/starlink-vs-4g-bonding-honest-comparison</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/what-is-cellular-bonding-simple-explanation</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/load-balancing-vs-bonding-whats-the-difference</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/temporary-broadband-for-events-uk</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/portable-wifi-solutions-construction-sites</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/iot-connectivity-agriculture-uk</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/multi-building-wifi-rural-properties</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/bt-openreach-fibre-checker</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/satellite-internet-vs-integra-4g-5g-sdwan</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/revolutionising-connectivity-in-construction</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/beyond-the-broadband-bottleneck</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/unlock-high-speed-internet-rural-areas</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/preparing-house-for-sale-internet-speed</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/diy-guide-internet-speed-tests</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/blog/why-is-my-bt-internet-so-slow</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Landing Pages -->
-  <url>
-    <loc>https://www.integra-networks.co.uk/lp/integra-sd-wan</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/lp/rural-broadband</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/lp/business-broadband</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/lp/construction-wifi</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <!-- Locations -->
   <url>
     <loc>https://www.integra-networks.co.uk/locations/rural-broadband-north-west</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/locations/rural-broadband-essex-hertfordshire</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/locations/rural-broadband-sussex-surrey</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/locations/rural-broadband-kent</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/locations/rural-broadband-somerset-devon</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/locations/rural-broadband-yorkshire</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/locations/construction-site-broadband-london</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/locations/rural-broadband-cotswolds</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Resources -->
+  <!-- Resources & Info Pages -->
   <url>
     <loc>https://www.integra-networks.co.uk/resources</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/access-broadband-cymru</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/pstn-switch-off</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.integra-networks.co.uk/alternatives-to-fibre-broadband</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/rural-business-broadband</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/starlink-for-business</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/sd-wan-for-small-business</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/construction-site-broadband</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/farm-broadband</loc>
-    <lastmod>2026-03-11</lastmod>
+    <loc>https://www.integra-networks.co.uk/support</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -541,77 +581,45 @@
   <!-- Insights -->
   <url>
     <loc>https://www.integra-networks.co.uk/insights/failure-prevention-starts-long-before-alarms</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/insights/sustainability-efficiency-critical-infrastructure</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Utility Pages -->
-  <url>
-    <loc>https://www.integra-networks.co.uk/pricing</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/about</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/contact</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/check</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/support</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.integra-networks.co.uk/brand-guidelines</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <!-- Legal Pages -->
   <url>
     <loc>https://www.integra-networks.co.uk/privacy-cookies</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/terms</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/sla</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.integra-networks.co.uk/terms-of-use</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.integra-networks.co.uk/brand-guidelines</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
