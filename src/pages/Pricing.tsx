@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, ChevronDown, ArrowRight, Shield, Wrench, Clock, Award, CreditCard, TrendingUp } from "lucide-react";
+import { Check, ChevronDown, ArrowRight, Wrench, Clock, Award, CreditCard, TrendingUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -117,7 +117,6 @@ const addOns = [
 ];
 
 const whatsIncluded = [
-  { icon: Shield, label: "All Hardware Owned by Integra", description: "No leasing charges ever" },
   { icon: Wrench, label: "Dedicated Support", description: "Proactive monitoring and ongoing assistance" },
   { icon: Clock, label: "24/7 Monitoring & Support", description: "Your connection is watched constantly" },
   { icon: Award, label: "Uptime SLA on Every Package", description: "Backed by service credits — up to 99.99% on Enterprise" },
@@ -131,7 +130,6 @@ const faqs = [
   { q: "What happens if I'm not happy?", a: "You have 14 days from installation to request a full refund — no questions asked. We also back all services with uptime SLAs. If we drop below the guaranteed uptime, you get a credit on your invoice." },
   { q: "Who owns the hardware?", a: "Integra owns all hardware. This means no leasing fees, and we maintain everything for free. If equipment breaks, we replace it. You're not on the hook for expensive hardware costs." },
   { q: "What's included in the installation fee?", a: "Everything. Desktop survey, hardware delivery, installation by our engineer, configuration, and testing. You'll be shown exactly what the fee covers before we begin. After installation, all engineer visits for support and maintenance are included in your monthly service." },
-  { q: "Can I upgrade my package later?", a: "Yes, seamlessly. Start with Starlink SD-WAN, then upgrade to Integra Pro, Ultrafast, or Enterprise as your business grows. We handle the migration without service disruption. No penalty for upgrading." },
 ];
 
 const faqSchemaData = {
@@ -294,7 +292,7 @@ const Pricing = () => {
               Every package. No exceptions.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-              Hardware, monitoring, support, and engineer visits — all included from day one.
+              Hardware, monitoring, and support — all included from day one.
             </p>
           </AnimatedSection>
 
