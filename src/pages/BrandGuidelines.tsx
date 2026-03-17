@@ -6,8 +6,8 @@ import { Input } from "@/components/ui/input";
 import StatusChip from "@/components/shared/StatusChip";
 import EyebrowLabel from "@/components/shared/EyebrowLabel";
 import SEO from "@/components/shared/SEO";
-import nexrLogo from "@/assets/nexr-iot-logo-white.svg";
-import nexrOneLogo from "@/assets/nexr-one-logo.png";
+import integraLogoWhite from "@/assets/integra-logo-white.png";
+import integraLogoSvg from "@/assets/integra-logo.svg";
 import { Printer, Check, X, Download, FileType, Palette, Type, Lock, Copy } from "lucide-react";
 import { toast } from "sonner";
 
@@ -44,10 +44,10 @@ const BrandGuidelines = () => {
   };
 
   const straplines = [
-    "Failure prevention starts long before alarms are triggered.",
-    "Predictive maintenance isn't magic. It's disciplined attention.",
-    "Critical infrastructure doesn't fail loudly. It fails gradually.",
-    "Designed for assets where downtime isn't a discussion.",
+    "Connectivity shouldn't depend on your postcode.",
+    "Built for the locations others won't reach.",
+    "When the fibre stops, we start.",
+    "Business-grade broadband. Anywhere.",
   ];
 
   // Password Gate
@@ -56,14 +56,14 @@ const BrandGuidelines = () => {
       <>
         <SEO
           title="Brand Guidelines"
-          description="NEXR IoT brand guidelines and visual identity documentation."
+          description="Integra Networks brand guidelines and visual identity documentation."
           url="/brand-guidelines"
           noIndex
         />
         <div className="min-h-screen bg-background flex items-center justify-center px-6">
           <div className="w-full max-w-sm">
             <div className="text-center mb-10">
-              <img src={nexrLogo} alt="NEXR" className="h-7 mx-auto mb-8" />
+              <img src={integraLogoWhite} alt="Integra Networks" className="h-8 mx-auto mb-8" />
               <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center mx-auto mb-6">
                 <Lock className="h-5 w-5 text-muted-foreground" />
               </div>
@@ -72,7 +72,7 @@ const BrandGuidelines = () => {
                 This document is confidential. Enter the access password to continue.
               </p>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Input
@@ -94,7 +94,7 @@ const BrandGuidelines = () => {
                 Access Guidelines
               </Button>
             </form>
-            
+
             <p className="text-xs text-muted-foreground/50 text-center mt-8">
               Contact your team lead if you need access.
             </p>
@@ -108,7 +108,7 @@ const BrandGuidelines = () => {
     <>
       <SEO
         title="Brand Guidelines"
-        description="NEXR IoT brand guidelines and visual identity documentation."
+        description="Integra Networks brand guidelines and visual identity documentation."
         url="/brand-guidelines"
         noIndex
       />
@@ -123,7 +123,7 @@ const BrandGuidelines = () => {
 
       {/* Cover Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-8 print:min-h-0 print:py-32 print:page-break-after">
-        <img src={nexrLogo} alt="NEXR" className="h-8 mb-16 print:brightness-0" />
+        <img src={integraLogoWhite} alt="Integra Networks" className="h-9 mb-16 print:brightness-0" />
         <h1 className="text-display text-center mb-6 print:text-foreground tracking-tight">
           Brand Guidelines
         </h1>
@@ -136,7 +136,7 @@ const BrandGuidelines = () => {
             Internal use – confidential
           </p>
           <p className="text-xs text-muted-foreground/60 print:text-gray-400">
-            Version 1.0 · January 2026
+            Version 1.0 · March 2026
           </p>
         </div>
       </section>
@@ -148,12 +148,12 @@ const BrandGuidelines = () => {
         <div className="space-y-12 mt-12">
           <MessagingBlock
             label="Primary Brand Statement"
-            quote="NEXR builds telemetry and intelligence platforms for mission-critical physical assets."
+            quote="Integra Networks delivers reliable, high-speed connectivity to the locations that need it most."
           />
 
           <MessagingBlock
             label="Product Positioning"
-            quote="NEXR One is a critical power telemetry and predictive insight platform."
+            quote="Integra SD-WAN and Integra Bridge bring business-grade broadband to rural and underserved areas across the UK."
           />
 
           <div className="space-y-4">
@@ -161,23 +161,23 @@ const BrandGuidelines = () => {
               Short Description
             </p>
             <p className="text-foreground leading-relaxed print:text-gray-800">
-              NEXR is a technology company building telemetry and intelligence platforms for mission-critical physical assets. NEXR One, its critical power platform, provides real-time telemetry and predictive insight to help operators identify risk early and prevent unplanned failure.
+              Integra Networks is a UK connectivity provider specialising in rural broadband, SD-WAN solutions, and business-grade internet for locations where traditional infrastructure falls short. From Starlink installations to leased lines, we design and deliver tailored connectivity solutions.
             </p>
           </div>
 
           <div className="space-y-4">
-            <p className="text-xs text-primary uppercase tracking-widest font-medium">
+            <p className="text-xs text-muted-foreground/60 uppercase tracking-widest mb-4 font-medium">
               Long Boilerplate
             </p>
             <div className="space-y-4 text-foreground leading-relaxed print:text-gray-800 border-l-2 border-border pl-6">
               <p>
-                NEXR is a technology company focused on telemetry and intelligence for mission-critical physical assets, where failure has material operational impact.
+                Integra Networks is a UK-based connectivity provider focused on delivering reliable, high-speed internet to rural, remote, and underserved locations where traditional broadband infrastructure is limited or unavailable.
               </p>
               <p>
-                Its flagship platform, NEXR One, is designed for critical power environments, providing real-time telemetry and predictive insight that helps operators understand asset behaviour, identify emerging risk, and move from reactive response to predictive maintenance.
+                Through its core products — Integra SD-WAN and Integra Bridge — the company bonds multiple internet connections into a single, resilient link, providing business-grade performance regardless of location. Combined with professional Starlink installation, managed SIM services, and traditional leased lines, Integra offers a complete connectivity toolkit.
               </p>
               <p>
-                NEXR One is deployed across real-world critical power infrastructure, including generators, MDUs, and battery systems, where reliability, clarity, and trust matter more than dashboards or hype.
+                Integra Networks serves a diverse customer base including farms, business parks, construction sites, events, hospitality venues, and rural businesses, delivering solutions that are engineered, installed, and supported by its own team of field engineers.
               </p>
             </div>
           </div>
@@ -198,10 +198,11 @@ const BrandGuidelines = () => {
             </div>
             <ul className="space-y-4">
               {[
-                "Monitor mission-critical physical assets",
-                "Focus on failure prevention and predictive insight",
-                "Prioritise operator clarity over dashboards",
-                "Design for real-world deployment",
+                "Deliver high-speed broadband to rural and underserved areas",
+                "Design and install bespoke connectivity solutions",
+                "Bond multiple connections for resilience and speed",
+                "Provide professional Starlink and SD-WAN installations",
+                "Support customers with UK-based field engineers",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-muted-foreground print:text-gray-600 text-sm leading-relaxed">
                   <span className="h-1 w-1 rounded-full bg-status-ok mt-2 shrink-0" />
@@ -220,11 +221,11 @@ const BrandGuidelines = () => {
             </div>
             <ul className="space-y-4">
               {[
-                "Sell generic IoT dashboards",
-                "Lead with AI or automation claims",
-                "Position as a vehicle or logistics telematics platform",
-                "Chase every sector at once",
-                "Use hype-led language",
+                "Sell off-the-shelf consumer broadband packages",
+                "Promise speeds we can't deliver",
+                "Operate as a reseller without engineering capability",
+                "Limit ourselves to a single technology or carrier",
+                "Use jargon-heavy or misleading marketing",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-muted-foreground print:text-gray-600 text-sm leading-relaxed">
                   <span className="h-1 w-1 rounded-full bg-status-critical mt-2 shrink-0" />
@@ -244,22 +245,23 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Primary Category</p>
             <div className="inline-block border border-primary/30 rounded px-6 py-3 bg-primary/5">
-              <span className="text-lg font-medium text-primary tracking-tight">Critical Power Monitoring</span>
+              <span className="text-lg font-medium text-primary tracking-tight">Rural & Business Connectivity</span>
             </div>
           </div>
 
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Secondary (only if required)</p>
             <div className="flex flex-wrap gap-3">
-              <Badge variant="secondary" className="text-sm font-normal">Generator Monitoring</Badge>
-              <Badge variant="secondary" className="text-sm font-normal">Predictive Maintenance (Critical Infrastructure)</Badge>
+              <Badge variant="secondary" className="text-sm font-normal">SD-WAN Solutions</Badge>
+              <Badge variant="secondary" className="text-sm font-normal">Starlink Installation</Badge>
+              <Badge variant="secondary" className="text-sm font-normal">Business Broadband</Badge>
             </div>
           </div>
 
           <div>
             <p className="text-xs text-muted-foreground/60 uppercase tracking-widest mb-4 font-medium">Categories We Do Not Lead With</p>
             <div className="flex flex-wrap gap-3">
-              {["Generic IoT Platforms", "Vehicle Telematics Platforms", "Logistics Fleet Monitoring Systems", "Energy Analytics Dashboards"].map((cat) => (
+              {["Consumer ISP", "Mobile Phone Provider", "IT Support Company", "Web Hosting Provider"].map((cat) => (
                 <span key={cat} className="text-sm text-muted-foreground/60">
                   {cat}
                 </span>
@@ -277,13 +279,13 @@ const BrandGuidelines = () => {
           <div className="bg-card/50 border border-border rounded-lg p-6 print:bg-gray-50 print:border-gray-200">
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">Tone</p>
             <p className="text-foreground print:text-gray-800">
-              Calm · Technical · Grounded · Operator-first · Confident but understated
+              Approachable · Practical · Knowledgeable · Honest · Confident but not corporate
             </p>
           </div>
 
           <blockquote className="border-l-2 border-primary pl-6 py-2">
             <p className="text-muted-foreground italic print:text-gray-600">
-              "If any copy would not sound credible in a control room, it should not be used."
+              "If a farmer wouldn't trust it, we shouldn't say it."
             </p>
           </blockquote>
 
@@ -292,12 +294,12 @@ const BrandGuidelines = () => {
               <p className="text-xs text-status-ok uppercase tracking-widest mb-4 font-medium">Words We Use</p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "telemetry",
-                  "predictive insight",
-                  "asset behaviour",
-                  "operational risk",
-                  "failure prevention",
-                  "real-world deployment",
+                  "reliable",
+                  "resilient",
+                  "rural broadband",
+                  "connectivity",
+                  "bonded",
+                  "business-grade",
                 ].map((word) => (
                   <span key={word} className="text-sm text-muted-foreground border border-status-ok/20 px-3 py-1.5 rounded bg-status-ok/5">
                     {word}
@@ -310,11 +312,11 @@ const BrandGuidelines = () => {
               <p className="text-xs text-status-critical uppercase tracking-widest mb-4 font-medium">Words We Avoid</p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "AI-powered",
-                  "next-gen",
+                  "unlimited*",
+                  "blazing fast",
                   "revolutionary",
-                  "smart",
-                  "disruptive",
+                  "game-changing",
+                  "superfast",
                 ].map((word) => (
                   <span key={word} className="text-sm text-muted-foreground/50 border border-status-critical/20 px-3 py-1.5 rounded line-through">
                     {word}
@@ -322,7 +324,7 @@ const BrandGuidelines = () => {
                 ))}
               </div>
               <p className="text-xs text-muted-foreground/60 mt-4 print:text-gray-400">
-                * "AI-powered" only if unavoidable
+                * "unlimited" only if contractually accurate
               </p>
             </div>
           </div>
@@ -335,7 +337,7 @@ const BrandGuidelines = () => {
           <SectionHeader number="05" title="Straplines & Short-Form Messaging" subtitle="Examples" />
 
           <p className="text-sm text-muted-foreground/70 mt-6 mb-12 print:text-gray-500">
-            These are approved examples of how the NEXR brand speaks in short-form contexts such as social media, image overlays, and presentation headers.
+            These are approved examples of how the Integra brand speaks in short-form contexts such as social media, image overlays, and presentation headers.
           </p>
         </div>
 
@@ -349,24 +351,24 @@ const BrandGuidelines = () => {
             ];
             const config = colorClasses[i];
             const isLight = config.isLight;
-            
+
             return (
               <div
                 key={i}
                 className={`relative overflow-hidden rounded min-h-[180px] sm:min-h-[220px] flex items-center ${config.bg} border border-border/50 print:bg-gray-100 print:border print:border-gray-200`}
               >
-                {/* Inner sheen overlay - lighter at top-left, subtle for dark surfaces, dark for light surfaces */}
-                <div 
+                {/* Inner sheen overlay */}
+                <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     background: isLight
                       ? 'radial-gradient(ellipse at 20% 20%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.01) 40%, transparent 70%)'
-                      : i === 0 
+                      : i === 0
                         ? 'radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, transparent 70%)'
                         : 'radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 40%, transparent 70%)'
                   }}
                 />
-                
+
                 {/* Subtle grid pattern */}
                 <div className="absolute inset-0 opacity-5" style={{
                   backgroundImage: isLight
@@ -374,7 +376,7 @@ const BrandGuidelines = () => {
                     : `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
                   backgroundSize: '40px 40px'
                 }} />
-                
+
                 {/* Content */}
                 <div className="relative z-10 px-8 sm:px-12 py-10 max-w-2xl">
                   <p className={`text-xl sm:text-2xl md:text-3xl font-medium leading-snug tracking-tight print:text-gray-800 ${isLight ? 'text-background' : 'text-foreground'}`}>
@@ -391,7 +393,7 @@ const BrandGuidelines = () => {
 
                 {/* Corner accent */}
                 <div className="absolute bottom-6 right-8">
-                  <img src={nexrLogo} alt="Nexr IoT logo" className={`h-7 sm:h-8 print:hidden ${isLight ? 'invert' : ''}`} />
+                  <img src={integraLogoWhite} alt="Integra Networks" className={`h-7 sm:h-8 print:hidden ${isLight ? 'invert' : ''}`} />
                 </div>
               </div>
             );
@@ -412,15 +414,15 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Company Details</p>
             <div className="bg-card border border-border/50 rounded-lg divide-y divide-border/50 print:bg-gray-50 print:border-gray-200">
-              <DirectoryItem label="Legal Entity" value="NEXR IoT Ltd" copyable />
-              <DirectoryItem label="Trading Name" value="NEXR" copyable />
-              <DirectoryItem label="Company Number" value="16376799" copyable />
-              <DirectoryItem label="Incorporated" value="9 April 2025" />
+              <DirectoryItem label="Legal Entity" value="Integra Networks Limited" copyable />
+              <DirectoryItem label="Trading Name" value="Integra Networks" copyable />
+              <DirectoryItem label="Company Number" value="13467217" copyable />
+              <DirectoryItem label="Incorporated" value="June 2021" />
               <DirectoryItem label="Company Size" value="1-10 employees" copyable />
-              <DirectoryItem label="Geographic Coverage" value="Global" copyable />
+              <DirectoryItem label="Geographic Coverage" value="United Kingdom" copyable />
               <DirectoryItem label="Headquarters" value="London, UK" copyable />
-              <DirectoryItem label="VAT Number" value="GB 123 4567 89" copyable />
-              <DirectoryItem label="ICO Registration" value="ZAxxxxxx" copyable />
+              <DirectoryItem label="VAT Number" value="385 9249 43" copyable />
+              <DirectoryItem label="ICO Registration" value="Registered" copyable />
             </div>
           </div>
 
@@ -428,8 +430,8 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Contact Information</p>
             <div className="bg-card border border-border/50 rounded-lg divide-y divide-border/50 print:bg-gray-50 print:border-gray-200">
-              <DirectoryItem label="General Enquiries" value="connect@nexr-iot.co.uk" copyable />
-              <DirectoryItem label="Phone" value="0204 626 6880" copyable />
+              <DirectoryItem label="General Enquiries" value="connect@integra-networks.co.uk" copyable />
+              <DirectoryItem label="Phone" value="0203 388 7111" copyable />
             </div>
           </div>
 
@@ -438,8 +440,8 @@ const BrandGuidelines = () => {
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Registered Address</p>
             <div className="bg-card border border-border/50 rounded-lg p-4 print:bg-gray-50 print:border-gray-200">
               <p className="text-sm text-foreground leading-relaxed print:text-gray-800">
-                NEXR IoT Ltd<br />
-                3rd Floor, 86-90 Paul Street<br />
+                Integra Networks Limited<br />
+                86–90 Paul Street<br />
                 London, EC2A 4NE<br />
                 United Kingdom
               </p>
@@ -450,8 +452,8 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Official URLs</p>
             <div className="bg-card border border-border/50 rounded-lg divide-y divide-border/50 print:bg-gray-50 print:border-gray-200">
-              <DirectoryItem label="Website" value="https://nexr-iot.co.uk" copyable />
-              <DirectoryItem label="Platform" value="https://app.nexr-iot.co.uk" copyable />
+              <DirectoryItem label="Website" value="https://integra-networks.co.uk" copyable />
+              <DirectoryItem label="Availability Checker" value="https://integra-networks.co.uk/check" copyable />
             </div>
           </div>
 
@@ -459,13 +461,10 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Social Media</p>
             <div className="bg-card border border-border/50 rounded-lg divide-y divide-border/50 print:bg-gray-50 print:border-gray-200">
-              <DirectoryItem label="LinkedIn" value="https://linkedin.com/company/nexr-iot" copyable />
-              <DirectoryItem label="YouTube" value="https://youtube.com/@nexr_iot" copyable />
-              <DirectoryItem label="Google Business" value="https://g.page/nexr-iot" copyable />
-              <DirectoryItem label="Twitter / X" value="@nexr_iot" copyable />
-              <DirectoryItem label="Instagram" value="@nexr_iot" copyable />
-              <DirectoryItem label="Facebook" value="https://facebook.com/nexriot" copyable />
-              <DirectoryItem label="TikTok" value="@nexr_iot" copyable />
+              <DirectoryItem label="LinkedIn" value="https://linkedin.com/company/integra-networks" copyable />
+              <DirectoryItem label="YouTube" value="https://youtube.com/@IntegraNetworks" copyable />
+              <DirectoryItem label="Instagram" value="@integra_networks" copyable />
+              <DirectoryItem label="Facebook" value="https://facebook.com/IntegraNetworksUK" copyable />
             </div>
           </div>
 
@@ -478,28 +477,28 @@ const BrandGuidelines = () => {
             <div className="space-y-4">
               <div className="bg-card border border-border/50 rounded-lg p-4 print:bg-gray-50 print:border-gray-200">
                 <p className="text-xs text-primary uppercase tracking-widest mb-2 font-medium">Primary</p>
-                <p className="text-sm font-medium text-foreground">Critical Power Monitoring</p>
+                <p className="text-sm font-medium text-foreground">Rural & Business Connectivity Provider</p>
               </div>
               <div className="bg-card border border-border/50 rounded-lg p-4 print:bg-gray-50 print:border-gray-200">
                 <p className="text-xs text-primary uppercase tracking-widest mb-2 font-medium">Secondary</p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-sm text-foreground">Generator Monitoring</span>
+                  <span className="text-sm text-foreground">SD-WAN Solutions</span>
                   <span className="text-muted-foreground">·</span>
-                  <span className="text-sm text-foreground">Predictive Maintenance</span>
+                  <span className="text-sm text-foreground">Starlink Installation</span>
                   <span className="text-muted-foreground">·</span>
-                  <span className="text-sm text-foreground">Asset Telemetry</span>
+                  <span className="text-sm text-foreground">Leased Lines</span>
                 </div>
               </div>
               <div className="bg-card border border-border/50 rounded-lg p-4 print:bg-gray-50 print:border-gray-200">
                 <p className="text-xs text-primary uppercase tracking-widest mb-2 font-medium">Tertiary</p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-sm text-foreground">Industrial IoT</span>
+                  <span className="text-sm text-foreground">Business WiFi</span>
                   <span className="text-muted-foreground">·</span>
-                  <span className="text-sm text-foreground">Infrastructure Monitoring</span>
+                  <span className="text-sm text-foreground">CCTV & Infrastructure</span>
                   <span className="text-muted-foreground">·</span>
-                  <span className="text-sm text-foreground">Remote Monitoring</span>
+                  <span className="text-sm text-foreground">Managed SIM Services</span>
                   <span className="text-muted-foreground">·</span>
-                  <span className="text-sm text-foreground">Data Centres</span>
+                  <span className="text-sm text-foreground">Event Connectivity</span>
                 </div>
               </div>
             </div>
@@ -513,15 +512,15 @@ const BrandGuidelines = () => {
             </p>
             <div className="flex flex-wrap gap-2">
               {[
-                "critical power monitoring",
-                "generator monitoring",
-                "predictive maintenance",
-                "asset telemetry",
-                "infrastructure monitoring",
-                "real-time monitoring",
-                "failure prevention",
-                "industrial IoT",
-                "power systems",
+                "rural broadband",
+                "business broadband",
+                "SD-WAN",
+                "Starlink installation",
+                "leased lines",
+                "bonded internet",
+                "construction WiFi",
+                "event connectivity",
+                "managed SIM",
               ].map((keyword) => (
                 <span key={keyword} className="text-sm text-muted-foreground border border-border px-3 py-1.5 rounded bg-muted/30 print:bg-gray-100">
                   {keyword}
@@ -539,19 +538,19 @@ const BrandGuidelines = () => {
             <div className="space-y-4">
               <BoilerplateBlock
                 label="Ultra Short (15 words)"
-                text="NEXR builds telemetry platforms for mission-critical assets. NEXR One monitors critical power infrastructure."
+                text="Integra Networks delivers reliable, high-speed broadband to rural and underserved locations across the UK."
               />
               <BoilerplateBlock
                 label="Short (30 words)"
-                text="NEXR is a technology company building telemetry and intelligence platforms for mission-critical physical assets. NEXR One provides real-time telemetry and predictive insight for critical power infrastructure."
+                text="Integra Networks is a UK connectivity provider specialising in rural broadband, SD-WAN solutions, and business-grade internet. We design and install tailored connectivity for locations where traditional infrastructure falls short."
               />
               <BoilerplateBlock
                 label="Medium (50 words)"
-                text="NEXR is a technology company building telemetry and intelligence platforms for mission-critical physical assets. NEXR One, its critical power platform, provides real-time telemetry and predictive insight to help operators identify risk early and prevent unplanned failure."
+                text="Integra Networks is a UK-based connectivity provider delivering reliable, high-speed internet to rural, remote, and underserved locations. Through Integra SD-WAN, Integra Bridge, professional Starlink installation, and managed SIM services, we provide business-grade performance regardless of location — engineered, installed, and supported by our own team of field engineers."
               />
               <BoilerplateBlock
                 label="Full (100 words)"
-                text="NEXR is a technology company focused on telemetry and intelligence for mission-critical physical assets, where failure has material operational impact. Its flagship platform, NEXR One, is designed for critical power environments, providing real-time telemetry and predictive insight that helps operators understand asset behaviour, identify emerging risk, and move from reactive response to predictive maintenance. NEXR One is deployed across real-world critical power infrastructure, including generators, MDUs, and battery systems, where reliability, clarity, and trust matter more than dashboards or hype."
+                text="Integra Networks is a UK-based connectivity provider focused on delivering reliable, high-speed internet to rural, remote, and underserved locations where traditional broadband infrastructure is limited or unavailable. Through its core products — Integra SD-WAN and Integra Bridge — the company bonds multiple internet connections into a single, resilient link, providing business-grade performance regardless of location. Combined with professional Starlink installation, managed SIM services, leased lines, and business WiFi, Integra offers a complete connectivity toolkit. Serving farms, business parks, construction sites, events, and rural businesses, every solution is engineered, installed, and supported by its own UK-based team."
               />
             </div>
           </div>
@@ -560,9 +559,8 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Accreditations & Certifications</p>
             <div className="bg-card border border-border/50 rounded-lg divide-y divide-border/50 print:bg-gray-50 print:border-gray-200">
-              <DirectoryItem label="Cyber Essentials" value="Certified" />
-              <DirectoryItem label="ISO 27001" value="[Status]" />
-              <DirectoryItem label="GDPR Compliant" value="Yes" />
+              <DirectoryItem label="ICO Registered" value="Yes" />
+              <DirectoryItem label="UK GDPR Compliant" value="Yes" />
             </div>
           </div>
         </div>
@@ -578,7 +576,7 @@ const BrandGuidelines = () => {
             <p className="text-2xl font-medium mb-1">Space Grotesk</p>
             <p className="text-sm text-muted-foreground print:text-gray-500">Google Fonts · Weights: 400, 500, 600, 700</p>
             <p className="text-xs text-muted-foreground/60 mt-3 print:text-gray-400">
-              <strong>Important:</strong> The default weight for display and heading text is <strong>400 (regular)</strong> or <strong>500 (medium)</strong>. 
+              <strong>Important:</strong> The default weight for display and heading text is <strong>400 (regular)</strong> or <strong>500 (medium)</strong>.
               Avoid using bold (700) for headlines—Space Grotesk is designed to appear confident at lighter weights.
             </p>
           </div>
@@ -656,7 +654,7 @@ const BrandGuidelines = () => {
                 <p className="text-muted-foreground">Use <code className="text-primary bg-primary/10 px-1.5 py-0.5 rounded text-xs">text-display-sm</code> for page title, <code className="text-primary bg-primary/10 px-1.5 py-0.5 rounded text-xs">text-heading-2</code> for section headings, and <code className="text-primary bg-primary/10 px-1.5 py-0.5 rounded text-xs">text-heading-3</code> for subheadings.</p>
               </div>
               <div className="border-b border-border/30 pb-4">
-                <p className="font-medium text-foreground mb-1">Feature & Module Pages</p>
+                <p className="font-medium text-foreground mb-1">Feature & Product Pages</p>
                 <p className="text-muted-foreground">Use <code className="text-primary bg-primary/10 px-1.5 py-0.5 rounded text-xs">text-heading-1</code> for section titles and <code className="text-primary bg-primary/10 px-1.5 py-0.5 rounded text-xs">text-heading-3</code> for feature cards.</p>
               </div>
               <div>
@@ -883,7 +881,7 @@ const BrandGuidelines = () => {
             <p className="text-sm text-muted-foreground print:text-gray-600 mb-4">
               Used for primary CTA sections. Creates depth through <span className="text-foreground print:text-gray-800 font-medium">three layered gradients</span> plus a <span className="text-foreground print:text-gray-800 font-medium">diagonal sheen overlay</span>.
             </p>
-            
+
             {/* Live preview */}
             <div className="relative overflow-hidden rounded-lg h-32 mb-4 bg-primary-enhanced flex items-center justify-center">
               <p className="relative z-10 text-white/90 text-sm font-medium">Live preview of .bg-primary-enhanced</p>
@@ -930,12 +928,12 @@ const BrandGuidelines = () => {
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">Primary Logos</p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card border border-border/50 rounded-lg p-10 flex flex-col items-center print:border-gray-200 print:bg-gray-50">
-                <img src={nexrLogo} alt="NEXR" className="h-7 mb-4" />
-                <p className="text-xs text-muted-foreground print:text-gray-500">NEXR (Company)</p>
+                <img src={integraLogoWhite} alt="Integra Networks (White)" className="h-8 mb-4" />
+                <p className="text-xs text-muted-foreground print:text-gray-500">Integra Networks (White / Dark BG)</p>
               </div>
-              <div className="bg-card border border-border/50 rounded-lg p-10 flex flex-col items-center print:border-gray-200 print:bg-gray-50">
-                <img src={nexrOneLogo} alt="NEXR One" className="h-8 mb-4" />
-                <p className="text-xs text-muted-foreground print:text-gray-500">NEXR One (Product)</p>
+              <div className="bg-foreground border border-border/50 rounded-lg p-10 flex flex-col items-center print:border-gray-200 print:bg-gray-50">
+                <img src={integraLogoSvg} alt="Integra Networks (Dark)" className="h-8 mb-4" />
+                <p className="text-xs text-muted-foreground print:text-gray-500">Integra Networks (Dark / Light BG)</p>
               </div>
             </div>
           </div>
@@ -943,7 +941,7 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-4">Clear Space</p>
             <p className="text-sm text-muted-foreground print:text-gray-600">
-              Maintain minimum clear space equal to the height of the "N" character around all sides of the logo.
+              Maintain minimum clear space equal to the height of the "I" character around all sides of the logo.
             </p>
           </div>
 
@@ -959,7 +957,7 @@ const BrandGuidelines = () => {
                 {[
                   "Use on dark backgrounds (preferred)",
                   "Maintain aspect ratio",
-                  "Use white or black versions only",
+                  "Use white or dark versions only",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground print:text-gray-600">
                     <span className="h-1 w-1 rounded-full bg-status-ok mt-2 shrink-0" />
@@ -1006,10 +1004,10 @@ const BrandGuidelines = () => {
           <AssetDownloadCard
             icon={<FileType className="h-5 w-5" />}
             title="Logo Files"
-            description="Primary and product logos in PNG format for digital use."
+            description="Primary logos in PNG and SVG format for digital use."
             files={[
-              { name: "NEXR Logo (White)", file: nexrLogo, filename: "nexr-logo-white.png" },
-              { name: "NEXR One Logo", file: nexrOneLogo, filename: "nexr-one-logo.png" },
+              { name: "Integra Logo (White)", file: integraLogoWhite, filename: "integra-logo-white.png" },
+              { name: "Integra Logo (SVG)", file: integraLogoSvg, filename: "integra-logo.svg" },
             ]}
           />
 
@@ -1027,7 +1025,7 @@ const BrandGuidelines = () => {
               </div>
             </div>
             <div className="bg-muted/50 rounded-lg p-4 font-mono text-xs space-y-2 print:bg-gray-100">
-              <p className="text-muted-foreground print:text-gray-600">/* NEXR Brand Colours */</p>
+              <p className="text-muted-foreground print:text-gray-600">/* Integra Networks Brand Colours */</p>
               <p><span className="text-primary">--primary:</span> #0061FF | hsl(216, 100%, 50%)</p>
               <p><span className="text-muted-foreground">--background:</span> #0a0d14 | hsl(222, 47%, 6%)</p>
               <p><span className="text-muted-foreground">--foreground:</span> #FFFFFF | hsl(0, 0%, 100%)</p>
@@ -1041,7 +1039,7 @@ const BrandGuidelines = () => {
               size="sm"
               className="mt-4 gap-2"
               onClick={() => {
-                const colors = `/* NEXR Brand Colours */
+                const colors = `/* Integra Networks Brand Colours */
 --primary: #0061FF | hsl(216, 100%, 50%)
 --background: #0a0d14 | hsl(222, 47%, 6%)
 --foreground: #FFFFFF | hsl(0, 0%, 100%)
@@ -1056,7 +1054,7 @@ const BrandGuidelines = () => {
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'nexr-colour-palette.txt';
+                a.download = 'integra-colour-palette.txt';
                 a.click();
                 URL.revokeObjectURL(url);
               }}
@@ -1108,8 +1106,8 @@ const BrandGuidelines = () => {
               size="sm"
               className="gap-2"
               onClick={() => {
-                const typography = `NEXR Typography Specification
-==============================
+                const typography = `Integra Networks Typography Specification
+==========================================
 
 Primary Font: Space Grotesk
 Source: Google Fonts (https://fonts.google.com/specimen/Space+Grotesk)
@@ -1136,7 +1134,7 @@ Usage Notes
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'nexr-typography-specimen.txt';
+                a.download = 'integra-typography-specimen.txt';
                 a.click();
                 URL.revokeObjectURL(url);
               }}
@@ -1151,7 +1149,7 @@ Usage Notes
       {/* Footer */}
       <footer className="py-16 px-8 max-w-3xl mx-auto border-t border-border/50 text-center print:py-12 print:border-gray-200">
         <p className="text-xs text-muted-foreground/60 print:text-gray-400">
-          © {new Date().getFullYear()} NEXR IoT Ltd. All rights reserved.
+          © {new Date().getFullYear()} Integra Networks Limited. All rights reserved.
         </p>
         <p className="text-xs text-muted-foreground/60 mt-1 print:text-gray-400">
           This document is confidential and intended for internal use only.
@@ -1165,26 +1163,26 @@ Usage Notes
             size: A4;
             margin: 1.5cm 2cm;
           }
-          
+
           body {
             background: white !important;
             color: #1a1a1a !important;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
           }
-          
+
           .brand-guidelines {
             background: white !important;
           }
-          
+
           .print\\:page-break-before {
             page-break-before: always;
           }
-          
+
           .print\\:page-break-after {
             page-break-after: always;
           }
-          
+
           /* Ensure color swatches print correctly */
           .color-swatch {
             -webkit-print-color-adjust: exact;
@@ -1198,13 +1196,13 @@ Usage Notes
 };
 
 // Section Header Component
-const SectionHeader = ({ 
-  number, 
-  title, 
-  subtitle 
-}: { 
-  number: string; 
-  title: string; 
+const SectionHeader = ({
+  number,
+  title,
+  subtitle
+}: {
+  number: string;
+  title: string;
   subtitle?: string;
 }) => (
   <div className="border-b border-border pb-6 print:border-gray-200">
@@ -1227,17 +1225,17 @@ const MessagingBlock = ({ label, quote }: { label: string; quote: string }) => (
 );
 
 // Type Scale Item Component
-const TypeScaleItem = ({ 
-  label, 
-  example, 
-  className, 
+const TypeScaleItem = ({
+  label,
+  example,
+  className,
   specs,
   tailwindClass,
   isLast = false
-}: { 
-  label: string; 
-  example: React.ReactNode; 
-  className?: string; 
+}: {
+  label: string;
+  example: React.ReactNode;
+  className?: string;
   specs: string;
   tailwindClass?: string;
   isLast?: boolean;
@@ -1263,18 +1261,18 @@ const ColorGroup = ({ title, children }: { title: string; children: React.ReactN
 );
 
 // Color Swatch Component
-const ColorSwatch = ({ 
-  name, 
-  hex, 
-  hsl, 
-  color, 
+const ColorSwatch = ({
+  name,
+  hex,
+  hsl,
+  color,
   border = false,
   textDark = false,
   darkSurface = false
-}: { 
-  name: string; 
-  hex: string; 
-  hsl: string; 
+}: {
+  name: string;
+  hex: string;
+  hsl: string;
   color: string;
   border?: boolean;
   textDark?: boolean;
@@ -1288,7 +1286,7 @@ const ColorSwatch = ({
     <div className="color-swatch">
       <div className={`relative h-16 rounded-lg mb-3 overflow-hidden ${color} ${border ? 'border border-border/50 print:border-gray-200' : ''}`}>
         {/* Inner sheen gradient - lighter at top-left */}
-        <div 
+        <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: sheenGradient }}
         />
