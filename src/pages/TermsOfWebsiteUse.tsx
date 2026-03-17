@@ -56,7 +56,7 @@ const TermsOfWebsiteUse = () => {
           </a>
         </p>
         <p className="text-sm mt-3 text-muted-foreground">
-          Company Number: 16376799
+          Company Number: 13467217
         </p>
       </LegalInfoBox>
 
