@@ -228,7 +228,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
             </div>
             
             <div className="flex items-center gap-4">
-              <span>Company No. 12505611</span>
+              <span>Company No. 13467217</span>
             </div>
           </div>
         </div>
