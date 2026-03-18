@@ -93,16 +93,6 @@ const Contact = () => {
 
       {/* Hero + Form */}
       <section className="relative bg-surface-dark overflow-hidden">
-        {/* Satellite map background — faded */}
-        <LazyIframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.0837606!3d51.5256258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca5656ca69f%3A0x55fafaa420dc387e!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE!5e1!3m2!1sen!2sgb!4v1710720000000!5m2!1sen!2sgb"
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          style={{ border: 0, scale: "1.5", filter: "grayscale(1) brightness(0.15)" }}
-          title="Map background"
-          eager
-        />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/95 to-surface-dark/70" />
 
         <div className="relative z-10 mx-auto max-w-6xl px-6 pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-start">
@@ -117,26 +107,13 @@ const Contact = () => {
                 SD-WAN, leased lines, business WiFi, unified comms, CCTV, network infrastructure — we design, install, and manage it all. Tell us what you're dealing with and we'll come back with a plan.
               </p>
 
-              {/* Map + Contact details */}
+              {/* Contact details */}
               <div className="space-y-5">
-                <div className="rounded-xl overflow-hidden border border-white/10 h-44">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.0837606!3d51.5256258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca5656ca69f%3A0x55fafaa420dc387e!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE!5e0!3m2!1sen!2sgb!4v1710720000000!5m2!1sen!2sgb"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Integra Networks Office Location"
-                    className="grayscale contrast-125"
-                  />
-                </div>
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-surface-dark-muted">
+                  <a href="https://www.google.com/maps/place/86-90+Paul+St,+London+EC2A+4NE" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-surface-dark-muted hover:text-primary transition-colors">
                     <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
                     <span className="text-sm">86–90 Paul Street, London, EC2A 4NE</span>
-                  </div>
+                  </a>
                   <a href="mailto:connect@integra-networks.co.uk" className="flex items-center gap-3 text-surface-dark-muted hover:text-primary transition-colors">
                     <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                     <span className="text-sm">connect@integra-networks.co.uk</span>

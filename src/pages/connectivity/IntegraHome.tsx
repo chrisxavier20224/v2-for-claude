@@ -189,7 +189,7 @@ const IntegraHome = () => {
               Fast Broadband for Your Home. <span className="text-primary">No Fibre Needed.</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-4">
-              Can't get fibre? We install fast, reliable broadband at your property using 4G/5G — in under 14 days. No Openreach. No roadworks. No waiting.
+              Can't get fibre? With 99% UK coverage, we can install fast, reliable 4G/5G broadband at your property in under 14 days. No Openreach. No roadworks. No waiting.
             </p>
             <p className="text-2xl text-white font-medium mb-8">
               Just <span className="text-primary">£65</span>/month
