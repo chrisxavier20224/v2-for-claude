@@ -21,7 +21,8 @@ const pricingTiers = [
     name: "Integra Home",
     speed: "Speeds vary by location",
     price: "55",
-    installation: "1,250",
+    installation: "900",
+    originalInstallation: "1,250",
     description: "Reliable 4G/5G broadband on the best available network — professionally installed",
     features: [
       "Single-network 4G/5G connectivity",
@@ -31,6 +32,7 @@ const pricingTiers = [
     ],
     popular: false,
     tier: "entry",
+    note: "Launch offer — ends 31 March. Save £350 on installation.",
     productLink: "/connectivity/integra-home",
   },
   {
@@ -361,7 +363,13 @@ const IntegraSDWan = () => {
                     <span className="text-4xl font-medium text-foreground tracking-tight">£{tier.price}</span>
                     <span className="text-sm text-muted-foreground">/month</span>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-1">+VAT · Installation from £{tier.installation} +VAT</p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    +VAT · Installation {tier.originalInstallation ? (
+                      <>from <span className="line-through opacity-50">£{tier.originalInstallation}</span> <span className="text-status-ok font-medium">£{tier.installation}</span></>
+                    ) : (
+                      <>from £{tier.installation}</>
+                    )} +VAT
+                  </p>
                 </div>
 
                 <div className={`h-px mb-5 ${tier.popular ? "bg-primary/30" : "bg-border"}`} />

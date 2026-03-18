@@ -18,7 +18,8 @@ const mainProducts = [
     name: "Integra Home",
     price: "55",
     period: "/month",
-    installation: "1,250",
+    installation: "900",
+    originalInstallation: "1,250",
     description: "Reliable 4G/5G broadband on the best available network — professionally installed",
     features: [
       "Single-network 4G/5G connectivity",
@@ -29,8 +30,9 @@ const mainProducts = [
     cta: "Check Availability",
     ctaLink: "/check",
     popular: false,
+    bestValue: true,
     tier: "entry",
-    note: null,
+    note: "Launch offer — ends 31 March. Save £350 on installation.",
     productLink: "/connectivity/integra-home",
   },
   {
@@ -219,6 +221,8 @@ const Pricing = () => {
                 className={`relative rounded-2xl border backdrop-blur-sm p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 ${
                   product.popular
                     ? "bg-gradient-to-b from-primary/15 to-primary/5 border-primary/50 ring-1 ring-primary/20"
+                    : product.bestValue
+                    ? "bg-gradient-to-b from-status-ok/10 to-status-ok/5 border-status-ok/40 ring-1 ring-status-ok/20"
                     : "bg-white/[0.03] border-white/10 hover:border-white/20"
                 }`}
               >
@@ -226,6 +230,13 @@ const Pricing = () => {
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
                     <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-3 py-1 rounded-full text-[10px] font-semibold shadow-lg shadow-primary/30">
                       <Award className="h-3 w-3" /> Homeworker Favourite
+                    </span>
+                  </div>
+                )}
+                {product.bestValue && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                    <span className="inline-flex items-center gap-1 bg-status-ok text-white px-3 py-1 rounded-full text-[10px] font-semibold shadow-lg shadow-status-ok/30">
+                      Launch Offer
                     </span>
                   </div>
                 )}
@@ -240,7 +251,13 @@ const Pricing = () => {
                     <span className="text-4xl font-medium text-white tracking-tight">£{product.price}</span>
                     <span className="text-sm text-surface-dark-muted">{product.period}</span>
                   </div>
-                  <p className="text-xs text-surface-dark-muted mt-1">+VAT · Installation from £{product.installation} +VAT</p>
+                  <p className="text-xs text-surface-dark-muted mt-1">
+                    +VAT · Installation {product.originalInstallation ? (
+                      <>from <span className="line-through text-surface-dark-muted/40">£{product.originalInstallation}</span> <span className="text-status-ok font-medium">£{product.installation}</span></>
+                    ) : (
+                      <>from £{product.installation}</>
+                    )} +VAT
+                  </p>
                 </div>
 
                 {/* Divider */}

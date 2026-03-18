@@ -85,7 +85,7 @@ const features = [
 
 
 const pricingTiers = [
-  { name: "Integra Home", speed: "Speeds vary by location", price: "55", staticIp: "", install: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/connectivity/integra-home" },
+  { name: "Integra Home", speed: "Speeds vary by location", price: "55", staticIp: "Launch offer — ends 31 March", install: "£900", originalInstall: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/connectivity/integra-home" },
   { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
   { name: "Integra Pro", speed: "Up to 350Mbps", price: "135", staticIp: "Static IP £10/month", install: "£2,200", features: ["Multi-network bonding", "Priority support"], popular: true },
   { name: "Integra Ultrafast", speed: "Up to 450Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },
@@ -310,7 +310,11 @@ const IntegraSDWAN = () => {
                 <p className="text-xs text-muted-foreground mb-4">+VAT</p>
                 <div className="space-y-2 mb-6">
                   <p className="text-xs text-muted-foreground font-medium">{tier.staticIp}</p>
-                  <p className="text-xs text-muted-foreground font-medium">Installation: {tier.install} +VAT</p>
+                  <p className="text-xs text-muted-foreground font-medium">
+                    Installation: {tier.originalInstall ? (
+                      <><span className="line-through opacity-50">{tier.originalInstall}</span> <span className="text-status-ok">{tier.install}</span></>
+                    ) : tier.install} +VAT
+                  </p>
                   {tier.features.map((feature, i) => (
                     <p key={i} className="text-xs text-muted-foreground font-medium">
                       {feature}

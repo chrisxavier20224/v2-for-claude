@@ -191,9 +191,17 @@ const IntegraHome = () => {
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-4">
               Can't get fibre? With 99% UK coverage, we can install fast, reliable 4G/5G broadband at your property in under 14 days. No Openreach. No roadworks. No waiting.
             </p>
-            <p className="text-2xl text-white font-medium mb-8">
-              Just <span className="text-primary">£65</span>/month
-            </p>
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 bg-status-ok/20 border border-status-ok/30 rounded-full px-4 py-1.5 mb-3">
+                <span className="text-xs font-semibold text-status-ok uppercase tracking-wider">Launch Offer — Ends 31 March</span>
+              </div>
+              <p className="text-2xl text-white font-medium">
+                Installation: <span className="line-through text-white/40">£1,500</span> <span className="text-primary">£1,080</span> <span className="text-sm text-white/60">inc VAT</span>
+              </p>
+              <p className="text-lg text-white/70 mt-1">
+                Just <span className="text-primary font-medium">£65</span>/month
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -279,6 +287,9 @@ const IntegraHome = () => {
             <div className="rounded-2xl border border-primary/30 bg-card p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
                 <div>
+                  <div className="inline-flex items-center gap-2 bg-status-ok/20 border border-status-ok/30 rounded-full px-3 py-1 mb-3">
+                    <span className="text-xs font-semibold text-status-ok uppercase tracking-wider">Launch Offer — Ends 31 March</span>
+                  </div>
                   <h3 className="text-heading-2 text-foreground mb-2">Integra Home</h3>
                   <p className="text-muted-foreground">Fast home broadband — no fibre required</p>
                 </div>
@@ -287,8 +298,8 @@ const IntegraHome = () => {
                     <span className="text-4xl font-medium text-foreground">£65</span>
                     <span className="text-muted-foreground">/month</span>
                   </div>
-                  <p className="text-xs text-muted-foreground/60 mt-1">(£55 +VAT)</p>
-                  <p className="text-sm text-muted-foreground mt-1">Installation: £1,500 inc VAT</p>
+                  <p className="text-sm text-muted-foreground mt-2">Installation: <span className="line-through text-muted-foreground/40">£1,500</span> <span className="text-primary font-medium">£1,080</span> inc VAT</p>
+                  <p className="text-xs text-status-ok mt-1">Save £420 — offer ends 31 March</p>
                 </div>
               </div>
 
