@@ -15,7 +15,7 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const mainProducts = [
   {
-    name: "Integra Connect",
+    name: "Integra Home",
     price: "55",
     period: "/month",
     installation: "1,250",
@@ -31,7 +31,7 @@ const mainProducts = [
     popular: false,
     tier: "entry",
     note: null,
-    productLink: "/connectivity/integra-connect",
+    productLink: "/connectivity/integra-home",
   },
   {
     name: "Starlink SD-WAN",

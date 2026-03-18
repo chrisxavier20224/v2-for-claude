@@ -85,7 +85,7 @@ const features = [
 
 
 const pricingTiers = [
-  { name: "Integra Connect", speed: "Speeds vary by location", price: "55", staticIp: "", install: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/connectivity/integra-connect" },
+  { name: "Integra Home", speed: "Speeds vary by location", price: "55", staticIp: "", install: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/connectivity/integra-home" },
   { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
   { name: "Integra Pro", speed: "Up to 350Mbps", price: "135", staticIp: "Static IP £10/month", install: "£2,200", features: ["Multi-network bonding", "Priority support"], popular: true },
   { name: "Integra Ultrafast", speed: "Up to 450Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },

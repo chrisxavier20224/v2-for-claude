@@ -20,9 +20,9 @@ import wifiImg from "@/assets/sectors/homeworker-wifi-setup.avif";
 
 const relatedServices = [
   {
-    title: "Integra Connect",
+    title: "Integra Home",
     description: "Reliable 4G/5G broadband from £65/mo — perfect for everyday home use.",
-    href: "/connectivity/integra-connect",
+    href: "/connectivity/integra-home",
     icon: Wifi,
     badge: "From £65/mo",
   },

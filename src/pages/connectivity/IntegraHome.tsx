@@ -10,7 +10,7 @@ import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
-import heroImg from "@/assets/connectivity/integra-connect-hero.jpg";
+import heroImg from "@/assets/connectivity/integra-home-hero.jpg";
 import remoteImg from "@/assets/connectivity/home-wifi-remote.jpg";
 import outbuildingsImg from "@/assets/connectivity/home-wifi-outbuildings.jpg";
 import installImg from "@/assets/connectivity/sdwan-aerial.webp";
@@ -102,10 +102,10 @@ const relatedServices = [
   },
 ];
 
-const connectServiceSchema = {
+const homeServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Integra Connect",
+  name: "Integra Home",
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
@@ -117,7 +117,7 @@ const connectServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Broadband Internet Service",
-  url: "https://integra-networks.co.uk/connectivity/integra-connect",
+  url: "https://integra-networks.co.uk/connectivity/integra-home",
   offers: {
     "@type": "Offer",
     priceCurrency: "GBP",
@@ -131,34 +131,34 @@ const connectServiceSchema = {
   },
 };
 
-const connectBreadcrumbSchema = {
+const homeBreadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://integra-networks.co.uk" },
     { "@type": "ListItem", position: 2, name: "Connectivity", item: "https://integra-networks.co.uk/connectivity" },
-    { "@type": "ListItem", position: 3, name: "Integra Connect", item: "https://integra-networks.co.uk/connectivity/integra-connect" },
+    { "@type": "ListItem", position: 3, name: "Integra Home", item: "https://integra-networks.co.uk/connectivity/integra-home" },
   ],
 };
 
-const IntegraConnect = () => {
+const IntegraHome = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <PageLayout>
       <SEO
-        title="Integra Connect"
+        title="Integra Home"
         description="Fast home broadband from £65/month — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
         keywords="rural broadband, home broadband no fibre, 4G broadband, 5G broadband, rural internet, broadband for countryside, broadband where fibre not available"
-        url="/connectivity/integra-connect"
+        url="/connectivity/integra-home"
       />
-      <SchemaMarkup data={connectServiceSchema} />
-      <SchemaMarkup data={connectBreadcrumbSchema} />
+      <SchemaMarkup data={homeServiceSchema} />
+      <SchemaMarkup data={homeBreadcrumbSchema} />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Integra Connect professional installation" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Integra Home professional installation" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -166,7 +166,7 @@ const IntegraConnect = () => {
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-white">
-                  Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Integra Connect
+                  Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Integra Home
                 </span>
               </Link>
               <a
@@ -279,7 +279,7 @@ const IntegraConnect = () => {
             <div className="rounded-2xl border border-primary/30 bg-card p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
                 <div>
-                  <h3 className="text-heading-2 text-foreground mb-2">Integra Connect</h3>
+                  <h3 className="text-heading-2 text-foreground mb-2">Integra Home</h3>
                   <p className="text-muted-foreground">Fast home broadband — no fibre required</p>
                 </div>
                 <div className="text-left md:text-right">
@@ -501,4 +501,4 @@ const IntegraConnect = () => {
   );
 };
 
-export default IntegraConnect;
+export default IntegraHome;

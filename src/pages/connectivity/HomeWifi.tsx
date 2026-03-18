@@ -48,9 +48,9 @@ const checklistItem = { hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x
 const relatedServices = [
   {
     icon: Plug,
-    title: "Integra Connect",
+    title: "Integra Home",
     description: "Pair with Home WiFi for complete broadband + coverage — from £65/mo.",
-    href: "/connectivity/integra-connect",
+    href: "/connectivity/integra-home",
   },
   {
     icon: Zap,
