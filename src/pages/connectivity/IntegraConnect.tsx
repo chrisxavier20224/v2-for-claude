@@ -71,7 +71,7 @@ const whoItsFor = [
 ];
 
 const faqs = [
-  { q: "What speeds will I get?", a: "Speeds depend on your location, the distance to the nearest mast, and the carrier available. We check your coverage before you commit and give you a realistic expectation — no surprises. Typical speeds range from 20Mbps to 100Mbps+, depending on your location." },
+  { q: "What speeds will I get?", a: "Speeds range from 100Mbps to 300Mbps, subject to local network infrastructure. We check your coverage before you commit and give you a realistic expectation — no surprises." },
   { q: "How is this different from a Three MiFi or mobile hotspot?", a: "We install a proper external antenna on your property for the best possible signal, connected to a commercial-grade router. We configure everything, monitor your connection 24/7, and provide full UK-based support. A MiFi sits on your windowsill — this is a proper installation." },
   { q: "Can I upgrade later?", a: "Absolutely. We can add a second network to bond with your existing connection, upgrading you to Integra Pro for faster speeds and redundancy. Most of the hardware stays — we just add to it." },
   { q: "What if it doesn't work?", a: "That's why we do a coverage survey before we install. We check the signal at your property and give you a realistic speed expectation upfront. If the numbers don't stack up, we'll tell you — we don't want to waste your time, and sending an engineer for an install that won't work costs us too. If we go ahead and you're still not happy, there's a 14-day money-back guarantee." },
