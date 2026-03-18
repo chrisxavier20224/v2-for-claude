@@ -15,6 +15,25 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const mainProducts = [
   {
+    name: "Integra Connect",
+    price: "59",
+    period: "/month",
+    installation: "1,250",
+    description: "Reliable 4G/5G broadband on the best available network — professionally installed",
+    features: [
+      "Single-network 4G/5G connectivity",
+      "External antenna + commercial-grade router",
+      "Professional installation included",
+      "UK-based phone & WhatsApp support",
+    ],
+    cta: "Check Availability",
+    ctaLink: "/check",
+    popular: false,
+    tier: "entry",
+    note: null,
+    productLink: "/connectivity/integra-connect",
+  },
+  {
     name: "Starlink SD-WAN",
     price: "80",
     period: "/month",
@@ -37,7 +56,7 @@ const mainProducts = [
     price: "135",
     period: "/month",
     installation: "2,200",
-    description: "Multi-network bonding with up to 350Mbps — our most popular business & homeworker solution",
+    description: "Multi-network bonding with up to 350Mbps — our most popular solution for homeworkers and businesses",
     features: [
       "Up to 350Mbps multi-network bonding",
       "Advanced load balancing + failover",
@@ -66,25 +85,6 @@ const mainProducts = [
     ctaLink: "/check",
     popular: false,
     tier: "mid",
-    note: null,
-  },
-  {
-    name: "Starlink B2B",
-    price: "300",
-    pricePrefix: "From ",
-    period: "/month",
-    installation: "1,300",
-    description: "Managed Starlink with Integra SLA — subject to data usage requirements",
-    features: [
-      "Professional Starlink installation",
-      "4G/5G cellular failover included",
-      "Integra SLA-backed service",
-      "Dedicated account management",
-    ],
-    cta: "Check Availability",
-    ctaLink: "/check",
-    popular: false,
-    tier: "premium",
     note: null,
   },
   {
@@ -225,7 +225,7 @@ const Pricing = () => {
                 {product.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-semibold shadow-lg shadow-primary/30">
-                      <Award className="h-3 w-3" /> Most Popular
+                      <Award className="h-3 w-3" /> Most Popular for Homeworkers
                     </span>
                   </div>
                 )}
