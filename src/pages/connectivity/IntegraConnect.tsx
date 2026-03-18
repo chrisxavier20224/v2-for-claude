@@ -148,7 +148,7 @@ const IntegraConnect = () => {
     <PageLayout>
       <SEO
         title="Integra Connect"
-        description="Fast home broadband from £55/mo — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
+        description="Fast home broadband from £65/month — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
         keywords="rural broadband, home broadband no fibre, 4G broadband, 5G broadband, rural internet, broadband for countryside, broadband where fibre not available"
         url="/connectivity/integra-connect"
       />
@@ -192,7 +192,7 @@ const IntegraConnect = () => {
               Can't get fibre? We install fast, reliable broadband at your property using 4G/5G — in under 14 days. No Openreach. No roadworks. No waiting.
             </p>
             <p className="text-2xl text-white font-medium mb-8">
-              From <span className="text-primary">£55</span>/month +VAT
+              Just <span className="text-primary">£65</span>/month
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -284,10 +284,11 @@ const IntegraConnect = () => {
                 </div>
                 <div className="text-left md:text-right">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-medium text-foreground">£55</span>
-                    <span className="text-muted-foreground">/month +VAT</span>
+                    <span className="text-4xl font-medium text-foreground">£65</span>
+                    <span className="text-muted-foreground">/month</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-1">Installation: £1,250 +VAT</p>
+                  <p className="text-xs text-muted-foreground/60 mt-1">(£55 +VAT)</p>
+                  <p className="text-sm text-muted-foreground mt-1">Installation: £1,500 inc VAT</p>
                 </div>
               </div>
 

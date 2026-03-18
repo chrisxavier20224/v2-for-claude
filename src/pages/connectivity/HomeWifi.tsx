@@ -49,7 +49,7 @@ const relatedServices = [
   {
     icon: Plug,
     title: "Integra Connect",
-    description: "Pair with Home WiFi for complete broadband + coverage — from £55/mo.",
+    description: "Pair with Home WiFi for complete broadband + coverage — from £65/mo.",
     href: "/connectivity/integra-connect",
   },
   {
