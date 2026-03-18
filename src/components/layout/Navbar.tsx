@@ -7,10 +7,10 @@ import integraLogoWhite from "@/assets/integra-logo-white.png";
 
 // Fibre alternatives — solutions when you can't get fibre
 const fibreAlternativeLinks = [
+  { label: "Integra Connect", path: "/connectivity/integra-connect", icon: Wifi, tagline: "Home Broadband from £55/mo" },
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
   { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite + 4G/5G Bonded" },
-  { label: "Starlink B2B", path: "/connectivity/starlink-b2b", icon: Satellite, tagline: "Managed Satellite for Business" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
   { label: "Pricing", path: "/pricing", icon: CreditCard, tagline: "Transparent, Fixed Monthly Pricing" },
 ];

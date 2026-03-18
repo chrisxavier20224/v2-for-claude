@@ -144,7 +144,7 @@ const CellularBackup = () => {
               Looking for standalone 4G/5G broadband — not just a backup?
             </p>
             <Link to="/connectivity/integra-connect" className="text-primary font-medium hover:underline">
-              See Integra Connect — reliable broadband from £59/mo, professionally installed →
+              See Integra Connect — reliable broadband from £55/mo, professionally installed →
             </Link>
           </div>
         </div>

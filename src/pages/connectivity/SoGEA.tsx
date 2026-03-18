@@ -10,7 +10,7 @@ import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 
-import heroImg from "@/assets/connectivity/leased-lines-hero.webp";
+import heroImg from "@/assets/connectivity/sdwan-install.webp";
 import deployImg from "@/assets/connectivity/managed-sim-voice.jpg";
 import switchImg from "@/assets/connectivity/unified-comms-deploy.jpg";
 

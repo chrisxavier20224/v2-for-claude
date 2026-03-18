@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Wifi, Shield, Wrench, Clock, Home, ChevronDown, Zap, Phone } from "lucide-react";
+import { ArrowLeft, ArrowRight, Wifi, Shield, Wrench, Clock, Home, ChevronDown, Zap, Phone, Star, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,7 @@ import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
-import heroImg from "@/assets/connectivity/sdwan-install.webp";
+import heroImg from "@/assets/sectors/homeworker-family-connectivity.avif";
 import remoteImg from "@/assets/connectivity/home-wifi-remote.jpg";
 import outbuildingsImg from "@/assets/connectivity/home-wifi-outbuildings.jpg";
 import installImg from "@/assets/connectivity/sdwan-aerial.webp";
@@ -111,7 +111,7 @@ const connectServiceSchema = {
     name: "Integra Networks",
     url: "https://integra-networks.co.uk",
   },
-  description: "Reliable 4G/5G broadband, professionally installed with an external antenna and commercial-grade router. From £59/month.",
+  description: "Reliable 4G/5G broadband, professionally installed with an external antenna and commercial-grade router. From £55/month.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -121,10 +121,10 @@ const connectServiceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "GBP",
-    price: "59",
+    price: "55",
     priceSpecification: {
       "@type": "UnitPriceSpecification",
-      price: "59",
+      price: "55",
       priceCurrency: "GBP",
       billingDuration: "P1M",
     },
@@ -148,7 +148,7 @@ const IntegraConnect = () => {
     <PageLayout>
       <SEO
         title="Integra Connect"
-        description="Fast home broadband from £59/mo — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
+        description="Fast home broadband from £55/mo — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
         keywords="rural broadband, home broadband no fibre, 4G broadband, 5G broadband, rural internet, broadband for countryside, broadband where fibre not available"
         url="/connectivity/integra-connect"
       />
@@ -163,11 +163,26 @@ const IntegraConnect = () => {
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors mb-6">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-white">
-                Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Integra Connect
-              </span>
-            </Link>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-white">
+                  Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Integra Connect
+                </span>
+              </Link>
+              <a
+                href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-white/15 transition-all group"
+              >
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span>5.0/5 on Reviews.io</span>
+              </a>
+            </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
@@ -177,7 +192,7 @@ const IntegraConnect = () => {
               Can't get fibre? We install fast, reliable broadband at your property using 4G/5G — in under 14 days. No Openreach. No roadworks. No waiting.
             </p>
             <p className="text-2xl text-white font-medium mb-8">
-              From <span className="text-primary">£59</span>/month +VAT
+              From <span className="text-primary">£55</span>/month +VAT
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -269,7 +284,7 @@ const IntegraConnect = () => {
                 </div>
                 <div className="text-left md:text-right">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-medium text-foreground">£59</span>
+                    <span className="text-4xl font-medium text-foreground">£55</span>
                     <span className="text-muted-foreground">/month +VAT</span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">Installation: £1,250 +VAT</p>
@@ -383,6 +398,70 @@ const IntegraConnect = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-surface-dark py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection className="text-center mb-12">
+            <div className="flex justify-center gap-0.5 mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <h2 className="text-heading-2 text-surface-dark-foreground mb-3">
+              Don't just take our word for it.
+            </h2>
+            <p className="text-surface-dark-muted max-w-xl mx-auto">
+              Hundreds of customers now rely on Integra for fast, reliable broadband.
+            </p>
+            <a
+              href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium mt-4"
+            >
+              Read all reviews on Reviews.io
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </AnimatedSection>
+
+          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            {[
+              { author: "Verified Customer", content: "I have had a great experience with Integra. The people I have spoken to have been understanding and very human throughout the entire process and the internet speeds I am now getting mean a huge increase in my career opportunity." },
+              { author: "Duncan Hall", content: "Working with Integra Networks has been a rare pleasure: they could not have been more patient, helpful, friendly and professional. They found the exact solution for our needs, and our internet provision is just excellent, despite our remote and rural location." },
+              { author: "Dane", content: "Provided a fast and friendly service for getting our Internet online. So far the service has been reliable and fast, greatly outperforming the limited connectivity we had through normal domestic Internet." },
+              { author: "Sally Wiltshire", content: "Excellent service, both from the network design and installation team, and now the ongoing support. We have reliable, fast broadband for the first time ever in our rural location." },
+            ].map((review, i) => (
+              <motion.div key={i} variants={fadeUp} className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
+                <div className="flex gap-0.5 mb-3">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-sm text-surface-dark-muted leading-relaxed mb-4">"{review.content}"</p>
+                <div>
+                  <p className="text-sm font-medium text-surface-dark-foreground">{review.author}</p>
+                  <p className="text-xs text-surface-dark-muted">via Reviews.io</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <AnimatedSection delay={0.3} className="text-center mt-12">
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+              <a
+                href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-medium h-12 px-8 text-base rounded-md"
+              >
+                View All Reviews on Reviews.io
+              </a>
+            </motion.div>
+          </AnimatedSection>
         </div>
       </section>
 

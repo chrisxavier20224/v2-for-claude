@@ -16,7 +16,7 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 const mainProducts = [
   {
     name: "Integra Connect",
-    price: "59",
+    price: "55",
     period: "/month",
     installation: "1,250",
     description: "Reliable 4G/5G broadband on the best available network — professionally installed",
