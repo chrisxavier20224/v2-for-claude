@@ -20,54 +20,54 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const painPoints = [
   {
-    question: "Can't get fibre and tired of waiting?",
-    answer: "We install 4G/5G broadband at your property in under 14 days. No Openreach, no wayleave delays, no years of waiting.",
+    question: "Tired of buffering and dropouts?",
+    answer: "We install a proper broadband connection at your home in under 14 days. Stream, video call, and browse without the constant frustration of slow or unreliable internet.",
   },
   {
-    question: "Spending too much on a solution you don't need?",
-    answer: "Not everyone needs bonded multi-network. Integra Connect gives you reliable broadband on the strongest network at your location — from just £59/mo.",
+    question: "Been told fibre isn't coming?",
+    answer: "You don't need to wait for Openreach. We bring fast internet to your home using 4G/5G — no digging, no roadworks, no years of empty promises.",
   },
   {
-    question: "Stuck with a consumer router in a window?",
-    answer: "We install an external antenna on your property for the best possible signal, connected to a commercial-grade router. It's a proper installation — not a MiFi.",
+    question: "Fed up with a hotspot on the windowsill?",
+    answer: "We install a proper external antenna on your property for the strongest possible signal — not a MiFi balanced on a shelf. It's the difference between hoping for a signal and actually having broadband.",
   },
 ];
 
 const features = [
   {
     icon: Wifi,
-    eyebrow: "Simple, Reliable Broadband",
-    title: "One Network. Professionally Installed.",
-    description: "We test the 4G/5G signal at your property, identify the strongest carrier and tower, and install an external antenna with a commercial-grade router. You get the best possible connection your location can deliver — without the complexity or cost of multi-network bonding.",
+    eyebrow: "Proper Home Broadband",
+    title: "Stream, Call, Browse — Without the Frustration.",
+    description: "We find the strongest 4G/5G signal at your property and install an external antenna to pull it in properly. The result? Broadband that actually handles Netflix, Zoom calls, and the kids gaming — all at the same time. No more fighting over bandwidth.",
     img: remoteImg,
-    imgAlt: "Rural property with reliable broadband",
+    imgAlt: "Rural home with reliable broadband",
     reverse: false,
   },
   {
     icon: Wrench,
-    eyebrow: "Professional Installation",
-    title: "Installed in Under 14 Days",
-    description: "Our engineer arrives, tests signal from nearby towers, mounts the antenna for optimal reception, installs and configures your router, and makes sure everything is working before they leave. You're online the same day.",
+    eyebrow: "We Come to You",
+    title: "Installed by Our Engineers. You're Online the Same Day.",
+    description: "No waiting months for Openreach. Our engineer visits your property, tests the signal, installs the antenna and router, and makes sure everything is working before they leave. The whole thing takes a few hours — you're online that afternoon.",
     img: installImg,
-    imgAlt: "Professional antenna installation",
+    imgAlt: "Professional broadband installation",
     reverse: true,
   },
   {
     icon: Shield,
-    eyebrow: "Real Support, Real People",
-    title: "UK-Based Support When You Need It",
-    description: "Something not right? Call us or message on WhatsApp and speak to a real person who knows your setup. We monitor your connection and can often fix issues before you even notice them.",
+    eyebrow: "Actual Support When You Need It",
+    title: "Call Us. Message Us. We'll Fix It.",
+    description: "No chatbots, no call centres in the Philippines, no 48-hour email waits. Call us or send a WhatsApp and speak to someone who actually knows your setup. We monitor your connection too — so we often spot problems before you do.",
     img: outbuildingsImg,
-    imgAlt: "Rural broadband for outbuildings and homes",
+    imgAlt: "Rural property with broadband coverage",
     reverse: false,
   },
 ];
 
 const whoItsFor = [
-  { icon: Home, title: "Rural Homes", description: "No fibre? No problem. Get reliable broadband without waiting years for Openreach." },
-  { icon: Wifi, title: "Holiday Lets & Airbnbs", description: "Guests expect WiFi. Give them a reliable connection without a £2,000+ install." },
-  { icon: Zap, title: "Small Businesses", description: "Email, video calls, cloud apps, card payments — Connect handles everyday business use." },
-  { icon: Clock, title: "First Step Customers", description: "Start with Connect. Upgrade to Integra Pro when you're ready for more speed or redundancy." },
+  { icon: Home, title: "Rural Homes", description: "Can't get fibre? We bring fast broadband to you — no digging, no delays, no Openreach." },
+  { icon: Wifi, title: "Holiday Lets & Airbnbs", description: "Your guests expect WiFi that works. Give them reliable broadband without a massive outlay." },
+  { icon: Zap, title: "New Builds & Conversions", description: "Moved in and there's no broadband? We'll have you online in under 14 days." },
+  { icon: Clock, title: "Homeworkers", description: "Video calls, cloud apps, uploading documents — Connect keeps you working without the buffering." },
 ];
 
 const faqs = [
@@ -148,8 +148,8 @@ const IntegraConnect = () => {
     <PageLayout>
       <SEO
         title="Integra Connect"
-        description="Reliable 4G/5G broadband from £59/mo. Professionally installed with an external antenna and commercial-grade router. No fibre required."
-        keywords="rural broadband, 4G broadband, 5G broadband, no fibre broadband, cheap rural internet, broadband installation, affordable broadband"
+        description="Fast home broadband from £59/mo — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
+        keywords="rural broadband, home broadband no fibre, 4G broadband, 5G broadband, rural internet, broadband for countryside, broadband where fibre not available"
         url="/connectivity/integra-connect"
       />
       <SchemaMarkup data={connectServiceSchema} />
@@ -171,10 +171,10 @@ const IntegraConnect = () => {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Broadband That <span className="text-primary">Just Works.</span>
+              Fast Broadband for Your Home. <span className="text-primary">No Fibre Needed.</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-4">
-              Reliable 4G/5G broadband, professionally installed at your property. No fibre required. No long waits. No fuss.
+              Can't get fibre? We install fast, reliable broadband at your property using 4G/5G — in under 14 days. No Openreach. No roadworks. No waiting.
             </p>
             <p className="text-2xl text-white font-medium mb-8">
               From <span className="text-primary">£59</span>/month +VAT
@@ -201,10 +201,10 @@ const IntegraConnect = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">No Fibre? No Problem.</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              Reliable broadband, without the wait.
+              The broadband your home deserves.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Stop waiting for fibre that may never come. Integra Connect delivers 4G/5G broadband to your property in under 14 days — professionally installed and fully supported.
+              You shouldn't have to put up with slow internet just because you live in the countryside. We bring proper broadband to your door — installed by our engineers, supported by real people.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -265,7 +265,7 @@ const IntegraConnect = () => {
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
                 <div>
                   <h3 className="text-heading-2 text-foreground mb-2">Integra Connect</h3>
-                  <p className="text-muted-foreground">4G/5G broadband, professionally installed</p>
+                  <p className="text-muted-foreground">Fast home broadband — no fibre required</p>
                 </div>
                 <div className="text-left md:text-right">
                   <div className="flex items-baseline gap-1">
@@ -278,12 +278,12 @@ const IntegraConnect = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {[
-                  "External antenna, professionally mounted",
-                  "Commercial-grade router configured for you",
-                  "Best available 4G/5G network at your location",
-                  "24/7 connection monitoring",
-                  "UK-based phone and WhatsApp support",
-                  "12-month term, 14-day money-back guarantee",
+                  "External antenna installed for the best signal",
+                  "Router set up and configured — ready to go",
+                  "Connected to the strongest network at your property",
+                  "We monitor your connection 24/7",
+                  "Call or WhatsApp us anytime — real UK support",
+                  "14-day money-back guarantee if you're not happy",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="mt-1 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
@@ -324,12 +324,12 @@ const IntegraConnect = () => {
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Who It's For</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Is It Right for You?</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-              Built for people who just need it to work.
+              If any of this sounds familiar, we can help.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-              You don't need the fastest internet in the world. You need internet that's reliable, properly installed, and actually supported.
+              You don't need the fastest internet in the world. You need broadband that actually works — reliably, every day, without excuses.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -393,10 +393,10 @@ const IntegraConnect = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Get Started</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">
-              Ready for broadband that just works?
+              Check if we can connect your home.
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              Check your availability in 30 seconds. We'll confirm coverage at your location and give you a realistic speed expectation — no obligation.
+              Takes 30 seconds. We'll check coverage at your property and let you know what speeds to expect — no obligation, no pressure.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
