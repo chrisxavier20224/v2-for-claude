@@ -5,10 +5,10 @@ import integraLogo from "@/assets/integra-logo-white.png";
 
 
 const fibreAlternativeLinks = [
+  { label: "Integra Home", path: "/connectivity/integra-home" },
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
   { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation" },
-  { label: "Starlink B2B", path: "/connectivity/starlink-b2b" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
   { label: "Pricing", path: "/pricing" },
 ];
