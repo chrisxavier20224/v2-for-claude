@@ -223,14 +223,14 @@ const Pricing = () => {
                 }`}
               >
                 {product.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-semibold shadow-lg shadow-primary/30">
-                      <Award className="h-3 w-3" /> Most Popular for Homeworkers
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                    <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-3 py-1 rounded-full text-[10px] font-semibold shadow-lg shadow-primary/30">
+                      <Award className="h-3 w-3" /> Homeworker Favourite
                     </span>
                   </div>
                 )}
 
-                <h3 className="text-lg font-medium text-surface-dark-foreground mb-2 mt-1">{product.name}</h3>
+                <h3 className="text-lg font-medium text-surface-dark-foreground mb-2 mt-2">{product.name}</h3>
                 <p className="text-surface-dark-muted text-sm mb-5 leading-relaxed">{product.description}</p>
 
                 {/* Price block */}
