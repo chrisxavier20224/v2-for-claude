@@ -18,6 +18,22 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const pricingTiers = [
   {
+    name: "Integra Home",
+    speed: "Speeds vary by location",
+    price: "55",
+    installation: "1,250",
+    description: "Reliable 4G/5G broadband on the best available network — professionally installed",
+    features: [
+      "Single-network 4G/5G connectivity",
+      "External antenna + router included",
+      "Professional installation",
+      "UK-based phone & WhatsApp support",
+    ],
+    popular: false,
+    tier: "entry",
+    productLink: "/connectivity/integra-home",
+  },
+  {
     name: "Starlink SD-WAN",
     speed: "Starlink + 4G/5G bonded",
     price: "80",
@@ -37,7 +53,7 @@ const pricingTiers = [
     speed: "Up to 350Mbps",
     price: "135",
     installation: "2,200",
-    description: "Multi-network bonding — our most popular business & homeworker solution",
+    description: "Multi-network bonding — our most popular solution for homeworkers and businesses",
     features: [
       "Up to 350Mbps multi-network bonding",
       "Advanced load balancing + failover",
@@ -61,22 +77,6 @@ const pricingTiers = [
     ],
     popular: false,
     tier: "mid",
-  },
-  {
-    name: "Starlink B2B",
-    speed: "Managed Starlink + SLA",
-    price: "300",
-    pricePrefix: "From ",
-    installation: "1,300",
-    description: "Managed Starlink with Integra SLA — subject to data usage requirements",
-    features: [
-      "Professional Starlink installation",
-      "4G/5G cellular failover included",
-      "Integra SLA-backed service",
-      "Dedicated account management",
-    ],
-    popular: false,
-    tier: "premium",
   },
   {
     name: "Enterprise",
@@ -345,9 +345,9 @@ const IntegraSDWan = () => {
                 }`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-semibold shadow-lg shadow-primary/30">
-                      <Award className="h-3 w-3" /> Most Popular
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                    <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-3 py-1 rounded-full text-[10px] font-semibold shadow-lg shadow-primary/30">
+                      <Award className="h-3 w-3" /> Homeworker Favourite
                     </span>
                   </div>
                 )}
