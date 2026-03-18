@@ -158,7 +158,7 @@ const IntegraHome = () => {
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Integra Home professional installation" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Mum working from home with reliable broadband" className="w-full h-full object-cover object-[70%_center] md:object-center" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
