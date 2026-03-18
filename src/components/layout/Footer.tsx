@@ -100,7 +100,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 <img src={integraLogo} alt="Integra Networks" className="w-28 h-auto" />
               </Link>
               <p className="text-sm text-surface-dark-muted">
-                Managed connectivity solutions for businesses across the UK.
+                Fast, reliable broadband for homes and businesses across the UK.
               </p>
             </div>
 
