@@ -47,15 +47,15 @@ const checklistItem = { hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x
 
 const relatedServices = [
   {
-    icon: Wifi,
-    title: "Business WiFi",
-    description: "Enterprise-grade mesh networks for commercial spaces.",
-    href: "/connectivity/business-wifi",
+    icon: Plug,
+    title: "Integra Connect",
+    description: "Pair with Home WiFi for complete broadband + coverage — from £59/mo.",
+    href: "/connectivity/integra-connect",
   },
   {
     icon: Zap,
     title: "Integra SD-WAN",
-    description: "Secure, intelligent networking for organisations.",
+    description: "Need more speed? Bonded 4G/5G with up to 350Mbps.",
     href: "/connectivity/integra-sd-wan",
   },
   {

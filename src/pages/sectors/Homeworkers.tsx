@@ -20,21 +20,22 @@ import wifiImg from "@/assets/sectors/homeworker-wifi-setup.avif";
 
 const relatedServices = [
   {
+    title: "Integra Connect",
+    description: "Reliable 4G/5G broadband from £59/mo — perfect for everyday home use.",
+    href: "/connectivity/integra-connect",
+    icon: Wifi,
+    badge: "From £59/mo",
+  },
+  {
     title: "Integra SD-WAN",
-    description: "Bonded 4G/5G connectivity with 99.5% uptime SLA.",
-    href: "/connectivity/integra-sdwan",
+    description: "Need more speed? Bonded 4G/5G with up to 350Mbps and 99.5% uptime SLA.",
+    href: "/connectivity/integra-sd-wan",
     icon: Network,
   },
   {
-    title: "Business WiFi",
-    description: "Professional WiFi for your entire property.",
-    href: "/connectivity/business-wifi",
-    icon: Wifi,
-  },
-  {
-    title: "Availability Checker",
-    description: "Check coverage at your location instantly.",
-    href: "/check",
+    title: "Home WiFi",
+    description: "Professional WiFi throughout your property — house, outbuildings, garden office.",
+    href: "/connectivity/home-wifi",
     icon: Monitor,
   },
 ];

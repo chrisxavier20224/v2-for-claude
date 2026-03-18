@@ -136,6 +136,20 @@ const CellularBackup = () => {
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
+      {/* STANDALONE BROADBAND CALLOUT */}
+      <section className="bg-surface-dark py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6 text-center">
+            <p className="text-surface-dark-muted mb-2">
+              Looking for standalone 4G/5G broadband — not just a backup?
+            </p>
+            <Link to="/connectivity/integra-connect" className="text-primary font-medium hover:underline">
+              See Integra Connect — reliable broadband from £59/mo, professionally installed →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
