@@ -95,6 +95,7 @@ const HomeWifi = lazy(() => import("./pages/connectivity/HomeWifi"));
 const StarlinkInstallation = lazy(() => import("./pages/connectivity/StarlinkInstallation"));
 const StarlinkB2B = lazy(() => import("./pages/connectivity/StarlinkB2B"));
 const IntegraSDWAN = lazy(() => import("./pages/connectivity/IntegraSDWAN"));
+const IntegraConnect = lazy(() => import("./pages/connectivity/IntegraConnect"));
 const IntegraBridge = lazy(() => import("./pages/connectivity/IntegraBridge"));
 const SoGEA = lazy(() => import("./pages/connectivity/SoGEA"));
 const CCTV = lazy(() => import("./pages/connectivity/CCTV"));
@@ -235,6 +236,7 @@ const App = () => (
               <Route path="/connectivity/wireless-distribution" element={<WirelessDistribution />} />
               <Route path="/connectivity/network-infrastructure" element={<NetworkInfrastructure />} />
               <Route path="/connectivity/integra-sd-wan" element={<IntegraSDWAN />} />
+              <Route path="/connectivity/integra-connect" element={<IntegraConnect />} />
               <Route path="/connectivity/integra-bridge" element={<IntegraBridge />} />
               <Route path="/connectivity/managed-firewall" element={<ManagedFirewall />} />
               <Route path="/connectivity/cellular-backup" element={<CellularBackup />} />
