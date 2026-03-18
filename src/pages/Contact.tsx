@@ -95,7 +95,7 @@ const Contact = () => {
       <section className="relative bg-surface-dark overflow-hidden">
         {/* Satellite map background — faded */}
         <LazyIframe
-          src="https://maps.google.com/maps?q=86-90+Paul+Street,+London+EC2A+4NE,+UK&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.0837606!3d51.5256258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca5656ca69f%3A0x55fafaa420dc387e!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE!5e1!3m2!1sen!2suk!4v1710720000000!5m2!1sen!2suk"
           className="absolute inset-0 w-full h-full pointer-events-none"
           style={{ border: 0, scale: "1.5", filter: "grayscale(1) brightness(0.15)" }}
           title="Map background"
@@ -120,7 +120,7 @@ const Contact = () => {
               <div className="space-y-5">
                 <div className="rounded-xl overflow-hidden border border-white/10 h-44">
                   <iframe
-                    src="https://maps.google.com/maps?q=86-90+Paul+Street,+London+EC2A+4NE,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4099034284374!2d-0.0837606!3d51.5256258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca5656ca69f%3A0x55fafaa420dc387e!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE!5e0!3m2!1sen!2suk!4v1710720000000!5m2!1sen!2suk"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
