@@ -10,7 +10,7 @@ import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 
-import heroImg from "@/assets/sectors/homeworker-family-connectivity.avif";
+import heroImg from "@/assets/connectivity/integra-connect-hero.jpg";
 import remoteImg from "@/assets/connectivity/home-wifi-remote.jpg";
 import outbuildingsImg from "@/assets/connectivity/home-wifi-outbuildings.jpg";
 import installImg from "@/assets/connectivity/sdwan-aerial.webp";
