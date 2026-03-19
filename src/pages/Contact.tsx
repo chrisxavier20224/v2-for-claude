@@ -107,19 +107,8 @@ const Contact = () => {
                 SD-WAN, leased lines, business WiFi, unified comms, CCTV, network infrastructure — we design, install, and manage it all. Tell us what you're dealing with and we'll come back with a plan.
               </p>
 
-              {/* Map + Contact details */}
+              {/* Contact details */}
               <div className="space-y-5">
-                <a href="https://www.google.com/maps/place/86-90+Paul+St,+London+EC2A+4NE" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden border border-white/10 h-44">
-                  <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.0905%2C51.5225%2C-0.0770%2C51.5290&layer=mapnik&marker=51.5256%2C-0.0838"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    title="Integra Networks Office Location"
-                    className="grayscale contrast-125 brightness-75"
-                  />
-                </a>
                 <div className="space-y-3">
                   <a href="https://www.google.com/maps/place/86-90+Paul+St,+London+EC2A+4NE" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-surface-dark-muted hover:text-primary transition-colors">
                     <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
