@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,6 +12,7 @@ import SEO from "@/components/shared/SEO";
 import HubSpotMeeting from "@/components/shared/HubSpotMeeting";
 import { trackEvent, trackContactFormConversion } from "@/components/shared/Analytics";
 
+// Contact page — HubSpot form integration
 const HUBSPOT_PORTAL_ID = "20314482";
 const HUBSPOT_CONTACT_FORM_ID = "8ca90dd9-351e-4138-9c4e-8850586f008e";
 
