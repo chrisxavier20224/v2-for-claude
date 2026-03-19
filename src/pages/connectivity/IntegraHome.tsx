@@ -205,7 +205,7 @@ const IntegraHome = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                  <Link to="/check">Check Availability <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link to="/check">Check If You Qualify <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -227,7 +227,7 @@ const IntegraHome = () => {
               The broadband your home deserves.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              You shouldn't have to put up with slow internet just because you live in the countryside. We bring proper broadband to your door — installed by our engineers, supported by real people.
+              Not every property qualifies — we survey your location first and only proceed if the coverage is there. But if it is, we'll have you online in under 14 days.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -323,7 +323,7 @@ const IntegraHome = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 font-medium flex-1">
-                  <Link to="/check">Check Availability <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link to="/check">Check If You Qualify <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="flex-1">
                   <Link to="/contact">Request a Quote</Link>
@@ -484,15 +484,15 @@ const IntegraHome = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Get Started</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">
-              Check if we can connect your home.
+              Does your property qualify?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              Takes 30 seconds. We'll check coverage at your property and let you know what speeds to expect — no obligation, no pressure.
+              Not every location qualifies for Integra Home. Enter your details and we'll run a coverage survey on your property — takes 30 seconds, no obligation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                  <Link to="/check">Check Availability <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link to="/check">Check If You Qualify <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
