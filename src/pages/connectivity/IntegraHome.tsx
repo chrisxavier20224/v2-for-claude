@@ -148,7 +148,7 @@ const IntegraHome = () => {
     <PageLayout>
       <SEO
         title="Integra Home"
-        description="Fast home broadband from £65/month — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
+        description="Fast home broadband from £66/month — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
         keywords="rural broadband, home broadband no fibre, 4G broadband, 5G broadband, rural internet, broadband for countryside, broadband where fibre not available"
         url="/connectivity/integra-home"
       />
