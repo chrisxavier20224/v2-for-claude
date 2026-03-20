@@ -148,7 +148,7 @@ const IntegraHome = () => {
     <PageLayout>
       <SEO
         title="Integra Home"
-        description="Fast home broadband from £65/month — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
+        description="Fast home broadband from £66/month — no fibre needed. Professionally installed at your property with a 14-day money-back guarantee."
         keywords="rural broadband, home broadband no fibre, 4G broadband, 5G broadband, rural internet, broadband for countryside, broadband where fibre not available"
         url="/connectivity/integra-home"
       />
@@ -199,7 +199,7 @@ const IntegraHome = () => {
                 Installation: <span className="line-through text-white/40">£1,500</span> <span className="text-primary">£1,080</span> <span className="text-sm text-white/60">inc VAT</span>
               </p>
               <p className="text-lg text-white/70 mt-1">
-                Just <span className="text-primary font-medium">£65</span>/month
+                Just <span className="text-primary font-medium">£66</span>/month
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -295,7 +295,7 @@ const IntegraHome = () => {
                 </div>
                 <div className="text-left md:text-right">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-medium text-foreground">£65</span>
+                    <span className="text-4xl font-medium text-foreground">£66</span>
                     <span className="text-muted-foreground">/month</span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">Installation: <span className="line-through text-muted-foreground/40">£1,500</span> <span className="text-primary font-medium">£1,080</span> inc VAT</p>

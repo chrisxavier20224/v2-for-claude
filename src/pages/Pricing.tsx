@@ -247,7 +247,7 @@ const Pricing = () => {
                 {/* Price block */}
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
-                    {product.pricePrefix && <span className="text-sm text-surface-dark-muted">{product.pricePrefix}</span>}
+                    {'pricePrefix' in product && (product as any).pricePrefix && <span className="text-sm text-surface-dark-muted">{(product as any).pricePrefix}</span>}
                     <span className="text-4xl font-medium text-white tracking-tight">£{product.price}</span>
                     <span className="text-sm text-surface-dark-muted">{product.period}</span>
                   </div>
