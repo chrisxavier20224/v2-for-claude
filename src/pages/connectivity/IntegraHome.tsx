@@ -199,7 +199,7 @@ const IntegraHome = () => {
                 Installation: <span className="line-through text-white/40">£1,500</span> <span className="text-primary">£1,080</span> <span className="text-sm text-white/60">inc VAT</span>
               </p>
               <p className="text-lg text-white/70 mt-1">
-                Just <span className="text-primary font-medium">£65</span>/month
+                Just <span className="text-primary font-medium">£66</span>/month
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4">
