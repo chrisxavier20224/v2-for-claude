@@ -295,7 +295,7 @@ const IntegraHome = () => {
                 </div>
                 <div className="text-left md:text-right">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-medium text-foreground">£65</span>
+                    <span className="text-4xl font-medium text-foreground">£66</span>
                     <span className="text-muted-foreground">/month</span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">Installation: <span className="line-through text-muted-foreground/40">£1,500</span> <span className="text-primary font-medium">£1,080</span> inc VAT</p>
