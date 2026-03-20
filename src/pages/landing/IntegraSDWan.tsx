@@ -359,7 +359,7 @@ const IntegraSDWan = () => {
 
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
-                    {tier.pricePrefix && <span className="text-sm text-muted-foreground">{tier.pricePrefix}</span>}
+                    {'pricePrefix' in tier && tier.pricePrefix && <span className="text-sm text-muted-foreground">{tier.pricePrefix}</span>}
                     <span className="text-4xl font-medium text-foreground tracking-tight">£{tier.price}</span>
                     <span className="text-sm text-muted-foreground">/month</span>
                   </div>

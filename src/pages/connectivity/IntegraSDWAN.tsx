@@ -302,7 +302,7 @@ const IntegraSDWAN = () => {
                 <p className="text-sm text-muted-foreground mb-4">{tier.speed}</p>
                 <div className="mb-1">
                   <span className="text-3xl font-medium text-foreground">
-                    {tier.pricePrefix && <span className="text-lg">{tier.pricePrefix}</span>}
+                    {'pricePrefix' in tier && tier.pricePrefix && <span className="text-lg">{tier.pricePrefix}</span>}
                     £{tier.price}
                   </span>
                   <span className="text-muted-foreground text-sm">/month</span>
