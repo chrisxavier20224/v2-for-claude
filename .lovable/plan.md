@@ -1,26 +1,21 @@
 
 
-## Sticky Mobile Call Bar
+# One-Page Brand Guidelines PDF
 
-Add a persistent call-to-action bar pinned to the bottom of the screen on mobile devices, giving visitors a one-tap way to call 0203 388 7111.
+## What I'll Create
+A single-page PDF brand guidelines reference document capturing all visual design tokens from this website, formatted for use when building another project.
 
-### What it will look like
-- A slim bar fixed to the bottom of the viewport, visible only on mobile (hidden on `md:` and above)
-- Contains a phone icon and the number "0203 388 7111" as a tap-to-call link (`tel:02033887111`)
-- Styled in the brand primary colour with white text for high visibility
-- Sits above any cookie consent banner if present
+## Content to Include
+- **Typography**: Inter font family, all scale sizes (display 4.5rem, display-sm 3rem, heading-1 2.25rem, heading-2 1.75rem, heading-3 1.25rem, eyebrow 0.75rem) with weights and letter-spacing
+- **Color Palette**: Primary blue (hsl 216 100% 50%), foreground (hsl 222 47% 11%), background white, background-alt (hsl 210 20% 97%), muted (hsl 210 15% 93%), muted-foreground (hsl 220 10% 40%), border (hsl 220 13% 88%), status colors (ok/warning/critical), surface-dark
+- **Button Styles**: 6 variants (default/destructive/outline/secondary/ghost/link), 5 sizes (sm/default/lg/xl/icon), border-radius 0.5rem
+- **Spacing & Layout**: Container max-width 1400px, 2rem padding, border-radius 0.5rem base
+- **Component Patterns**: Card styles, glass-card, eyebrow labels (uppercase, tracking-widest, primary color), section patterns
 
-### Technical details
-
-**New component**: `src/components/shared/StickyCallBar.tsx`
-- A fixed-position bar (`fixed bottom-0 left-0 right-0 z-40`) with `md:hidden` to show on mobile only
-- Uses an `<a href="tel:02033887111">` for native tap-to-call
-- Phone icon from Lucide (`Phone`)
-- Compact height (~48px) so it doesn't obstruct content
-
-**Integration**: `src/components/layout/PageLayout.tsx`
-- Import and render `StickyCallBar` alongside the existing `CookieConsentBanner`
-- This ensures it appears on every page automatically
-
-**Bottom padding**: Add a small `pb-12 md:pb-0` to the `<main>` element in PageLayout so page content isn't hidden behind the sticky bar on mobile.
+## Technical Approach
+- Generate using ReportLab (Python) with color swatches rendered as actual colored rectangles
+- Use Inter-like system font for the document itself
+- Clean, professional layout matching the site's minimal aesthetic
+- Output to `/mnt/documents/brand-guidelines.pdf`
+- Visual QA via pdftoppm conversion
 
