@@ -364,11 +364,16 @@ const IntegraSDWan = () => {
                   </div>
                   <p className="text-xs text-muted-foreground mt-1">
                     +VAT · Installation {tier.originalInstallation ? (
-                      <>from <span className="line-through opacity-50">£{tier.originalInstallation}</span> <span className="text-status-ok font-medium">£{tier.installation}</span></>
+                      <>from <span className="line-through opacity-50">£{tier.originalInstallation}</span> <span className="text-status-ok font-bold">£{tier.installation}</span></>
                     ) : (
                       <>from £{tier.installation}</>
                     )} +VAT
                   </p>
+                  {tier.originalInstallation && (
+                    <div className="mt-1.5 inline-flex items-center gap-1 bg-status-ok/15 border border-status-ok/30 text-status-ok px-2 py-0.5 rounded-md">
+                      <span className="text-[10px] font-bold">SAVE £700 — LIMITED SLOTS</span>
+                    </div>
+                  )}
                 </div>
 
                 <div className={`h-px mb-5 ${tier.popular ? "bg-primary/30" : "bg-border"}`} />

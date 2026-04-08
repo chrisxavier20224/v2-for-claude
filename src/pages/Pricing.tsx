@@ -194,6 +194,26 @@ const Pricing = () => {
         </div>
       </section>
 
+      {/* ── APRIL PROMO BANNER ───────────────────────────────────────── */}
+      <section className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-y border-primary/30">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 md:py-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
+            <span className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-lg shadow-primary/30 animate-pulse">
+              Limited Time
+            </span>
+            <p className="text-surface-dark-foreground text-sm md:text-base font-medium">
+              <span className="text-white font-bold">Save £700</span> on Integra Pro installation this April — <span className="text-primary font-semibold">now just £1,500 + VAT</span> (was £2,200).
+              Limited installation slots available.
+            </p>
+            <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 whitespace-nowrap shadow-lg shadow-primary/20">
+              <Link to="/check" className="inline-flex items-center gap-1.5 text-xs font-semibold">
+                Check Availability <ArrowRight className="h-3 w-3" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* ── PRICING CARDS ────────────────────────────────────────────── */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -253,11 +273,17 @@ const Pricing = () => {
                   </div>
                   <p className="text-xs text-surface-dark-muted mt-1">
                     +VAT · Installation {product.originalInstallation ? (
-                      <>from <span className="line-through text-surface-dark-muted/40">£{product.originalInstallation}</span> <span className="text-status-ok font-medium">£{product.installation}</span></>
+                      <>from <span className="line-through text-surface-dark-muted/40">£{product.originalInstallation}</span> <span className="text-status-ok font-semibold text-sm">£{product.installation}</span></>
                     ) : (
                       <>from £{product.installation}</>
                     )} +VAT
                   </p>
+                  {product.originalInstallation && (
+                    <div className="mt-2 inline-flex items-center gap-1.5 bg-status-ok/15 border border-status-ok/30 text-status-ok px-2.5 py-1 rounded-lg">
+                      <span className="text-xs font-bold">SAVE £{(parseInt(product.originalInstallation.replace(',','')) - parseInt(product.installation.replace(',',''))).toLocaleString()}</span>
+                      <span className="text-[10px] font-medium opacity-80">on installation</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Divider */}
@@ -276,7 +302,7 @@ const Pricing = () => {
                 </ul>
 
                 {product.note && (
-                  <p className="text-xs text-primary/70 italic mb-4 leading-relaxed">{product.note}</p>
+                  <p className="text-xs text-primary font-semibold mb-4 leading-relaxed">{product.note}</p>
                 )}
 
                 <Button

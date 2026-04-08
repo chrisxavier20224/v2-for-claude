@@ -312,9 +312,14 @@ const IntegraSDWAN = () => {
                   <p className="text-xs text-muted-foreground font-medium">{tier.staticIp}</p>
                   <p className="text-xs text-muted-foreground font-medium">
                     Installation: {tier.originalInstall ? (
-                      <><span className="line-through opacity-50">{tier.originalInstall}</span> <span className="text-status-ok">{tier.install}</span></>
+                      <><span className="line-through opacity-50">{tier.originalInstall}</span> <span className="text-status-ok font-bold">{tier.install}</span></>
                     ) : tier.install} +VAT
                   </p>
+                  {tier.originalInstall && (
+                    <div className="inline-flex items-center gap-1 bg-status-ok/15 border border-status-ok/30 text-status-ok px-2 py-0.5 rounded-md mt-1">
+                      <span className="text-[10px] font-bold">SAVE £700</span>
+                    </div>
+                  )}
                   {tier.features.map((feature, i) => (
                     <p key={i} className="text-xs text-muted-foreground font-medium">
                       {feature}
