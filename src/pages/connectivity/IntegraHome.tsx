@@ -332,7 +332,7 @@ const IntegraHome = () => {
                 Need faster speeds or multi-network redundancy?
               </p>
               <Link to="/connectivity/integra-sd-wan" className="text-primary font-medium hover:underline text-sm">
-                See Integra Pro from £135/mo — up to 350Mbps bonded <ArrowRight className="inline h-3 w-3 ml-1" />
+                See Integra Pro from £110/mo — up to 350Mbps bonded <ArrowRight className="inline h-3 w-3 ml-1" />
               </Link>
             </div>
           </AnimatedSection>

@@ -252,7 +252,7 @@ const Kent = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£135/month</span>
+                  <span className="font-semibold text-foreground">£110/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Starlink SD-WAN add-on</span>
@@ -280,7 +280,7 @@ const Kent = () => {
               The property had strong EE signal but weak Vodafone. We recommended Integra Pro (bonded EE + O2 as backup). Installation: one day. Result: 220Mbps combined speed, zero weather impact, automatic failover redundancy.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Cost: £135/month. The farm now manages crop systems reliably, coordinates with buyers online, and handles invoicing without drops. Problem solved, productivity up.
+              Cost: £110/month. The farm now manages crop systems reliably, coordinates with buyers online, and handles invoicing without drops. Problem solved, productivity up.
             </p>
           </div>
         </AnimatedSection>

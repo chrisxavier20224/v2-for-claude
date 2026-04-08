@@ -51,7 +51,7 @@ const EssexHerts = () => {
     },
     {
       q: "How much does a typical Essex or Herts installation cost?",
-      a: "Installation is £2,200. Monthly service is £135/month for Integra Pro (bonded 4G/5G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or support charges.",
+      a: "Installation is £2,200. Monthly service is £110/month for Integra Pro (bonded 4G/5G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or support charges.",
     },
     {
       q: "What if my property has weak mobile signal?",
@@ -252,7 +252,7 @@ const EssexHerts = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£135/month</span>
+                  <span className="font-semibold text-foreground">£110/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Starlink SD-WAN add-on</span>
@@ -280,7 +280,7 @@ const EssexHerts = () => {
               We recommended Integra Pro (bonded EE and Vodafone). The property had excellent multi-network coverage. Installation: one day.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Result: 280Mbps combined speed, crystal-clear video calls, zero weather impact. Cost: £135/month. The business now runs smoothly without connectivity headaches.
+              Result: 280Mbps combined speed, crystal-clear video calls, zero weather impact. Cost: £110/month. The business now runs smoothly without connectivity headaches.
             </p>
           </div>
         </AnimatedSection>

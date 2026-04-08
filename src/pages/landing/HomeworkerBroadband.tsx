@@ -237,7 +237,7 @@ const HomeworkerBroadband = () => {
               <h3 className="text-2xl font-medium text-surface-dark-foreground mb-2">Integra Pro</h3>
               <p className="text-surface-dark-muted mb-4">Best for: Premium performance & speed</p>
               <div className="text-4xl font-medium text-white mb-6">
-                £135<span className="text-lg text-surface-dark-muted">/month +VAT</span>
+                £110<span className="text-lg text-surface-dark-muted">/month +VAT</span>
               </div>
               <ul className="text-surface-dark-muted space-y-3 mb-8">
                 <li className="flex items-start gap-3">

@@ -52,7 +52,7 @@ const solutions = [
     speedDown: "Up to 350Mbps",
     speedUp: "80–120Mbps",
     latency: "20–30ms",
-    monthlyCost: "£135–400",
+    monthlyCost: "£110–400",
     installTime: "Under 14 days",
     reliability: "99%+ uptime",
     support: "Professional, SLA available",
@@ -154,7 +154,7 @@ const solutions = [
 
 const comparisonData = [
   { solution: "Starlink Direct", speed: "50–200 / 10–30", latency: "25–60ms", monthly: "£99–130", reliability: "Fair", setup: "1–2 days", support: "Forum" },
-  { solution: "Cellular SD-WAN", speed: "Up to 350 / 100+", latency: "20–30ms", monthly: "£135–400", reliability: "99%+", setup: "14 days", support: "Professional" },
+  { solution: "Cellular SD-WAN", speed: "Up to 350 / 100+", latency: "20–30ms", monthly: "£110–400", reliability: "99%+", setup: "14 days", support: "Professional" },
   { solution: "Fixed Wireless", speed: "50–300 / 10–40", latency: "10–20ms", monthly: "£20–50", reliability: "Good", setup: "7–14 days", support: "Operator" },
   { solution: "Leased Line", speed: "Up to 1Gbps sym.", latency: "5–15ms", monthly: "£400–2,000+", reliability: "99.9%", setup: "8–12 weeks", support: "24/7 managed" },
   { solution: "Starlink + Cellular", speed: "150–350 / 80–120", latency: "20–30ms", monthly: "£180–210", reliability: "Excellent", setup: "14 days", support: "Professional" },

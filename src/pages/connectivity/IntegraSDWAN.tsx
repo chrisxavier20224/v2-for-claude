@@ -87,7 +87,7 @@ const features = [
 const pricingTiers = [
   { name: "Integra Home", speed: "Speeds vary by location", price: "55", staticIp: "Static IP £10/month", install: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/connectivity/integra-home" },
   { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
-  { name: "Integra Pro", speed: "Up to 350Mbps", price: "135", staticIp: "Static IP £10/month", install: "£1,500", originalInstall: "£2,200", features: ["Multi-network bonding", "Priority support"], popular: true },
+  { name: "Integra Pro", speed: "Up to 350Mbps", price: "110", originalPrice: "135", staticIp: "Static IP £10/month", install: "£1,500", originalInstall: "£2,200", features: ["Multi-network bonding", "Priority support"], popular: true },
   { name: "Integra Ultrafast", speed: "Up to 450Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },
   { name: "Enterprise", speed: "Up to 500Mbps", price: "400", staticIp: "Static IP £10/month", install: "£3,300", features: ["99.99% uptime SLA", "Dedicated account manager"] },
 ];
@@ -233,7 +233,7 @@ const IntegraSDWAN = () => {
               Limited Time
             </span>
             <p className="text-white text-sm md:text-base font-medium">
-              <span className="font-bold">Save £700</span> on Integra Pro installation this April — <span className="font-bold underline decoration-2">now just £1,500 + VAT</span> (was £2,200).
+              <span className="font-bold">Save £700 on install + £25/mo off</span> — Integra Pro <span className="font-bold underline decoration-2">now £110/mo + £1,500 install</span> (was £135/mo + £2,200).
               Limited installation slots available.
             </p>
             <Button asChild size="sm" className="bg-white text-primary hover:bg-white/90 whitespace-nowrap shadow-lg font-bold">
@@ -323,6 +323,7 @@ const IntegraSDWAN = () => {
                 <div className="mb-1">
                   <span className="text-3xl font-medium text-foreground">
                     {'pricePrefix' in tier && (tier as any).pricePrefix && <span className="text-lg">{(tier as any).pricePrefix}</span>}
+                    {'originalPrice' in tier && (tier as any).originalPrice && <span className="text-lg line-through text-muted-foreground/50 mr-1">£{(tier as any).originalPrice}</span>}
                     £{tier.price}
                   </span>
                   <span className="text-muted-foreground text-sm">/month</span>

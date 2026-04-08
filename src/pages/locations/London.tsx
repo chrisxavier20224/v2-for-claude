@@ -265,7 +265,7 @@ const London = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£135/month</span>
+                  <span className="font-semibold text-foreground">£110/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Mesh WiFi extension (per node)</span>
@@ -293,7 +293,7 @@ const London = () => {
               Site manager called us on Monday. We confirmed 48-hour emergency deployment. By Wednesday morning, our engineer had installed Integra Pro (bonded EE and Vodafone) with mesh WiFi covering all compound buildings.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Result: 260Mbps combined speed, full site coverage, three separate WiFi networks (staff, management, security). Cost: £135/month plus £50 per mesh node. The site saved weeks of waiting and got fully productive immediately. When the project moved six months later, they cancelled without penalty.
+              Result: 260Mbps combined speed, full site coverage, three separate WiFi networks (staff, management, security). Cost: £110/month plus £50 per mesh node. The site saved weeks of waiting and got fully productive immediately. When the project moved six months later, they cancelled without penalty.
             </p>
           </div>
         </AnimatedSection>

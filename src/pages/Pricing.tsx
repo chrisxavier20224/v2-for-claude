@@ -54,7 +54,8 @@ const mainProducts = [
   },
   {
     name: "Integra Pro",
-    price: "135",
+    price: "110",
+    originalPrice: "135",
     period: "/month",
     installation: "1,500",
     originalInstallation: "2,200",
@@ -69,7 +70,7 @@ const mainProducts = [
     ctaLink: "/check",
     popular: true,
     tier: "popular",
-    note: "April offer — save £700 on installation. Ends 30 April 2026.",
+    note: "April offer — save £700 on installation + £25/mo off. Ends 30 April 2026.",
   },
   {
     name: "Integra Ultrafast",
@@ -202,7 +203,7 @@ const Pricing = () => {
               Limited Time
             </span>
             <p className="text-white text-sm md:text-base font-medium">
-              <span className="font-bold">Save £700</span> on Integra Pro installation this April — <span className="font-bold underline decoration-2">now just £1,500 + VAT</span> (was £2,200).
+              <span className="font-bold">Save £700 on install + £25/mo off</span> — Integra Pro <span className="font-bold underline decoration-2">now £110/mo + £1,500 install</span> (was £135/mo + £2,200).
               Limited installation slots available.
             </p>
             <Button asChild size="sm" className="bg-white text-primary hover:bg-white/90 whitespace-nowrap shadow-lg font-bold">
@@ -268,6 +269,7 @@ const Pricing = () => {
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
                     {'pricePrefix' in product && (product as any).pricePrefix && <span className="text-sm text-surface-dark-muted">{(product as any).pricePrefix}</span>}
+                    {'originalPrice' in product && (product as any).originalPrice && <span className="text-lg line-through text-surface-dark-muted/50 mr-1">£{(product as any).originalPrice}</span>}
                     <span className="text-4xl font-medium text-white tracking-tight">£{product.price}</span>
                     <span className="text-sm text-surface-dark-muted">{product.period}</span>
                   </div>

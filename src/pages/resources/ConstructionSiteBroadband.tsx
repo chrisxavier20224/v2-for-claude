@@ -206,7 +206,7 @@ const ConstructionSiteBroadband = () => {
               <div className="rounded-2xl border border-border bg-card p-6">
                 <h3 className="text-base font-medium text-foreground mb-3">Solution & Implementation</h3>
                 <p className="text-muted-foreground mb-3"><strong>The need:</strong> Professional broadband that deploys per-site, works during the project, leaves when site finishes.</p>
-                <p className="text-muted-foreground mb-3"><strong>Solution:</strong> Cellular SD-WAN. Single router per site, 4-hour install, 150Mbps+ speeds, £135/month.</p>
+                <p className="text-muted-foreground mb-3"><strong>Solution:</strong> Cellular SD-WAN. Single router per site, 4-hour install, 150Mbps+ speeds, £110/month.</p>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>Initial 2024 pilot: One site (April-June, 3 months)</li>
                   <li>Site manager gets real-time CCTV access</li>
@@ -220,7 +220,7 @@ const ConstructionSiteBroadband = () => {
                 <h3 className="text-base font-medium text-foreground mb-3">Results</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>150Mbps+ at 9 different sites over 12 months</li>
-                  <li>£135/month per site × 12 sites = £1,620/year per site</li>
+                  <li>£110/month per site × 12 sites = £1,620/year per site</li>
                   <li>Previous hotspot cost: £60/month × 12 months = £720/site, but quality was worse</li>
                   <li>Real ROI: Eliminated 2-3 hours/week of unreliable connectivity troubleshooting</li>
                   <li>CCTV incidents dropped to zero (better monitoring, faster response)</li>
@@ -255,7 +255,7 @@ const ConstructionSiteBroadband = () => {
                 },
                 {
                   title: "Cost-Effective",
-                  description: "£135/month × 6 = £810 for the entire project. That's less than inefficient hotspot costs plus the hidden cost of poor connectivity (delays, rework, safety incidents).",
+                  description: "£110/month × 6 = £660 for the entire project. That's less than inefficient hotspot costs plus the hidden cost of poor connectivity (delays, rework, safety incidents).",
                 },
                 {
                   title: "Deployment Speed",
@@ -317,7 +317,7 @@ const ConstructionSiteBroadband = () => {
         <AnimatedSection delay={0.2}>
           <div className="max-w-3xl mx-auto mt-8 rounded-2xl border border-border bg-card p-6">
             <h3 className="text-base font-medium text-foreground mb-3">Total Cost</h3>
-            <p className="text-muted-foreground text-sm">Install labour (engineer, 4 hours) + monthly service (£135) + any upgrades (Starlink add-on, second SIM, WiFi mesh). No setup fees, no equipment purchase, no decommissioning penalties.</p>
+            <p className="text-muted-foreground text-sm">Install labour (engineer, 4 hours) + monthly service (£110) + any upgrades (Starlink add-on, second SIM, WiFi mesh). No setup fees, no equipment purchase, no decommissioning penalties.</p>
           </div>
         </AnimatedSection>
       </Section>

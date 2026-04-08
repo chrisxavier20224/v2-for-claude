@@ -30,7 +30,7 @@ export const PRODUCTS = [
   {
     id: 'integra_pro',
     name: 'Integra Pro',
-    price: '£135+',
+    price: '£110+',
     frequency: '/month',
     vat: true,
     description: 'Up to 350Mbps multi-network bonding, priority support',

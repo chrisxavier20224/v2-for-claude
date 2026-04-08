@@ -255,7 +255,7 @@ const SussexSurrey = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£135/month</span>
+                  <span className="font-semibold text-foreground">£110/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Starlink SD-WAN add-on</span>
@@ -283,7 +283,7 @@ const SussexSurrey = () => {
               BT fibre was vaguely promised years away. Starlink alone had high latency for the owner's remote work. The property needed professional-grade connectivity.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              We installed Integra Pro (bonded EE and Vodafone) with roof-mounted antenna hidden from street view and cabling concealed. Result: 250Mbps combined speed, zero visible infrastructure changes, full compliance with conservation guidelines. Cost: £135/month. Problem solved.
+              We installed Integra Pro (bonded EE and Vodafone) with roof-mounted antenna hidden from street view and cabling concealed. Result: 250Mbps combined speed, zero visible infrastructure changes, full compliance with conservation guidelines. Cost: £110/month. Problem solved.
             </p>
           </div>
         </AnimatedSection>

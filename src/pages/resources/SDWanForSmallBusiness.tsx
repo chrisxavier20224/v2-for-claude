@@ -53,7 +53,7 @@ const scenarios = [
     subtitle: "Pure Cellular",
     description: "Temporary site, 6 months only. No Starlink (overkill). Just dual 4G bonded from different carriers.",
     result: "200Mbps download, works everywhere the site operates. Equipment redeploys to next site at no extra cost.",
-    cost: "£135/month",
+    cost: "£110/month",
   },
   {
     title: "Small Office",
@@ -265,7 +265,7 @@ const SDWanForSmallBusiness = () => {
                 </h2>
                 <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    <span className="text-foreground font-medium">Cellular SD-WAN (what we offer):</span> Bonding multiple 4G/5G connections. £135-400/month. 50-350Mbps. Installed in 14 days. For rural SMEs, small shops, temporary sites, offices without fibre.
+                    <span className="text-foreground font-medium">Cellular SD-WAN (what we offer):</span> Bonding multiple 4G/5G connections. £110-400/month. 50-350Mbps. Installed in 14 days. For rural SMEs, small shops, temporary sites, offices without fibre.
                   </p>
                   <p>
                     <span className="text-foreground font-medium">Enterprise SD-WAN:</span> Bonding MPLS, broadband, cellular, fibre across multiple sites with enterprise routers. £1,000s/month. Weeks of planning and configuration. For multi-site enterprises, hospitals, retail chains.

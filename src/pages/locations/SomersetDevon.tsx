@@ -47,7 +47,7 @@ const SomersetDevon = () => {
   const faqs = [
     {
       q: "I'm in Devon or Somerset with a holiday cottage business. How can Integra help?",
-      a: "Holiday cottage guests expect WiFi. Integra Pro delivers fast, reliable connectivity that keeps guests happy and enables you to run bookings, take payments, and manage your business online. We've installed at multiple holiday rental properties across Devon and Somerset. Typical cost: £135/month for professional-grade WiFi that guests rave about.",
+      a: "Holiday cottage guests expect WiFi. Integra Pro delivers fast, reliable connectivity that keeps guests happy and enables you to run bookings, take payments, and manage your business online. We've installed at multiple holiday rental properties across Devon and Somerset. Typical cost: £110/month for professional-grade WiFi that guests rave about.",
     },
     {
       q: "What speeds should I expect in rural Devon or Somerset?",
@@ -258,7 +258,7 @@ const SomersetDevon = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£135/month</span>
+                  <span className="font-semibold text-foreground">£110/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Starlink SD-WAN add-on</span>
@@ -286,7 +286,7 @@ const SomersetDevon = () => {
               The property had excellent EE signal and decent Vodafone. We recommended Integra Pro (bonded EE and Vodafone). Installation: one day.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Result: 250Mbps combined speed, mesh WiFi across all cottages, guests happy, booking conversion improved. Cost: £135/month. This customer now runs their entire business—bookings, payments, guest communication—without a single connectivity issue.
+              Result: 250Mbps combined speed, mesh WiFi across all cottages, guests happy, booking conversion improved. Cost: £110/month. This customer now runs their entire business—bookings, payments, guest communication—without a single connectivity issue.
             </p>
           </div>
         </AnimatedSection>

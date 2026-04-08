@@ -25,7 +25,7 @@ const solutions = [
     speedDown: "80–150Mbps",
     speedUp: "30–50Mbps",
     latency: "20–30ms",
-    monthlyCost: "£80–135",
+    monthlyCost: "£80–110",
     installTime: "14 days",
     reliability: "99%+",
     support: "Professional, SLA available",
@@ -51,7 +51,7 @@ const solutions = [
     speedDown: "150–350Mbps",
     speedUp: "80–120Mbps",
     latency: "20–30ms",
-    monthlyCost: "£135–250",
+    monthlyCost: "£110–250",
     installTime: "14 days",
     reliability: "99.5%+",
     support: "Professional, SLA available",
@@ -102,7 +102,7 @@ const solutions = [
 const faqs = [
   {
     q: "BT finally delivered fibre to my area. Should I switch from cellular bonding?",
-    a: "Evaluate based on cost and SLA. If fibre is £40/month with no SLA, bonding at £135/month is expensive for the upgrade. If fibre is the same cost with 99.5% SLA, upgrade. But switching isn't urgent — bonding is reliable enough for most businesses.",
+    a: "Evaluate based on cost and SLA. If fibre is £40/month with no SLA, bonding at £110/month is expensive for the upgrade. If fibre is the same cost with 99.5% SLA, upgrade. But switching isn't urgent — bonding is reliable enough for most businesses.",
   },
   {
     q: "What if 5G becomes ubiquitous?",
@@ -336,7 +336,7 @@ const RuralBusinessBroadband = () => {
                 <strong>Solution:</strong> Cellular SD-WAN bonding. Single router per site, plug-and-play install, 4-hour engineer visit.
               </p>
               <p>
-                <strong>Results:</strong> 150Mbps+ at 9 different sites over 12 months. £135/month per site (vs £60 hotspot + frustration). Zero CCTV downtime, site monitoring works flawlessly. Temporary solution became permanent (cost-effective, reliable). When they move sites, the router moves with them.
+                <strong>Results:</strong> 150Mbps+ at 9 different sites over 12 months. £110/month per site (vs £60 hotspot + frustration). Zero CCTV downtime, site monitoring works flawlessly. Temporary solution became permanent (cost-effective, reliable). When they move sites, the router moves with them.
               </p>
               <p>
                 <strong>Lesson:</strong> For businesses with temporary or mobile premises, cellular SD-WAN is the only realistic option. Leased line and fibre are too slow to deploy. Satellite lacks reliability. Mobile hotspot is too expensive and unreliable. Purpose-built cellular bonding hits the sweet spot.
@@ -368,7 +368,7 @@ const RuralBusinessBroadband = () => {
                 },
                 {
                   title: "Step 3: Honest Recommendation",
-                  description: "Based on towers, signals, and distance, we tell you: 'You'll get 250Mbps, install in 14 days, £135/month' or 'Cellular is weak here, Starlink would be better' or 'Leased line is your only realistic option.' You'll never hear 'definitely' until we've actually done the survey.",
+                  description: "Based on towers, signals, and distance, we tell you: 'You'll get 250Mbps, install in 14 days, £110/month' or 'Cellular is weak here, Starlink would be better' or 'Leased line is your only realistic option.' You'll never hear 'definitely' until we've actually done the survey.",
                 },
               ].map((item, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">

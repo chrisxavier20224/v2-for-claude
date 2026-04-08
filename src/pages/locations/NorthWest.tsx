@@ -252,7 +252,7 @@ const NorthWest = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£135/month</span>
+                  <span className="font-semibold text-foreground">£110/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Starlink SD-WAN add-on</span>
@@ -277,7 +277,7 @@ const NorthWest = () => {
               A holiday cottage business near Windermere relied on Starlink, but guests complained about latency and streaming issues. The property had strong EE signal but weak O2.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              We recommended Integra Pro (bonded EE and O2). Installation: one day. Result: 250Mbps combined speed, rock-solid WiFi across the property, guests happy. Cost: £135/month.
+              We recommended Integra Pro (bonded EE and O2). Installation: one day. Result: 250Mbps combined speed, rock-solid WiFi across the property, guests happy. Cost: £110/month.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               The business now runs online bookings, handles payments, and streams 4K video to guests without drops.

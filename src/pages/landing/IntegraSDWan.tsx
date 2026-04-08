@@ -52,8 +52,10 @@ const pricingTiers = [
   {
     name: "Integra Pro",
     speed: "Up to 350Mbps",
-    price: "135",
-    installation: "2,200",
+    price: "110",
+    originalPrice: "135",
+    installation: "1,500",
+    originalInstallation: "2,200",
     description: "Multi-network bonding — our most popular solution for homeworkers and businesses",
     features: [
       "Up to 350Mbps multi-network bonding",
@@ -359,6 +361,7 @@ const IntegraSDWan = () => {
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
                     {'pricePrefix' in tier && (tier as any).pricePrefix && <span className="text-sm text-muted-foreground">{(tier as any).pricePrefix}</span>}
+                    {'originalPrice' in tier && (tier as any).originalPrice && <span className="text-lg line-through text-muted-foreground/50 mr-1">£{(tier as any).originalPrice}</span>}
                     <span className="text-4xl font-medium text-foreground tracking-tight">£{tier.price}</span>
                     <span className="text-sm text-muted-foreground">/month</span>
                   </div>
