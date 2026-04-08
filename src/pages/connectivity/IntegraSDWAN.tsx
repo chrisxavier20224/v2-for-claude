@@ -225,6 +225,26 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
+      {/* April Promo Banner */}
+      <section className="bg-primary">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 md:py-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
+            <span className="inline-flex items-center gap-2 bg-white text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-lg">
+              Limited Time
+            </span>
+            <p className="text-white text-sm md:text-base font-medium">
+              <span className="font-bold">Save £700</span> on Integra Pro installation this April — <span className="font-bold underline decoration-2">now just £1,500 + VAT</span> (was £2,200).
+              Limited installation slots available.
+            </p>
+            <Button asChild size="sm" className="bg-white text-primary hover:bg-white/90 whitespace-nowrap shadow-lg font-bold">
+              <Link to="/check" className="inline-flex items-center gap-1.5 text-xs font-semibold">
+                Check Availability <ArrowRight className="h-3 w-3" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
