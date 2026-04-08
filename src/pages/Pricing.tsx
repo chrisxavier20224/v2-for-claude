@@ -57,7 +57,8 @@ const mainProducts = [
     name: "Integra Pro",
     price: "135",
     period: "/month",
-    installation: "2,200",
+    installation: "1,500",
+    originalInstallation: "2,200",
     description: "Multi-network bonding with up to 350Mbps — our most popular solution for homeworkers and businesses",
     features: [
       "Up to 350Mbps multi-network bonding",
@@ -69,7 +70,7 @@ const mainProducts = [
     ctaLink: "/check",
     popular: true,
     tier: "popular",
-    note: "Already have Starlink? Add it to your Pro setup for triple-connection resilience — same price, more redundancy.",
+    note: "April offer — save £700 on installation. Ends 30 April 2026.",
   },
   {
     name: "Integra Ultrafast",
