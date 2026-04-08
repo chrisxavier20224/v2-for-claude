@@ -284,9 +284,6 @@ const IntegraHome = () => {
             <div className="rounded-2xl border border-primary/30 bg-card p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
                 <div>
-                  <div className="inline-flex items-center gap-2 bg-status-ok/20 border border-status-ok/30 rounded-full px-3 py-1 mb-3">
-                    <span className="text-xs font-semibold text-status-ok uppercase tracking-wider">Launch Offer — Ends 31 March</span>
-                  </div>
                   <h3 className="text-heading-2 text-foreground mb-2">Integra Home</h3>
                   <p className="text-muted-foreground">Fast home broadband — no fibre required</p>
                 </div>

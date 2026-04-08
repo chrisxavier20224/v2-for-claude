@@ -21,8 +21,7 @@ const pricingTiers = [
     name: "Integra Home",
     speed: "Speeds vary by location",
     price: "55",
-    installation: "900",
-    originalInstallation: "1,250",
+    installation: "1,250",
     description: "Reliable 4G/5G broadband on the best available network — professionally installed",
     features: [
       "Single-network 4G/5G connectivity",
@@ -32,7 +31,7 @@ const pricingTiers = [
     ],
     popular: false,
     tier: "entry",
-    note: "Launch offer — ends 31 March. Save £350 on installation.",
+    note: null,
     productLink: "/connectivity/integra-home",
   },
   {
@@ -528,7 +527,7 @@ const IntegraSDWan = () => {
                   Sign up to any Integra SD-WAN package and receive a free WiFi mesh system to cover your entire property.
                 </p>
                 <p className="text-white/60 text-sm mb-8">
-                  Offer ends 31st March 2026
+                  Offer ends 30th April 2026
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90">
