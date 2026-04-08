@@ -18,8 +18,7 @@ const mainProducts = [
     name: "Integra Home",
     price: "55",
     period: "/month",
-    installation: "900",
-    originalInstallation: "1,250",
+    installation: "1,250",
     description: "Reliable 4G/5G broadband on the best available network — professionally installed",
     features: [
       "Single-network 4G/5G connectivity",
@@ -30,9 +29,9 @@ const mainProducts = [
     cta: "Check Availability",
     ctaLink: "/check",
     popular: false,
-    bestValue: true,
+    bestValue: false,
     tier: "entry",
-    note: "Launch offer — ends 31 March. Save £350 on installation.",
+    note: null,
     productLink: "/connectivity/integra-home",
   },
   {
