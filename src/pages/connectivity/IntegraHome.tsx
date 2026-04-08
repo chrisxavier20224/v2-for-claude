@@ -192,14 +192,11 @@ const IntegraHome = () => {
               Can't get fibre? With 99% UK coverage, we can install fast, reliable 4G/5G broadband at your property in under 14 days. No Openreach. No roadworks. No waiting.
             </p>
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-status-ok/20 border border-status-ok/30 rounded-full px-4 py-1.5 mb-3">
-                <span className="text-xs font-semibold text-status-ok uppercase tracking-wider">Launch Offer — Ends 31 March</span>
-              </div>
               <p className="text-2xl text-white font-medium">
-                Installation: <span className="line-through text-white/40">£1,500</span> <span className="text-primary">£1,080</span> <span className="text-sm text-white/60">inc VAT</span>
+                Installation: <span className="text-primary">£1,250</span> <span className="text-sm text-white/60">+VAT</span>
               </p>
               <p className="text-lg text-white/70 mt-1">
-                Just <span className="text-primary font-medium">£66</span>/month
+                Just <span className="text-primary font-medium">£55</span>/month +VAT
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -295,11 +292,10 @@ const IntegraHome = () => {
                 </div>
                 <div className="text-left md:text-right">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-medium text-foreground">£66</span>
-                    <span className="text-muted-foreground">/month</span>
+                    <span className="text-4xl font-medium text-foreground">£55</span>
+                    <span className="text-muted-foreground">/month +VAT</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-2">Installation: <span className="line-through text-muted-foreground/40">£1,500</span> <span className="text-primary font-medium">£1,080</span> inc VAT</p>
-                  <p className="text-xs text-status-ok mt-1">Save £420 — offer ends 31 March</p>
+                  <p className="text-sm text-muted-foreground mt-2">Installation: £1,250 +VAT</p>
                 </div>
               </div>
 
