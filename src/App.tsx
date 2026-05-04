@@ -116,6 +116,7 @@ const HomeworkerBroadbandLanding = lazy(() => import("./pages/landing/Homeworker
 const RuralBroadbandLanding = lazy(() => import("./pages/landing/RuralBroadband"));
 const StarlinkSdwanLanding = lazy(() => import("./pages/landing/StarlinkSdwan"));
 const IntegraSDWanLanding = lazy(() => import("./pages/landing/IntegraSDWan"));
+const ConstructionSiteInternetLanding = lazy(() => import("./pages/landing/ConstructionSiteInternet"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const CheckAvailability = lazy(() => import("./pages/CheckAvailability"));
 const CheckingOutYourProperty = lazy(() => import("./pages/CheckingOutYourProperty"));
@@ -161,6 +162,7 @@ const App = () => (
               {/* PPC Landing Pages */}
               <Route path="/lp/business-broadband" element={<BusinessBroadbandLanding />} />
               <Route path="/lp/construction-wifi" element={<ConstructionWifiLanding />} />
+              <Route path="/lp/construction-site-internet" element={<ConstructionSiteInternetLanding />} />
               <Route path="/lp/homeworker-broadband" element={<HomeworkerBroadbandLanding />} />
               <Route path="/lp/rural-broadband" element={<RuralBroadbandLanding />} />
               <Route path="/lp/starlink-sdwan" element={<StarlinkSdwanLanding />} />
