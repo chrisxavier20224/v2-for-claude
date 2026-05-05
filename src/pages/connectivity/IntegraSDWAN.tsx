@@ -7,7 +7,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
-import SchemaMarkup from "@/components/shared/SchemaMarkup";aimport RelatedServices from "@/coaimport { Link } from "react-router-dom";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, ChevronDown, Home, Landmark, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
