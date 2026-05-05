@@ -70,7 +70,7 @@ const mainProducts = [
     ctaLink: "/check",
     popular: true,
     tier: "popular",
-    note: "April offer — save £700 on installation + £25/mo off. Ends 30 April 2026.",
+    note: "May offer — save £700 on installation + £25/mo off. Ends 31 May 2026.",
   },
   {
     name: "Integra Ultrafast",
@@ -195,7 +195,7 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* ── APRIL PROMO BANNER ───────────────────────────────────────── */}
+      {/* ── MAY PROMO BANNER ───────────────────────────────────────── */}
       <section className="bg-primary">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 md:py-5">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
