@@ -1,26 +1,27 @@
+# Integra Networks robots.txt
+# Updated May 2026 — open to all crawlers, blocks tracking-parameter junk URLs
+
 User-agent: *
 Allow: /
 
-# Block AI training crawlers
-User-agent: GPTBot
-Disallow: /
+# Block tracking-parameter URLs (PPC, social, email) so Google doesn't waste
+# crawl budget on duplicate URLs that should canonicalize to the clean version
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
+Disallow: /*?*utm_term=
+Disallow: /*?*utm_content=
+Disallow: /*?*gclid=
+Disallow: /*?*gad_source=
+Disallow: /*?*gad_campaignid=
+Disallow: /*?*fbclid=
+Disallow: /*?*msclkid=
+Disallow: /*?*yclid=
+Disallow: /*?*mc_eid=
+Disallow: /*?*mc_cid=
 
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
+# Block the schema-bug URLs (temporary — also being fixed at source)
+Disallow: /*?s={search_term_string}
+Disallow: /*?s=
 
 Sitemap: https://www.integra-networks.co.uk/sitemap.xml
