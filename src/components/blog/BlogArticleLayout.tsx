@@ -15,7 +15,9 @@ interface BlogArticleLayoutProps {
 
 const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
   const post = blogPosts.find((p) => p.slug === slug);
-  const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const otherPosts = blogPosts
+    .filter((p) => p.slug !== slug && !p.archived)
+    .slice(0, 3);
 
   if (!post) return null;
 
@@ -26,6 +28,7 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
         description={post.excerpt}
         keywords={`${post.category}, connectivity, Integra Networks, blog`}
         url={`/blog/${post.slug}`}
+        noIndex={post.archived}
       />
       <SchemaMarkup
         data={{
@@ -136,7 +139,7 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
             </h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {otherPosts.map((related) => (
+            {otherPosts.filter((p) => !p.archived).map((related) => (
               <Link
                 key={related.slug}
                 to={`/blog/${related.slug}`}
