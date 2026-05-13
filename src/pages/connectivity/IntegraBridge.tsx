@@ -42,7 +42,7 @@ const otherSolutions = [
   {
     title: "Integra SD-WAN",
     description: "Enterprise-grade bonded 4G/5G connectivity — up to 500Mbps without Fibre.",
-    link: "/integra-sd-wan",
+    link: "/connectivity/integra-sd-wan",
   },
   {
     title: "Leased Lines",

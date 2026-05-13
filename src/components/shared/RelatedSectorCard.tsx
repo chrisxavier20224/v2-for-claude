@@ -43,21 +43,21 @@ const sectorMap: Record<string, SectorData> = {
     tagline: "Business-grade broadband for remote teams",
     image: homeworkerHero,
     icon: Home,
-    path: "/sectors/homeworkers",
+    path: "/",
   },
   "airbnbs": {
     name: "Holiday Lets & Glamping",
     tagline: "Guest WiFi that earns five-star reviews",
     image: airbnbHero,
     icon: Tent,
-    path: "/sectors/airbnbs",
+    path: "/",
   },
   "fibre-enabled-buildings": {
     name: "Fibre-Enabled Buildings",
     tagline: "Pre-connected commercial buildings with managed WiFi",
     image: fibreHero,
     icon: Factory,
-    path: "/sectors/fibre-enabled-buildings",
+    path: "/sectors/business-parks",
   },
 };
 

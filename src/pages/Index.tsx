@@ -67,13 +67,13 @@ const connectivityServices = [
     title: "Integra SD-WAN",
     description: "Satellite + cellular, bonded together. 100–350Mbps where fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
     img: sdwanImg,
-    link: "/integra-sd-wan",
+    link: "/connectivity/integra-sd-wan",
   },
   {
     title: "Fibre Enabled Buildings",
     description: "Pre-connected hyperfast internet for new developments. Custom system designs, flexible contracts, and immediate connectivity from day one.",
     img: fibreImg,
-    link: "/sectors/fibre-enabled-buildings",
+    link: "/sectors/business-parks",
   },
   {
     title: "Leased Lines",
@@ -100,15 +100,15 @@ const wifiServices = [
     title: "Home WiFi",
     description: "Whole-home mesh WiFi that reaches every room. No dead spots, no buffering. Designed for remote workers who can't afford dropped calls.",
     img: homeWifiImg,
-    link: "/connectivity/home-wifi",
+    link: "/connectivity/business-wifi",
   },
 ];
 
 const sectors = [
   { title: "Construction", img: constructionImg, link: "/sectors/construction-sites" },
-  { title: "Homeworkers", img: homeworkerImg, link: "/sectors/homeworkers" },
+  { title: "Homeworkers", img: homeworkerImg, link: "/" },
   { title: "Rural SMEs", img: ruralImg, link: "/sectors/rural-smes" },
-  { title: "Airbnbs", img: airbnbImg, link: "/sectors/airbnbs" },
+  { title: "Airbnbs", img: airbnbImg, link: "/" },
   { title: "Business Parks", img: businessParkImg, link: "/sectors/business-parks" },
 ];
 
