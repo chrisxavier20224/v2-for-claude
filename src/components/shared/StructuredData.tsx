@@ -4,8 +4,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Integra Networks",
-  url: "https://integra-networks.co.uk",
-  logo: "https://integra-networks.co.uk/favicon.png",
+  url: "https://www.integra-networks.co.uk",
+  logo: "https://www.integra-networks.co.uk/favicon.png",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+44-203-388-7111",
@@ -25,7 +25,7 @@ const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Integra Networks",
-  url: "https://integra-networks.co.uk",
+  url: "https://www.integra-networks.co.uk",
 };
 
 const StructuredData = () => (
