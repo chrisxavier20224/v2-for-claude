@@ -91,26 +91,13 @@ const ThankYou = () => {
             Thank you for checking your availability. One of our team will review your location and get back to you shortly with a personalised recommendation.
           </motion.p>
 
-          {/* Star rating + trust badges row */}
+          {/* Trust badges row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <a
-              href="https://www.reviews.io/company-reviews/store/integra-networks.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3 hover:bg-white/15 transition-all"
-            >
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-sm font-medium text-white">4.9/5 on Reviews.io</span>
-            </a>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3">
               <Zap className="h-4 w-4 text-primary" />
               <span className="text-sm font-medium text-white">Up to 500Mbps</span>

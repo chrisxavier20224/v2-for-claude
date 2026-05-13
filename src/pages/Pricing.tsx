@@ -13,26 +13,44 @@ import heroImg from "@/assets/connectivity/bridge-hero.webp";
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
-const mainProducts = [
+const mainProducts: any[] = [
   {
-    name: "Integra Home",
-    price: "55",
-    period: "/month",
-    installation: "1,250",
-    description: "Reliable 4G/5G broadband on the best available network — professionally installed",
+    name: "Leased Lines",
+    price: "400",
+    pricePrefix: "From ",
+    period: "/month +VAT",
+    installation: "Quoted",
+    description: "Dedicated fibre, symmetric speeds, SLA-backed",
     features: [
-      "Single-network 4G/5G connectivity",
-      "External antenna + commercial-grade router",
-      "Professional installation included",
-      "UK-based phone & WhatsApp support",
+      "Dedicated fibre connection",
+      "Symmetric speeds up to 1Gbps",
+      "99.9% uptime SLA",
+      "Dedicated engineer support",
     ],
-    cta: "Check Availability",
-    ctaLink: "/check",
+    cta: "Request a quote",
+    ctaLink: "/contact",
     popular: false,
-    bestValue: false,
-    tier: "entry",
+    tier: "lead",
     note: null,
-    productLink: "/connectivity/integra-home",
+  },
+  {
+    name: "Integra Bridge",
+    price: "Bespoke",
+    period: "wholesale pricing",
+    installation: "Bespoke",
+    description: "Enterprise internet in 10 days while you wait for fibre",
+    features: [
+      "Up to 1Gbps bonded Starlink + 5G/4G",
+      "Layer 2 from our data centre",
+      "Static IPs, no CGNAT",
+      "Stays as permanent failover post-fibre",
+    ],
+    cta: "Book a meeting",
+    ctaLink: "/connectivity/integra-bridge",
+    popular: false,
+    tier: "bridge",
+    note: null,
+    custom: true,
   },
   {
     name: "Starlink SD-WAN",
@@ -51,26 +69,6 @@ const mainProducts = [
     popular: false,
     tier: "starter",
     note: null,
-  },
-  {
-    name: "Integra Pro",
-    price: "110",
-    originalPrice: "135",
-    period: "/month",
-    installation: "1,500",
-    originalInstallation: "2,200",
-    description: "Multi-network bonding with up to 350Mbps — our most popular solution for homeworkers and businesses",
-    features: [
-      "Up to 350Mbps multi-network bonding",
-      "Advanced load balancing + failover",
-      "Priority support",
-      "Static IP available (£10/mo)",
-    ],
-    cta: "Check Availability",
-    ctaLink: "/check",
-    popular: true,
-    tier: "popular",
-    note: "May offer — save £700 on installation + £25/mo off. Ends 31 May 2026.",
   },
   {
     name: "Integra Ultrafast",
@@ -151,9 +149,9 @@ const Pricing = () => {
   return (
     <PageLayout>
       <SEO
-        title="Fibre Alternative Pricing"
-        description="Fixed pricing for SD-WAN and Starlink. No hidden fees, 12-month terms, 14-day guarantee. Hardware included."
-        keywords="SD-WAN pricing, Starlink business pricing, fibre alternative pricing, business broadband cost, cellular broadband pricing"
+        title="Business Connectivity Pricing"
+        description="Transparent pricing for leased lines, Integra Bridge, and bonded SD-WAN. Hardware included. SLA-backed. UK-based support."
+        keywords="leased lines pricing, business broadband pricing, SD-WAN pricing, Integra Bridge pricing"
         url="/pricing"
       />
       <SchemaMarkup data={faqSchemaData} />
@@ -173,7 +171,7 @@ const Pricing = () => {
               className="text-xs font-semibold uppercase tracking-widest text-primary mb-4"
             >
 
-              Fibre Alternative Pricing
+              Business Connectivity Pricing
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -181,7 +179,7 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl font-medium"
             >
-              Transparent Pricing. No Hidden Fees.
+              Business Connectivity Pricing
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -192,26 +190,6 @@ const Pricing = () => {
               Hardware included with every install. Fixed pricing, simple 12-month terms, and a 14-day money-back guarantee.
             </motion.p>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ── MAY PROMO BANNER ───────────────────────────────────────── */}
-      <section className="bg-primary">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 md:py-5">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
-            <span className="inline-flex items-center gap-2 bg-white text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-lg">
-              Limited Time
-            </span>
-            <p className="text-white text-sm md:text-base font-medium">
-              <span className="font-bold">Save £700 on install + £25/mo off</span> — Integra Pro <span className="font-bold underline decoration-2">now £110/mo + £1,500 install</span> (was £135/mo + £2,200).
-              Limited installation slots available.
-            </p>
-            <Button asChild size="sm" className="bg-white text-primary hover:bg-white/90 whitespace-nowrap shadow-lg font-bold">
-              <Link to="/check" className="inline-flex items-center gap-1.5 text-xs font-semibold">
-                Check Availability <ArrowRight className="h-3 w-3" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -247,44 +225,24 @@ const Pricing = () => {
                     : "bg-white/[0.03] border-white/10 hover:border-white/20"
                 }`}
               >
-                {product.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                    <span className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-3 py-1 rounded-full text-[10px] font-semibold shadow-lg shadow-primary/30">
-                      <Award className="h-3 w-3" /> Homeworker Favourite
-                    </span>
-                  </div>
-                )}
-                {product.bestValue && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                    <span className="inline-flex items-center gap-1 bg-status-ok text-white px-3 py-1 rounded-full text-[10px] font-semibold shadow-lg shadow-status-ok/30">
-                      Launch Offer
-                    </span>
-                  </div>
-                )}
-
                 <h3 className="text-lg font-medium text-surface-dark-foreground mb-2 mt-2">{product.name}</h3>
                 <p className="text-surface-dark-muted text-sm mb-5 leading-relaxed">{product.description}</p>
 
                 {/* Price block */}
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
-                    {'pricePrefix' in product && (product as any).pricePrefix && <span className="text-sm text-surface-dark-muted">{(product as any).pricePrefix}</span>}
-                    {'originalPrice' in product && (product as any).originalPrice && <span className="text-lg line-through text-surface-dark-muted/50 mr-1">£{(product as any).originalPrice}</span>}
-                    <span className="text-4xl font-medium text-white tracking-tight">£{product.price}</span>
+                    {product.pricePrefix && <span className="text-sm text-surface-dark-muted">{product.pricePrefix}</span>}
+                    {product.custom ? (
+                      <span className="text-2xl font-medium text-white tracking-tight">{product.price}</span>
+                    ) : (
+                      <span className="text-4xl font-medium text-white tracking-tight">£{product.price}</span>
+                    )}
                     <span className="text-sm text-surface-dark-muted">{product.period}</span>
                   </div>
-                  <p className="text-xs text-surface-dark-muted mt-1">
-                    +VAT · Installation {product.originalInstallation ? (
-                      <>from <span className="line-through text-surface-dark-muted/40">£{product.originalInstallation}</span> <span className="text-status-ok font-semibold text-sm">£{product.installation}</span></>
-                    ) : (
-                      <>from £{product.installation}</>
-                    )} +VAT
-                  </p>
-                  {product.originalInstallation && (
-                    <div className="mt-2 inline-flex items-center gap-1.5 bg-status-ok/15 border border-status-ok/30 text-status-ok px-2.5 py-1 rounded-lg">
-                      <span className="text-xs font-bold">SAVE £{(parseInt(product.originalInstallation.replace(',','')) - parseInt(product.installation.replace(',',''))).toLocaleString()}</span>
-                      <span className="text-[10px] font-medium opacity-80">on installation</span>
-                    </div>
+                  {!product.custom && product.installation !== "Quoted" && (
+                    <p className="text-xs text-surface-dark-muted mt-1">
+                      +VAT · Installation from £{product.installation} +VAT
+                    </p>
                   )}
                 </div>
 

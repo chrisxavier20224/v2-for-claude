@@ -32,6 +32,7 @@ export interface BlogPost {
   date: string;
   image: string;
   category: string;
+  archived?: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -66,6 +67,7 @@ export const blogPosts: BlogPost[] = [
     date: "09 Dec 2025",
     image: broadbandAvailabilityImg,
     category: "Guides",
+    archived: true,
   },
   {
     slug: "iot-connectivity-agriculture-uk",
@@ -138,6 +140,7 @@ export const blogPosts: BlogPost[] = [
     date: "24 Nov 2024",
     image: extendingWifiImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "internet-and-wi-fi-solutions-for-churches-and-listed-buildings",
@@ -146,6 +149,7 @@ export const blogPosts: BlogPost[] = [
     date: "23 Nov 2024",
     image: churchesImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses",
@@ -170,6 +174,7 @@ export const blogPosts: BlogPost[] = [
     date: "19 Oct 2024",
     image: starlinkInstallersImg,
     category: "Starlink",
+    archived: true,
   },
   {
     slug: "single-mobile-network-connectivity-solutions-a-reliable-option",
@@ -186,6 +191,7 @@ export const blogPosts: BlogPost[] = [
     date: "15 Feb 2023",
     image: starlinkRightImg,
     category: "Starlink",
+    archived: true,
   },
   {
     slug: "bt-openreach-fibre-checker",
@@ -226,6 +232,7 @@ export const blogPosts: BlogPost[] = [
     date: "07 Sep 2022",
     image: broadbandBottleneckImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "preparing-house-for-sale-internet-speed",
@@ -234,6 +241,7 @@ export const blogPosts: BlogPost[] = [
     date: "02 Dec 2022",
     image: houseSaleImg,
     category: "Guides",
+    archived: true,
   },
   {
     slug: "diy-guide-internet-speed-tests",
@@ -242,6 +250,7 @@ export const blogPosts: BlogPost[] = [
     date: "19 Jan 2023",
     image: speedTestImg,
     category: "Guides",
+    archived: true,
   },
   {
     slug: "why-is-my-bt-internet-so-slow",
@@ -250,5 +259,6 @@ export const blogPosts: BlogPost[] = [
     date: "15 Mar 2022",
     image: slowInternetImg,
     category: "Guides",
+    archived: true,
   },
 ];

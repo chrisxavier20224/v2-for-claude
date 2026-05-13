@@ -85,7 +85,7 @@ const features = [
 
 
 const pricingTiers = [
-  { name: "Integra Home", speed: "Speeds vary by location", price: "55", staticIp: "Static IP £10/month", install: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/connectivity/integra-home" },
+  { name: "Integra Home", speed: "Speeds vary by location", price: "55", staticIp: "Static IP £10/month", install: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/" },
   { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
   { name: "Integra Pro", speed: "Up to 350Mbps", price: "110", originalPrice: "135", staticIp: "Static IP £10/month", install: "£1,500", originalInstall: "£2,200", features: ["Multi-network bonding", "Priority support"], popular: true },
   { name: "Integra Ultrafast", speed: "Up to 450Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },
@@ -222,26 +222,6 @@ const IntegraSDWAN = () => {
               </motion.div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* May Promo Banner */}
-      <section className="bg-primary">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 md:py-5">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
-            <span className="inline-flex items-center gap-2 bg-white text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-lg">
-              Limited Time
-            </span>
-            <p className="text-white text-sm md:text-base font-medium">
-              <span className="font-bold">Save £700 on install + £25/mo off</span> — Integra Pro <span className="font-bold underline decoration-2">now £110/mo + £1,500 install</span> (was £135/mo + £2,200).
-              Limited installation slots available.
-            </p>
-            <Button asChild size="sm" className="bg-white text-primary hover:bg-white/90 whitespace-nowrap shadow-lg font-bold">
-              <Link to="/check" className="inline-flex items-center gap-1.5 text-xs font-semibold">
-                Check Availability <ArrowRight className="h-3 w-3" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 

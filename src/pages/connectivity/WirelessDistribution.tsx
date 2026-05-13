@@ -400,7 +400,7 @@ const WirelessDistribution = () => {
               ))}
             </ul>
             <Button asChild>
-              <Link to="/integra-sd-wan">Learn about Integra SD-WAN <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/connectivity/integra-sd-wan">Learn about Integra SD-WAN <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
