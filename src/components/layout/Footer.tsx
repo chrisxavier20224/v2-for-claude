@@ -5,7 +5,6 @@ import integraLogo from "@/assets/integra-logo-white.png";
 
 
 const fibreAlternativeLinks = [
-  { label: "Integra Home", path: "/connectivity/integra-home" },
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
   { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation" },
@@ -23,7 +22,6 @@ const standardConnectivityLinks = [
 
 const solutionsLinks = [
   { label: "Business WiFi", path: "/connectivity/business-wifi" },
-  { label: "Home WiFi", path: "/connectivity/home-wifi" },
   { label: "Unified Communications", path: "/connectivity/unified-communications" },
   { label: "Managed Firewall", path: "/connectivity/managed-firewall" },
   { label: "Business Continuity", path: "/connectivity/business-continuity" },
@@ -36,6 +34,7 @@ const infrastructureLinks = [
 ];
 
 const companyLinks = [
+  { label: "About", path: "/about" },
   { label: "Customer Stories", path: "/customers" },
   { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },

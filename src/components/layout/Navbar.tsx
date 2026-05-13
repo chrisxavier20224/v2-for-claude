@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, HardHat, Home, Building2, FileText, Hammer, Store, Trees, BedDouble, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, Network, Tractor, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
 // Fibre alternatives — solutions when you can't get fibre
 const fibreAlternativeLinks = [
-  { label: "Integra Home", path: "/connectivity/integra-home", icon: Wifi, tagline: "Home Broadband from £66/mo" },
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
   { label: "Starlink SD-WAN", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Satellite + 4G/5G Bonded" },
@@ -26,7 +25,6 @@ const standardConnectivityLinks = [
 // Infrastructure & on-site services
 const infrastructureLinks = [
   { label: "Business WiFi", path: "/connectivity/business-wifi", icon: Wifi, tagline: "Enterprise Mesh Networks" },
-  { label: "Home WiFi", path: "/connectivity/home-wifi", icon: Home, tagline: "Whole-Home Coverage" },
   { label: "CCTV", path: "/connectivity/cctv", icon: Camera, tagline: "Professional Camera Systems" },
   { label: "Wireless Distribution", path: "/connectivity/wireless-distribution", icon: Radio, tagline: "Multi-Building Links" },
   { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration" },
@@ -40,12 +38,9 @@ const infrastructureLinks = [
 const allConnectivityLinks = [...fibreAlternativeLinks, ...standardConnectivityLinks, ...infrastructureLinks];
 
 const sectorLinks = [
-  { label: "Homeworkers", path: "/sectors/homeworkers", icon: Home, tagline: "Rural Broadband & SD-WAN" },
-  { label: "Fibre Enabled Buildings", path: "/sectors/fibre-enabled-buildings", icon: Building2, tagline: "Full Fibre for Business Parks" },
   { label: "Construction Sites", path: "/sectors/construction-sites", icon: Hammer, tagline: "High-Speed for Construction" },
   { label: "Rural SMEs", path: "/sectors/rural-smes", icon: Store, tagline: "Reliable Internet for Rural Business" },
-  { label: "Business Parks", path: "/sectors/business-parks", icon: Trees, tagline: "Connectivity for Rural Parks" },
-  { label: "Airbnbs", path: "/sectors/airbnbs", icon: BedDouble, tagline: "WiFi for Holiday Rentals" },
+  { label: "Business Parks", path: "/sectors/business-parks", icon: Trees, tagline: "Connectivity for Business Parks" },
 ];
 
 const locationLinks = [
@@ -264,6 +259,17 @@ const Navbar = () => {
               }`}
             >
               Customers
+            </Link>
+            {/* Integra Bridge — standalone link */}
+            <Link
+              to="/connectivity/integra-bridge"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === "/connectivity/integra-bridge"
+                  ? isDarkNav ? "text-white" : "text-foreground"
+                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Integra Bridge
             </Link>
             {/* Contact — standalone link */}
             <Link
