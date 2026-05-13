@@ -259,6 +259,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/availability-checker" element={<Navigate to="/check" replace />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/about" element={<About />} />
               <Route path="/privacy-cookies" element={<PrivacyAndCookies />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/sla" element={<SLA />} />
