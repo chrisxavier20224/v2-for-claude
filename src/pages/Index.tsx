@@ -153,9 +153,9 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Rural Broadband & Business Connectivity — Integra Networks"
-        description="Fast rural broadband, SD-WAN, Starlink, leased lines and WiFi. 100+ UK sites connected in 14 days."
-        keywords="rural broadband, SD-WAN, Starlink SD-WAN, business connectivity, leased lines, construction WiFi, 4G/5G bonding, rural internet UK"
+        title="Business Connectivity & Internet Bridge — Integra Networks"
+        description="B2B internet provider for multi-site businesses. Leased lines, SoGEA, and Integra Bridge — get online in 10 days while you wait for fibre. UK engineers. SLA-backed."
+        keywords="business internet, leased lines UK, Integra Bridge, business broadband, multi-site connectivity, SoGEA, SD-WAN"
         url="/"
       />
       <StructuredData />
