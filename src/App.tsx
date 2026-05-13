@@ -285,13 +285,14 @@ const App = () => (
               <Route path="/pricing-and-plans" element={<Navigate to="/pricing" replace />} />
               <Route path="/integra-business" element={<Navigate to="/integra-sd-wan" replace />} />
               <Route path="/next-steps" element={<Navigate to="/checking-out-your-property" replace />} />
-              <Route path="/home-wifi" element={<Navigate to="/connectivity/home-wifi" replace />} />
-              <Route path="/managed-sim-services" element={<Navigate to="/connectivity/managed-sim-services" replace />} />
-              <Route path="/business-wifi" element={<Navigate to="/connectivity/business-wifi" replace />} />
-              <Route path="/leased-lines" element={<Navigate to="/connectivity/leased-lines" replace />} />
+              {/* Short URLs render the actual page so canonicals self-reference. */}
+              <Route path="/home-wifi" element={<HomeWifi />} />
+              <Route path="/managed-sim-services" element={<ManagedSimServices />} />
+              <Route path="/business-wifi" element={<BusinessWifi />} />
+              <Route path="/leased-lines" element={<LeasedLines />} />
               <Route path="/business-mobile-phones" element={<Navigate to="/connectivity/business-mobiles" replace />} />
-              <Route path="/starlink-installation" element={<Navigate to="/connectivity/starlink-installation" replace />} />
-              <Route path="/unified-communications" element={<Navigate to="/connectivity/unified-communications" replace />} />
+              <Route path="/starlink-installation" element={<StarlinkInstallation />} />
+              <Route path="/unified-communications" element={<UnifiedCommunications />} />
               <Route path="/fibre-enabled-buildings" element={<Navigate to="/sectors/fibre-enabled-buildings" replace />} />
               <Route path="/construction-sites" element={<Navigate to="/sectors/construction-sites" replace />} />
               <Route path="/business-parks" element={<Navigate to="/sectors/business-parks" replace />} />
