@@ -37,6 +37,53 @@
     <meta name="twitter:description" content="Integra Networks delivers fast, reliable internet where fibre can&#39;t reach. SD-WAN, Starlink, leased lines, business WiFi, and managed connectivity — live in 14 days." />
     <meta name="twitter:image" content="https://www.integra-networks.co.uk/og-image.png" />
 
+    <script>
+      (() => {
+        const siteUrl = "https://www.integra-networks.co.uk";
+        const path = window.location.pathname === "/" ? "" : window.location.pathname.replace(/\/$/, "");
+        const canonicalUrl = `${siteUrl}${path}`;
+        const routeMeta = {
+          "/integra-sd-wan": {
+            title: "Integra SD-WAN | Fast Internet Without Fibre | Integra Networks",
+            description: "Tired of waiting for fibre? Enjoy fast internet in under 14 days. With 99% UK Coverage, Integra can transform your connectivity. Stop waiting for Fibre and go live with Integra.",
+          },
+        }[path];
+
+        const upsertLink = (rel, href) => {
+          let tag = document.head.querySelector(`link[rel="${rel}"]`);
+          if (!tag) {
+            tag = document.createElement("link");
+            tag.setAttribute("rel", rel);
+            document.head.appendChild(tag);
+          }
+          tag.setAttribute("href", href);
+        };
+
+        const upsertMeta = (selector, attr, key, content) => {
+          let tag = document.head.querySelector(selector);
+          if (!tag) {
+            tag = document.createElement("meta");
+            tag.setAttribute(attr, key);
+            document.head.appendChild(tag);
+          }
+          tag.setAttribute("content", content);
+        };
+
+        upsertLink("canonical", canonicalUrl);
+        upsertMeta('meta[property="og:url"]', "property", "og:url", canonicalUrl);
+        upsertMeta('meta[name="twitter:url"]', "name", "twitter:url", canonicalUrl);
+
+        if (routeMeta) {
+          document.title = routeMeta.title;
+          upsertMeta('meta[name="description"]', "name", "description", routeMeta.description);
+          upsertMeta('meta[property="og:title"]', "property", "og:title", routeMeta.title);
+          upsertMeta('meta[property="og:description"]', "property", "og:description", routeMeta.description);
+          upsertMeta('meta[name="twitter:title"]', "name", "twitter:title", routeMeta.title);
+          upsertMeta('meta[name="twitter:description"]', "name", "twitter:description", routeMeta.description);
+        }
+      })();
+    </script>
+
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
     {
