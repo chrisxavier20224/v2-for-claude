@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 interface SEOProps {
   title?: string;
@@ -33,7 +34,13 @@ const SEO = ({
       ? title
       : `${title} | Integra Networks`
     : DEFAULT_TITLE;
-  const canonicalUrl = url ? `${SITE_URL}${url}` : SITE_URL;
+  // Always self-canonical: derive from the actual current pathname so that
+  // short URLs (e.g. /business-wifi) self-reference instead of pointing at
+  // a `/connectivity/...` variant via a hardcoded url prop.
+  const location = useLocation();
+  const pathname = location?.pathname || url || "/";
+  const cleanPath = pathname === "/" ? "" : pathname.replace(/\/$/, "");
+  const canonicalUrl = `${SITE_URL}${cleanPath}`;
 
   return (
     <Helmet>
