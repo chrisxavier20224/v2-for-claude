@@ -84,7 +84,7 @@ const sogeaSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Integra Networks",
-    "url": "https://www.integra-networks.co.uk"
+    "url": "https://integra-networks.co.uk"
   },
   "areaServed": {
     "@type": "Country",

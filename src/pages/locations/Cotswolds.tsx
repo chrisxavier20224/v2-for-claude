@@ -82,7 +82,7 @@ const Cotswolds = () => {
             "@type": "LocalBusiness",
             name: "Integra Networks — Cotswolds",
             description: "Premium broadband for affluent Cotswolds properties. Cheltenham, Cirencester, Stow-on-the-Wold. Listed building compatible. Integra Pro and Starlink solutions.",
-            url: "https://www.integra-networks.co.uk/locations/rural-broadband-cotswolds",
+            url: "https://integra-networks.co.uk/locations/rural-broadband-cotswolds",
             areaServed: {
               "@type": "Place",
               name: "Cotswolds",
@@ -90,7 +90,7 @@ const Cotswolds = () => {
             parentOrganization: {
               "@type": "Organization",
               name: "Integra Networks",
-              url: "https://www.integra-networks.co.uk",
+              url: "https://integra-networks.co.uk",
             },
           },
           {

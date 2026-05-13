@@ -82,7 +82,7 @@ const Kent = () => {
             "@type": "LocalBusiness",
             name: "Integra Networks — Kent",
             description: "Broadband for Kent farms, agricultural businesses, and rural properties. Ashford, Maidstone, Canterbury, Sevenoaks. Integra Pro and Starlink solutions with uptime guarantees.",
-            url: "https://www.integra-networks.co.uk/locations/rural-broadband-kent",
+            url: "https://integra-networks.co.uk/locations/rural-broadband-kent",
             areaServed: {
               "@type": "Place",
               name: "Kent",
@@ -90,7 +90,7 @@ const Kent = () => {
             parentOrganization: {
               "@type": "Organization",
               name: "Integra Networks",
-              url: "https://www.integra-networks.co.uk",
+              url: "https://integra-networks.co.uk",
             },
           },
           {

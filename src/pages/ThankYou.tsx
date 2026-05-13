@@ -99,7 +99,7 @@ const ThankYou = () => {
             className="flex flex-wrap items-center justify-center gap-4"
           >
             <a
-              href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+              href="https://www.reviews.io/company-reviews/store/integra-networks.co.uk"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3 hover:bg-white/15 transition-all"

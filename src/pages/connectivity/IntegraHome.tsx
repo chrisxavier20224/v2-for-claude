@@ -109,7 +109,7 @@ const homeServiceSchema = {
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
-    url: "https://www.integra-networks.co.uk",
+    url: "https://integra-networks.co.uk",
   },
   description: "Reliable 4G/5G broadband, professionally installed with an external antenna and commercial-grade router. From £55/month.",
   areaServed: {
@@ -117,7 +117,7 @@ const homeServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Broadband Internet Service",
-  url: "https://www.integra-networks.co.uk/connectivity/integra-home",
+  url: "https://integra-networks.co.uk/connectivity/integra-home",
   offers: {
     "@type": "Offer",
     priceCurrency: "GBP",
@@ -135,9 +135,9 @@ const homeBreadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.integra-networks.co.uk" },
-    { "@type": "ListItem", position: 2, name: "Connectivity", item: "https://www.integra-networks.co.uk/connectivity" },
-    { "@type": "ListItem", position: 3, name: "Integra Home", item: "https://www.integra-networks.co.uk/connectivity/integra-home" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://integra-networks.co.uk" },
+    { "@type": "ListItem", position: 2, name: "Connectivity", item: "https://integra-networks.co.uk/connectivity" },
+    { "@type": "ListItem", position: 3, name: "Integra Home", item: "https://integra-networks.co.uk/connectivity/integra-home" },
   ],
 };
 
@@ -170,7 +170,7 @@ const IntegraHome = () => {
                 </span>
               </Link>
               <a
-                href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+                href="https://www.reviews.io/company-reviews/store/integra-networks.co.uk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-white/15 transition-all group"
@@ -423,7 +423,7 @@ const IntegraHome = () => {
               Hundreds of customers now rely on Integra for fast, reliable broadband.
             </p>
             <a
-              href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+              href="https://www.reviews.io/company-reviews/store/integra-networks.co.uk"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium mt-4"
@@ -458,7 +458,7 @@ const IntegraHome = () => {
           <AnimatedSection delay={0.3} className="text-center mt-12">
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <a
-                href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+                href="https://www.reviews.io/company-reviews/store/integra-networks.co.uk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-medium h-12 px-8 text-base rounded-md"

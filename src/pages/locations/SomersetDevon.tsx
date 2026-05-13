@@ -82,7 +82,7 @@ const SomersetDevon = () => {
             "@type": "LocalBusiness",
             name: "Integra Networks — Devon & Somerset",
             description: "Broadband for Devon and Somerset rural properties, farms, holiday cottages. Taunton, Exeter, Barnstaple, Torrington. 100+ installations. Integra Pro and Starlink solutions.",
-            url: "https://www.integra-networks.co.uk/locations/rural-broadband-somerset-devon",
+            url: "https://integra-networks.co.uk/locations/rural-broadband-somerset-devon",
             areaServed: {
               "@type": "Place",
               name: "Devon & Somerset",
@@ -90,7 +90,7 @@ const SomersetDevon = () => {
             parentOrganization: {
               "@type": "Organization",
               name: "Integra Networks",
-              url: "https://www.integra-networks.co.uk",
+              url: "https://integra-networks.co.uk",
             },
           },
           {

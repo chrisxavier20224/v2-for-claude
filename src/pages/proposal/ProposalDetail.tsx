@@ -1029,7 +1029,7 @@ export default function ProposalDetail() {
                       <span className="font-semibold">I have read and agree to the</span>
                       {" "}
                       <a
-                        href="https://www.integra-networks.co.uk/terms/"
+                        href="https://integra-networks.co.uk/terms/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:underline font-semibold"
@@ -1038,7 +1038,7 @@ export default function ProposalDetail() {
                       </a>
                       {" and "}
                       <a
-                        href="https://www.integra-networks.co.uk/sla/"
+                        href="https://integra-networks.co.uk/sla/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:underline font-semibold"

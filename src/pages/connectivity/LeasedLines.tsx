@@ -72,7 +72,7 @@ const leasedLineServiceSchema = {
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
-    url: "https://www.integra-networks.co.uk",
+    url: "https://integra-networks.co.uk",
   },
   description: "Dedicated fibre leased lines with symmetric upload and download speeds up to 10Gbps. Private circuit with 99.995% SLA. From 100Mbps to 10Gbps bespoke pricing.",
   areaServed: {
@@ -80,7 +80,7 @@ const leasedLineServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Dedicated Internet Access",
-  url: "https://www.integra-networks.co.uk/connectivity/leased-lines",
+  url: "https://integra-networks.co.uk/connectivity/leased-lines",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
@@ -98,19 +98,19 @@ const leasedLineBreadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.integra-networks.co.uk",
+      item: "https://integra-networks.co.uk",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Connectivity",
-      item: "https://www.integra-networks.co.uk/connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Leased Lines",
-      item: "https://www.integra-networks.co.uk/connectivity/leased-lines",
+      item: "https://integra-networks.co.uk/connectivity/leased-lines",
     },
   ],
 };

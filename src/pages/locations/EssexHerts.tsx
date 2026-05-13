@@ -82,7 +82,7 @@ const EssexHerts = () => {
             "@type": "LocalBusiness",
             name: "Integra Networks — Essex & Hertfordshire",
             description: "Reliable broadband for Essex, Hertfordshire, and west Suffolk. Integra Pro bonded 4G/5G, Starlink solutions. Strong local customer base. Fast 14-day installation.",
-            url: "https://www.integra-networks.co.uk/locations/rural-broadband-essex-hertfordshire",
+            url: "https://integra-networks.co.uk/locations/rural-broadband-essex-hertfordshire",
             areaServed: {
               "@type": "Place",
               name: "Essex & Hertfordshire",
@@ -90,7 +90,7 @@ const EssexHerts = () => {
             parentOrganization: {
               "@type": "Organization",
               name: "Integra Networks",
-              url: "https://www.integra-networks.co.uk",
+              url: "https://integra-networks.co.uk",
             },
           },
           {

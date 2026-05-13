@@ -34,7 +34,7 @@ const londonLocalBusinessSchema = {
   },
   telephone: "+44-330-043-4904",
   email: "sales@integra-networks.co.uk",
-  url: "https://www.integra-networks.co.uk",
+  url: "https://integra-networks.co.uk",
 };
 
 const relatedServices = [

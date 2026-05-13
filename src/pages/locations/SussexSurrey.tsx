@@ -82,7 +82,7 @@ const SussexSurrey = () => {
             "@type": "LocalBusiness",
             name: "Integra Networks — Sussex & Surrey",
             description: "Premium broadband for affluent rural Sussex and Surrey. Crawley, Horsham, Guildford, Chichester. Integra Pro and Starlink solutions. Listed building compatible.",
-            url: "https://www.integra-networks.co.uk/locations/rural-broadband-sussex-surrey",
+            url: "https://integra-networks.co.uk/locations/rural-broadband-sussex-surrey",
             areaServed: {
               "@type": "Place",
               name: "Sussex & Surrey",
@@ -90,7 +90,7 @@ const SussexSurrey = () => {
             parentOrganization: {
               "@type": "Organization",
               name: "Integra Networks",
-              url: "https://www.integra-networks.co.uk",
+              url: "https://integra-networks.co.uk",
             },
           },
           {

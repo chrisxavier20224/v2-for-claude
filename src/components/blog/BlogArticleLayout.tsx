@@ -33,26 +33,26 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
           "@type": "BlogPosting",
           headline: post.title,
           description: post.excerpt,
-          image: `https://www.integra-networks.co.uk${post.image}`,
+          image: `https://integra-networks.co.uk${post.image}`,
           datePublished: new Date(post.date.replace(/(\d{2}) (\w{3}) (\d{4})/, "$1 $2 $3")).toISOString(),
           dateModified: new Date(post.date.replace(/(\d{2}) (\w{3}) (\d{4})/, "$1 $2 $3")).toISOString(),
           author: {
             "@type": "Organization",
             name: "Integra Networks",
-            url: "https://www.integra-networks.co.uk",
+            url: "https://integra-networks.co.uk",
           },
           publisher: {
             "@type": "Organization",
             name: "Integra Networks",
-            url: "https://www.integra-networks.co.uk",
+            url: "https://integra-networks.co.uk",
             logo: {
               "@type": "ImageObject",
-              url: "https://www.integra-networks.co.uk/integra-logo.svg",
+              url: "https://integra-networks.co.uk/integra-logo.svg",
             },
           },
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": `https://www.integra-networks.co.uk/blog/${post.slug}`,
+            "@id": `https://integra-networks.co.uk/blog/${post.slug}`,
           },
           articleSection: post.category,
         }}

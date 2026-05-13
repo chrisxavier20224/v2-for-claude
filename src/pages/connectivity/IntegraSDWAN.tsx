@@ -132,7 +132,7 @@ const sdwanServiceSchema = {
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
-    url: "https://www.integra-networks.co.uk",
+    url: "https://integra-networks.co.uk",
   },
   description: "Bonded 4G/5G connectivity delivering fibre-like speeds up to 500Mbps without requiring fixed fibre infrastructure. Installed in under 14 days with 99.5% uptime SLA.",
   areaServed: {
@@ -140,7 +140,7 @@ const sdwanServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Managed Network Connectivity",
-  url: "https://www.integra-networks.co.uk/connectivity/integra-sd-wan",
+  url: "https://integra-networks.co.uk/connectivity/integra-sd-wan",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
@@ -158,19 +158,19 @@ const sdwanBreadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.integra-networks.co.uk",
+      item: "https://integra-networks.co.uk",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Connectivity",
-      item: "https://www.integra-networks.co.uk/connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Integra SD-WAN",
-      item: "https://www.integra-networks.co.uk/connectivity/integra-sd-wan",
+      item: "https://integra-networks.co.uk/connectivity/integra-sd-wan",
     },
   ],
 };

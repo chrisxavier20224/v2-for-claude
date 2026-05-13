@@ -51,7 +51,7 @@ const TermsOfWebsiteUse = () => {
           </a><br />
           <strong>Phone:</strong> 0203 388 7111<br />
           <strong>Website:</strong>{" "}
-          <a href="https://www.integra-networks.co.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          <a href="https://integra-networks.co.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             integra-networks.co.uk
           </a>
         </p>
