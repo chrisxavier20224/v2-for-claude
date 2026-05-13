@@ -335,6 +335,14 @@ const App = () => (
               <Route path="/internet-connectivity/eofttc-affordable-business-connectivity" element={<Navigate to="/blog" replace />} />
               <Route path="/internet-connectivity/*" element={<Navigate to="/blog" replace />} />
 
+              {/* Slug fix redirects for legacy/incorrect internal links */}
+              <Route path="/connectivity/integra-sdwan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />
+              <Route path="/connectivity/4g-5g-backup" element={<Navigate to="/connectivity/cellular-backup" replace />} />
+              <Route path="/customers/royal-harwich-yacht-club" element={<Navigate to="/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey" replace />} />
+              <Route path="/customers/thinking-anglers" element={<Navigate to="/customers/casting-the-net-wide-a-connectivity-transformation" replace />} />
+              <Route path="/customers/uk-harvest" element={<Navigate to="/customers/fast-track-connectivity-ukharvests-digital-transformation" replace />} />
+              <Route path="/customers/wsra-steam-rally" element={<Navigate to="/customers/steaming-ahead-with-enhanced-festival-connectivity" replace />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
