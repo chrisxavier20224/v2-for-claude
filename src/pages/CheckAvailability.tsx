@@ -871,17 +871,6 @@ const CheckAvailability = () => {
                   Check My Availability <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
 
-                {/* Social proof nudge */}
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="mt-5 text-center">
-                  <div className="flex items-center justify-center gap-1.5 mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    Rated <span className="font-semibold text-foreground">4.9/5</span> on Reviews.io
-                  </p>
-                </motion.div>
               </motion.div>
             )}
 
