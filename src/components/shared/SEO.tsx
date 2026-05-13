@@ -66,9 +66,7 @@ const SEO = ({
       : `${title} | Integra Networks`
     : DEFAULT_TITLE;
   const location = useLocation();
-  const locationPath = normalisePath(location?.pathname);
-  const urlPath = normalisePath(url);
-  const cleanPath = locationPath || urlPath;
+  const cleanPath = normalisePath(url || location?.pathname);
   const canonicalUrl = `${SITE_URL}${cleanPath}`;
 
   useEffect(() => {
