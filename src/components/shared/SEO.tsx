@@ -115,7 +115,7 @@ const SEO = ({
       )}
 
       {/* Additional SEO */}
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="robots" content={noIndex ? "noindex, follow" : "index, follow"} />
       <meta name="author" content={author || "Integra Networks"} />
     </Helmet>
   );
