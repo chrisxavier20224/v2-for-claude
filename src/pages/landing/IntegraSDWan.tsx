@@ -161,7 +161,7 @@ const IntegraSDWan = () => {
                   Integra SD-WAN
                 </span>
                 <a
-                  href="https://www.reviews.io/company-reviews/store/www.integra-networks.co.uk"
+                  href="https://www.reviews.io/company-reviews/store/integra-networks.co.uk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-white/15 transition-all group"

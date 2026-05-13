@@ -24,4 +24,4 @@ Disallow: /*?*mc_cid=
 Disallow: /*?s={search_term_string}
 Disallow: /*?s=
 
-Sitemap: https://www.integra-networks.co.uk/sitemap.xml
+Sitemap: https://integra-networks.co.uk/sitemap.xml

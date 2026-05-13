@@ -82,7 +82,7 @@ const Yorkshire = () => {
             "@type": "LocalBusiness",
             name: "Integra Networks — Yorkshire",
             description: "Broadband for Yorkshire farms, manufacturing, and rural businesses. Sheffield, Leeds, Harrogate, Skipton. Integra Pro with uptime guarantees. 14-day installation.",
-            url: "https://www.integra-networks.co.uk/locations/rural-broadband-yorkshire",
+            url: "https://integra-networks.co.uk/locations/rural-broadband-yorkshire",
             areaServed: {
               "@type": "Place",
               name: "Yorkshire",
@@ -90,7 +90,7 @@ const Yorkshire = () => {
             parentOrganization: {
               "@type": "Organization",
               name: "Integra Networks",
-              url: "https://www.integra-networks.co.uk",
+              url: "https://integra-networks.co.uk",
             },
           },
           {

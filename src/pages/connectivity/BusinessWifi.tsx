@@ -46,7 +46,7 @@ const businessWifiServiceSchema = {
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
-    url: "https://www.integra-networks.co.uk",
+    url: "https://integra-networks.co.uk",
   },
   description: "Professional WiFi network design and installation for offices, warehouses and multi-building sites. Enterprise-grade wireless networks monitored 24/7 via Integra Cloud.",
   areaServed: {
@@ -54,7 +54,7 @@ const businessWifiServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Managed WiFi Service",
-  url: "https://www.integra-networks.co.uk/connectivity/business-wifi",
+  url: "https://integra-networks.co.uk/connectivity/business-wifi",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
@@ -70,19 +70,19 @@ const businessWifiBreadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.integra-networks.co.uk",
+      item: "https://integra-networks.co.uk",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Connectivity",
-      item: "https://www.integra-networks.co.uk/connectivity",
+      item: "https://integra-networks.co.uk/connectivity",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Business WiFi",
-      item: "https://www.integra-networks.co.uk/connectivity/business-wifi",
+      item: "https://integra-networks.co.uk/connectivity/business-wifi",
     },
   ],
 };

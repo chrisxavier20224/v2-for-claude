@@ -16,8 +16,8 @@ interface SEOProps {
 
 const DEFAULT_TITLE = "Integra Networks | Business-Grade Connectivity";
 const DEFAULT_DESCRIPTION = "Managed connectivity and SD-WAN solutions for businesses across the UK. 4G/5G bonding, Starlink, WiFi, and leased lines — installed in under 14 days.";
-const DEFAULT_IMAGE = "https://www.integra-networks.co.uk/og-image.png";
-const SITE_URL = "https://www.integra-networks.co.uk";
+const DEFAULT_IMAGE = "https://integra-networks.co.uk/og-image.png";
+const SITE_URL = "https://integra-networks.co.uk";
 
 const normalisePath = (path?: string) => {
   if (!path || path === "/") return "";

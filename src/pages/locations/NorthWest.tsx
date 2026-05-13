@@ -82,7 +82,7 @@ const NorthWest = () => {
             "@type": "LocalBusiness",
             name: "Integra Networks — North West",
             description: "Fast, reliable broadband for Lancashire, Greater Manchester, Cheshire, Merseyside, and Cumbria. Integra Pro bonded 4G/5G and Starlink solutions. 14-day installation.",
-            url: "https://www.integra-networks.co.uk/locations/rural-broadband-north-west",
+            url: "https://integra-networks.co.uk/locations/rural-broadband-north-west",
             areaServed: {
               "@type": "Place",
               name: "North West",
@@ -90,7 +90,7 @@ const NorthWest = () => {
             parentOrganization: {
               "@type": "Organization",
               name: "Integra Networks",
-              url: "https://www.integra-networks.co.uk",
+              url: "https://integra-networks.co.uk",
             },
           },
           {
