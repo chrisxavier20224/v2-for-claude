@@ -114,7 +114,7 @@ const relatedServices = [
   {
     name: "4G/5G Backup",
     description: "Secondary connectivity for business continuity.",
-    url: "/connectivity/4g-5g-backup",
+    url: "/connectivity/cellular-backup",
   },
   {
     name: "Pricing",

@@ -140,7 +140,7 @@ const sdwanServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Managed Network Connectivity",
-  url: "https://www.integra-networks.co.uk/connectivity/integra-sdwan",
+  url: "https://www.integra-networks.co.uk/connectivity/integra-sd-wan",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
@@ -170,7 +170,7 @@ const sdwanBreadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Integra SD-WAN",
-      item: "https://www.integra-networks.co.uk/connectivity/integra-sdwan",
+      item: "https://www.integra-networks.co.uk/connectivity/integra-sd-wan",
     },
   ],
 };
@@ -184,7 +184,7 @@ const IntegraSDWAN = () => {
         title="Integra SD-WAN"
         description="Fast internet without fibre. Bonded 4G/5G, 14-day install, 99.5% SLA, from £80/month."
         keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to fibre, business connectivity, fast broadband"
-        url="/connectivity/integra-sdwan"
+        url="/connectivity/integra-sd-wan"
       />
       <SchemaMarkup data={sdwanServiceSchema} />
       <SchemaMarkup data={sdwanBreadcrumbSchema} />

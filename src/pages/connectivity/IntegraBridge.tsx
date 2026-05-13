@@ -60,7 +60,7 @@ const relatedServices = [
   {
     title: "Integra SD-WAN",
     description: "Enterprise 4G/5G bonding without Starlink component.",
-    href: "/connectivity/integra-sdwan",
+    href: "/connectivity/integra-sd-wan",
     icon: Network,
   },
   {

@@ -29,7 +29,7 @@ const relatedServices = [
     icon: Radio,
     title: "4G/5G Backup",
     description: "Automatic failover connectivity when primary is unavailable",
-    href: "/connectivity/4g-5g-backup",
+    href: "/connectivity/cellular-backup",
   },
   {
     icon: Users,

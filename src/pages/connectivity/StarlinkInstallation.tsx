@@ -26,7 +26,7 @@ const relatedServices = [
   {
     title: "Integra SD-WAN",
     description: "Bonded 4G/5G as an alternative to Starlink for consistent speeds and reliability.",
-    href: "/connectivity/integra-sdwan",
+    href: "/connectivity/integra-sd-wan",
     icon: Network,
   },
   {

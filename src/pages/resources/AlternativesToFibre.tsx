@@ -212,7 +212,7 @@ const relatedServices = [
   {
     name: "4G/5G Backup",
     description: "Reliable secondary connectivity for when primary connections fail.",
-    url: "/connectivity/4g-5g-backup",
+    url: "/connectivity/cellular-backup",
   },
   {
     name: "Integra Bridge",
