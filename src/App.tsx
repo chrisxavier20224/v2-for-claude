@@ -342,6 +342,7 @@ const App = () => (
               <Route path="/customers/thinking-anglers" element={<Navigate to="/customers/casting-the-net-wide-a-connectivity-transformation" replace />} />
               <Route path="/customers/uk-harvest" element={<Navigate to="/customers/fast-track-connectivity-ukharvests-digital-transformation" replace />} />
               <Route path="/customers/wsra-steam-rally" element={<Navigate to="/customers/steaming-ahead-with-enhanced-festival-connectivity" replace />} />
+              <Route path="/locations" element={<Navigate to="/" replace />} />
 
               <Route path="*" element={<NotFound />} />
             </Routes>
