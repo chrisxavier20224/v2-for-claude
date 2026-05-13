@@ -109,7 +109,7 @@ const homeServiceSchema = {
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
-    url: "https://integra-networks.co.uk",
+    url: "https://www.integra-networks.co.uk",
   },
   description: "Reliable 4G/5G broadband, professionally installed with an external antenna and commercial-grade router. From £55/month.",
   areaServed: {
@@ -117,7 +117,7 @@ const homeServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Broadband Internet Service",
-  url: "https://integra-networks.co.uk/connectivity/integra-home",
+  url: "https://www.integra-networks.co.uk/connectivity/integra-home",
   offers: {
     "@type": "Offer",
     priceCurrency: "GBP",
@@ -135,9 +135,9 @@ const homeBreadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://integra-networks.co.uk" },
-    { "@type": "ListItem", position: 2, name: "Connectivity", item: "https://integra-networks.co.uk/connectivity" },
-    { "@type": "ListItem", position: 3, name: "Integra Home", item: "https://integra-networks.co.uk/connectivity/integra-home" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.integra-networks.co.uk" },
+    { "@type": "ListItem", position: 2, name: "Connectivity", item: "https://www.integra-networks.co.uk/connectivity" },
+    { "@type": "ListItem", position: 3, name: "Integra Home", item: "https://www.integra-networks.co.uk/connectivity/integra-home" },
   ],
 };
 

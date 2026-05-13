@@ -65,7 +65,7 @@ const cctvServiceSchema = {
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
-    url: "https://integra-networks.co.uk",
+    url: "https://www.integra-networks.co.uk",
   },
   description: "Managed CCTV surveillance service for warehouses, ports, construction sites and business parks. Commercial-grade cameras with night vision, PoE network infrastructure, cloud recording and remote access.",
   areaServed: {
@@ -73,7 +73,7 @@ const cctvServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Security Camera Installation",
-  url: "https://integra-networks.co.uk/connectivity/cctv",
+  url: "https://www.integra-networks.co.uk/connectivity/cctv",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
@@ -89,19 +89,19 @@ const cctvBreadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://integra-networks.co.uk",
+      item: "https://www.integra-networks.co.uk",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Connectivity",
-      item: "https://integra-networks.co.uk/connectivity",
+      item: "https://www.integra-networks.co.uk/connectivity",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "CCTV as a Service",
-      item: "https://integra-networks.co.uk/connectivity/cctv",
+      item: "https://www.integra-networks.co.uk/connectivity/cctv",
     },
   ],
 };

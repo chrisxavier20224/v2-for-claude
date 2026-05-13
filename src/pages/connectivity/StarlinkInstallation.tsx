@@ -50,7 +50,7 @@ const starlinkServiceSchema = {
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
-    url: "https://integra-networks.co.uk",
+    url: "https://www.integra-networks.co.uk",
   },
   description: "Professional Starlink installation with 4G/5G failover to eliminate rain drops and service interruptions. Static IP support and SD-WAN bonding available.",
   areaServed: {
@@ -58,7 +58,7 @@ const starlinkServiceSchema = {
     name: "United Kingdom",
   },
   serviceType: "Satellite Internet Installation",
-  url: "https://integra-networks.co.uk/connectivity/starlink-installation",
+  url: "https://www.integra-networks.co.uk/connectivity/starlink-installation",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
@@ -75,19 +75,19 @@ const starlinkBreadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://integra-networks.co.uk",
+      item: "https://www.integra-networks.co.uk",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Connectivity",
-      item: "https://integra-networks.co.uk/connectivity",
+      item: "https://www.integra-networks.co.uk/connectivity",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Starlink Installation",
-      item: "https://integra-networks.co.uk/connectivity/starlink-installation",
+      item: "https://www.integra-networks.co.uk/connectivity/starlink-installation",
     },
   ],
 };

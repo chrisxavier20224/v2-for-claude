@@ -452,8 +452,8 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-primary uppercase tracking-widest mb-4 font-medium">Official URLs</p>
             <div className="bg-card border border-border/50 rounded-lg divide-y divide-border/50 print:bg-gray-50 print:border-gray-200">
-              <DirectoryItem label="Website" value="https://integra-networks.co.uk" copyable />
-              <DirectoryItem label="Availability Checker" value="https://integra-networks.co.uk/check" copyable />
+              <DirectoryItem label="Website" value="https://www.integra-networks.co.uk" copyable />
+              <DirectoryItem label="Availability Checker" value="https://www.integra-networks.co.uk/check" copyable />
             </div>
           </div>
 

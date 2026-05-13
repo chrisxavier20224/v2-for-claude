@@ -113,7 +113,7 @@ const SomersetDevon = () => {
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 pt-16 pb-20 md:pt-24 md:pb-32">
           <AnimatedSection>
             <Link
-              to="/locations"
+              to="/check"
               className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors mb-8 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-1.5"
             >
               <MapPin className="h-3.5 w-3.5" /> Coverage Areas

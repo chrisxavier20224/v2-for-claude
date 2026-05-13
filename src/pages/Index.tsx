@@ -127,8 +127,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Integra Networks",
-  url: "https://integra-networks.co.uk",
-  logo: "https://integra-networks.co.uk/lovable-uploads/integra-logo.png",
+  url: "https://www.integra-networks.co.uk",
+  logo: "https://www.integra-networks.co.uk/lovable-uploads/integra-logo.png",
   description: "UK business connectivity provider specialising in SD-WAN, leased lines, and managed network solutions",
   address: {
     "@type": "PostalAddress",
