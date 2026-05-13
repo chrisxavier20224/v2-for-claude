@@ -39,7 +39,7 @@ const relatedServices = [
     title: "4G/5G Backup",
     description: "Redundant cellular backup ensures uninterrupted connectivity.",
     icon: Signal,
-    href: "/connectivity/4g-5g-backup",
+    href: "/connectivity/cellular-backup",
   },
 ];
 

@@ -15,12 +15,12 @@ const customers = [
   { name: "McGee Group", link: "/customers/mcgee-construction", logo: mcgeeLogo },
   { name: "Seacon Group", link: "/customers/seacon-group", logo: seaconLogo },
   { name: "WB Power Services", link: "/customers/wb-power-services", logo: wbPowerLogo },
-  { name: "UK Harvest", link: "/customers/uk-harvest", logo: ukHarvestLogo },
+  { name: "UK Harvest", link: "/customers/fast-track-connectivity-ukharvests-digital-transformation", logo: ukHarvestLogo },
   { name: "Royle Farm", link: "/customers/royle-farm", logo: royleFarmLogo },
-  { name: "Royal Harwich YC", link: "/customers/royal-harwich-yacht-club", logo: rhycLogo },
-  { name: "Thinking Anglers", link: "/customers/thinking-anglers", logo: thinkingAnglersLogo },
+  { name: "Royal Harwich YC", link: "/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey", logo: rhycLogo },
+  { name: "Thinking Anglers", link: "/customers/casting-the-net-wide-a-connectivity-transformation", logo: thinkingAnglersLogo },
   { name: "Little Quarry Glamping", link: "/customers/little-quarry-glamping", logo: littleQuarryLogo },
-  { name: "WSRA Steam Rally", link: "/customers/wsra-steam-rally", logo: wsraLogo },
+  { name: "WSRA Steam Rally", link: "/customers/steaming-ahead-with-enhanced-festival-connectivity", logo: wsraLogo },
   { name: "Carbee", link: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet", logo: carbeeLogo },
 ];
 

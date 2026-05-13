@@ -72,7 +72,7 @@ const relatedServices = [
     icon: Zap,
     title: "4G/5G Backup",
     description: "Cellular failover if your SoGEA line drops.",
-    href: "/connectivity/4g-5g-backup",
+    href: "/connectivity/cellular-backup",
   },
 ];
 

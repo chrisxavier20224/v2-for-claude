@@ -148,7 +148,7 @@ const relatedServices = [
   {
     name: "4G/5G Backup",
     description: "Reliable secondary connection for critical operations.",
-    url: "/connectivity/4g-5g-backup",
+    url: "/connectivity/cellular-backup",
   },
 ];
 
