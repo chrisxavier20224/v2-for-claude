@@ -16,6 +16,7 @@ interface RelatedServicesProps {
   services: RelatedService[];
   heading?: string;
   subheading?: string;
+  dark?: boolean;
 }
 
 const staggerContainer = {
@@ -36,9 +37,10 @@ const RelatedServices = ({
   services,
   heading = "Related Services",
   subheading,
+  dark = true,
 }: RelatedServicesProps) => {
   return (
-    <section className="py-16 md:py-24 bg-surface-dark">
+    <section className={`py-16 md:py-24 ${dark ? "bg-surface-dark" : "bg-background"}`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -50,11 +52,11 @@ const RelatedServices = ({
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
             {heading}
           </p>
-          <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-4 max-w-3xl font-medium">
+          <h2 className={`text-heading-1 md:text-display-sm mb-4 max-w-3xl font-medium ${dark ? "text-surface-dark-foreground" : "text-foreground"}`}>
             Explore what else we can do for you.
           </h2>
           {subheading && (
-            <p className="text-lg text-surface-dark-muted max-w-2xl">
+            <p className={`text-lg max-w-2xl ${dark ? "text-surface-dark-muted" : "text-muted-foreground"}`}>
               {subheading}
             </p>
           )}
@@ -79,7 +81,7 @@ const RelatedServices = ({
                 transition={{ duration: 0.3 }}
               >
                 <Link to={link} className="group block h-full">
-                  <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-white/20 hover:bg-white/[0.05] transition-all duration-300 p-6 sm:p-8 flex flex-col">
+                  <div className={`h-full rounded-2xl border backdrop-blur-sm transition-all duration-300 p-6 sm:p-8 flex flex-col ${dark ? "border-white/10 bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.05]" : "border-border bg-card hover:border-primary/30 hover:bg-muted"}`}>
                     {/* Icon */}
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5 flex-shrink-0">
                       <Icon className="h-6 w-6" strokeWidth={1.5} />
@@ -94,16 +96,16 @@ const RelatedServices = ({
 
                     {/* Title & Description */}
                     <div className="flex-grow">
-                      <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">
+                      <h3 className={`text-lg font-medium mb-3 ${dark ? "text-surface-dark-foreground" : "text-foreground"}`}>
                         {label}
                       </h3>
-                      <p className="text-sm text-surface-dark-muted leading-relaxed">
+                      <p className={`text-sm leading-relaxed ${dark ? "text-surface-dark-muted" : "text-muted-foreground"}`}>
                         {service.description}
                       </p>
                     </div>
 
                     {/* Arrow */}
-                    <div className="flex items-center justify-between mt-6 pt-6 border-t border-white/10">
+                    <div className={`flex items-center justify-between mt-6 pt-6 border-t ${dark ? "border-white/10" : "border-border"}`}>
                       <span className="text-xs font-semibold uppercase tracking-widest text-primary">
                         Learn More
                       </span>
