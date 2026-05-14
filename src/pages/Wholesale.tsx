@@ -21,7 +21,7 @@ const handles = [
 const steps = [
   { icon: Handshake, title: "Talk to us", body: "A short conversation about your customer base and where the gaps are. No commitment." },
   { icon: UserCheck, title: "Get onboarded", body: "We set you up as a wholesale partner with pricing, process, and a named contact." },
-  { icon: Send, title: "Register deals", body: "Once you're a partner, you get the Integra partner portal: submit an opportunity in under two minutes and we take it from there." },
+  { icon: Send, title: "Register deals", body: "From then on, every problem site is a two-minute submission in the partner portal. We handle the rest — survey, install, and support." },
 ];
 
 const Wholesale = () => {
