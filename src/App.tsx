@@ -76,7 +76,6 @@ const LocationSomersetDevon = lazy(() => import("./pages/locations/SomersetDevon
 const LocationYorkshire = lazy(() => import("./pages/locations/Yorkshire"));
 const LocationLondon = lazy(() => import("./pages/locations/London"));
 const LocationCotswolds = lazy(() => import("./pages/locations/Cotswolds"));
-const Resources = lazy(() => import("./pages/resources/Resources"));
 const About = lazy(() => import("./pages/About"));
 const AccessBroadbandCymru = lazy(() => import("./pages/resources/AccessBroadbandCymru"));
 const PSTNSwitchOff = lazy(() => import("./pages/resources/PSTNSwitchOff"));
