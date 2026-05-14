@@ -80,6 +80,20 @@ const Wholesale = () => {
         </div>
       </section>
 
+      {/* REFRAME — light */}
+      <section className="bg-section-light-bg py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6 max-w-3xl">
+              It's not your whole business. <span className="text-primary">It's the sites fibre can't reach.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              Most of your portfolio is fine. But across fifty sites there are always a few — the ones where fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra isn't a change to your business. It's having an answer for those sites, so you never have to say no.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* THE PROPOSITION — light */}
       <section className="bg-section-light-bg py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
