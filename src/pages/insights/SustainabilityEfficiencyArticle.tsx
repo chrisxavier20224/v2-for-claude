@@ -19,7 +19,7 @@ const SustainabilityEfficiencyArticle = () => {
           
           {/* Back link */}
           <Link
-            to="/blog"
+            to="/insights"
             className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors mb-10 print:hidden"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />

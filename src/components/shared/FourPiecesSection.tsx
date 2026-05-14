@@ -202,7 +202,7 @@ const FourPiecesSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="absolute right-0 top-0 w-[280px] text-right"
           >
-            <Link to="/resources" className="group block border-t-2 border-border hover:border-primary pt-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
+            <Link to="/insights" className="group block border-t-2 border-border hover:border-primary pt-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
               <motion.div 
                 className="relative"
                 animate={hasPulsed ? { 
@@ -382,7 +382,7 @@ const FourPiecesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Link to="/resources" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
+          <Link to="/insights" className="group block border-l-2 border-border hover:border-primary pl-6 py-4 transition-colors" onMouseEnter={() => setHoveredSection('after')} onMouseLeave={() => setHoveredSection(null)}>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary/80 group-hover:text-primary mb-2 transition-colors">After</div>
             <h3 className="text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Insight</h3>
             <p className="text-sm text-muted-foreground leading-relaxed font-medium mb-1">Turn operational history into structured intelligence.</p>

@@ -37,14 +37,14 @@ const companyLinks = [
   { label: "About", path: "/about" },
   { label: "Customer Stories", path: "/customers" },
   { label: "Wholesale", path: "/wholesale" },
-  { label: "Blog", path: "/blog" },
+  { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" },
   { label: "Support", path: "/support" },
 ];
 
 const resourceLinks = [
   { label: "Availability Checker", path: "/check" },
-  { label: "Resources", path: "/resources" },
+  { label: "Insights", path: "/insights" },
 ];
 
 

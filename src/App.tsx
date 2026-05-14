@@ -39,7 +39,8 @@ const SeaconGroup = lazy(() => import("./pages/customers/SeaconGroup"));
 const AvailabilityChecker = lazy(() => import("./pages/AvailabilityChecker"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Customers = lazy(() => import("./pages/Customers"));
-const Blog = lazy(() => import("./pages/Blog"));
+const Insights = lazy(() => import("./pages/Insights"));
+const InsightArticle = lazy(() => import("./pages/insights/InsightArticle"));
 const ExtendingWifiOutbuildings = lazy(() => import("./pages/blog/ExtendingWifiOutbuildings"));
 const ChurchesListedBuildings = lazy(() => import("./pages/blog/ChurchesListedBuildings"));
 const RuralBusinessesSdwan = lazy(() => import("./pages/blog/RuralBusinessesSdwan"));
@@ -75,7 +76,6 @@ const LocationSomersetDevon = lazy(() => import("./pages/locations/SomersetDevon
 const LocationYorkshire = lazy(() => import("./pages/locations/Yorkshire"));
 const LocationLondon = lazy(() => import("./pages/locations/London"));
 const LocationCotswolds = lazy(() => import("./pages/locations/Cotswolds"));
-const Resources = lazy(() => import("./pages/resources/Resources"));
 const About = lazy(() => import("./pages/About"));
 const AccessBroadbandCymru = lazy(() => import("./pages/resources/AccessBroadbandCymru"));
 const PSTNSwitchOff = lazy(() => import("./pages/resources/PSTNSwitchOff"));
@@ -178,7 +178,8 @@ const App = () => (
               <Route path="/customers/seacon-group" element={<SeaconGroup />} />
               
               
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog" element={<Navigate to="/insights" replace />} />
+              <Route path="/blog/index" element={<Navigate to="/insights" replace />} />
               <Route path="/blog/extending-wi-fi-and-internet-to-outbuildings" element={<ExtendingWifiOutbuildings />} />
               <Route path="/blog/internet-and-wi-fi-solutions-for-churches-and-listed-buildings" element={<ChurchesListedBuildings />} />
               <Route path="/blog/managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses" element={<RuralBusinessesSdwan />} />
@@ -249,7 +250,15 @@ const App = () => (
               <Route path="/integra-bridge" element={<Navigate to="/connectivity/integra-bridge" replace />} />
               <Route path="/wholesale" element={<Wholesale />} />
 
-              <Route path="/resources" element={<Resources />} />
+              <Route path="/resources" element={<Navigate to="/insights" replace />} />
+
+              {/* Insights hub */}
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/cost-of-the-connectivity-gap" element={<InsightArticle slug="cost-of-the-connectivity-gap" />} />
+              <Route path="/insights/decision-framework" element={<InsightArticle slug="decision-framework" />} />
+              <Route path="/insights/multi-site-estate" element={<InsightArticle slug="multi-site-estate" />} />
+              <Route path="/insights/multi-bearer-connectivity" element={<InsightArticle slug="multi-bearer-connectivity" />} />
+              <Route path="/insights/wholesale-connectivity-model" element={<InsightArticle slug="wholesale-connectivity-model" />} />
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
               <Route path="/pstn-switch-off" element={<PSTNSwitchOff />} />
               <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
@@ -323,9 +332,9 @@ const App = () => (
               <Route path="/royal-farm-signup" element={<Navigate to="/customers/royle-farm" replace />} />
               <Route path="/customers/powering-up-a-connectivity-triumph-in-the-face-of-adversity" element={<Navigate to="/customers" replace />} />
               <Route path="/customers/from-farm-to-fibre-royle-farm-business-parks-digital-renaissance" element={<Navigate to="/customers/royle-farm" replace />} />
-              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity-benefits-speeds-and-providers" element={<Navigate to="/blog" replace />} />
-              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity" element={<Navigate to="/blog" replace />} />
-              <Route path="/internet-connectivity/*" element={<Navigate to="/blog" replace />} />
+              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity-benefits-speeds-and-providers" element={<Navigate to="/insights" replace />} />
+              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity" element={<Navigate to="/insights" replace />} />
+              <Route path="/internet-connectivity/*" element={<Navigate to="/insights" replace />} />
 
               {/* Slug fix redirects for legacy/incorrect internal links */}
               <Route path="/connectivity/integra-sdwan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />

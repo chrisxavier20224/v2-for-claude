@@ -43,6 +43,7 @@ export const blogPosts: BlogPost[] = [
     date: "27 Feb 2026",
     image: broadbandGrantsImg,
     category: "Guides",
+    archived: true,
   },
   {
     slug: "multi-building-wifi-rural-properties",
@@ -51,6 +52,7 @@ export const blogPosts: BlogPost[] = [
     date: "04 Feb 2026",
     image: multiBuildingImg,
     category: "WiFi",
+    archived: true,
   },
   {
     slug: "temporary-broadband-for-events-uk",
@@ -59,6 +61,7 @@ export const blogPosts: BlogPost[] = [
     date: "16 Jan 2026",
     image: tempBroadbandImg,
     category: "Events",
+    archived: true,
   },
   {
     slug: "how-to-check-broadband-availability-rural-areas",
@@ -76,6 +79,7 @@ export const blogPosts: BlogPost[] = [
     date: "22 Nov 2025",
     image: iotAgricultureImg,
     category: "Agriculture",
+    archived: true,
   },
   {
     slug: "satellite-internet-vs-fixed-wireless-pros-and-cons",
@@ -84,6 +88,7 @@ export const blogPosts: BlogPost[] = [
     date: "03 Oct 2025",
     image: satelliteVsFixedImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "portable-wifi-solutions-construction-sites",
@@ -92,6 +97,7 @@ export const blogPosts: BlogPost[] = [
     date: "11 Sep 2025",
     image: portableWifiImg,
     category: "Construction",
+    archived: true,
   },
   {
     slug: "starlink-vs-4g-bonding-honest-comparison",
@@ -100,6 +106,7 @@ export const blogPosts: BlogPost[] = [
     date: "25 Aug 2025",
     image: starlinkVsBondingImg,
     category: "Starlink",
+    archived: true,
   },
   {
     slug: "starlink-upload-speed-why-it-matters-for-business",
@@ -108,6 +115,7 @@ export const blogPosts: BlogPost[] = [
     date: "08 Jul 2025",
     image: starlinkUploadImg,
     category: "Starlink",
+    archived: true,
   },
   {
     slug: "4g-vs-5g-broadband-which-is-better-for-business",
@@ -116,6 +124,7 @@ export const blogPosts: BlogPost[] = [
     date: "19 Jun 2025",
     image: fourGVsFiveGImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "load-balancing-vs-bonding-whats-the-difference",
@@ -124,6 +133,7 @@ export const blogPosts: BlogPost[] = [
     date: "02 May 2025",
     image: loadBalancingImg,
     category: "SD-WAN",
+    archived: true,
   },
   {
     slug: "what-is-cellular-bonding-simple-explanation",
@@ -132,6 +142,7 @@ export const blogPosts: BlogPost[] = [
     date: "14 Apr 2025",
     image: cellularBondingImg,
     category: "SD-WAN",
+    archived: true,
   },
   {
     slug: "extending-wi-fi-and-internet-to-outbuildings",
@@ -158,6 +169,7 @@ export const blogPosts: BlogPost[] = [
     date: "21 Nov 2024",
     image: ruralSdwanImg,
     category: "SD-WAN",
+    archived: true,
   },
   {
     slug: "starlink-sd-wan-a-reliable-solution-for-business-connectivity",
@@ -166,6 +178,7 @@ export const blogPosts: BlogPost[] = [
     date: "12 Nov 2024",
     image: starlinkSdwanImg,
     category: "Starlink",
+    archived: true,
   },
   {
     slug: "starlink-installers-near-me-finding-the-best-solution-for-high-speed-satellite-internet",
@@ -183,6 +196,7 @@ export const blogPosts: BlogPost[] = [
     date: "17 Mar 2023",
     image: singleMobileImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "starlink-is-it-the-right-solution-for-me",
@@ -200,6 +214,7 @@ export const blogPosts: BlogPost[] = [
     date: "14 Jul 2025",
     image: fibreCheckerImg,
     category: "Guides",
+    archived: true,
   },
   {
     slug: "satellite-internet-vs-integra-4g-5g-sdwan",
@@ -208,6 +223,7 @@ export const blogPosts: BlogPost[] = [
     date: "04 Apr 2023",
     image: satelliteOrbitImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "revolutionising-connectivity-in-construction",
@@ -216,6 +232,7 @@ export const blogPosts: BlogPost[] = [
     date: "23 Feb 2023",
     image: constructionNightImg,
     category: "Construction",
+    archived: true,
   },
   {
     slug: "beyond-the-broadband-bottleneck",
@@ -224,6 +241,7 @@ export const blogPosts: BlogPost[] = [
     date: "18 Jul 2022",
     image: broadbandBottleneckImg,
     category: "Connectivity",
+    archived: true,
   },
   {
     slug: "unlock-high-speed-internet-rural-areas",
