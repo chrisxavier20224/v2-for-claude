@@ -27,7 +27,7 @@ const painPoints = [
   },
   {
     question: "Paying thousands for Openreach construction?",
-    answer: "We offer flat-rate installation from £2,200 with no hidden costs. No excess construction charges, no wayleave delays.",
+    answer: "Skip the excess construction charges and wayleave delays entirely — we deliver enterprise connectivity without digging the road up.",
   },
   {
     question: "Can't afford internet outages?",
@@ -76,7 +76,7 @@ const features = [
     icon: Globe,
     eyebrow: "Seamless IP Integration",
     title: "Static IP for CCTV, VPN & More",
-    description: "Static IPs available from £10/month on any tier. Perfect for CCTV, VPN, firewalls, and remote access.",
+    description: "Static IPs available on any tier. Perfect for CCTV, VPN, firewalls, and remote access.",
     img: stableImg,
     imgAlt: "Stable connectivity for CCTV and VPN",
     reverse: false,
@@ -98,7 +98,7 @@ const faqs = [
   { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a desktop survey." },
   { q: "How much data do I get?", a: "With multi-network connections, you're looking at around 1.8TB of data per month — more than enough for a business running video calls, cloud apps, and file sharing all day. There's a fair usage policy, but in practice the vast majority of customers never come close to hitting it." },
   { q: "Can SD-WAN bridge the gap while we wait for fibre?", a: "Yes. Many customers run Integra SD-WAN as interim connectivity during a fibre install, then keep it as permanent failover once fibre is live. See Integra Bridge for our dedicated bridging product." },
-  { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers for £10/month. Essential for CCTV, VPNs, firewalls, and remote access." },
+  { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers. Essential for CCTV, VPNs, firewalls, and remote access — included in your bespoke quote." },
   { q: "Do you provide CCTV services?", a: "We install and support CCTV systems — we don't monitor them. Our CCTV service includes professional installation, cloud remote access via Integra Cloud, and full technical support." },
 ];
 
