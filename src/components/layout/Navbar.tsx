@@ -120,6 +120,50 @@ const Navbar = () => {
               {servicesOpen && (
                 <div className="absolute top-full -left-4 pt-2 w-[680px]">
                   <div className="bg-card border border-border rounded-xl shadow-xl overflow-hidden">
+                    {/* Wholesale featured banner — top */}
+                    <Link
+                      to="/wholesale"
+                      className="group relative block overflow-hidden border-b border-border"
+                    >
+                      <div className="absolute inset-0 bg-[hsl(222_47%_11%)]" />
+                      <div
+                        className="pointer-events-none absolute inset-0 opacity-40"
+                        style={{
+                          background: `
+                            radial-gradient(ellipse 50% 120% at 90% 50%, hsl(216 100% 50% / 0.25) 0%, transparent 60%),
+                            radial-gradient(ellipse 40% 80% at 100% 30%, hsl(210 100% 60% / 0.12) 0%, transparent 55%)
+                          `,
+                        }}
+                      />
+                      <div
+                        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+                        style={{
+                          backgroundImage: `
+                            linear-gradient(60deg, transparent 48.5%, hsl(216 100% 50% / 0.5) 49.5%, hsl(216 100% 50% / 0.5) 50.5%, transparent 51.5%),
+                            linear-gradient(72deg, transparent 48.5%, hsl(210 100% 60% / 0.3) 49.5%, hsl(210 100% 60% / 0.3) 50.5%, transparent 51.5%)
+                          `,
+                          backgroundSize: "200% 200%, 220% 220%",
+                          backgroundPosition: "80% 30%, 75% 25%",
+                        }}
+                      />
+                      <div className="relative flex items-center gap-4 p-4">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/15 text-primary flex-shrink-0 border border-primary/30">
+                          <Handshake className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary bg-primary/15 border border-primary/30 rounded-full px-2 py-0.5">
+                              Partners
+                            </span>
+                            <span className="text-sm font-semibold text-white">Wholesale</span>
+                          </div>
+                          <div className="text-xs text-white/70">
+                            White-label connectivity for ISPs, MSPs and alt-nets.
+                          </div>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-white/70 transition-transform group-hover:translate-x-1" />
+                      </div>
+                    </Link>
                     <div className="grid grid-cols-3">
                       {/* Fibre Alternatives column */}
                       <div className="p-2">
@@ -178,50 +222,6 @@ const Navbar = () => {
                         </div>
                       </div>
                     </div>
-                    {/* Wholesale featured banner */}
-                    <Link
-                      to="/wholesale"
-                      className="group relative block overflow-hidden border-t border-border"
-                    >
-                      <div className="absolute inset-0 bg-[hsl(222_47%_11%)]" />
-                      <div
-                        className="pointer-events-none absolute inset-0 opacity-40"
-                        style={{
-                          background: `
-                            radial-gradient(ellipse 50% 120% at 90% 50%, hsl(216 100% 50% / 0.25) 0%, transparent 60%),
-                            radial-gradient(ellipse 40% 80% at 100% 30%, hsl(210 100% 60% / 0.12) 0%, transparent 55%)
-                          `,
-                        }}
-                      />
-                      <div
-                        className="pointer-events-none absolute inset-0 opacity-[0.08]"
-                        style={{
-                          backgroundImage: `
-                            linear-gradient(60deg, transparent 48.5%, hsl(216 100% 50% / 0.5) 49.5%, hsl(216 100% 50% / 0.5) 50.5%, transparent 51.5%),
-                            linear-gradient(72deg, transparent 48.5%, hsl(210 100% 60% / 0.3) 49.5%, hsl(210 100% 60% / 0.3) 50.5%, transparent 51.5%)
-                          `,
-                          backgroundSize: "200% 200%, 220% 220%",
-                          backgroundPosition: "80% 30%, 75% 25%",
-                        }}
-                      />
-                      <div className="relative flex items-center gap-4 p-4">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/15 text-primary flex-shrink-0 border border-primary/30">
-                          <Handshake className="h-5 w-5" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-0.5">
-                            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary bg-primary/15 border border-primary/30 rounded-full px-2 py-0.5">
-                              Partners
-                            </span>
-                            <span className="text-sm font-semibold text-white">Wholesale</span>
-                          </div>
-                          <div className="text-xs text-white/70">
-                            White-label connectivity for ISPs, MSPs and alt-nets.
-                          </div>
-                        </div>
-                        <ArrowRight className="h-4 w-4 text-white/70 transition-transform group-hover:translate-x-1" />
-                      </div>
-                    </Link>
                   </div>
                 </div>
               )}
