@@ -20,7 +20,7 @@ const painPoints = [
   {
     icon: WifiOff,
     title: "Stacking ADSL Lines That Still Don't Work?",
-    description: "Two or three copper lines bonded together still give you 10Mbps on a good day. We replace them all with a single 350Mbps cellular connection.",
+    description: "Two or three copper lines bonded together still give you 10Mbps on a good day. We replace them all with a single connection delivering up to 500Mbps.",
   },
   {
     icon: PoundSterling,
@@ -29,13 +29,13 @@ const painPoints = [
   },
   {
     icon: Clock,
-    title: "Card Machines Dropping at the Worst Times?",
-    description: "Dual-network redundancy means if one 4G/5G network drops, your traffic instantly moves to the other. Card machines, VoIP, EPOS — they stay online.",
+    title: "Waiting Months for a Leased Line?",
+    description: "Ordered fibre or a leased line and staring down an eight-week-plus install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
   },
 ];
 
 const benefitItems = [
-  "Up to 350Mbps via Cellular SD-WAN",
+  "Up to 500Mbps via Cellular SD-WAN",
   "Installed by Our Engineers in Under 14 Days",
   "99.5% Uptime SLA with Phone & WhatsApp Support",
 ];
@@ -81,7 +81,7 @@ const RuralSMEs = () => {
     <PageLayout>
       <SEO
         title="Rural Business Internet"
-        description="Up to 350Mbps via SD-WAN. 14-day install, 99.5% uptime SLA. PSTN migration included."
+        description="Up to 500Mbps via SD-WAN. 14-day install, 99.5% uptime SLA. PSTN migration included."
         keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
         url="/sectors/rural-smes"
       />
@@ -104,7 +104,7 @@ const RuralSMEs = () => {
               Your business can't grow on 2Mbps ADSL.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              107 rural UK businesses already run on Integra. Up to 350Mbps via cellular SD-WAN, installed in 14 days. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
+              Rural businesses don't have to settle for slow copper. Up to 500Mbps via cellular SD-WAN, installed in 14 days — or <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for a leased line. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -138,7 +138,7 @@ const RuralSMEs = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Copper is dead. Replace it properly.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The UK PSTN network switches off January 2027 — your analogue lines are going away regardless. Our cellular SD-WAN replaces copper with two bonded 4G/5G connections delivering up to 350Mbps. No more copper. No more contention. No more excuses from your ISP.
+              The UK PSTN network switches off January 2027 — your analogue lines are going away regardless. Our cellular SD-WAN replaces copper with two bonded 4G/5G connections delivering up to 500Mbps. No more copper. No more contention. No more excuses from your ISP.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -177,9 +177,9 @@ const RuralSMEs = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Card machines that never go down.</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Resilient connectivity your operations can rely on.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our dual-network SD-WAN uses two different 4G/5G operators simultaneously. If one network has an issue, your traffic automatically fails over to the other in milliseconds. Your customers never see a "card machine offline" sign again.
+              Dual-network SD-WAN uses two different 4G/5G operators at once. If one network has an issue, traffic fails over to the other in milliseconds — so the systems your business runs on stay online, every day.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -198,7 +198,7 @@ const RuralSMEs = () => {
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Focus on your business. We handle the tech.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                The PSTN switches off January 2027 — we future-proof your business now. SD-WAN broadband, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
+                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
               </p>
             </div>
             <motion.ul className="max-w-md mx-auto space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
@@ -255,7 +255,7 @@ const RuralSMEs = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
             <h2 className="text-heading-1 md:text-display-sm text-white mb-6">Stop losing money to bad internet.</h2>
-            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">Up to 350Mbps. 99.5% uptime SLA. Installed in 14 days. No fibre required.</p>
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">Up to 500Mbps. 99.5% uptime SLA. Installed in 14 days. No fibre required.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
                 <Link to="/check">Check Availability</Link>
