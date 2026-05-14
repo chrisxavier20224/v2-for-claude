@@ -44,20 +44,22 @@ export const insightArticles: InsightArticleMeta[] = [
     excerpt:
       "Three ways to connect a site, and a framework for matching each one to the requirement.",
     tone: "light",
-    readingTime: "8 min read",
+    readingTime: "6 min read",
     whatsInside: [
-      "When a leased line is genuinely the right answer",
-      "Where SD-WAN earns its keep",
-      "What a Bridge solution is really for",
-      "A simple decision tree by site profile",
+      "The wrong question",
+      "The three options",
+      "The five decision factors",
+      "The framework",
+      "Why it's usually a combination",
     ],
     takeaways: [
-      "There is no universally 'best' circuit — only the right one for the site, timeline and risk profile.",
-      "Leased lines are the gold standard for permanence; they are the wrong tool for urgency.",
-      "SD-WAN turns multiple imperfect bearers into one resilient connection.",
-      "Bridge solutions exist for the in-between: temporary, awkward, or fibre-deferred sites.",
+      "\"Which is best\" is the wrong question — a leased line, bonded SD-WAN, and Integra Bridge solve different problems.",
+      "Five factors decide the fit: lead time, location, workload, permanence, and resilience.",
+      "The strongest estates rarely pick one product — they match each site to its requirement and layer resilience behind it.",
+      "Where fibre is ordered but months away, the answer isn't \"wait\" — it's Bridge now, leased line later, Bridge stays as failover.",
     ],
-    heroFigure: "Decision tree: site profile → recommended connectivity model",
+    heroFigure:
+      "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, fibre availability, permanence, workload, resilience need) to recommended option(s).",
   },
   {
     slug: "multi-site-estate",
