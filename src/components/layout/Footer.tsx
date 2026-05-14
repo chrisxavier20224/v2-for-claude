@@ -74,7 +74,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 Let's see what we can do for you
               </h2>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
-                Join the businesses and homeworkers switching to Integra. It feels good when your connectivity just works.
+                Join the multi-site businesses getting online with Integra — while everyone else waits for fibre.
               </p>
             </div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="shrink-0">
@@ -99,13 +99,13 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 <img src={integraLogo} alt="Integra Networks" className="w-28 h-auto" />
               </Link>
               <p className="text-sm text-surface-dark-muted">
-                Fast, reliable broadband for homes and businesses across the UK.
+                Business connectivity for UK companies — leased lines, SoGEA, and Integra Bridge to get you online while you wait for fibre.
               </p>
             </div>
 
             {/* Connectivity */}
             <div>
-              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Fibre Alternatives</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Connectivity</h4>
               <ul className="space-y-2">
                 {fibreAlternativeLinks.map((link) => (
                   <li key={link.path}>
