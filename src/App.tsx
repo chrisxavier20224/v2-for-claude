@@ -42,6 +42,7 @@ const Customers = lazy(() => import("./pages/Customers"));
 const Insights = lazy(() => import("./pages/Insights"));
 const InsightArticle = lazy(() => import("./pages/insights/InsightArticle"));
 const CostOfConnectivityGapArticle = lazy(() => import("./pages/insights/CostOfConnectivityGapArticle"));
+const DecisionFrameworkArticle = lazy(() => import("./pages/insights/DecisionFrameworkArticle"));
 const ExtendingWifiOutbuildings = lazy(() => import("./pages/blog/ExtendingWifiOutbuildings"));
 const ChurchesListedBuildings = lazy(() => import("./pages/blog/ChurchesListedBuildings"));
 const RuralBusinessesSdwan = lazy(() => import("./pages/blog/RuralBusinessesSdwan"));
@@ -256,7 +257,7 @@ const App = () => (
               {/* Insights hub */}
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/cost-of-the-connectivity-gap" element={<CostOfConnectivityGapArticle />} />
-              <Route path="/insights/decision-framework" element={<InsightArticle slug="decision-framework" />} />
+              <Route path="/insights/decision-framework" element={<DecisionFrameworkArticle />} />
               <Route path="/insights/multi-site-estate" element={<InsightArticle slug="multi-site-estate" />} />
               <Route path="/insights/multi-bearer-connectivity" element={<InsightArticle slug="multi-bearer-connectivity" />} />
               <Route path="/insights/wholesale-connectivity-model" element={<InsightArticle slug="wholesale-connectivity-model" />} />
