@@ -21,7 +21,7 @@ const handles = [
 const steps = [
   { icon: Handshake, title: "Talk to us", body: "A short conversation about your customer base and where the gaps are. No commitment." },
   { icon: UserCheck, title: "Get onboarded", body: "We set you up as a wholesale partner with pricing, process, and a named contact." },
-  { icon: Send, title: "Register deals", body: "Once you're a partner, you get the Integra partner portal: submit an opportunity in under two minutes and we take it from there." },
+  { icon: Send, title: "Register deals", body: "From then on, every problem site is a two-minute submission in the partner portal. We handle the rest — survey, install, and support." },
 ];
 
 const Wholesale = () => {
@@ -75,6 +75,20 @@ const Wholesale = () => {
             </h2>
             <p className="text-lg text-surface-dark-muted leading-relaxed max-w-3xl">
               You've won the deal. Then Openreach quotes 75–120 days, and you're stuck defending a timeline you don't control. Deadlines slip, the customer's patience wears thin, and your reputation takes the hit for infrastructure you don't own.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* REFRAME — light */}
+      <section className="bg-section-light-bg py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6 max-w-3xl">
+              It's not your whole business. <span className="text-primary">It's the sites fibre can't reach.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              Most of your portfolio is fine. But across fifty sites there are always a few — the ones where fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra isn't a change to your business. It's having an answer for those sites, so you never have to say no.
             </p>
           </AnimatedSection>
         </div>
@@ -152,6 +166,20 @@ const Wholesale = () => {
                 <Link to="/connectivity/integra-bridge">How Integra Bridge works <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* EASY FOR YOUR SALES TEAM — light */}
+      <section className="bg-section-light-bg py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6 max-w-3xl">
+              Easy for your <span className="text-primary">sales team.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              Your account managers don't need to become connectivity experts. When they hit a problem site, they submit it through the partner portal in under two minutes — customer name, site address, the basics. We survey, advise, install, and support. They stay the trusted face; we're the engine room.
+            </p>
           </AnimatedSection>
         </div>
       </section>
