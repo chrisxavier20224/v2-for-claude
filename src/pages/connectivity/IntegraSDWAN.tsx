@@ -389,7 +389,7 @@ const IntegraSDWAN = () => {
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedContent
         stories={["seacon-group", "wb-power-services"]}
-        sectors={["rural-smes", "construction-sites", "homeworkers"]}
+        sectors={["rural-smes", "construction-sites", "business-parks"]}
         dark
       />
     </PageLayout>
