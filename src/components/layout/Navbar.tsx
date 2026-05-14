@@ -11,7 +11,7 @@ const fibreAlternativeLinks = [
   { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Professional Starlink Install & Support" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
-  { label: "Pricing", path: "/pricing", icon: CreditCard, tagline: "Transparent, Fixed Monthly Pricing" },
+  { label: "Pricing", path: "/pricing", icon: CreditCard, tagline: "How Integra Pricing Works" },
 ];
 
 // Standard connectivity — traditional broadband and fibre
