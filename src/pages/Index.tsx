@@ -169,18 +169,37 @@ const Index = () => {
           </div>
           <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
             <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Integra Networks</p>
-              <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-                Business-grade connectivity where you need it most.
+              <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl">
+                We'll get you fibre. While you wait, we'll get you online.
               </h1>
-              <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-                Your internet shouldn't depend on how close you are to London. We've connected 100+ rural properties with speeds up to 350Mbps — in places where BT said it would take years.
+              <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
+                Leased lines, SoGEA, managed internet — the same fibre destination as any major ISP. Plus Integra Bridge: enterprise-grade connectivity in days, while your fibre's being built.
               </p>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
-                  <Link to="/check">Check Your Availability</Link>
-                </Button>
-              </motion.div>
+              <div className="flex flex-wrap gap-4 mb-12">
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
+                    <Link to="/check">Check Availability</Link>
+                  </Button>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                  <Button asChild size="lg" variant="outline" className="text-white border-white/50 hover:border-white hover:bg-white/10 font-medium h-12 px-8 text-base">
+                    <Link to="/contact">Talk to Us</Link>
+                  </Button>
+                </motion.div>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  { icon: Zap, label: "Online in days, not weeks" },
+                  { icon: Users, label: "Real UK engineers, not a call centre" },
+                  { icon: Globe, label: "99% UK coverage" },
+                  { icon: ShieldCheck, label: "SLA-backed uptime" },
+                ].map((vp) => (
+                  <div key={vp.label} className="flex items-center gap-3">
+                    <vp.icon className="h-5 w-5 text-primary shrink-0" />
+                    <span className="text-sm text-white/80 font-medium leading-snug">{vp.label}</span>
+                  </div>
+                ))}
+              </div>
             </AnimatedSection>
           </div>
         </section>
