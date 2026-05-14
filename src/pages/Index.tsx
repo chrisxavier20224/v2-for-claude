@@ -7,7 +7,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
-import { ArrowRight, Globe, Handshake, Headphones, Lightbulb, ShieldCheck, Users, Zap } from "lucide-react";
+import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap } from "lucide-react";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
@@ -20,10 +20,6 @@ import leasedImg from "@/assets/connectivity/leased-lines-hero.webp";
 import bridgeImg from "@/assets/connectivity/bridge-hero.webp";
 import fibreImg from "@/assets/sectors/fibre-building-hero.webp";
 import bpImg from "@/assets/sectors/business-parks-hero.webp";
-
-// WiFi / Supporting
-import businessWifiImg from "@/assets/connectivity/business-wifi-hero.jpg";
-import ucImg from "@/assets/connectivity/unified-comms-hero.webp";
 
 // Sector images
 import constructionImg from "@/assets/sectors/construction-hero.webp";
@@ -39,11 +35,20 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
 
+// Reusable labelled placeholder for swap-in images
+const ImagePlaceholder = ({ label, className = "" }: { label: string; className?: string }) => (
+  <div className={`relative w-full overflow-hidden rounded-2xl border-2 border-dashed border-border bg-muted flex items-center justify-center ${className}`}>
+    <span className="text-xs sm:text-sm text-muted-foreground font-medium uppercase tracking-wider px-4 text-center">
+      {label}
+    </span>
+  </div>
+);
+
 const aboutPoints = [
   {
     icon: Lightbulb,
-    title: "Online in days, not months",
-    description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular to get your site live while the fibre's still being built.",
+    title: "Live while fibre's still being built",
+    description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives.",
   },
   {
     icon: Users,
@@ -54,6 +59,21 @@ const aboutPoints = [
     icon: Headphones,
     title: "Real UK engineers, not a call centre",
     description: "When something needs sorting, you speak to the engineers who built your network. No ticket queues, no offshore support.",
+  },
+];
+
+const problemPoints = [
+  {
+    title: "A lead time you don't control",
+    body: "Openreach sets the date, not you. Surveys, wayleaves, civils — every step adds weeks.",
+  },
+  {
+    title: "A site that can't open",
+    body: "No connectivity means no phones, no card payments, no systems. The space sits empty while the lease runs.",
+  },
+  {
+    title: "A workaround that isn't working",
+    body: "Consumer 4G routers and phone hotspots don't carry a business. They drop, they throttle, they make you look unready.",
   },
 ];
 
@@ -123,9 +143,7 @@ const organizationSchema = {
     areaServed: "GB",
     email: "sales@integra-networks.co.uk",
   },
-  sameAs: [
-    "https://www.linkedin.com/company/integra-networks"
-  ],
+  sameAs: ["https://www.linkedin.com/company/integra-networks"],
 };
 
 const Index = () => {
@@ -140,7 +158,7 @@ const Index = () => {
       <StructuredData />
       <SchemaMarkup data={organizationSchema} />
       <PageLayout>
-        {/* ── HERO ──────────────────────────────────────────────────────── */}
+        {/* ── 1. HERO ───────────────────────────────────────────────────── */}
         <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
           <div className="absolute inset-0">
             <img src={heroImg} alt="Integra Networks fibre connectivity" className="w-full h-full object-cover" loading="eager" />
@@ -183,9 +201,69 @@ const Index = () => {
           </div>
         </section>
 
+        {/* ── 2. LOGO STRIP ─────────────────────────────────────────────── */}
         <CustomerLogoBar />
 
-        {/* ── ABOUT ─────────────────────────────────────────────────────── */}
+        {/* ── 3. THE PROBLEM (split, image RIGHT) ───────────────────────── */}
+        <section className="bg-background py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <AnimatedSection>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">The Problem</p>
+                <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6 font-medium leading-tight">
+                  The circuit's ordered. The clock's running. The project can't wait.
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+                  You've done everything right. The leased line is ordered, the new site is signed, the team's ready to move. Then the install date comes back — ten, twelve, sometimes sixteen weeks out. And there's nothing you can do about it except explain the delay to everyone waiting on you.
+                </p>
+                <ul className="space-y-6">
+                  {problemPoints.map((p) => (
+                    <li key={p.title} className="border-l-2 border-primary/40 pl-5">
+                      <h3 className="text-foreground font-medium mb-1">{p.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{p.body}</p>
+                    </li>
+                  ))}
+                </ul>
+              </AnimatedSection>
+              <AnimatedSection>
+                <ImagePlaceholder label="IMAGE: stalled / empty site or office" className="aspect-[4/5]" />
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+
+        {/* ── 4. BRIDGE USP (split, image LEFT) ─────────────────────────── */}
+        <section className="bg-surface-dark py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <AnimatedSection>
+                <ImagePlaceholder label="IMAGE: Integra Bridge hardware or bonded-connection diagram" className="aspect-[4/5] !bg-white/5 !border-white/15" />
+              </AnimatedSection>
+              <AnimatedSection>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">The Solution</p>
+                <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6 font-medium leading-tight">
+                  One thing no other ISP has: the ability to bridge the gap.
+                </h2>
+                <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
+                  Every business waiting on fibre faces the same dead zone — eight weeks or more between signing and going live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data centre, gives you enterprise-grade internet in around 10 days. When your fibre lands, Bridge stays on as permanent failover.
+                </p>
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
+                    <Link to="/connectivity/integra-bridge" className="inline-flex items-center gap-2">
+                      How Integra Bridge works <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </motion.div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+
+        {/* ── 5. WHY INTEGRA (3-card row) ───────────────────────────────── */}
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
@@ -197,14 +275,14 @@ const Index = () => {
                 We get multi-site businesses connected where and when traditional broadband can't — 99% UK coverage, rapid deployment, real engineers on every call.
               </p>
             </AnimatedSection>
-            <motion.div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {aboutPoints.map((point) => (
-                <motion.div key={point.title} variants={fadeUp} className="text-center">
+                <motion.div key={point.title} variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
                   <motion.div className="flex h-14 w-14 mx-auto items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
-                    <point.icon className="h-10 w-10" strokeWidth={1.5} />
+                    <point.icon className="h-8 w-8" strokeWidth={1.5} />
                   </motion.div>
                   <h3 className="text-heading-3 text-foreground mb-3 font-medium">{point.title}</h3>
-                  <p className="text-muted-foreground">{point.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{point.description}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -213,96 +291,7 @@ const Index = () => {
 
         <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
-        {/* ── BRIDGE USP ─────────────────────────────────────────────────── */}
-        <section className="bg-surface-dark py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
-            <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">The USP</p>
-              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6 font-medium">
-                One thing no other ISP has: the ability to bridge the gap.
-              </h2>
-              <p className="text-lg text-surface-dark-muted leading-relaxed max-w-3xl mx-auto mb-10">
-                Every business waiting on fibre faces the same dead zone — eight weeks or more between signing and going live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data centre, gives you enterprise-grade internet in around 10 days. When your fibre lands, Bridge stays on as permanent failover.
-              </p>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
-                  <Link to="/connectivity/integra-bridge" className="inline-flex items-center gap-2">
-                    How Integra Bridge works <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </motion.div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-      {/* ── ISP & WHOLESALE BAND ────────────────────────────────────── */}
-      <section className="bg-primary/5 border-y border-primary/10 py-20 md:py-28">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
-          <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">For ISPs &amp; Resellers</p>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6 font-medium">
-              Run an ISP? We're the infrastructure partner behind the brand.
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10">
-              Integra gives ISPs and resellers enterprise connectivity to deliver under their own brand — survey, install, and support handled, live in 14 days. You keep the customer and the margin.
-            </p>
-            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
-                <Link to="/wholesale" className="inline-flex items-center gap-2">
-                  See how wholesale works <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-            </motion.div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <GradientBand fromColor="hsl(216 100% 50% / 0.05)" toColor="hsl(0 0% 100%)" />
-
-        {/* ── CUSTOMER STORY (McGee) ────────────────────────────────────── */}
-        <section className="bg-background py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-4">Customer Stories</p>
-              <Link to="/customers/mcgee-construction" className="group block">
-                <div className="rounded-2xl border border-border bg-card p-8 sm:p-12 hover:border-primary/40 transition-colors">
-                  <blockquote className="text-2xl sm:text-3xl text-foreground font-medium leading-snug mb-6">
-                    "We got live connectivity in a week. No months of waiting, no huge installation bills."
-                  </blockquote>
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div>
-                      <p className="text-foreground font-medium">Chris Pyne</p>
-                      <p className="text-sm text-muted-foreground">Head of IT, McGee Construction</p>
-                    </div>
-                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                      Read the story <ArrowRight className="h-3.5 w-3.5" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* ── FOUNDER SNIPPET ───────────────────────────────────────────── */}
-        <section className="bg-background pb-20 md:pb-28">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6">
-            <AnimatedSection>
-              <div className="rounded-2xl bg-primary/5 border border-primary/15 px-6 sm:px-10 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-center sm:text-left">
-                <p className="text-base sm:text-lg text-foreground leading-relaxed max-w-2xl">
-                  Founded to solve a problem nobody else would touch. Today, a business ISP with a bridging capability no one else has.
-                </p>
-                <Link to="/about" className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide whitespace-nowrap hover:gap-3 transition-all">
-                  Our story <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-
-        {/* ── INTERNET CONNECTIVITY ─────────────────────────────────────── */}
+        {/* ── 6. INTERNET CONNECTIVITY ──────────────────────────────────── */}
         <section className="bg-surface-dark py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
@@ -311,34 +300,21 @@ const Index = () => {
                 Business connectivity, plus the one thing nobody else has.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-                Leased lines, SoGEA, and managed internet — the same destination as any major ISP. Plus Integra Bridge: the only product that gets you online in days, then stays on as permanent failover.
+                We're a full-service business ISP — not just a workaround. The standard connectivity you'd expect, plus the one product no one else has.
               </p>
             </AnimatedSection>
 
             {/* Featured — Integra Bridge */}
             <AnimatedSection>
               <Link to="/connectivity/integra-bridge" className="group block mb-8">
-                <motion.div
-                  className="relative rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent"
-                  whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                >
+                <motion.div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4, ease: "easeOut" }}>
                   <div className="aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
-                    <img
-                      src={bridgeImg}
-                      alt="Integra Bridge"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
+                    <img src={bridgeImg} alt="Integra Bridge" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
                   </div>
                   <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10">
-                    <span className="inline-block w-fit rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wide px-3 py-1 mb-3">
-                      Featured
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl text-white font-medium mb-2">
-                      Integra Bridge
-                    </h3>
+                    <span className="inline-block w-fit rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wide px-3 py-1 mb-3">Featured</span>
+                    <h3 className="text-2xl sm:text-3xl text-white font-medium mb-2">Integra Bridge</h3>
                     <p className="text-white/80 max-w-xl text-base sm:text-lg leading-relaxed mb-4">
                       Enterprise internet in ~10 days while you wait for fibre. Stays on as permanent failover.
                     </p>
@@ -350,7 +326,6 @@ const Index = () => {
               </Link>
             </AnimatedSection>
 
-            {/* Standard cards */}
             <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {connectivityServices.map((service) => (
                 <motion.div key={service.title} variants={fadeUp}>
@@ -370,7 +345,6 @@ const Index = () => {
               ))}
             </motion.div>
 
-            {/* Supporting solutions */}
             <AnimatedSection>
               <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
                 <span className="text-sm text-surface-dark-muted">Supporting solutions:</span>
@@ -384,34 +358,61 @@ const Index = () => {
 
         <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
-        {/* ── SECTORS ──────────────────────────────────────────────────── */}
+        {/* ── 7. CUSTOMER STORY (split, image RIGHT) ────────────────────── */}
         <section className="bg-background py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <AnimatedSection>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Customer Stories</p>
+                <Link to="/customers/mcgee-construction" className="group block">
+                  <blockquote className="text-2xl sm:text-3xl text-foreground font-medium leading-snug mb-6">
+                    "We got live connectivity in a week. No months of waiting, no huge installation bills."
+                  </blockquote>
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                      <p className="text-foreground font-medium">Chris Pyne</p>
+                      <p className="text-sm text-muted-foreground">Head of IT, McGee Construction</p>
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
+                      Read the story <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
+                </Link>
+              </AnimatedSection>
+              <AnimatedSection>
+                <ImagePlaceholder label="IMAGE: McGee site or Chris Pyne" className="aspect-[4/5]" />
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+
+        {/* ── 8. SECTORS (card grid w/ images already) ──────────────────── */}
+        <section className="bg-surface-dark py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Sectors We Serve</p>
-              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
+              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
                 Built for businesses fibre leaves behind.
               </h2>
-              <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
+              <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
                 Construction sites that move every 6 months. Farms with no line of sight. Business parks with 30 tenants sharing one connection. We've solved them all.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-6 grid-cols-2 sm:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {sectors.map((sector) => (
                 <motion.div key={sector.title} variants={fadeUp}>
-                  <Link to={sector.link} className="group block">
-                    <motion.div className="rounded-2xl overflow-hidden aspect-[3/4]" whileHover={{ scale: 1.03 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                      <div className="relative w-full h-full">
-                        <img src={sector.img} alt={sector.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-4">
-                          <h3 className="text-white font-medium text-sm sm:text-base">{sector.title}</h3>
-                          <span className="inline-flex items-center gap-1 text-white/70 text-xs font-medium mt-1 group-hover:text-white transition-colors">
-                            Learn More <ArrowRight className="h-3 w-3" />
-                          </span>
-                        </div>
-                      </div>
-                    </motion.div>
+                  <Link to={sector.link} className="group block rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] hover:border-primary/40 transition-colors">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img src={sector.img} alt={sector.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-surface-dark-foreground font-medium text-sm sm:text-base">{sector.title}</h3>
+                      <span className="inline-flex items-center gap-1 text-primary text-xs font-semibold uppercase tracking-wide mt-2 group-hover:gap-2 transition-all">
+                        Learn More <ArrowRight className="h-3 w-3" />
+                      </span>
+                    </div>
                   </Link>
                 </motion.div>
               ))}
@@ -419,10 +420,81 @@ const Index = () => {
           </div>
         </section>
 
-        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+        {/* ── 9. ISP & WHOLESALE BAND (full-width) ──────────────────────── */}
+        <section className="bg-primary text-primary-foreground py-20 md:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
+            <AnimatedSection>
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/70 mb-4">For ISPs &amp; Resellers</p>
+              <h2 className="text-heading-1 md:text-display-sm text-white mb-6 font-medium">
+                Run an ISP? We're the infrastructure partner behind the brand.
+              </h2>
+              <p className="text-lg text-white/85 leading-relaxed max-w-3xl mx-auto mb-10">
+                Integra gives ISPs and resellers enterprise connectivity to deliver under their own brand — survey, install, and support handled, live in 14 days. You keep the customer and the margin.
+              </p>
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-medium h-12 px-8 text-base">
+                  <Link to="/wholesale" className="inline-flex items-center gap-2">
+                    See how wholesale works <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </AnimatedSection>
+          </div>
+        </section>
 
-        {/* ── LOCATIONS ──────────────────────────────────────────────────── */}
-        <section className="bg-surface-dark py-20 md:py-28">
+        {/* ── 10. FOUNDER SNIPPET (split, image LEFT) ───────────────────── */}
+        <section className="bg-background py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+              <AnimatedSection>
+                <div className="lg:col-span-2">
+                  <ImagePlaceholder label="IMAGE: founders Chris Xavier & Andrew Somerville" className="aspect-[4/5]" />
+                </div>
+              </AnimatedSection>
+              <div className="lg:col-span-3">
+                <AnimatedSection>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Our Story</p>
+                  <p className="text-2xl sm:text-3xl text-foreground leading-snug font-medium mb-8">
+                    Founded to solve a problem nobody else would touch. Today, a business ISP with a bridging capability no one else has.
+                  </p>
+                  <Link to="/about" className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide hover:gap-3 transition-all">
+                    Read our story <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </AnimatedSection>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 11. FINAL CTA (full-width, bold dark) ─────────────────────── */}
+        <section className="relative overflow-hidden bg-surface-dark py-24 md:py-32">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10" />
+          <div className="relative mx-auto max-w-4xl px-4 sm:px-6 text-center">
+            <AnimatedSection>
+              <h2 className="text-heading-1 md:text-display-sm text-white mb-6 font-medium">
+                Stop waiting. Get online.
+              </h2>
+              <p className="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto mb-10">
+                Tell us where your sites are and what you've got coming. We'll show you what we can deliver — and how fast.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
+                    <Link to="/check">Check Availability</Link>
+                  </Button>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                  <Button asChild size="lg" variant="outline" className="text-white border-white/50 hover:border-white hover:bg-white/10 font-medium h-12 px-8 text-base">
+                    <Link to="/contact">Talk to Us</Link>
+                  </Button>
+                </motion.div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* ── 12. COVERAGE + SEO BLOCK ──────────────────────────────────── */}
+        <section className="bg-surface-dark py-20 md:py-28 border-t border-white/5">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Local Coverage</p>
@@ -454,7 +526,6 @@ const Index = () => {
 
         <PartnerLogoBar />
 
-        {/* ── SEO CONTENT ──────────────────────────────────────────────── */}
         <section className="bg-background py-16 md:py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <AnimatedSection>
