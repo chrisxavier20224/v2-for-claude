@@ -30,7 +30,7 @@ const painPoints = [
   {
     icon: Zap,
     title: "CCTV, BIM, and File Sharing Need Speed.",
-    description: "Up to 350Mbps download and 100Mbps+ upload. Static IP included for remote CCTV access and secure file sharing from site.",
+    description: "Up to 500Mbps download and 100Mbps+ upload. Static IP included for remote CCTV access and secure file sharing from site.",
   },
 ];
 
