@@ -290,17 +290,6 @@ const Navbar = () => {
             >
               Customers
             </Link>
-            {/* Wholesale — standalone link */}
-            <Link
-              to="/wholesale"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === "/wholesale"
-                  ? isDarkNav ? "text-white" : "text-foreground"
-                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Wholesale
-            </Link>
             {/* Contact — standalone link */}
             <Link
               to="/contact"
