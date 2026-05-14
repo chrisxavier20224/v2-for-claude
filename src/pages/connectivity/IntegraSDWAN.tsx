@@ -40,7 +40,7 @@ const features = [
     icon: Zap,
     eyebrow: "SD-WAN Technology",
     title: "Fibre-Like Speeds, No Fibre Required",
-    description: "We bond multiple 4G/5G connections through our datacentre, delivering combined speeds up to 350Mbps. Rain doesn't affect cellular — unlike satellite alternatives.",
+    description: "We bond multiple 4G/5G connections through our datacentre, delivering combined speeds up to 500Mbps. Rain doesn't affect cellular — unlike satellite alternatives.",
     img: speedsImg,
     imgAlt: "SD-WAN fibre-like speeds",
     reverse: false,
@@ -85,21 +85,18 @@ const features = [
 
 
 const pricingTiers = [
-  { name: "Integra Home", speed: "Speeds vary by location", price: "55", staticIp: "Static IP £10/month", install: "£1,250", features: ["Single-network 4G/5G", "Professional installation"], link: "/" },
   { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
-  { name: "Integra Pro", speed: "Up to 350Mbps", price: "110", originalPrice: "135", staticIp: "Static IP £10/month", install: "£1,500", originalInstall: "£2,200", features: ["Multi-network bonding", "Priority support"], popular: true },
-  { name: "Integra Ultrafast", speed: "Up to 450Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },
+  { name: "Integra Ultrafast", speed: "Up to 500Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },
   { name: "Enterprise", speed: "Up to 500Mbps", price: "400", staticIp: "Static IP £10/month", install: "£3,300", features: ["99.99% uptime SLA", "Dedicated account manager"] },
 ];
 
 const faqs = [
-  { q: "Who can benefit from Integra SD-WAN?", a: "Anyone in a location where fibre broadband isn't available or where existing speeds are insufficient. This includes homeworkers, rural businesses, construction sites, holiday lets, and more." },
+  { q: "Who can benefit from Integra SD-WAN?", a: "Any business in a location where fibre isn't available or where existing speeds are insufficient. This includes construction sites, business parks, multi-site operations, and industrial premises." },
   { q: "How can I determine the speed you can offer at my property?", a: "Use our free Availability Checker tool or get in touch with our team. We'll assess your location and provide an estimated speed range." },
   { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a desktop survey." },
-  { q: "How much data do I get?", a: "With multi-network connections, you're looking at around 1.8TB of data per month — more than enough for a busy household with kids streaming and gaming, or a business running video calls and cloud apps all day. There's a fair usage policy, but in practice the vast majority of customers never come close to hitting it." },
-  { q: "How can Integra ensure consistent card payment terminal performance in rural locations?", a: "Our Integra Pro and Ultrafast tiers include automatic failover, which provides dedicated redundancy specifically for point-of-sale systems and card payment terminals." },
+  { q: "How much data do I get?", a: "With multi-network connections, you're looking at around 1.8TB of data per month — more than enough for a business running video calls, cloud apps, and file sharing all day. There's a fair usage policy, but in practice the vast majority of customers never come close to hitting it." },
+  { q: "Can SD-WAN bridge the gap while we wait for fibre?", a: "Yes. Many customers run Integra SD-WAN as interim connectivity during a fibre install, then keep it as permanent failover once fibre is live. See Integra Bridge for our dedicated bridging product." },
   { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers for £10/month. Essential for CCTV, VPNs, firewalls, and remote access." },
-  { q: "Will Integra's service cover my entire property, even if the walls are thick?", a: "In most properties, our mesh network provides full coverage. If your walls are particularly thick (old stone, solid brick), hardwired cabling may be needed — this is out of scope of the standard install but can be priced on a site visit, or identified beforehand if you share a quick video walkthrough of your property. Either way, we'll find a solution." },
   { q: "Do you provide CCTV services?", a: "We install and support CCTV systems — we don't monitor them. Our CCTV service includes professional installation, cloud remote access via Integra Cloud, and full technical support." },
 ];
 
@@ -144,7 +141,7 @@ const sdwanServiceSchema = {
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
-    offerCount: "5",
+    offerCount: "3",
     lowPrice: "80",
     highPrice: "400",
   },
@@ -230,10 +227,10 @@ const IntegraSDWAN = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Fibre-Free Internet</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              We solve the rural internet problem.
+              Fibre-free business connectivity.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Forget waiting years for Fibre. We use bonded 4G/5G cellular networks to deliver high-speed, reliable internet in 14 days — with backup and failover built in.
+              No waiting years for fibre. We bond multiple 4G/5G cellular networks to deliver high-speed, resilient business internet in under 14 days — with automatic failover built in.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -281,29 +278,23 @@ const IntegraSDWAN = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Pricing</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-              Plans for every scenario.
+              SD-WAN plans for business.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
               Choose the speed and redundancy that fits your budget. All plans include UK-based support and 99.5% SLA.
             </p>
           </AnimatedSection>
-          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {pricingTiers.map((tier) => (
               <motion.div
                 key={tier.name}
                 variants={fadeUp}
-                className={`rounded-xl p-6 border transition-all ${
-                  tier.popular
-                    ? "border-primary bg-primary/5 ring-2 ring-primary/30"
-                    : "border-border bg-card hover:border-primary/50"
-                }`}
+                className="rounded-xl p-6 border border-border bg-card hover:border-primary/50 transition-all"
               >
                 <h3 className="text-lg font-medium text-foreground mb-2">{tier.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{tier.speed}</p>
                 <div className="mb-1">
                   <span className="text-3xl font-medium text-foreground">
-                    {'pricePrefix' in tier && (tier as any).pricePrefix && <span className="text-lg">{(tier as any).pricePrefix}</span>}
-                    {'originalPrice' in tier && (tier as any).originalPrice && <span className="text-lg line-through text-muted-foreground/50 mr-1">£{(tier as any).originalPrice}</span>}
                     £{tier.price}
                   </span>
                   <span className="text-muted-foreground text-sm">/month</span>
@@ -312,22 +303,15 @@ const IntegraSDWAN = () => {
                 <div className="space-y-2 mb-6">
                   <p className="text-xs text-muted-foreground font-medium">{tier.staticIp}</p>
                   <p className="text-xs text-muted-foreground font-medium">
-                    Installation: {tier.originalInstall ? (
-                      <><span className="line-through opacity-50">{tier.originalInstall}</span> <span className="text-status-ok font-bold">{tier.install}</span></>
-                    ) : tier.install} +VAT
+                    Installation: {tier.install} +VAT
                   </p>
-                  {tier.originalInstall && (
-                    <div className="inline-flex items-center gap-1 bg-status-ok/15 border border-status-ok/30 text-status-ok px-2 py-0.5 rounded-md mt-1">
-                      <span className="text-[10px] font-bold">SAVE £700</span>
-                    </div>
-                  )}
                   {tier.features.map((feature, i) => (
                     <p key={i} className="text-xs text-muted-foreground font-medium">
                       {feature}
                     </p>
                   ))}
                 </div>
-                <Button asChild size="sm" variant={tier.popular ? "default" : "outline"} className={tier.popular ? "" : "border-border text-foreground hover:bg-white/5"}>
+                <Button asChild size="sm" variant="outline" className="border-border text-foreground hover:bg-white/5">
                   <Link to="/check">Check Availability</Link>
                 </Button>
               </motion.div>
@@ -405,7 +389,7 @@ const IntegraSDWAN = () => {
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <RelatedContent
         stories={["seacon-group", "wb-power-services"]}
-        sectors={["rural-smes", "construction-sites", "homeworkers"]}
+        sectors={["rural-smes", "construction-sites", "business-parks"]}
         dark
       />
     </PageLayout>
