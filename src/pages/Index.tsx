@@ -233,7 +233,7 @@ const Index = () => {
               </motion.div>
             </AnimatedSection>
           </div>
-      </section>
+        </section>
 
       {/* ── ISP & WHOLESALE BAND ────────────────────────────────────── */}
       <section className="bg-primary/5 border-y border-primary/10 py-20 md:py-28">
