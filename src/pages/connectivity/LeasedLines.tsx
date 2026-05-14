@@ -30,7 +30,7 @@ const painPoints = [
   {
     icon: Shield,
     title: "High-Speed Fibre up to 10Gbps",
-    description: "From 100Mbps to 10Gbps, scaled to your requirements. Pricing from £400/month depending on speed and location.",
+    description: "From 100Mbps to 10Gbps, scaled to your requirements. Quoted per site based on speed, location and contract term.",
   },
 ];
 
