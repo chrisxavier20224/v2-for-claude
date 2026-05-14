@@ -198,7 +198,7 @@ const RuralSMEs = () => {
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Focus on your business. We handle the tech.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                The PSTN switches off January 2027 — we future-proof your business now. SD-WAN broadband, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
+                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
               </p>
             </div>
             <motion.ul className="max-w-md mx-auto space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
