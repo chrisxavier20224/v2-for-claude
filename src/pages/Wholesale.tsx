@@ -170,6 +170,20 @@ const Wholesale = () => {
         </div>
       </section>
 
+      {/* EASY FOR YOUR SALES TEAM — light */}
+      <section className="bg-section-light-bg py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6 max-w-3xl">
+              Easy for your <span className="text-primary">sales team.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              Your account managers don't need to become connectivity experts. When they hit a problem site, they submit it through the partner portal in under two minutes — customer name, site address, the basics. We survey, advise, install, and support. They stay the trusted face; we're the engine room.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* HOW PARTNERING WORKS — light */}
       <section className="bg-section-light-bg py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
