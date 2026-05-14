@@ -39,7 +39,6 @@ const SeaconGroup = lazy(() => import("./pages/customers/SeaconGroup"));
 const AvailabilityChecker = lazy(() => import("./pages/AvailabilityChecker"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Customers = lazy(() => import("./pages/Customers"));
-const Blog = lazy(() => import("./pages/Blog"));
 const Insights = lazy(() => import("./pages/Insights"));
 const InsightArticle = lazy(() => import("./pages/insights/InsightArticle"));
 const ExtendingWifiOutbuildings = lazy(() => import("./pages/blog/ExtendingWifiOutbuildings"));
