@@ -42,18 +42,18 @@ const fadeUp = {
 const aboutPoints = [
   {
     icon: Lightbulb,
-    title: "Installed in Under 14 Days",
-    description: "No excess construction charges. No 8-week BT wait. We layer satellite, cellular, and fibre to get your site online in days, not months.",
+    title: "Online in days, not months",
+    description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular to get your site live while the fibre's still being built.",
   },
   {
     icon: Users,
-    title: "99% UK Coverage",
-    description: "Our SD-WAN technology works anywhere with a mobile signal or clear sky. Rural farms, construction sites, business parks — we've connected them all.",
+    title: "99% UK coverage",
+    description: "Multi-bearer connectivity works anywhere with a mobile signal or clear sky. Construction sites, business parks, multi-site rollouts — we've connected them all.",
   },
   {
     icon: Headphones,
-    title: "Real UK Engineers, Not a Call Centre",
-    description: "When something goes wrong, you speak to the engineers who built your network. No ticket queues, no offshore support, no runaround.",
+    title: "Real UK engineers, not a call centre",
+    description: "When something needs sorting, you speak to the engineers who built your network. No ticket queues, no offshore support.",
   },
 ];
 
@@ -194,7 +194,7 @@ const Index = () => {
                 The opposite of waiting 8 weeks for BT.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-                We connect businesses and remote workers where traditional broadband fails. 99% UK coverage, average 14-day install, real engineers on every call.
+                We get multi-site businesses connected where and when traditional broadband can't — 99% UK coverage, rapid deployment, real engineers on every call.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -208,6 +208,73 @@ const Index = () => {
                 </motion.div>
               ))}
             </motion.div>
+          </div>
+        </section>
+
+        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+
+        {/* ── BRIDGE USP ─────────────────────────────────────────────────── */}
+        <section className="bg-surface-dark py-20 md:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
+            <AnimatedSection>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">The USP</p>
+              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6 font-medium">
+                One thing no other ISP has: the ability to bridge the gap.
+              </h2>
+              <p className="text-lg text-surface-dark-muted leading-relaxed max-w-3xl mx-auto mb-10">
+                Every business waiting on fibre faces the same dead zone — eight weeks or more between signing and going live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data centre, gives you enterprise-grade internet in around 10 days. When your fibre lands, Bridge stays on as permanent failover.
+              </p>
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
+                  <Link to="/connectivity/integra-bridge" className="inline-flex items-center gap-2">
+                    How Integra Bridge works <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+
+        {/* ── CUSTOMER STORY (McGee) ────────────────────────────────────── */}
+        <section className="bg-background py-20 md:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <AnimatedSection>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-4">Customer Stories</p>
+              <Link to="/customers/mcgee-construction" className="group block">
+                <div className="rounded-2xl border border-border bg-card p-8 sm:p-12 hover:border-primary/40 transition-colors">
+                  <blockquote className="text-2xl sm:text-3xl text-foreground font-medium leading-snug mb-6">
+                    "We got live connectivity in a week. No months of waiting, no huge installation bills."
+                  </blockquote>
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                      <p className="text-foreground font-medium">Chris Pyne</p>
+                      <p className="text-sm text-muted-foreground">Head of IT, McGee Construction</p>
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
+                      Read the story <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* ── FOUNDER SNIPPET ───────────────────────────────────────────── */}
+        <section className="bg-background pb-20 md:pb-28">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <AnimatedSection>
+              <div className="rounded-2xl bg-primary/5 border border-primary/15 px-6 sm:px-10 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-center sm:text-left">
+                <p className="text-base sm:text-lg text-foreground leading-relaxed max-w-2xl">
+                  Founded to solve a problem nobody else would touch. Today, a business ISP with a bridging capability no one else has.
+                </p>
+                <Link to="/about" className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide whitespace-nowrap hover:gap-3 transition-all">
+                  Our story <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -338,7 +405,7 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Local Coverage</p>
               <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                Serving rural areas across the UK.
+                Coverage across the UK.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
                 From the North West to the South East, we've connected communities, farms, and businesses in rural locations nobody else could reach.
@@ -370,17 +437,17 @@ const Index = () => {
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <AnimatedSection>
               <h2 className="text-heading-2 text-foreground text-center mb-6 font-medium">
-                Rural Broadband That Actually Works
+                Business connectivity across the UK
               </h2>
               <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
                 <p>
-                  Integra Networks provides fast, reliable internet to rural homes and businesses across the UK. Using a combination of SD-WAN, Starlink satellite, 4G/5G cellular bonding, and dedicated fibre leased lines, we deliver speeds of up to 350Mbps to properties where traditional broadband providers like BT, Virgin Media, and Vodafone cannot reach.
+                  Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased lines, SoGEA, and managed internet — the same fibre destination as any major ISP — alongside Integra Bridge, the only product that gets you online in around 10 days while permanent fibre is being built.
                 </p>
                 <p>
-                  Whether you're a remote worker struggling with dropped video calls, a construction company needing temporary site connectivity, or a rural SME that's been told fibre is years away — we have a solution that can be installed in under 14 days with no excess construction charges.
+                  Whether you're rolling out connectivity across a portfolio of construction sites, business parks, or industrial and retail estates, we engineer resilient networks with SLA-backed uptime, proactive monitoring, and UK-based engineering support on every call.
                 </p>
                 <p>
-                  Our network covers 99% of the UK, including hard-to-reach areas in the Cotswolds, Devon, Somerset, Yorkshire, the North West, Kent, Sussex, Surrey, and Essex. Every installation begins with a free desktop survey where our engineers analyse your exact location, nearby cell towers, and line-of-sight to determine the best connectivity option for your property.
+                  Our coverage spans 99% of the UK, including London, the South East, the South West, the Midlands, the North West, and Yorkshire. Every deployment starts with a desktop survey from our engineering team, so you know exactly what bearer mix and SLA fits your sites before anything goes live.
                 </p>
               </div>
             </AnimatedSection>
