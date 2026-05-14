@@ -110,6 +110,7 @@ const ThankYou = lazy(() => import("./pages/ThankYou"));
 const CheckAvailability = lazy(() => import("./pages/CheckAvailability"));
 const CheckingOutYourProperty = lazy(() => import("./pages/CheckingOutYourProperty"));
 const Support = lazy(() => import("./pages/Support"));
+const Wholesale = lazy(() => import("./pages/Wholesale"));
 
 const queryClient = new QueryClient();
 
@@ -246,6 +247,7 @@ const App = () => (
               <Route path="/checking-out-your-property" element={<CheckingOutYourProperty />} />
               <Route path="/support" element={<Support />} />
               <Route path="/integra-bridge" element={<Navigate to="/connectivity/integra-bridge" replace />} />
+              <Route path="/wholesale" element={<Wholesale />} />
 
               <Route path="/resources" element={<Resources />} />
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
