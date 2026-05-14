@@ -7,7 +7,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
-import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap } from "lucide-react";
+import { ArrowRight, Globe, Handshake, Headphones, Lightbulb, ShieldCheck, Users, Zap } from "lucide-react";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
@@ -235,7 +235,29 @@ const Index = () => {
           </div>
         </section>
 
-        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      {/* ── ISP & WHOLESALE BAND ────────────────────────────────────── */}
+      <section className="bg-primary/5 border-y border-primary/10 py-20 md:py-28">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">For ISPs &amp; Resellers</p>
+            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6 font-medium">
+              Run an ISP? We're the infrastructure partner behind the brand.
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10">
+              Integra gives ISPs and resellers enterprise connectivity to deliver under their own brand — survey, install, and support handled, live in 14 days. You keep the customer and the margin.
+            </p>
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
+                <Link to="/wholesale" className="inline-flex items-center gap-2">
+                  See how wholesale works <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </motion.div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <GradientBand fromColor="hsl(216 100% 50% / 0.05)" toColor="hsl(0 0% 100%)" />
 
         {/* ── CUSTOMER STORY (McGee) ────────────────────────────────────── */}
         <section className="bg-background py-20 md:py-28">
