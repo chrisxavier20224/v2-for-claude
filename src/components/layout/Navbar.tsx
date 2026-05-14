@@ -260,16 +260,16 @@ const Navbar = () => {
             >
               Customers
             </Link>
-            {/* Integra Bridge — standalone link */}
+            {/* Wholesale — standalone link */}
             <Link
-              to="/connectivity/integra-bridge"
+              to="/wholesale"
               className={`text-sm font-medium transition-colors ${
-                location.pathname === "/connectivity/integra-bridge"
+                location.pathname === "/wholesale"
                   ? isDarkNav ? "text-white" : "text-foreground"
                   : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Integra Bridge
+              Wholesale
             </Link>
             {/* Contact — standalone link */}
             <Link
