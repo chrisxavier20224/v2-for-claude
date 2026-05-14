@@ -65,7 +65,7 @@ const Wholesale = () => {
         </div>
       </section>
 
-      {/* THE PROBLEM */}
+      {/* THE PROBLEM — dark */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
@@ -80,26 +80,22 @@ const Wholesale = () => {
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* THE PROPOSITION */}
-      <section className="bg-surface-dark py-20 md:py-28">
+      {/* THE PROPOSITION — light */}
+      <section className="bg-section-light-bg py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">The Proposition</p>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground text-center mb-6 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-6 max-w-3xl mx-auto">
               We're the network <span className="text-primary">behind your network.</span>
             </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
               Integra gives you enterprise-grade connectivity you can deliver under your own brand, in 14 days — no Openreach, no wayleaves, no waiting. Bonded 4G/5G and Starlink, SD-WAN, leased lines, and Integra Bridge for the fibre-gap moment. Your customer sees you. We're the engine room.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* WHAT INTEGRA HANDLES */}
+      {/* WHAT INTEGRA HANDLES — dark */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
@@ -122,26 +118,22 @@ const Wholesale = () => {
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* WHAT YOU KEEP */}
-      <section className="bg-surface-dark py-20 md:py-28">
+      {/* WHAT YOU KEEP — light */}
+      <section className="bg-section-light-bg py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">What You Keep</p>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground text-center mb-6 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-6 max-w-3xl mx-auto">
               Your brand. Your customer. <span className="text-primary">Your margin.</span>
             </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
               This is wholesale, not a referral scheme. You own the customer relationship and set your own pricing. We stay invisible — the connectivity is delivered, branded, and supported as yours.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* INTEGRA BRIDGE FOR ISPs */}
+      {/* INTEGRA BRIDGE FOR ISPs — dark (featured card) */}
       <section className="relative bg-surface-dark py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/assets/backgrounds/datacentre-hires-bg.webp" alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
@@ -164,37 +156,33 @@ const Wholesale = () => {
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* HOW PARTNERING WORKS */}
-      <section className="bg-surface-dark py-20 md:py-28">
+      {/* HOW PARTNERING WORKS — light */}
+      <section className="bg-section-light-bg py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">How Partnering Works</p>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-16 max-w-3xl mx-auto">
               Three steps to your <span className="text-primary">first delivery.</span>
             </h2>
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {steps.map((step, i) => (
-              <motion.div key={step.title} variants={fadeUp} className="relative rounded-2xl border border-white/10 bg-white/5 p-8">
+              <motion.div key={step.title} variants={fadeUp} className="relative rounded-2xl border border-border/60 bg-white p-8 shadow-sm">
                 <div className="absolute -top-4 -left-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold">
                   {i + 1}
                 </div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
                   <step.icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-normal text-surface-dark-foreground mb-3">{step.title}</h3>
-                <p className="text-surface-dark-muted leading-relaxed">{step.body}</p>
+                <h3 className="text-xl font-normal text-foreground mb-3">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{step.body}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* FINAL CTA */}
+      {/* FINAL CTA — dark */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <AnimatedSection>
