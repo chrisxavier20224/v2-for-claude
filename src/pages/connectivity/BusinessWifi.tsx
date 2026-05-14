@@ -203,7 +203,7 @@ const BusinessWifi = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Guest WiFi with Branding</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Branded login portal, bandwidth management, and analytics. Separate guest traffic from your business network. From £120/year per gateway — perfect for retail, hospitality, and offices.
+              Branded login portal, bandwidth management, and analytics. Separate guest traffic from your business network — perfect for retail, hospitality, and offices.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

@@ -67,7 +67,7 @@ const UnifiedCommunications = () => {
     <PageLayout>
       <SEO
         title="Unified Communications"
-        description="Cloud-hosted VoIP with Teams, call routing, PSTN backup. From £10/handset/month. PSTN-ready."
+        description="Cloud-hosted VoIP with Teams, call routing, PSTN backup. PSTN-ready. Bespoke pricing per site."
         keywords="unified communications, UCaaS, cloud phone, hosted VoIP, video conferencing, CCaaS, business phone system, PSTN switch off"
         url="/connectivity/unified-communications"
       />
@@ -89,7 +89,7 @@ const UnifiedCommunications = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Hosted VoIP, PSTN Replacement.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              PSTN switches off January 2027. From £10/handset/month — Teams integration, call routing, voicemail-to-email, and PSTN backup. Deployed in days, not weeks.
+              PSTN switches off January 2027. Teams integration, call routing, voicemail-to-email, and PSTN backup. Deployed in days, not weeks.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -106,7 +106,7 @@ const UnifiedCommunications = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Unified Communications</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              From £10/handset/month. No big upfront costs.
+              No big upfront costs.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
               Handsets, softphones, and setup all included. Scale up or down as needed — you only pay for what you use. Works with your existing broadband or our connectivity.
@@ -197,7 +197,7 @@ const UnifiedCommunications = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimatedSection>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Get a phone system quote.</h2>
-            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">From £10/handset/month. PSTN switches off January 2027 — start your migration now.</p>
+            <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">PSTN switches off January 2027 — start your migration now.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>

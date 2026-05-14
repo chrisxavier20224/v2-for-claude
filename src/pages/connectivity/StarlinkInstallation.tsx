@@ -97,7 +97,7 @@ const StarlinkInstallation = () => {
     <PageLayout>
       <SEO
         title="Starlink Installation"
-        description="Add 4G/5G failover to Starlink. £80/month. 99.5% uptime SLA. Professional installation."
+        description="Add 4G/5G failover to Starlink. 99.5% uptime SLA. Professional installation."
         keywords="Starlink installation, Starlink installer, Starlink SD-WAN, Starlink failover, Starlink static IP, satellite internet, Starlink 4G/5G backup"
         url="/connectivity/starlink-installation"
       />
@@ -200,7 +200,7 @@ const StarlinkInstallation = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Starlink Static IP Solutions</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Need a Static IP for VPN, CCTV, or remote access but don't want to upgrade to Starlink's priority service? We provide static IPs through our SD-WAN layer — no Starlink priority plan required. Just £10/month added to your service.
+              Need a Static IP for VPN, CCTV, or remote access but don't want to upgrade to Starlink's priority service? We provide static IPs through our SD-WAN layer — no Starlink priority plan required.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -264,7 +264,7 @@ const StarlinkInstallation = () => {
               Add Starlink reliability.
             </h2>
             <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
-              Keep your Starlink. Add 4G/5G failover from £80/month +VAT. No more rain drops. 99.5% uptime SLA.
+              Keep your Starlink. Add 4G/5G failover with a 99.5% uptime SLA. No more rain drops.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
