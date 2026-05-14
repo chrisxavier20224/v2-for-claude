@@ -177,9 +177,9 @@ const RuralSMEs = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Card machines that never go down.</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Resilient connectivity your operations can rely on.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our dual-network SD-WAN uses two different 4G/5G operators simultaneously. If one network has an issue, your traffic automatically fails over to the other in milliseconds. Your customers never see a "card machine offline" sign again.
+              Dual-network SD-WAN uses two different 4G/5G operators at once. If one network has an issue, traffic fails over to the other in milliseconds — so the systems your business runs on stay online, every day.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
