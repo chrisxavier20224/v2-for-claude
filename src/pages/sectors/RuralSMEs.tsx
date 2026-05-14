@@ -20,7 +20,7 @@ const painPoints = [
   {
     icon: WifiOff,
     title: "Stacking ADSL Lines That Still Don't Work?",
-    description: "Two or three copper lines bonded together still give you 10Mbps on a good day. We replace them all with a single 350Mbps cellular connection.",
+    description: "Two or three copper lines bonded together still give you 10Mbps on a good day. We replace them all with a single connection delivering up to 500Mbps.",
   },
   {
     icon: PoundSterling,
@@ -81,7 +81,7 @@ const RuralSMEs = () => {
     <PageLayout>
       <SEO
         title="Rural Business Internet"
-        description="Up to 350Mbps via SD-WAN. 14-day install, 99.5% uptime SLA. PSTN migration included."
+        description="Up to 500Mbps via SD-WAN. 14-day install, 99.5% uptime SLA. PSTN migration included."
         keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
         url="/sectors/rural-smes"
       />
@@ -138,7 +138,7 @@ const RuralSMEs = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Copper is dead. Replace it properly.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The UK PSTN network switches off January 2027 — your analogue lines are going away regardless. Our cellular SD-WAN replaces copper with two bonded 4G/5G connections delivering up to 350Mbps. No more copper. No more contention. No more excuses from your ISP.
+              The UK PSTN network switches off January 2027 — your analogue lines are going away regardless. Our cellular SD-WAN replaces copper with two bonded 4G/5G connections delivering up to 500Mbps. No more copper. No more contention. No more excuses from your ISP.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -255,7 +255,7 @@ const RuralSMEs = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
             <h2 className="text-heading-1 md:text-display-sm text-white mb-6">Stop losing money to bad internet.</h2>
-            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">Up to 350Mbps. 99.5% uptime SLA. Installed in 14 days. No fibre required.</p>
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">Up to 500Mbps. 99.5% uptime SLA. Installed in 14 days. No fibre required.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
                 <Link to="/check">Check Availability</Link>
