@@ -118,39 +118,39 @@ const IntegraBridge = () => {
         </div>
       </section>
 
-      {/* THE PROBLEM */}
-      <section className="bg-surface-dark py-20 md:py-28">
+      {/* THE PROBLEM — LIGHT */}
+      <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">The Problem</p>
-              <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-6">
+              <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6">
                 Don't let <span className="text-primary">long lead times</span> undo all your hard work.
               </h2>
               {problemPoints.map((point, i) => (
-                <p key={i} className="text-surface-dark-muted leading-relaxed mb-4">{point}</p>
+                <p key={i} className="text-muted-foreground leading-relaxed mb-4">{point}</p>
               ))}
-              <p className="text-surface-dark-foreground font-normal mt-6">
+              <p className="text-foreground font-normal mt-6">
                 Your reputation is too important to risk on delays. Whether you're delivering to clients or waiting for your own install, you need business internet now.
               </p>
             </AnimatedSection>
             <AnimatedSection direction="right" delay={0.2}>
               <div className="grid grid-cols-3 gap-4">
-                <motion.div className="col-span-3 rounded-2xl bg-white/5 border border-white/10 p-8 text-center" variants={fadeUp}>
+                <motion.div className="col-span-3 rounded-2xl bg-muted border border-border p-8 text-center" variants={fadeUp}>
                   <p className="text-5xl md:text-6xl font-normal text-primary mb-2">75–120</p>
-                  <p className="text-surface-dark-muted text-sm">Days typical Fibre lead time</p>
+                  <p className="text-muted-foreground text-sm">Days typical Fibre lead time</p>
                 </motion.div>
-                <motion.div className="rounded-2xl bg-white/5 border border-white/10 p-6 text-center" variants={fadeUp}>
+                <motion.div className="rounded-2xl bg-muted border border-border p-6 text-center" variants={fadeUp}>
                   <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-surface-dark-muted text-xs">Deadlines slip</p>
+                  <p className="text-muted-foreground text-xs">Deadlines slip</p>
                 </motion.div>
-                <motion.div className="rounded-2xl bg-white/5 border border-white/10 p-6 text-center" variants={fadeUp}>
+                <motion.div className="rounded-2xl bg-muted border border-border p-6 text-center" variants={fadeUp}>
                   <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-surface-dark-muted text-xs">Goodwill erodes</p>
+                  <p className="text-muted-foreground text-xs">Goodwill erodes</p>
                 </motion.div>
-                <motion.div className="rounded-2xl bg-white/5 border border-white/10 p-6 text-center" variants={fadeUp}>
+                <motion.div className="rounded-2xl bg-muted border border-border p-6 text-center" variants={fadeUp}>
                   <Zap className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-surface-dark-muted text-xs">Revenue delayed</p>
+                  <p className="text-muted-foreground text-xs">Revenue delayed</p>
                 </motion.div>
               </div>
             </AnimatedSection>
@@ -158,9 +158,7 @@ const IntegraBridge = () => {
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* THE SOLUTION */}
+      {/* THE SOLUTION — DARK */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
@@ -185,20 +183,18 @@ const IntegraBridge = () => {
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* HOW IT WORKS — SPEEDS */}
-      <section className="bg-surface-dark py-20 md:py-28">
+      {/* HOW IT WORKS — LIGHT */}
+      <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Up to 1Gbps Delivered in 10 Days</p>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-4 max-w-3xl mx-auto">
               The fastest route to <span className="text-primary">Enterprise Internet</span>
             </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-6">
+            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-6">
               By bonding Starlink satellite with multiple 5G/4G carriers, Integra Bridge delivers an enterprise-grade SD-WAN connection that's fast, resilient, and fully monitored.
             </p>
-            <p className="text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-16">
               Delivered over a Layer 2 tunnel from our data centre, it provides the static IPs and stability your clients expect from Fibre — only this time, without the wait.
             </p>
           </AnimatedSection>
@@ -206,32 +202,30 @@ const IntegraBridge = () => {
           {/* Speed cards */}
           <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-3 mb-12" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {howItWorks.map((item) => (
-              <motion.div key={item.label} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+              <motion.div key={item.label} variants={fadeUp} className="rounded-2xl border border-border bg-card p-6 text-center">
                 <item.icon className="h-10 w-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
-                <h3 className="text-surface-dark-foreground font-normal mb-2">{item.label}</h3>
-                <p className="text-sm text-surface-dark-muted">{item.speed}</p>
+                <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
+                <p className="text-sm text-muted-foreground">{item.speed}</p>
               </motion.div>
             ))}
           </motion.div>
 
           <AnimatedSection>
-            <div className="rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 p-8 text-center max-w-2xl mx-auto">
-              <p className="text-surface-dark-foreground font-normal mb-2">Once fibre is installed, Integra Bridge doesn't switch off.</p>
-              <p className="text-surface-dark-muted text-sm">
+            <div className="rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 p-8 text-center max-w-2xl mx-auto">
+              <p className="text-foreground font-normal mb-2">Once fibre is installed, Integra Bridge doesn't switch off.</p>
+              <p className="text-muted-foreground text-sm">
                 It remains as a permanent multi-network, multi-technology failover — blending satellite and cellular for true always-on resilience.
               </p>
             </div>
           </AnimatedSection>
 
-          <p className="text-xs text-surface-dark-muted/60 text-center mt-8">
+          <p className="text-xs text-muted-foreground/60 text-center mt-8">
             *Speeds shown are typical for bonded links; results vary by radio conditions, satellite view and carrier policy.
           </p>
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* WHAT'S INCLUDED + CTA */}
+      {/* WHAT'S INCLUDED + CTA — DARK */}
       <section className="relative bg-surface-dark py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/assets/backgrounds/datacentre-hires-bg.webp" alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
@@ -279,26 +273,24 @@ const IntegraBridge = () => {
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* OTHER SOLUTIONS */}
-      <section className="bg-surface-dark py-20 md:py-28">
+      {/* OTHER SOLUTIONS — LIGHT */}
+      <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Other Solutions</p>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-4 max-w-3xl mx-auto">
               Where Fibre isn't available, Integra has the answer
             </h2>
-            <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
+            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
               Our Bridge, Cellular SD-WAN, and Lite solutions share the same Integra backbone, each scaled for different sites and budgets. From high-bandwidth installs to compact branch or backup connections, Integra keeps every location online.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {otherSolutions.map((sol) => (
               <motion.div key={sol.title} variants={fadeUp}>
-                <Link to={sol.link} className="group block rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-primary/30 transition-colors">
-                  <h3 className="text-lg font-normal text-surface-dark-foreground mb-3 group-hover:text-primary transition-colors">{sol.title}</h3>
-                  <p className="text-surface-dark-muted text-sm leading-relaxed mb-4">{sol.description}</p>
+                <Link to={sol.link} className="group block rounded-2xl border border-border bg-card p-8 hover:border-primary/30 transition-colors">
+                  <h3 className="text-lg font-normal text-foreground mb-3 group-hover:text-primary transition-colors">{sol.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{sol.description}</p>
                   <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
                     Learn More <ArrowRight className="h-3.5 w-3.5" />
                   </span>
@@ -309,25 +301,21 @@ const IntegraBridge = () => {
         </div>
       </section>
 
-      <div className="border-t border-white/5" />
-
-      {/* RELATED SERVICES */}
+      {/* RELATED SERVICES — DARK */}
       <RelatedServices
         services={relatedServices}
         heading="Complementary Services"
         subheading="Explore alternative connectivity solutions and failover options."
-      />
-
-      {/* RELATED CONTENT */}
-      <RelatedContent
-        stories={["mcgee-construction"]}
-        sectors={["construction-sites", "rural-smes"]}
         dark
       />
 
-      <div className="border-t border-white/5" />
+      {/* RELATED CONTENT — LIGHT */}
+      <RelatedContent
+        stories={["mcgee-construction"]}
+        sectors={["construction-sites", "rural-smes"]}
+      />
 
-      {/* CTA */}
+      {/* CTA — DARK */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimatedSection>
