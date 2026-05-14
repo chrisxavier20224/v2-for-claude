@@ -230,10 +230,10 @@ const IntegraSDWAN = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Fibre-Free Internet</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              We solve the rural internet problem.
+              Fibre-free business connectivity.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Forget waiting years for Fibre. We use bonded 4G/5G cellular networks to deliver high-speed, reliable internet in 14 days — with backup and failover built in.
+              No waiting years for fibre. We bond multiple 4G/5G cellular networks to deliver high-speed, resilient business internet in under 14 days — with automatic failover built in.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
