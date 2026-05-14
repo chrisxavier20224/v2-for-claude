@@ -33,8 +33,7 @@ export interface BlogPost {
   image: string;
   category: string;
   archived?: boolean;
-    archived: true,
-  }
+}
 
 export const blogPosts: BlogPost[] = [
   {
