@@ -13,9 +13,9 @@ import heroImg from "@/assets/connectivity/leased-lines-hero.webp";
 import comparisonImg from "@/assets/connectivity/leased-lines-wireless.jpg";
 
 const tiers = [
-  { speed: "100Mbps", type: "Managed Internet", description: "Dedicated bandwidth with SLA — the step up from SoGEA for businesses that need guaranteed performance without full leased line pricing.", price: "From £250/month" },
-  { speed: "200Mbps", type: "Managed Internet", description: "Symmetric dedicated access for growing teams. Ideal for multi-user environments with cloud applications, VoIP, and video conferencing.", price: "From £350/month" },
-  { speed: "500Mbps", type: "Managed Internet", description: "High-capacity dedicated internet for bandwidth-hungry operations. File transfers, remote desktops, and heavy cloud workloads handled comfortably.", price: "From £500/month" },
+  { speed: "100Mbps", type: "Managed Internet", description: "Dedicated bandwidth with SLA — the step up from SoGEA for businesses that need guaranteed performance without full leased line commitment." },
+  { speed: "200Mbps", type: "Managed Internet", description: "Symmetric dedicated access for growing teams. Ideal for multi-user environments with cloud applications, VoIP, and video conferencing." },
+  { speed: "500Mbps", type: "Managed Internet", description: "High-capacity dedicated internet for bandwidth-hungry operations. File transfers, remote desktops, and heavy cloud workloads handled comfortably." },
 ];
 
 const advantages = [
@@ -84,7 +84,7 @@ const ManagedInternet = () => {
                 <div className="text-3xl font-semibold text-primary mb-1">{tier.speed}</div>
                 <div className="text-xs font-semibold uppercase tracking-widest text-surface-dark-muted mb-4">{tier.type}</div>
                 <p className="text-sm text-surface-dark-muted leading-relaxed mb-6">{tier.description}</p>
-                <div className="text-sm font-medium text-surface-dark-foreground">{tier.price}</div>
+                <div className="text-xs font-medium text-primary uppercase tracking-widest">Bespoke per site</div>
               </motion.div>
             ))}
           </motion.div>

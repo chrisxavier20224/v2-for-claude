@@ -60,7 +60,7 @@ const aboutPoints = [
 const connectivityServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated fibre, symmetric speeds, guaranteed SLA. From £400/month. The gold standard for businesses that can't afford downtime.",
+    description: "Dedicated fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
     link: "/connectivity/leased-lines",
   },

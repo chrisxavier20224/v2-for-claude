@@ -27,7 +27,7 @@ const painPoints = [
   },
   {
     question: "Paying thousands for Openreach construction?",
-    answer: "We offer flat-rate installation from £2,200 with no hidden costs. No excess construction charges, no wayleave delays.",
+    answer: "Skip the excess construction charges and wayleave delays entirely — we deliver enterprise connectivity without digging the road up.",
   },
   {
     question: "Can't afford internet outages?",
@@ -76,7 +76,7 @@ const features = [
     icon: Globe,
     eyebrow: "Seamless IP Integration",
     title: "Static IP for CCTV, VPN & More",
-    description: "Static IPs available from £10/month on any tier. Perfect for CCTV, VPN, firewalls, and remote access.",
+    description: "Static IPs available on any tier. Perfect for CCTV, VPN, firewalls, and remote access.",
     img: stableImg,
     imgAlt: "Stable connectivity for CCTV and VPN",
     reverse: false,
@@ -84,10 +84,12 @@ const features = [
 ];
 
 
-const pricingTiers = [
-  { name: "Starlink SD-WAN", speed: "Variable (Starlink + 4G/5G)", price: "80", staticIp: "Static IP £10/month", install: "£2,200", features: ["Starlink + 4G/5G failover", "You pay Starlink direct for dish"] },
-  { name: "Integra Ultrafast", speed: "Up to 500Mbps", price: "195", staticIp: "Static IP £10/month", install: "£2,800", features: ["Three-network bonding", "Maximum redundancy"] },
-  { name: "Enterprise", speed: "Up to 500Mbps", price: "400", staticIp: "Static IP £10/month", install: "£3,300", features: ["99.99% uptime SLA", "Dedicated account manager"] },
+const planLadder = [
+  { name: "Integra Backup", carriers: "Single 4G/5G carrier", speed: "Up to 100Mbps", users: "Failover / small site" },
+  { name: "Integra Lite", carriers: "Two carriers bonded", speed: "Up to 200Mbps", users: "Up to ~10 users" },
+  { name: "Integra Pro", carriers: "Two carriers bonded", speed: "Up to 350Mbps", users: "10–25 users" },
+  { name: "Integra Ultrafast", carriers: "Three carriers bonded", speed: "Up to 500Mbps", users: "25–50 users" },
+  { name: "Integra Enterprise", carriers: "Three carriers + SLA", speed: "Up to 500Mbps", users: "50+ users, mission-critical" },
 ];
 
 const faqs = [
@@ -96,7 +98,7 @@ const faqs = [
   { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a desktop survey." },
   { q: "How much data do I get?", a: "With multi-network connections, you're looking at around 1.8TB of data per month — more than enough for a business running video calls, cloud apps, and file sharing all day. There's a fair usage policy, but in practice the vast majority of customers never come close to hitting it." },
   { q: "Can SD-WAN bridge the gap while we wait for fibre?", a: "Yes. Many customers run Integra SD-WAN as interim connectivity during a fibre install, then keep it as permanent failover once fibre is live. See Integra Bridge for our dedicated bridging product." },
-  { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers for £10/month. Essential for CCTV, VPNs, firewalls, and remote access." },
+  { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers. Essential for CCTV, VPNs, firewalls, and remote access — included in your bespoke quote." },
   { q: "Do you provide CCTV services?", a: "We install and support CCTV systems — we don't monitor them. Our CCTV service includes professional installation, cloud remote access via Integra Cloud, and full technical support." },
 ];
 
@@ -179,7 +181,7 @@ const IntegraSDWAN = () => {
     <PageLayout>
       <SEO
         title="Integra SD-WAN"
-        description="Fast internet without fibre. Bonded 4G/5G, 14-day install, 99.5% SLA, from £80/month."
+        description="Fast internet without fibre. Bonded 4G/5G, 14-day install, 99.5% SLA. Bespoke pricing per site."
         keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to fibre, business connectivity, fast broadband"
         url="/connectivity/integra-sd-wan"
       />
@@ -276,62 +278,54 @@ const IntegraSDWAN = () => {
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Pricing</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Plans Scale With Your Site</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-              SD-WAN plans for business.
+              The SD-WAN ladder: Backup to Enterprise.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-              Choose the speed and redundancy that fits your budget. All plans include UK-based support and 99.5% SLA.
+              Same product family, scaled to the bandwidth, redundancy and SLA your site needs. Pricing is bespoke per site — request a quote for what's deliverable at your address.
             </p>
           </AnimatedSection>
-          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            {pricingTiers.map((tier) => (
+          <motion.div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            {planLadder.map((tier, i) => (
               <motion.div
                 key={tier.name}
                 variants={fadeUp}
-                className="rounded-xl p-6 border border-border bg-card hover:border-primary/50 transition-all"
+                className="rounded-xl p-6 border border-border bg-card hover:border-primary/50 transition-all flex flex-col"
               >
-                <h3 className="text-lg font-medium text-foreground mb-2">{tier.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{tier.speed}</p>
-                <div className="mb-1">
-                  <span className="text-3xl font-medium text-foreground">
-                    £{tier.price}
-                  </span>
-                  <span className="text-muted-foreground text-sm">/month</span>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary/80 mb-2">Tier {i + 1}</p>
+                <h3 className="text-base font-medium text-foreground mb-4">{tier.name}</h3>
+                <div className="space-y-3 text-sm flex-grow">
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-1">Carriers</p>
+                    <p className="text-foreground">{tier.carriers}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-1">Speed</p>
+                    <p className="text-foreground">{tier.speed}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-1">Suited To</p>
+                    <p className="text-foreground">{tier.users}</p>
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground mb-4">+VAT</p>
-                <div className="space-y-2 mb-6">
-                  <p className="text-xs text-muted-foreground font-medium">{tier.staticIp}</p>
-                  <p className="text-xs text-muted-foreground font-medium">
-                    Installation: {tier.install} +VAT
-                  </p>
-                  {tier.features.map((feature, i) => (
-                    <p key={i} className="text-xs text-muted-foreground font-medium">
-                      {feature}
-                    </p>
-                  ))}
-                </div>
-                <Button asChild size="sm" variant="outline" className="border-border text-foreground hover:bg-white/5">
-                  <Link to="/check">Check Availability</Link>
-                </Button>
               </motion.div>
             ))}
           </motion.div>
 
-          <div className="text-center mt-8">
-            <p className="text-muted-foreground text-sm mb-4">Unsure what option is right for you?</p>
+          <div className="text-center mt-12">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild variant="outline">
-                <Link to="/contact">Speak to our team</Link>
+              <Button asChild className="bg-primary text-white hover:bg-primary/90">
+                <Link to="/contact" className="inline-flex items-center gap-2">Request a quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline">
-                <Link to="/pricing">See All Pricing</Link>
+                <Link to="/check">Check availability</Link>
               </Button>
             </div>
+            <p className="text-xs text-muted-foreground/60 mt-6">
+              Pricing is bespoke per site — every quote follows a free survey.
+            </p>
           </div>
-          <p className="text-xs text-muted-foreground/60 text-center mt-6">
-            All prices exclude VAT. Installation costs can vary subject to the property's size and WiFi network requirements.
-          </p>
         </div>
       </section>
 
