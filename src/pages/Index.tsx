@@ -16,23 +16,18 @@ import heroImg from "@/assets/hero-home.webp";
 
 // Connectivity service images
 import sdwanImg from "@/assets/sectors/rural-sme-hero.webp";
-import fibreImg from "@/assets/sectors/fibre-building-hero.webp";
 import leasedImg from "@/assets/connectivity/leased-lines-hero.webp";
-import simImg from "@/assets/connectivity/managed-sim-hero.webp";
+import bridgeImg from "@/assets/connectivity/bridge-hero.webp";
+import fibreImg from "@/assets/sectors/fibre-building-hero.webp";
+import bpImg from "@/assets/sectors/business-parks-hero.webp";
 
-// WiFi images
+// WiFi / Supporting
 import businessWifiImg from "@/assets/connectivity/business-wifi-hero.jpg";
-import homeWifiImg from "@/assets/connectivity/home-wifi-hero.jpg";
-
-// Unified Comms
 import ucImg from "@/assets/connectivity/unified-comms-hero.webp";
 
 // Sector images
 import constructionImg from "@/assets/sectors/construction-hero.webp";
-import homeworkerImg from "@/assets/sectors/homeworker-remote-work.avif";
 import ruralImg from "@/assets/sectors/rural-sme-hero.webp";
-import airbnbImg from "@/assets/sectors/airbnb-hero.webp";
-import businessParkImg from "@/assets/sectors/business-parks-hero.webp";
 
 const staggerContainer = {
   hidden: {},
@@ -64,52 +59,36 @@ const aboutPoints = [
 
 const connectivityServices = [
   {
-    title: "Integra SD-WAN",
-    description: "Satellite + cellular, bonded together. 100–350Mbps where fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
-    img: sdwanImg,
-    link: "/connectivity/integra-sd-wan",
-  },
-  {
-    title: "Fibre Enabled Buildings",
-    description: "Pre-connected hyperfast internet for new developments. Custom system designs, flexible contracts, and immediate connectivity from day one.",
-    img: fibreImg,
-    link: "/sectors/business-parks",
-  },
-  {
     title: "Leased Lines",
     description: "Dedicated fibre, symmetric speeds, guaranteed SLA. From £400/month. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
     link: "/connectivity/leased-lines",
   },
   {
-    title: "Managed SIM Services",
-    description: "Custom quoted. Temporary connectivity for construction sites, events, and remote operations. PSTN switch-off ready. Deploy in days.",
-    img: simImg,
-    link: "/connectivity/managed-sim-services",
-  },
-];
-
-const wifiServices = [
-  {
-    title: "Business WiFi",
-    description: "Enterprise-grade mesh networks for offices, warehouses, and multi-building sites. Managed remotely via Integra Cloud with UK-based support.",
-    img: businessWifiImg,
-    link: "/connectivity/business-wifi",
+    title: "SoGEA",
+    description: "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.",
+    img: fibreImg,
+    link: "/connectivity/so-gea",
   },
   {
-    title: "Home WiFi",
-    description: "Whole-home mesh WiFi that reaches every room. No dead spots, no buffering. Designed for remote workers who can't afford dropped calls.",
-    img: homeWifiImg,
-    link: "/connectivity/business-wifi",
+    title: "Managed Internet",
+    description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.",
+    img: bpImg,
+    link: "/connectivity/managed-internet",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Satellite + cellular, bonded together. 100–350Mbps where fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
+    img: sdwanImg,
+    link: "/connectivity/integra-sd-wan",
   },
 ];
 
 const sectors = [
   { title: "Construction", img: constructionImg, link: "/sectors/construction-sites" },
-  { title: "Homeworkers", img: homeworkerImg, link: "/" },
   { title: "Rural SMEs", img: ruralImg, link: "/sectors/rural-smes" },
-  { title: "Airbnbs", img: airbnbImg, link: "/" },
-  { title: "Business Parks", img: businessParkImg, link: "/sectors/business-parks" },
+  { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
+  { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
 ];
 
 const locations = [
@@ -240,12 +219,49 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Internet Connectivity</p>
               <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                Four ways to get you online. One that's perfect for you.
+                Business connectivity, plus the one thing nobody else has.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-                We layer satellite, cellular, and fibre to bring properties online in under 14 days — even in places where BT, Virgin, and Vodafone say it isn't possible.
+                Leased lines, SoGEA, and managed internet — the same destination as any major ISP. Plus Integra Bridge: the only product that gets you online in days, then stays on as permanent failover.
               </p>
             </AnimatedSection>
+
+            {/* Featured — Integra Bridge */}
+            <AnimatedSection>
+              <Link to="/connectivity/integra-bridge" className="group block mb-8">
+                <motion.div
+                  className="relative rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent"
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                >
+                  <div className="aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
+                    <img
+                      src={bridgeImg}
+                      alt="Integra Bridge"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+                  </div>
+                  <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10">
+                    <span className="inline-block w-fit rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wide px-3 py-1 mb-3">
+                      Featured
+                    </span>
+                    <h3 className="text-2xl sm:text-3xl text-white font-medium mb-2">
+                      Integra Bridge
+                    </h3>
+                    <p className="text-white/80 max-w-xl text-base sm:text-lg leading-relaxed mb-4">
+                      Enterprise internet in ~10 days while you wait for fibre. Stays on as permanent failover.
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-3 transition-all">
+                      Learn More <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
+            </AnimatedSection>
+
+            {/* Standard cards */}
             <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {connectivityServices.map((service) => (
                 <motion.div key={service.title} variants={fadeUp}>
@@ -264,71 +280,15 @@ const Index = () => {
                 </motion.div>
               ))}
             </motion.div>
-          </div>
-        </section>
 
-        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-
-        {/* ── WIFI & MANAGED NETWORKS ──────────────────────────────────── */}
-        <section className="bg-background py-20 md:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            {/* Supporting solutions */}
             <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">WiFi & Managed Networks</p>
-              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                Fast internet is worthless without a bulletproof network.
-              </h2>
-              <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-                Getting connected is step one. Distributing that connection across your home, office, or multi-building site — reliably — is step two. We handle both.
-              </p>
-            </AnimatedSection>
-            <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-              {wifiServices.map((service) => (
-                <motion.div key={service.title} variants={fadeUp}>
-                  <Link to={service.link} className="group block">
-                    <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                      <div className="aspect-[4/3] overflow-hidden">
-                        <img src={service.img} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                      </div>
-                    </motion.div>
-                    <h3 className="text-heading-3 text-foreground mt-5 mb-2 group-hover:text-primary transition-colors font-medium">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">{service.description}</p>
-                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                      {service.title} <ArrowRight className="h-3.5 w-3.5" />
-                    </span>
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-
-        {/* ── UNIFIED COMMUNICATIONS ───────────────────────────────────── */}
-        <section className="bg-surface-dark py-20 md:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Unified Communications</p>
-              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                One platform for calls, video, and messaging.
-              </h2>
-              <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-                The PSTN switches off January 2027. Move to VoIP now and get better call quality, lower costs, and a system that works from any device, anywhere.
-              </p>
-            </AnimatedSection>
-            <AnimatedSection>
-              <Link to="/connectivity/unified-communications" className="group block max-w-2xl mx-auto">
-                <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                  <div className="aspect-video overflow-hidden">
-                    <img src={ucImg} alt="Unified Communications" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                  </div>
-                </motion.div>
-                <h3 className="text-heading-3 text-surface-dark-foreground mt-5 mb-2 group-hover:text-primary transition-colors font-medium">Unified Communications</h3>
-                <p className="text-surface-dark-muted text-sm leading-relaxed mb-3">VoIP, video conferencing, and team messaging in one platform. Works over any Integra connection. PSTN switch-off ready.</p>
-                <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                  Unified Communications <ArrowRight className="h-3.5 w-3.5" />
-                </span>
-              </Link>
+              <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+                <span className="text-sm text-surface-dark-muted">Supporting solutions:</span>
+                <Link to="/connectivity/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
+                <span className="text-white/20">|</span>
+                <Link to="/connectivity/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
+              </div>
             </AnimatedSection>
           </div>
         </section>
@@ -341,13 +301,13 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Sectors We Serve</p>
               <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                Built for the sites everyone else says no to.
+                Built for businesses fibre leaves behind.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
                 Construction sites that move every 6 months. Farms with no line of sight. Business parks with 30 tenants sharing one connection. We've solved them all.
               </p>
             </AnimatedSection>
-            <motion.div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.div className="grid gap-6 grid-cols-2 sm:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {sectors.map((sector) => (
                 <motion.div key={sector.title} variants={fadeUp}>
                   <Link to={sector.link} className="group block">
