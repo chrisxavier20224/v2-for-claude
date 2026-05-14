@@ -30,16 +30,16 @@ const Wholesale = () => {
   return (
     <PageLayout>
       <SEO
-        title="Wholesale & ISP Partnership"
+        title="Wholesale & MSP Partnership"
         description="The infrastructure partner behind your brand. Integra delivers enterprise-grade connectivity in 14 days under your brand — survey, install, and support handled."
-        keywords="ISP wholesale, connectivity partner, white label SD-WAN, reseller programme, ISP partnership UK, wholesale internet"
+        keywords="MSP wholesale, connectivity partner, white label SD-WAN, reseller programme, MSP partnership UK, wholesale internet"
         url="/wholesale"
       />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Integra wholesale ISP partnership" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Integra wholesale MSP partnership" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/60 to-black/30" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -51,9 +51,9 @@ const Wholesale = () => {
                 </span>
               </Link>
             </motion.div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">For ISPs &amp; Resellers</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">For MSPs &amp; Resellers</p>
             <h1 className="mb-6 text-heading-1 md:text-display-sm font-normal tracking-tight text-white max-w-3xl">
-              Be the ISP that delivers — <span className="text-primary">even when fibre can't.</span>
+              Be the MSP that delivers — <span className="text-primary">even when fibre can't.</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
               When your customer needs connectivity and the fibre's weeks away, Integra is the infrastructure partner behind your brand. We handle the survey, install, and support. You keep the customer, the brand, and the margin.
@@ -166,7 +166,7 @@ const Wholesale = () => {
         </div>
       </section>
 
-      {/* INTEGRA BRIDGE FOR ISPs — dark (featured card) */}
+      {/* INTEGRA BRIDGE FOR MSPs — dark (featured card) */}
       <section className="relative bg-surface-dark py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/assets/backgrounds/datacentre-hires-bg.webp" alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
@@ -174,7 +174,7 @@ const Wholesale = () => {
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto rounded-2xl border-2 border-primary bg-primary/10 ring-1 ring-primary/30 p-10 text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Integra Bridge for ISPs</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Integra Bridge for MSPs</p>
               <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-6">
                 Deliver day one. <span className="text-primary">Let the fibre catch up.</span>
               </h2>
