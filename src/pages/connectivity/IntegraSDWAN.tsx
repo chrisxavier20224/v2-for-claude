@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Zap, Shield, Upload, Globe, Wifi, ChevronDown, Home, Landmark, Phone } from "lucide-react";
+import { ArrowLeft, ArrowRight, Wifi, ChevronDown, Landmark, Phone, Network, Layers, CheckCircle2, Wrench } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -12,10 +12,6 @@ import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
-import speedsImg from "@/assets/connectivity/sdwan-speeds.jpg";
-import installImg from "@/assets/connectivity/sdwan-install.webp";
-import stableImg from "@/assets/connectivity/sdwan-stable.jpg";
-import aerialImg from "@/assets/connectivity/sdwan-aerial.webp";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -35,71 +31,35 @@ const painPoints = [
   },
 ];
 
-const features = [
-  {
-    icon: Zap,
-    eyebrow: "SD-WAN Technology",
-    title: "Fibre-Like Speeds, No Fibre Required",
-    description: "We bond multiple 4G/5G connections through our datacentre, delivering combined speeds up to 500Mbps. Rain doesn't affect cellular — unlike satellite alternatives.",
-    img: speedsImg,
-    imgAlt: "SD-WAN fibre-like speeds",
-    reverse: false,
-  },
-  {
-    icon: Wifi,
-    eyebrow: "Quick Installation",
-    title: "Installed in Under 14 Days",
-    description: "Our engineer arrives, tests 4G/5G signal from nearby towers, mounts radios, installs our commercial-grade router, and connects to your network. You're online same day.",
-    img: installImg,
-    imgAlt: "Quick SD-WAN installation",
-    reverse: true,
-  },
-  {
-    icon: Shield,
-    eyebrow: "Always-On Connectivity",
-    title: "Dual-Network Redundancy",
-    description: "Two 4G/5G connections from different operators (O2, Vodafone, EE, Three). If one drops, the other takes over instantly. 99.5% uptime SLA — not 'best effort'.",
-    img: stableImg,
-    imgAlt: "Stable internet connectivity",
-    reverse: false,
-  },
-  {
-    icon: Upload,
-    eyebrow: "Lightning Fast Uploads",
-    title: "100Mbps+ Upload Speeds",
-    description: "Upload large CAD files, construction plans, and designs in minutes — not hours. 100Mbps+ upload is significantly faster than Starlink's 10-15Mbps.",
-    img: aerialImg,
-    imgAlt: "SD-WAN aerial connectivity infrastructure",
-    reverse: true,
-  },
-  {
-    icon: Globe,
-    eyebrow: "Seamless IP Integration",
-    title: "Static IP for CCTV, VPN & More",
-    description: "Static IPs available on any tier. Perfect for CCTV, VPN, firewalls, and remote access.",
-    img: stableImg,
-    imgAlt: "Stable connectivity for CCTV and VPN",
-    reverse: false,
-  },
+const tiers = [
+  { name: "Integra Backup", carriers: "Single 4G/5G network", speed: "Automatic failover", users: "For resilient backup on an existing line, or a fast standalone circuit while you wait for fibre." },
+  { name: "Integra Lite", carriers: "Two carriers — load balanced or bonded", speed: "Up to 100 Mbps", users: "Up to 5 users. Entry-level SD-WAN for sites that need resilience more than raw performance." },
+  { name: "Integra Pro", carriers: "Two carriers — load balanced or bonded", speed: "Up to 300 Mbps", users: "5–20 users. The default for most sites — serious performance with built-in resilience." },
+  { name: "Integra Ultrafast", carriers: "Three carriers — load balanced or bonded", speed: "Up to 400 Mbps", users: "20–40 users. More users, more data, more headroom — for busy sites that have outgrown Pro." },
+  { name: "Integra Enterprise", carriers: "Four carriers — load balanced or bonded", speed: "Up to 500 Mbps", users: "40+ users. Maximum speed and resilience, for the sites that cannot go down." },
 ];
 
-
-const planLadder = [
-  { name: "Integra Backup", carriers: "Single 4G/5G carrier", speed: "Up to 100Mbps", users: "Failover / small site" },
-  { name: "Integra Lite", carriers: "Two carriers bonded", speed: "Up to 200Mbps", users: "Up to ~10 users" },
-  { name: "Integra Pro", carriers: "Two carriers bonded", speed: "Up to 350Mbps", users: "10–25 users" },
-  { name: "Integra Ultrafast", carriers: "Three carriers bonded", speed: "Up to 500Mbps", users: "25–50 users" },
-  { name: "Integra Enterprise", carriers: "Three carriers + SLA", speed: "Up to 500Mbps", users: "50+ users, mission-critical" },
+const included = [
+  "Multi-carrier 4G/5G connection — load balanced or bonded",
+  "Site survey and carrier signal testing before installation",
+  "Carrier-specific external antennas, selected and positioned for your site",
+  "A high-performance SD-WAN router — not a budget device",
+  "Automatic failover across all carriers",
+  "24/7 network monitoring via Integra Cloud",
+  "UK-based support via phone and email",
+  "Static IP included as standard on bonded configurations",
 ];
 
 const faqs = [
-  { q: "Who can benefit from Integra SD-WAN?", a: "Any business in a location where fibre isn't available or where existing speeds are insufficient. This includes construction sites, business parks, multi-site operations, and industrial premises." },
-  { q: "How can I determine the speed you can offer at my property?", a: "Use our free Availability Checker tool or get in touch with our team. We'll assess your location and provide an estimated speed range." },
-  { q: "Is a property visit necessary for service assessment?", a: "Not always. We can often assess your property remotely, but for complex installations our engineers may conduct a desktop survey." },
-  { q: "How much data do I get?", a: "With multi-network connections, you're looking at around 1.8TB of data per month — more than enough for a business running video calls, cloud apps, and file sharing all day. There's a fair usage policy, but in practice the vast majority of customers never come close to hitting it." },
-  { q: "Can SD-WAN bridge the gap while we wait for fibre?", a: "Yes. Many customers run Integra SD-WAN as interim connectivity during a fibre install, then keep it as permanent failover once fibre is live. See Integra Bridge for our dedicated bridging product." },
-  { q: "I need a static IP for my CCTV requirements.", a: "Static IPs are available on all tiers. Essential for CCTV, VPNs, firewalls, and remote access — included in your bespoke quote." },
-  { q: "Do you provide CCTV services?", a: "We install and support CCTV systems — we don't monitor them. Our CCTV service includes professional installation, cloud remote access via Integra Cloud, and full technical support." },
+  { q: "What's the difference between load balanced and bonded?", a: "Both use the same hardware and carriers — the difference is how traffic is handled. Load balanced distributes traffic across carriers independently; each session uses one carrier at a time, routed to the least-congested path. It works well for multi-user sites running browsing, email, and cloud apps. Bonded combines every carrier into encrypted tunnels through our cloud bonding server, creating a single unified pipe — a single download uses the combined bandwidth of every carrier at once, and a static public IP is included as standard." },
+  { q: "What is CGNAT, and why does it matter?", a: "Most 4G/5G connections put you behind carrier-grade NAT — hundreds of customers share one upstream public address, so nothing from outside can reach your site. Outbound traffic is fine, but inbound VPNs, port forwarding, and remote CCTV access all break. Our bonded configuration solves this structurally by routing traffic through our cloud bonding server, which hands your site a real static public IP on the way out." },
+  { q: "Can I get a static IP?", a: "Yes. A static, routable, public IPv4 address is included as standard on every bonded configuration — so VPN tunnels terminate on your firewall, remote access works like a fibre leased line, and CCTV and remote support reach the site normally. On load-balanced configurations the static IP is available as an add-on." },
+  { q: "How does SD-WAN compare to Starlink?", a: "Starlink can deliver decent download speeds, but for a business site working all day the limitations show: inconsistent upload, latency spikes under load, and a single connection with no redundancy — if it drops, the site goes dark. Integra SD-WAN runs on multiple independent mobile carriers, all active, with automatic failover and 24/7 monitoring." },
+  { q: "Can SD-WAN replace a leased line?", a: "They solve different problems. A leased line is dedicated symmetric bandwidth — ideal where it's available and the install timeline works. Integra SD-WAN is for sites where fibre can't reach, takes too long to install, or carries a prohibitive excess construction charge. It's also commonly deployed alongside a leased line as a genuinely resilient, monitored failover." },
+  { q: "What happens if a carrier goes down?", a: "Traffic is automatically redistributed across the remaining carriers. No manual switching, no IT callout. Because all carriers are active all the time, the failover is seamless — the site keeps performing, not just surviving." },
+  { q: "Is there a data limit?", a: "Each configuration carries a fair usage allowance that scales with the number of carriers. These aren't hard caps — a site that exceeds the allowance isn't suspended or throttled immediately. We confirm the right allowance for your use case before installation." },
+  { q: "How is the connection monitored?", a: "Every carrier is monitored 24/7 via Integra Cloud. If a carrier degrades or drops, we know immediately — we're not waiting for you to report a problem. On a multi-carrier setup that matters: if one carrier quietly fails, the site still works but loses throughput and redundancy, and we catch that before it becomes an issue." },
+  { q: "What's the installation process?", a: "One engineer visit — site survey, carrier testing, antenna selection and mounting, router installation, and field testing across all networks. Typically live within 14 days of order." },
 ];
 
 const relatedServices = [
@@ -246,86 +206,146 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
-      {features.map((feature, i) => (
-        <div key={i}>
-          <GradientBand fromColor={i % 2 === 0 ? "hsl(222 47% 11%)" : "hsl(0 0% 100%)"} toColor={i % 2 === 0 ? "hsl(0 0% 100%)" : "hsl(222 47% 11%)"} />
-          <section className={i % 2 === 0 ? "bg-background py-16 md:py-24" : "bg-surface-dark py-16 md:py-24"}>
-            <div className="mx-auto max-w-6xl px-4 sm:px-6">
-              <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
-                <AnimatedSection direction={feature.reverse ? "right" : "left"} delay={0.1} className={feature.reverse ? "order-2 lg:order-2" : ""}>
-                  <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
-                    <feature.icon className="h-9 w-9" strokeWidth={1.5} />
-                  </motion.div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">{feature.eyebrow}</p>
-                  <h2 className={`mb-4 text-heading-1 md:text-display-sm ${i % 2 === 0 ? "text-foreground" : "text-surface-dark-foreground"}`}>{feature.title}</h2>
-                  <p className={`text-lg leading-relaxed ${i % 2 === 0 ? "text-muted-foreground" : "text-surface-dark-muted"}`}>{feature.description}</p>
-                </AnimatedSection>
-                {feature.img && (
-                  <AnimatedSection direction={feature.reverse ? "left" : "right"} delay={0.2} className={feature.reverse ? "order-1 lg:order-1" : ""}>
-                    <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                      <img src={feature.img} alt={feature.imgAlt} className="w-full h-auto object-cover aspect-video" loading="lazy" />
-                    </motion.div>
-                  </AnimatedSection>
-                )}
-              </div>
-            </div>
-          </section>
-        </div>
-      ))}
-
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
-
+      {/* HOW IT WORKS */}
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Plans Scale With Your Site</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">How it works</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-              The SD-WAN ladder: Backup to Enterprise.
+              One connection. Multiple carriers. No single point of failure.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-              Same product family, scaled to the bandwidth, redundancy and SLA your site needs. Pricing is bespoke per site — request a quote for what's deliverable at your address.
+              Integra SD-WAN combines multiple 4G/5G connections from different carriers into one resilient link — load balanced or bonded, depending on what your site needs.
+            </p>
+          </AnimatedSection>
+          <motion.div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 border border-border bg-card">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+                <Network className="h-7 w-7" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-heading-3 text-foreground mb-3">Load Balanced</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Traffic is distributed across carriers independently — each session uses one carrier at a time, and the SD-WAN router routes new sessions to the least-congested path. The right fit for multi-user sites running browsing, email, and cloud applications.
+              </p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 border border-border bg-card">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+                <Layers className="h-7 w-7" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-heading-3 text-foreground mb-3">Bonded</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Every carrier is combined into encrypted tunnels through our cloud bonding server, creating a single unified pipe — one download uses the combined bandwidth of every carrier at once. Bonded sites also get a static, routable public IP included as standard.
+              </p>
+            </motion.div>
+          </motion.div>
+          <AnimatedSection delay={0.2}>
+            <p className="text-base text-muted-foreground text-center max-w-3xl mx-auto mt-12 leading-relaxed">
+              Traffic flows from your firewall, through the SD-WAN router, across the carriers, into our bonding server, and out to the internet through a fixed IP — certificate-authenticated, VPN-transparent, and monitored 24/7.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* THE SD-WAN RANGE */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">The SD-WAN range</p>
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
+              A tier for every site.
+            </h2>
+            <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
+              From single-network failover to four-carrier bonded connectivity — the right configuration depends on your site's size, workload, and resilience needs. We'll recommend the fit after a survey.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            {planLadder.map((tier, i) => (
+            {tiers.map((tier, i) => (
               <motion.div
                 key={tier.name}
                 variants={fadeUp}
-                className="rounded-xl p-6 border border-border bg-card hover:border-primary/50 transition-all flex flex-col"
+                className="rounded-xl p-6 border border-white/10 bg-white/5 hover:border-primary/50 transition-all flex flex-col"
               >
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary/80 mb-2">Tier {i + 1}</p>
-                <h3 className="text-base font-medium text-foreground mb-4">{tier.name}</h3>
+                <h3 className="text-base font-medium text-surface-dark-foreground mb-4">{tier.name}</h3>
                 <div className="space-y-3 text-sm flex-grow">
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-1">Carriers</p>
-                    <p className="text-foreground">{tier.carriers}</p>
+                    <p className="text-xs uppercase tracking-wider text-surface-dark-muted/70 mb-1">Carriers</p>
+                    <p className="text-surface-dark-foreground">{tier.carriers}</p>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-1">Speed</p>
-                    <p className="text-foreground">{tier.speed}</p>
+                    <p className="text-xs uppercase tracking-wider text-surface-dark-muted/70 mb-1">Speed</p>
+                    <p className="text-surface-dark-foreground">{tier.speed}</p>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-1">Suited To</p>
-                    <p className="text-foreground">{tier.users}</p>
+                    <p className="text-xs uppercase tracking-wider text-surface-dark-muted/70 mb-1">Suited to</p>
+                    <p className="text-surface-dark-foreground">{tier.users}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
-
-          <div className="text-center mt-12">
+          <AnimatedSection delay={0.2}>
+            <p className="text-sm text-surface-dark-muted max-w-3xl mx-auto mt-12 leading-relaxed text-center">
+              A note on sizing: these user counts are a general guide. Cloud-first businesses with constant file syncs, remote teams with heavy HQ access and video calls, and creative, media, and design teams pushing large uploads or remote rendering should step up a category — those workloads consume more capacity per user than the headline numbers assume.
+            </p>
+          </AnimatedSection>
+          <div className="text-center mt-10">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild className="bg-primary text-white hover:bg-primary/90">
                 <Link to="/contact" className="inline-flex items-center gap-2">Request a quote <ArrowRight className="h-4 w-4" /></Link>
               </Button>
-              <Button asChild variant="outline">
+              <Button asChild variant="outline" className="bg-transparent text-surface-dark-foreground border-white/20 hover:bg-white/10 hover:text-surface-dark-foreground">
                 <Link to="/check">Check availability</Link>
               </Button>
             </div>
-            <p className="text-xs text-muted-foreground/60 mt-6">
-              Pricing is bespoke per site — every quote follows a free survey.
-            </p>
           </div>
+        </div>
+      </section>
+
+      {/* WHAT'S INCLUDED */}
+      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
+      <section className="bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-start">
+            <AnimatedSection direction="left">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">What's included</p>
+              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">Everything you need, included.</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                No hidden add-ons, no surprise line items. One service covers the hardware, the install, the carriers, the monitoring, and the support.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection direction="right" delay={0.1}>
+              <ul className="space-y-4">
+                {included.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* PROFESSIONAL INSTALLATION */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <AnimatedSection>
+            <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/15 text-primary mb-6">
+              <Wrench className="h-8 w-8" strokeWidth={1.5} />
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Professional installation</p>
+            <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">
+              Live in under 14 days. Engineered for your site.
+            </h2>
+            <p className="text-lg text-surface-dark-muted leading-relaxed">
+              We handle the full process — no involvement needed from your team beyond site access. Our engineer surveys the site, tests every available mobile network, identifies the strongest carriers, and selects carrier-specific external antennas for each. The router is installed in the comms cabinet or an external weatherproof enclosure, depending on the site layout. Every installation is engineered for that specific location — the antennas, mounting positions, and cable routing are chosen from what the survey reveals, not shipped as a standard kit. No Openreach, no wayleaves, no months of waiting. One engineer visit, and your site is live.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -335,7 +355,7 @@ const IntegraSDWAN = () => {
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-16">FAQ's</h2>
+            <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-16">Frequently asked questions.</h2>
           </AnimatedSection>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
