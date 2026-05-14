@@ -278,29 +278,23 @@ const IntegraSDWAN = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Pricing</p>
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto">
-              Plans for every scenario.
+              SD-WAN plans for business.
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
               Choose the speed and redundancy that fits your budget. All plans include UK-based support and 99.5% SLA.
             </p>
           </AnimatedSection>
-          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div className="grid gap-6 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {pricingTiers.map((tier) => (
               <motion.div
                 key={tier.name}
                 variants={fadeUp}
-                className={`rounded-xl p-6 border transition-all ${
-                  tier.popular
-                    ? "border-primary bg-primary/5 ring-2 ring-primary/30"
-                    : "border-border bg-card hover:border-primary/50"
-                }`}
+                className="rounded-xl p-6 border border-border bg-card hover:border-primary/50 transition-all"
               >
                 <h3 className="text-lg font-medium text-foreground mb-2">{tier.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{tier.speed}</p>
                 <div className="mb-1">
                   <span className="text-3xl font-medium text-foreground">
-                    {'pricePrefix' in tier && (tier as any).pricePrefix && <span className="text-lg">{(tier as any).pricePrefix}</span>}
-                    {'originalPrice' in tier && (tier as any).originalPrice && <span className="text-lg line-through text-muted-foreground/50 mr-1">£{(tier as any).originalPrice}</span>}
                     £{tier.price}
                   </span>
                   <span className="text-muted-foreground text-sm">/month</span>
@@ -309,22 +303,15 @@ const IntegraSDWAN = () => {
                 <div className="space-y-2 mb-6">
                   <p className="text-xs text-muted-foreground font-medium">{tier.staticIp}</p>
                   <p className="text-xs text-muted-foreground font-medium">
-                    Installation: {tier.originalInstall ? (
-                      <><span className="line-through opacity-50">{tier.originalInstall}</span> <span className="text-status-ok font-bold">{tier.install}</span></>
-                    ) : tier.install} +VAT
+                    Installation: {tier.install} +VAT
                   </p>
-                  {tier.originalInstall && (
-                    <div className="inline-flex items-center gap-1 bg-status-ok/15 border border-status-ok/30 text-status-ok px-2 py-0.5 rounded-md mt-1">
-                      <span className="text-[10px] font-bold">SAVE £700</span>
-                    </div>
-                  )}
                   {tier.features.map((feature, i) => (
                     <p key={i} className="text-xs text-muted-foreground font-medium">
                       {feature}
                     </p>
                   ))}
                 </div>
-                <Button asChild size="sm" variant={tier.popular ? "default" : "outline"} className={tier.popular ? "" : "border-border text-foreground hover:bg-white/5"}>
+                <Button asChild size="sm" variant="outline" className="border-border text-foreground hover:bg-white/5">
                   <Link to="/check">Check Availability</Link>
                 </Button>
               </motion.div>
