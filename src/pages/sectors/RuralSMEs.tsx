@@ -104,7 +104,7 @@ const RuralSMEs = () => {
               Your business can't grow on 2Mbps ADSL.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              107 rural UK businesses already run on Integra. Up to 350Mbps via cellular SD-WAN, installed in 14 days. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
+              Rural businesses don't have to settle for slow copper. Up to 500Mbps via cellular SD-WAN, installed in 14 days — or <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for a leased line. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
