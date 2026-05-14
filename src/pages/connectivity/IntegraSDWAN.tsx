@@ -141,7 +141,7 @@ const sdwanServiceSchema = {
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "GBP",
-    offerCount: "5",
+    offerCount: "3",
     lowPrice: "80",
     highPrice: "400",
   },
