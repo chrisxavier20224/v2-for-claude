@@ -99,6 +99,15 @@ export const FigureSlot = ({ description }: { description: string }) => (
   </figure>
 );
 
+export const FounderInput = ({ children }: { children: React.ReactNode }) => (
+  <aside className="my-8 not-prose rounded-lg border border-amber-300 bg-amber-50 px-5 py-4 text-amber-950">
+    <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-amber-700 mb-2">
+      Founder input — placeholder
+    </div>
+    <div className="text-base leading-relaxed">{children}</div>
+  </aside>
+);
+
 // ---------- Main template ----------
 const InsightArticle = ({ slug, children }: InsightArticleProps) => {
   const article = findInsight(slug);
