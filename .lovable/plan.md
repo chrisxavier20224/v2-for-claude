@@ -1,33 +1,27 @@
+# Use uploaded video as homepage hero background
 
+The uploaded clip is a 10s, 720p abstract fibre/data visual — a perfect fit as a moving background for the homepage hero (currently a static image).
 
-# Export Homeworkers Page Code as Reference Document
+## What I'll do
 
-## What
-Generate a comprehensive code reference file containing the full source code of the Homeworkers page and all its shared components/design tokens — everything needed to replicate the exact styling in another Lovable project.
+1. **Condense and optimise the video**
+   - Trim to ~6s of the strongest motion (skipping any soft start/end frames).
+   - Encode two web-friendly versions in `public/video/`:
+     - `hero-bg.mp4` — H.264, ~1280×720, CRF 26, no audio, faststart (~600–900 KB target)
+     - `hero-bg.webm` — VP9 fallback for better compression
+   - Generate a `hero-bg-poster.jpg` from frame 1 so the hero shows instantly before the video loads.
 
-## Files to Include
+2. **Swap the hero background in `src/pages/Index.tsx`**
+   - Replace the current `<img src={heroImg} …>` with a `<video>` element:
+     `autoPlay muted loop playsInline preload="metadata"` + `poster={…}` + `<source>` tags.
+   - Keep the existing dark gradient overlay (`from-surface-dark via-black/50 to-black/20`) so headline contrast is unchanged.
+   - Keep `loading="eager"` behaviour by preloading the poster image.
+   - Respect `prefers-reduced-motion`: fall back to the poster image (no video playback) for users with reduced motion enabled.
 
-1. **Design System Foundation**
-   - `tailwind.config.ts` — full type scale, colors, animations
-   - `src/index.css` — CSS variables, utility classes, gradient presets
-   - `src/components/ui/button.tsx` — button variants and sizes
+3. **No other section changes** — only the hero visual changes.
 
-2. **Shared Components**
-   - `Section.tsx`, `AnimatedSection.tsx`, `StaggeredContainer.tsx` — layout + animation primitives
-   - `GradientBand.tsx`, `EyebrowLabel.tsx` — decorative elements
-   - `RelatedServices.tsx` — service card grid
-   - `CustomerLogoBar.tsx` — scrolling logo carousel
-   - `StickyCallBar.tsx` — mobile sticky CTA
-   - `PageLayout.tsx` — page wrapper (Navbar + Footer + CookieConsent)
+## Technical notes
 
-3. **The Page Itself**
-   - `src/pages/sectors/Homeworkers.tsx` — full 479-line component
-
-## Output
-A single organised text/markdown file at `/mnt/documents/homeworkers-page-code-reference.md` with all code blocks clearly labelled, ready to paste into the other project.
-
-## Approach
-- Compile all files into one markdown document with file paths as headers
-- Include a "Quick Start" section listing required npm packages (`framer-motion`, `lucide-react`, `class-variance-authority`, `@radix-ui/react-slot`, `tailwindcss-animate`, `@tailwindcss/typography`)
-- No changes to this project's codebase
-
+- Files served from `/public/video/` so they're not bundled by Vite.
+- `<video>` sized with `w-full h-full object-cover` to match the current image.
+- Existing `heroImg` import will be removed from `Index.tsx` if no longer used.
