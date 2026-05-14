@@ -16,23 +16,18 @@ import heroImg from "@/assets/hero-home.webp";
 
 // Connectivity service images
 import sdwanImg from "@/assets/sectors/rural-sme-hero.webp";
-import fibreImg from "@/assets/sectors/fibre-building-hero.webp";
 import leasedImg from "@/assets/connectivity/leased-lines-hero.webp";
-import simImg from "@/assets/connectivity/managed-sim-hero.webp";
+import bridgeImg from "@/assets/connectivity/bridge-hero.webp";
+import fibreImg from "@/assets/sectors/fibre-building-hero.webp";
+import bpImg from "@/assets/sectors/business-parks-hero.webp";
 
-// WiFi images
+// WiFi / Supporting
 import businessWifiImg from "@/assets/connectivity/business-wifi-hero.jpg";
-import homeWifiImg from "@/assets/connectivity/home-wifi-hero.jpg";
-
-// Unified Comms
 import ucImg from "@/assets/connectivity/unified-comms-hero.webp";
 
 // Sector images
 import constructionImg from "@/assets/sectors/construction-hero.webp";
-import homeworkerImg from "@/assets/sectors/homeworker-remote-work.avif";
 import ruralImg from "@/assets/sectors/rural-sme-hero.webp";
-import airbnbImg from "@/assets/sectors/airbnb-hero.webp";
-import businessParkImg from "@/assets/sectors/business-parks-hero.webp";
 
 const staggerContainer = {
   hidden: {},
@@ -64,52 +59,36 @@ const aboutPoints = [
 
 const connectivityServices = [
   {
-    title: "Integra SD-WAN",
-    description: "Satellite + cellular, bonded together. 100–350Mbps where fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
-    img: sdwanImg,
-    link: "/connectivity/integra-sd-wan",
-  },
-  {
-    title: "Fibre Enabled Buildings",
-    description: "Pre-connected hyperfast internet for new developments. Custom system designs, flexible contracts, and immediate connectivity from day one.",
-    img: fibreImg,
-    link: "/sectors/business-parks",
-  },
-  {
     title: "Leased Lines",
     description: "Dedicated fibre, symmetric speeds, guaranteed SLA. From £400/month. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
     link: "/connectivity/leased-lines",
   },
   {
-    title: "Managed SIM Services",
-    description: "Custom quoted. Temporary connectivity for construction sites, events, and remote operations. PSTN switch-off ready. Deploy in days.",
-    img: simImg,
-    link: "/connectivity/managed-sim-services",
-  },
-];
-
-const wifiServices = [
-  {
-    title: "Business WiFi",
-    description: "Enterprise-grade mesh networks for offices, warehouses, and multi-building sites. Managed remotely via Integra Cloud with UK-based support.",
-    img: businessWifiImg,
-    link: "/connectivity/business-wifi",
+    title: "SoGEA",
+    description: "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.",
+    img: fibreImg,
+    link: "/connectivity/so-gea",
   },
   {
-    title: "Home WiFi",
-    description: "Whole-home mesh WiFi that reaches every room. No dead spots, no buffering. Designed for remote workers who can't afford dropped calls.",
-    img: homeWifiImg,
-    link: "/connectivity/business-wifi",
+    title: "Managed Internet",
+    description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.",
+    img: bpImg,
+    link: "/connectivity/managed-internet",
+  },
+  {
+    title: "Integra SD-WAN",
+    description: "Satellite + cellular, bonded together. 100–350Mbps where fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
+    img: sdwanImg,
+    link: "/connectivity/integra-sd-wan",
   },
 ];
 
 const sectors = [
   { title: "Construction", img: constructionImg, link: "/sectors/construction-sites" },
-  { title: "Homeworkers", img: homeworkerImg, link: "/" },
   { title: "Rural SMEs", img: ruralImg, link: "/sectors/rural-smes" },
-  { title: "Airbnbs", img: airbnbImg, link: "/" },
-  { title: "Business Parks", img: businessParkImg, link: "/sectors/business-parks" },
+  { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
+  { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
 ];
 
 const locations = [
