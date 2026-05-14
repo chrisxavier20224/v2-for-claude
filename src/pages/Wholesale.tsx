@@ -7,6 +7,8 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SEO from "@/components/shared/SEO";
 
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
+import reframeImg from "@/assets/connectivity/sdwan-aerial.webp";
+import salesImg from "@/assets/connectivity/managed-sim-visibility.jpg";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -83,14 +85,27 @@ const Wholesale = () => {
       {/* REFRAME — light */}
       <section className="bg-section-light-bg py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6 max-w-3xl">
-              It's not your whole business. <span className="text-primary">It's the sites fibre can't reach.</span>
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Most of your portfolio is fine. But across fifty sites there are always a few — the ones where fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra isn't a change to your business. It's having an answer for those sites, so you never have to say no.
-            </p>
-          </AnimatedSection>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <AnimatedSection>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">The Reframe</p>
+              <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6">
+                It's not your whole business. <span className="text-primary">It's the sites fibre can't reach.</span>
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Most of your portfolio is fine. But across fifty sites there are always a few — the ones where fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra isn't a change to your business. It's having an answer for those sites, so you never have to say no.
+              </p>
+              <div className="mt-8 flex items-baseline gap-3">
+                <span className="text-display-md font-normal text-primary tracking-tight">4</span>
+                <span className="text-lg text-muted-foreground">out of every 50 sites</span>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection>
+              <div className="relative aspect-[4/5] lg:aspect-[4/4] rounded-2xl overflow-hidden shadow-xl ring-1 ring-border/40">
+                <img src={reframeImg} alt="Hard-to-reach sites where fibre falls short" className="w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-surface-dark/40 via-transparent to-transparent" />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
@@ -133,8 +148,12 @@ const Wholesale = () => {
       </section>
 
       {/* WHAT YOU KEEP — light */}
-      <section className="bg-section-light-bg py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative bg-section-light-bg py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">What You Keep</p>
             <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-6 max-w-3xl mx-auto">
@@ -171,15 +190,24 @@ const Wholesale = () => {
       </section>
 
       {/* EASY FOR YOUR SALES TEAM — light */}
-      <section className="bg-section-light-bg py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={salesImg} alt="" className="w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/90 to-surface-dark/60" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">For Your Sales Team</p>
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-6 max-w-3xl">
               Easy for your <span className="text-primary">sales team.</span>
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+            <p className="text-lg text-surface-dark-muted leading-relaxed max-w-3xl">
               Your account managers don't need to become connectivity experts. When they hit a problem site, they submit it through the partner portal in under two minutes — customer name, site address, the basics. We survey, advise, install, and support. They stay the trusted face; we're the engine room.
             </p>
+            <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm text-surface-dark-foreground">
+              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+              Under 2 minutes per submission
+            </div>
           </AnimatedSection>
         </div>
       </section>
