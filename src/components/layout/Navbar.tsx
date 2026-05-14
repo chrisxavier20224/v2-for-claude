@@ -124,8 +124,9 @@ const Navbar = () => {
                     <Link
                       to="/wholesale"
                       className="group relative block overflow-hidden border-b border-border"
+                      onClick={() => setServicesOpen(false)}
                     >
-                      <div className="absolute inset-0 bg-[hsl(222_47%_11%)]" />
+                      <div className="pointer-events-none absolute inset-0 bg-[hsl(222_47%_11%)]" />
                       <div
                         className="pointer-events-none absolute inset-0 opacity-40"
                         style={{
