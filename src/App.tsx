@@ -43,6 +43,9 @@ const Insights = lazy(() => import("./pages/Insights"));
 const InsightArticle = lazy(() => import("./pages/insights/InsightArticle"));
 const CostOfConnectivityGapArticle = lazy(() => import("./pages/insights/CostOfConnectivityGapArticle"));
 const DecisionFrameworkArticle = lazy(() => import("./pages/insights/DecisionFrameworkArticle"));
+const MultiSiteEstateArticle = lazy(() => import("./pages/insights/MultiSiteEstateArticle"));
+const MultiBearerConnectivityArticle = lazy(() => import("./pages/insights/MultiBearerConnectivityArticle"));
+const WholesaleConnectivityModelArticle = lazy(() => import("./pages/insights/WholesaleConnectivityModelArticle"));
 const ExtendingWifiOutbuildings = lazy(() => import("./pages/blog/ExtendingWifiOutbuildings"));
 const ChurchesListedBuildings = lazy(() => import("./pages/blog/ChurchesListedBuildings"));
 const RuralBusinessesSdwan = lazy(() => import("./pages/blog/RuralBusinessesSdwan"));
@@ -258,9 +261,9 @@ const App = () => (
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/cost-of-the-connectivity-gap" element={<CostOfConnectivityGapArticle />} />
               <Route path="/insights/decision-framework" element={<DecisionFrameworkArticle />} />
-              <Route path="/insights/multi-site-estate" element={<InsightArticle slug="multi-site-estate" />} />
-              <Route path="/insights/multi-bearer-connectivity" element={<InsightArticle slug="multi-bearer-connectivity" />} />
-              <Route path="/insights/wholesale-connectivity-model" element={<InsightArticle slug="wholesale-connectivity-model" />} />
+              <Route path="/insights/multi-site-estate" element={<MultiSiteEstateArticle />} />
+              <Route path="/insights/multi-bearer-connectivity" element={<MultiBearerConnectivityArticle />} />
+              <Route path="/insights/wholesale-connectivity-model" element={<WholesaleConnectivityModelArticle />} />
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
               <Route path="/pstn-switch-off" element={<PSTNSwitchOff />} />
               <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
