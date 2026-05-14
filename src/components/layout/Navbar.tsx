@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper, ArrowRight } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -62,6 +62,14 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [sectorsOpen, setSectorsOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const isDarkNav = location.pathname === "/connectivity/integra-bridge";
 
@@ -69,9 +77,20 @@ const Navbar = () => {
   const isServicesPath = allConnectivityLinks.some(c => location.pathname === c.path);
   const isLocationPath = locationLinks.some(l => location.pathname === l.path);
   const isInsightsPath = location.pathname === "/insights" || location.pathname.startsWith("/insights/");
+  const isWholesalePath = location.pathname === "/wholesale";
 
   return (
-    <nav className={`sticky top-0 z-50 backdrop-blur-xl border-b ${isDarkNav ? 'bg-surface-dark border-white/10' : 'bg-white border-border'}`}>
+    <nav
+      className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-xl ${
+        isDarkNav
+          ? scrolled
+            ? "bg-surface-dark/70 border-b border-white/10"
+            : "bg-surface-dark border-b border-white/10"
+          : scrolled
+            ? "bg-white/70 border-b border-border/40 shadow-sm"
+            : "bg-white border-b border-border"
+      }`}
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center translate-y-0.5">
