@@ -332,9 +332,9 @@ const App = () => (
               <Route path="/royal-farm-signup" element={<Navigate to="/customers/royle-farm" replace />} />
               <Route path="/customers/powering-up-a-connectivity-triumph-in-the-face-of-adversity" element={<Navigate to="/customers" replace />} />
               <Route path="/customers/from-farm-to-fibre-royle-farm-business-parks-digital-renaissance" element={<Navigate to="/customers/royle-farm" replace />} />
-              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity-benefits-speeds-and-providers" element={<Navigate to="/blog" replace />} />
-              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity" element={<Navigate to="/blog" replace />} />
-              <Route path="/internet-connectivity/*" element={<Navigate to="/blog" replace />} />
+              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity-benefits-speeds-and-providers" element={<Navigate to="/insights" replace />} />
+              <Route path="/internet-connectivity/eofttc-affordable-business-connectivity" element={<Navigate to="/insights" replace />} />
+              <Route path="/internet-connectivity/*" element={<Navigate to="/insights" replace />} />
 
               {/* Slug fix redirects for legacy/incorrect internal links */}
               <Route path="/connectivity/integra-sdwan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />
