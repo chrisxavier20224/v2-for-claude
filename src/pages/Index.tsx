@@ -11,8 +11,8 @@ import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap } fro
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
-// Hero
-import heroImg from "@/assets/hero-home.webp";
+// Hero poster (used as <video> poster + reduced-motion fallback)
+const heroPoster = "/video/hero-bg-poster.jpg";
 
 // Connectivity service images
 import sdwanImg from "@/assets/sectors/rural-sme-hero.webp";
@@ -159,9 +159,27 @@ const Index = () => {
       <SchemaMarkup data={organizationSchema} />
       <PageLayout>
         {/* ── 1. HERO ───────────────────────────────────────────────────── */}
-        <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
+        <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20 bg-surface-dark">
           <div className="absolute inset-0">
-            <img src={heroImg} alt="Integra Networks fibre connectivity" className="w-full h-full object-cover" loading="eager" />
+            <video
+              className="w-full h-full object-cover motion-reduce:hidden"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={heroPoster}
+              aria-hidden="true"
+            >
+              <source src="/video/hero-bg.webm" type="video/webm" />
+              <source src="/video/hero-bg.mp4" type="video/mp4" />
+            </video>
+            <img
+              src={heroPoster}
+              alt="Integra Networks fibre connectivity"
+              className="hidden motion-reduce:block w-full h-full object-cover"
+              loading="eager"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/50 to-black/20" />
           </div>
           <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
