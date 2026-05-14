@@ -35,7 +35,7 @@ const painPoints = [
 ];
 
 const benefitItems = [
-  "Up to 350Mbps via Cellular SD-WAN",
+  "Up to 500Mbps via Cellular SD-WAN",
   "Installed by Our Engineers in Under 14 Days",
   "99.5% Uptime SLA with Phone & WhatsApp Support",
 ];
