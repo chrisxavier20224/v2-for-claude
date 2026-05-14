@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, ArrowRight } from "lucide-react";
+import { Instagram, Facebook, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import integraLogo from "@/assets/integra-logo-white.png";
 
@@ -50,7 +50,6 @@ const resourceLinks = [
 const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/integra_networks", label: "Instagram" },
   { icon: Facebook, href: "https://www.facebook.com/IntegraNetworksUK", label: "Facebook" },
-  { icon: Youtube, href: "https://www.youtube.com/@IntegraNetworks", label: "YouTube" },
 ];
 
 const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
