@@ -29,8 +29,8 @@ const painPoints = [
   },
   {
     icon: Clock,
-    title: "Card Machines Dropping at the Worst Times?",
-    description: "Dual-network redundancy means if one 4G/5G network drops, your traffic instantly moves to the other. Card machines, VoIP, EPOS — they stay online.",
+    title: "Waiting Months for a Leased Line?",
+    description: "Ordered fibre or a leased line and staring down an eight-week-plus install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
   },
 ];
 
