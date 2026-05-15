@@ -141,7 +141,7 @@ const BusinessParks = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We find ways around the big Fibre quotes.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Royle Farm Business Park, Openreach quoted over £20,000 for Fibre. We delivered 1000Mbps for a fraction of that cost using a combination of Fibre and microwave links. We do the same for business parks across the UK.
+              We've saved clients tens of thousands using creative alternatives — at Royle Farm Business Park, Openreach quoted over £20,000 for Fibre. We delivered 1000Mbps for a fraction of that cost using a combination of Fibre and microwave links. We do the same for business parks, industrial estates, and multi-tenant commercial sites across the UK.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -215,7 +215,7 @@ const BusinessParks = () => {
               </motion.div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Case Study</p>
-                <h2 className="text-heading-1 text-surface-dark-foreground mb-4">From Farm to Fibre: Royle Farm Business Park</h2>
+                <h2 className="text-heading-1 text-surface-dark-foreground mb-4">Royle Farm Business Park: From ADSL to 1Gbps</h2>
                 <p className="text-lg text-surface-dark-muted leading-relaxed mb-6">
                   See how Integra transformed connectivity at Royle Farm Business Park — from inadequate ADSL to 1000Mbps speeds.
                 </p>
