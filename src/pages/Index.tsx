@@ -99,7 +99,7 @@ const connectivityServices = [
   },
   {
     title: "Integra SD-WAN",
-    description: "Satellite + cellular, bonded together. 100–350Mbps where Fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
+    description: "Bonded multi-carrier 4G/5G connectivity — a five-tier range from single-network failover up to 500Mbps, engineered and monitored per site.",
     img: sdwanImg,
     link: "/connectivity/integra-sd-wan",
   },
