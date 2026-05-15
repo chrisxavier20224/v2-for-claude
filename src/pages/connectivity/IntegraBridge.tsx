@@ -138,7 +138,7 @@ const IntegraBridge = () => {
               <div className="grid grid-cols-3 gap-4">
                 <motion.div className="col-span-3 rounded-2xl bg-muted border border-border p-8 text-center" variants={fadeUp}>
                   <p className="text-5xl md:text-6xl font-normal text-primary mb-2">10</p>
-                  <p className="text-muted-foreground text-sm">Days typical Fibre lead time</p>
+                  <p className="text-muted-foreground text-sm">Weeks typical Fibre lead time</p>
                 </motion.div>
                 <motion.div className="rounded-2xl bg-muted border border-border p-6 text-center" variants={fadeUp}>
                   <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
