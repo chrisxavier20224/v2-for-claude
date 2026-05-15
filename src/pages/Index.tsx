@@ -443,12 +443,12 @@ const Index = () => {
         <section className="bg-primary text-primary-foreground py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
             <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/70 mb-4">For ISPs &amp; Resellers</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/70 mb-4">For ISPs, MSPs &amp; Resellers</p>
               <h2 className="text-heading-1 md:text-display-sm text-white mb-6 font-medium">
-                Run an ISP? We're the infrastructure partner behind the brand.
+                Run an ISP or MSP? We're the infrastructure partner behind the brand.
               </h2>
               <p className="text-lg text-white/85 leading-relaxed max-w-3xl mx-auto mb-10">
-                Integra gives ISPs and resellers enterprise connectivity to deliver under their own brand — survey, install, and support handled, live in 10 working days. You keep the customer and the margin.
+                Integra gives ISPs, MSPs and resellers enterprise connectivity to deliver under their own brand — survey, install, and support handled, live in 10 working days. You keep the customer and the margin.
               </p>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-medium h-12 px-8 text-base">
