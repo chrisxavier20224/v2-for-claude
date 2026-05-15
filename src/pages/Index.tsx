@@ -416,7 +416,7 @@ const Index = () => {
                 Built for businesses Fibre leaves behind.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-                Construction sites that move every 6 months. Farms with no line of sight. Business parks with 30 tenants sharing one connection. We've solved them all.
+                Construction sites that move every few months. Multi-site rollouts on impossible timelines. Business parks where every unit needs connectivity from day one. We've solved them all.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-6 grid-cols-2 sm:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -571,35 +571,6 @@ const Index = () => {
                 </motion.div>
               </div>
             </AnimatedSection>
-          </div>
-        </section>
-
-        {/* ── 12. COVERAGE + SEO BLOCK ──────────────────────────────────── */}
-        <section className="bg-surface-dark py-20 md:py-28 border-t border-white/5">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Local Coverage</p>
-              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                Coverage across the UK.
-              </h2>
-              <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-                From the North West to the South East, we've connected communities, farms, and businesses in rural locations nobody else could reach.
-              </p>
-            </AnimatedSection>
-            <motion.div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-              {locations.map((location) => (
-                <motion.div key={location.title} variants={fadeUp}>
-                  <Link to={location.link} className="group block">
-                    <div className="rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-center hover:bg-white/10 hover:border-primary/30 transition-all">
-                      <h3 className="text-surface-dark-foreground font-medium text-sm">{location.title}</h3>
-                      <span className="inline-flex items-center gap-1 text-primary text-xs font-medium mt-2 group-hover:gap-2 transition-all">
-                        View <ArrowRight className="h-3 w-3" />
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </section>
 
