@@ -14,7 +14,7 @@ const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren:
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
 const problemPoints = [
-  "You need enterprise internet but Fibre takes 10 weeks. Whether you're an ISP delivering to clients or a business waiting for your own install, you're stuck with a timeline you can't control.",
+  "You need enterprise internet but Fibre takes 10 weeks. Whether you're an ISP or MSP delivering to clients, or a business waiting for your own install, you're stuck with a timeline you can't control.",
   "Deadlines slip. Projects overrun. Revenue is delayed. The longer you wait, the more you lose — in productivity, in credibility, and in cash flow.",
   "Interim connectivity can help, but on its own it rarely delivers the business-grade resilience and performance that modern operations demand.",
 ];
