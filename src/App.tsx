@@ -10,6 +10,7 @@ import Analytics from "./components/shared/Analytics";
 
 // Eager load critical pages
 import Index from "./pages/Index";
+import HomeV2 from "./pages/HomeV2";
 import NotFound from "./pages/NotFound";
 
 // Lazy load other pages
@@ -153,6 +154,7 @@ const App = () => (
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/home-v2" element={<HomeV2 />} />
 
               {/* PPC Landing Pages */}
               <Route path="/lp/business-broadband" element={<BusinessBroadbandLanding />} />
