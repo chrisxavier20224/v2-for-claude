@@ -7,7 +7,8 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
-import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap } from "lucide-react";
+import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap, FileText } from "lucide-react";
+import { insightArticles } from "@/pages/insights/insightsData";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
@@ -481,6 +482,68 @@ const Index = () => {
                 </AnimatedSection>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── 10.5 INSIGHTS PROMO BAND ─────────────────────────────────── */}
+        <section className="bg-[hsl(220_25%_96%)] py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <AnimatedSection>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Insights</p>
+              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4 font-medium">
+                Points of view worth reading.
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mb-12">
+                Where the lead times, trade-offs, and decisions behind business connectivity actually get worked through.
+              </p>
+            </AnimatedSection>
+
+            <motion.div
+              className="grid gap-6 grid-cols-1 md:grid-cols-3"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+            >
+              {insightArticles
+                .filter((a) => ["cost-of-the-connectivity-gap", "decision-framework", "multi-site-estate"].includes(a.slug))
+                .map((article) => (
+                  <motion.div key={article.slug} variants={fadeUp}>
+                    <Link
+                      to={`/insights/${article.slug}`}
+                      className="group block rounded-2xl border border-border bg-card p-6 h-full hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide px-3 py-1">
+                          <FileText className="h-3 w-3" />
+                          {article.category}
+                        </span>
+                      </div>
+                      <h3 className="text-heading-4 text-foreground mb-3 group-hover:text-primary transition-colors font-medium leading-snug">
+                        {article.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-5 line-clamp-3">
+                        {article.excerpt}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all">
+                        Read <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    </Link>
+                  </motion.div>
+                ))}
+            </motion.div>
+
+            <AnimatedSection>
+              <div className="mt-12 text-center">
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
+                    <Link to="/insights" className="inline-flex items-center gap-2">
+                      Explore all insights <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </motion.div>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
