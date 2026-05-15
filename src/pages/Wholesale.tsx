@@ -8,7 +8,7 @@ import SEO from "@/components/shared/SEO";
 
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
 import reframeImg from "@/assets/connectivity/sdwan-aerial.webp";
-import salesImg from "@/assets/connectivity/managed-sim-visibility.jpg";
+import salesImg from "@/assets/wholesale/sales-team-bg.png";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
