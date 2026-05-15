@@ -148,7 +148,7 @@ const ManagedSimServices = () => {
                 Delivered on a 3-year Device-as-a-Service model with no upfront hardware costs. Line rental and call rates are rolled into a single bill — no separate management, no hidden charges. Advanced replacement and in-term upgrades are included as standard.
               </p>
               <p className="text-surface-dark-muted leading-relaxed mb-6">
-                IoT SIMs with pooled data options. Rapid deployment that's completely independent of the UK Fibre network — we can get devices live in days, not weeks.
+                IoT SIMs with pooled data options. Rapid deployment that's completely independent of the UK Fibre network — we can get devices live in 10 working days.
               </p>
               <div className="space-y-3">
                 {["Multinet SIM across O2, Vodafone, EE & Three", "3-day line test monitoring on deployment", "Constant GSM connectivity monitoring", "Technical and on-site support included", "Pooled data options across your estate"].map((item) => (

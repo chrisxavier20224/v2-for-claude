@@ -15,7 +15,7 @@ const sections = [
   },
   {
     h: "Realised the real problem was bigger.",
-    p: "It wasn't just rural. Every business waiting eight weeks for BT had the same problem — a connectivity gap. Construction sites, new offices, multi-site rollouts. The bridge wasn't a rural product, it was a timing product.",
+    p: "It wasn't just rural. Every business waiting around 10 weeks for BT had the same problem — a connectivity gap. Construction sites, new offices, multi-site rollouts. The bridge wasn't a rural product, it was a timing product.",
   },
   {
     h: "Today.",

@@ -129,7 +129,7 @@ const WirelessDistribution = () => {
               High-speed wireless links without the Fibre costs.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Install in days, not months. Commercial-grade radios with weatherproof housings. Professional survey included. Free hardware replacement if anything fails.
+              Install in 10 working days. Commercial-grade radios with weatherproof housings. Professional survey included. Free hardware replacement if anything fails.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>

@@ -141,7 +141,7 @@ const RoyalHarwichYachtClub = () => {
               Integra ran a site survey and found what others had missed: clear sightlines to multiple mobile towers. They bonded 4G connections over SD-WAN to create a single, ultra-reliable connection. Over 300Mbps. Strong enough to handle any demand.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Installation took days, not months. The antennas went on the roof—invisible from the clubhouse. Everything integrated with their existing WiFi and VoIP system seamlessly. From day one, it worked.
+              Installation took 10 working days. The antennas went on the roof—invisible from the clubhouse. Everything integrated with their existing WiFi and VoIP system seamlessly. From day one, it worked.
             </p>
           </AnimatedSection>
         </div>

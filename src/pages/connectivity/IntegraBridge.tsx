@@ -104,7 +104,7 @@ const IntegraBridge = () => {
             </motion.div>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Internet Connectivity Specialists</p>
             <h1 className="mb-6 text-heading-1 md:text-display-sm font-normal tracking-tight text-white max-w-2xl">
-              Deliver <span className="text-primary">Enterprise Internet</span> in Days, Not Months.
+              Deliver <span className="text-primary">Enterprise Internet</span> in 10 working days.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
               When you can't wait for Fibre, Integra Bridge delivers. For ISPs and businesses alike.

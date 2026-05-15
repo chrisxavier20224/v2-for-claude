@@ -153,7 +153,7 @@ const RoyleFarm = () => {
               Integra conducted an exhaustive survey and identified a feasible route to bring Fibre into the park — circumventing the excess construction charges that had made every previous quote unworkable. That single decision cut projected costs by over 80%, turning a six-figure problem into an accessible five-figure investment.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              With Fibre in place, Integra deployed a mix of wireless and CAT6 networking to distribute connectivity across the entire park. Tenant speeds jumped from single-digit ADSL to up to 1000Mbps — and new tenants can now get connected within days, not months.
+              With Fibre in place, Integra deployed a mix of wireless and CAT6 networking to distribute connectivity across the entire park. Tenant speeds jumped from single-digit ADSL to up to 1000Mbps — and new tenants can now get connected within 10 working days.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Royle Farm went from a connectivity dead zone to one of the best-connected business parks in rural Staffordshire — a genuine selling point for attracting new businesses.

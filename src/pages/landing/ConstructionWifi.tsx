@@ -85,7 +85,7 @@ const ConstructionWifi = () => {
     {
       question: "What happens if I need more capacity mid-project?",
       answer:
-        "Easy. Just call us and we upgrade your SIM bundle or add additional hotspots. No penalties for changes. Standard 12-month terms, with flexible shorter agreements for construction projects.",
+        "Easy. Just call us and we upgrade your SIM bundle or add additional hotspots. No penalties for changes. Flexible contract terms — from short-term agreements up to 36 months, with flexible shorter agreements for construction projects.",
     },
   ];
 
@@ -93,7 +93,7 @@ const ConstructionWifi = () => {
     <PageLayout>
       <SEO
         title="Construction Site WiFi | Temporary Broadband for Sites | Integra Networks"
-        description="Fast WiFi for construction sites in 48 hours. Temporary or permanent. Weather-resistant. Multi-site coverage. Simple 12-month terms. Integra Networks."
+        description="Fast WiFi for construction sites in 48 hours. Temporary or permanent. Weather-resistant. Multi-site coverage. Flexible contract terms — from short-term agreements up to 36 months. Integra Networks."
         keywords="construction site wifi, site broadband, temporary internet, construction, portable broadband"
         url="/lp/construction-wifi"
       />
