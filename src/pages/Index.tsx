@@ -7,7 +7,8 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
-import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap } from "lucide-react";
+import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap, FileText } from "lucide-react";
+import { insightArticles } from "@/pages/insights/insightsData";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
