@@ -14,14 +14,14 @@ const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren:
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
 const problemPoints = [
-  "You need enterprise internet but Fibre takes 10 weeks. Whether you're an ISP delivering to clients or a business waiting for your own install, you're stuck with a timeline you can't control.",
+  "You need enterprise internet but Fibre takes 10 weeks. Whether you're an ISP or MSP delivering to clients, or a business waiting for your own install, you're stuck with a timeline you can't control.",
   "Deadlines slip. Projects overrun. Revenue is delayed. The longer you wait, the more you lose — in productivity, in credibility, and in cash flow.",
   "Interim connectivity can help, but on its own it rarely delivers the business-grade resilience and performance that modern operations demand.",
 ];
 
 const solutionPoints = [
   "Instead of waiting months for Fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
-  "For ISPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
+  "For ISPs and MSPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
   "Immediate connectivity, stronger relationships, and a reputation for delivering when it matters most.",
 ];
 
@@ -83,7 +83,7 @@ const IntegraBridge = () => {
       <SEO
         title="Integra Bridge"
         description="Enterprise SD-WAN in 10 working days. Bonded Starlink + 5G/4G with up to 1Gbps. Works as interim or permanent failover."
-        keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, Fibre bridge, interim connectivity, ISP wholesale"
+        keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, Fibre bridge, interim connectivity, ISP and MSP wholesale"
         url="/integra-bridge"
       />
 
@@ -107,7 +107,7 @@ const IntegraBridge = () => {
               Deliver <span className="text-primary">Enterprise Internet</span> in 10 working days.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              When you can't wait for Fibre, Integra Bridge delivers. For ISPs and businesses alike.
+              When you can't wait for Fibre, Integra Bridge delivers. For ISPs, MSPs and businesses alike.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
@@ -167,7 +167,7 @@ const IntegraBridge = () => {
               Deliver now. Impress always with <span className="text-primary">Integra Bridge</span>
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Long Fibre lead times test patience, budgets, and relationships. Whether you're an ISP delivering to clients or a business waiting for your own line, Integra Bridge flips the script.
+              Long Fibre lead times test patience, budgets, and relationships. Whether you're an ISP or MSP delivering to clients, or a business waiting for your own line, Integra Bridge flips the script.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
