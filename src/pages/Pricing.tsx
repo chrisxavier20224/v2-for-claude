@@ -35,7 +35,7 @@ const whatsIncluded = [
   { icon: Wrench, label: "Dedicated Support", description: "Proactive monitoring and ongoing assistance" },
   { icon: Clock, label: "24/7 Monitoring & Support", description: "Your connection is watched constantly" },
   { icon: Award, label: "Uptime SLA on Every Package", description: "Backed by service credits — up to 99.99% on Enterprise" },
-  { icon: CreditCard, label: "12-Month Agreements", description: "Simple 12-month terms — shorter contracts available on request" },
+  { icon: CreditCard, label: "Flexible Contract Terms", description: "Flexible contract terms — from short-term agreements up to 36 months" },
   { icon: TrendingUp, label: "Hardware Included", description: "Routers, radios and supporting kit are part of every install" },
 ];
 
@@ -44,7 +44,7 @@ const faqs = [
   { q: "How quickly can I get a quote?", a: "Most desktop assessments come back within a couple of working days. For Integra Bridge and SD-WAN, we can often confirm feasibility and indicative pricing the same week." },
   { q: "What's included in the price?", a: "Hardware, configuration, monitoring, and UK-based engineer support are included as standard. Installation is quoted upfront — there are no surprise charges after we begin." },
   { q: "Do you offer fixed wholesale pricing?", a: "Yes — for signed wholesale and channel partners. That's handled through our partner programme, not the public site. See /wholesale to start a conversation." },
-  { q: "Do I need a long contract?", a: "Our standard agreement is 12 months. Shorter terms are available on request and quoted accordingly." },
+  { q: "Do I need a long contract?", a: "We offer flexible contract terms — from short-term agreements up to 36 months — quoted to fit your site and rollout." },
 ];
 
 const faqSchemaData = {

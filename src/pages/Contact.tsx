@@ -86,7 +86,7 @@ const Contact = () => {
     <PageLayout hideCTA>
       <SEO
         title="Contact Us"
-        description="Get in touch with Integra Networks. SD-WAN, leased lines, business WiFi, unified comms, network infrastructure — we design, install, and manage it all."
+        description="Talk to Us with Integra Networks. SD-WAN, leased lines, business WiFi, unified comms, network infrastructure — we design, install, and manage it all."
         keywords="contact Integra Networks, connectivity consultation, managed services, business broadband"
         url="/contact"
       />

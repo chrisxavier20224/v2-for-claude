@@ -74,7 +74,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 Let's see what we can do for you
               </h2>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
-                Join the multi-site businesses getting online with Integra — while everyone else waits for fibre.
+                Join the multi-site businesses getting online with Integra — while everyone else waits for Fibre.
               </p>
             </div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="shrink-0">
@@ -99,7 +99,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 <img src={integraLogo} alt="Integra Networks" className="w-28 h-auto" />
               </Link>
               <p className="text-sm text-surface-dark-muted">
-                Business connectivity for UK companies — leased lines, SoGEA, and Integra Bridge to get you online while you wait for fibre.
+                Business connectivity for UK companies — leased lines, SoGEA, and Integra Bridge to get you online while you wait for Fibre.
               </p>
             </div>
 
@@ -177,7 +177,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
 
             {/* Contact */}
             <div>
-              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Get in Touch</h4>
+              <h4 className="text-sm font-medium text-surface-dark-foreground mb-4">Talk to Us</h4>
               <a href="mailto:connect@integra-networks.co.uk" className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors block mb-1">connect@integra-networks.co.uk</a>
               <a href="tel:02033887111" className="text-sm text-surface-dark-muted hover:text-surface-dark-foreground transition-colors block mb-4">0203 388 7111</a>
 

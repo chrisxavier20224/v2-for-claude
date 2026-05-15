@@ -32,7 +32,7 @@ const McGeeConstruction = () => {
     <PageLayout>
       <SEO
         title="McGee Construction Case Study — Integra Networks"
-        description="McGee Construction got 350Mbps+ download and 100Mbps+ upload speeds with multi 4G/5G bonded connections. Deployed in days, not months."
+        description="McGee Construction got 350Mbps+ download and 100Mbps+ upload speeds with multi 4G/5G bonded connections. Deployed in 10 working days."
         keywords="case study, McGee Construction, SD-WAN, construction, connectivity, Integra Networks"
         url="/customers/mcgee-construction"
       />

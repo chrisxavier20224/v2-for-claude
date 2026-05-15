@@ -65,7 +65,7 @@ const ConstructionSiteInternet = () => {
     {
       question: "How fast can you actually have us live?",
       answer:
-        "From a confirmed survey, we ship and install within 14 days as standard. Many sites go live faster — McGee's London sites have been turned around in a week. We pre-configure everything in our workshop so the on-site install is typically 30–60 minutes.",
+        "From a confirmed survey, we ship and install within 10 working days as standard. Many sites go live faster — McGee's London sites have been turned around in a week. We pre-configure everything in our workshop so the on-site install is typically 30–60 minutes.",
     },
     {
       question: "What if the site has zero infrastructure — no power, no address?",
@@ -92,8 +92,8 @@ const ConstructionSiteInternet = () => {
   return (
     <PageLayout>
       <SEO
-        title="Construction Site Internet | Live in 14 Days | Integra Networks"
-        description="Portable 4G/5G site connectivity. Up to 350Mbps down, 100Mbps up. Live in 14 days. Monthly terms. Kit redeploys when you move. CCTV-ready static IPs included."
+        title="Construction Site Internet | Live in 10 working days | Integra Networks"
+        description="Portable 4G/5G site connectivity. Up to 350Mbps down, 100Mbps up. Live in 10 working days. Monthly terms. Kit redeploys when you move. CCTV-ready static IPs included."
         keywords="construction site internet, construction site wifi, temporary site connectivity, internet for construction site, mobile internet for building sites, site office wifi solution"
         url="/lp/construction-site-internet"
       />
@@ -104,7 +104,7 @@ const ConstructionSiteInternet = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <AnimatedSection>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl">
-              Construction Site Internet. Live in 14 Days.
+              Construction Site Internet. Live in 10 working days.
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
               Portable 4G/5G connectivity for active sites. Up to 350Mbps download, 100Mbps upload. Monthly contracts. Kit redeploys when you move on.
@@ -161,7 +161,7 @@ const ConstructionSiteInternet = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-card p-8 text-center">
               <div className="text-5xl md:text-6xl font-medium text-primary mb-2">14d</div>
-              <h3 className="text-xl font-medium text-foreground mb-3">Live in 14 Days</h3>
+              <h3 className="text-xl font-medium text-foreground mb-3">Live in 10 working days</h3>
               <p className="text-muted-foreground">
                 Survey, ship, install, online. No waiting on Openreach, no wayleaves, no trenching.
               </p>
@@ -232,7 +232,7 @@ const ConstructionSiteInternet = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-16">
-              From enquiry to live in 14 days
+              From enquiry to live in 10 working days
             </h2>
           </AnimatedSection>
 
@@ -293,7 +293,7 @@ const ConstructionSiteInternet = () => {
                   </Button>
                 </div>
                 <div className="h-64 rounded-2xl bg-gradient-to-br from-primary/20 to-blue-600/20 flex items-center justify-center">
-                  <p className="text-surface-dark-muted text-center px-6">London's biggest sites · CCTV-ready · BIM uploads · No fibre needed</p>
+                  <p className="text-surface-dark-muted text-center px-6">London's biggest sites · CCTV-ready · BIM uploads · No Fibre needed</p>
                 </div>
               </div>
             </div>
@@ -380,7 +380,7 @@ const ConstructionSiteInternet = () => {
               <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
               <div className="relative z-10">
                 <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
-                  Get your site connected in 14 days
+                  Get your site connected in 10 working days
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
                   Tell us where you're building. We'll come back within one working day with a kit list, a price, and a go-live date.

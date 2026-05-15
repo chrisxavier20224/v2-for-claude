@@ -18,7 +18,7 @@ const PreparingHouseForSale = () => (
 
     <h2>What Buyers Check Before Purchasing</h2>
     <p>
-      Savvy buyers perform their own due diligence. Most use Openreach's availability checker to see what fibre is available at the property. Many run speed tests to see real-world performance. Some request reports on current connectivity options and historical speeds. Forward-thinking buyers increasingly treat broadband as a utility essential to the property's functionality, just like water and electricity.
+      Savvy buyers perform their own due diligence. Most use Openreach's availability checker to see what Fibre is available at the property. Many run speed tests to see real-world performance. Some request reports on current connectivity options and historical speeds. Forward-thinking buyers increasingly treat broadband as a utility essential to the property's functionality, just like water and electricity.
     </p>
 
     <h2>How to Check Your Property's Current Speed</h2>
@@ -28,12 +28,12 @@ const PreparingHouseForSale = () => (
 
     <h2>Improving Connectivity Before Sale</h2>
     <p>
-      If your speed tests reveal poor connectivity, improving it before sale is worthwhile. For properties with slow fibre speeds, Integra's SD-WAN solution can bond multiple 4G/5G connections to deliver 150-350Mbps—far exceeding what most fibre connections provide. For rural properties without adequate broadband, adding Starlink or upgrading to modern mobile-based solutions demonstrates to buyers that connectivity has been addressed.
+      If your speed tests reveal poor connectivity, improving it before sale is worthwhile. For properties with slow Fibre speeds, Integra's SD-WAN solution can bond multiple 4G/5G connections to deliver 150-350Mbps—far exceeding what most Fibre connections provide. For rural properties without adequate broadband, adding Starlink or upgrading to modern mobile-based solutions demonstrates to buyers that connectivity has been addressed.
     </p>
 
     <h2>A Competitive Advantage</h2>
     <p>
-      In your marketing materials and property listings, highlighting fast, reliable internet becomes a major selling point. "Superfast broadband available" or "High-speed fibre installed" can differentiate your property from competitors. Properties marketed with clear evidence of excellent connectivity attract more interested buyers and often command premium prices.
+      In your marketing materials and property listings, highlighting fast, reliable internet becomes a major selling point. "Superfast broadband available" or "High-speed Fibre installed" can differentiate your property from competitors. Properties marketed with clear evidence of excellent connectivity attract more interested buyers and often command premium prices.
     </p>
 
     <p>

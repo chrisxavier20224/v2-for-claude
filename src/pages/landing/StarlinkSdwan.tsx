@@ -85,7 +85,7 @@ const StarlinkSdwan = () => {
     {
       question: "How does pricing compare to traditional leased lines?",
       answer:
-        "Leased lines cost from £400/month. Our Starlink SD-WAN is £80/month +VAT (managed service) with 99.5% SLA. For areas without fibre, we deliver enterprise reliability at a fraction of the cost. You pay Starlink directly for your dish and subscription.",
+        "Leased lines cost from £400/month. Our Starlink SD-WAN is £80/month +VAT (managed service) with 99.5% SLA. For areas without Fibre, we deliver enterprise reliability at a fraction of the cost. You pay Starlink directly for your dish and subscription.",
     },
   ];
 
@@ -302,7 +302,7 @@ const StarlinkSdwan = () => {
                 <span className="text-3xl font-medium">2</span>
               </div>
               <h3 className="text-xl font-medium text-foreground mb-3">Order & Install</h3>
-              <p className="text-muted-foreground">We ship everything pre-configured. Installation within 10-14 days.</p>
+              <p className="text-muted-foreground">We ship everything pre-configured. Installation within 10-10 working days.</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="text-center">

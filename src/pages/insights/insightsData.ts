@@ -29,7 +29,7 @@ export const insightArticles: InsightArticleMeta[] = [
       "What closing the gap looks like",
     ],
     takeaways: [
-      "The gap between ordering a circuit and having it live — typically 8–16 weeks — is a real cost, but it almost never appears as a line item, so nobody owns it.",
+      "The gap between ordering a circuit and having it live — typically 10 weeks — is a real cost, but it almost never appears as a line item, so nobody owns it.",
       "That cost has four components that compound: void rent, lost productivity, project slippage, and the reputational hit to whoever owns connectivity.",
       "\"Doing nothing\" and absorbing the wait is a choice with a price tag — not a neutral default.",
       "Costed honestly against the loaded cost of the gap, interim connectivity is almost always the cheaper option.",
@@ -56,10 +56,10 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"Which is best\" is the wrong question — a leased line, bonded SD-WAN, and Integra Bridge solve different problems.",
       "Five factors decide the fit: lead time, location, workload, permanence, and resilience.",
       "The strongest estates rarely pick one product — they match each site to its requirement and layer resilience behind it.",
-      "Where fibre is ordered but months away, the answer isn't \"wait\" — it's Bridge now, leased line later, Bridge stays as failover.",
+      "Where Fibre is ordered but months away, the answer isn't \"wait\" — it's Bridge now, leased line later, Bridge stays as failover.",
     ],
     heroFigure:
-      "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, fibre availability, permanence, workload, resilience need) to recommended option(s).",
+      "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, Fibre availability, permanence, workload, resilience need) to recommended option(s).",
   },
   {
     slug: "multi-site-estate",
@@ -114,7 +114,7 @@ export const insightArticles: InsightArticleMeta[] = [
     category: "Perspective",
     title: "The Wholesale Connectivity Model",
     excerpt:
-      "Why alt-nets partner instead of build — the commercial case for the sites fibre can't reach.",
+      "Why alt-nets partner instead of build — the commercial case for the sites Fibre can't reach.",
     tone: "dark",
     readingTime: "6 min read",
     whatsInside: [

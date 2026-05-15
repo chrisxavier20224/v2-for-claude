@@ -3,7 +3,7 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 const SatelliteVsFixedWireless = () => (
   <BlogArticleLayout slug="satellite-internet-vs-fixed-wireless-pros-and-cons">
-    <p>Satellite and fixed wireless are the two leading alternatives to fibre for rural properties. Both can work. Both have distinct trade-offs.</p>
+    <p>Satellite and fixed wireless are the two leading alternatives to Fibre for rural properties. Both can work. Both have distinct trade-offs.</p>
 
     <p>Which one should you choose? It depends on what matters most: cost, speed, reliability, or latency.</p>
 

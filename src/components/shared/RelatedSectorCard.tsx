@@ -19,7 +19,7 @@ interface SectorData {
 const sectorMap: Record<string, SectorData> = {
   "business-parks": {
     name: "Business Parks",
-    tagline: "Shared fibre infrastructure for multi-tenant estates",
+    tagline: "Shared Fibre infrastructure for multi-tenant estates",
     image: businessParksHero,
     icon: Building2,
     path: "/sectors/business-parks",

@@ -25,7 +25,7 @@ const relatedServices = [
   },
   {
     title: "Leased Lines",
-    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/connectivity/leased-lines",
   },
@@ -47,7 +47,7 @@ const NorthWest = () => {
   const faqs = [
     {
       q: "How long does installation take?",
-      a: "We typically complete Integra Pro or Starlink SD-WAN installations within 14 days of your survey. Our engineer visits your site once to mount equipment, run cabling, and configure your router. If you're on our priority list, we can often achieve faster turnaround.",
+      a: "We typically complete Integra Pro or Starlink SD-WAN installations within 10 working days of your survey. Our engineer visits your site once to mount equipment, run cabling, and configure your router. If you're on our priority list, we can often achieve faster turnaround.",
     },
     {
       q: "Do you cover my specific town in Lancashire or Cheshire?",
@@ -138,10 +138,10 @@ const NorthWest = () => {
               The North West Broadband Problem
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              Rural properties across Wigan, Bolton, Preston, Lancaster, and beyond face the same frustration: BT promised fibre years ago. You're stuck with 4G that drops in buildings, satellite that fails in rain, or nothing at all.
+              Rural properties across Wigan, Bolton, Preston, Lancaster, and beyond face the same frustration: BT promised Fibre years ago. You're stuck with 4G that drops in buildings, satellite that fails in rain, or nothing at all.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              The North West has difficult terrain—moorland, valleys, densely wooded areas. Running fibre through this landscape costs BT thousands per mile. They focus on towns. Your country home waits.
+              The North West has difficult terrain—moorland, valleys, densely wooded areas. Running Fibre through this landscape costs BT thousands per mile. They focus on towns. Your country home waits.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               We've installed at over 60 North West properties. We know Cumbrian fell country, Lancashire moorland, Cheshire farmland, and the valleys around Chester. We know which networks reach which locations. We know it works.
@@ -236,7 +236,7 @@ const NorthWest = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">4.</span>
                 <span>
-                  <strong>We install in 14 days.</strong> One engineer visit. Mount antenna, run cabling, test and configure.
+                  <strong>We install in 10 working days.</strong> One engineer visit. Mount antenna, run cabling, test and configure.
                 </span>
               </li>
               <li className="flex gap-4">
@@ -363,7 +363,7 @@ const NorthWest = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

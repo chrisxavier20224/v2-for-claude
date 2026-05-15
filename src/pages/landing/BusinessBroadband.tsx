@@ -22,7 +22,7 @@ const relatedServices = [
   {
     icon: Wifi,
     title: "Leased Lines",
-    description: "Dedicated fibre with symmetric speeds up to 1000 Mbps",
+    description: "Dedicated Fibre with symmetric speeds up to 1000 Mbps",
     href: "/connectivity/leased-lines",
   },
   {
@@ -171,7 +171,7 @@ const BusinessBroadband = () => {
               <div className="text-5xl md:text-6xl font-medium text-primary mb-2">14</div>
               <h3 className="text-xl font-medium text-foreground mb-3">Days Average Install</h3>
               <p className="text-muted-foreground">
-                Fast deployment. You're not waiting 8 weeks for traditional fibre. Live in 2-3 weeks.
+                Fast deployment. You're not waiting 8 weeks for traditional Fibre. Live in 2-3 weeks.
               </p>
             </motion.div>
 
@@ -243,7 +243,7 @@ const BusinessBroadband = () => {
               <ul className="text-surface-dark-muted space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Dedicated fibre connection</span>
+                  <span>Dedicated Fibre connection</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>

@@ -74,7 +74,7 @@ const leasedLineServiceSchema = {
     name: "Integra Networks",
     url: "https://integra-networks.co.uk",
   },
-  description: "Dedicated fibre leased lines with symmetric upload and download speeds up to 10Gbps. Private circuit with 99.995% SLA. From 100Mbps to 10Gbps bespoke pricing.",
+  description: "Dedicated Fibre leased lines with symmetric upload and download speeds up to 10Gbps. Private circuit with 99.995% SLA. From 100Mbps to 10Gbps bespoke pricing.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -121,7 +121,7 @@ const LeasedLines = () => {
       <SEO
         title="Leased Lines"
         description="Dedicated circuits with symmetric speeds and SLA. Bespoke pricing per site."
-        keywords="leased lines, business fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
+        keywords="leased lines, business Fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
         url="/connectivity/leased-lines"
       />
       <SchemaMarkup data={leasedLineServiceSchema} />
@@ -130,7 +130,7 @@ const LeasedLines = () => {
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Business leased line fibre infrastructure" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Business leased line Fibre infrastructure" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -148,7 +148,7 @@ const LeasedLines = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -189,7 +189,7 @@ const LeasedLines = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Creative solutions that save thousands.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Leased lines can take 8-12 weeks to install. Our Integra SD-WAN or Bridge solution gets you online in days, bridging the gap until fibre is ready. And we find creative routing solutions — combining fibre with P2P radio links or wireless distribution to reach remote buildings without expensive trenching.
+              Leased lines can take 8-12 weeks to install. Our Integra SD-WAN or Bridge solution gets you online in days, bridging the gap until Fibre is ready. And we find creative routing solutions — combining Fibre with P2P radio links or wireless distribution to reach remote buildings without expensive trenching.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -261,7 +261,7 @@ const LeasedLines = () => {
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Get a Leased Line Assessment</h2>
             <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">We start with a desktop survey and feasibility assessment before quoting. Bespoke pricing, honest advice — if a leased line isn't the right answer, we'll tell you.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+              <Button asChild size="lg"><Link to="/contact">Talk to Us <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>
           </AnimatedSection>
         </div>

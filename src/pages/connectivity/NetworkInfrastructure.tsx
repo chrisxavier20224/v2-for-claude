@@ -23,7 +23,7 @@ const services = [
   {
     icon: Cable,
     title: "Structured Cabling",
-    description: "Cat6, Cat6a, and fibre optic cabling designed, installed, and certified to industry standards. From single runs to full building infrastructure — we handle containment, trunking, patch panels, and labelling so every connection is traceable and future-proof.",
+    description: "Cat6, Cat6a, and Fibre optic cabling designed, installed, and certified to industry standards. From single runs to full building infrastructure — we handle containment, trunking, patch panels, and labelling so every connection is traceable and future-proof.",
   },
   {
     icon: Server,
@@ -33,7 +33,7 @@ const services = [
   {
     icon: Radio,
     title: "Fibre & Wireless Links",
-    description: "Inter-building fibre runs and point-to-multipoint wireless links for multi-structure sites. Whether you need to connect an outbuilding 30 metres away or a marquee across a field, we design links that deliver full backhaul speeds without trenching.",
+    description: "Inter-building Fibre runs and point-to-multipoint wireless links for multi-structure sites. Whether you need to connect an outbuilding 30 metres away or a marquee across a field, we design links that deliver full backhaul speeds without trenching.",
   },
   {
     icon: Wifi,
@@ -80,7 +80,7 @@ const schemaData = {
   "@type": "Service",
   name: "Network Infrastructure",
   provider: { "@type": "Organization", name: "Integra Networks" },
-  description: "End-to-end network infrastructure services including structured cabling, data cabinets, PoE switching, WiFi surveys, fibre links, and project management for commercial buildings across the UK.",
+  description: "End-to-end network infrastructure services including structured cabling, data cabinets, PoE switching, WiFi surveys, Fibre links, and project management for commercial buildings across the UK.",
   areaServed: { "@type": "Country", name: "United Kingdom" },
 };
 
@@ -89,8 +89,8 @@ const NetworkInfrastructure = () => {
     <PageLayout>
       <SEO
         title="Network Infrastructure"
-        description="Cabling, cabinets, PoE switches, WiFi surveys, and fibre links. Design, install, manage."
-        keywords="network infrastructure, structured cabling, data cabinet, PoE switch, WiFi survey, heat map, fibre link, network installation, cable management"
+        description="Cabling, cabinets, PoE switches, WiFi surveys, and Fibre links. Design, install, manage."
+        keywords="network infrastructure, structured cabling, data cabinet, PoE switch, WiFi survey, heat map, Fibre link, network installation, cable management"
         url="/connectivity/network-infrastructure"
       />
       <SchemaMarkup data={schemaData} />
@@ -125,7 +125,7 @@ const NetworkInfrastructure = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8"
             >
-              Cabling, cabinets, switches, fibre links, WiFi surveys — planned, installed, and managed end-to-end. One team, one project, one point of contact.
+              Cabling, cabinets, switches, Fibre links, WiFi surveys — planned, installed, and managed end-to-end. One team, one project, one point of contact.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -197,7 +197,7 @@ const NetworkInfrastructure = () => {
                 We design cable routes around your building's structure — using existing risers, containment, and trunking where possible, and installing new runs where needed. Every cable is tested, certified, and labelled so future maintenance is simple.
               </p>
               <div className="space-y-3">
-                {["Cat6 and Cat6a copper cabling", "Single-mode and multi-mode fibre", "Cable containment and trunking", "Full testing and certification", "As-built documentation and labelling"].map((item) => (
+                {["Cat6 and Cat6a copper cabling", "Single-mode and multi-mode Fibre", "Cable containment and trunking", "Full testing and certification", "As-built documentation and labelling"].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Network className="h-3 w-3 text-primary" />
@@ -348,7 +348,7 @@ const NetworkInfrastructure = () => {
             {[
               { icon: Building2, title: "Commercial Buildings", description: "Offices, conference centres, and shared workspaces that need structured cabling and managed WiFi from the ground up." },
               { icon: Building2, title: "Heritage & Listed Buildings", description: "Thick stone walls, limited cable routes, noise restrictions — we design sympathetic solutions that deliver modern performance." },
-              { icon: Building2, title: "Multi-Building Sites", description: "Business parks, estates, and campuses that need fibre or wireless links between buildings with centralised management." },
+              { icon: Building2, title: "Multi-Building Sites", description: "Business parks, estates, and campuses that need Fibre or wireless links between buildings with centralised management." },
               { icon: Wrench, title: "Ports & Industrial Sites", description: "Outdoor coverage, ruggedised equipment, long cable runs — purpose-built infrastructure for demanding environments." },
               { icon: Wrench, title: "Hospitality & Events", description: "Hotels, retreat centres, and event venues needing guest WiFi across indoor and outdoor areas with phased rollout." },
               { icon: Wrench, title: "Upgrades & Remediation", description: "Existing networks that have grown organically and need a proper overhaul — new cabinets, new cabling, new access points." },

@@ -70,7 +70,7 @@ const MultiBearerConnectivityArticle = () => (
         A bonded connection solves this structurally. Because traffic routes
         through the provider's cloud bonding server, the site is handed a
         real, static, public IP on the way out. Inbound access behaves
-        exactly as it would on a fibre leased line. If a site needs inbound
+        exactly as it would on a Fibre leased line. If a site needs inbound
         access — and most business sites do, even when nobody mentions it
         upfront — that capability isn't a nice-to-have. It's the
         requirement.

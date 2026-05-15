@@ -62,7 +62,7 @@ const ManagedSimServices = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -148,7 +148,7 @@ const ManagedSimServices = () => {
                 Delivered on a 3-year Device-as-a-Service model with no upfront hardware costs. Line rental and call rates are rolled into a single bill — no separate management, no hidden charges. Advanced replacement and in-term upgrades are included as standard.
               </p>
               <p className="text-surface-dark-muted leading-relaxed mb-6">
-                IoT SIMs with pooled data options. Rapid deployment that's completely independent of the UK fibre network — we can get devices live in days, not weeks.
+                IoT SIMs with pooled data options. Rapid deployment that's completely independent of the UK Fibre network — we can get devices live in 10 working days.
               </p>
               <div className="space-y-3">
                 {["Multinet SIM across O2, Vodafone, EE & Three", "3-day line test monitoring on deployment", "Constant GSM connectivity monitoring", "Technical and on-site support included", "Pooled data options across your estate"].map((item) => (
@@ -195,7 +195,7 @@ const ManagedSimServices = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90 shadow-lg">
-                    <Link to="/contact">Get in Touch</Link>
+                    <Link to="/contact">Talk to Us</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
                     <Link to="/pricing">View Pricing</Link>

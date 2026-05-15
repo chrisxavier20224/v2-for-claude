@@ -40,7 +40,7 @@ const londonLocalBusinessSchema = {
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/connectivity/leased-lines",
   },
@@ -167,7 +167,7 @@ const London = () => {
                 <li className="flex gap-3">
                   <span className="text-primary">•</span>
                   <span>
-                    BT and fibre providers deprioritize temporary locations. Weeks or months of waiting.
+                    BT and Fibre providers deprioritize temporary locations. Weeks or months of waiting.
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -287,7 +287,7 @@ const London = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Major Canary Wharf Development</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A large mixed-use development at Canary Wharf had site offices, multiple storage containers, and a construction compound that needed broadband. BT estimated 8-10 weeks for fibre availability.
+              A large mixed-use development at Canary Wharf had site offices, multiple storage containers, and a construction compound that needed broadband. BT estimated 8-10 weeks for Fibre availability.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Site manager called us on Monday. We confirmed 48-hour emergency deployment. By Wednesday morning, our engineer had installed Integra Pro (bonded EE and Vodafone) with mesh WiFi covering all compound buildings.
@@ -376,7 +376,7 @@ const London = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

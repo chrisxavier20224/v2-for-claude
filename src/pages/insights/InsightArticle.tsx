@@ -310,7 +310,7 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
                 Talk to us
               </p>
               <h2 className="text-3xl md:text-4xl font-medium text-white mb-5 leading-tight">
-                Got a site that fibre can't reach?
+                Got a site that Fibre can't reach?
               </h2>
               <p className="text-lg text-white/70 mb-10 leading-relaxed">
                 We've spent a decade getting the awkward sites online. Tell us about yours.

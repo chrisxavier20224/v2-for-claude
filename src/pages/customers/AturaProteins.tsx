@@ -106,7 +106,7 @@ const AturaProteins = () => {
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">The Waiting Game Wasn't an Option</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Waiting months for fibre—and paying thousands in construction charges—wasn't viable. The manufacturing team needed working internet immediately. Their operations were suffering. Their efficiency was bottlenecked. They needed a solution that was fast to deploy and didn't require corporate-level capex.
+              Waiting months for Fibre—and paying thousands in construction charges—wasn't viable. The manufacturing team needed working internet immediately. Their operations were suffering. Their efficiency was bottlenecked. They needed a solution that was fast to deploy and didn't require corporate-level capex.
             </p>
           </AnimatedSection>
         </div>
@@ -131,7 +131,7 @@ const AturaProteins = () => {
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">The Solution: Mobile Networks, Bonded and Reliable</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Integra installed line-of-sight to the nearest cell towers, then bonded multiple 4G networks into a single, dependable connection. They integrated it with Atura's existing systems. The result: 7Mbps became over 150Mbps. VoIP works reliably. Systems respond immediately. The manufacturing facility now has the connectivity to support its growth—without waiting for fibre or paying for expensive construction.
+              Integra installed line-of-sight to the nearest cell towers, then bonded multiple 4G networks into a single, dependable connection. They integrated it with Atura's existing systems. The result: 7Mbps became over 150Mbps. VoIP works reliably. Systems respond immediately. The manufacturing facility now has the connectivity to support its growth—without waiting for Fibre or paying for expensive construction.
             </p>
           </AnimatedSection>
         </div>

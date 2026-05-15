@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "satellite-internet-vs-fixed-wireless-pros-and-cons",
     title: "Satellite Internet vs Fixed Wireless: Pros and Cons",
-    excerpt: "Satellite and fixed wireless are the two leading alternatives to fibre. Both can work. Both have distinct trade-offs. Which one should you choose?",
+    excerpt: "Satellite and fixed wireless are the two leading alternatives to Fibre. Both can work. Both have distinct trade-offs. Which one should you choose?",
     date: "03 Oct 2025",
     image: satelliteVsFixedImg,
     category: "Connectivity",
@@ -120,7 +120,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "4g-vs-5g-broadband-which-is-better-for-business",
     title: "4G vs 5G Broadband: Which Is Better for Business?",
-    excerpt: "The race between 4G and 5G is heating up. If you're a rural business waiting for fibre, which should you choose? The answer depends on what your business actually needs.",
+    excerpt: "The race between 4G and 5G is heating up. If you're a rural business waiting for Fibre, which should you choose? The answer depends on what your business actually needs.",
     date: "19 Jun 2025",
     image: fourGVsFiveGImg,
     category: "Connectivity",
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "beyond-the-broadband-bottleneck",
     title: "Beyond the Broadband Bottleneck: A Practical Alternative for Rural SMEs",
-    excerpt: "Still waiting for fibre? Rural SMEs don't have to settle for 2Mbps copper. SD-WAN delivers 150-350Mbps in 14 days.",
+    excerpt: "Still waiting for Fibre? Rural SMEs don't have to settle for 2Mbps copper. SD-WAN delivers 150-350Mbps in 10 working days.",
     date: "18 Jul 2022",
     image: broadbandBottleneckImg,
     category: "Connectivity",
@@ -246,7 +246,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "unlock-high-speed-internet-rural-areas",
     title: "Unlock High-Speed, Reliable Internet in Rural Areas with Integra SD-WAN",
-    excerpt: "No fibre? No problem. Integra SD-WAN bonds multiple 4G/5G connections to deliver up to 350Mbps to rural homes and businesses.",
+    excerpt: "No Fibre? No problem. Integra SD-WAN bonds multiple 4G/5G connections to deliver up to 350Mbps to rural homes and businesses.",
     date: "07 Sep 2022",
     image: broadbandBottleneckImg,
     category: "Connectivity",

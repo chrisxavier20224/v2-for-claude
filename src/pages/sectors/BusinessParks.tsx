@@ -25,7 +25,7 @@ const painPoints = [
   {
     icon: Navigation,
     title: "Not Sure What Your Tenants Need?",
-    description: "We design the connectivity strategy for your park — fibre where it's available, microwave links where it's not, SD-WAN as a rapid fallback. One provider manages everything.",
+    description: "We design the connectivity strategy for your park — Fibre where it's available, microwave links where it's not, SD-WAN as a rapid fallback. One provider manages everything.",
   },
   {
     icon: WifiOff,
@@ -82,7 +82,7 @@ const BusinessParks = () => {
       <SEO
         title="Business Park Internet"
         description="Fibre, microwave, or SD-WAN for tenant connectivity. Avoid costly Openreach charges."
-        keywords="business park internet, business park connectivity, tenant broadband, fibre business park, SD-WAN, multi-tenant internet, managed connectivity"
+        keywords="business park internet, business park connectivity, tenant broadband, Fibre business park, SD-WAN, multi-tenant internet, managed connectivity"
         url="/sectors/business-parks"
       />
 
@@ -104,11 +104,11 @@ const BusinessParks = () => {
               Your tenants need internet on day one.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Openreach quoted you £20k+ in excess construction charges? We connect your business park for a fraction of the cost — fibre, microwave links, or bonded SD-WAN. Tenants get internet from move-in day.
+              Openreach quoted you £20k+ in excess construction charges? We connect your business park for a fraction of the cost — Fibre, microwave links, or bonded SD-WAN. Tenants get internet from move-in day.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -139,14 +139,14 @@ const BusinessParks = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <PoundSterling className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We find ways around the big fibre quotes.</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We find ways around the big Fibre quotes.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Royle Farm Business Park, Openreach quoted over £20,000 for fibre. We delivered 1000Mbps for a fraction of that cost using a combination of fibre and microwave links. We do the same for business parks across the UK.
+              At Royle Farm Business Park, Openreach quoted over £20,000 for Fibre. We delivered 1000Mbps for a fraction of that cost using a combination of Fibre and microwave links. We do the same for business parks across the UK.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
             <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={fibreImg} alt="Affordable fibre for business parks" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+              <img src={fibreImg} alt="Affordable Fibre for business parks" className="w-full h-auto object-cover aspect-video" loading="lazy" />
             </motion.div>
           </AnimatedSection>
         </div>
@@ -254,7 +254,7 @@ const BusinessParks = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

@@ -57,7 +57,7 @@ const RuralBroadband = () => {
     },
     {
       title: "Expensive Construction",
-      description: "Traditional fibre installation costs thousands in groundwork and permits.",
+      description: "Traditional Fibre installation costs thousands in groundwork and permits.",
     },
   ];
 
@@ -93,7 +93,7 @@ const RuralBroadband = () => {
     <PageLayout>
       <SEO
         title="Rural Broadband UK | Fast Internet Where Fibre Can't Reach | Integra Networks"
-        description="Fast, reliable broadband for rural businesses and farms. No fibre? No problem. Starlink SD-WAN with 4G/5G failover. 99% UK coverage. Installed in 14 days."
+        description="Fast, reliable broadband for rural businesses and farms. No Fibre? No problem. Starlink SD-WAN with 4G/5G failover. 99% UK coverage. Installed in 10 working days."
         keywords="rural broadband, countryside internet, farm broadband, rural wifi, Starlink UK"
         url="/lp/rural-broadband"
       />
@@ -107,7 +107,7 @@ const RuralBroadband = () => {
               Fast, Reliable Broadband — Even Where Fibre Can't Reach
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              No more 10 Mbps. No digging. No planning permission. Get connected to 350 Mbps in 14 days with our Starlink SD-WAN solution. Used by farms, estates, and rural businesses across the UK.
+              No more 10 Mbps. No digging. No planning permission. Get connected to 350 Mbps in 10 working days with our Starlink SD-WAN solution. Used by farms, estates, and rural businesses across the UK.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
@@ -181,7 +181,7 @@ const RuralBroadband = () => {
               <div className="text-5xl md:text-6xl font-medium text-primary mb-2">14</div>
               <h3 className="text-xl font-medium text-foreground mb-3">Days Average Install</h3>
               <p className="text-muted-foreground">
-                From survey to live. Fast. Unlike traditional fibre which can take 12+ weeks.
+                From survey to live. Fast. Unlike traditional Fibre which can take 12+ weeks.
               </p>
             </motion.div>
           </motion.div>
@@ -297,7 +297,7 @@ const RuralBroadband = () => {
                 <span className="text-3xl font-medium">3</span>
               </div>
               <h3 className="text-xl font-medium text-foreground mb-3">Live & Supported</h3>
-              <p className="text-muted-foreground">Installation in 14 days. We monitor 24/7 and provide dedicated UK support.</p>
+              <p className="text-muted-foreground">Installation in 10 working days. We monitor 24/7 and provide dedicated UK support.</p>
             </motion.div>
           </motion.div>
         </div>
@@ -315,7 +315,7 @@ const RuralBroadband = () => {
                   <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Success Story</p>
                   <h2 className="text-heading-2 md:text-heading-1 text-surface-dark-foreground mb-4">Royle Farm Estate</h2>
                   <p className="text-surface-dark-muted mb-6">
-                    "We thought we were stuck in the stone age. Integra got us connected in 10 days, no digging, no councillors to argue with. Game changer." — Robert Royle, Estate Manager
+                    "We thought we were stuck in the stone age. Integra got us connected in 10 working days, no digging, no councillors to argue with. Game changer." — Robert Royle, Estate Manager
                   </p>
                   <div className="flex gap-4">
                     <div>

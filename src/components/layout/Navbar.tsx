@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, 
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
-// Fibre alternatives — solutions when you can't get fibre
+// Fibre alternatives — solutions when you can't get Fibre
 const fibreAlternativeLinks = [
   { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
@@ -14,7 +14,7 @@ const fibreAlternativeLinks = [
   { label: "Pricing", path: "/pricing", icon: CreditCard, tagline: "How Integra Pricing Works" },
 ];
 
-// Standard connectivity — traditional broadband and fibre
+// Standard connectivity — traditional broadband and Fibre
 const standardConnectivityLinks = [
   { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade Fibre" },
   { label: "Managed Internet", path: "/connectivity/managed-internet", icon: Globe, tagline: "Dedicated Bandwidth, Simpler Pricing" },

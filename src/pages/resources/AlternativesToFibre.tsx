@@ -53,7 +53,7 @@ const solutions = [
     speedUp: "80–120Mbps",
     latency: "20–30ms",
     monthlyCost: "£110–400",
-    installTime: "Under 14 days",
+    installTime: "10 working days",
     reliability: "99%+ uptime",
     support: "Professional, SLA available",
     whoFor: "SMEs, farms, construction sites, and homeworkers who need reliable connectivity for EPOS, Teams, VoIP, and cloud apps.",
@@ -80,7 +80,7 @@ const solutions = [
     speedUp: "10–40Mbps",
     latency: "10–20ms",
     monthlyCost: "£20–50",
-    installTime: "7–14 days",
+    installTime: "7–10 working days",
     reliability: "Good (if available)",
     support: "Operator support",
     whoFor: "Properties with strong FWA coverage who want a simple, affordable single-connection solution.",
@@ -132,11 +132,11 @@ const solutions = [
     speedUp: "80–120Mbps",
     latency: "20–30ms",
     monthlyCost: "£180–210 total",
-    installTime: "Under 14 days",
+    installTime: "10 working days",
     reliability: "Excellent (dual paths)",
     support: "Professional, SLA available",
     whoFor: "Businesses that want maximum resilience with the speed of Starlink and the reliability of cellular. Ideal for remote farms, holiday lets, and construction sites.",
-    whoNotFor: "Properties with strong fibre coverage — if you can get a leased line at reasonable cost, that's still the gold standard.",
+    whoNotFor: "Properties with strong Fibre coverage — if you can get a leased line at reasonable cost, that's still the gold standard.",
     pros: [
       "Two completely independent networks — if one fails, you're still online",
       "Starlink provides base speed, cellular adds failover and lower latency",
@@ -154,16 +154,16 @@ const solutions = [
 
 const comparisonData = [
   { solution: "Starlink Direct", speed: "50–200 / 10–30", latency: "25–60ms", monthly: "£99–130", reliability: "Fair", setup: "1–2 days", support: "Forum" },
-  { solution: "Cellular SD-WAN", speed: "Up to 350 / 100+", latency: "20–30ms", monthly: "£110–400", reliability: "99%+", setup: "14 days", support: "Professional" },
-  { solution: "Fixed Wireless", speed: "50–300 / 10–40", latency: "10–20ms", monthly: "£20–50", reliability: "Good", setup: "7–14 days", support: "Operator" },
+  { solution: "Cellular SD-WAN", speed: "Up to 350 / 100+", latency: "20–30ms", monthly: "£110–400", reliability: "99%+", setup: "10 working days", support: "Professional" },
+  { solution: "Fixed Wireless", speed: "50–300 / 10–40", latency: "10–20ms", monthly: "£20–50", reliability: "Good", setup: "7–10 working days", support: "Operator" },
   { solution: "Leased Line", speed: "Up to 1Gbps sym.", latency: "5–15ms", monthly: "£400–2,000+", reliability: "99.9%", setup: "8–12 weeks", support: "24/7 managed" },
-  { solution: "Starlink + Cellular", speed: "150–350 / 80–120", latency: "20–30ms", monthly: "£180–210", reliability: "Excellent", setup: "14 days", support: "Professional" },
+  { solution: "Starlink + Cellular", speed: "150–350 / 80–120", latency: "20–30ms", monthly: "£180–210", reliability: "Excellent", setup: "10 working days", support: "Professional" },
 ];
 
 const faqs = [
   {
-    q: "Is 4G bonding just a temporary patch until fibre arrives?",
-    a: "Not if fibre is years away. Cellular SD-WAN is proven, scalable, and supports businesses today. When fibre eventually arrives, you evaluate upgrading — but waiting in the dark is more expensive than getting connected now.",
+    q: "Is 4G bonding just a temporary patch until Fibre arrives?",
+    a: "Not if Fibre is years away. Cellular SD-WAN is proven, scalable, and supports businesses today. When Fibre eventually arrives, you evaluate upgrading — but waiting in the dark is more expensive than getting connected now.",
   },
   {
     q: "Will Starlink improve enough for business use?",
@@ -175,7 +175,7 @@ const faqs = [
   },
   {
     q: "How long does a cellular SD-WAN install take?",
-    a: "Typically under 14 days from survey to live. That includes desktop survey, engineer site visit, equipment install, and testing. If you already have Starlink, adding the cellular layer is even faster.",
+    a: "Typically 10 working days from survey to live. That includes desktop survey, engineer site visit, equipment install, and testing. If you already have Starlink, adding the cellular layer is even faster.",
   },
   {
     q: "What if my property can't get good 4G signal?",
@@ -191,7 +191,7 @@ const faqs = [
   },
   {
     q: "What's the difference between FTTC and FTTP?",
-    a: "FTTC (Fibre to the Cabinet) puts fibre into the street cabinet but still uses copper for the final connection to your property — so speeds degrade with distance. FTTP (Fibre to the Premises) replaces copper entirely with fibre all the way to your door, delivering much faster and more consistent speeds.",
+    a: "FTTC (Fibre to the Cabinet) puts Fibre into the street cabinet but still uses copper for the final connection to your property — so speeds degrade with distance. FTTP (Fibre to the Premises) replaces copper entirely with Fibre all the way to your door, delivering much faster and more consistent speeds.",
   },
 ];
 
@@ -206,7 +206,7 @@ const relatedServices = [
   },
   {
     name: "Starlink Installation",
-    description: "Satellite broadband available across the UK, no waiting for fibre.",
+    description: "Satellite broadband available across the UK, no waiting for Fibre.",
     url: "/connectivity/starlink-installation",
   },
   {
@@ -227,14 +227,14 @@ const AlternativesToFibre = () => {
       <SEO
         title="Alternatives to Fibre Broadband"
         description="Compare Starlink, 4G/5G bonding, fixed wireless, leased lines. Honest speeds, costs, reliability."
-        keywords="alternatives to fibre broadband, rural broadband UK, Starlink vs 4G, SD-WAN, cellular broadband, no fibre broadband alternatives, business broadband"
+        keywords="alternatives to Fibre broadband, rural broadband UK, Starlink vs 4G, SD-WAN, cellular broadband, no Fibre broadband alternatives, business broadband"
         url="/alternatives-to-fibre-broadband"
       />
 
       {/* Hero */}
       <section className="relative min-h-[75vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Alternatives to fibre broadband" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Alternatives to Fibre broadband" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/50 to-black/20" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -263,17 +263,17 @@ const AlternativesToFibre = () => {
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">The Reality</p>
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
-              Why rural UK businesses can't wait for fibre
+              Why rural UK businesses can't wait for Fibre
             </h2>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
-                Ofcom reports 78% of UK premises now have gigabit-capable connectivity. But that headline hides a brutal truth. In rural areas — farms, remote offices, construction sites, country estates — fibre's arrival date keeps moving.
+                Ofcom reports 78% of UK premises now have gigabit-capable connectivity. But that headline hides a brutal truth. In rural areas — farms, remote offices, construction sites, country estates — Fibre's arrival date keeps moving.
               </p>
               <p>
                 You've probably heard it yourself: "We'll connect you by 2026." Then 2027. Then 2028. Meanwhile, your business runs on a mobile hotspot, Zoom calls buffer mid-sentence, and EPOS tills drop transactions at the worst possible moment.
               </p>
               <p>
-                With the PSTN switching off in January 2027, copper-based services like ADSL are being retired entirely. Waiting for fibre isn't realistic anymore — not because fibre won't eventually arrive, but because your business can't afford to stand still while it does.
+                With the PSTN switching off in January 2027, copper-based services like ADSL are being retired entirely. Waiting for Fibre isn't realistic anymore — not because Fibre won't eventually arrive, but because your business can't afford to stand still while it does.
               </p>
               <p>
                 This guide compares every real alternative available today. No jargon, no sales pitch — just honest assessments to help you choose.
@@ -454,8 +454,8 @@ const AlternativesToFibre = () => {
                   recommendation: "Get it. It's the gold standard. But check the install cost first. If excess construction charges exceed £10,000, the hybrid approach (Starlink + cellular) delivers 95% of the benefit at 20% of the cost.",
                 },
                 {
-                  scenario: "You're waiting for fibre and don't know how long",
-                  recommendation: "Don't wait empty-handed. Deploy a hybrid solution now. When fibre arrives, you'll already be profitable. Fibre becomes an upgrade, not a lifeline.",
+                  scenario: "You're waiting for Fibre and don't know how long",
+                  recommendation: "Don't wait empty-handed. Deploy a hybrid solution now. When Fibre arrives, you'll already be profitable. Fibre becomes an upgrade, not a lifeline.",
                 },
               ].map((item, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">

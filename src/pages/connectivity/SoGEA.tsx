@@ -112,7 +112,7 @@ const SoGEA = () => {
       <SEO
         title="SoGEA & FTTP Broadband"
         description="SoGEA and FTTP without line rental. SoGEA 80Mbps, FTTP 1Gbps. 90%+ UK coverage. PSTN-ready."
-        keywords="SoGEA, SOGEA broadband, FTTP, fibre to the premises, business broadband no phone line, PSTN switch off, broadband only, FTTC no line rental, full fibre"
+        keywords="SoGEA, SOGEA broadband, FTTP, Fibre to the premises, business broadband no phone line, PSTN switch off, broadband only, FTTC no line rental, full Fibre"
         url="/connectivity/sogea"
       />
       <SchemaMarkup data={sogeaSchema} />
@@ -196,7 +196,7 @@ const SoGEA = () => {
               SoGEA moves your broadband off the legacy network now — on your terms, not in a last-minute rush. Pair it with hosted VoIP and your business is fully future-proofed.
             </p>
             <p className="text-sm text-muted-foreground italic">
-              Already using FTTP (full fibre)? You're not affected. SoGEA is specifically for businesses still on FTTC/copper infrastructure.
+              Already using FTTP (full Fibre)? You're not affected. SoGEA is specifically for businesses still on FTTC/copper infrastructure.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -264,10 +264,10 @@ const SoGEA = () => {
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Full Fibre Available?</p>
               <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">FTTP — Fibre to the Premises</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                If FTTP is available at your address, it replaces copper entirely with fibre all the way to your door. Speeds from 40Mbps to 1Gbps, lower latency than SoGEA, and no distance degradation. It's the best standard broadband option available.
+                If FTTP is available at your address, it replaces copper entirely with Fibre all the way to your door. Speeds from 40Mbps to 1Gbps, lower latency than SoGEA, and no distance degradation. It's the best standard broadband option available.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Not sure which you need? We check availability at your address and recommend the best option — SoGEA if you're on copper, FTTP if full fibre has reached you, or one of our SD-WAN solutions if neither delivers enough.
+                Not sure which you need? We check availability at your address and recommend the best option — SoGEA if you're on copper, FTTP if full Fibre has reached you, or one of our SD-WAN solutions if neither delivers enough.
               </p>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg">

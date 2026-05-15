@@ -8,7 +8,7 @@ const WhyIsBTInternetSlow = () => (
 
     <h2>Why BT Internet Gets Slow</h2>
     <p>
-      Several technical factors limit BT broadband speeds. Distance from the telephone exchange is the primary culprit—the further your property sits from the exchange, the slower your connection becomes. Old copper telephone lines that carry ADSL services degrade over distance. Network congestion during peak hours, especially in the evenings when everyone streams video, can reduce speeds. If your area hasn't received fibre upgrades yet, you're stuck with slower copper infrastructure that simply can't deliver modern speeds.
+      Several technical factors limit BT broadband speeds. Distance from the telephone exchange is the primary culprit—the further your property sits from the exchange, the slower your connection becomes. Old copper telephone lines that carry ADSL services degrade over distance. Network congestion during peak hours, especially in the evenings when everyone streams video, can reduce speeds. If your area hasn't received Fibre upgrades yet, you're stuck with slower copper infrastructure that simply can't deliver modern speeds.
     </p>
 
     <h2>Wi-Fi Issues Often Get Blamed on BT</h2>
@@ -33,12 +33,12 @@ const WhyIsBTInternetSlow = () => (
 
     <h2>The Uncomfortable Truth About Copper</h2>
     <p>
-      Here's the reality many BT customers need to accept: if you're on older ADSL or VDSL services using copper lines, speeds plateau at certain maximums regardless of what BT does. Copper simply can't sustain fast connections over long distances. No amount of troubleshooting will fix this fundamental limitation. Until your area receives fibre or you find an alternative solution, slow speeds may be your reality.
+      Here's the reality many BT customers need to accept: if you're on older ADSL or VDSL services using copper lines, speeds plateau at certain maximums regardless of what BT does. Copper simply can't sustain fast connections over long distances. No amount of troubleshooting will fix this fundamental limitation. Until your area receives Fibre or you find an alternative solution, slow speeds may be your reality.
     </p>
 
     <h2>Alternative Solutions</h2>
     <p>
-      If BT's infrastructure won't deliver the speeds you need, alternatives exist. Integra's SD-WAN technology bonds multiple 4G and 5G mobile connections to deliver 150-350Mbps—far faster than most BT services. Unlike BT's network, Integra bypasses the traditional copper telephone infrastructure entirely, using modern mobile networks instead. For properties where mobile signals are strong, this approach delivers dramatically faster, more reliable internet without waiting for fibre infrastructure that might never come.
+      If BT's infrastructure won't deliver the speeds you need, alternatives exist. Integra's SD-WAN technology bonds multiple 4G and 5G mobile connections to deliver 150-350Mbps—far faster than most BT services. Unlike BT's network, Integra bypasses the traditional copper telephone infrastructure entirely, using modern mobile networks instead. For properties where mobile signals are strong, this approach delivers dramatically faster, more reliable internet without waiting for Fibre infrastructure that might never come.
     </p>
 
     <h2>Starlink as a Supplement</h2>

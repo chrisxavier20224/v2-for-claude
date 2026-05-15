@@ -101,7 +101,7 @@ const SteamRally = () => {
               WSRA's annual Steam Rally draws 8,000 vintage transport enthusiasts to rural Somerset. It's their main fundraiser—critical for keeping the historic West Somerset Railway alive.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              But they run it in a field with no fibre. No traditional infrastructure. Just grass, steam engines, and the desperate need to keep payments processing all day long.
+              But they run it in a field with no Fibre. No traditional infrastructure. Just grass, steam engines, and the desperate need to keep payments processing all day long.
             </p>
           </AnimatedSection>
 

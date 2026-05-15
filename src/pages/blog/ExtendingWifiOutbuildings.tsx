@@ -41,7 +41,7 @@ const ExtendingWifiOutbuildings = () => (
 
     <h2>4. SD-WAN and Aggregated Connectivity</h2>
     <p>For properties with more complex requirements, such as multiple outbuildings or varied internet sources, SD-WAN (Software-Defined Wide Area Network) technology can be implemented.</p>
-    <p>SD-WAN aggregates connections from different sources, such as fibre broadband, 4G/5G, or satellite like Starlink, into a single network. This offers:</p>
+    <p>SD-WAN aggregates connections from different sources, such as Fibre broadband, 4G/5G, or satellite like Starlink, into a single network. This offers:</p>
     <ul>
       <li><strong>Resilience:</strong> Ensures consistent connectivity even if one source fails.</li>
       <li><strong>Higher Speeds:</strong> Combines multiple connections for better bandwidth.</li>

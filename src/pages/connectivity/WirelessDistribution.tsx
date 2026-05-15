@@ -41,7 +41,7 @@ const painPoints = [
   {
     icon: Radio,
     title: "Point-to-Point Wireless Links",
-    description: "Direct line-of-sight connections between buildings — no fibre, no cables. Up to 2Gbps full duplex with V Band, 5GHz, and 60GHz options. Commercial-grade radios with weatherproof housings.",
+    description: "Direct line-of-sight connections between buildings — no Fibre, no cables. Up to 2Gbps full duplex with V Band, 5GHz, and 60GHz options. Commercial-grade radios with weatherproof housings.",
   },
   {
     icon: Target,
@@ -113,7 +113,7 @@ const WirelessDistribution = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -126,10 +126,10 @@ const WirelessDistribution = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Wireless Connectivity</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              High-speed wireless links without the fibre costs.
+              High-speed wireless links without the Fibre costs.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              Install in days, not months. Commercial-grade radios with weatherproof housings. Professional survey included. Free hardware replacement if anything fails.
+              Install in 10 working days. Commercial-grade radios with weatherproof housings. Professional survey included. Free hardware replacement if anything fails.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -445,7 +445,7 @@ const WirelessDistribution = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
                 <Link to="/check">Check Availability</Link>

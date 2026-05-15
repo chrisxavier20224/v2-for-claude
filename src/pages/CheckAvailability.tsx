@@ -110,9 +110,9 @@ const USER_TYPE_HS: Record<string, string> = {
 const PAIN_LABEL_HS: Record<string, string> = {
   slow_connection: "Existing connection too slow",
   intermittent: "Critical services intermittent due to poor broadband",
-  moving_no_fibre: "Moving to new location, fibre not available",
+  moving_no_fibre: "Moving to new location, Fibre not available",
   need_faster: "Need faster connection to scale operations",
-  quoted_thousands: "Quoted thousands for fibre install",
+  quoted_thousands: "Quoted thousands for Fibre install",
 };
 
 /* CRM values for which_statement_applies_to_you_ (must match exactly, including legacy typos) */
@@ -313,7 +313,7 @@ const TrustBar = () => (
   >
     {[
       { icon: Zap, text: "Up to 500Mbps" },
-      { icon: Clock, text: "Live in 14 Days" },
+      { icon: Clock, text: "Live in 10 working days" },
       { icon: Shield, text: "14-Day Money Back" },
     ].map((item) => (
       <div key={item.text} className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3">

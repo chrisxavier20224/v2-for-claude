@@ -19,7 +19,7 @@ import {
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/connectivity/leased-lines",
   },
@@ -55,7 +55,7 @@ const Kent = () => {
     },
     {
       q: "My property is near Ashford or Folkestone. How quickly can you reach me?",
-      a: "14 days from survey to installation. We cover all of Kent, including Ashford, Maidstone, Canterbury, Tonbridge, Sevenoaks, and Folkestone. We've completed installations across the county and understand Kent's terrain, network availability, and the specific needs of farming and small business customers.",
+      a: "10 working days from survey to installation. We cover all of Kent, including Ashford, Maidstone, Canterbury, Tonbridge, Sevenoaks, and Folkestone. We've completed installations across the county and understand Kent's terrain, network availability, and the specific needs of farming and small business customers.",
     },
     {
       q: "Do I need a backup system if I'm running a business?",
@@ -138,7 +138,7 @@ const Kent = () => {
               The Garden of England's Connectivity Gap
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              Kent's farmland, orchards, and rural properties are picturesque but poorly served by broadband. BT's fibre rollout skips over the countryside, focusing on towns like Maidstone, Ashford, and Canterbury.
+              Kent's farmland, orchards, and rural properties are picturesque but poorly served by broadband. BT's Fibre rollout skips over the countryside, focusing on towns like Maidstone, Ashford, and Canterbury.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
               The result: rural farmers, agricultural businesses, and small rural enterprises are offline or on unreliable 4G. Meanwhile, modern farming relies on broadband—crop management systems, livestock monitoring, online sales, vet consultations, supplier ordering.
@@ -236,7 +236,7 @@ const Kent = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">4.</span>
                 <span>
-                  <strong>Installation within 14 days.</strong> Professional engineer visit, equipment mounted, tested, configured.
+                  <strong>Installation within 10 working days.</strong> Professional engineer visit, equipment mounted, tested, configured.
                 </span>
               </li>
               <li className="flex gap-4">
@@ -274,7 +274,7 @@ const Kent = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Tonbridge Area Hop Farm</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A traditional hop farm near Tonbridge needed reliable connectivity for crop management and direct-to-brewery sales. BT fibre was 5+ years away. Starlink alone was unreliable during the rainy English seasons.
+              A traditional hop farm near Tonbridge needed reliable connectivity for crop management and direct-to-brewery sales. BT Fibre was 5+ years away. Starlink alone was unreliable during the rainy English seasons.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               The property had strong EE signal but weak Vodafone. We recommended Integra Pro (bonded EE + O2 as backup). Installation: one day. Result: 220Mbps combined speed, zero weather impact, automatic failover redundancy.
@@ -363,7 +363,7 @@ const Kent = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>
