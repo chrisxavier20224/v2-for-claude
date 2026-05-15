@@ -112,16 +112,6 @@ const sectors = [
   { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
 ];
 
-const locations = [
-  { title: "North West", link: "/locations/rural-broadband-north-west" },
-  { title: "Essex & Herts", link: "/locations/rural-broadband-essex-hertfordshire" },
-  { title: "Sussex & Surrey", link: "/locations/rural-broadband-sussex-surrey" },
-  { title: "Kent", link: "/locations/rural-broadband-kent" },
-  { title: "Somerset & Devon", link: "/locations/rural-broadband-somerset-devon" },
-  { title: "Yorkshire", link: "/locations/rural-broadband-yorkshire" },
-  { title: "London Construction", link: "/locations/construction-site-broadband-london" },
-  { title: "Cotswolds", link: "/locations/rural-broadband-cotswolds" },
-];
 
 const organizationSchema = {
   "@context": "https://schema.org",
