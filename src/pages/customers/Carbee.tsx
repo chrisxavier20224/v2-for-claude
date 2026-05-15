@@ -99,7 +99,7 @@ const Carbee = () => {
               CarBee sells premium pre-owned cars and high-performance parts from rural Lincolnshire. They run an office, a workshop, and even a home 300 metres away. Three separate locations that need to talk to each other.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              But they're miles from fibre. Miles from proper infrastructure. When you're in the middle of the countryside trying to run a modern business, connectivity isn't optional—it's everything.
+              But they're miles from Fibre. Miles from proper infrastructure. When you're in the middle of the countryside trying to run a modern business, connectivity isn't optional—it's everything.
             </p>
           </AnimatedSection>
 

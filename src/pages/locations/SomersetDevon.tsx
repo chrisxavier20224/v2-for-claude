@@ -59,7 +59,7 @@ const SomersetDevon = () => {
     },
     {
       q: "How long from survey to installation?",
-      a: "14 days. We typically survey within 24-48 hours of your coordinates, send a quote, and schedule installation. One engineer visit to mount equipment, run cabling, and test everything. You're online within two weeks.",
+      a: "10 working days. We typically survey within 24-48 hours of your coordinates, send a quote, and schedule installation. One engineer visit to mount equipment, run cabling, and test everything. You're online within two weeks.",
     },
     {
       q: "Do you cover Dartmoor, Exmoor, and coastal areas?",
@@ -141,7 +141,7 @@ const SomersetDevon = () => {
               Devon and Somerset are our biggest customer concentration for good reason: the broadband gap here is real, and our solutions work.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              BT's fibre rollout focuses on cities (Exeter, Taunton, Plymouth). Rural Devon and Somerset—Dartmoor villages, Exmoor farms, coastal properties, moorland homesteads—are deprioritized. Promised dates slip. You're stuck waiting or relying on satellite that fails in winter.
+              BT's Fibre rollout focuses on cities (Exeter, Taunton, Plymouth). Rural Devon and Somerset—Dartmoor villages, Exmoor farms, coastal properties, moorland homesteads—are deprioritized. Promised dates slip. You're stuck waiting or relying on satellite that fails in winter.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               We've installed at over 100 Devon and Somerset properties. We understand Dartmoor terrain, coastal challenges, valley signal shadows, and which solutions actually work in each area. We know your region better than any other ISP.
@@ -242,7 +242,7 @@ const SomersetDevon = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">4.</span>
                 <span>
-                  <strong>Installation within 14 days.</strong> Professional engineer installs, tests, and confirms speeds.
+                  <strong>Installation within 10 working days.</strong> Professional engineer installs, tests, and confirms speeds.
                 </span>
               </li>
               <li className="flex gap-4">
@@ -280,7 +280,7 @@ const SomersetDevon = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Holiday Cottage Near Dartmouth</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A successful holiday rental operator near Dartmouth with multiple cottages on the property needed WiFi that guests would rave about. BT fibre was 4+ years away.
+              A successful holiday rental operator near Dartmouth with multiple cottages on the property needed WiFi that guests would rave about. BT Fibre was 4+ years away.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               The property had excellent EE signal and decent Vodafone. We recommended Integra Pro (bonded EE and Vodafone). Installation: one day.
@@ -369,7 +369,7 @@ const SomersetDevon = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

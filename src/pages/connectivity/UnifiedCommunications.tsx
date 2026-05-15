@@ -93,7 +93,7 @@ const UnifiedCommunications = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -199,7 +199,7 @@ const UnifiedCommunications = () => {
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">Get a phone system quote.</h2>
             <p className="text-lg text-surface-dark-muted mb-8 max-w-2xl mx-auto">PSTN switches off January 2027 — start your migration now.</p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-              <Button asChild size="lg"><Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+              <Button asChild size="lg"><Link to="/contact">Talk to Us <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
             </motion.div>
           </AnimatedSection>
         </div>

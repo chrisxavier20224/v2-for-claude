@@ -24,7 +24,7 @@ const painPoints = [
   },
   {
     icon: FileText,
-    title: "No 12-Month Contracts. Flexible Terms.",
+    title: "Flexible contract terms — from short-term agreements up to 36 months.",
     description: "Construction projects don't run to ISP contract schedules. We offer monthly agreements that match your programme, not the other way around.",
   },
   {
@@ -108,7 +108,7 @@ const ConstructionSites = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -139,9 +139,9 @@ const ConstructionSites = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <Zap className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Online in days, not months.</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Live in 10 working days.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities. And when fibre's on the way to your permanent site office, <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
+              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities. And when Fibre's on the way to your permanent site office, <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -250,7 +250,7 @@ const ConstructionSites = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

@@ -104,7 +104,7 @@ const ThankYou = () => {
             </div>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3">
               <Clock className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-white">Live in 14 Days</span>
+              <span className="text-sm font-medium text-white">Live in 10 working days</span>
             </div>
           </motion.div>
 
@@ -162,8 +162,8 @@ const ThankYou = () => {
               {
                 icon: Rocket,
                 step: "3",
-                title: "Go Live in 14 Days",
-                desc: "Once you're happy, our engineers install everything in a single visit — typically within 14 days.",
+                title: "Go Live in 10 working days",
+                desc: "Once you're happy, our engineers install everything in a single visit — typically within 10 working days.",
                 highlight: "Single-visit install",
               },
             ].map((item) => (
@@ -263,7 +263,7 @@ const ThankYou = () => {
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { icon: Shield, label: "14-Day Money Back", color: "text-green-500" },
-                    { icon: Clock, label: "Live in 14 Days", color: "text-primary" },
+                    { icon: Clock, label: "Live in 10 working days", color: "text-primary" },
                     { icon: Zap, label: "Up to 500Mbps", color: "text-yellow-500" },
                     { icon: CheckCircle, label: "Simple 12-Month Terms", color: "text-primary" },
                   ].map((item, i) => (

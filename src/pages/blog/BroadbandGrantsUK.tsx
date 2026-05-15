@@ -11,13 +11,13 @@ const BroadbandGrantsUK = () => (
 
     <p>This is the biggest government-backed programme. Openreach is the primary contractor.</p>
 
-    <p><strong>What it covers:</strong> Fibre to the cabinet (FTTC) or full fibre (FTTP) where commercial ISPs won't reach.</p>
+    <p><strong>What it covers:</strong> Fibre to the cabinet (FTTC) or full Fibre (FTTP) where commercial ISPs won't reach.</p>
 
     <p><strong>Funding:</strong> Government funds 90%. Premises pay nothing upfront (sometimes optional co-investment, but typically free).</p>
 
     <p><strong>Status (2026):</strong> Rolling out across rural England, Scotland, Wales, and NI through 2026-2027.</p>
 
-    <p><strong>Timeline:</strong> If Openreach schedules work at your location, fibre typically arrives 12-24 months from approval.</p>
+    <p><strong>Timeline:</strong> If Openreach schedules work at your location, Fibre typically arrives 12-24 months from approval.</p>
 
     <p><strong>How to check:</strong> Go to <strong>Thinkbroadband.com</strong>. Enter your postcode. It will tell you if your property is in the National Broadband Programme rollout area and estimated installation date.</p>
 
@@ -96,7 +96,7 @@ const BroadbandGrantsUK = () => (
 
     <h2>Why 4G/5G Rarely Qualifies for Grants</h2>
 
-    <p>Government grants prioritize fixed infrastructure (fibre, leased lines) because they're permanent assets. Cellular solutions are seen as temporary.</p>
+    <p>Government grants prioritize fixed infrastructure (Fibre, leased lines) because they're permanent assets. Cellular solutions are seen as temporary.</p>
 
     <p>This is a policy gap: cellular SD-WAN can work for 10 or more years reliably, but it's not grant-eligible.</p>
 
@@ -106,7 +106,7 @@ const BroadbandGrantsUK = () => (
 
     <p>Most businesses can't wait that long.</p>
 
-    <p><strong>The alternative:</strong> Use a private ISP like Integra. We install in 14 days. Cellular or Starlink-based solutions don't require grants because they cost less and deploy faster.</p>
+    <p><strong>The alternative:</strong> Use a private ISP like Integra. We install in 10 working days. Cellular or Starlink-based solutions don't require grants because they cost less and deploy faster.</p>
 
     <p>With a private cellular solution (Integra Pro), you're online immediately instead of waiting 2 years. A grant might save on installation fees, but the time value of immediate connectivity often outweighs the savings.</p>
 
@@ -123,7 +123,7 @@ const BroadbandGrantsUK = () => (
 
     <p>We don't apply for grants on behalf of customers. We can't — Integra's cellular and satellite solutions don't typically qualify.</p>
 
-    <p>But we're often faster and cheaper than waiting for grant-funded fibre.</p>
+    <p>But we're often faster and cheaper than waiting for grant-funded Fibre.</p>
 
     <p>If you've been waiting for BT's grant-funded installation date and it keeps slipping, let's talk. We might have you online while you're waiting.</p>
     </BlogArticleLayout>

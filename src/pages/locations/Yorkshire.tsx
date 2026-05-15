@@ -51,7 +51,7 @@ const Yorkshire = () => {
     },
     {
       q: "What about areas around Sheffield, Leeds, and Harrogate?",
-      a: "We cover all of Yorkshire, including Sheffield, Leeds, Harrogate, Skipton, Rotherham, Doncaster, and Hull. We've completed installations across the county in both rural properties and industrial areas. If you have any mobile signal on your property, we can almost certainly deliver broadband within 14 days.",
+      a: "We cover all of Yorkshire, including Sheffield, Leeds, Harrogate, Skipton, Rotherham, Doncaster, and Hull. We've completed installations across the county in both rural properties and industrial areas. If you have any mobile signal on your property, we can almost certainly deliver broadband within 10 working days.",
     },
     {
       q: "Is bonded 4G/5G reliable for manufacturing operations?",
@@ -236,7 +236,7 @@ const Yorkshire = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">4.</span>
                 <span>
-                  <strong>Installation within 14 days.</strong> Professional engineer installs, mounts equipment, runs cabling, tests everything.
+                  <strong>Installation within 10 working days.</strong> Professional engineer installs, mounts equipment, runs cabling, tests everything.
                 </span>
               </li>
               <li className="flex gap-4">
@@ -274,7 +274,7 @@ const Yorkshire = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Manufacturing Business Near Rotherham</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A precision engineering business near Rotherham depended on fast, reliable broadband for CAD file transfers and client video calls. Their industrial site was remote, and BT fibre was 3+ years away. Starlink latency was unsuitable for video conferencing.
+              A precision engineering business near Rotherham depended on fast, reliable broadband for CAD file transfers and client video calls. Their industrial site was remote, and BT Fibre was 3+ years away. Starlink latency was unsuitable for video conferencing.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               The property had good EE coverage and adequate Vodafone. We recommended Integra Pro (bonded EE and Vodafone) with Enterprise SLA. Installation: one day.
@@ -363,7 +363,7 @@ const Yorkshire = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

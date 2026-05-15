@@ -21,7 +21,7 @@ import seaconHero from "@/assets/case-studies/seacon-hero.webp";
 const featured = {
   company: "McGee Construction",
   title: "Building at Speed: 350Mbps for London's Biggest Sites",
-  description: "McGee needed reliable connectivity across active London construction sites. Integra's SD-WAN delivered 350Mbps without waiting for fibre.",
+  description: "McGee needed reliable connectivity across active London construction sites. Integra's SD-WAN delivered 350Mbps without waiting for Fibre.",
   image: mcgeeHero,
   path: "/customers/mcgee-construction",
 };
@@ -37,7 +37,7 @@ const stories = [
   {
     company: "WB Power Services",
     title: "Dodging the £50K Bill: SD-WAN at Chorley Depot",
-    description: "Facing over £50K in excess construction charges for fibre at their Chorley depot, WB Power chose Integra SD-WAN — and Integra connected the rest of their sites too.",
+    description: "Facing over £50K in excess construction charges for Fibre at their Chorley depot, WB Power chose Integra SD-WAN — and Integra connected the rest of their sites too.",
     image: wbPowerHero,
     path: "/customers/wb-power-services",
   },
@@ -65,14 +65,14 @@ const stories = [
   {
     company: "Royal Harwich Yacht Club",
     title: "Full Sail: 300Mbps in the Middle of Nowhere",
-    description: "A yacht club on a remote estuary with no fibre options. Integra delivered 300Mbps via bonded cellular SD-WAN.",
+    description: "A yacht club on a remote estuary with no Fibre options. Integra delivered 300Mbps via bonded cellular SD-WAN.",
     image: rhycHero,
     path: "/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey",
   },
   {
     company: "UKHarvest",
     title: "Food Rescue Needs Fast Internet: UKHarvest's Win",
-    description: "UKHarvest coordinates food rescue across the UK. Integra deployed high-speed connectivity in under 14 days.",
+    description: "UKHarvest coordinates food rescue across the UK. Integra deployed high-speed connectivity in 10 working days.",
     image: ukharvestHero,
     path: "/customers/fast-track-connectivity-ukharvests-digital-transformation",
   },
@@ -86,14 +86,14 @@ const stories = [
   {
     company: "Atura Proteins",
     title: "Plant Proteins Powered by Real Connectivity",
-    description: "Atura's internet went from 7Mbps to 100Mbps — no excess construction charges, no six-month wait for fibre.",
+    description: "Atura's internet went from 7Mbps to 100Mbps — no excess construction charges, no six-month wait for Fibre.",
     image: aturaHero,
     path: "/customers/revolutionising-connectivity-for-plant-protein-pioneers",
   },
   {
     company: "APJ European",
     title: "A Warehouse in a Digital Blackspot: Solved",
-    description: "APJ's global distribution warehouse sat in a digital blackspot. Integra's SD-WAN brought it online in days, not months.",
+    description: "APJ's global distribution warehouse sat in a digital blackspot. Integra's SD-WAN brought it Live in 10 working days.",
     image: apjHero,
     path: "/customers/revitalising-global-distribution-apj-europeans-digital-transformation",
   },
@@ -139,7 +139,7 @@ const Customers = () => {
               Real businesses. Real results.
             </h1>
             <p className="text-lg text-white/80 max-w-xl mt-6 leading-relaxed">
-              From rural farms to London construction sites, from glamping pods to yacht clubs — these are the businesses that stopped waiting for fibre and chose Integra instead.
+              From rural farms to London construction sites, from glamping pods to yacht clubs — these are the businesses that stopped waiting for Fibre and chose Integra instead.
             </p>
             <p className="text-white/60 mt-4">Read our customer stories below ↓</p>
           </AnimatedSection>

@@ -100,7 +100,7 @@ const LittleQuarry = () => {
               Picture this: guests pay premium rates for a luxury pod retreat. They arrive ready to disconnect—but then reality hits. Their streaming buffers. Their video calls drop. Their Zoom meetings freeze.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Little Quarry's location near Goudhurst was idyllic for guests seeking peace. But it was a digital desert. No fibre. Minimal mobile signal. The existing connectivity was slower than dial-up. Guests could escape the world—but they couldn't actually stay connected when they needed to. That's a problem for modern travellers.
+              Little Quarry's location near Goudhurst was idyllic for guests seeking peace. But it was a digital desert. No Fibre. Minimal mobile signal. The existing connectivity was slower than dial-up. Guests could escape the world—but they couldn't actually stay connected when they needed to. That's a problem for modern travellers.
             </p>
           </AnimatedSection>
 
@@ -138,10 +138,10 @@ const LittleQuarry = () => {
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">The Solution: Bonded 4G, Hidden Infrastructure</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra surveyed the site. No fibre possible. No point waiting. They went after nearby mobile signals—the invisible infrastructure already covering the area. Using SD-WAN technology, they bonded multiple 4G connections into one seamless, fast network. And they hid it all: antennas positioned to blend with the landscape, equipment tucked away. The glamping vibe remained untouched.
+              Integra surveyed the site. No Fibre possible. No point waiting. They went after nearby mobile signals—the invisible infrastructure already covering the area. Using SD-WAN technology, they bonded multiple 4G connections into one seamless, fast network. And they hid it all: antennas positioned to blend with the landscape, equipment tucked away. The glamping vibe remained untouched.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Result: 14 days from decision to live. Guests now get close to 300Mbps download speeds. Video calls work. Streaming works. Zoom calls don't freeze. Little Quarry pods now have everything: luxury, peace, and real internet.
+              Result: 10 working days from decision to live. Guests now get close to 300Mbps download speeds. Video calls work. Streaming works. Zoom calls don't freeze. Little Quarry pods now have everything: luxury, peace, and real internet.
             </p>
           </AnimatedSection>
         </div>

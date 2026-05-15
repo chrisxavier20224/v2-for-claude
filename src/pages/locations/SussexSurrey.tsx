@@ -19,7 +19,7 @@ import {
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/connectivity/leased-lines",
   },
@@ -55,15 +55,15 @@ const SussexSurrey = () => {
     },
     {
       q: "How quickly can you install at my Surrey property?",
-      a: "14 days from survey to installation. Our engineer visits once, mounts equipment, runs cabling, tests everything. We handle all the technical work. You don't need to do anything beyond providing coordinates and approving the quote.",
+      a: "10 working days from survey to installation. Our engineer visits once, mounts equipment, runs cabling, tests everything. We handle all the technical work. You don't need to do anything beyond providing coordinates and approving the quote.",
     },
     {
       q: "Do I need a backup connection or failover system?",
       a: "It depends on your needs. Integra Pro includes built-in redundancy (bonded networks). If one link drops, the other handles traffic. For businesses needing guaranteed uptime, we offer Enterprise service with 99.5% SLA and automatic failover. For most residential and small business customers, Integra Pro is sufficient.",
     },
     {
-      q: "What about future BT fibre rollout? Should I wait?",
-      a: "BT's fibre is coming to Sussex and Surrey, but timelines are uncertain. If you're promised fibre within 12-18 months, waiting may make sense. If it's 3+ years away or indefinite, you're losing productivity now. Many of our customers were promised BT fibre 'soon' for years. Get online now with Integra; if BT arrives, you can always switch.",
+      q: "What about future BT Fibre rollout? Should I wait?",
+      a: "BT's Fibre is coming to Sussex and Surrey, but timelines are uncertain. If you're promised Fibre within 12-18 months, waiting may make sense. If it's 3+ years away or indefinite, you're losing productivity now. Many of our customers were promised BT Fibre 'soon' for years. Get online now with Integra; if BT arrives, you can always switch.",
     },
   ];
 
@@ -141,7 +141,7 @@ const SussexSurrey = () => {
               Affluent rural properties across Sussex and Surrey—Crawley, Horsham, Guildford, Chichester, and beyond—often face broadband constraints despite being relatively close to London.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              The issue: geography. Many properties sit on the fringes of BT's infrastructure. BT fibre is promised "soon" or vaguely scheduled years ahead. Meanwhile, satellite is unreliable, and basic 4G doesn't meet business needs.
+              The issue: geography. Many properties sit on the fringes of BT's infrastructure. BT Fibre is promised "soon" or vaguely scheduled years ahead. Meanwhile, satellite is unreliable, and basic 4G doesn't meet business needs.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               We serve premium properties across Sussex and Surrey—country houses, estates, successful small businesses, and remote workers who demand reliable, fast internet. Our team understands listed building constraints, aesthetic considerations, and the specific needs of affluent rural customers.
@@ -239,7 +239,7 @@ const SussexSurrey = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">4.</span>
                 <span>
-                  <strong>Installation within 14 days.</strong> Professional installation, tested and guaranteed.
+                  <strong>Installation within 10 working days.</strong> Professional installation, tested and guaranteed.
                 </span>
               </li>
               <li className="flex gap-4">
@@ -280,7 +280,7 @@ const SussexSurrey = () => {
               A historic property near Guildford had strong constraints: listed building status, conservation area, no visible external infrastructure allowed.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              BT fibre was vaguely promised years away. Starlink alone had high latency for the owner's remote work. The property needed professional-grade connectivity.
+              BT Fibre was vaguely promised years away. Starlink alone had high latency for the owner's remote work. The property needed professional-grade connectivity.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               We installed Integra Pro (bonded EE and Vodafone) with roof-mounted antenna hidden from street view and cabling concealed. Result: 250Mbps combined speed, zero visible infrastructure changes, full compliance with conservation guidelines. Cost: £110/month. Problem solved.
@@ -366,7 +366,7 @@ const SussexSurrey = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

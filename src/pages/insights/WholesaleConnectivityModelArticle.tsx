@@ -11,7 +11,7 @@ const WholesaleConnectivityModelArticle = () => (
       <p>
         Every alt-net has the same quiet problem. The network reaches most of
         the addresses it needs to — but not all of them. There is always a
-        tail: the sites fibre can't economically reach, the locations where
+        tail: the sites Fibre can't economically reach, the locations where
         the lead time is unworkable, the customer who needs an emergency
         solution faster than the network can deliver one.
       </p>

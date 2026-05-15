@@ -161,7 +161,7 @@ const CCTV = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -218,7 +218,7 @@ const CCTV = () => {
             <div className="text-right">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Network infrastructure that scales with you.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                All cameras run over PoE — no separate power supplies, no spaghetti of cabling. We deploy commercial-grade PoE switches with multimode fibre links and proper cable management. Your CCTV network integrates seamlessly with your existing Integra infrastructure: SD-WAN, WiFi, and connectivity all managed from one place.
+                All cameras run over PoE — no separate power supplies, no spaghetti of cabling. We deploy commercial-grade PoE switches with multimode Fibre links and proper cable management. Your CCTV network integrates seamlessly with your existing Integra infrastructure: SD-WAN, WiFi, and connectivity all managed from one place.
               </p>
             </div>
           </AnimatedSection>

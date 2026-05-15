@@ -48,7 +48,7 @@ const ImagePlaceholder = ({ label, className = "" }: { label: string; className?
 const aboutPoints = [
   {
     icon: Lightbulb,
-    title: "Live while fibre's still being built",
+    title: "Live while Fibre's still being built",
     description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives.",
   },
   {
@@ -81,7 +81,7 @@ const problemPoints = [
 const connectivityServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
+    description: "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
     link: "/connectivity/leased-lines",
   },
@@ -99,7 +99,7 @@ const connectivityServices = [
   },
   {
     title: "Integra SD-WAN",
-    description: "Satellite + cellular, bonded together. 100–350Mbps where fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
+    description: "Satellite + cellular, bonded together. 100–350Mbps where Fibre doesn't reach. Automatic failover keeps you online even when one connection drops.",
     img: sdwanImg,
     link: "/connectivity/integra-sd-wan",
   },
@@ -152,7 +152,7 @@ const Index = () => {
     <>
       <SEO
         title="Business Connectivity & Internet Bridge — Integra Networks"
-        description="B2B internet provider for multi-site businesses. Leased lines, SoGEA, and Integra Bridge — get online in 10 days while you wait for fibre. UK engineers. SLA-backed."
+        description="B2B internet provider for multi-site businesses. Leased lines, SoGEA, and Integra Bridge — get online in 10 working days while you wait for Fibre. UK engineers. SLA-backed."
         keywords="business internet, leased lines UK, Integra Bridge, business broadband, multi-site connectivity, SoGEA, SD-WAN"
         url="/"
       />
@@ -177,7 +177,7 @@ const Index = () => {
             </video>
             <img
               src={heroPoster}
-              alt="Integra Networks fibre connectivity"
+              alt="Integra Networks Fibre connectivity"
               className="hidden motion-reduce:block w-full h-full object-cover"
               loading="eager"
             />
@@ -186,10 +186,10 @@ const Index = () => {
           <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
             <AnimatedSection>
               <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl">
-                We'll get you fibre. While you wait, we'll get you online.
+                We'll get you Fibre. While you wait, we'll get you online.
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Leased lines, SoGEA, managed internet — the same fibre destination as any major ISP. Plus Integra Bridge: enterprise-grade connectivity in days, while your fibre's being built.
+                Leased lines, SoGEA, managed internet — the same Fibre destination as any major ISP. Plus Integra Bridge: enterprise-grade connectivity in days, while your Fibre's being built.
               </p>
               <div className="flex flex-wrap gap-4 mb-12">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -205,7 +205,7 @@ const Index = () => {
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { icon: Zap, label: "Online in days, not weeks" },
+                  { icon: Zap, label: "Live in 10 working days" },
                   { icon: Users, label: "Real UK engineers, not a call centre" },
                   { icon: Globe, label: "99% UK coverage" },
                   { icon: ShieldCheck, label: "SLA-backed uptime" },
@@ -233,7 +233,7 @@ const Index = () => {
                   The circuit's ordered. The clock's running. The project can't wait.
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-                  You've done everything right. The leased line is ordered, the new site is signed, the team's ready to move. Then the install date comes back — ten, twelve, sometimes sixteen weeks out. And there's nothing you can do about it except explain the delay to everyone waiting on you.
+                  You've done everything right. The leased line is ordered, the new site is signed, the team's ready to move. Then the install date comes back — around 10 weeks out. And there's nothing you can do about it except explain the delay to everyone waiting on you.
                 </p>
                 <ul className="space-y-6">
                   {problemPoints.map((p) => (
@@ -266,7 +266,7 @@ const Index = () => {
                   One thing no other ISP has: the ability to bridge the gap.
                 </h2>
                 <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                  Every business waiting on fibre faces the same dead zone — eight weeks or more between signing and going live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data centre, gives you enterprise-grade internet in around 10 days. When your fibre lands, Bridge stays on as permanent failover.
+                  Every business waiting on Fibre faces the same dead zone — around 10 weeks between signing and going live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data centre, gives you enterprise-grade internet in 10 working days. When your Fibre lands, Bridge stays on as permanent failover.
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
@@ -335,7 +335,7 @@ const Index = () => {
                     <span className="inline-block w-fit rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wide px-3 py-1 mb-3">Featured</span>
                     <h3 className="text-2xl sm:text-3xl text-white font-medium mb-2">Integra Bridge</h3>
                     <p className="text-white/80 max-w-xl text-base sm:text-lg leading-relaxed mb-4">
-                      Enterprise internet in ~10 days while you wait for fibre. Stays on as permanent failover.
+                      Enterprise internet in 10 working days while you wait for Fibre. Stays on as permanent failover.
                     </p>
                     <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-3 transition-all">
                       Learn More <ArrowRight className="h-4 w-4" />
@@ -413,7 +413,7 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Sectors We Serve</p>
               <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                Built for businesses fibre leaves behind.
+                Built for businesses Fibre leaves behind.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
                 Construction sites that move every 6 months. Farms with no line of sight. Business parks with 30 tenants sharing one connection. We've solved them all.
@@ -448,7 +448,7 @@ const Index = () => {
                 Run an ISP? We're the infrastructure partner behind the brand.
               </h2>
               <p className="text-lg text-white/85 leading-relaxed max-w-3xl mx-auto mb-10">
-                Integra gives ISPs and resellers enterprise connectivity to deliver under their own brand — survey, install, and support handled, live in 14 days. You keep the customer and the margin.
+                Integra gives ISPs and resellers enterprise connectivity to deliver under their own brand — survey, install, and support handled, live in 10 working days. You keep the customer and the margin.
               </p>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-medium h-12 px-8 text-base">
@@ -615,7 +615,7 @@ const Index = () => {
               </h2>
               <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
                 <p>
-                  Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased lines, SoGEA, and managed internet — the same fibre destination as any major ISP — alongside Integra Bridge, the only product that gets you online in around 10 days while permanent fibre is being built.
+                  Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased lines, SoGEA, and managed internet — the same Fibre destination as any major ISP — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent Fibre is being built.
                 </p>
                 <p>
                   Whether you're rolling out connectivity across a portfolio of construction sites, business parks, or industrial and retail estates, we engineer resilient networks with SLA-backed uptime, proactive monitoring, and UK-based engineering support on every call.

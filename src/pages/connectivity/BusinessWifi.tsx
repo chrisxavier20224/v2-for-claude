@@ -120,7 +120,7 @@ const BusinessWifi = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -274,7 +274,7 @@ const BusinessWifi = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                  <Link to="/contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link to="/contact">Talk to Us <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

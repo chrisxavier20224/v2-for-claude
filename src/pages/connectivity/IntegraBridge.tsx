@@ -14,7 +14,7 @@ const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren:
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
 const problemPoints = [
-  "You need enterprise internet but Fibre takes 75–120 days. Whether you're an ISP delivering to clients or a business waiting for your own install, you're stuck with a timeline you can't control.",
+  "You need enterprise internet but Fibre takes 10 weeks. Whether you're an ISP delivering to clients or a business waiting for your own install, you're stuck with a timeline you can't control.",
   "Deadlines slip. Projects overrun. Revenue is delayed. The longer you wait, the more you lose — in productivity, in credibility, and in cash flow.",
   "Interim connectivity can help, but on its own it rarely delivers the business-grade resilience and performance that modern operations demand.",
 ];
@@ -46,7 +46,7 @@ const otherSolutions = [
   },
   {
     title: "Leased Lines",
-    description: "Dedicated fibre connectivity with guaranteed speeds and SLA-backed uptime.",
+    description: "Dedicated Fibre connectivity with guaranteed speeds and SLA-backed uptime.",
     link: "/connectivity/leased-lines",
   },
   {
@@ -71,7 +71,7 @@ const relatedServices = [
   },
   {
     title: "Leased Lines",
-    description: "Permanent dedicated fibre when Bridge transitions to failover.",
+    description: "Permanent dedicated Fibre when Bridge transitions to failover.",
     href: "/connectivity/leased-lines",
     icon: Wifi,
   },
@@ -82,8 +82,8 @@ const IntegraBridge = () => {
     <PageLayout>
       <SEO
         title="Integra Bridge"
-        description="Enterprise SD-WAN in 10 days. Bonded Starlink + 5G/4G with up to 1Gbps. Works as interim or permanent failover."
-        keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, fibre bridge, interim connectivity, ISP wholesale"
+        description="Enterprise SD-WAN in 10 working days. Bonded Starlink + 5G/4G with up to 1Gbps. Works as interim or permanent failover."
+        keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, Fibre bridge, interim connectivity, ISP wholesale"
         url="/integra-bridge"
       />
 
@@ -137,7 +137,7 @@ const IntegraBridge = () => {
             <AnimatedSection direction="right" delay={0.2}>
               <div className="grid grid-cols-3 gap-4">
                 <motion.div className="col-span-3 rounded-2xl bg-muted border border-border p-8 text-center" variants={fadeUp}>
-                  <p className="text-5xl md:text-6xl font-normal text-primary mb-2">75–120</p>
+                  <p className="text-5xl md:text-6xl font-normal text-primary mb-2">10</p>
                   <p className="text-muted-foreground text-sm">Days typical Fibre lead time</p>
                 </motion.div>
                 <motion.div className="rounded-2xl bg-muted border border-border p-6 text-center" variants={fadeUp}>
@@ -212,7 +212,7 @@ const IntegraBridge = () => {
 
           <AnimatedSection>
             <div className="rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 p-8 text-center max-w-2xl mx-auto">
-              <p className="text-foreground font-normal mb-2">Once fibre is installed, Integra Bridge doesn't switch off.</p>
+              <p className="text-foreground font-normal mb-2">Once Fibre is installed, Integra Bridge doesn't switch off.</p>
               <p className="text-muted-foreground text-sm">
                 It remains as a permanent multi-network, multi-technology failover — blending satellite and cellular for true always-on resilience.
               </p>
@@ -237,7 +237,7 @@ const IntegraBridge = () => {
               Fibre-class Internet <span className="text-primary">without the wait</span>
             </h2>
             <p className="text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Bonded Starlink + 4G/5G presented over Layer-2 from our data centre for Fibre-like stability, static IPs and no CGNAT issues. Live in ~10 days; remains as failover post-Fibre.
+              Bonded Starlink + 4G/5G presented over Layer-2 from our data centre for Fibre-like stability, static IPs and no CGNAT issues. Live in 10 working days; remains as failover post-Fibre.
             </p>
           </AnimatedSection>
 
@@ -266,7 +266,7 @@ const IntegraBridge = () => {
                 </div>
               </div>
               <p className="text-xs text-surface-dark-muted/60 text-center">
-                <strong>Typical contract:</strong> 39-month effective term — 3 months for Fibre install + 36-month fixed from Fibre handover. Bridge then stays active as permanent failover.
+                <strong>Typical contract:</strong> Flexible contract terms — from short-term agreements up to 36 months. Bridge stays active as permanent failover.
               </p>
             </div>
           </AnimatedSection>
@@ -321,10 +321,10 @@ const IntegraBridge = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Next Steps</p>
             <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-4 max-w-3xl mx-auto">
-              Ready to go live in 10 days?
+              Ready to go live in 10 working days?
             </h2>
             <p className="text-lg text-surface-dark-muted max-w-2xl mx-auto mb-8">
-              Get enterprise-grade SD-WAN delivered in 10 days — and permanent failover protection for years to come.
+              Get enterprise-grade SD-WAN delivered in 10 working days — and permanent failover protection for years to come.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

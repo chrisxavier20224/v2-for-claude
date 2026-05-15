@@ -33,7 +33,7 @@ const RoyalHarwichYachtClub = () => {
     <PageLayout>
       <SEO
         title="Royal Harwich Yacht Club Case Study — Integra Networks"
-        description="Royal Harwich Yacht Club got over 300Mbps connectivity bonded from 4G/5G connections via Integra, transforming operations where fibre was impossible."
+        description="Royal Harwich Yacht Club got over 300Mbps connectivity bonded from 4G/5G connections via Integra, transforming operations where Fibre was impossible."
         keywords="case study, Royal Harwich Yacht Club, sailing, SD-WAN, connectivity, Integra Networks"
         url="/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey"
       />
@@ -58,7 +58,7 @@ const RoyalHarwichYachtClub = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Full Sail: How a Yacht Club Got 300Mbps in the Middle of Nowhere</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              When fibre was impossible, Integra bonded 4G/5G to deliver over 300Mbps. Now card payments never fail and VoIP actually works.
+              When Fibre was impossible, Integra bonded 4G/5G to deliver over 300Mbps. Now card payments never fail and VoIP actually works.
             </p>
           </AnimatedSection>
         </div>

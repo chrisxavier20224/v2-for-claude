@@ -25,7 +25,7 @@ const DecisionFrameworkArticle = () => (
 
     <NumberedSection number={2} title="The three options">
       <p>
-        <strong>Leased line.</strong> A dedicated fibre circuit — symmetric,
+        <strong>Leased line.</strong> A dedicated Fibre circuit — symmetric,
         uncontended, SLA-backed. The gold standard for a permanent site that
         can't afford downtime. Its weaknesses are lead time and, where civils
         are involved, an excess construction charge that can run into five
@@ -35,14 +35,14 @@ const DecisionFrameworkArticle = () => (
         <strong>Bonded SD-WAN.</strong> Multiple 4G/5G carriers combined into
         one resilient connection — load balanced or bonded. Live in around
         fourteen days, with no Openreach dependency. The right answer where
-        fibre can't reach a site, takes too long to install, or costs too much
+        Fibre can't reach a site, takes too long to install, or costs too much
         to bring in.
       </p>
       <p>
         <strong>Integra Bridge.</strong> Bonded Starlink and 5G/4G delivered
         over Layer 2 from our data centre — enterprise-grade connectivity in
         around ten days, purpose-built for the gap while a permanent circuit
-        is being constructed. When the fibre lands, Bridge doesn't get
+        is being constructed. When the Fibre lands, Bridge doesn't get
         removed; it stays on as automatic failover.
       </p>
     </NumberedSection>
@@ -60,7 +60,7 @@ const DecisionFrameworkArticle = () => (
         <em>alongside</em> the leased line order rather than instead of it.
       </p>
       <p>
-        <strong>Location.</strong> Can fibre reach the site economically? A
+        <strong>Location.</strong> Can Fibre reach the site economically? A
         quote that comes back with a heavy excess construction charge, or
         stalls on a wayleave, isn't a reason to wait — it's a signal that
         SD-WAN has stopped being the compromise and become the better primary.
@@ -102,13 +102,13 @@ const DecisionFrameworkArticle = () => (
     <NumberedSection number={4} title="The framework">
       <p>Run those factors and most decisions resolve cleanly:</p>
       <ul>
-        <li>Permanent site, fibre available, timeline works → leased line.</li>
+        <li>Permanent site, Fibre available, timeline works → leased line.</li>
         <li>
-          Permanent site, fibre can't reach or costs too much → bonded SD-WAN
+          Permanent site, Fibre can't reach or costs too much → bonded SD-WAN
           as the primary.
         </li>
         <li>
-          Permanent site, fibre ordered but months away → Bridge now, leased
+          Permanent site, Fibre ordered but months away → Bridge now, leased
           line later, Bridge stays as failover.
         </li>
         <li>Temporary or moving site → SD-WAN, every time.</li>
@@ -133,7 +133,7 @@ const DecisionFrameworkArticle = () => (
       <p>
         An estate has a head office that warrants a leased line, regional
         sites where SD-WAN is the sensible primary, a new location where
-        Bridge covers the gap until fibre arrives, and a temporary site that
+        Bridge covers the gap until Fibre arrives, and a temporary site that
         will only ever be wireless. A connectivity <em>strategy</em> isn't
         picking a winner — it's matching each site to what it needs, and
         layering the right resilience behind each one.

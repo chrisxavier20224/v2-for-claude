@@ -29,7 +29,7 @@ const StarlinkSdwan = () => (
     </ul>
 
     <h2>How Does It Work?</h2>
-    <p>The setup is straightforward: Starlink provides the primary high-speed connection, while one or more backup connections (4G, 5G, ADSL, or fibre) are bonded together using SD-WAN technology. The SD-WAN device intelligently routes traffic, prioritises critical applications, and switches connections seamlessly if an outage occurs.</p>
+    <p>The setup is straightforward: Starlink provides the primary high-speed connection, while one or more backup connections (4G, 5G, ADSL, or Fibre) are bonded together using SD-WAN technology. The SD-WAN device intelligently routes traffic, prioritises critical applications, and switches connections seamlessly if an outage occurs.</p>
 
     <h2>Conclusion</h2>
     <p>Starlink SD-WAN represents the best of both worlds: the revolutionary speed and coverage of satellite internet, combined with the reliability and intelligence of SD-WAN technology. For businesses that can't afford downtime, it's a practical, proven solution that delivers peace of mind.</p>

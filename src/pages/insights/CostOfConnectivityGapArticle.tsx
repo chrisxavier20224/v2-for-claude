@@ -10,8 +10,8 @@ const CostOfConnectivityGapArticle = () => (
     <NumberedSection number={1} title="The wait nobody budgets for">
       <p>
         Every connectivity project has a plan. The site is signed, the leased
-        line or fibre is ordered, the team has a move-in date. And then the
-        install date comes back — ten, twelve, sometimes sixteen weeks away.
+        line or Fibre is ordered, the team has a move-in date. And then the
+        install date comes back — around 10 weeks away.
       </p>
       <p>
         That gap between <em>needing</em> connectivity and <em>having</em> it
@@ -27,7 +27,7 @@ const CostOfConnectivityGapArticle = () => (
 
     <NumberedSection number={2} title="Where the lead time comes from">
       <p>
-        A fibre or leased line install isn't a single task — it's a chain of
+        A Fibre or leased line install isn't a single task — it's a chain of
         them. A desktop survey, then a physical survey, then planning. If the
         route crosses third-party land, a wayleave has to be negotiated — a
         process measured in weeks at best. If there's no duct in the ground,
@@ -38,9 +38,9 @@ const CostOfConnectivityGapArticle = () => (
       <p>
         Each step has its own queue, and the queues don't overlap. An
         eight-week quote is the optimistic case — the one where nothing goes
-        wrong. Complex or rural sites routinely run past sixteen weeks.
+        wrong. Complex or rural sites routinely run past 10 weeks.
       </p>
-      <DataCallout value="8–16 weeks" label="typical lead time from order to live circuit" />
+      <DataCallout value="10 weeks" label="typical lead time from order to live circuit" />
       <p>
         None of that is anyone's fault. It's the physics of building
         infrastructure. But "not your fault" and "not your problem" are
@@ -118,8 +118,8 @@ const CostOfConnectivityGapArticle = () => (
 
     <NumberedSection number={5} title="What closing the gap looks like">
       <p>
-        The fix isn't to make fibre faster. Nobody can do that. The fix is to{" "}
-        <em>decouple being online from the fibre install</em> — to treat them
+        The fix isn't to make Fibre faster. Nobody can do that. The fix is to{" "}
+        <em>decouple being online from the Fibre install</em> — to treat them
         as two separate problems instead of one.
       </p>
       <p>
@@ -128,17 +128,17 @@ const CostOfConnectivityGapArticle = () => (
         fourteen days while the permanent circuit is still being built. The
         business operates from day one. The lease stops being dead weight. The
         team works at full capacity. The project keeps its timeline. And when
-        the fibre finally lands, the interim connection isn't ripped out — it
+        the Fibre finally lands, the interim connection isn't ripped out — it
         stays in place as automatic failover, so the resilience outlasts the
         gap it was brought in to close.
       </p>
       <DataCallout
-        value="~14 days"
-        label="typical time to live on interim connectivity, vs. 8–16 weeks for the permanent circuit"
+        value="~10 working days"
+        label="typical time to live on interim connectivity, vs. 10 weeks for the permanent circuit"
       />
       <p>
         That's the model behind Integra Bridge: get the business online now,
-        let the fibre catch up, and keep the resilience for good.
+        let the Fibre catch up, and keep the resilience for good.
       </p>
       <p>
         The connectivity gap is a real cost, not a neutral wait. The next

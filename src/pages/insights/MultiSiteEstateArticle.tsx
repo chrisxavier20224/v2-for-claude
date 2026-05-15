@@ -25,7 +25,7 @@ const MultiSiteEstateArticle = () => (
 
     <NumberedSection number={2} title="Every estate has its outliers">
       <p>
-        Across any estate, most sites are straightforward — fibre is
+        Across any estate, most sites are straightforward — Fibre is
         available, the install is routine, the contract is renewable. But
         there is always a tail: the rural depot, the new-build with no duct in
         the ground, the site carrying a six-figure construction quote, the
@@ -64,7 +64,7 @@ const MultiSiteEstateArticle = () => (
       <p>
         <strong>Step three: have a planned answer for the outliers.</strong>{" "}
         This is where most estates fall down. The outlier sites need a
-        different tool — bonded SD-WAN where fibre can't reach, Integra
+        different tool — bonded SD-WAN where Fibre can't reach, Integra
         Bridge where a circuit is ordered but months out. The point isn't
         that the outliers need solving; it's that the answer should be{" "}
         <em>ready and pre-decided</em>, part of the playbook, not improvised

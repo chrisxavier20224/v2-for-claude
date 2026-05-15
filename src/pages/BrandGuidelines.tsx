@@ -46,7 +46,7 @@ const BrandGuidelines = () => {
   const straplines = [
     "Connectivity shouldn't depend on your postcode.",
     "Built for the locations others won't reach.",
-    "When the fibre stops, we start.",
+    "When the Fibre stops, we start.",
     "Business-grade broadband. Anywhere.",
   ];
 

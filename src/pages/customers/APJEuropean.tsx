@@ -96,7 +96,7 @@ const APJEuropean = () => {
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">The Problem: Infrastructure Blackout</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              APJ European is a global distributor. But their warehouse was in a location with no infrastructure. The ducts that should carry fibre were collapsed. The available internet was unusable—slow and unreliable. As a result, their whole operation was crippled. Staff couldn't access the systems they needed. Customer calls were dropped. Order processing was glacially slow. They were a global distributor operating like a business from the 1990s.
+              APJ European is a global distributor. But their warehouse was in a location with no infrastructure. The ducts that should carry Fibre were collapsed. The available internet was unusable—slow and unreliable. As a result, their whole operation was crippled. Staff couldn't access the systems they needed. Customer calls were dropped. Order processing was glacially slow. They were a global distributor operating like a business from the 1990s.
             </p>
           </AnimatedSection>
 
@@ -128,7 +128,7 @@ const APJEuropean = () => {
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">The Solution: Three Networks, Bonded Into One</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra deployed their SD-WAN solution, bonding three of the four major UK mobile networks (including 5G) into a single, resilient connection. No waiting for fibre infrastructure. No reliance on a single network. Just real, fast internet.
+              Integra deployed their SD-WAN solution, bonding three of the four major UK mobile networks (including 5G) into a single, resilient connection. No waiting for Fibre infrastructure. No reliance on a single network. Just real, fast internet.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Result: over 300Mbps download speeds. All their applications—Quicken, SAP, everything—now work smoothly. Phone calls don't drop. Customer service is back. Installed in two weeks. APJ European is no longer a warehouse in a blackspot. They're a modern distributor.

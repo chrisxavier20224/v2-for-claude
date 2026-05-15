@@ -165,7 +165,7 @@ const ConstructionWifi = () => {
               <div className="text-5xl md:text-6xl font-medium text-primary mb-2">48h</div>
               <h3 className="text-xl font-medium text-foreground mb-3">Live in 2 Days</h3>
               <p className="text-muted-foreground">
-                Equipment shipped next day. Installed and live by day 2. No waiting for fibre crews.
+                Equipment shipped next day. Installed and live by day 2. No waiting for Fibre crews.
               </p>
             </motion.div>
 
@@ -391,7 +391,7 @@ const ConstructionWifi = () => {
                   Connect Your Site in 48 Hours
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-                  No waiting for fibre crews. Flexible terms. Get reliable WiFi across all your site buildings and stay flexible as your project evolves.
+                  No waiting for Fibre crews. Flexible terms. Get reliable WiFi across all your site buildings and stay flexible as your project evolves.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90">

@@ -30,13 +30,13 @@ const painPoints = [
   {
     icon: Clock,
     title: "Waiting Months for a Leased Line?",
-    description: "Ordered fibre or a leased line and staring down an eight-week-plus install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
+    description: "Ordered Fibre or a leased line and staring down an 10-week install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
   },
 ];
 
 const benefitItems = [
   "Up to 500Mbps via Cellular SD-WAN",
-  "Installed by Our Engineers in Under 14 Days",
+  "Installed by Our Engineers in 10 working days",
   "99.5% Uptime SLA with Phone & WhatsApp Support",
 ];
 
@@ -104,11 +104,11 @@ const RuralSMEs = () => {
               Your business can't grow on 2Mbps ADSL.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Rural businesses don't have to settle for slow copper. Up to 500Mbps via cellular SD-WAN, installed in 14 days — or <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for a leased line. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
+              Rural businesses don't have to settle for slow copper. Up to 500Mbps via cellular SD-WAN, installed in 10 working days — or <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for a leased line. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </motion.div>
           </AnimatedSection>
@@ -198,7 +198,7 @@ const RuralSMEs = () => {
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Focus on your business. We handle the tech.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
+                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for Fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
               </p>
             </div>
             <motion.ul className="max-w-md mx-auto space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
@@ -255,13 +255,13 @@ const RuralSMEs = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
             <h2 className="text-heading-1 md:text-display-sm text-white mb-6">Stop losing money to bad internet.</h2>
-            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">Up to 500Mbps. 99.5% uptime SLA. Installed in 14 days. No fibre required.</p>
+            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">Up to 500Mbps. 99.5% uptime SLA. Installed in 10 working days. No Fibre required.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

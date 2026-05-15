@@ -74,12 +74,12 @@ const relatedServices = [
   },
   {
     name: "Leased Lines",
-    description: "Dedicated fibre connectivity with business-grade SLA.",
+    description: "Dedicated Fibre connectivity with business-grade SLA.",
     url: "/connectivity/leased-lines",
   },
   {
     name: "Integra SD-WAN",
-    description: "Alternative broadband for areas without fibre availability.",
+    description: "Alternative broadband for areas without Fibre availability.",
     url: "/connectivity/integra-sd-wan",
   },
   {
@@ -200,7 +200,7 @@ const PSTNSwitchOff = () => {
 
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-8 md:grid-cols-3">
           {[
-            { title: "Integra SD-WAN", desc: "When traditional connectivity options aren't available, our SD-WAN solution revolutionises connectivity for businesses, especially in rural locations, without the need for fibre.", path: "/" },
+            { title: "Integra SD-WAN", desc: "When traditional connectivity options aren't available, our SD-WAN solution revolutionises connectivity for businesses, especially in rural locations, without the need for Fibre.", path: "/" },
             { title: "VoIP Solutions", desc: "Our PSTN/ISDN2 replacement solution allows businesses to upgrade their existing system without overhauling their entire cabling network. Quick to deploy and easy to configure.", path: "/connectivity/unified-communications" },
             { title: "Managed SIM Services", desc: "Our Managed SIM service provides superior connectivity, compliance, and reporting, offering significant cost savings compared to traditional analogue landlines.", path: "/connectivity/managed-sim-services" },
           ].map((s) => (

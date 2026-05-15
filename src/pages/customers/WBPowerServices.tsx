@@ -103,7 +103,7 @@ const WBPowerServices = () => {
               WB Power Services manages generator sales, hire, and maintenance across the UK. Their Chorley depot ran operations that depended on instant communication: project managers uploading files, site coordinators checking inventory, clients getting updates.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              But the depot sat dead—no mobile signal, no fibre, no internet. Staff couldn't access centralised tools. They couldn't upload project files. Decisions slowed down. Operations ground to a crawl.
+              But the depot sat dead—no mobile signal, no Fibre, no internet. Staff couldn't access centralised tools. They couldn't upload project files. Decisions slowed down. Operations ground to a crawl.
             </p>
           </AnimatedSection>
 
@@ -158,10 +158,10 @@ const WBPowerServices = () => {
               The Solution: SD-WAN at Chorley, Leased Lines Everywhere Else
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              At Chorley, where excess construction charges made fibre unviable, Integra installed bonded 4G/5G SD-WAN from the depot roof — giving line of sight to multiple mobile towers. The result: 350Mbps+ download with strong upload speeds, perfect for the large files project managers push throughout the day.
+              At Chorley, where excess construction charges made Fibre unviable, Integra installed bonded 4G/5G SD-WAN from the depot roof — giving line of sight to multiple mobile towers. The result: 350Mbps+ download with strong upload speeds, perfect for the large files project managers push throughout the day.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              For WB Power's other depots where fibre was available, Integra deployed leased lines alongside CCTV systems and WiFi networks. Different solution for each site, one vendor managing everything. That's what makes the real difference — the right technology in the right place, without overpaying.
+              For WB Power's other depots where Fibre was available, Integra deployed leased lines alongside CCTV systems and WiFi networks. Different solution for each site, one vendor managing everything. That's what makes the real difference — the right technology in the right place, without overpaying.
             </p>
           </AnimatedSection>
         </div>

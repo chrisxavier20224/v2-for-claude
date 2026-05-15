@@ -80,8 +80,8 @@ const faqs = [
     a: "You can. Keep Starlink as failover, primary traffic on cellular. Or disable Starlink entirely once cellular is rock-solid. No penalty.",
   },
   {
-    q: "Is Starlink more affordable than fibre if fibre were available?",
-    a: "Starlink (£99/month) vs fibre (£40-80/month) — fibre is cheaper monthly. But fibre install takes 8-12 weeks; Starlink takes 1 day. If you need connectivity now, Starlink is the affordable bridge.",
+    q: "Is Starlink more affordable than Fibre if Fibre were available?",
+    a: "Starlink (£99/month) vs Fibre (£40-80/month) — Fibre is cheaper monthly. But Fibre install takes 8-12 weeks; Starlink takes 1 day. If you need connectivity now, Starlink is the affordable bridge.",
   },
   {
     q: "Can I use Starlink in a moving vehicle (caravan, boat)?",
@@ -169,7 +169,7 @@ const StarlinkForBusiness = () => {
             </h2>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
-                Two years ago, rural businesses had three choices: wait for fibre, use unreliable mobile hotspot, or pay £1,000+ per month for a leased line. Starlink changed that. For £99/month, you get up to 250Mbps from space, installed yourself, available almost everywhere.
+                Two years ago, rural businesses had three choices: wait for Fibre, use unreliable mobile hotspot, or pay £1,000+ per month for a leased line. Starlink changed that. For £99/month, you get up to 250Mbps from space, installed yourself, available almost everywhere.
               </p>
               <p>
                 That's genuinely transformative. Starlink is real, it works, and it's legitimate for many use cases. But business-grade connectivity and fast connectivity are different things. This article is honest about both.
@@ -353,7 +353,7 @@ const StarlinkForBusiness = () => {
                 },
                 {
                   title: "Rung 3 — Fibre arrives (Month 24+)",
-                  description: "Fibre is now available in your area. You evaluate: Fibre cost vs Starlink+cellular reliability. You might keep Starlink+cellular as backup, or upgrade to fibre primary + cellular backup.",
+                  description: "Fibre is now available in your area. You evaluate: Fibre cost vs Starlink+cellular reliability. You might keep Starlink+cellular as backup, or upgrade to Fibre primary + cellular backup.",
                 },
               ].map((rung, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">
@@ -382,7 +382,7 @@ const StarlinkForBusiness = () => {
                 One exception where Starlink shines: temporary sites that move every few weeks.
               </p>
               <p>
-                A construction site needs connectivity for 2-3 months. Installing a proper cellular SD-WAN takes 14 days setup (fine) but adds recurring cost for 3 months (£405 total) and then decommission. Starlink: Set up in a day, £99/month, pack it up and move.
+                A construction site needs connectivity for 2-3 months. Installing a proper cellular SD-WAN takes 10 working days setup (fine) but adds recurring cost for 3 months (£405 total) and then decommission. Starlink: Set up in a day, £99/month, pack it up and move.
               </p>
               <p>
                 For temporary sites under 6 months, Starlink makes sense. For permanent premises, cellular or hybrid is better.

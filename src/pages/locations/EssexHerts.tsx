@@ -19,7 +19,7 @@ import {
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/connectivity/leased-lines",
   },
@@ -155,7 +155,7 @@ const EssexHerts = () => {
                 <li className="flex gap-3">
                   <span className="text-primary">•</span>
                   <span>
-                    Scattered rural properties make fibre rollout expensive. BT prioritizes urban density.
+                    Scattered rural properties make Fibre rollout expensive. BT prioritizes urban density.
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -236,7 +236,7 @@ const EssexHerts = () => {
               <li className="flex gap-4">
                 <span className="font-semibold text-foreground min-w-8">4.</span>
                 <span>
-                  <strong>Installation within 14 days.</strong> One engineer visit. Mount antenna, cable run, router config, speed test.
+                  <strong>Installation within 10 working days.</strong> One engineer visit. Mount antenna, cable run, router config, speed test.
                 </span>
               </li>
               <li className="flex gap-4">
@@ -274,7 +274,7 @@ const EssexHerts = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Bishop's Stortford Property</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A family-run business near Bishop's Stortford needed reliable internet for online sales and video calls. BT said fibre was 3 years away. Starlink alone was unreliable in rain.
+              A family-run business near Bishop's Stortford needed reliable internet for online sales and video calls. BT said Fibre was 3 years away. Starlink alone was unreliable in rain.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               We recommended Integra Pro (bonded EE and Vodafone). The property had excellent multi-network coverage. Installation: one day.
@@ -363,7 +363,7 @@ const EssexHerts = () => {
                 <Link to="/check">Check Availability</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Get In Touch</Link>
+                <Link to="/contact">Talk to Us</Link>
               </Button>
             </div>
           </AnimatedSection>

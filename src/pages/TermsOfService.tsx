@@ -158,7 +158,7 @@ const TermsOfService = () => {
       </LegalParagraph>
       <LegalSubheading>Integra SD-WAN Product Guarantee</LegalSubheading>
       <LegalParagraph>
-        If the Customer is dissatisfied with the speeds provided by the SD-WAN service, the Company offers a full money-back guarantee within 14 days of service activation. The Company reserves the right to extend this period on a case-by-case basis.
+        If the Customer is dissatisfied with the speeds provided by the SD-WAN service, the Company offers a full money-back guarantee within 10 working days of service activation. The Company reserves the right to extend this period on a case-by-case basis.
       </LegalParagraph>
 
       <LegalHeading number={9}>Limitation of Liability</LegalHeading>
@@ -187,7 +187,7 @@ const TermsOfService = () => {
 
       <LegalHeading number={12}>Change Control</LegalHeading>
       <LegalParagraph>
-        Each party will appoint an Authorised Representative. If either party wishes to request a change to the Services, the receiving party will respond within 14 days and, where applicable, issue a new Order Form.
+        Each party will appoint an Authorised Representative. If either party wishes to request a change to the Services, the receiving party will respond within 10 working days and, where applicable, issue a new Order Form.
       </LegalParagraph>
 
       <LegalHeading number={13}>Indemnity</LegalHeading>

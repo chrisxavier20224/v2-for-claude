@@ -3,13 +3,13 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 const CheckBroadbandAvailability = () => (
   <BlogArticleLayout slug="how-to-check-broadband-availability-rural-areas">
-    <p>You've got a postcode and a property, but you don't know what broadband options are actually available. BT's checker says "no fibre." Openreach says "4-6 years away." Starlink might work, but you're not sure.</p>
+    <p>You've got a postcode and a property, but you don't know what broadband options are actually available. BT's checker says "no Fibre." Openreach says "4-6 years away." Starlink might work, but you're not sure.</p>
 
     <p>How do you actually find out what's possible?</p>
 
     <h2>Why Standard Checkers Fail in Rural Areas</h2>
 
-    <p>The major ISP checkers (BT, Virgin, Vodafone) are built for urban markets where FTTP is the standard. In rural areas, they either say "fibre not available" or give you a vague "4 or more years" timeline.</p>
+    <p>The major ISP checkers (BT, Virgin, Vodafone) are built for urban markets where FTTP is the standard. In rural areas, they either say "Fibre not available" or give you a vague "4 or more years" timeline.</p>
 
     <p>They don't tell you about the real alternatives: 4G, 5G, satellite, or bonded solutions.</p>
 
@@ -17,10 +17,10 @@ const CheckBroadbandAvailability = () => (
 
     <h2>The Alternatives You're Not Checking</h2>
 
-    <p>When fibre is years away, four alternatives usually exist:</p>
+    <p>When Fibre is years away, four alternatives usually exist:</p>
 
     <ol style={{ paddingLeft: "20px" }}>
-      <li><strong>4G/5G cellular coverage</strong> — Often available where fibre isn't. Your mobile phone has signal? Probably 4G is available.</li>
+      <li><strong>4G/5G cellular coverage</strong> — Often available where Fibre isn't. Your mobile phone has signal? Probably 4G is available.</li>
       <li><strong>Satellite (Starlink)</strong> — Works almost everywhere if you have southern sky visibility.</li>
       <li><strong>Bonded cellular</strong> — Multiple 4G/5G SIMs combined into one fast connection.</li>
       <li><strong>Existing wireless infrastructure</strong> — Some areas have point-to-point wireless links you don't know about.</li>
@@ -36,13 +36,13 @@ const CheckBroadbandAvailability = () => (
 
     <p>Example: 51.9234° N, 2.8567° W</p>
 
-    <p><strong>Why coordinates matter:</strong> Postcode checkers are too vague. A postcode covers a 2km area. Broadband availability changes block by block. One side of a postcode might have fibre, the other might have nothing. Coordinates are precise.</p>
+    <p><strong>Why coordinates matter:</strong> Postcode checkers are too vague. A postcode covers a 2km area. Broadband availability changes block by block. One side of a postcode might have Fibre, the other might have nothing. Coordinates are precise.</p>
 
     <h3>Step 2: Check Fibre Availability Formally</h3>
 
-    <p>Use Ofcom's official checker (ofcom.org.uk) or BT's Fibre Checker. These are the actual incumbent databases, so if they say fibre is years away, it genuinely is.</p>
+    <p>Use Ofcom's official checker (ofcom.org.uk) or BT's Fibre Checker. These are the actual incumbent databases, so if they say Fibre is years away, it genuinely is.</p>
 
-    <p>Take note of the earliest "fibre available" date they give you.</p>
+    <p>Take note of the earliest "Fibre available" date they give you.</p>
 
     <h3>Step 3: Check Mobile Network Coverage</h3>
 
@@ -62,7 +62,7 @@ const CheckBroadbandAvailability = () => (
 
     <p>Go to starlink.com. Enter your postcode. It will tell you whether satellite signal is available at your location and what speeds you might expect.</p>
 
-    <p>Starlink might say "available" even if fibre is years away. That means you have a backup option.</p>
+    <p>Starlink might say "available" even if Fibre is years away. That means you have a backup option.</p>
 
     <h3>Step 5: The Desktop Survey (The Critical Step)</h3>
 
@@ -94,7 +94,7 @@ const CheckBroadbandAvailability = () => (
 
     <h2>Real Example: Confused by Checkers</h2>
 
-    <p>A client in Devon used BT's checker — said no fibre, 5 years. Starlink's checker — said available at 50Mbps. Vodafone's coverage checker — said 4G coverage. O2's checker — said 4G coverage.</p>
+    <p>A client in Devon used BT's checker — said no Fibre, 5 years. Starlink's checker — said available at 50Mbps. Vodafone's coverage checker — said 4G coverage. O2's checker — said 4G coverage.</p>
 
     <p>They called us confused. Four different answers.</p>
 
@@ -105,7 +105,7 @@ const CheckBroadbandAvailability = () => (
       <li>Verified line-of-sight</li>
       <li>Recommended bonded Integra Pro</li>
       <li>Delivered 180Mbps (way better than any single checker suggested)</li>
-      <li>Installed in 14 days (faster than BT's "5 years")</li>
+      <li>Installed in 10 working days (faster than BT's "5 years")</li>
     </ul>
 
     <p>They're still a customer.</p>
@@ -114,7 +114,7 @@ const CheckBroadbandAvailability = () => (
 
     <p>A real broadband availability check should answer:</p>
     <ul>
-      <li>Is fibre coming to my property? (And when?)</li>
+      <li>Is Fibre coming to my property? (And when?)</li>
       <li>If not, what other options exist?</li>
       <li>Which option will actually work at my location (not just my postcode)?</li>
       <li>How fast will it be?</li>
@@ -137,7 +137,7 @@ const CheckBroadbandAvailability = () => (
     <p>Instead:</p>
     <ol style={{ paddingLeft: "20px" }}>
       <li>Find your coordinates on Google Maps</li>
-      <li>Note the date when BT says fibre is coming (if ever)</li>
+      <li>Note the date when BT says Fibre is coming (if ever)</li>
       <li>Email us your coordinates</li>
       <li>We'll send back a detailed desktop survey in 24 hours</li>
       <li>You'll finally have the truth about what's actually available</li>
