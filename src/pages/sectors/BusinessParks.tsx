@@ -20,7 +20,7 @@ const painPoints = [
   {
     icon: PoundSterling,
     title: "Quoted £20k+ by Openreach?",
-    description: "Excess construction charges for rural business parks are often eye-watering. We've saved clients like Royle Farm over £20,000 using creative alternatives.",
+    description: "Excess construction charges for business parks and industrial estates are often eye-watering. We've saved clients tens of thousands using creative alternatives — at Royle Farm Business Park, over £20,000.",
   },
   {
     icon: Navigation,
