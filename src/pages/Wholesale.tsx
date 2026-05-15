@@ -30,9 +30,9 @@ const Wholesale = () => {
   return (
     <PageLayout>
       <SEO
-        title="Wholesale & MSP Partnership"
+        title="Wholesale Partnership for ISPs & MSPs | Integra Networks"
         description="The infrastructure partner behind your brand. Integra delivers enterprise-grade connectivity in 10 working days under your brand — survey, install, and support handled."
-        keywords="MSP wholesale, connectivity partner, white label SD-WAN, reseller programme, MSP partnership UK, wholesale internet"
+        keywords="ISP and MSP wholesale, connectivity partner, white label SD-WAN, reseller programme, wholesale internet UK, wholesale internet"
         url="/wholesale"
       />
 
