@@ -21,7 +21,7 @@ const problemPoints = [
 
 const solutionPoints = [
   "Instead of waiting months for Fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
-  "For ISPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
+  "For ISPs and MSPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
   "Immediate connectivity, stronger relationships, and a reputation for delivering when it matters most.",
 ];
 
