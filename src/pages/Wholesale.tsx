@@ -166,7 +166,7 @@ const Wholesale = () => {
         </div>
       </section>
 
-      {/* INTEGRA BRIDGE FOR MSPs — dark (featured card) */}
+      {/* INTEGRA BRIDGE FOR ISPs & MSPs — dark (featured card) */}
       <section className="relative bg-surface-dark py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/assets/backgrounds/datacentre-hires-bg.webp" alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
@@ -174,7 +174,7 @@ const Wholesale = () => {
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto rounded-2xl border-2 border-primary bg-primary/10 ring-1 ring-primary/30 p-10 text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Integra Bridge for MSPs</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Integra Bridge for ISPs &amp; MSPs</p>
               <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-6">
                 Deliver day one. <span className="text-primary">Let the Fibre catch up.</span>
               </h2>
