@@ -39,7 +39,7 @@ const Wholesale = () => {
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Integra wholesale MSP partnership" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Integra wholesale ISP and MSP partnership" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/60 to-black/30" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -51,9 +51,9 @@ const Wholesale = () => {
                 </span>
               </Link>
             </motion.div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">For MSPs &amp; Resellers</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">For ISPs, MSPs &amp; Resellers</p>
             <h1 className="mb-6 text-heading-1 md:text-display-sm font-normal tracking-tight text-white max-w-3xl">
-              Be the MSP that delivers — <span className="text-primary">even when Fibre can't.</span>
+              Be the ISP or MSP that delivers — <span className="text-primary">even when Fibre can't.</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
               When your customer needs connectivity and the Fibre's weeks away, Integra is the infrastructure partner behind your brand. We handle the survey, install, and support. You keep the customer, the brand, and the margin.
