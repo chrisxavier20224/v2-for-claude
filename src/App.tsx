@@ -157,7 +157,7 @@ const App = () => (
               <Route path="/home-v2" element={<HomeV2 />} />
 
               {/* PPC Landing Pages */}
-              <Route path="/lp/business-broadband" element={<BusinessBroadbandLanding />} />
+              <Route path="/lp/business-broadband" element={<Navigate to="/sd-wan-for-small-business" replace />} />
               <Route path="/lp/construction-wifi" element={<ConstructionWifiLanding />} />
               <Route path="/lp/construction-site-internet" element={<ConstructionSiteInternetLanding />} />
               <Route path="/lp/homeworker-broadband" element={<Navigate to="/" replace />} />
@@ -166,8 +166,8 @@ const App = () => (
 
               <Route path="/sectors/homeworkers" element={<Navigate to="/" replace />} />
               <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/business-parks" replace />} />
-              <Route path="/sectors/construction-sites" element={<ConstructionSites />} />
-              <Route path="/sectors/rural-smes" element={<RuralSMEs />} />
+              <Route path="/sectors/construction-sites" element={<Navigate to="/construction-site-broadband" replace />} />
+              <Route path="/sectors/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
               <Route path="/sectors/business-parks" element={<BusinessParks />} />
               <Route path="/sectors/airbnbs" element={<Navigate to="/" replace />} />
               <Route path="/customers" element={<Customers />} />
@@ -271,13 +271,9 @@ const App = () => (
               <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
               <Route path="/rural-business-broadband" element={<RuralSMEs />} />
               <Route path="/starlink-for-business" element={<StarlinkForBusiness />} />
-              <Route path="/sd-wan-for-small-business" element={<BusinessBroadband />} />
+              <Route path="/sd-wan-for-small-business" element={<BusinessBroadbandLanding />} />
               <Route path="/construction-site-broadband" element={<ConstructionSites />} />
               <Route path="/farm-broadband" element={<Navigate to="/rural-business-broadband" replace />} />
-              {/* Long-form aliases redirect to the short canonical URLs */}
-              <Route path="/sectors/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
-              <Route path="/sectors/construction-sites" element={<Navigate to="/construction-site-broadband" replace />} />
-              <Route path="/lp/business-broadband" element={<Navigate to="/sd-wan-for-small-business" replace />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/availability-checker" element={<Navigate to="/check" replace />} />
               <Route path="/pricing" element={<Pricing />} />
