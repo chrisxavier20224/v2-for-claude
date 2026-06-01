@@ -23,7 +23,7 @@ const relatedServices = [
     icon: Zap,
     title: "Integra SD-WAN",
     description: "Advanced redundancy and multi-connection management",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     icon: Radio,

@@ -33,7 +33,7 @@ const relatedServices = [
     title: "Integra SD-WAN",
     description: "Intelligent network optimisation for multi-site connectivity.",
     icon: Code,
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     title: "Pricing",

@@ -17,7 +17,7 @@ const relatedServices = [
     icon: Zap,
     title: "Integra SD-WAN",
     description: "Bonded multi-SIM connectivity engineered for active sites",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     icon: Camera,
@@ -29,7 +29,7 @@ const relatedServices = [
     icon: Hammer,
     title: "Construction Sites",
     description: "Sector-specific solutions for construction PMs and contractors",
-    href: "/sectors/construction-sites",
+    href: "/construction-site-broadband",
   },
   {
     icon: Wifi,

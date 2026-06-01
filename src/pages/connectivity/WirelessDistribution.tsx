@@ -32,7 +32,7 @@ const relatedServices = [
   {
     title: "Integra SD-WAN",
     description: "Bonded 4G/5G connectivity alternative to line-of-sight wireless.",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
     icon: Network,
   },
 ];
@@ -400,7 +400,7 @@ const WirelessDistribution = () => {
               ))}
             </ul>
             <Button asChild>
-              <Link to="/connectivity/integra-sd-wan">Learn about Integra SD-WAN <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/integra-sd-wan">Learn about Integra SD-WAN <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

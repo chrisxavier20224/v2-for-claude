@@ -20,7 +20,7 @@ const pillarPages = [
     icon: Globe,
     title: "Rural Business Broadband UK",
     description: "Getting reliable internet when BT says 'wait'. Solutions for rural SMEs who need business-grade connectivity today, not in three years.",
-    path: "/sectors/rural-smes",
+    path: "/rural-business-broadband",
     tag: "Rural Connectivity",
   },
   {
@@ -34,21 +34,21 @@ const pillarPages = [
     icon: Network,
     title: "SD-WAN for Small Business",
     description: "Plain English explanation of SD-WAN — no jargon. How bonded cellular connections deliver fibre-like speeds without waiting for infrastructure.",
-    path: "/lp/business-broadband",
+    path: "/sd-wan-for-small-business",
     tag: "Technology Explainer",
   },
   {
     icon: HardHat,
     title: "Construction Site Broadband",
     description: "Temporary, reliable, fast-deployment broadband solutions for UK construction sites. From site offices to CCTV and IoT monitoring.",
-    path: "/sectors/construction-sites",
+    path: "/construction-site-broadband",
     tag: "Sector Guide",
   },
   {
     icon: Tractor,
     title: "Farm Broadband UK",
     description: "Reliable internet for livestock monitoring, precision agriculture, and farm business operations. Solutions built for rural properties.",
-    path: "/sectors/rural-smes",
+    path: "/rural-business-broadband",
     tag: "Sector Guide",
   },
 ];

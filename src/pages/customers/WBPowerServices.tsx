@@ -173,7 +173,7 @@ const WBPowerServices = () => {
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
-              { label: "Integra SD-WAN", href: "/connectivity/integra-sd-wan" },
+              { label: "Integra SD-WAN", href: "/integra-sd-wan" },
               { label: "Leased Lines", href: "/connectivity/leased-lines" },
               { label: "CCTV", href: "/connectivity/cctv" },
               { label: "Business WiFi", href: "/connectivity/business-wifi" },

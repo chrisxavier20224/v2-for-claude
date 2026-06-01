@@ -23,13 +23,13 @@ const relatedServices = [
     icon: Zap,
     title: "Integra SD-WAN",
     description: "Redundant connectivity with 99.5% uptime guarantee",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     icon: Leaf,
     title: "Rural SMEs",
     description: "Business solutions tailored for countryside enterprises",
-    href: "/sectors/rural-smes",
+    href: "/rural-business-broadband",
   },
   {
     icon: Radio,

@@ -109,7 +109,7 @@ const relatedServices = [
   {
     name: "Integra SD-WAN",
     description: "Add cellular bonding for improved reliability and failover.",
-    url: "/connectivity/integra-sd-wan",
+    url: "/integra-sd-wan",
   },
   {
     name: "4G/5G Backup",

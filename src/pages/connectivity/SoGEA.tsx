@@ -66,7 +66,7 @@ const relatedServices = [
     icon: Wifi,
     title: "Integra SD-WAN",
     description: "Bonded 4G/5G for faster speeds and failover.",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     icon: Zap,

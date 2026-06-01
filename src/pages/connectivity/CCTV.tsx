@@ -117,13 +117,13 @@ const relatedServices = [
     icon: Zap,
     title: "Integra SD-WAN",
     description: "Secure, intelligent networking for enterprises.",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     icon: Building2,
     title: "Construction Sites",
     description: "Temporary connectivity solutions for active projects.",
-    href: "/sectors/construction-sites",
+    href: "/construction-site-broadband",
   },
 ];
 

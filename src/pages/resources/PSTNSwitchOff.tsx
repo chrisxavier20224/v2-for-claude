@@ -80,7 +80,7 @@ const relatedServices = [
   {
     name: "Integra SD-WAN",
     description: "Alternative broadband for areas without Fibre availability.",
-    url: "/connectivity/integra-sd-wan",
+    url: "/integra-sd-wan",
   },
   {
     name: "Pricing",
