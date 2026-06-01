@@ -34,7 +34,6 @@ const infrastructureLinks = [
 ];
 
 const companyLinks = [
-  { label: "About", path: "/about" },
   { label: "Customer Stories", path: "/customers" },
   { label: "Wholesale", path: "/wholesale" },
   { label: "Insights", path: "/insights" },
