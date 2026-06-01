@@ -16,12 +16,12 @@
   <url><loc>https://integra-networks.co.uk/wholesale</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Sectors (kept) -->
-  <url><loc>https://integra-networks.co.uk/sectors/construction-sites</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/sectors/rural-smes</loc><priority>0.8</priority></url>
+  <url><loc>https://integra-networks.co.uk/construction-site-broadband</loc><priority>0.8</priority></url>
+  <url><loc>https://integra-networks.co.uk/rural-business-broadband</loc><priority>0.8</priority></url>
   <url><loc>https://integra-networks.co.uk/sectors/business-parks</loc><priority>0.8</priority></url>
 
   <!-- Connectivity -->
-  <url><loc>https://integra-networks.co.uk/connectivity/integra-sd-wan</loc><priority>0.8</priority></url>
+  <url><loc>https://integra-networks.co.uk/integra-sd-wan</loc><priority>0.8</priority></url>
   <url><loc>https://integra-networks.co.uk/connectivity/integra-bridge</loc><priority>0.8</priority></url>
   <url><loc>https://integra-networks.co.uk/connectivity/leased-lines</loc><priority>0.8</priority></url>
   <url><loc>https://integra-networks.co.uk/connectivity/managed-internet</loc><priority>0.7</priority></url>
@@ -55,7 +55,7 @@
   <url><loc>https://integra-networks.co.uk/locations/construction-site-broadband-london</loc><priority>0.6</priority></url>
 
   <!-- PPC landing -->
-  <url><loc>https://integra-networks.co.uk/lp/business-broadband</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/sd-wan-for-small-business</loc><priority>0.6</priority></url>
   <url><loc>https://integra-networks.co.uk/lp/construction-wifi</loc><priority>0.6</priority></url>
   <url><loc>https://integra-networks.co.uk/lp/construction-site-internet</loc><priority>0.6</priority></url>
   <url><loc>https://integra-networks.co.uk/lp/rural-broadband</loc><priority>0.6</priority></url>
