@@ -29,14 +29,14 @@ const sectorMap: Record<string, SectorData> = {
     tagline: "Rapid-deploy connectivity for temporary sites",
     image: constructionHero,
     icon: HardHat,
-    path: "/sectors/construction-sites",
+    path: "/construction-site-broadband",
   },
   "rural-smes": {
     name: "Rural SMEs",
     tagline: "Reliable internet where others say it can't be done",
     image: ruralSmeHero,
     icon: Tractor,
-    path: "/sectors/rural-smes",
+    path: "/rural-business-broadband",
   },
   "homeworkers": {
     name: "Homeworkers",

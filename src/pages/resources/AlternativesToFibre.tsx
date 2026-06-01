@@ -202,7 +202,7 @@ const relatedServices = [
   {
     name: "Integra SD-WAN",
     description: "Business-grade bonded cellular with automatic failover and redundancy.",
-    url: "/connectivity/integra-sd-wan",
+    url: "/integra-sd-wan",
   },
   {
     name: "Starlink Installation",

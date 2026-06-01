@@ -17,7 +17,7 @@ const NotFound = () => {
           <h1 className="text-display-sm md:text-display text-foreground mb-4">404</h1>
           <p className="text-xl text-muted-foreground mb-8">Page not found — but here's where most people are heading.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/sectors/construction-sites" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-11 px-6 text-sm font-semibold hover:bg-primary/90 transition-colors">
+            <a href="/construction-site-broadband" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-11 px-6 text-sm font-semibold hover:bg-primary/90 transition-colors">
               Construction sites
             </a>
             <a href="/connectivity/integra-bridge" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-11 px-6 text-sm font-semibold hover:bg-primary/90 transition-colors">

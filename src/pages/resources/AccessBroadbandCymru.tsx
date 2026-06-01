@@ -28,12 +28,12 @@ const relatedServices = [
   {
     name: "Integra SD-WAN",
     description: "Business-grade bonded cellular with automatic failover.",
-    url: "/connectivity/integra-sd-wan",
+    url: "/integra-sd-wan",
   },
   {
     name: "Rural SMEs",
     description: "Tailored connectivity solutions for rural small businesses.",
-    url: "/sectors/rural-smes",
+    url: "/rural-business-broadband",
   },
   {
     name: "Pricing",

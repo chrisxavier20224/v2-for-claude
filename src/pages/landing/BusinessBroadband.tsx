@@ -17,7 +17,7 @@ const relatedServices = [
     icon: Zap,
     title: "Integra SD-WAN",
     description: "Multi-site redundancy with intelligent load balancing",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     icon: Wifi,
@@ -95,7 +95,7 @@ const BusinessBroadband = () => {
         title="Business Broadband UK | Reliable Internet for SMEs & Offices | Integra Networks"
         description="Reliable business broadband with 99.5% uptime SLA. Not residential repackaged. Fast upload speeds, dedicated UK support, no downtime guarantee."
         keywords="business broadband UK, office internet, reliable business wifi, SME broadband, leased lines"
-        url="/lp/business-broadband"
+        url="/sd-wan-for-small-business"
       />
 
       {/* HERO */}

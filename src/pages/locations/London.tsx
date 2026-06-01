@@ -48,13 +48,13 @@ const relatedServices = [
     title: "Construction Sites",
     description: "Fast-deployment broadband for temporary sites and project locations.",
     icon: Hammer,
-    href: "/sectors/construction-sites",
+    href: "/construction-site-broadband",
   },
   {
     title: "Integra SD-WAN",
     description: "Intelligent network optimisation for multi-site connectivity.",
     icon: Code,
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     title: "Pricing",

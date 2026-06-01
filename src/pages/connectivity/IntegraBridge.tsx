@@ -42,7 +42,7 @@ const otherSolutions = [
   {
     title: "Integra SD-WAN",
     description: "Enterprise-grade bonded 4G/5G connectivity — up to 500Mbps without Fibre.",
-    link: "/connectivity/integra-sd-wan",
+    link: "/integra-sd-wan",
   },
   {
     title: "Leased Lines",
@@ -60,7 +60,7 @@ const relatedServices = [
   {
     title: "Integra SD-WAN",
     description: "Enterprise 4G/5G bonding without Starlink component.",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
     icon: Network,
   },
   {

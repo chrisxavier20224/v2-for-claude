@@ -5,7 +5,7 @@ import integraLogo from "@/assets/integra-logo-white.png";
 
 
 const fibreAlternativeLinks = [
-  { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan" },
+  { label: "Integra SD-WAN", path: "/integra-sd-wan" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },

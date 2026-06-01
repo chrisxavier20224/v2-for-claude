@@ -27,13 +27,13 @@ const relatedServices = [
     title: "Integra SD-WAN",
     description: "Bonded 4G/5G with automatic failover for enterprise-grade reliability.",
     icon: Code,
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
   {
     title: "Rural SMEs",
     description: "Tailored broadband solutions designed for rural small businesses.",
     icon: Users,
-    href: "/sectors/rural-smes",
+    href: "/rural-business-broadband",
   },
   {
     title: "4G/5G Backup",

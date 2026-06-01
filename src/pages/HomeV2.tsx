@@ -100,12 +100,12 @@ const connectivityServices = [
   { title: "Leased Lines", description: "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.", img: leasedImg, link: "/connectivity/leased-lines" },
   { title: "SoGEA", description: "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.", img: fibreImg, link: "/connectivity/so-gea" },
   { title: "Managed Internet", description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.", img: bpImg, link: "/connectivity/managed-internet" },
-  { title: "Integra SD-WAN", description: "Bonded multi-carrier 4G/5G connectivity — a five-tier range from single-network failover up to 500Mbps, engineered and monitored per site.", img: sdwanImg, link: "/connectivity/integra-sd-wan" },
+  { title: "Integra SD-WAN", description: "Bonded multi-carrier 4G/5G connectivity — a five-tier range from single-network failover up to 500Mbps, engineered and monitored per site.", img: sdwanImg, link: "/integra-sd-wan" },
 ];
 
 const sectors = [
-  { title: "Construction", img: constructionImg, link: "/sectors/construction-sites" },
-  { title: "Rural SMEs", img: ruralImg, link: "/sectors/rural-smes" },
+  { title: "Construction", img: constructionImg, link: "/construction-site-broadband" },
+  { title: "Rural SMEs", img: ruralImg, link: "/rural-business-broadband" },
   { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
   { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
 ];

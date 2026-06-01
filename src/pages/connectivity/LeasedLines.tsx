@@ -48,7 +48,7 @@ const relatedServices = [
   {
     title: "Integra SD-WAN",
     description: "Bonded 4G/5G connectivity for faster deployment and flexible redundancy.",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
     icon: Network,
   },
   {

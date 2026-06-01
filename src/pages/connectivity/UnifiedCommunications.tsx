@@ -58,7 +58,7 @@ const relatedServices = [
     icon: Zap,
     title: "Integra SD-WAN",
     description: "Secure, intelligent networking for organisations.",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
   },
 ];
 

@@ -7,7 +7,7 @@ import integraLogoWhite from "@/assets/integra-logo-white.png";
 
 // Fibre alternatives — solutions when you can't get Fibre
 const fibreAlternativeLinks = [
-  { label: "Integra SD-WAN", path: "/connectivity/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
+  { label: "Integra SD-WAN", path: "/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
   { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
   { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Professional Starlink Install & Support" },
   { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
@@ -38,8 +38,8 @@ const infrastructureLinks = [
 const allConnectivityLinks = [...fibreAlternativeLinks, ...standardConnectivityLinks, ...infrastructureLinks];
 
 const sectorLinks = [
-  { label: "Construction Sites", path: "/sectors/construction-sites", icon: Hammer, tagline: "High-Speed for Construction" },
-  { label: "Rural SMEs", path: "/sectors/rural-smes", icon: Store, tagline: "Reliable Internet for Rural Business" },
+  { label: "Construction Sites", path: "/construction-site-broadband", icon: Hammer, tagline: "High-Speed for Construction" },
+  { label: "Rural SMEs", path: "/rural-business-broadband", icon: Store, tagline: "Reliable Internet for Rural Business" },
   { label: "Business Parks", path: "/sectors/business-parks", icon: Trees, tagline: "Connectivity for Business Parks" },
 ];
 

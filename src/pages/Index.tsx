@@ -101,13 +101,13 @@ const connectivityServices = [
     title: "Integra SD-WAN",
     description: "Bonded multi-carrier 4G/5G connectivity — a five-tier range from single-network failover up to 500Mbps, engineered and monitored per site.",
     img: sdwanImg,
-    link: "/connectivity/integra-sd-wan",
+    link: "/integra-sd-wan",
   },
 ];
 
 const sectors = [
-  { title: "Construction", img: constructionImg, link: "/sectors/construction-sites" },
-  { title: "Rural SMEs", img: ruralImg, link: "/sectors/rural-smes" },
+  { title: "Construction", img: constructionImg, link: "/construction-site-broadband" },
+  { title: "Rural SMEs", img: ruralImg, link: "/rural-business-broadband" },
   { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
   { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
 ];

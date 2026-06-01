@@ -59,7 +59,7 @@ const relatedServices = [
   {
     title: "Integra SD-WAN",
     description: "Bonded 4G/5G connectivity with 99.5% uptime SLA.",
-    href: "/connectivity/integra-sd-wan",
+    href: "/integra-sd-wan",
     icon: Network,
   },
   {
@@ -83,7 +83,7 @@ const RuralSMEs = () => {
         title="Rural Business Internet"
         description="Up to 500Mbps via SD-WAN. 14-day install, 99.5% uptime SLA. PSTN migration included."
         keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
-        url="/sectors/rural-smes"
+        url="/rural-business-broadband"
       />
 
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
