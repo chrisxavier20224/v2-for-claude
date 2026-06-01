@@ -235,7 +235,7 @@ const App = () => (
               <Route path="/connectivity/cctv" element={<CCTV />} />
               <Route path="/connectivity/wireless-distribution" element={<WirelessDistribution />} />
               <Route path="/connectivity/network-infrastructure" element={<NetworkInfrastructure />} />
-              <Route path="/connectivity/integra-sd-wan" element={<IntegraSDWAN />} />
+              <Route path="/connectivity/integra-sd-wan" element={<Navigate to="/integra-sd-wan" replace />} />
               <Route path="/connectivity/integra-home" element={<Navigate to="/" replace />} />
               <Route path="/connectivity/integra-bridge" element={<IntegraBridge />} />
               <Route path="/connectivity/managed-firewall" element={<ManagedFirewall />} />
@@ -249,7 +249,7 @@ const App = () => (
               <Route path="/proposal/:id" element={<ProposalDetail />} />
 
               {/* Landing pages matching old Framer URLs */}
-              <Route path="/integra-sd-wan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />
+              <Route path="/integra-sd-wan" element={<IntegraSDWAN />} />
               <Route path="/thankyou" element={<ThankYou />} />
               <Route path="/check" element={<CheckAvailability />} />
               <Route path="/checking-out-your-property" element={<CheckingOutYourProperty />} />
@@ -269,11 +269,15 @@ const App = () => (
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
               <Route path="/pstn-switch-off" element={<PSTNSwitchOff />} />
               <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
-              <Route path="/rural-business-broadband" element={<Navigate to="/sectors/rural-smes" replace />} />
+              <Route path="/rural-business-broadband" element={<RuralSMEs />} />
               <Route path="/starlink-for-business" element={<StarlinkForBusiness />} />
-              <Route path="/sd-wan-for-small-business" element={<Navigate to="/lp/business-broadband" replace />} />
-              <Route path="/construction-site-broadband" element={<Navigate to="/sectors/construction-sites" replace />} />
-              <Route path="/farm-broadband" element={<Navigate to="/sectors/rural-smes" replace />} />
+              <Route path="/sd-wan-for-small-business" element={<BusinessBroadband />} />
+              <Route path="/construction-site-broadband" element={<ConstructionSites />} />
+              <Route path="/farm-broadband" element={<Navigate to="/rural-business-broadband" replace />} />
+              {/* Long-form aliases redirect to the short canonical URLs */}
+              <Route path="/sectors/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
+              <Route path="/sectors/construction-sites" element={<Navigate to="/construction-site-broadband" replace />} />
+              <Route path="/lp/business-broadband" element={<Navigate to="/sd-wan-for-small-business" replace />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/availability-checker" element={<Navigate to="/check" replace />} />
               <Route path="/pricing" element={<Pricing />} />
@@ -302,12 +306,12 @@ const App = () => (
               <Route path="/starlink-installation" element={<StarlinkInstallation />} />
               <Route path="/unified-communications" element={<UnifiedCommunications />} />
               <Route path="/fibre-enabled-buildings" element={<Navigate to="/sectors/business-parks" replace />} />
-              <Route path="/construction-sites" element={<Navigate to="/sectors/construction-sites" replace />} />
+              <Route path="/construction-sites" element={<Navigate to="/construction-site-broadband" replace />} />
               <Route path="/business-parks" element={<Navigate to="/sectors/business-parks" replace />} />
               <Route path="/homeworkers" element={<Navigate to="/" replace />} />
               <Route path="/airbnbs" element={<Navigate to="/" replace />} />
-              <Route path="/rural-sme's" element={<Navigate to="/sectors/rural-smes" replace />} />
-              <Route path="/rural-smes" element={<Navigate to="/sectors/rural-smes" replace />} />
+              <Route path="/rural-sme's" element={<Navigate to="/rural-business-broadband" replace />} />
+              <Route path="/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
 
               {/* Google Ads landing page redirects - old Framer URLs that no longer exist */}
               <Route path="/rural_internet" element={<Navigate to="/check" replace />} />
@@ -344,7 +348,7 @@ const App = () => (
               <Route path="/internet-connectivity/*" element={<Navigate to="/insights" replace />} />
 
               {/* Slug fix redirects for legacy/incorrect internal links */}
-              <Route path="/connectivity/integra-sdwan" element={<Navigate to="/connectivity/integra-sd-wan" replace />} />
+              <Route path="/connectivity/integra-sdwan" element={<Navigate to="/integra-sd-wan" replace />} />
               <Route path="/connectivity/4g-5g-backup" element={<Navigate to="/connectivity/cellular-backup" replace />} />
               <Route path="/customers/royal-harwich-yacht-club" element={<Navigate to="/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey" replace />} />
               <Route path="/customers/thinking-anglers" element={<Navigate to="/customers/casting-the-net-wide-a-connectivity-transformation" replace />} />
