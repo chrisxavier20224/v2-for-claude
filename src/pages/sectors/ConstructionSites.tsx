@@ -83,7 +83,7 @@ const ConstructionSites = () => {
         title="Construction Site Internet"
         description="Deployed in days. Monthly agreements, static IP for CCTV, portable kit."
         keywords="construction site internet, construction WiFi, site connectivity, SD-WAN construction, temporary internet, portable broadband, site office internet"
-        url="/sectors/construction-sites"
+        url="/construction-site-broadband"
       />
 
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
