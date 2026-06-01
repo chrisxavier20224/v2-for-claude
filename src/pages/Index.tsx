@@ -451,30 +451,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ── 10. FOUNDER SNIPPET (split, image LEFT) ───────────────────── */}
-        <section className="bg-background py-20 md:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
-              <AnimatedSection>
-                <div className="lg:col-span-2">
-                  <ImagePlaceholder label="IMAGE: founders Chris Xavier & Andrew Somerville" className="aspect-[4/5]" />
-                </div>
-              </AnimatedSection>
-              <div className="lg:col-span-3">
-                <AnimatedSection>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Our Story</p>
-                  <p className="text-2xl sm:text-3xl text-foreground leading-snug font-medium mb-8">
-                    Founded to solve a problem nobody else would touch. Today, a business ISP with a bridging capability no one else has.
-                  </p>
-                  <Link to="/about" className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide hover:gap-3 transition-all">
-                    Read our story <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </AnimatedSection>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ── 10.5 INSIGHTS PROMO BAND ─────────────────────────────────── */}
         <section className="bg-[hsl(220_25%_96%)] py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
