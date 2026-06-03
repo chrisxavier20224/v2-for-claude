@@ -268,17 +268,7 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Insights — standalone link */}
-            <Link
-              to="/insights"
-              className={`text-sm font-medium transition-colors ${
-                isInsightsPath
-                  ? isDarkNav ? "text-white" : "text-foreground"
-                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Insights
-            </Link>
+            {/* Insights link hidden pending review */}
 
             {/* Customers — standalone link */}
             <Link
@@ -387,10 +377,6 @@ const Navbar = () => {
 
               {/* Mobile standalone links */}
               <div className="px-3 py-2 space-y-1">
-                <Link to="/insights" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
-                  <Newspaper className="h-4 w-4 text-primary" />
-                  Insights
-                </Link>
                 <Link to="/customers" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
                   <Building2 className="h-4 w-4 text-primary" />
                   Customer Stories
