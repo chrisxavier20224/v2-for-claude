@@ -382,26 +382,26 @@ const Index = () => {
         </section>
 
         {/* ── 8. SECTORS (card grid w/ images already) ──────────────────── */}
-        <section className="bg-surface-dark py-20 md:py-28">
+        <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Sectors We Serve</p>
-              <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
+              <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
                 Built for businesses Fibre leaves behind.
               </h2>
-              <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
+              <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
                 Construction sites that move every few months. Multi-site rollouts on impossible timelines. Business parks where every unit needs connectivity from day one. We've solved them all.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {sectors.map((sector) => (
                 <motion.div key={sector.title} variants={fadeUp}>
-                  <Link to={sector.link} className="group block rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] hover:border-primary/40 transition-colors">
+                  <Link to={sector.link} className="group block rounded-2xl overflow-hidden border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all">
                     <div className="aspect-[4/3] overflow-hidden">
                       <img src={sector.img} alt={sector.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                     </div>
                     <div className="p-4">
-                      <h3 className="text-surface-dark-foreground font-medium text-sm sm:text-base">{sector.title}</h3>
+                      <h3 className="text-foreground font-medium text-sm sm:text-base">{sector.title}</h3>
                       <span className="inline-flex items-center gap-1 text-primary text-xs font-semibold uppercase tracking-wide mt-2 group-hover:gap-2 transition-all">
                         Learn More <ArrowRight className="h-3 w-3" />
                       </span>
