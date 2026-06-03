@@ -323,7 +323,7 @@ const Index = () => {
                 Why Integra
               </p>
               <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                The opposite of waiting 8 weeks for BT.
+                10 days. Not 10 weeks.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
                 We get businesses connected where and when traditional broadband can't — 99% UK coverage, rapid
