@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "What speeds can I expect with Integra Networks?",
-    a: "Integra Networks delivers speeds of around 100 Mbps, making it ideal for homeworkers and businesses.",
+    a: "Integra Networks delivers speeds of around 100 Mbps, making it ideal for rural businesses.",
   },
   {
     q: "Can I apply if I've received a grant in the past?",
@@ -199,7 +199,7 @@ const AccessBroadbandCymru = () => {
               Integra Networks: Your Gateway to Faster Broadband
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              As an approved supplier of the Access Broadband Cymru Scheme, Integra Networks ensures you fully utilise the available £800 grant. We deliver speeds of around 100 Mbps, ideal for homeworkers, maximising the value you get from the scheme.
+              As an approved supplier of the Access Broadband Cymru Scheme, Integra Networks ensures you fully utilise the available £800 grant. We deliver speeds of around 100 Mbps, ideal for rural businesses, maximising the value you get from the scheme.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Choose Integra Networks for high-quality broadband services that fully leverage the grant for your benefit.

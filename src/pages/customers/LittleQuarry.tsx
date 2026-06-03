@@ -13,7 +13,7 @@ import podsImg from "@/assets/case-studies/little-quarry-pods.webp";
 
 const companyDetails = [
   { label: "Company", value: "Little Quarry Glamping" },
-  { label: "Industry", value: "Glamping Pods | Airbnb" },
+  { label: "Industry", value: "Glamping & Short-Stay Accommodation" },
   { label: "Location", value: "Goudhurst, Kent" },
   { label: "Website", value: "littlequarry.co.uk", href: "https://littlequarry.co.uk" },
 ];

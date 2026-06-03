@@ -23,7 +23,7 @@ const GlobalCTABanner = () => {
                 Let's see what we can do for you
               </h2>
               <p className="text-white/85 text-base md:text-lg leading-relaxed">
-                Join the businesses and homeworkers switching to Integra. It feels good when your connectivity just works.
+                Join the businesses switching to Integra. It feels good when your connectivity just works.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">

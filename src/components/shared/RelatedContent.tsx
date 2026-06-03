@@ -5,7 +5,7 @@ import RelatedSectorCard from "./RelatedSectorCard";
 import EyebrowLabel from "./EyebrowLabel";
 
 const allStoryKeys = Object.keys(storyMap);
-const allSectorKeys = ["homeworkers", "fibre-enabled-buildings", "construction-sites", "rural-smes", "business-parks", "airbnbs"];
+const allSectorKeys = ["construction-sites", "rural-smes", "business-parks"];
 
 /** Pad an array to at least `min` items by pulling from a pool, excluding already-present keys */
 function padArray(arr: string[], pool: string[], min: number): string[] {
@@ -37,7 +37,10 @@ const RelatedContent = ({ stories: rawStories = [], sectors: rawSectors = [], da
 
   // Always show at least 2 items in each section
   const stories = rawStories.length > 0 ? padArray(rawStories, allStoryKeys, 2) : [];
-  const sectors = rawSectors.length > 0 ? padArray(rawSectors, allSectorKeys, 2) : [];
+  // Related Sectors block is intentionally suppressed on service pages — only the homepage shows sectors.
+  const sectors: string[] = [];
+  void rawSectors;
+  void allSectorKeys;
 
   const fg = dark ? "text-surface-dark-foreground" : "text-foreground";
 

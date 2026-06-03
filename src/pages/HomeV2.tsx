@@ -104,10 +104,9 @@ const connectivityServices = [
 ];
 
 const sectors = [
-  { title: "Construction", img: constructionImg, link: "/construction-site-broadband" },
   { title: "Rural SMEs", img: ruralImg, link: "/rural-business-broadband" },
+  { title: "Construction Sites", img: constructionImg, link: "/construction-site-broadband" },
   { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
-  { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
 ];
 
 const organizationSchema = {
