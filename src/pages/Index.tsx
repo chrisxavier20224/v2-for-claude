@@ -25,6 +25,7 @@ import bpImg from "@/assets/sectors/business-parks-hero.webp";
 // Sector images
 import constructionImg from "@/assets/sectors/construction-hero.webp";
 import ruralImg from "@/assets/sectors/rural-sme-hero.webp";
+import emptyOfficeAsset from "@/assets/empty-office.jpg.asset.json";
 
 const staggerContainer = {
   hidden: {},
@@ -239,7 +240,12 @@ const Index = () => {
                 </ul>
               </AnimatedSection>
               <AnimatedSection>
-                <ImagePlaceholder label="IMAGE: stalled / empty site or office" className="aspect-[4/5]" />
+                <img
+                  src={emptyOfficeAsset.url}
+                  alt="Empty office corridor with no internet connectivity"
+                  loading="lazy"
+                  className="w-full aspect-[4/5] object-cover rounded-lg"
+                />
               </AnimatedSection>
             </div>
           </div>
