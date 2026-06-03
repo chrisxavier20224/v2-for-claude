@@ -254,7 +254,7 @@ const App = () => (
               <Route path="/check" element={<CheckAvailability />} />
               <Route path="/checking-out-your-property" element={<CheckingOutYourProperty />} />
               <Route path="/support" element={<Support />} />
-              <Route path="/integra-bridge" element={<Navigate to="/connectivity/integra-bridge" replace />} />
+              <Route path="/integra-bridge" element={<IntegraBridge />} />
               <Route path="/wholesale" element={<Wholesale />} />
 
               <Route path="/resources" element={<Navigate to="/insights" replace />} />
@@ -296,6 +296,15 @@ const App = () => (
               {/* Short URLs render the actual page so canonicals self-reference. */}
               <Route path="/home-wifi" element={<Navigate to="/connectivity/business-wifi" replace />} />
               <Route path="/managed-sim-services" element={<ManagedSimServices />} />
+              <Route path="/sogea" element={<SoGEA />} />
+              <Route path="/managed-internet" element={<ManagedInternet />} />
+              <Route path="/cellular-backup" element={<CellularBackup />} />
+              <Route path="/business-mobiles" element={<BusinessMobiles />} />
+              <Route path="/managed-firewall" element={<ManagedFirewall />} />
+              <Route path="/business-continuity" element={<BusinessContinuity />} />
+              <Route path="/cctv" element={<CCTV />} />
+              <Route path="/wireless-distribution" element={<WirelessDistribution />} />
+              <Route path="/network-infrastructure" element={<NetworkInfrastructure />} />
               <Route path="/business-wifi" element={<BusinessWifi />} />
               <Route path="/leased-lines" element={<LeasedLines />} />
               <Route path="/business-mobile-phones" element={<Navigate to="/connectivity/business-mobiles" replace />} />
