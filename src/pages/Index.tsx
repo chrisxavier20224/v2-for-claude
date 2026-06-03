@@ -26,6 +26,7 @@ import bpImg from "@/assets/sectors/business-parks-hero.webp";
 import constructionImg from "@/assets/sectors/construction-hero.webp";
 import ruralImg from "@/assets/sectors/rural-sme-hero.webp";
 import emptyOfficeAsset from "@/assets/empty-office.jpg.asset.json";
+import londonSkylineAsset from "@/assets/london-skyline.jpg.asset.json";
 
 const staggerContainer = {
   hidden: {},
@@ -258,7 +259,12 @@ const Index = () => {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <AnimatedSection>
-                <ImagePlaceholder label="IMAGE: Integra Bridge hardware or bonded-connection diagram" className="aspect-[4/5] !bg-white/5 !border-white/15" />
+                <img
+                  src={londonSkylineAsset.url}
+                  alt="London skyline at night representing always-on connectivity"
+                  loading="lazy"
+                  className="w-full aspect-[4/5] object-cover rounded-lg"
+                />
               </AnimatedSection>
               <AnimatedSection>
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">The Solution</p>
