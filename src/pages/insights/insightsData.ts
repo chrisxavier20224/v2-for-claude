@@ -2,6 +2,7 @@ export interface InsightArticleMeta {
   slug: string;
   category: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   featured?: boolean;
   tone?: "light" | "dark";
