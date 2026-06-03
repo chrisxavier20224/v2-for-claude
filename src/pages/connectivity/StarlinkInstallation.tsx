@@ -251,7 +251,7 @@ const StarlinkInstallation = () => {
       {/* RELATED CONTENT */}
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
       <RelatedContent
-        sectors={["homeworkers", "airbnbs", "rural-smes"]}
+        sectors={["rural-smes", "construction-sites", "business-parks"]}
         dark
       />
 

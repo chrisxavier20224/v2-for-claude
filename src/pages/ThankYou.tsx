@@ -362,7 +362,7 @@ const ThankYou = () => {
                   Read Customer Stories
                 </h3>
                 <p className="text-sm text-surface-dark-muted leading-relaxed mb-3">
-                  See how we've transformed connectivity for businesses and homeworkers across the UK.
+                  See how we've transformed connectivity for businesses across the UK.
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary">
                   View Stories <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />

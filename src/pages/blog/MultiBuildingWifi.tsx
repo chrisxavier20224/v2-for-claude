@@ -16,7 +16,7 @@ const MultiBuildingWifi = () => (
       <li>Much shorter through walls, trees, hills</li>
     </ul>
 
-    <p>On a multi-building property (farm, estate, holiday lets), one router can't reach everywhere.</p>
+    <p>On a multi-building property (farm, estate, business park), one router can't reach everywhere.</p>
 
     <p><strong>Common solutions that don't work:</strong></p>
     <ul>

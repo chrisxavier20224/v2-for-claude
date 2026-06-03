@@ -96,7 +96,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 <img src={integraLogo} alt="Integra Networks" className="w-28 h-auto" />
               </Link>
               <p className="text-sm text-surface-dark-muted">
-                Business connectivity for UK companies — leased lines, SoGEA, and Integra Bridge to get you online while you wait for Fibre.
+                Business-grade connectivity across the UK.
               </p>
             </div>
 

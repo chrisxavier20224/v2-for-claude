@@ -29,7 +29,7 @@ const solutions = [
     installTime: "1–2 days (DIY)",
     reliability: "Fair",
     support: "Community forum only",
-    whoFor: "Homeworkers and consumers who value speed over guaranteed uptime. Great where no other option exists.",
+    whoFor: "Businesses that value raw speed and can tolerate occasional drops — light-touch use cases, temporary sites, or as a paired link inside SD-WAN.",
     whoNotFor: "Businesses running EPOS, VoIP, CCTV, or anything that needs consistent latency and failover.",
     pros: [
       "Available almost everywhere — no postcode lottery",
@@ -56,7 +56,7 @@ const solutions = [
     installTime: "10 working days",
     reliability: "99%+ uptime",
     support: "Professional, SLA available",
-    whoFor: "SMEs, farms, construction sites, and homeworkers who need reliable connectivity for EPOS, Teams, VoIP, and cloud apps.",
+    whoFor: "SMEs, farms, construction sites, and distributed business teams that need reliable connectivity for EPOS, Teams, VoIP, and cloud apps.",
     whoNotFor: "Consumers on a tight budget. The uplift over basic broadband reflects the business-grade service.",
     pros: [
       "Bonds multiple networks (EE, Vodafone, Three, O2) into one pipe",
@@ -135,7 +135,7 @@ const solutions = [
     installTime: "10 working days",
     reliability: "Excellent (dual paths)",
     support: "Professional, SLA available",
-    whoFor: "Businesses that want maximum resilience with the speed of Starlink and the reliability of cellular. Ideal for remote farms, holiday lets, and construction sites.",
+    whoFor: "Businesses that want maximum resilience with the speed of Starlink and the reliability of cellular. Ideal for remote farms, rural business premises, and construction sites.",
     whoNotFor: "Properties with strong Fibre coverage — if you can get a leased line at reasonable cost, that's still the gold standard.",
     pros: [
       "Two completely independent networks — if one fails, you're still online",
@@ -443,7 +443,7 @@ const AlternativesToFibre = () => {
               {[
                 {
                   scenario: "You value simplicity and cost over reliability",
-                  recommendation: "Starlink direct. It works for homeworkers, streaming, email. If your business doesn't depend on guaranteed uptime, save the money.",
+                  recommendation: "Starlink direct. It works for light-touch business use, secondary sites, or short-term deployments. If your business doesn't depend on guaranteed uptime, save the money.",
                 },
                 {
                   scenario: "You run a business where downtime costs money",
