@@ -381,8 +381,6 @@ const Index = () => {
           </div>
         </section>
 
-        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
-
         {/* ── 8. SECTORS (card grid w/ images already) ──────────────────── */}
         <section className="bg-surface-dark py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
