@@ -7,7 +7,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
-import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap, FileText } from "lucide-react";
+import { ArrowRight, Globe, Headphones, Lightbulb, RefreshCw, ShieldCheck, Users, Zap, FileText } from "lucide-react";
 import { insightArticles } from "@/pages/insights/insightsData";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
@@ -63,10 +63,10 @@ const aboutPoints = [
       "Multi-bearer connectivity works anywhere with a mobile signal or clear sky. Construction sites, business parks, multi-site rollouts — we've connected them all.",
   },
   {
-    icon: Headphones,
-    title: "Real UK engineers, not a call centre",
+    icon: RefreshCw,
+    title: "Bridge today, Fibre tomorrow.",
     description:
-      "When something needs sorting, you speak to the engineers who built your network. No ticket queues, no offshore support.",
+      "When your leased line lands, Integra Bridge stays on as failover. One partner from temporary to permanent — no rip-and-replace.",
   },
 ];
 
