@@ -209,7 +209,7 @@ const ThankYou = () => {
                   <p className="text-sm text-muted-foreground mt-0.5">Pick a time and we'll walk through your options — no obligation</p>
                 </div>
                 <iframe
-                  src="https://meetings.hubspot.com/chris-clapham?embed=true"
+                  src="https://meetings.hubspot.com/xavier-integra/meeting-link?embed=true"
                   title="Book a meeting with Integra Networks"
                   className="w-full border-0"
                   style={{ minHeight: "650px" }}
