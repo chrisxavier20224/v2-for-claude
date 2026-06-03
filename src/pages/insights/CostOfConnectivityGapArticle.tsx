@@ -6,7 +6,7 @@ import InsightArticle, {
 } from "./InsightArticle";
 
 const CostOfConnectivityGapArticle = () => (
-  <InsightArticle slug="cost-of-the-connectivity-gap">
+  <InsightArticle slug="cost-of-business-internet-downtime">
     <NumberedSection number={1} title="The wait nobody budgets for">
       <p>
         Every connectivity project has a plan. The site is signed, the leased

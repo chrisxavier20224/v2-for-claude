@@ -6,7 +6,7 @@ import InsightArticle, {
 } from "./InsightArticle";
 
 const MultiSiteEstateArticle = () => (
-  <InsightArticle slug="multi-site-estate">
+  <InsightArticle slug="multi-site-business-connectivity">
     <NumberedSection number={1} title="A portfolio is a strategy, not a series of decisions">
       <p>
         A single office is a connectivity decision. A portfolio of fifteen,

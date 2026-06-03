@@ -13,11 +13,11 @@ export interface InsightArticleMeta {
 
 export const insightArticles: InsightArticleMeta[] = [
   {
-    slug: "cost-of-the-connectivity-gap",
+    slug: "cost-of-business-internet-downtime",
     category: "White Paper",
-    title: "The Cost of the Connectivity Gap",
+    title: "The True Cost of Business Internet Downtime",
     excerpt:
-      "What an eight-to-sixteen-week circuit lead time actually costs a business — and why nobody budgets for it.",
+      "What business internet downtime — including the eight-to-sixteen-week wait for a new circuit — actually costs, and why nobody budgets for it.",
     featured: true,
     tone: "dark",
     readingTime: "6 min read",
@@ -38,11 +38,11 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"Anatomy of the connectivity gap\" — a horizontal timeline from \"circuit ordered\" to \"circuit live\", with the four cost components (void rent, lost productivity, project slippage, reputational cost) stacked along the gap period.",
   },
   {
-    slug: "decision-framework",
+    slug: "how-to-choose-business-broadband",
     category: "Decision Guide",
-    title: "Leased Line vs SD-WAN vs Bridge: A Decision Framework",
+    title: "How to Choose Business Broadband: Leased Line vs SD-WAN vs Bridge",
     excerpt:
-      "Three ways to connect a site, and a framework for matching each one to the requirement.",
+      "A practical guide to choosing the right business broadband — leased line, SD-WAN or Bridge — and matching each one to the site.",
     tone: "light",
     readingTime: "6 min read",
     whatsInside: [
@@ -62,11 +62,11 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, Fibre availability, permanence, workload, resilience need) to recommended option(s).",
   },
   {
-    slug: "multi-site-estate",
+    slug: "multi-site-business-connectivity",
     category: "Playbook",
-    title: "Connecting the Multi-Site Estate",
+    title: "Multi-Site Business Connectivity: Planning for the Problem Sites",
     excerpt:
-      "Every estate has problem sites. A playbook for planning for them instead of reacting to them.",
+      "Multi-site business connectivity is a strategy, not a series of one-off decisions. A playbook for planning for the problem sites instead of reacting to them.",
     tone: "dark",
     readingTime: "6 min read",
     whatsInside: [
@@ -86,11 +86,11 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"The estate playbook\" — a visual of the four steps (audit & tier → standardise the majority → planned answer for outliers → single-pane management), or an estate map showing standard sites vs. outlier sites.",
   },
   {
-    slug: "multi-bearer-connectivity",
+    slug: "multi-bearer-internet-failover",
     category: "Technical Brief",
-    title: "Multi-Bearer Connectivity, Explained Properly",
+    title: "Multi-Bearer Internet Failover and Redundancy, Explained Properly",
     excerpt:
-      "Bonded, load balanced, multi-bearer — what actually matters under the hood, in plain terms.",
+      "Bonded, load balanced, multi-bearer failover — what actually matters for internet redundancy, in plain terms.",
     tone: "light",
     readingTime: "6 min read",
     whatsInside: [
@@ -110,11 +110,11 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"How a bonded multi-bearer connection works\" — a topology diagram: customer firewall → SD-WAN router → multiple 4G/5G carriers → cloud bonding server → internet via static IP.",
   },
   {
-    slug: "wholesale-connectivity-model",
+    slug: "wholesale-isp-partner-program",
     category: "Perspective",
-    title: "The Wholesale Connectivity Model",
+    title: "The Wholesale ISP Partner Program",
     excerpt:
-      "Why alt-nets partner instead of build — the commercial case for the sites Fibre can't reach.",
+      "Why alt-nets join a wholesale ISP partner program instead of building — the commercial case for the sites Fibre can't reach.",
     tone: "dark",
     readingTime: "6 min read",
     whatsInside: [

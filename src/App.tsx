@@ -261,11 +261,17 @@ const App = () => (
 
               {/* Insights hub */}
               <Route path="/insights" element={<Insights />} />
-              <Route path="/insights/cost-of-the-connectivity-gap" element={<CostOfConnectivityGapArticle />} />
-              <Route path="/insights/decision-framework" element={<DecisionFrameworkArticle />} />
-              <Route path="/insights/multi-site-estate" element={<MultiSiteEstateArticle />} />
-              <Route path="/insights/multi-bearer-connectivity" element={<MultiBearerConnectivityArticle />} />
-              <Route path="/insights/wholesale-connectivity-model" element={<WholesaleConnectivityModelArticle />} />
+              <Route path="/insights/cost-of-business-internet-downtime" element={<CostOfConnectivityGapArticle />} />
+              <Route path="/insights/how-to-choose-business-broadband" element={<DecisionFrameworkArticle />} />
+              <Route path="/insights/multi-site-business-connectivity" element={<MultiSiteEstateArticle />} />
+              <Route path="/insights/multi-bearer-internet-failover" element={<MultiBearerConnectivityArticle />} />
+              <Route path="/insights/wholesale-isp-partner-program" element={<WholesaleConnectivityModelArticle />} />
+              {/* Legacy insights URLs — redirect to new keyword-optimised paths */}
+              <Route path="/insights/cost-of-the-connectivity-gap" element={<Navigate to="/insights/cost-of-business-internet-downtime" replace />} />
+              <Route path="/insights/decision-framework" element={<Navigate to="/insights/how-to-choose-business-broadband" replace />} />
+              <Route path="/insights/multi-site-estate" element={<Navigate to="/insights/multi-site-business-connectivity" replace />} />
+              <Route path="/insights/multi-bearer-connectivity" element={<Navigate to="/insights/multi-bearer-internet-failover" replace />} />
+              <Route path="/insights/wholesale-connectivity-model" element={<Navigate to="/insights/wholesale-isp-partner-program" replace />} />
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
               <Route path="/pstn-switch-off" element={<PSTNSwitchOff />} />
               <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
