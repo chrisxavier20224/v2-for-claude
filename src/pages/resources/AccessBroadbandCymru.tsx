@@ -113,8 +113,8 @@ const AccessBroadbandCymru = () => {
   return (
     <PageLayout>
       <SEO
-        title="Access Broadband Cymru"
-        description="Up to £800 towards broadband installation in Wales via Access Broadband Cymru Scheme."
+        title="Access Broadband Cymru Grant for Welsh Businesses"
+        description="Rural Welsh business? Get up to £800 toward broadband installation via the Access Broadband Cymru grant. 100Mbps+ delivered, fully managed by Integra."
       />
 
       {/* ── Hero ───────────────────────────────────────────────────────────── */}
@@ -135,10 +135,10 @@ const AccessBroadbandCymru = () => {
               Resources <ArrowRight className="h-3 w-3" /> Access Broadband Cymru
             </span>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl font-normal">
-              Want faster broadband? Get £800 towards your install in Wales.
+              £800 toward business broadband in rural Wales.
             </h1>
             <p className="max-w-2xl text-lg text-white/80 mb-8 font-normal">
-              Integra Networks, in partnership with the Access Broadband Cymru Scheme, offers up to £800 towards your broadband installation.
+              If your Welsh business can't get 30Mbps, the Access Broadband Cymru grant covers up to £800 of your install. We'll deliver the speed, manage the application, and have you online.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild>
@@ -158,10 +158,13 @@ const AccessBroadbandCymru = () => {
       <Section className="bg-background">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Discover the Scheme</p>
+            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">How the Grant Works</p>
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal max-w-3xl mx-auto">
-              Empowering Wales with superior broadband connectivity
+              Built for Welsh businesses outside fibre coverage
             </h2>
+            <p className="mt-6 max-w-3xl mx-auto text-muted-foreground leading-relaxed">
+              Farms, valley SMEs, hospitality operators, and village micro-businesses across Wales are stuck on slow ADSL while waiting years for fibre. The Access Broadband Cymru grant — combined with our wireless and bonded-cellular solutions — gets you to 100Mbps+ in weeks, not years. We handle the grant application end-to-end.
+            </p>
           </div>
         </AnimatedSection>
 
@@ -196,10 +199,10 @@ const AccessBroadbandCymru = () => {
           <AnimatedSection>
             <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Your Approved Supplier</p>
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
-              Integra Networks: Your Gateway to Faster Broadband
+              Integra Networks: Your route to faster business broadband in Wales
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              As an approved supplier of the Access Broadband Cymru Scheme, Integra Networks ensures you fully utilise the available £800 grant. We deliver speeds of around 100 Mbps, ideal for rural businesses, maximising the value you get from the scheme.
+              As an approved supplier of the Access Broadband Cymru Scheme, Integra Networks ensures you fully utilise the available £800 grant. We deliver speeds of around 100Mbps — enough to run cloud apps, VoIP, card terminals, and CCTV for most rural Welsh businesses, while maximising the value of the grant.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Choose Integra Networks for high-quality broadband services that fully leverage the grant for your benefit.
@@ -211,7 +214,7 @@ const AccessBroadbandCymru = () => {
               <div>
                 <h3 className="text-lg font-medium text-foreground mb-2">Financial Support: Broadband for All</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We're passionate about connectivity. That's why we're proud to be part of the Access Broadband Cymru Scheme, helping to bring superfast broadband to more homes and businesses in Wales.
+                  We're passionate about rural connectivity. That's why we partner with the Access Broadband Cymru scheme to bring superfast broadband to Welsh businesses that fibre still doesn't reach.
                 </p>
               </div>
               <div>

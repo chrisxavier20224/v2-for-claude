@@ -246,7 +246,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "unlock-high-speed-internet-rural-areas",
     title: "Unlock High-Speed, Reliable Internet in Rural Areas with Integra SD-WAN",
-    excerpt: "No Fibre? No problem. Integra SD-WAN bonds multiple 4G/5G connections to deliver up to 350Mbps to rural homes and businesses.",
+    excerpt: "No Fibre? No problem. Integra SD-WAN bonds multiple 4G/5G connections to deliver up to 350Mbps to rural businesses.",
     date: "07 Sep 2022",
     image: broadbandBottleneckImg,
     category: "Connectivity",
