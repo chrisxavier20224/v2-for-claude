@@ -36,14 +36,12 @@ const infrastructureLinks = [
 const companyLinks = [
   { label: "Customer Stories", path: "/customers" },
   { label: "Wholesale", path: "/wholesale" },
-  { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" },
   { label: "Support", path: "/support" },
 ];
 
 const resourceLinks = [
   { label: "Availability Checker", path: "/check" },
-  { label: "Insights", path: "/insights" },
 ];
 
 
