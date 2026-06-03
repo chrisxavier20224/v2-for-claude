@@ -17,7 +17,7 @@ const relatedServices = [
     icon: Satellite,
     title: "Starlink Installation",
     description: "Professional setup and configuration of Starlink systems",
-    href: "/connectivity/starlink-installation",
+    href: "/starlink-installation",
   },
   {
     icon: Zap,
@@ -29,7 +29,7 @@ const relatedServices = [
     icon: Radio,
     title: "4G/5G Backup",
     description: "Automatic failover connectivity for business continuity",
-    href: "/connectivity/cellular-backup",
+    href: "/cellular-backup",
   },
   {
     icon: BarChart3,

@@ -47,12 +47,12 @@ const otherSolutions = [
   {
     title: "Leased Lines",
     description: "Dedicated Fibre connectivity with guaranteed speeds and SLA-backed uptime.",
-    link: "/connectivity/leased-lines",
+    link: "/leased-lines",
   },
   {
     title: "Starlink Installation",
     description: "Professional Starlink setup with static IP and SD-WAN integration.",
-    link: "/connectivity/starlink-installation",
+    link: "/starlink-installation",
   },
 ];
 
@@ -66,13 +66,13 @@ const relatedServices = [
   {
     title: "Wireless Distribution",
     description: "Point-to-point radio links for multi-site coverage.",
-    href: "/connectivity/wireless-distribution",
+    href: "/wireless-distribution",
     icon: Radio,
   },
   {
     title: "Leased Lines",
     description: "Permanent dedicated Fibre when Bridge transitions to failover.",
-    href: "/connectivity/leased-lines",
+    href: "/leased-lines",
     icon: Wifi,
   },
 ];

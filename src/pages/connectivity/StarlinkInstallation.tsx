@@ -32,13 +32,13 @@ const relatedServices = [
   {
     title: "4G/5G Failover",
     description: "Cellular backup connectivity to enhance your Starlink connection.",
-    href: "/connectivity/managed-sim-services",
+    href: "/managed-sim-services",
     icon: Settings,
   },
   {
     title: "Business WiFi",
     description: "Professional WiFi to extend your Starlink connection throughout your location.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
     icon: Wifi,
   },
 ];
@@ -99,7 +99,7 @@ const StarlinkInstallation = () => {
         title="Starlink Installation"
         description="Add 4G/5G failover to Starlink. 99.5% uptime SLA. Professional installation."
         keywords="Starlink installation, Starlink installer, Starlink SD-WAN, Starlink failover, Starlink static IP, satellite internet, Starlink 4G/5G backup"
-        url="/connectivity/starlink-installation"
+        url="/starlink-installation"
       />
       <SchemaMarkup data={starlinkServiceSchema} />
       <SchemaMarkup data={starlinkBreadcrumbSchema} />

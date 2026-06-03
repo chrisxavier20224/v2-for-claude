@@ -31,7 +31,7 @@ const ManagedFirewall = () => {
         title="Managed Firewall & Cyber Security"
         description="Business firewall and cyber security. Threat protection, content filtering, VPN, monitoring. Bundled or standalone."
         keywords="managed firewall, cyber security, business firewall, network security, content filtering, VPN, threat protection, ransomware defence"
-        url="/connectivity/managed-firewall"
+        url="/managed-firewall"
       />
 
       {/* HERO */}

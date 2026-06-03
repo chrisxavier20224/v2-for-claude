@@ -20,13 +20,13 @@ const relatedServices = [
   {
     title: "Business WiFi",
     description: "Professional WiFi networks to complement your wireless distribution.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
     icon: Wifi,
   },
   {
     title: "Integra Bridge",
     description: "Enterprise SD-WAN for rapid deployment between locations.",
-    href: "/connectivity/integra-bridge",
+    href: "/integra-bridge",
     icon: Network,
   },
   {
@@ -89,7 +89,7 @@ const WirelessDistribution = () => {
         title="Wireless Distribution"
         description="Point-to-point and multipoint wireless links. V Band, 5GHz, 60GHz. Survey, VLAN, failover. Up to 2Gbps."
         keywords="wireless distribution, point-to-point, point-to-multipoint, V Band, multi-building WiFi, business park connectivity, wireless network design"
-        url="/connectivity/wireless-distribution"
+        url="/wireless-distribution"
       />
 
       {/* HERO */}

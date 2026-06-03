@@ -23,7 +23,7 @@ const relatedServices = [
     icon: Camera,
     title: "Site CCTV",
     description: "Static-IP CCTV that works on the same connection as your office",
-    href: "/connectivity/cctv",
+    href: "/cctv",
   },
   {
     icon: Hammer,
@@ -35,7 +35,7 @@ const relatedServices = [
     icon: Wifi,
     title: "Business WiFi",
     description: "Enterprise-grade wireless for the welfare cabin and beyond",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
   },
 ];
 

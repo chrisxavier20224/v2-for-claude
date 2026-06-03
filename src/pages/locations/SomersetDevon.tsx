@@ -21,7 +21,7 @@ const relatedServices = [
     title: "Starlink Installation",
     description: "Fast satellite connectivity for rural properties with clear southern sky.",
     icon: Satellite,
-    href: "/connectivity/starlink-installation",
+    href: "/starlink-installation",
   },
   {
     title: "Integra SD-WAN",
@@ -39,7 +39,7 @@ const relatedServices = [
     title: "4G/5G Backup",
     description: "Redundant cellular backup ensures uninterrupted connectivity.",
     icon: Signal,
-    href: "/connectivity/cellular-backup",
+    href: "/cellular-backup",
   },
 ];
 

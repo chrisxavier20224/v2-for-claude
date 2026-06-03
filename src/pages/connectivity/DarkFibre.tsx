@@ -152,7 +152,7 @@ const DarkFibre = () => {
                     <Link to="/contact">Talk to Us</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-                    <Link to="/connectivity/leased-lines">Compare Leased Lines</Link>
+                    <Link to="/leased-lines">Compare Leased Lines</Link>
                   </Button>
                 </div>
               </div>

@@ -21,13 +21,13 @@ const relatedServices = [
     title: "Leased Lines",
     description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
-    href: "/connectivity/leased-lines",
+    href: "/leased-lines",
   },
   {
     title: "Business WiFi",
     description: "Enterprise-grade wireless networks for your office and operations.",
     icon: Wifi,
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
   },
   {
     title: "Integra SD-WAN",

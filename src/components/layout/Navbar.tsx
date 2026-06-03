@@ -8,30 +8,30 @@ import integraLogoWhite from "@/assets/integra-logo-white.png";
 // Fibre alternatives — solutions when you can't get Fibre
 const fibreAlternativeLinks = [
   { label: "Integra SD-WAN", path: "/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
-  { label: "Integra Bridge", path: "/connectivity/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
-  { label: "Starlink Installation", path: "/connectivity/starlink-installation", icon: Satellite, tagline: "Professional Starlink Install & Support" },
-  { label: "Managed SIM Services", path: "/connectivity/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
+  { label: "Integra Bridge", path: "/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
+  { label: "Starlink Installation", path: "/starlink-installation", icon: Satellite, tagline: "Professional Starlink Install & Support" },
+  { label: "Managed SIM Services", path: "/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
   { label: "Pricing", path: "/pricing", icon: CreditCard, tagline: "How Integra Pricing Works" },
 ];
 
 // Standard connectivity — traditional broadband and Fibre
 const standardConnectivityLinks = [
-  { label: "Leased Lines", path: "/connectivity/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade Fibre" },
-  { label: "Managed Internet", path: "/connectivity/managed-internet", icon: Globe, tagline: "Dedicated Bandwidth, Simpler Pricing" },
-  { label: "SoGEA Broadband", path: "/connectivity/sogea", icon: Globe, tagline: "Broadband Without Line Rental" },
-{ label: "4G/5G Backup", path: "/connectivity/cellular-backup", icon: Signal, tagline: "Automatic Cellular Failover" },
+  { label: "Leased Lines", path: "/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade Fibre" },
+  { label: "Managed Internet", path: "/managed-internet", icon: Globe, tagline: "Dedicated Bandwidth, Simpler Pricing" },
+  { label: "SoGEA Broadband", path: "/sogea", icon: Globe, tagline: "Broadband Without Line Rental" },
+{ label: "4G/5G Backup", path: "/cellular-backup", icon: Signal, tagline: "Automatic Cellular Failover" },
 ];
 
 // Infrastructure & on-site services
 const infrastructureLinks = [
-  { label: "Business WiFi", path: "/connectivity/business-wifi", icon: Wifi, tagline: "Enterprise Mesh Networks" },
-  { label: "CCTV", path: "/connectivity/cctv", icon: Camera, tagline: "Professional Camera Systems" },
-  { label: "Wireless Distribution", path: "/connectivity/wireless-distribution", icon: Radio, tagline: "Multi-Building Links" },
-  { label: "Unified Communications", path: "/connectivity/unified-communications", icon: Phone, tagline: "Cloud Collaboration" },
-  { label: "Network Infrastructure", path: "/connectivity/network-infrastructure", icon: ServerCog, tagline: "Cabling, Cabinets & Fibre Links" },
-  { label: "Managed Firewall", path: "/connectivity/managed-firewall", icon: Shield, tagline: "Network Security & Protection" },
-  { label: "Business Mobiles", path: "/connectivity/business-mobiles", icon: Smartphone, tagline: "Multi-Network Mobile Plans" },
-  { label: "Business Continuity", path: "/connectivity/business-continuity", icon: Layers, tagline: "Layered Connectivity Resilience" },
+  { label: "Business WiFi", path: "/business-wifi", icon: Wifi, tagline: "Enterprise Mesh Networks" },
+  { label: "CCTV", path: "/cctv", icon: Camera, tagline: "Professional Camera Systems" },
+  { label: "Wireless Distribution", path: "/wireless-distribution", icon: Radio, tagline: "Multi-Building Links" },
+  { label: "Unified Communications", path: "/unified-communications", icon: Phone, tagline: "Cloud Collaboration" },
+  { label: "Network Infrastructure", path: "/network-infrastructure", icon: ServerCog, tagline: "Cabling, Cabinets & Fibre Links" },
+  { label: "Managed Firewall", path: "/managed-firewall", icon: Shield, tagline: "Network Security & Protection" },
+  { label: "Business Mobiles", path: "/business-mobiles", icon: Smartphone, tagline: "Multi-Network Mobile Plans" },
+  { label: "Business Continuity", path: "/business-continuity", icon: Layers, tagline: "Layered Connectivity Resilience" },
 ];
 
 // All connectivity links combined for path matching
@@ -71,7 +71,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isDarkNav = location.pathname === "/connectivity/integra-bridge";
+  const isDarkNav = location.pathname === "/integra-bridge";
 
   const isSectorPath = sectorLinks.some(s => location.pathname === s.path);
   const isServicesPath = allConnectivityLinks.some(c => location.pathname === c.path);

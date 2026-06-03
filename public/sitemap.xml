@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://integra-networks.co.uk/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://integra-networks.co.uk/about</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://integra-networks.co.uk/pricing</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://integra-networks.co.uk/contact</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://integra-networks.co.uk/check</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -20,23 +19,23 @@
   <url><loc>https://integra-networks.co.uk/rural-business-broadband</loc><priority>0.8</priority></url>
   <url><loc>https://integra-networks.co.uk/sectors/business-parks</loc><priority>0.8</priority></url>
 
-  <!-- Connectivity -->
+  <!-- Connectivity (canonical short URLs) -->
   <url><loc>https://integra-networks.co.uk/integra-sd-wan</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/integra-bridge</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/leased-lines</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/managed-internet</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/managed-sim-services</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/sogea</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/business-wifi</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/cellular-backup</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/starlink-installation</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/cctv</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/wireless-distribution</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/network-infrastructure</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/managed-firewall</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/business-continuity</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/business-mobiles</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/connectivity/unified-communications</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/integra-bridge</loc><priority>0.8</priority></url>
+  <url><loc>https://integra-networks.co.uk/leased-lines</loc><priority>0.8</priority></url>
+  <url><loc>https://integra-networks.co.uk/managed-internet</loc><priority>0.7</priority></url>
+  <url><loc>https://integra-networks.co.uk/managed-sim-services</loc><priority>0.7</priority></url>
+  <url><loc>https://integra-networks.co.uk/sogea</loc><priority>0.7</priority></url>
+  <url><loc>https://integra-networks.co.uk/business-wifi</loc><priority>0.7</priority></url>
+  <url><loc>https://integra-networks.co.uk/cellular-backup</loc><priority>0.7</priority></url>
+  <url><loc>https://integra-networks.co.uk/starlink-installation</loc><priority>0.7</priority></url>
+  <url><loc>https://integra-networks.co.uk/cctv</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/wireless-distribution</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/network-infrastructure</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/managed-firewall</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/business-continuity</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/business-mobiles</loc><priority>0.6</priority></url>
+  <url><loc>https://integra-networks.co.uk/unified-communications</loc><priority>0.6</priority></url>
 
   <!-- Resources (kept) -->
   <url><loc>https://integra-networks.co.uk/alternatives-to-fibre-broadband</loc><priority>0.7</priority></url>

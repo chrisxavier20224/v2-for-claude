@@ -111,7 +111,7 @@ const relatedServices = [
     icon: Wifi,
     title: "Business WiFi",
     description: "Professional mesh networks for commercial properties.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
   },
   {
     icon: Zap,
@@ -134,7 +134,7 @@ const CCTV = () => {
         title="CCTV as a Service"
         description="Managed CCTV for warehouses, ports, and construction sites. Commercial cameras, PoE network, cloud access, UK support."
         keywords="CCTV service, managed CCTV, warehouse security cameras, business CCTV, port security, commercial CCTV, night vision cameras, cloud CCTV monitoring"
-        url="/connectivity/cctv"
+        url="/cctv"
       />
       <SchemaMarkup data={cctvServiceSchema} />
       <SchemaMarkup data={cctvBreadcrumbSchema} />

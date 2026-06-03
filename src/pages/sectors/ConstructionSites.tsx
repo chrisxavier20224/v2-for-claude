@@ -65,13 +65,13 @@ const relatedServices = [
   {
     title: "Business WiFi",
     description: "Professional WiFi for site offices and welfare facilities.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
     icon: Wifi,
   },
   {
     title: "CCTV as a Service",
     description: "Remote site surveillance with static IP access.",
-    href: "/connectivity/cctv",
+    href: "/cctv",
     icon: Camera,
   },
 ];
@@ -141,7 +141,7 @@ const ConstructionSites = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Live in 10 working days.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities. And when Fibre's on the way to your permanent site office, <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
+              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities. And when Fibre's on the way to your permanent site office, <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

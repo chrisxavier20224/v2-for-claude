@@ -60,7 +60,7 @@ const relatedServices = [
     icon: Phone,
     title: "Unified Communications",
     description: "Hosted VoIP to replace your PSTN phone lines.",
-    href: "/connectivity/unified-communications",
+    href: "/unified-communications",
   },
   {
     icon: Wifi,
@@ -72,7 +72,7 @@ const relatedServices = [
     icon: Zap,
     title: "4G/5G Backup",
     description: "Cellular failover if your SoGEA line drops.",
-    href: "/connectivity/cellular-backup",
+    href: "/cellular-backup",
   },
 ];
 
@@ -113,7 +113,7 @@ const SoGEA = () => {
         title="SoGEA & FTTP Broadband"
         description="SoGEA and FTTP without line rental. SoGEA 80Mbps, FTTP 1Gbps. 90%+ UK coverage. PSTN-ready."
         keywords="SoGEA, SOGEA broadband, FTTP, Fibre to the premises, business broadband no phone line, PSTN switch off, broadband only, FTTC no line rental, full Fibre"
-        url="/connectivity/sogea"
+        url="/sogea"
       />
       <SchemaMarkup data={sogeaSchema} />
       <SchemaMarkup data={faqSchema} />
@@ -249,7 +249,7 @@ const SoGEA = () => {
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" variant="outline">
-                <Link to="/connectivity/unified-communications">Learn About VoIP <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link to="/unified-communications">Learn About VoIP <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </motion.div>
           </AnimatedSection>

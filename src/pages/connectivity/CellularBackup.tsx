@@ -29,7 +29,7 @@ const CellularBackup = () => {
         title="4G/5G Backup & Failover"
         description="Automatic cellular failover for broadband and leased lines. Sub-second switchover, bonded connectivity, always-on monitoring."
         keywords="4G backup, 5G failover, business broadband backup, cellular failover, automatic failover, connectivity insurance, broadband resilience"
-        url="/connectivity/cellular-backup"
+        url="/cellular-backup"
       />
 
       {/* HERO */}

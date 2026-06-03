@@ -54,13 +54,13 @@ const relatedServices = [
   {
     title: "Integra Bridge",
     description: "Point-to-point wireless connectivity when line of sight is available.",
-    href: "/connectivity/integra-bridge",
+    href: "/integra-bridge",
     icon: Radio,
   },
   {
     title: "Business WiFi",
     description: "Professional WiFi networks to complement your leased line infrastructure.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
     icon: Wifi,
   },
 ];
@@ -122,7 +122,7 @@ const LeasedLines = () => {
         title="Leased Lines"
         description="Dedicated circuits with symmetric speeds and SLA. Bespoke pricing per site."
         keywords="leased lines, business Fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
-        url="/connectivity/leased-lines"
+        url="/leased-lines"
       />
       <SchemaMarkup data={leasedLineServiceSchema} />
       <SchemaMarkup data={leasedLineBreadcrumbSchema} />

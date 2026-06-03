@@ -31,7 +31,7 @@ const BusinessMobiles = () => {
         title="Business Mobiles"
         description="Business mobiles across all four UK networks. Pooled data, device management, one bill. Integrated with broadband and voice."
         keywords="business mobiles, business mobile phones, corporate mobile plans, business SIM, pooled data, mobile device management, MDM, business phone plans"
-        url="/connectivity/business-mobiles"
+        url="/business-mobiles"
       />
 
       {/* HERO */}

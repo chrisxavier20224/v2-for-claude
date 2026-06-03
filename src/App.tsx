@@ -164,12 +164,12 @@ const App = () => (
               <Route path="/lp/rural-broadband" element={<RuralBroadbandLanding />} />
               <Route path="/lp/starlink-sdwan" element={<StarlinkSdwanLanding />} />
 
-              <Route path="/sectors/homeworkers" element={<Navigate to="/" replace />} />
-              <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/business-parks" replace />} />
+              <Route path="/sectors/homeworkers" element={<Navigate to="/sectors/rural-smes" replace />} />
+              <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/sectors/construction-sites" element={<Navigate to="/construction-site-broadband" replace />} />
               <Route path="/sectors/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
               <Route path="/sectors/business-parks" element={<BusinessParks />} />
-              <Route path="/sectors/airbnbs" element={<Navigate to="/" replace />} />
+              <Route path="/sectors/airbnbs" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/customers/wb-power-services" element={<WBPowerServices />} />
               <Route path="/customers/royle-farm" element={<RoyleFarm />} />
@@ -224,26 +224,26 @@ const App = () => (
               <Route path="/locations/construction-site-broadband-london" element={<LocationLondon />} />
               <Route path="/locations/rural-broadband-cotswolds" element={<LocationCotswolds />} />
 
-              <Route path="/connectivity/leased-lines" element={<LeasedLines />} />
-              <Route path="/connectivity/unified-communications" element={<UnifiedCommunications />} />
-              <Route path="/connectivity/managed-sim-services" element={<ManagedSimServices />} />
-              <Route path="/connectivity/sogea" element={<SoGEA />} />
-              <Route path="/connectivity/business-wifi" element={<BusinessWifi />} />
-              <Route path="/connectivity/home-wifi" element={<Navigate to="/connectivity/business-wifi" replace />} />
-              <Route path="/connectivity/starlink-installation" element={<StarlinkInstallation />} />
-              <Route path="/connectivity/starlink-b2b" element={<Navigate to="/connectivity/integra-bridge" replace />} />
-              <Route path="/connectivity/cctv" element={<CCTV />} />
-              <Route path="/connectivity/wireless-distribution" element={<WirelessDistribution />} />
-              <Route path="/connectivity/network-infrastructure" element={<NetworkInfrastructure />} />
+              {/* Legacy /connectivity/* paths — client-side redirects to canonical short URLs */}
+              <Route path="/connectivity/leased-lines" element={<Navigate to="/leased-lines" replace />} />
+              <Route path="/connectivity/unified-communications" element={<Navigate to="/unified-communications" replace />} />
+              <Route path="/connectivity/managed-sim-services" element={<Navigate to="/managed-sim-services" replace />} />
+              <Route path="/connectivity/sogea" element={<Navigate to="/sogea" replace />} />
+              <Route path="/connectivity/business-wifi" element={<Navigate to="/business-wifi" replace />} />
+              <Route path="/connectivity/home-wifi" element={<Navigate to="/business-wifi" replace />} />
+              <Route path="/connectivity/starlink-installation" element={<Navigate to="/starlink-installation" replace />} />
+              <Route path="/connectivity/starlink-b2b" element={<Navigate to="/integra-bridge" replace />} />
+              <Route path="/connectivity/cctv" element={<Navigate to="/cctv" replace />} />
+              <Route path="/connectivity/wireless-distribution" element={<Navigate to="/wireless-distribution" replace />} />
+              <Route path="/connectivity/network-infrastructure" element={<Navigate to="/network-infrastructure" replace />} />
               <Route path="/connectivity/integra-sd-wan" element={<Navigate to="/integra-sd-wan" replace />} />
               <Route path="/connectivity/integra-home" element={<Navigate to="/" replace />} />
-              <Route path="/connectivity/integra-bridge" element={<IntegraBridge />} />
-              <Route path="/connectivity/managed-firewall" element={<ManagedFirewall />} />
-              <Route path="/connectivity/cellular-backup" element={<CellularBackup />} />
-              <Route path="/connectivity/managed-internet" element={<ManagedInternet />} />
-              <Route path="/connectivity/business-continuity" element={<BusinessContinuity />} />
-
-              <Route path="/connectivity/business-mobiles" element={<BusinessMobiles />} />
+              <Route path="/connectivity/integra-bridge" element={<Navigate to="/integra-bridge" replace />} />
+              <Route path="/connectivity/managed-firewall" element={<Navigate to="/managed-firewall" replace />} />
+              <Route path="/connectivity/cellular-backup" element={<Navigate to="/cellular-backup" replace />} />
+              <Route path="/connectivity/managed-internet" element={<Navigate to="/managed-internet" replace />} />
+              <Route path="/connectivity/business-continuity" element={<Navigate to="/business-continuity" replace />} />
+              <Route path="/connectivity/business-mobiles" element={<Navigate to="/business-mobiles" replace />} />
 
               {/* Proposal Pages */}
               <Route path="/proposal/:id" element={<ProposalDetail />} />

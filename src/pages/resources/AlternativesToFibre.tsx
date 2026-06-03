@@ -207,17 +207,17 @@ const relatedServices = [
   {
     name: "Starlink Installation",
     description: "Satellite broadband available across the UK, no waiting for Fibre.",
-    url: "/connectivity/starlink-installation",
+    url: "/starlink-installation",
   },
   {
     name: "4G/5G Backup",
     description: "Reliable secondary connectivity for when primary connections fail.",
-    url: "/connectivity/cellular-backup",
+    url: "/cellular-backup",
   },
   {
     name: "Integra Bridge",
     description: "Connect remote sites with wireless P2P and mesh solutions.",
-    url: "/connectivity/integra-bridge",
+    url: "/integra-bridge",
   },
 ];
 

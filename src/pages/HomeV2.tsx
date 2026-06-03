@@ -97,9 +97,9 @@ const problemPoints = [
 ];
 
 const connectivityServices = [
-  { title: "Leased Lines", description: "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.", img: leasedImg, link: "/connectivity/leased-lines" },
+  { title: "Leased Lines", description: "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.", img: leasedImg, link: "/leased-lines" },
   { title: "SoGEA", description: "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.", img: fibreImg, link: "/sogea" },
-  { title: "Managed Internet", description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.", img: bpImg, link: "/connectivity/managed-internet" },
+  { title: "Managed Internet", description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.", img: bpImg, link: "/managed-internet" },
   { title: "Integra SD-WAN", description: "Bonded multi-carrier 4G/5G connectivity — a five-tier range from single-network failover up to 500Mbps, engineered and monitored per site.", img: sdwanImg, link: "/integra-sd-wan" },
 ];
 
@@ -239,7 +239,7 @@ const HomeV2 = () => {
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-14 px-10 text-base" style={cornerCutTL}>
-                    <Link to="/connectivity/integra-bridge" className="inline-flex items-center gap-2">
+                    <Link to="/integra-bridge" className="inline-flex items-center gap-2">
                       How Integra Bridge works <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
@@ -317,7 +317,7 @@ const HomeV2 = () => {
 
             {/* Featured Bridge */}
             <AnimatedSection>
-              <Link to="/connectivity/integra-bridge" className="group block mb-10">
+              <Link to="/integra-bridge" className="group block mb-10">
                 <motion.div className="relative overflow-hidden border border-primary/40" style={cornerCut} whileHover={{ scale: 1.005 }} transition={{ duration: 0.4 }}>
                   <div className="aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
                     <img src={bridgeImg} alt="Integra Bridge" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
@@ -364,9 +364,9 @@ const HomeV2 = () => {
             <AnimatedSection>
               <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
                 <span className="text-sm text-white/60">Supporting solutions:</span>
-                <Link to="/connectivity/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
+                <Link to="/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
                 <span className="text-white/20">|</span>
-                <Link to="/connectivity/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
+                <Link to="/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
               </div>
             </AnimatedSection>
           </div>
