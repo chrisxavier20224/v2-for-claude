@@ -12,6 +12,7 @@ import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/business-wifi-hero.jpg";
 import seaconPortImg from "@/assets/case-studies/seacon-port.webp";
+import surveysImg from "@/assets/connectivity/business-wifi-surveys.webp";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -302,12 +303,7 @@ const WirelessDistribution = () => {
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
             <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <div className="text-center">
-                  <Map className="h-16 w-16 text-primary/40 mx-auto mb-4" />
-                  <p className="text-muted-foreground">Professional RF Assessment</p>
-                </div>
-              </div>
+              <img src={surveysImg} alt="Professional WiFi heatmap and RF site survey" className="w-full h-auto object-cover aspect-video" loading="lazy" />
             </motion.div>
           </AnimatedSection>
         </div>
