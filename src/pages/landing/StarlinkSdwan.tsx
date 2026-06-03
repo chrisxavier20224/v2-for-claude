@@ -92,7 +92,7 @@ const StarlinkSdwan = () => {
   return (
     <PageLayout>
       <SEO
-        title="Starlink SD-WAN | Managed Starlink with 4G/5G Failover | Integra Networks"
+        title="Managed Starlink SD-WAN | 4G/5G Failover for Business"
         description="Reliable Starlink for business. 99.5% uptime SLA with 4G/5G failover. Fully managed by UK engineers. From £80/month +VAT."
         keywords="Starlink business, managed Starlink, Starlink UK, Starlink failover, SD-WAN"
         url="/lp/starlink-sdwan"

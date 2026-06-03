@@ -120,7 +120,7 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
   return (
     <PageLayout>
       <SEO
-        title={`${article.title} — Integra Networks`}
+        title={`${article.seoTitle ?? article.title} — Integra Networks`}
         description={article.excerpt}
         url={`/insights/${article.slug}`}
       />

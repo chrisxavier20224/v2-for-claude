@@ -92,7 +92,7 @@ const ConstructionWifi = () => {
   return (
     <PageLayout>
       <SEO
-        title="Construction Site WiFi | Temporary Broadband for Sites | Integra Networks"
+        title="Construction Site WiFi | Temporary Broadband Live in 48h"
         description="Fast WiFi for construction sites in 48 hours. Temporary or permanent. Weather-resistant. Multi-site coverage. Flexible contract terms — from short-term agreements up to 36 months. Integra Networks."
         keywords="construction site wifi, site broadband, temporary internet, construction, portable broadband"
         url="/lp/construction-wifi"

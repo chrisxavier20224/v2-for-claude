@@ -59,7 +59,7 @@ const SussexSurrey = () => {
     },
     {
       q: "Do I need a backup connection or failover system?",
-      a: "It depends on your needs. Integra Pro includes built-in redundancy (bonded networks). If one link drops, the other handles traffic. For businesses needing guaranteed uptime, we offer Enterprise service with 99.5% SLA and automatic failover. For most residential and small business customers, Integra Pro is sufficient.",
+      a: "It depends on your needs. Integra Pro includes built-in redundancy (bonded networks). If one link drops, the other handles traffic. For businesses needing guaranteed uptime, we offer Enterprise service with 99.5% SLA and automatic failover. For most small business customers, Integra Pro is sufficient.",
     },
     {
       q: "What about future BT Fibre rollout? Should I wait?",

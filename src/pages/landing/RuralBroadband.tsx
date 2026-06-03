@@ -92,7 +92,7 @@ const RuralBroadband = () => {
   return (
     <PageLayout>
       <SEO
-        title="Rural Broadband UK | Fast Internet Where Fibre Can't Reach | Integra Networks"
+        title="Rural Business Broadband UK | Fast Internet, No Fibre Needed"
         description="Fast, reliable broadband for rural businesses and farms. No Fibre? No problem. Starlink SD-WAN with 4G/5G failover. 99% UK coverage. Installed in 10 working days."
         keywords="rural broadband, countryside internet, farm broadband, rural wifi, Starlink UK"
         url="/lp/rural-broadband"
