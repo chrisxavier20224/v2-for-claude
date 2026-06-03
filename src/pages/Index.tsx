@@ -83,19 +83,19 @@ const connectivityServices = [
     title: "Leased Lines",
     description: "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
-    link: "/connectivity/leased-lines",
+    link: "/leased-lines",
   },
   {
     title: "SoGEA",
     description: "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.",
     img: fibreImg,
-    link: "/connectivity/so-gea",
+    link: "/sogea",
   },
   {
     title: "Managed Internet",
     description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.",
     img: bpImg,
-    link: "/connectivity/managed-internet",
+    link: "/managed-internet",
   },
   {
     title: "Integra SD-WAN",
@@ -108,8 +108,12 @@ const connectivityServices = [
 const sectors = [
   { title: "Construction", img: constructionImg, link: "/construction-site-broadband" },
   { title: "Rural SMEs", img: ruralImg, link: "/rural-business-broadband" },
-  { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
-  { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
+  {
+    title: "Business Parks & Multi-Site",
+    img: bpImg,
+    link: "/sectors/business-parks",
+    description: "One network across business parks, retail estates and multi-site industrial portfolios.",
+  },
 ];
 
 
@@ -196,7 +200,7 @@ const Index = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   { icon: Zap, label: "Live in 10 working days" },
-                  { icon: Users, label: "Real UK engineers, not a call centre" },
+                  { icon: Users, label: "Multi-bearer redundancy as standard" },
                   { icon: Globe, label: "99% UK coverage" },
                   { icon: ShieldCheck, label: "SLA-backed uptime" },
                 ].map((vp) => (
@@ -260,7 +264,7 @@ const Index = () => {
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
-                    <Link to="/connectivity/integra-bridge" className="inline-flex items-center gap-2">
+                    <Link to="/integra-bridge" className="inline-flex items-center gap-2">
                       How Integra Bridge works <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
@@ -315,7 +319,7 @@ const Index = () => {
 
             {/* Featured — Integra Bridge */}
             <AnimatedSection>
-              <Link to="/connectivity/integra-bridge" className="group block mb-8">
+              <Link to="/integra-bridge" className="group block mb-8">
                 <motion.div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4, ease: "easeOut" }}>
                   <div className="aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
                     <img src={bridgeImg} alt="Integra Bridge" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
@@ -357,9 +361,9 @@ const Index = () => {
             <AnimatedSection>
               <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
                 <span className="text-sm text-surface-dark-muted">Supporting solutions:</span>
-                <Link to="/connectivity/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
+                <Link to="/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
                 <span className="text-white/20">|</span>
-                <Link to="/connectivity/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
+                <Link to="/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
               </div>
             </AnimatedSection>
           </div>
@@ -409,7 +413,7 @@ const Index = () => {
                 Construction sites that move every few months. Multi-site rollouts on impossible timelines. Business parks where every unit needs connectivity from day one. We've solved them all.
               </p>
             </AnimatedSection>
-            <motion.div className="grid gap-6 grid-cols-2 sm:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {sectors.map((sector) => (
                 <motion.div key={sector.title} variants={fadeUp}>
                   <Link to={sector.link} className="group block rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] hover:border-primary/40 transition-colors">
