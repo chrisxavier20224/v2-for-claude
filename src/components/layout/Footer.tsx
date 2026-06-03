@@ -55,8 +55,8 @@ const socialLinks = [
 const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
   return (
     <footer className="bg-surface-dark">
-      {/* CTA Banner — built into the footer */}
-      {!hideCTA && <div className="mx-auto max-w-6xl px-6 pt-16 pb-12">
+      {/* CTA Banner — white background section above the dark footer */}
+      {!hideCTA && <div className="bg-background"><div className="mx-auto max-w-6xl px-6 py-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
             </motion.div>
           </div>
         </motion.div>
-      </div>}
+      </div></div>}
 
       {/* MAIN FOOTER */}
       <div className="border-t border-white/10">
