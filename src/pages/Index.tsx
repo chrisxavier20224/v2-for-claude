@@ -413,7 +413,7 @@ const Index = () => {
                 Construction sites that move every few months. Multi-site rollouts on impossible timelines. Business parks where every unit needs connectivity from day one. We've solved them all.
               </p>
             </AnimatedSection>
-            <motion.div className="grid gap-6 grid-cols-2 sm:grid-cols-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
               {sectors.map((sector) => (
                 <motion.div key={sector.title} variants={fadeUp}>
                   <Link to={sector.link} className="group block rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] hover:border-primary/40 transition-colors">
