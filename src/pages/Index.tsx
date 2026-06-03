@@ -7,7 +7,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import StructuredData from "@/components/shared/StructuredData";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
-import { ArrowRight, Globe, Headphones, Lightbulb, ShieldCheck, Users, Zap, FileText } from "lucide-react";
+import { ArrowRight, Globe, Lightbulb, Repeat, ShieldCheck, Users, Zap, FileText } from "lucide-react";
 import { insightArticles } from "@/pages/insights/insightsData";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
@@ -59,9 +59,9 @@ const aboutPoints = [
     description: "Multi-bearer connectivity works anywhere with a mobile signal or clear sky. Construction sites, business parks, multi-site rollouts — we've connected them all.",
   },
   {
-    icon: Headphones,
-    title: "Real UK engineers, not a call centre",
-    description: "When something needs sorting, you speak to the engineers who built your network. No ticket queues, no offshore support.",
+    icon: Repeat,
+    title: "Bridge today, Fibre tomorrow.",
+    description: "When your leased line lands, Integra Bridge stays on as failover. One partner from temporary to permanent — no rip-and-replace.",
   },
 ];
 
@@ -294,10 +294,10 @@ const Index = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Why Integra</p>
               <h2 className="text-heading-1 md:text-display-sm text-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                The opposite of waiting 8 weeks for BT.
+                10 days. Not 10 weeks.
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-                We get multi-site businesses connected where and when traditional broadband can't — 99% UK coverage, rapid deployment, real engineers on every call.
+                We get multi-site businesses connected where and when traditional broadband can't — 99% UK coverage, rapid deployment, and a clean path from temporary connectivity to permanent Fibre.
               </p>
             </AnimatedSection>
             <motion.div className="grid gap-8 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
