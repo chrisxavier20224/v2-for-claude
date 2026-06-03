@@ -2,6 +2,7 @@ export interface InsightArticleMeta {
   slug: string;
   category: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   featured?: boolean;
   tone?: "light" | "dark";
@@ -41,6 +42,7 @@ export const insightArticles: InsightArticleMeta[] = [
     slug: "how-to-choose-business-broadband",
     category: "Decision Guide",
     title: "How to Choose Business Broadband: Leased Line vs SD-WAN vs Bridge",
+    seoTitle: "How to Choose Business Broadband: Leased Line vs SD-WAN",
     excerpt:
       "A practical guide to choosing the right business broadband — leased line, SD-WAN or Bridge — and matching each one to the site.",
     tone: "light",
@@ -65,6 +67,7 @@ export const insightArticles: InsightArticleMeta[] = [
     slug: "multi-site-business-connectivity",
     category: "Playbook",
     title: "Multi-Site Business Connectivity: Planning for the Problem Sites",
+    seoTitle: "Multi-Site Business Connectivity: Planning Problem Sites",
     excerpt:
       "Multi-site business connectivity is a strategy, not a series of one-off decisions. A playbook for planning for the problem sites instead of reacting to them.",
     tone: "dark",
@@ -89,6 +92,7 @@ export const insightArticles: InsightArticleMeta[] = [
     slug: "multi-bearer-internet-failover",
     category: "Technical Brief",
     title: "Multi-Bearer Internet Failover and Redundancy, Explained Properly",
+    seoTitle: "Multi-Bearer Internet Failover & Redundancy Explained",
     excerpt:
       "Bonded, load balanced, multi-bearer failover — what actually matters for internet redundancy, in plain terms.",
     tone: "light",
