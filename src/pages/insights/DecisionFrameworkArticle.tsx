@@ -6,7 +6,7 @@ import InsightArticle, {
 } from "./InsightArticle";
 
 const DecisionFrameworkArticle = () => (
-  <InsightArticle slug="decision-framework">
+  <InsightArticle slug="how-to-choose-business-broadband">
     <NumberedSection number={1} title="The wrong question">
       <p>
         When a site needs connectivity, the instinct is to ask "which option is

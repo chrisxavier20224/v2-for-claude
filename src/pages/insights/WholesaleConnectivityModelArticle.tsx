@@ -6,7 +6,7 @@ import InsightArticle, {
 } from "./InsightArticle";
 
 const WholesaleConnectivityModelArticle = () => (
-  <InsightArticle slug="wholesale-connectivity-model">
+  <InsightArticle slug="wholesale-isp-partner-program">
     <NumberedSection number={1} title="The quiet problem every alt-net has">
       <p>
         Every alt-net has the same quiet problem. The network reaches most of

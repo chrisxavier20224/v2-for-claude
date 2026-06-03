@@ -6,7 +6,7 @@ import InsightArticle, {
 } from "./InsightArticle";
 
 const MultiBearerConnectivityArticle = () => (
-  <InsightArticle slug="multi-bearer-connectivity">
+  <InsightArticle slug="multi-bearer-internet-failover">
     <NumberedSection number={1} title="The terms get used loosely">
       <p>
         If you're evaluating wireless connectivity for a business site, you'll
