@@ -96,7 +96,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 <img src={integraLogo} alt="Integra Networks" className="w-28 h-auto" />
               </Link>
               <p className="text-sm text-surface-dark-muted">
-                Business-grade connectivity across the UK.
+                Business connectivity in 10 working days — even where fibre hasn't reached.
               </p>
             </div>
 
