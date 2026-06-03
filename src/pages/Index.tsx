@@ -319,7 +319,7 @@ const Index = () => {
 
             {/* Featured — Integra Bridge */}
             <AnimatedSection>
-              <Link to="/connectivity/integra-bridge" className="group block mb-8">
+              <Link to="/integra-bridge" className="group block mb-8">
                 <motion.div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent" whileHover={{ scale: 1.01 }} transition={{ duration: 0.4, ease: "easeOut" }}>
                   <div className="aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
                     <img src={bridgeImg} alt="Integra Bridge" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
@@ -361,9 +361,9 @@ const Index = () => {
             <AnimatedSection>
               <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
                 <span className="text-sm text-surface-dark-muted">Supporting solutions:</span>
-                <Link to="/connectivity/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
+                <Link to="/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
                 <span className="text-white/20">|</span>
-                <Link to="/connectivity/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
+                <Link to="/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
               </div>
             </AnimatedSection>
           </div>
