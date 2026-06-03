@@ -141,7 +141,7 @@ const IntegraSDWAN = () => {
     <PageLayout>
       <SEO
         title="Integra SD-WAN"
-        description="Fast internet without Fibre. Bonded 4G/5G, 14-day install, 99.5% SLA. Bespoke pricing per site."
+        description="Fast internet without Fibre. Bonded 4G/5G, 10-working-day install, 99.5% SLA. Bespoke pricing per site."
         keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to Fibre, business connectivity, fast broadband"
         url="/integra-sd-wan"
       />

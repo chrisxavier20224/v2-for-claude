@@ -71,7 +71,7 @@ const NorthWest = () => {
     <PageLayout>
       <SEO
         title="Rural Broadband North West | Integra Networks"
-        description="Broadband for North West. Lancashire, Greater Manchester, Cheshire, Merseyside. 14-day install."
+        description="Broadband for North West. Lancashire, Greater Manchester, Cheshire, Merseyside. 10-working-day install."
         keywords="rural broadband North West, broadband Lancashire, Cheshire internet, Wigan broadband, Greater Manchester WiFi, rural connectivity"
         url="/locations/rural-broadband-north-west"
       />
@@ -81,7 +81,7 @@ const NorthWest = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Integra Networks — North West",
-            description: "Fast, reliable broadband for Lancashire, Greater Manchester, Cheshire, Merseyside, and Cumbria. Integra Pro bonded 4G/5G and Starlink solutions. 14-day installation.",
+            description: "Fast, reliable broadband for Lancashire, Greater Manchester, Cheshire, Merseyside, and Cumbria. Integra Pro bonded 4G/5G and Starlink solutions. 10-working-day installation.",
             url: "https://integra-networks.co.uk/locations/rural-broadband-north-west",
             areaServed: {
               "@type": "Place",

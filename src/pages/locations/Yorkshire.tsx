@@ -71,7 +71,7 @@ const Yorkshire = () => {
     <PageLayout>
       <SEO
         title="Broadband Yorkshire"
-        description="Broadband for Yorkshire farms and manufacturing. Sheffield, Leeds, Harrogate, Skipton. 14-day install."
+        description="Broadband for Yorkshire farms and manufacturing. Sheffield, Leeds, Harrogate, Skipton. 10-working-day install."
         keywords="rural broadband Yorkshire, manufacturing broadband, farm internet, Sheffield, Leeds, Harrogate, rural connectivity"
         url="/locations/rural-broadband-yorkshire"
       />
@@ -81,7 +81,7 @@ const Yorkshire = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Integra Networks — Yorkshire",
-            description: "Broadband for Yorkshire farms, manufacturing, and rural businesses. Sheffield, Leeds, Harrogate, Skipton. Integra Pro with uptime guarantees. 14-day installation.",
+            description: "Broadband for Yorkshire farms, manufacturing, and rural businesses. Sheffield, Leeds, Harrogate, Skipton. Integra Pro with uptime guarantees. 10-working-day installation.",
             url: "https://integra-networks.co.uk/locations/rural-broadband-yorkshire",
             areaServed: {
               "@type": "Place",

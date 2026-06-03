@@ -122,7 +122,7 @@ const Kent = () => {
               Rural Broadband Kent
             </h1>
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
-              Reliable connectivity for Kent farms, agricultural businesses, and rural properties. 14-day installation with business-grade uptime.
+              Reliable connectivity for Kent farms, agricultural businesses, and rural properties. 10-working-day installation with business-grade uptime.
             </p>
           </AnimatedSection>
         </div>

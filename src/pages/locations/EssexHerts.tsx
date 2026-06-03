@@ -71,7 +71,7 @@ const EssexHerts = () => {
     <PageLayout>
       <SEO
         title="Rural Broadband Essex & Hertfordshire | Integra Networks"
-        description="Broadband for Essex, Herts, and Suffolk. Bonded 4G/5G and Starlink. 14-day installation."
+        description="Broadband for Essex, Herts, and Suffolk. Bonded 4G/5G and Starlink. 10-working-day installation."
         keywords="rural broadband Essex, Hertfordshire internet, broadband Bishop's Stortford, Saffron Walden, Stansted broadband, rural connectivity"
         url="/locations/rural-broadband-essex-hertfordshire"
       />
@@ -81,7 +81,7 @@ const EssexHerts = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Integra Networks — Essex & Hertfordshire",
-            description: "Reliable broadband for Essex, Hertfordshire, and west Suffolk. Integra Pro bonded 4G/5G, Starlink solutions. Strong local customer base. Fast 14-day installation.",
+            description: "Reliable broadband for Essex, Hertfordshire, and west Suffolk. Integra Pro bonded 4G/5G, Starlink solutions. Strong local customer base. Fast 10-working-day installation.",
             url: "https://integra-networks.co.uk/locations/rural-broadband-essex-hertfordshire",
             areaServed: {
               "@type": "Place",

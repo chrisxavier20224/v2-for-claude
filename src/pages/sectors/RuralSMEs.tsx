@@ -81,7 +81,7 @@ const RuralSMEs = () => {
     <PageLayout>
       <SEO
         title="Rural Business Internet"
-        description="Up to 500Mbps via SD-WAN. 14-day install, 99.5% uptime SLA. PSTN migration included."
+        description="Up to 500Mbps via SD-WAN. 10-working-day install, 99.5% uptime SLA. PSTN migration included."
         keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
         url="/rural-business-broadband"
       />
