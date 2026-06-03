@@ -83,19 +83,19 @@ const connectivityServices = [
     title: "Leased Lines",
     description: "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
-    link: "/connectivity/leased-lines",
+    link: "/leased-lines",
   },
   {
     title: "SoGEA",
     description: "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.",
     img: fibreImg,
-    link: "/connectivity/so-gea",
+    link: "/sogea",
   },
   {
     title: "Managed Internet",
     description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.",
     img: bpImg,
-    link: "/connectivity/managed-internet",
+    link: "/managed-internet",
   },
   {
     title: "Integra SD-WAN",
@@ -108,8 +108,12 @@ const connectivityServices = [
 const sectors = [
   { title: "Construction", img: constructionImg, link: "/construction-site-broadband" },
   { title: "Rural SMEs", img: ruralImg, link: "/rural-business-broadband" },
-  { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
-  { title: "Multi-Site Retail & Industrial", img: bpImg, link: "/sectors/business-parks" },
+  {
+    title: "Business Parks & Multi-Site",
+    img: bpImg,
+    link: "/sectors/business-parks",
+    description: "One network across business parks, retail estates and multi-site industrial portfolios.",
+  },
 ];
 
 
@@ -196,7 +200,7 @@ const Index = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   { icon: Zap, label: "Live in 10 working days" },
-                  { icon: Users, label: "Real UK engineers, not a call centre" },
+                  { icon: Users, label: "Multi-bearer redundancy as standard" },
                   { icon: Globe, label: "99% UK coverage" },
                   { icon: ShieldCheck, label: "SLA-backed uptime" },
                 ].map((vp) => (
@@ -260,7 +264,7 @@ const Index = () => {
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-12 px-8 text-base">
-                    <Link to="/connectivity/integra-bridge" className="inline-flex items-center gap-2">
+                    <Link to="/integra-bridge" className="inline-flex items-center gap-2">
                       How Integra Bridge works <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
