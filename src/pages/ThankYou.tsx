@@ -353,7 +353,7 @@ const ThankYou = () => {
       <section className="bg-surface-dark py-12 md:py-16 border-t border-white/5">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <AnimatedSection>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <Link
                 to="/customers"
                 className="group rounded-xl border border-white/10 bg-white/5 p-6 hover:border-primary/30 hover:bg-white/[0.07] transition-all"
@@ -366,21 +366,6 @@ const ThankYou = () => {
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary">
                   View Stories <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-
-              <Link
-                to="/checking-out-your-property"
-                className="group rounded-xl border border-primary/30 bg-primary/5 p-6 hover:border-primary/50 hover:bg-primary/10 transition-all"
-              >
-                <h3 className="text-base font-medium text-surface-dark-foreground mb-2 group-hover:text-primary transition-colors">
-                  Get a Detailed Proposal
-                </h3>
-                <p className="text-sm text-surface-dark-muted leading-relaxed mb-3">
-                  Share more about your property and we'll prepare a tailored connectivity plan with speeds and costs.
-                </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-                  Start Now <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
             </div>
