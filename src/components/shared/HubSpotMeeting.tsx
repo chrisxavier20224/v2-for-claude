@@ -14,7 +14,7 @@ interface HubSpotMeetingProps {
   meetingUrl?: string;
 }
 
-const DEFAULT_MEETING_URL = "https://meetings.hubspot.com/chris-clapham";
+const DEFAULT_MEETING_URL = "https://meetings.hubspot.com/xavier-integra/meeting-link";
 
 const HubSpotMeeting = ({
   heading = "Book a Call",
