@@ -164,12 +164,12 @@ const App = () => (
               <Route path="/lp/rural-broadband" element={<RuralBroadbandLanding />} />
               <Route path="/lp/starlink-sdwan" element={<StarlinkSdwanLanding />} />
 
-              <Route path="/sectors/homeworkers" element={<Navigate to="/" replace />} />
-              <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/business-parks" replace />} />
+              <Route path="/sectors/homeworkers" element={<Navigate to="/sectors/rural-smes" replace />} />
+              <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/sectors/construction-sites" element={<Navigate to="/construction-site-broadband" replace />} />
               <Route path="/sectors/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
               <Route path="/sectors/business-parks" element={<BusinessParks />} />
-              <Route path="/sectors/airbnbs" element={<Navigate to="/" replace />} />
+              <Route path="/sectors/airbnbs" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/customers/wb-power-services" element={<WBPowerServices />} />
               <Route path="/customers/royle-farm" element={<RoyleFarm />} />
