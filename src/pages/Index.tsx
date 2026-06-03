@@ -381,38 +381,6 @@ const Index = () => {
           </div>
         </section>
 
-        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-
-        {/* ── 7. CUSTOMER STORY (split, image RIGHT) ────────────────────── */}
-        <section className="bg-background py-20 md:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <AnimatedSection>
-                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Customer Stories</p>
-                <Link to="/customers/mcgee-construction" className="group block">
-                  <blockquote className="text-2xl sm:text-3xl text-foreground font-medium leading-snug mb-6">
-                    "We got live connectivity in a week. No months of waiting, no huge installation bills."
-                  </blockquote>
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div>
-                      <p className="text-foreground font-medium">Chris Pyne</p>
-                      <p className="text-sm text-muted-foreground">Head of IT, McGee Construction</p>
-                    </div>
-                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                      Read the story <ArrowRight className="h-3.5 w-3.5" />
-                    </span>
-                  </div>
-                </Link>
-              </AnimatedSection>
-              <AnimatedSection>
-                <ImagePlaceholder label="IMAGE: McGee site or Chris Pyne" className="aspect-[4/5]" />
-              </AnimatedSection>
-            </div>
-          </div>
-        </section>
-
-        <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
-
         {/* ── 8. SECTORS (card grid w/ images already) ──────────────────── */}
         <section className="bg-surface-dark py-20 md:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
