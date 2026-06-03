@@ -35,7 +35,7 @@ const ManagedInternet = () => {
         title="Managed Internet Access"
         description="Dedicated bandwidth 100-500Mbps. SLA-backed, faster deployment than leased lines."
         keywords="managed internet, dedicated bandwidth, business internet, DIA, ethernet first mile, EFM, managed broadband, dedicated internet access"
-        url="/connectivity/managed-internet"
+        url="/managed-internet"
       />
 
       {/* HERO */}

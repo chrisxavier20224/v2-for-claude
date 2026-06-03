@@ -66,20 +66,20 @@ const relatedServices = [
   {
     title: "Leased Lines",
     description: "Dedicated Fibre connectivity for businesses needing guaranteed speeds and uptime SLAs.",
-    href: "/connectivity/leased-lines",
+    href: "/leased-lines",
     icon: Landmark,
     badge: "Enterprise",
   },
   {
     title: "Business WiFi",
     description: "Professional WiFi networks surveyed, installed, and monitored for complete coverage.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
     icon: Wifi,
   },
   {
     title: "Unified Communications",
     description: "Integrated voice, video, and messaging over your SD-WAN connectivity.",
-    href: "/connectivity/unified-communications",
+    href: "/unified-communications",
     icon: Phone,
   },
 ];

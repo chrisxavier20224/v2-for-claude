@@ -246,7 +246,7 @@ const FourPiecesSection = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="mt-32 max-w-xl mx-auto"
           >
-            <Link to="/connectivity/managed-sim-services" className="group block border-t-2 border-border hover:border-primary pt-8 transition-colors">
+            <Link to="/managed-sim-services" className="group block border-t-2 border-border hover:border-primary pt-8 transition-colors">
               <motion.div 
                 className="relative"
                 animate={hasPulsed ? { 
@@ -397,7 +397,7 @@ const FourPiecesSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="pt-8 mt-4"
         >
-          <Link to="/connectivity/managed-sim-services" className="group block border-l-2 border-border hover:border-primary pl-6 transition-colors">
+          <Link to="/managed-sim-services" className="group block border-l-2 border-border hover:border-primary pl-6 transition-colors">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg border border-border/50 bg-card/30 flex items-center justify-center flex-shrink-0 group-hover:border-primary/50 transition-colors">
                 <MapPin className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />

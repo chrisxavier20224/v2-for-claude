@@ -182,7 +182,7 @@ const Wholesale = () => {
                 Integra Bridge bonds Starlink and 5G/4G over a Layer 2 tunnel from our data centre — enterprise-grade connectivity for your customer in 10 working days, while their Fibre is still being built. When the Fibre lands, Bridge stays on as permanent failover. Your customer is never the one waiting.
               </p>
               <Button asChild size="lg">
-                <Link to="/connectivity/integra-bridge">How Integra Bridge works <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link to="/integra-bridge">How Integra Bridge works <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
           </AnimatedSection>

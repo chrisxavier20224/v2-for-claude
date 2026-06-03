@@ -30,7 +30,7 @@ const challenges = [
     title: "Lift Line Solutions",
     description:
       "The digital shift affects all fixed-line technologies, including lift auto-diallers. With the PSTN network ending, it's time to upgrade to VoIP lines and GSM units.",
-    cta: { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
+    cta: { label: "Managed SIM Services", path: "/managed-sim-services" },
   },
   {
     icon: Shield,
@@ -43,7 +43,7 @@ const challenges = [
     title: "Transitioning from PSTN / ISDN2",
     description:
       "If your voice services are running on PSTN ISDN2, it's time to consider alternatives. We can help you transition smoothly to modern, reliable, and efficient communication solutions.",
-    cta: { label: "Unified Communications", path: "/connectivity/unified-communications" },
+    cta: { label: "Unified Communications", path: "/unified-communications" },
   },
 ];
 
@@ -70,12 +70,12 @@ const relatedServices = [
   {
     name: "Unified Communications",
     description: "Modern VoIP solutions to replace traditional phone lines.",
-    url: "/connectivity/unified-communications",
+    url: "/unified-communications",
   },
   {
     name: "Leased Lines",
     description: "Dedicated Fibre connectivity with business-grade SLA.",
-    url: "/connectivity/leased-lines",
+    url: "/leased-lines",
   },
   {
     name: "Integra SD-WAN",
@@ -201,8 +201,8 @@ const PSTNSwitchOff = () => {
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-8 md:grid-cols-3">
           {[
             { title: "Integra SD-WAN", desc: "When traditional connectivity options aren't available, our SD-WAN solution revolutionises connectivity for businesses, especially in rural locations, without the need for Fibre.", path: "/" },
-            { title: "VoIP Solutions", desc: "Our PSTN/ISDN2 replacement solution allows businesses to upgrade their existing system without overhauling their entire cabling network. Quick to deploy and easy to configure.", path: "/connectivity/unified-communications" },
-            { title: "Managed SIM Services", desc: "Our Managed SIM service provides superior connectivity, compliance, and reporting, offering significant cost savings compared to traditional analogue landlines.", path: "/connectivity/managed-sim-services" },
+            { title: "VoIP Solutions", desc: "Our PSTN/ISDN2 replacement solution allows businesses to upgrade their existing system without overhauling their entire cabling network. Quick to deploy and easy to configure.", path: "/unified-communications" },
+            { title: "Managed SIM Services", desc: "Our Managed SIM service provides superior connectivity, compliance, and reporting, offering significant cost savings compared to traditional analogue landlines.", path: "/managed-sim-services" },
           ].map((s) => (
             <motion.div key={s.title} variants={staggerItem} className="rounded-2xl border border-border bg-card p-8 hover:shadow-lg transition-shadow flex flex-col">
               <h3 className="text-lg font-medium text-foreground mb-3">{s.title}</h3>
@@ -270,7 +270,7 @@ const PSTNSwitchOff = () => {
                 <Link to="/contact">Get Your Assessment</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/connectivity/managed-sim-services">Managed SIM Services</Link>
+                <Link to="/managed-sim-services">Managed SIM Services</Link>
               </Button>
             </div>
           </div>

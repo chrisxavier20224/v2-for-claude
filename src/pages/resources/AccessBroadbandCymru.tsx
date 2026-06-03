@@ -23,7 +23,7 @@ const relatedServices = [
   {
     name: "Starlink Installation",
     description: "Fast satellite connectivity available almost anywhere in Wales.",
-    url: "/connectivity/starlink-installation",
+    url: "/starlink-installation",
   },
   {
     name: "Integra SD-WAN",

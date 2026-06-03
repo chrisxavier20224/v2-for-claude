@@ -6,31 +6,31 @@ import integraLogo from "@/assets/integra-logo-white.png";
 
 const fibreAlternativeLinks = [
   { label: "Integra SD-WAN", path: "/integra-sd-wan" },
-  { label: "Integra Bridge", path: "/connectivity/integra-bridge" },
-  { label: "Starlink Installation", path: "/connectivity/starlink-installation" },
-  { label: "Managed SIM Services", path: "/connectivity/managed-sim-services" },
+  { label: "Integra Bridge", path: "/integra-bridge" },
+  { label: "Starlink Installation", path: "/starlink-installation" },
+  { label: "Managed SIM Services", path: "/managed-sim-services" },
   { label: "Pricing", path: "/pricing" },
 ];
 
 const standardConnectivityLinks = [
-  { label: "Leased Lines", path: "/connectivity/leased-lines" },
-  { label: "Managed Internet", path: "/connectivity/managed-internet" },
-  { label: "SoGEA Broadband", path: "/connectivity/sogea" },
-  { label: "4G/5G Backup", path: "/connectivity/cellular-backup" },
-  { label: "Business Mobiles", path: "/connectivity/business-mobiles" },
+  { label: "Leased Lines", path: "/leased-lines" },
+  { label: "Managed Internet", path: "/managed-internet" },
+  { label: "SoGEA Broadband", path: "/sogea" },
+  { label: "4G/5G Backup", path: "/cellular-backup" },
+  { label: "Business Mobiles", path: "/business-mobiles" },
 ];
 
 const solutionsLinks = [
-  { label: "Business WiFi", path: "/connectivity/business-wifi" },
-  { label: "Unified Communications", path: "/connectivity/unified-communications" },
-  { label: "Managed Firewall", path: "/connectivity/managed-firewall" },
-  { label: "Business Continuity", path: "/connectivity/business-continuity" },
+  { label: "Business WiFi", path: "/business-wifi" },
+  { label: "Unified Communications", path: "/unified-communications" },
+  { label: "Managed Firewall", path: "/managed-firewall" },
+  { label: "Business Continuity", path: "/business-continuity" },
 ];
 
 const infrastructureLinks = [
-  { label: "CCTV", path: "/connectivity/cctv" },
-  { label: "Wireless Distribution", path: "/connectivity/wireless-distribution" },
-  { label: "Network Infrastructure", path: "/connectivity/network-infrastructure" },
+  { label: "CCTV", path: "/cctv" },
+  { label: "Wireless Distribution", path: "/wireless-distribution" },
+  { label: "Network Infrastructure", path: "/network-infrastructure" },
 ];
 
 const companyLinks = [

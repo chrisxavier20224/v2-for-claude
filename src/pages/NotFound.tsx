@@ -20,7 +20,7 @@ const NotFound = () => {
             <a href="/construction-site-broadband" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-11 px-6 text-sm font-semibold hover:bg-primary/90 transition-colors">
               Construction sites
             </a>
-            <a href="/connectivity/integra-bridge" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-11 px-6 text-sm font-semibold hover:bg-primary/90 transition-colors">
+            <a href="/integra-bridge" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-11 px-6 text-sm font-semibold hover:bg-primary/90 transition-colors">
               Integra Bridge
             </a>
             <a href="/" className="inline-flex items-center justify-center rounded-md border border-border h-11 px-6 text-sm font-semibold text-foreground hover:bg-secondary transition-colors">

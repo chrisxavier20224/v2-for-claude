@@ -65,13 +65,13 @@ const relatedServices = [
   {
     title: "Starlink Installation",
     description: "Satellite internet as an alternative to cellular connectivity.",
-    href: "/connectivity/starlink-installation",
+    href: "/starlink-installation",
     icon: Radio,
   },
   {
     title: "Business WiFi",
     description: "Professional WiFi to extend your connectivity throughout your premises.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
     icon: Wifi,
   },
 ];
@@ -104,7 +104,7 @@ const RuralSMEs = () => {
               Your business can't grow on 2Mbps ADSL.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Rural businesses don't have to settle for slow copper. Up to 500Mbps via cellular SD-WAN, installed in 10 working days — or <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for a leased line. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
+              Rural businesses don't have to settle for slow copper. Up to 500Mbps via cellular SD-WAN, installed in 10 working days — or <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for a leased line. Card machines stay online. VoIP calls stay clear. And the PSTN switch-off in January 2027? We handle the migration.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -198,7 +198,7 @@ const RuralSMEs = () => {
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Focus on your business. We handle the tech.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for Fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
+                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for Fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
               </p>
             </div>
             <motion.ul className="max-w-md mx-auto space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>

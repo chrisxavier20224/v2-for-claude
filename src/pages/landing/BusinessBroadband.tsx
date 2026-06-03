@@ -23,13 +23,13 @@ const relatedServices = [
     icon: Wifi,
     title: "Leased Lines",
     description: "Dedicated Fibre with symmetric speeds up to 1000 Mbps",
-    href: "/connectivity/leased-lines",
+    href: "/leased-lines",
   },
   {
     icon: BarChart3,
     title: "Business WiFi",
     description: "Enterprise-grade wireless for offices and multi-site coverage",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
   },
   {
     icon: ChevronDown,

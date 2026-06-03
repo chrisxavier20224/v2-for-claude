@@ -59,19 +59,19 @@ const relatedServices = [
   {
     title: "Integra Bridge",
     description: "Enterprise interim connectivity for multi-site deployment.",
-    href: "/connectivity/integra-bridge",
+    href: "/integra-bridge",
     icon: Network,
   },
   {
     title: "Wireless Distribution",
     description: "Point-to-point links for distributed connectivity.",
-    href: "/connectivity/wireless-distribution",
+    href: "/wireless-distribution",
     icon: Radio,
   },
   {
     title: "Business WiFi",
     description: "Professional WiFi for common areas and units.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
     icon: Wifi,
   },
 ];
@@ -168,7 +168,7 @@ const BusinessParks = () => {
               </motion.div>
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Fill units faster with pre-connected internet.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Tenants want to move in and start working immediately — not wait 6-8 weeks for an ISP installation. We pre-connect every unit so internet is live from day one. Fibre, microwave, or SD-WAN — whatever your park needs. When a leased line is on order, <Link to="/connectivity/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> gets tenants online in days and stays on as failover once it lands.
+                Tenants want to move in and start working immediately — not wait 6-8 weeks for an ISP installation. We pre-connect every unit so internet is live from day one. Fibre, microwave, or SD-WAN — whatever your park needs. When a leased line is on order, <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> gets tenants online in days and stays on as failover once it lands.
               </p>
             </AnimatedSection>
           </div>

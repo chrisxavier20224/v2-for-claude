@@ -104,7 +104,7 @@ const relatedServices = [
   {
     name: "Starlink Installation",
     description: "Professional setup and optimisation of satellite broadband.",
-    url: "/connectivity/starlink-installation",
+    url: "/starlink-installation",
   },
   {
     name: "Integra SD-WAN",
@@ -114,7 +114,7 @@ const relatedServices = [
   {
     name: "4G/5G Backup",
     description: "Secondary connectivity for business continuity.",
-    url: "/connectivity/cellular-backup",
+    url: "/cellular-backup",
   },
   {
     name: "Pricing",

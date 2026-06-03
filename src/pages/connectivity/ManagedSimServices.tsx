@@ -38,7 +38,7 @@ const ManagedSimServices = () => {
         title="Managed SIM Services"
         description="IoT SIMs for lifts, alarms, CCTV, sensors, meters, fleet tracking. Multinet across all four UK networks."
         keywords="managed SIM, IoT SIM, M2M SIM, lift line SIM, alarm SIM, EPOS SIM, CCTV SIM, smart meter SIM, fleet tracking, environmental sensor, Multinet SIM"
-        url="/connectivity/managed-sim-services"
+        url="/managed-sim-services"
       />
 
       {/* HERO */}

@@ -46,13 +46,13 @@ const relatedServices = [
     icon: Monitor,
     title: "Leased Lines",
     description: "Dedicated, high-bandwidth connectivity for enterprise use.",
-    href: "/connectivity/leased-lines",
+    href: "/leased-lines",
   },
   {
     icon: Wifi,
     title: "Business WiFi",
     description: "Professional mesh networks for commercial properties.",
-    href: "/connectivity/business-wifi",
+    href: "/business-wifi",
   },
   {
     icon: Zap,
@@ -69,7 +69,7 @@ const UnifiedCommunications = () => {
         title="Unified Communications"
         description="Cloud-hosted VoIP with Teams, call routing, PSTN backup. PSTN-ready. Bespoke pricing per site."
         keywords="unified communications, UCaaS, cloud phone, hosted VoIP, video conferencing, CCaaS, business phone system, PSTN switch off"
-        url="/connectivity/unified-communications"
+        url="/unified-communications"
       />
 
       {/* HERO */}

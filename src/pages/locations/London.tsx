@@ -42,7 +42,7 @@ const relatedServices = [
     title: "Leased Lines",
     description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
-    href: "/connectivity/leased-lines",
+    href: "/leased-lines",
   },
   {
     title: "Construction Sites",

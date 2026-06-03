@@ -94,7 +94,7 @@ const BusinessWifi = () => {
         title="Business WiFi"
         description="Professional WiFi networks designed for your site. Survey, AP placement, configuration, 24/7 monitoring via Integra Cloud."
         keywords="business WiFi, commercial WiFi, public WiFi, guest WiFi, event WiFi, WiFi survey, managed WiFi"
-        url="/connectivity/business-wifi"
+        url="/business-wifi"
       />
       <SchemaMarkup data={businessWifiServiceSchema} />
       <SchemaMarkup data={businessWifiBreadcrumbSchema} />

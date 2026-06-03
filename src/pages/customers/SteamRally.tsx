@@ -164,8 +164,8 @@ const SteamRally = () => {
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">Solutions Delivered</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
-              { label: "Integra Bridge", href: "/connectivity/integra-bridge" },
-              { label: "Business WiFi", href: "/connectivity/business-wifi" },
+              { label: "Integra Bridge", href: "/integra-bridge" },
+              { label: "Business WiFi", href: "/business-wifi" },
             ].map((s) => (
               <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
                 <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>

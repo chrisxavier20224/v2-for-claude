@@ -13,10 +13,10 @@ import heroImg from "@/assets/connectivity/sdwan-stable.jpg";
 import stackImg from "@/assets/connectivity/sdwan-speeds.jpg";
 
 const layers = [
-  { icon: Signal, title: "Primary Connectivity", description: "Leased line, managed internet, or Integra SD-WAN as your main connection — chosen to match your bandwidth needs and budget.", link: "/connectivity/leased-lines" },
-  { icon: Server, title: "Automatic Cellular Failover", description: "Bonded 4G/5G backup that activates in under a second when your primary connection drops. No manual intervention required.", link: "/connectivity/cellular-backup" },
-  { icon: Phone, title: "Cloud Voice & Communications", description: "VoIP and unified comms that aren't tied to a physical line. If your office connection goes down, your phones still ring — on mobile, at home, anywhere.", link: "/connectivity/unified-communications" },
-  { icon: ShieldCheck, title: "Managed Firewall", description: "Security that protects your network and adapts when traffic routes change during failover. No gaps in protection, no reconfiguration needed.", link: "/connectivity/managed-firewall" },
+  { icon: Signal, title: "Primary Connectivity", description: "Leased line, managed internet, or Integra SD-WAN as your main connection — chosen to match your bandwidth needs and budget.", link: "/leased-lines" },
+  { icon: Server, title: "Automatic Cellular Failover", description: "Bonded 4G/5G backup that activates in under a second when your primary connection drops. No manual intervention required.", link: "/cellular-backup" },
+  { icon: Phone, title: "Cloud Voice & Communications", description: "VoIP and unified comms that aren't tied to a physical line. If your office connection goes down, your phones still ring — on mobile, at home, anywhere.", link: "/unified-communications" },
+  { icon: ShieldCheck, title: "Managed Firewall", description: "Security that protects your network and adapts when traffic routes change during failover. No gaps in protection, no reconfiguration needed.", link: "/managed-firewall" },
   { icon: Cloud, title: "Proactive Monitoring", description: "We monitor every layer of your connectivity stack 24/7. If something degrades, we're already working on it before you notice.", link: "/contact" },
 ];
 
@@ -30,7 +30,7 @@ const BusinessContinuity = () => {
         title="Business Continuity Connectivity"
         description="Layered resilience for UK businesses. Primary connection, cellular failover, cloud voice, and managed firewall."
         keywords="business continuity, disaster recovery, connectivity resilience, failover, backup broadband, cloud voice, managed firewall, business resilience"
-        url="/connectivity/business-continuity"
+        url="/business-continuity"
       />
 
       {/* HERO */}

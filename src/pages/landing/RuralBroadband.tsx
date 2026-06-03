@@ -17,7 +17,7 @@ const relatedServices = [
     icon: Satellite,
     title: "Starlink Installation",
     description: "Quick deployment satellite broadband for rural properties",
-    href: "/connectivity/starlink-installation",
+    href: "/starlink-installation",
   },
   {
     icon: Zap,
@@ -35,7 +35,7 @@ const relatedServices = [
     icon: Radio,
     title: "Integra Bridge",
     description: "Extended range connectivity for distributed rural locations",
-    href: "/connectivity/integra-bridge",
+    href: "/integra-bridge",
   },
 ];
 

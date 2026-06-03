@@ -91,7 +91,7 @@ const NetworkInfrastructure = () => {
         title="Network Infrastructure"
         description="Cabling, cabinets, PoE switches, WiFi surveys, and Fibre links. Design, install, manage."
         keywords="network infrastructure, structured cabling, data cabinet, PoE switch, WiFi survey, heat map, Fibre link, network installation, cable management"
-        url="/connectivity/network-infrastructure"
+        url="/network-infrastructure"
       />
       <SchemaMarkup data={schemaData} />
 

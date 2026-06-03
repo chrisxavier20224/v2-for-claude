@@ -174,11 +174,11 @@ const WBPowerServices = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
               { label: "Integra SD-WAN", href: "/integra-sd-wan" },
-              { label: "Leased Lines", href: "/connectivity/leased-lines" },
-              { label: "CCTV", href: "/connectivity/cctv" },
-              { label: "Business WiFi", href: "/connectivity/business-wifi" },
-              { label: "Wireless Distribution", href: "/connectivity/wireless-distribution" },
-              { label: "Managed SIM", href: "/connectivity/managed-sim-services" },
+              { label: "Leased Lines", href: "/leased-lines" },
+              { label: "CCTV", href: "/cctv" },
+              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Wireless Distribution", href: "/wireless-distribution" },
+              { label: "Managed SIM", href: "/managed-sim-services" },
             ].map((s) => (
               <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
                 <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>
