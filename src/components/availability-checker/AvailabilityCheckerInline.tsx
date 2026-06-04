@@ -330,11 +330,15 @@ const TrustBar = () => (
 interface AvailabilityCheckerInlineProps {
   compact?: boolean;
   sourceTag?: string;
+  heading?: string;
+  subheading?: string;
 }
 
 const AvailabilityCheckerInline = ({
   compact = false,
   sourceTag = "check-page",
+  heading,
+  subheading,
 }: AvailabilityCheckerInlineProps) => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
