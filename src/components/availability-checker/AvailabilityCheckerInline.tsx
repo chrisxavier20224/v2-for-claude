@@ -327,7 +327,15 @@ const TrustBar = () => (
 /* ------------------------------------------------------------------ */
 /*  Main Component                                                     */
 /* ------------------------------------------------------------------ */
-const CheckAvailability = () => {
+interface AvailabilityCheckerInlineProps {
+  compact?: boolean;
+  sourceTag?: string;
+}
+
+const AvailabilityCheckerInline: React.FC<AvailabilityCheckerInlineProps> = ({
+  compact = false,
+  sourceTag = "check-page",
+}) => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
 
@@ -487,16 +495,16 @@ const CheckAvailability = () => {
   /* ---- Conversion tracking ---- */
   // Track form_view on mount (equivalent to Typeform "views")
   useEffect(() => {
-    trackEvent("form_view", { form_name: "availability_checker", form_location: "/check" });
-  }, []);
+    trackEvent("form_view", { form_name: "availability_checker", form_location: sourceTag });
+  }, [sourceTag]);
 
   // Track form_start once (equivalent to Typeform "starts")
   const trackFormStart = useCallback(() => {
     if (!formStartedRef.current) {
       formStartedRef.current = true;
-      trackEvent("form_start", { form_name: "availability_checker" });
+      trackEvent("form_start", { form_name: "availability_checker", form_location: sourceTag });
     }
-  }, []);
+  }, [sourceTag]);
 
   const phoneDigits = phone.replace(/[^0-9]/g, "");
   const phoneValid = phoneDigits.length >= 10 && phoneDigits.length <= 13;
@@ -700,6 +708,7 @@ const CheckAvailability = () => {
         address: selectedAddress,
         house_building_number: houseBuildingNumber || undefined,
         urgency: urgency || undefined,
+        source_tag: sourceTag,
         ...utmParamsRef.current,
       };
 
@@ -759,15 +768,9 @@ const CheckAvailability = () => {
   const hero = HERO_COPY[step] || HERO_COPY[1];
 
   return (
-    <PageLayout>
-      <SEO
-        title="Check Your Availability — Integra Networks"
-        description="Check if Integra Networks can bring fast broadband to your property. Drop a pin on your building and we'll run an automated coverage check."
-        keywords="availability checker, broadband coverage, rural broadband, Integra Networks"
-        url="/check"
-      />
-
+    <>
       {/* ── HERO ─────────────────────────────────────────────── */}
+      {!compact && (
       <section className="relative min-h-[50vh] flex items-center overflow-hidden -mt-20">
         {/* Background image */}
         <div className="absolute inset-0">
@@ -819,10 +822,17 @@ const CheckAvailability = () => {
           {step === 1 && <TrustBar />}
         </div>
       </section>
+      )}
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className="bg-background relative z-10 -mt-8">
-        <div className="mx-auto max-w-lg px-4 pb-20">
+      <section className={compact ? "bg-background py-12 md:py-16" : "bg-background relative z-10 -mt-8"}>
+        <div className={compact ? "mx-auto max-w-lg px-4" : "mx-auto max-w-lg px-4 pb-20"}>
+          {compact && (
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-2">Check coverage in 60 seconds</h2>
+              <p className="text-sm text-muted-foreground">Tell us where you are and we'll see what we can deliver.</p>
+            </div>
+          )}
           <AnimatePresence mode="wait">
 
             {/* ═══ STEP 1: About You ═══ */}
