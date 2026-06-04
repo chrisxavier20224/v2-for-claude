@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SEO from "@/components/shared/SEO";
 
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
-import reframeImg from "@/assets/connectivity/sdwan-aerial.webp";
+import reframeImg from "@/assets/wholesale/struggling-connectivity.jpg.asset.json";
 import salesImg from "@/assets/wholesale/sales-team-bg.png";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
@@ -101,7 +101,7 @@ const Wholesale = () => {
             </AnimatedSection>
             <AnimatedSection>
               <div className="relative aspect-[4/5] lg:aspect-[4/4] rounded-2xl overflow-hidden shadow-xl ring-1 ring-border/40">
-                <img src={reframeImg} alt="Hard-to-reach sites where Fibre falls short" className="w-full h-full object-cover" loading="lazy" />
+                <img src={reframeImg.url} alt="Hard-to-reach sites where fibre falls short" className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-surface-dark/40 via-transparent to-transparent" />
               </div>
             </AnimatedSection>
