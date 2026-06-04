@@ -81,8 +81,8 @@ const RuralSMEs = () => {
   return (
     <PageLayout>
       <SEO
-        title="Rural Business Broadband UK | Live in 10 Days | Integra"
-        description="Rural business broadband alternative to fibre. Up to 500Mbps via SD-WAN, live in 10 working days. 99.5% SLA, PSTN migration handled. Get a quote."
+        title="Rural SMEs Connectivity — Farms & Rural Businesses | Integra"
+        description="Rural SME broadband alternative to fibre. Up to 500Mbps via SD-WAN, live in 10 working days. Built for farms, offices, and rural businesses."
         keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
         url="/rural-business-broadband"
       />
@@ -201,7 +201,7 @@ const RuralSMEs = () => {
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Focus on your business. We handle the tech.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for Fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
+                The PSTN switches off January 2027 — we future-proof your business now. <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> while you wait for fibre, SD-WAN broadband for the long term, VoIP phones, managed SIMs, and 24/7 monitoring. One provider, one bill, one team to call.
               </p>
             </div>
             <motion.ul className="max-w-md mx-auto space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
@@ -243,6 +243,49 @@ const RuralSMEs = () => {
       </Section>
 
       <CustomerLogoBar />
+
+      {/* CUSTOMER PROOF TILES */}
+      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(0 0% 100%)" />
+      <Section size="large">
+        <AnimatedSection>
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Customer Stories</p>
+            <h2 className="text-heading-1 md:text-display-sm text-foreground">Trusted by businesses across the UK</h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                name: "Royle Farm",
+                result: "From single-digit ADSL to 1000Mbps. New tenants connected in days, not months.",
+                href: "/customers/royle-farm",
+              },
+              {
+                name: "WB Power Services",
+                result: "Dodging a £50K fibre bill — bonded 4G/5G SD-WAN delivering 350Mbps+ from the depot roof.",
+                href: "/customers/wb-power-services",
+              },
+              {
+                name: "UKHarvest",
+                result: "From 2005-era speeds to 325Mbps+, live in 10 working days at their semi-rural HQ.",
+                href: "/customers/fast-track-connectivity-ukharvests-digital-transformation",
+              },
+            ].map((c) => (
+              <Link
+                key={c.name}
+                to={c.href}
+                className="group rounded-2xl border border-border bg-background-alt p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col"
+              >
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Case Study</p>
+                <h3 className="text-heading-3 text-foreground mb-3">{c.name}</h3>
+                <p className="text-muted-foreground leading-relaxed flex-1">{c.result}</p>
+                <span className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-primary group-hover:gap-3 transition-all">
+                  Read the story <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </AnimatedSection>
+      </Section>
 
       {/* RELATED SERVICES */}
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
