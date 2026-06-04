@@ -61,7 +61,7 @@ const SEO = ({
   noIndex = false,
 }: SEOProps) => {
   const pageTitle = title
-    ? title.toLowerCase().includes("integra networks")
+    ? /integra(\s+networks)?\s*$/i.test(title.trim())
       ? title
       : `${title} | Integra Networks`
     : DEFAULT_TITLE;
