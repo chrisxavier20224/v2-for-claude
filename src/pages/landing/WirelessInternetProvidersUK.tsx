@@ -244,7 +244,6 @@ const WirelessInternetProvidersUK = () => {
             Check coverage in 60 seconds — no postcode lottery
           </h2>
         </Section>
-        <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
       </div>
 
       {/* STATS */}
@@ -413,6 +412,7 @@ const WirelessInternetProvidersUK = () => {
         </div>
       </Section>
 
+      <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
       {/* FINAL CTA */}
       <Section variant="dark" size="large">
         <div className="max-w-3xl mx-auto text-center">
