@@ -139,7 +139,7 @@ const IntegraSDWAN = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Integra SD-WAN | Bonded 4G/5G Business Broadband"
         description="Integra SD-WAN — bonded 4G/5G broadband for UK businesses. Up to 500Mbps, 99.5% SLA, multi-bearer redundancy. Installed in 10 working days."

@@ -79,7 +79,7 @@ const relatedServices = [
 
 const ConstructionSites = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Construction Site Internet"
         description="Construction site broadband live in 48 hours. Cellular SD-WAN that survives weather, dust, and rough deployment. CCTV-ready static IPs. Monthly contracts."

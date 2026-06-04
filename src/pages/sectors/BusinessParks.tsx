@@ -79,7 +79,7 @@ const relatedServices = [
 
 const BusinessParks = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Business Park Internet"
         description="Business park & multi-tenant broadband. One bonded fibre + cellular network serving all units. SLA-backed uptime, central billing, instant onboarding."

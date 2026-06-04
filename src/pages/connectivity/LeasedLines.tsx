@@ -118,7 +118,7 @@ const leasedLineBreadcrumbSchema = {
 
 const LeasedLines = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Business Leased Lines UK | 100Mbps-10Gbps | Integra"
         description="Business leased lines from 100Mbps to 10Gbps. UK installer, SLA-backed uptime, dedicated symmetric circuits. Get a quote with same-day pricing."

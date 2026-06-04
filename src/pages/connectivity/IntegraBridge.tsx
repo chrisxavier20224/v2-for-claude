@@ -80,7 +80,7 @@ const relatedServices = [
 
 const IntegraBridge = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Integra Bridge | Internet While You Wait for Fibre"
         description="Enterprise SD-WAN in 10 working days. Bonded Starlink + 5G/4G with up to 1Gbps. Works as interim or permanent failover."
