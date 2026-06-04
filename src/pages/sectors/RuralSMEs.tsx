@@ -298,7 +298,7 @@ const RuralSMEs = () => {
         compact
         sourceTag="rural-business-broadband"
         heading="Stop losing money to bad internet."
-        subheading="Up to 500Mbps. 99.5% uptime SLA. Installed in 10 working days. No fibre required."
+        subheading="Up to 500Mbps. 99.5% uptime SLA. Installed in 10 working days. No Fibre required."
       />
     </PageLayout>
   );
