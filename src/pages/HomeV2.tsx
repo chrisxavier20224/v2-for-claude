@@ -104,8 +104,8 @@ const connectivityServices = [
 ];
 
 const sectors = [
-  { title: "Rural SMEs", img: ruralImg, link: "/rural-business-broadband" },
-  { title: "Construction Sites", img: constructionImg, link: "/construction-site-broadband" },
+  { title: "Rural SMEs", img: ruralImg, link: "/sectors/rural-smes" },
+  { title: "Construction Sites", img: constructionImg, link: "/sectors/construction-sites" },
   { title: "Business Parks", img: bpImg, link: "/sectors/business-parks" },
 ];
 
