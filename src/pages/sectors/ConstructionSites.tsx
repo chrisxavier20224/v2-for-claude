@@ -82,7 +82,7 @@ const ConstructionSites = () => {
     <PageLayout>
       <SEO
         title="Construction Site Internet"
-        description="Deployed in days. Monthly agreements, static IP for CCTV, portable kit."
+        description="Construction site broadband live in 48 hours. Cellular SD-WAN that survives weather, dust, and rough deployment. CCTV-ready static IPs. Monthly contracts."
         keywords="construction site internet, construction WiFi, site connectivity, SD-WAN construction, temporary internet, portable broadband, site office internet"
         url="/construction-site-broadband"
       />

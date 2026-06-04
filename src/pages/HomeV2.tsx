@@ -121,7 +121,7 @@ const HomeV2 = () => {
     <>
       <SEO
         title="Business Connectivity & Internet Bridge — Integra Networks"
-        description="B2B internet provider for multi-site businesses. Leased lines, SoGEA, and Integra Bridge — get online in 10 working days while you wait for Fibre. UK engineers. SLA-backed."
+        description="B2B internet provider for multi-site businesses. Leased lines, SoGEA, and Integra Bridge — online in 10 working days while you wait for fibre. UK engineers."
         keywords="business internet, leased lines UK, Integra Bridge, business broadband, multi-site connectivity, SoGEA, SD-WAN"
         url="/home-v2"
       />
