@@ -116,7 +116,6 @@ const ConstructionSites = () => {
         </div>
       </section>
 
-      <AvailabilityCheckerInline compact sourceTag="sector-construction-sites" />
 
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -241,6 +240,7 @@ const ConstructionSites = () => {
         subheading="Explore solutions that enhance site connectivity and security."
       />
 
+      <AvailabilityCheckerInline compact sourceTag="sector-construction-sites" />
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">

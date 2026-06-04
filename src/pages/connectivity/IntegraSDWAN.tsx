@@ -185,7 +185,6 @@ const IntegraSDWAN = () => {
         </div>
       </section>
 
-      <AvailabilityCheckerInline compact sourceTag="integra-sd-wan" />
 
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -409,6 +408,7 @@ const IntegraSDWAN = () => {
         sectors={["rural-smes", "construction-sites", "business-parks"]}
         dark
       />
+      <AvailabilityCheckerInline compact sourceTag="integra-sd-wan" />
     </PageLayout>
   );
 };

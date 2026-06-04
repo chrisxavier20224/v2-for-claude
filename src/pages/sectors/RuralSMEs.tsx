@@ -116,7 +116,6 @@ const RuralSMEs = () => {
         </div>
       </section>
 
-      <AvailabilityCheckerInline compact sourceTag="rural-business-broadband" />
 
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -295,6 +294,7 @@ const RuralSMEs = () => {
         subheading="Explore connectivity solutions and pricing options."
       />
 
+      <AvailabilityCheckerInline compact sourceTag="rural-business-broadband" />
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">

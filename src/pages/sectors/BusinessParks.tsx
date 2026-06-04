@@ -116,7 +116,6 @@ const BusinessParks = () => {
         </div>
       </section>
 
-      <AvailabilityCheckerInline compact sourceTag="sector-business-parks" />
 
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -245,6 +244,7 @@ const BusinessParks = () => {
         subheading="Explore solutions for multi-site deployment and tenant connectivity."
       />
 
+      <AvailabilityCheckerInline compact sourceTag="sector-business-parks" />
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
