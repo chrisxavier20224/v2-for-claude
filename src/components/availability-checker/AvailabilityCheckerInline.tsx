@@ -32,8 +32,6 @@ function loadLeaflet(): Promise<void> {
 }
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import PageLayout from "@/components/layout/PageLayout";
-import SEO from "@/components/shared/SEO";
 import { trackEvent, identifyUser, storeConversionUserData } from "@/components/shared/Analytics";
 import heroBg from "@/assets/sectors/homeworker-remote-work.avif";
 
@@ -140,6 +138,7 @@ async function submitToHubSpot(payload: {
   address: string | null;
   house_building_number?: string;
   urgency?: string;
+  source_tag?: string;
   utm_source?: string;
   utm_medium?: string;
   utm_campaign?: string;
@@ -239,7 +238,9 @@ async function submitToHubSpot(payload: {
           fields,
           context: {
             pageUri: window.location.href,
-            pageName: "Availability Checker",
+            pageName: payload.source_tag
+              ? `Availability Checker - ${payload.source_tag}`
+              : "Availability Checker",
             ...(hutk ? { hutk } : {}),
           },
         }),
