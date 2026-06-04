@@ -116,6 +116,8 @@ const RuralSMEs = () => {
         </div>
       </section>
 
+      <AvailabilityCheckerInline compact sourceTag="rural-business-broadband" />
+
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
