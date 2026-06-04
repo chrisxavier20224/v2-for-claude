@@ -1246,21 +1246,25 @@ const AvailabilityCheckerInline = ({
         </div>
         {compact && (
           <div className="mx-auto max-w-3xl px-4 mt-12">
-            <div className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm px-6 py-6 md:px-8 md:py-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-              <div>
-                <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">
-                  Prefer to chat first?
-                </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
-                  Let's see what we can do for you — talk to a connectivity specialist.
-                </p>
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-8 md:p-10">
+              <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-md bg-white/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-md bg-white/5" />
+              <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div className="max-w-xl">
+                  <h3 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-2">
+                    Prefer to chat first?
+                  </h3>
+                  <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
+                    Let's see what we can do for you — talk to a connectivity specialist.
+                  </p>
+                </div>
+                <Link
+                  to="/contact"
+                  className="shrink-0 inline-flex items-center gap-2 bg-white text-surface-dark font-semibold h-12 px-8 text-base rounded-md hover:bg-white/90 transition-colors shadow-lg"
+                >
+                  Let's talk <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
-              <Link
-                to="/contact"
-                className="shrink-0 inline-flex items-center gap-2 bg-primary text-primary-foreground font-medium h-12 px-8 text-base rounded-md hover:bg-primary/90 transition-colors shadow-lg"
-              >
-                Let's talk <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
           </div>
         )}
