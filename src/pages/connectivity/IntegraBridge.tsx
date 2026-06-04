@@ -120,7 +120,6 @@ const IntegraBridge = () => {
       </section>
 
       {/* THE PROBLEM — LIGHT */}
-      <AvailabilityCheckerInline compact sourceTag="integra-bridge" />
 
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -318,6 +317,7 @@ const IntegraBridge = () => {
         sectors={["construction-sites", "rural-smes"]}
       />
 
+      <AvailabilityCheckerInline compact sourceTag="integra-bridge" />
       {/* CTA — DARK */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">

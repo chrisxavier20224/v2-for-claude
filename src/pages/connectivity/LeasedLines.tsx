@@ -157,7 +157,6 @@ const LeasedLines = () => {
       </section>
 
       {/* PAIN POINTS */}
-      <AvailabilityCheckerInline compact sourceTag="leased-lines" />
 
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -257,6 +256,7 @@ const LeasedLines = () => {
         dark
       />
 
+      <AvailabilityCheckerInline compact sourceTag="leased-lines" />
       {/* CTA */}
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
