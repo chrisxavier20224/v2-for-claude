@@ -6,6 +6,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import RelatedServices from "@/components/shared/RelatedServices";
 import SEO from "@/components/shared/SEO";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import RelatedContent from "@/components/shared/RelatedContent";
 
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
@@ -119,6 +120,8 @@ const IntegraBridge = () => {
       </section>
 
       {/* THE PROBLEM — LIGHT */}
+      <AvailabilityCheckerInline compact sourceTag="integra-bridge" />
+
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
