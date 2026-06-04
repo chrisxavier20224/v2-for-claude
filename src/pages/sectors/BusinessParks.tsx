@@ -244,25 +244,12 @@ const BusinessParks = () => {
         subheading="Explore solutions for multi-site deployment and tenant connectivity."
       />
 
-      <AvailabilityCheckerInline compact sourceTag="sector-business-parks" />
-      {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
-            <h2 className="text-heading-1 md:text-display-sm text-foreground mb-6">Pre-connect your park. Fill units faster.</h2>
-            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">One provider. Every unit. Internet from move-in day.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
-                <Link to="/check">Check Availability</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-border text-foreground hover:bg-muted">
-                <Link to="/contact">Talk to Us</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <AvailabilityCheckerInline
+        compact
+        sourceTag="sector-business-parks"
+        heading="Pre-connect your park. Fill units faster."
+        subheading="One provider. Every unit. Internet from move-in day."
+      />
     </PageLayout>
   );
 };
