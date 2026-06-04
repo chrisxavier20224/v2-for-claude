@@ -89,14 +89,14 @@ const Wholesale = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">The Reframe</p>
               <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6">
-                It's not your whole business. <span className="text-primary">It's the sites Fibre can't reach.</span>
+                It's not your whole business. <span className="text-primary">It's the sites fibre can't reach.</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Most of your portfolio is fine. But across fifty sites there are always a few — the ones where Fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra isn't a change to your business. It's having an answer for those sites, so you never have to say no.
+                Most of your portfolio is fine. But across 50 sites there are always a few — the ones where fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra doesn't change how you run your business. It's having an answer for those sites, so you never have to say no.
               </p>
-              <div className="mt-8 flex items-baseline gap-3">
-                <span className="text-display-md font-normal text-primary tracking-tight">4</span>
-                <span className="text-lg text-muted-foreground">out of every 50 sites</span>
+              <div className="mt-8 flex items-baseline gap-4">
+                <span className="text-display-md font-normal text-primary tracking-tight leading-none">4 / 50</span>
+                <span className="text-lg text-muted-foreground max-w-sm">sites is typically "the tail" — where fibre can't reach, lead times don't work, or the customer needs an emergency solution</span>
               </div>
             </AnimatedSection>
             <AnimatedSection>
