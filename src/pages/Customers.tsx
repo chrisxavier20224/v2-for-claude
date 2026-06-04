@@ -120,8 +120,8 @@ const Customers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Customer Stories — Integra Networks"
-        description="See how businesses across the UK transformed their connectivity with Integra's SD-WAN solutions."
+        title="Business Connectivity Case Studies — Real B2B Customers | Integra"
+        description="Real UK businesses, real results. From rural farms to London construction sites — see how companies got connected in 10 working days with Integra, where fibre hasn't reached."
         keywords="customer stories, case studies, SD-WAN, connectivity, Integra Networks"
         url="/customers"
       />
@@ -163,7 +163,7 @@ const Customers = () => {
                 <div className="p-8 md:p-12 flex flex-col justify-center">
                   <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Customer Story</span>
                   <p className="text-sm font-medium text-primary mb-2">{featured.company}</p>
-                  <h2 className="text-2xl md:text-3xl font-medium text-surface-dark-foreground mb-4 leading-tight">{featured.title}</h2>
+                  <h3 className="text-2xl md:text-3xl font-medium text-surface-dark-foreground mb-4 leading-tight">{featured.title}</h3>
                   <p className="text-surface-dark-muted mb-6">{featured.description}</p>
                   <span className="inline-flex items-center gap-2 text-sm font-semibold text-surface-dark-foreground group-hover:text-primary transition-colors">
                     Read Story <ArrowRight className="h-4 w-4" />
@@ -182,7 +182,7 @@ const Customers = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               {[
                 { value: "99", accent: "%", label: "UK coverage via cellular SD-WAN" },
-                { value: "14", accent: " days", label: "Average install time — not months" },
+                { value: "10", accent: " days", label: "Average install time — not months" },
                 { value: "24", accent: "/7", label: "Proactive monitoring & UK support" },
                 { value: "350", accent: "Mbps", label: "Average speeds on bonded connections" },
               ].map((stat) => (
