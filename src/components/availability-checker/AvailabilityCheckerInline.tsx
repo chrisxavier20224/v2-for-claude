@@ -330,11 +330,15 @@ const TrustBar = () => (
 interface AvailabilityCheckerInlineProps {
   compact?: boolean;
   sourceTag?: string;
+  heading?: string;
+  subheading?: string;
 }
 
 const AvailabilityCheckerInline = ({
   compact = false,
   sourceTag = "check-page",
+  heading,
+  subheading,
 }: AvailabilityCheckerInlineProps) => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
@@ -829,8 +833,8 @@ const AvailabilityCheckerInline = ({
         <div className={compact ? "mx-auto max-w-lg px-4" : "mx-auto max-w-lg px-4 pb-20"}>
           {compact && (
             <div className="text-center mb-10">
-              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">Check coverage in 60 seconds</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">Tell us where you are and we'll see what we can deliver.</p>
+              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">{heading ?? "Check coverage in 60 seconds"}</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">{subheading ?? "Tell us where you are and we'll see what we can deliver."}</p>
             </div>
           )}
           <AnimatePresence mode="wait">

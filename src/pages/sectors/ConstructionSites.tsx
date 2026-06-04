@@ -240,25 +240,12 @@ const ConstructionSites = () => {
         subheading="Explore solutions that enhance site connectivity and security."
       />
 
-      <AvailabilityCheckerInline compact sourceTag="sector-construction-sites" />
-      {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Started</p>
-            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">Get your site online this week.</h2>
-            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">Flexible monthly agreements. Portable kit. Deployed in 10 working days.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
-                <Link to="/check">Check Availability</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Talk to Us</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <AvailabilityCheckerInline
+        compact
+        sourceTag="sector-construction-sites"
+        heading="Get your site online this week."
+        subheading="Flexible monthly agreements. Portable kit. Deployed in 10 working days."
+      />
     </PageLayout>
   );
 };
