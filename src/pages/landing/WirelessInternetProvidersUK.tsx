@@ -13,6 +13,7 @@ import Section from "@/components/shared/Section";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
+import heroImg from "@/assets/sectors/rural-sme-hero.webp";
 
 const stats = [
   { stat: "Up to 500Mbps", desc: "via bonded cellular SD-WAN" },
@@ -204,26 +205,37 @@ const WirelessInternetProvidersUK = () => {
       <SchemaMarkup data={[serviceSchema, breadcrumbSchema, faqSchema]} />
 
       {/* HERO */}
-      <Section variant="dark" size="large">
-        <div className="max-w-4xl">
-          <h1 className="text-heading-1 md:text-display-sm text-white mb-6">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={heroImg}
+            alt="UK business with reliable wireless internet connectivity"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/70 to-surface-dark/40" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 py-24 md:py-32">
+          <div className="max-w-4xl">
+            <h1 className="text-heading-1 md:text-display-sm text-white mb-6">
             Wireless internet providers built for UK businesses.
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-3xl">
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-3xl">
             Most wireless internet providers are aimed at homes, gamers, and renters. We're not.
             Integra is wireless internet for business — bonded 4G/5G connections, 99.5% uptime SLAs,
             dedicated business support. Up to 500Mbps. Installed in 10 working days. No fibre required.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" onClick={scrollToChecker}>
               Check Coverage
             </Button>
             <Button asChild size="lg" variant="outline">
               <Link to="/contact">Talk to Sales</Link>
             </Button>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* CHECKER */}
       <div id="availability-checker">
