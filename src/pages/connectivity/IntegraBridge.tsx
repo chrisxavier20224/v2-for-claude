@@ -82,7 +82,7 @@ const IntegraBridge = () => {
   return (
     <PageLayout>
       <SEO
-        title="Integra Bridge"
+        title="Integra Bridge | Internet While You Wait for Fibre"
         description="Enterprise SD-WAN in 10 working days. Bonded Starlink + 5G/4G with up to 1Gbps. Works as interim or permanent failover."
         keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, Fibre bridge, interim connectivity, ISP and MSP wholesale"
         url="/integra-bridge"

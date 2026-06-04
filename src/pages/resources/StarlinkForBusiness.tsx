@@ -128,7 +128,7 @@ const StarlinkForBusiness = () => {
     <PageLayout>
       <SEO
         title="Starlink for Business"
-        description="Starlink assessment. Latency, weather, uploads, SLA, failover. When satellite works for you."
+        description="Managed Starlink for UK business. Engineer install, dedicated static IPs, 4G/5G failover, SLA-backed support. Live in 10 working days, monthly contracts."
         keywords="Starlink for business, satellite broadband business, Starlink latency, Starlink reliability, Starlink vs cellular, Starlink EPOS, Starlink VoIP"
         url="/starlink-for-business"
       />

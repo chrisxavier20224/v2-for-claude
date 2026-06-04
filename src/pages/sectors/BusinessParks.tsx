@@ -82,7 +82,7 @@ const BusinessParks = () => {
     <PageLayout>
       <SEO
         title="Business Park Internet"
-        description="Fibre, microwave, or SD-WAN for tenant connectivity. Avoid costly Openreach charges."
+        description="Business park & multi-tenant broadband. One bonded fibre + cellular network serving all units. SLA-backed uptime, central billing, instant onboarding."
         keywords="business park internet, business park connectivity, tenant broadband, Fibre business park, SD-WAN, multi-tenant internet, managed connectivity"
         url="/sectors/business-parks"
       />
