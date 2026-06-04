@@ -877,9 +877,11 @@ const AvailabilityCheckerInline = ({
                   </form>
                 </div>
 
-                <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
-                  Check My Availability <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <div className="flex justify-center">
+                  <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} size="lg" className="h-12 px-8 text-base font-medium shadow-lg">
+                    Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
 
               </motion.div>
             )}
