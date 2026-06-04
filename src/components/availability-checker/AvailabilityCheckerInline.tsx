@@ -1235,8 +1235,8 @@ const AvailabilityCheckerInline: React.FC<AvailabilityCheckerInlineProps> = ({
           </AnimatePresence>
         </div>
       </section>
-    </PageLayout>
+    </>
   );
 };
 
-export default CheckAvailability;
+export default AvailabilityCheckerInline;
