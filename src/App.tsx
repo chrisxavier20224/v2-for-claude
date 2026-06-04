@@ -164,6 +164,7 @@ const App = () => (
               <Route path="/lp/homeworker-broadband" element={<Navigate to="/" replace />} />
               <Route path="/lp/rural-broadband" element={<RuralBroadbandLanding />} />
               <Route path="/lp/starlink-sdwan" element={<StarlinkSdwanLanding />} />
+              <Route path="/lp/wireless-internet-providers-uk" element={<WirelessInternetProvidersUKLanding />} />
 
               <Route path="/sectors/homeworkers" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/rural-smes" replace />} />
