@@ -196,7 +196,7 @@ const scrollToChecker = (e: React.MouseEvent) => {
 
 const WirelessInternetProvidersUK = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Wireless Internet Providers UK | Business Broadband | Integra"
         description="Wireless internet providers built for UK businesses. Up to 500Mbps via bonded 4G/5G, no fibre required, live in 10 working days. SLA-backed. Get a quote."

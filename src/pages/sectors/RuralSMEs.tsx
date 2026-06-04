@@ -79,7 +79,7 @@ const relatedServices = [
 
 const RuralSMEs = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Rural SMEs Connectivity — Farms & Rural Businesses | Integra"
         description="Rural SME broadband alternative to fibre. Up to 500Mbps via SD-WAN, live in 10 working days. Built for farms, offices, and rural businesses."
