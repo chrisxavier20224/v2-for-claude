@@ -825,12 +825,12 @@ const AvailabilityCheckerInline = ({
       )}
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className={compact ? "bg-background py-12 md:py-16" : "bg-background relative z-10 -mt-8"}>
+      <section className={compact ? "bg-[hsl(216,100%,97%)] py-16 md:py-24" : "bg-background relative z-10 -mt-8"}>
         <div className={compact ? "mx-auto max-w-lg px-4" : "mx-auto max-w-lg px-4 pb-20"}>
           {compact && (
-            <div className="text-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-2">Check coverage in 60 seconds</h2>
-              <p className="text-sm text-muted-foreground">Tell us where you are and we'll see what we can deliver.</p>
+            <div className="text-center mb-10">
+              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">Check coverage in 60 seconds</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">Tell us where you are and we'll see what we can deliver.</p>
             </div>
           )}
           <AnimatePresence mode="wait">
