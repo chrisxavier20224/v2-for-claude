@@ -120,7 +120,7 @@ const Customers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Business Connectivity Case Studies — Real B2B Customers | Integra"
+        title="Business Connectivity Case Studies — Real B2B Customers | Integra Networks"
         description="Real UK businesses, real results. From rural farms to London construction sites — see how companies got connected in 10 working days with Integra, where fibre hasn't reached."
         keywords="customer stories, case studies, SD-WAN, connectivity, Integra Networks"
         url="/customers"
