@@ -9,6 +9,7 @@ import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 import heroImg from "@/assets/sectors/rural-sme-hero.webp";
 import copperImg from "@/assets/sectors/rural-sme-copper.jpg";
@@ -30,7 +31,7 @@ const painPoints = [
   {
     icon: Clock,
     title: "Waiting Months for a Leased Line?",
-    description: "Ordered Fibre or a leased line and staring down an 10-week install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
+    description: "Ordered Fibre or a leased line and staring down a 10-week install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
   },
 ];
 
@@ -80,8 +81,8 @@ const RuralSMEs = () => {
   return (
     <PageLayout>
       <SEO
-        title="Rural Business Internet"
-        description="Up to 500Mbps via SD-WAN. 10-working-day install, 99.5% uptime SLA. PSTN migration included."
+        title="Rural Business Broadband UK | Live in 10 Days | Integra"
+        description="Rural business broadband alternative to fibre. Up to 500Mbps via SD-WAN, live in 10 working days. 99.5% SLA, PSTN migration handled. Get a quote."
         keywords="rural SME internet, rural business broadband, SD-WAN rural, small business connectivity, PSTN switch off, rural broadband alternative"
         url="/rural-business-broadband"
       />
