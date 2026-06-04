@@ -7,6 +7,7 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
@@ -156,6 +157,8 @@ const LeasedLines = () => {
       </section>
 
       {/* PAIN POINTS */}
+      <AvailabilityCheckerInline compact sourceTag="leased-lines" />
+
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
