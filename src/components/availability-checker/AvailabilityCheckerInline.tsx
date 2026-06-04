@@ -5,6 +5,7 @@ import {
   ArrowRight, ArrowLeft, Building2, Laptop, Home, Check, Search, Loader2,
   Zap, Clock, Shield, Star, Wifi, MapPin, CheckCircle,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 /* ------------------------------------------------------------------ */
 /*  Leaflet types & loader                                             */
@@ -833,6 +834,9 @@ const AvailabilityCheckerInline = ({
         <div className={compact ? "mx-auto max-w-lg px-4" : "mx-auto max-w-lg px-4 pb-20"}>
           {compact && (
             <div className="text-center mb-10">
+              <span className="mb-4 inline-block text-eyebrow uppercase tracking-widest text-primary font-semibold">
+                Availability Checker
+              </span>
               <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">{heading ?? "Check coverage in 60 seconds"}</h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">{subheading ?? "Tell us where you are and we'll see what we can deliver."}</p>
             </div>
