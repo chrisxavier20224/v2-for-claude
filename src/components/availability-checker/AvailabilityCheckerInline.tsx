@@ -1,11 +1,11 @@
 import { useState, useRef, useCallback, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight, ArrowLeft, Building2, Laptop, Home, Check, Search, Loader2,
   Zap, Clock, Shield, Star, Wifi, MapPin, CheckCircle,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+
 
 /* ------------------------------------------------------------------ */
 /*  Leaflet types & loader                                             */
