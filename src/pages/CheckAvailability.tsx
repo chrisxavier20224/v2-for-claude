@@ -314,7 +314,6 @@ const TrustBar = () => (
     {[
       { icon: Zap, text: "Up to 500Mbps" },
       { icon: Clock, text: "Live in 10 working days" },
-      { icon: Shield, text: "14-Day Money Back" },
     ].map((item) => (
       <div key={item.text} className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3">
         <item.icon className="h-4 w-4 text-primary" />
