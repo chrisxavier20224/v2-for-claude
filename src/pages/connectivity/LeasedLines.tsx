@@ -120,8 +120,8 @@ const LeasedLines = () => {
   return (
     <PageLayout>
       <SEO
-        title="Leased Lines"
-        description="Dedicated circuits with symmetric speeds and SLA. Bespoke pricing per site."
+        title="Business Leased Lines UK | 100Mbps-10Gbps | Integra"
+        description="Business leased lines from 100Mbps to 10Gbps. UK installer, SLA-backed uptime, dedicated symmetric circuits. Get a quote with same-day pricing."
         keywords="leased lines, business Fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
         url="/leased-lines"
       />
