@@ -1244,6 +1244,26 @@ const AvailabilityCheckerInline = ({
 
           </AnimatePresence>
         </div>
+        {compact && (
+          <div className="mx-auto max-w-3xl px-4 mt-12">
+            <div className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm px-6 py-6 md:px-8 md:py-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+              <div>
+                <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">
+                  Prefer to chat first?
+                </h3>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  Let's see what we can do for you — talk to a connectivity specialist.
+                </p>
+              </div>
+              <Link
+                to="/contact"
+                className="shrink-0 inline-flex items-center gap-2 bg-primary text-primary-foreground font-medium h-12 px-8 text-base rounded-md hover:bg-primary/90 transition-colors shadow-lg"
+              >
+                Let's talk <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );
