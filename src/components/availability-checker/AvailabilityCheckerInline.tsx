@@ -332,10 +332,10 @@ interface AvailabilityCheckerInlineProps {
   sourceTag?: string;
 }
 
-const AvailabilityCheckerInline: React.FC<AvailabilityCheckerInlineProps> = ({
+const AvailabilityCheckerInline = ({
   compact = false,
   sourceTag = "check-page",
-}) => {
+}: AvailabilityCheckerInlineProps) => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
 
