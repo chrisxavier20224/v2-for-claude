@@ -22,6 +22,7 @@ import {
 
 import alternativesHeroAsset from "@/assets/insights/alternatives-hero.jpg.asset.json";
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
+import starlinkBgAsset from "@/assets/resources/starlink-bg.jpg.asset.json";
 const heroImg = alternativesHeroAsset.url;
 
 const solutions = [
@@ -29,6 +30,7 @@ const solutions = [
     icon: Satellite,
     name: "Starlink (Satellite)",
     tagline: "Fast speeds, but not built for business",
+    bgImage: starlinkBgAsset.url,
     speedDown: "up to 250Mbps",
     speedUp: "10–15Mbps",
     latency: "25–60ms",
