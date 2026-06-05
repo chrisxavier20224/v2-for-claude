@@ -301,7 +301,7 @@ const AlternativesToFibre = () => {
               Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses
             </h1>
             <p className="max-w-2xl text-lg text-white/80 mb-8 font-normal">
-              Fibre's years away? Your business can't wait. This guide compares every real alternative available today — with honest assessments of speed, cost, and reliability. Simple 12-month agreements with shorter terms on request.
+              Fibre's years away? Your business can't wait. This guide compares every real alternative available today — with honest assessments of speed, cost, and reliability.
             </p>
             <Button size="lg" asChild>
               <Link to="/check">Check Your Options</Link>
