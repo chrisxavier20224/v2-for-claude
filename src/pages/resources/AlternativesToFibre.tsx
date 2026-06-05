@@ -7,7 +7,6 @@ import Section from "@/components/shared/Section";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
-import RelatedServices from "@/components/shared/RelatedServices";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import ISPFounderNote from "@/components/insights/ISPFounderNote";
 import { PullQuote } from "@/pages/insights/InsightArticle";
@@ -212,29 +211,6 @@ const faqs = [
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const staggerItem = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] as const } } };
-
-const relatedServices = [
-  {
-    name: "Integra SD-WAN",
-    description: "Business-grade bonded cellular with automatic failover and redundancy.",
-    url: "/integra-sd-wan",
-  },
-  {
-    name: "Starlink Installation",
-    description: "Satellite broadband available across the UK, no waiting for Fibre.",
-    url: "/starlink-installation",
-  },
-  {
-    name: "4G/5G Backup",
-    description: "Reliable secondary connectivity for when primary connections fail.",
-    url: "/cellular-backup",
-  },
-  {
-    name: "Integra Bridge",
-    description: "Connect remote sites with wireless P2P and mesh solutions.",
-    url: "/integra-bridge",
-  },
-];
 
 const AlternativesToFibre = () => {
   const META_DESCRIPTION =
@@ -745,10 +721,6 @@ const AlternativesToFibre = () => {
             </div>
           </div>
         </AnimatedSection>
-      </Section>
-
-      <Section className="bg-secondary">
-        <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
       </Section>
     </PageLayout>
   );
