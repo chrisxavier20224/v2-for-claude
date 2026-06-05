@@ -138,7 +138,7 @@ const Insights = () => {
                   >
                     {/* Thumbnail (16:9) */}
                     {article.heroImage && (
-                      <div className="relative -mx-8 -mt-8 md:-mx-10 md:-mt-10 mb-7 aspect-[16/9] overflow-hidden">
+                      <div className="relative z-10 -mx-8 -mt-8 md:-mx-10 md:-mt-10 mb-7 aspect-[16/9] overflow-hidden">
                         <img
                           src={article.heroImage}
                           alt=""
