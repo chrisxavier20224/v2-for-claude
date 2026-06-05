@@ -271,7 +271,7 @@ const AlternativesToFibre = () => {
   );
 
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Alternatives to Fibre Broadband"
         description={META_DESCRIPTION}
