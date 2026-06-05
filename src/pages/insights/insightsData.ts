@@ -6,6 +6,7 @@ import multisiteHero from "@/assets/insights/multisite-hero.jpg";
 import multisiteOg from "@/assets/insights/multisite-og.jpg";
 import wholesaleHero from "@/assets/insights/wholesale-hero.jpg";
 import wholesaleOg from "@/assets/insights/wholesale-og.jpg";
+import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 
 export interface InsightArticleMeta {
   slug: string;
@@ -21,6 +22,11 @@ export interface InsightArticleMeta {
   heroFigure?: string;
   heroImage?: string;
   ogImage?: string;
+  /**
+   * Override the default `/insights/${slug}` link target. Used for articles
+   * that live in the insights family but at a legacy SEO-preserved URL.
+   */
+  hrefOverride?: string;
   cta?: {
     headline: string;
     body: string;
@@ -57,6 +63,19 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"Anatomy of the connectivity gap\" — a horizontal timeline from \"circuit ordered\" to \"circuit live\", with the four cost components (void rent, lost productivity, project slippage, reputational cost) stacked along the gap period.",
     heroImage: downtimeHero,
     ogImage: downtimeOg,
+  },
+  {
+    slug: "alternatives-to-fibre-broadband",
+    category: "Guide",
+    title: "Alternatives to Fibre Broadband",
+    seoTitle: "Alternatives to Fibre Broadband",
+    excerpt:
+      "Five viable options for UK businesses where fibre hasn't reached — Starlink, 4G/5G, FWA, Leased Line, Hybrid. Honest comparison.",
+    tone: "light",
+    readingTime: "8 min read",
+    heroImage: alternativesOg,
+    ogImage: alternativesOg,
+    hrefOverride: "/alternatives-to-fibre-broadband",
   },
   {
     slug: "how-to-choose-business-broadband",

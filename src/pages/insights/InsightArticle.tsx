@@ -373,7 +373,7 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
               {others.map((other) => (
                 <Link
                   key={other.slug}
-                  to={`/insights/${other.slug}`}
+                  to={other.hrefOverride ?? `/insights/${other.slug}`}
                   className="group block rounded-2xl p-7 border border-border bg-card hover:border-primary/40 transition-colors"
                 >
                   <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">

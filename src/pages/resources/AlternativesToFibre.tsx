@@ -8,6 +8,11 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
+import ISPFounderNote from "@/components/insights/ISPFounderNote";
+import { PullQuote } from "@/pages/insights/InsightArticle";
+import { insightArticles } from "@/pages/insights/insightsData";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +21,7 @@ import {
 } from "@/components/ui/accordion";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
+import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 
 const solutions = [
   {
@@ -222,14 +228,78 @@ const relatedServices = [
 ];
 
 const AlternativesToFibre = () => {
+  const META_DESCRIPTION =
+    "Alternatives to fibre broadband for UK businesses: Starlink, 4G/5G bonding, fixed wireless, leased lines, hybrid. Honest speeds, costs, reliability.";
+  const PAGE_URL = "https://www.integra-networks.co.uk/alternatives-to-fibre-broadband";
+  const OG_IMAGE_URL = `https://www.integra-networks.co.uk${alternativesOg}`;
+
+  const takeaways = [
+    "Fibre is not everywhere — for rural UK businesses, there are five viable alternatives, each with different trade-offs.",
+    "Starlink + cellular hybrid is now the most resilient option for genuinely remote sites — when configured properly.",
+    "Leased lines remain the gold standard where available — but availability is the catch.",
+    "\u201cBest\u201d depends entirely on workload, headcount, and whether downtime costs you money. There is no universal answer.",
+    "Resilience matters more than peak speed for most business workloads.",
+  ];
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses",
+    description: META_DESCRIPTION,
+    author: { "@type": "Person", name: "Chris Xavier" },
+    publisher: {
+      "@type": "Organization",
+      name: "Integra Networks",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.integra-networks.co.uk/og-image.png",
+      },
+    },
+    datePublished: "2025-09-01",
+    dateModified: "2026-06-05",
+    image: OG_IMAGE_URL,
+    mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.integra-networks.co.uk/" },
+      { "@type": "ListItem", position: 2, name: "Insights", item: "https://www.integra-networks.co.uk/insights" },
+      { "@type": "ListItem", position: 3, name: "Alternatives to Fibre Broadband", item: PAGE_URL },
+    ],
+  };
+
+  const continueReading = insightArticles.filter(
+    (a) => a.slug !== "alternatives-to-fibre-broadband",
+  );
+
   return (
     <PageLayout>
       <SEO
         title="Alternatives to Fibre Broadband"
-        description="Compare Starlink, 4G/5G bonding, fixed wireless, leased lines. Honest speeds, costs, reliability."
+        description={META_DESCRIPTION}
         keywords="alternatives to Fibre broadband, rural broadband UK, Starlink vs 4G, SD-WAN, cellular broadband, no Fibre broadband alternatives, business broadband"
         url="/alternatives-to-fibre-broadband"
+        type="article"
+        image={alternativesOg}
+        imageWidth={1200}
+        imageHeight={630}
+        author="Chris Xavier"
+        publishedTime="2025-09-01"
       />
+      <SchemaMarkup data={[articleSchema, faqSchema, breadcrumbSchema]} />
 
       {/* Hero */}
       <section className="relative min-h-[75vh] flex items-end overflow-hidden -mt-20">
@@ -257,6 +327,27 @@ const AlternativesToFibre = () => {
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
+      {/* Key Takeaways */}
+      <Section className="bg-background">
+        <AnimatedSection>
+          <div className="max-w-3xl mx-auto">
+            <div className="pov-takeaways rounded-2xl bg-primary/[0.06] border border-primary/15 p-7 md:p-9">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-5">
+                Key takeaways
+              </p>
+              <ul className="space-y-4">
+                {takeaways.map((t, i) => (
+                  <li key={i} className="flex gap-3 text-foreground/85 leading-relaxed">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </AnimatedSection>
+      </Section>
+
       {/* Why you can't wait */}
       <Section className="bg-background">
         <AnimatedSection>
@@ -279,6 +370,14 @@ const AlternativesToFibre = () => {
                 This guide compares every real alternative available today. No jargon, no sales pitch — just honest assessments to help you choose.
               </p>
             </div>
+            <ISPFounderNote>
+              <p className="mb-3">
+                "Every week we get a call from a business owner who has been told 'fibre is coming.' Sometimes it is — in three years. Sometimes it isn't, but no one will say so out loud. The honest answer for most rural businesses is that the right alternative today will out-perform a fibre promise for tomorrow."
+              </p>
+              <p className="text-sm text-foreground/60">
+                — Chris Xavier, Founder, Integra Networks
+              </p>
+            </ISPFounderNote>
           </div>
         </AnimatedSection>
       </Section>
@@ -431,6 +530,26 @@ const AlternativesToFibre = () => {
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
 
+      {/* Inline availability checker */}
+      <Section className="bg-secondary">
+        <AnimatedSection>
+          <div className="text-center mb-8 max-w-2xl mx-auto">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">
+              Skip the guesswork
+            </p>
+            <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-4">
+              Tell us your postcode — we'll tell you what's available
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              We check fibre, wireless coverage, and satellite line-of-sight in one go. 30 seconds, no commitment.
+            </p>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <AvailabilityCheckerInline sourceTag="alternatives-to-fibre" compact />
+        </AnimatedSection>
+      </Section>
+
       {/* Decision framework */}
       <Section className="bg-secondary">
         <AnimatedSection>
@@ -478,6 +597,10 @@ const AlternativesToFibre = () => {
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
               Resilience matters more than you think
             </h2>
+            <PullQuote>
+              Most rural businesses don't need the fastest broadband.
+              They need the one that doesn't stop working at 3pm on a Thursday.
+            </PullQuote>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
                 Most businesses underestimate resilience until it costs them money. A one-hour outage doesn't cost the same to everyone. For a construction site managing equipment and crews, it's chaos. For a farm with remote CCTV and automated gates, it's vulnerability. For a shop with EPOS, it's lost transactions plus reputation damage.
@@ -541,17 +664,16 @@ const AlternativesToFibre = () => {
         <AnimatedSection>
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
-              Not sure which option is right for you?
+              Not sure which alternative is right for your business?
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Our desktop survey maps your property to nearby towers and identifies exactly what's available at your location. No obligation, no hard sell — just honest advice.
+              Tell us your postcode, your headcount, and what you actually use the connection for. We'll tell you the right option — even if it's not one we sell.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/check">Check Your Availability</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/contact">Talk to Our Team</Link>
+                <Link to="/contact?topic=alternatives-recommendation">
+                  Get a straight recommendation
+                </Link>
               </Button>
             </div>
           </div>
@@ -559,6 +681,39 @@ const AlternativesToFibre = () => {
       </Section>
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
+
+      {/* Continue reading */}
+      <Section className="bg-secondary">
+        <AnimatedSection>
+          <div className="mx-auto max-w-6xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+              More insights
+            </p>
+            <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-10">
+              Continue reading
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {continueReading.map((other) => (
+                <Link
+                  key={other.slug}
+                  to={other.hrefOverride ?? `/insights/${other.slug}`}
+                  className="group block rounded-2xl p-7 border border-border bg-card hover:border-primary/40 transition-colors"
+                >
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+                    {other.category}
+                  </p>
+                  <h3 className="text-xl font-medium text-foreground leading-snug mb-3">
+                    {other.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:gap-3 transition-all">
+                    Read <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+      </Section>
 
       <Section className="bg-secondary">
         <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
