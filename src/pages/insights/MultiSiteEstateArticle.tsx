@@ -115,7 +115,7 @@ const MultiSiteEstateArticle = () => (
       </p>
       <OneView />
       <PartnerTestimonial
-        quote="One of our clients had a handful of sites across their estate where fibre simply couldn't reach — and satellite alone didn't give us the resilience we needed. Integra's SD-WAN delivered a reliable, multi-bearer solution quickly, solved a real problem, and kept the client happy. More than that — it let us close the estate out under one consistent solution, rather than leaving those sites as ongoing escalations."
+        quote="One of our clients had a handful of sites across their estate where fibre simply couldn't reach — and satellite alone didn't give us the resilience we needed. Integra's SD-WAN delivered a reliable, multi-bearer solution quickly and solved a real problem. More importantly, it let us close the deal across the whole estate — rather than walking away from sites we couldn't serve and risking the entire account."
         name="Lewis Ennew"
         title="Senior Account Manager"
         eyebrow="Account Manager"
