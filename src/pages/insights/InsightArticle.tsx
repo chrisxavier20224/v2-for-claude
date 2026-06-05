@@ -123,6 +123,10 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
         title={`${article.seoTitle ?? article.title} — Integra Networks`}
         description={article.excerpt}
         url={`/insights/${article.slug}`}
+        type="article"
+        {...(article.ogImage
+          ? { image: article.ogImage, imageWidth: 1200, imageHeight: 630 }
+          : {})}
       />
 
       {/* Print styles */}
@@ -142,6 +146,27 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
       <article className="insight-article bg-background">
         {/* ============ DOCUMENT-COVER HEADER ============ */}
         <section className="insight-cover relative bg-surface-dark text-white">
+          {/* Hero image background */}
+          {article.heroImage && (
+            <>
+              <img
+                src={article.heroImage}
+                alt=""
+                aria-hidden
+                loading="eager"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/85 to-surface-dark/40 pointer-events-none"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/30 to-transparent pointer-events-none"
+              />
+            </>
+          )}
           {/* subtle grid texture */}
           <div
             aria-hidden
