@@ -387,18 +387,31 @@ const AlternativesToFibre = () => {
       {/* Solutions deep dive */}
       {solutions.map((sol, index) => (
         <div key={sol.name}>
-          <Section className={index % 2 === 0 ? "bg-secondary" : "bg-background"}>
+          <div
+            className={`relative ${sol.bgImage ? "" : index % 2 === 0 ? "bg-secondary" : "bg-background"}`}
+            style={
+              sol.bgImage
+                ? {
+                    backgroundImage: `linear-gradient(hsl(220 60% 6% / 0.82), hsl(220 60% 6% / 0.88)), url(${sol.bgImage})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundAttachment: "fixed",
+                  }
+                : undefined
+            }
+          >
+          <Section className="bg-transparent">
             <AnimatedSection>
               <div className="max-w-5xl mx-auto">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary flex-shrink-0">
+                  <div className={`flex h-14 w-14 items-center justify-center rounded-xl flex-shrink-0 ${sol.bgImage ? "bg-white/10 text-white backdrop-blur" : "bg-primary/10 text-primary"}`}>
                     <sol.icon className="h-7 w-7" />
                   </div>
                   <div>
-                    <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal">
+                    <h2 className={`text-heading-2 md:text-heading-1 font-normal ${sol.bgImage ? "text-white" : "text-foreground"}`}>
                       {sol.name}
                     </h2>
-                    <p className="text-muted-foreground text-lg mt-1">{sol.tagline}</p>
+                    <p className={`text-lg mt-1 ${sol.bgImage ? "text-white/70" : "text-muted-foreground"}`}>{sol.tagline}</p>
                   </div>
                 </div>
 
@@ -474,10 +487,11 @@ const AlternativesToFibre = () => {
               </div>
             </AnimatedSection>
           </Section>
+          </div>
           {index < solutions.length - 1 && (
             <GradientBand
-              fromColor={index % 2 === 0 ? "hsl(210 40% 96%)" : "hsl(0 0% 100%)"}
-              toColor={index % 2 === 0 ? "hsl(0 0% 100%)" : "hsl(210 40% 96%)"}
+              fromColor={sol.bgImage ? "hsl(220 60% 6%)" : index % 2 === 0 ? "hsl(210 40% 96%)" : "hsl(0 0% 100%)"}
+              toColor={solutions[index + 1]?.bgImage ? "hsl(220 60% 6%)" : index % 2 === 0 ? "hsl(0 0% 100%)" : "hsl(210 40% 96%)"}
             />
           )}
         </div>
