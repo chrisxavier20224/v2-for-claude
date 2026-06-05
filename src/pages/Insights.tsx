@@ -73,6 +73,24 @@ const Insights = () => {
               <div className="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-primary/15 blur-3xl" />
               <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-primary/8 blur-3xl" />
 
+              {/* Hero image (right half) */}
+              {featured.heroImage && (
+                <>
+                  <img
+                    src={featured.heroImage}
+                    alt=""
+                    aria-hidden
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-r from-[hsl(222_47%_11%)] via-[hsl(222_47%_11%)]/85 to-[hsl(222_47%_11%)]/30"
+                  />
+                </>
+              )}
+
               {/* Oversized decorative category label on the right */}
               <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-1/2 hidden lg:flex items-center justify-center overflow-hidden">
                 <span
@@ -118,6 +136,28 @@ const Insights = () => {
                         : "border-border hover:border-primary/30 hover:shadow-primary/5"
                     }`}
                   >
+                    {/* Thumbnail (16:9) */}
+                    {article.heroImage && (
+                      <div className="relative -mx-8 -mt-8 md:-mx-10 md:-mt-10 mb-7 aspect-[16/9] overflow-hidden">
+                        <img
+                          src={article.heroImage}
+                          alt=""
+                          aria-hidden
+                          loading="lazy"
+                          decoding="async"
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div
+                          aria-hidden
+                          className={`absolute inset-0 ${
+                            isDark
+                              ? "bg-gradient-to-t from-[hsl(222_47%_11%)] via-[hsl(222_47%_11%)]/40 to-transparent"
+                              : "bg-gradient-to-t from-card via-card/20 to-transparent"
+                          }`}
+                        />
+                      </div>
+                    )}
+
                     {/* Card background with motif */}
                     {isDark ? (
                       <>

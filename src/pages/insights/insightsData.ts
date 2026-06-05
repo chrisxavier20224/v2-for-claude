@@ -1,3 +1,12 @@
+import downtimeHero from "@/assets/insights/downtime-hero.jpg";
+import downtimeOg from "@/assets/insights/downtime-og.jpg";
+import chooseHero from "@/assets/insights/choose-hero.jpg";
+import chooseOg from "@/assets/insights/choose-og.jpg";
+import multisiteHero from "@/assets/insights/multisite-hero.jpg";
+import multisiteOg from "@/assets/insights/multisite-og.jpg";
+import wholesaleHero from "@/assets/insights/wholesale-hero.jpg";
+import wholesaleOg from "@/assets/insights/wholesale-og.jpg";
+
 export interface InsightArticleMeta {
   slug: string;
   category: string;
@@ -10,6 +19,8 @@ export interface InsightArticleMeta {
   whatsInside?: string[];
   takeaways?: string[];
   heroFigure?: string;
+  heroImage?: string;
+  ogImage?: string;
   cta?: {
     headline: string;
     body: string;
@@ -44,6 +55,8 @@ export const insightArticles: InsightArticleMeta[] = [
     ],
     heroFigure:
       "\"Anatomy of the connectivity gap\" — a horizontal timeline from \"circuit ordered\" to \"circuit live\", with the four cost components (void rent, lost productivity, project slippage, reputational cost) stacked along the gap period.",
+    heroImage: downtimeHero,
+    ogImage: downtimeOg,
   },
   {
     slug: "how-to-choose-business-broadband",
@@ -69,6 +82,8 @@ export const insightArticles: InsightArticleMeta[] = [
     ],
     heroFigure:
       "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, Fibre availability, permanence, workload, resilience need) to recommended option(s).",
+    heroImage: chooseHero,
+    ogImage: chooseOg,
   },
   {
     slug: "multi-site-business-connectivity",
@@ -99,6 +114,8 @@ export const insightArticles: InsightArticleMeta[] = [
       buttonHref: "/contact",
       contactLine: "connect@integra-networks.co.uk  |  0203 388 7111  |  integra-networks.co.uk",
     },
+    heroImage: multisiteHero,
+    ogImage: multisiteOg,
   },
   {
     slug: "multi-bearer-internet-failover",
@@ -154,6 +171,8 @@ export const insightArticles: InsightArticleMeta[] = [
       buttonHref: "/wholesale",
       contactLine: "connect@integra-networks.co.uk  |  0203 388 7111  |  integra-networks.co.uk/wholesale",
     },
+    heroImage: wholesaleHero,
+    ogImage: wholesaleOg,
   },
 ];
 
