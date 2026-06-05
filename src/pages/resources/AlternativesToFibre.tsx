@@ -228,14 +228,78 @@ const relatedServices = [
 ];
 
 const AlternativesToFibre = () => {
+  const META_DESCRIPTION =
+    "Alternatives to fibre broadband for UK businesses: Starlink, 4G/5G bonding, fixed wireless, leased lines, hybrid. Honest speeds, costs, reliability.";
+  const PAGE_URL = "https://www.integra-networks.co.uk/alternatives-to-fibre-broadband";
+  const OG_IMAGE_URL = `https://www.integra-networks.co.uk${alternativesOg}`;
+
+  const takeaways = [
+    "Fibre is not everywhere — for rural UK businesses, there are five viable alternatives, each with different trade-offs.",
+    "Starlink + cellular hybrid is now the most resilient option for genuinely remote sites — when configured properly.",
+    "Leased lines remain the gold standard where available — but availability is the catch.",
+    "\u201cBest\u201d depends entirely on workload, headcount, and whether downtime costs you money. There is no universal answer.",
+    "Resilience matters more than peak speed for most business workloads.",
+  ];
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses",
+    description: META_DESCRIPTION,
+    author: { "@type": "Person", name: "Chris Xavier" },
+    publisher: {
+      "@type": "Organization",
+      name: "Integra Networks",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.integra-networks.co.uk/og-image.png",
+      },
+    },
+    datePublished: "2025-09-01",
+    dateModified: "2026-06-05",
+    image: OG_IMAGE_URL,
+    mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.integra-networks.co.uk/" },
+      { "@type": "ListItem", position: 2, name: "Insights", item: "https://www.integra-networks.co.uk/insights" },
+      { "@type": "ListItem", position: 3, name: "Alternatives to Fibre Broadband", item: PAGE_URL },
+    ],
+  };
+
+  const continueReading = insightArticles.filter(
+    (a) => a.slug !== "alternatives-to-fibre-broadband",
+  );
+
   return (
     <PageLayout>
       <SEO
         title="Alternatives to Fibre Broadband"
-        description="Compare Starlink, 4G/5G bonding, fixed wireless, leased lines. Honest speeds, costs, reliability."
+        description={META_DESCRIPTION}
         keywords="alternatives to Fibre broadband, rural broadband UK, Starlink vs 4G, SD-WAN, cellular broadband, no Fibre broadband alternatives, business broadband"
         url="/alternatives-to-fibre-broadband"
+        type="article"
+        image={alternativesOg}
+        imageWidth={1200}
+        imageHeight={630}
+        author="Chris Xavier"
+        publishedTime="2025-09-01"
       />
+      <SchemaMarkup data={[articleSchema, faqSchema, breadcrumbSchema]} />
 
       {/* Hero */}
       <section className="relative min-h-[75vh] flex items-end overflow-hidden -mt-20">
