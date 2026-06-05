@@ -1,6 +1,6 @@
 import downtimeHeroAsset from "@/assets/insights/downtime-hero.jpg.asset.json";
 import downtimeOg from "@/assets/insights/downtime-og.jpg";
-import chooseHero from "@/assets/insights/choose-hero.jpg";
+import chooseHeroAsset from "@/assets/insights/choose-hero.jpg.asset.json";
 import chooseOg from "@/assets/insights/choose-og.jpg";
 import multisiteHeroAsset from "@/assets/insights/multisite-hero.jpg.asset.json";
 import multisiteOg from "@/assets/insights/multisite-og.jpg";
@@ -14,6 +14,7 @@ const multibearerHero = multibearerHeroAsset.url;
 const multisiteHero = multisiteHeroAsset.url;
 const alternativesHero = alternativesHeroAsset.url;
 const downtimeHero = downtimeHeroAsset.url;
+const chooseHero = chooseHeroAsset.url;
 
 export interface InsightArticleMeta {
   slug: string;
