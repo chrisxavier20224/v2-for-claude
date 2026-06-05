@@ -7,6 +7,9 @@ import multisiteOg from "@/assets/insights/multisite-og.jpg";
 import wholesaleHero from "@/assets/insights/wholesale-hero.jpg";
 import wholesaleOg from "@/assets/insights/wholesale-og.jpg";
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
+import multibearerHeroAsset from "@/assets/insights/multibearer-hero.jpg.asset.json";
+
+const multibearerHero = multibearerHeroAsset.url;
 
 export interface InsightArticleMeta {
   slug: string;
@@ -160,6 +163,8 @@ export const insightArticles: InsightArticleMeta[] = [
     ],
     heroFigure:
       "\"How a bonded multi-bearer connection works\" — a topology diagram: customer firewall → SD-WAN router → multiple 4G/5G carriers → cloud bonding server → internet via static IP.",
+    heroImage: multibearerHero,
+    ogImage: multibearerHero,
   },
   {
     slug: "wholesale-isp-partner-program",
