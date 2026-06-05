@@ -118,7 +118,7 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
   const takeaways = article.takeaways ?? [];
 
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title={`${article.seoTitle ?? article.title} — Integra Networks`}
         description={article.excerpt}
