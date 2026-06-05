@@ -8,9 +8,11 @@ import wholesaleHero from "@/assets/insights/wholesale-hero.jpg";
 import wholesaleOg from "@/assets/insights/wholesale-og.jpg";
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 import multibearerHeroAsset from "@/assets/insights/multibearer-hero.jpg.asset.json";
+import alternativesHeroAsset from "@/assets/insights/alternatives-hero.jpg.asset.json";
 
 const multibearerHero = multibearerHeroAsset.url;
 const multisiteHero = multisiteHeroAsset.url;
+const alternativesHero = alternativesHeroAsset.url;
 
 export interface InsightArticleMeta {
   slug: string;
@@ -77,7 +79,7 @@ export const insightArticles: InsightArticleMeta[] = [
       "Five viable options for UK businesses where fibre hasn't reached — Starlink, 4G/5G, FWA, Leased Line, Hybrid. Honest comparison.",
     tone: "light",
     readingTime: "8 min read",
-    heroImage: alternativesOg,
+    heroImage: alternativesHero,
     ogImage: alternativesOg,
     hrefOverride: "/alternatives-to-fibre-broadband",
   },
