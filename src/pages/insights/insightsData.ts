@@ -2,7 +2,7 @@ import downtimeHero from "@/assets/insights/downtime-hero.jpg";
 import downtimeOg from "@/assets/insights/downtime-og.jpg";
 import chooseHero from "@/assets/insights/choose-hero.jpg";
 import chooseOg from "@/assets/insights/choose-og.jpg";
-import multisiteHero from "@/assets/insights/multisite-hero.jpg";
+import multisiteHeroAsset from "@/assets/insights/multisite-hero.jpg.asset.json";
 import multisiteOg from "@/assets/insights/multisite-og.jpg";
 import wholesaleHero from "@/assets/insights/wholesale-hero.jpg";
 import wholesaleOg from "@/assets/insights/wholesale-og.jpg";
@@ -10,6 +10,7 @@ import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 import multibearerHeroAsset from "@/assets/insights/multibearer-hero.jpg.asset.json";
 
 const multibearerHero = multibearerHeroAsset.url;
+const multisiteHero = multisiteHeroAsset.url;
 
 export interface InsightArticleMeta {
   slug: string;
