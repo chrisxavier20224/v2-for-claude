@@ -310,18 +310,25 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
                 Talk to us
               </p>
               <h2 className="text-3xl md:text-4xl font-medium text-white mb-5 leading-tight">
-                Got a site that Fibre can't reach?
+                {article.cta?.headline ?? "Got a site that Fibre can't reach?"}
               </h2>
               <p className="text-lg text-white/70 mb-10 leading-relaxed">
-                We've spent a decade getting the awkward sites online. Tell us about yours.
+                {article.cta?.body ?? "We've spent a decade getting the awkward sites online. Tell us about yours."}
               </p>
               <Button
                 asChild
                 size="lg"
                 className="bg-primary text-white hover:bg-primary/90"
               >
-                <Link to="/contact">Talk to us</Link>
+                <Link to={article.cta?.buttonHref ?? "/contact"}>
+                  {article.cta?.buttonLabel ?? "Talk to us"}
+                </Link>
               </Button>
+              {article.cta?.contactLine && (
+                <p className="mt-8 text-sm text-white/55 tracking-wide">
+                  {article.cta.contactLine}
+                </p>
+              )}
             </AnimatedSection>
           </div>
         </section>
