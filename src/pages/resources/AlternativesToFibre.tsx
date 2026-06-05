@@ -550,8 +550,6 @@ const AlternativesToFibre = () => {
         </AnimatedSection>
       </Section>
 
-      <GradientBand fromColor="hsl(210 40% 96%)" toColor="hsl(0 0% 100%)" />
-
       {/* Decision framework */}
       <Section className="bg-secondary">
         <AnimatedSection>
@@ -599,6 +597,10 @@ const AlternativesToFibre = () => {
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
               Resilience matters more than you think
             </h2>
+            <PullQuote>
+              Most rural businesses don't need the fastest broadband.
+              They need the one that doesn't stop working at 3pm on a Thursday.
+            </PullQuote>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
                 Most businesses underestimate resilience until it costs them money. A one-hour outage doesn't cost the same to everyone. For a construction site managing equipment and crews, it's chaos. For a farm with remote CCTV and automated gates, it's vulnerability. For a shop with EPOS, it's lost transactions plus reputation damage.
@@ -662,17 +664,16 @@ const AlternativesToFibre = () => {
         <AnimatedSection>
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
-              Not sure which option is right for you?
+              Not sure which alternative is right for your business?
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Our desktop survey maps your property to nearby towers and identifies exactly what's available at your location. No obligation, no hard sell — just honest advice.
+              Tell us your postcode, your headcount, and what you actually use the connection for. We'll tell you the right option — even if it's not one we sell.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="/check">Check Your Availability</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/contact">Talk to Our Team</Link>
+                <Link to="/contact?topic=alternatives-recommendation">
+                  Get a straight recommendation
+                </Link>
               </Button>
             </div>
           </div>
@@ -680,6 +681,41 @@ const AlternativesToFibre = () => {
       </Section>
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
+
+      {/* Continue reading */}
+      <Section className="bg-secondary">
+        <AnimatedSection>
+          <div className="mx-auto max-w-6xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+              More insights
+            </p>
+            <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-10">
+              Continue reading
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {continueReading.map((other) => (
+                <Link
+                  key={other.slug}
+                  to={other.hrefOverride ?? `/insights/${other.slug}`}
+                  className="group block rounded-2xl p-7 border border-border bg-card hover:border-primary/40 transition-colors"
+                >
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+                    {other.category}
+                  </p>
+                  <h3 className="text-xl font-medium text-foreground leading-snug mb-3">
+                    {other.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:gap-3 transition-all">
+                    Read <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      <GradientBand fromColor="hsl(210 40% 96%)" toColor="hsl(210 40% 96%)" />
 
       <Section className="bg-secondary">
         <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
