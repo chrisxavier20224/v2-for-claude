@@ -374,17 +374,29 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
                 <Link
                   key={other.slug}
                   to={other.hrefOverride ?? `/insights/${other.slug}`}
-                  className="group block rounded-2xl p-7 border border-border bg-card hover:border-primary/40 transition-colors"
+                  className="group block overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all"
                 >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
-                    {other.category}
-                  </p>
-                  <h3 className="text-xl font-medium text-foreground leading-snug mb-3">
-                    {other.title}
-                  </h3>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:gap-3 transition-all">
-                    Read <ArrowRight className="h-3.5 w-3.5" />
-                  </span>
+                  {other.heroImage && (
+                    <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+                      <img
+                        src={other.heroImage}
+                        alt={other.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+                  <div className="p-7">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+                      {other.category}
+                    </p>
+                    <h3 className="text-xl font-medium text-foreground leading-snug mb-3">
+                      {other.title}
+                    </h3>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:gap-3 transition-all">
+                      Read <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>
