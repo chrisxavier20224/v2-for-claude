@@ -530,6 +530,28 @@ const AlternativesToFibre = () => {
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(210 40% 96%)" />
 
+      {/* Inline availability checker */}
+      <Section className="bg-secondary">
+        <AnimatedSection>
+          <div className="text-center mb-8 max-w-2xl mx-auto">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">
+              Skip the guesswork
+            </p>
+            <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-4">
+              Tell us your postcode — we'll tell you what's available
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              We check fibre, wireless coverage, and satellite line-of-sight in one go. 30 seconds, no commitment.
+            </p>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <AvailabilityCheckerInline sourceTag="alternatives-to-fibre" compact />
+        </AnimatedSection>
+      </Section>
+
+      <GradientBand fromColor="hsl(210 40% 96%)" toColor="hsl(0 0% 100%)" />
+
       {/* Decision framework */}
       <Section className="bg-secondary">
         <AnimatedSection>
