@@ -4,7 +4,7 @@ import chooseHeroAsset from "@/assets/insights/choose-hero.jpg.asset.json";
 import chooseOg from "@/assets/insights/choose-og.jpg";
 import multisiteHeroAsset from "@/assets/insights/multisite-hero.jpg.asset.json";
 import multisiteOg from "@/assets/insights/multisite-og.jpg";
-import wholesaleHero from "@/assets/insights/wholesale-hero.jpg";
+import wholesaleHero from "@/assets/wholesale/sales-team-bg.png";
 import wholesaleOg from "@/assets/insights/wholesale-og.jpg";
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 import multibearerHeroAsset from "@/assets/insights/multibearer-hero.jpg.asset.json";
