@@ -129,7 +129,7 @@ const Insights = () => {
               return (
                 <AnimatedSection key={article.slug} delay={0.05 * i}>
                   <Link
-                    to={`/insights/${article.slug}`}
+                    to={article.hrefOverride ?? `/insights/${article.slug}`}
                     className={`group block h-full rounded-2xl p-8 md:p-10 border relative overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${
                       isDark
                         ? "border-white/10 hover:border-primary/30 hover:shadow-primary/10"

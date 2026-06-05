@@ -65,6 +65,19 @@ export const insightArticles: InsightArticleMeta[] = [
     ogImage: downtimeOg,
   },
   {
+    slug: "alternatives-to-fibre-broadband",
+    category: "Guide",
+    title: "Alternatives to Fibre Broadband",
+    seoTitle: "Alternatives to Fibre Broadband",
+    excerpt:
+      "Five viable options for UK businesses where fibre hasn't reached — Starlink, 4G/5G, FWA, Leased Line, Hybrid. Honest comparison.",
+    tone: "light",
+    readingTime: "8 min read",
+    heroImage: alternativesOg,
+    ogImage: alternativesOg,
+    hrefOverride: "/alternatives-to-fibre-broadband",
+  },
+  {
     slug: "how-to-choose-business-broadband",
     category: "Decision Guide",
     title: "How to Choose Business Broadband: Leased Line vs SD-WAN vs Bridge",
