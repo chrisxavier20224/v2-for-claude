@@ -698,23 +698,23 @@ const AlternativesToFibre = () => {
                 <Link
                   key={other.slug}
                   to={other.hrefOverride ?? `/insights/${other.slug}`}
-                  className="group block overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all"
+                  className="group flex items-stretch overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all"
                 >
                   {other.heroImage && (
-                    <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+                    <div className="relative w-32 sm:w-40 shrink-0 overflow-hidden bg-muted">
                       <img
                         src={other.heroImage}
                         alt={other.title}
                         loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
                   )}
-                  <div className="p-7">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+                  <div className="p-5 sm:p-6 flex-1 min-w-0">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-2">
                       {other.category}
                     </p>
-                    <h3 className="text-xl font-medium text-foreground leading-snug mb-3">
+                    <h3 className="text-base sm:text-lg font-medium text-foreground leading-snug mb-2">
                       {other.title}
                     </h3>
                     <span className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:gap-3 transition-all">
