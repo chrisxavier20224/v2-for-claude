@@ -129,8 +129,9 @@ export const insightArticles: InsightArticleMeta[] = [
     slug: "wholesale-isp-partner-program",
     category: "Perspective",
     title: "The Wholesale ISP Partner Program",
+    seoTitle: "The Wholesale ISP Partner Program",
     excerpt:
-      "Why alt-nets join a wholesale ISP partner program instead of building — the commercial case for the sites Fibre can't reach.",
+      "Why alt-nets and MSPs partner with Integra instead of building — the commercial case for the sites fibre cannot reach.",
     tone: "dark",
     readingTime: "6 min read",
     whatsInside: [
@@ -141,13 +142,18 @@ export const insightArticles: InsightArticleMeta[] = [
       "The commercial case",
     ],
     takeaways: [
-      "Every alt-net has the same quiet problem: a tail of sites its network can't economically reach.",
+      "Every alt-net has the same quiet problem: a tail of sites its network cannot economically reach.",
       "It might be four sites in fifty — but those four are where deals are lost, accounts churn, and the brand takes the hit.",
-      "Building for the tail rarely makes economic sense; the capex lands against the lowest-volume part of the estate.",
-      "Partnering closes the gap with no capex and no change to the core business — delivered under the alt-net's own brand.",
+      "Even when you refer the tail to a third-party ISP, that ISP faces the same economics. The site is hard to reach for a reason.",
+      "Partnering can close the gap with no capex, no change to the core business — delivered under your own brand.",
     ],
-    heroFigure:
-      "\"Four out of fifty\" — a simple visual: fifty site markers, forty-six served, four flagged as the tail — the four labelled as where deals are won or lost.",
+    cta: {
+      headline: "Got sites your network cannot reach?",
+      body: "We have spent a decade getting the awkward sites online. Tell us how we can help you close the gap.",
+      buttonLabel: "Talk to our partner team",
+      buttonHref: "/wholesale",
+      contactLine: "connect@integra-networks.co.uk  |  0203 388 7111  |  integra-networks.co.uk/wholesale",
+    },
   },
 ];
 
