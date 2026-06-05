@@ -21,8 +21,8 @@ const FourOutOfFifty = () => (
               className={
                 "h-3 w-3 md:h-3.5 md:w-3.5 rounded-full " +
                 (highlighted
-                  ? "bg-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.15)]"
-                  : "bg-foreground/15")
+                  ? "bg-rose-500 shadow-[0_0_0_4px_hsl(0_84%_60%/0.15)]"
+                  : "bg-emerald-500/70")
               }
             />
           );
