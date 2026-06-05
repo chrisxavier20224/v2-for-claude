@@ -715,8 +715,6 @@ const AlternativesToFibre = () => {
         </AnimatedSection>
       </Section>
 
-      <GradientBand fromColor="hsl(210 40% 96%)" toColor="hsl(210 40% 96%)" />
-
       <Section className="bg-secondary">
         <RelatedServices services={relatedServices} heading="Related Solutions" subheading="Find the right connectivity for your business." />
       </Section>
