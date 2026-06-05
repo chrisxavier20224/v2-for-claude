@@ -25,6 +25,7 @@ import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 import starlinkBgAsset from "@/assets/resources/starlink-bg.jpg.asset.json";
 import cellularBgAsset from "@/assets/resources/cellular-bg.jpg.asset.json";
 import leasedlineBgAsset from "@/assets/resources/leasedline-bg.jpg.asset.json";
+import hybridBgAsset from "@/assets/resources/hybrid-bg.jpg.asset.json";
 const heroImg = alternativesHeroAsset.url;
 
 const solutions = [
@@ -141,6 +142,7 @@ const solutions = [
     icon: Zap,
     name: "Starlink + Cellular SD-WAN (Hybrid)",
     tagline: "Best of both worlds. Two independent paths.",
+    bgImage: hybridBgAsset.url,
     speedDown: "150–350Mbps",
     speedUp: "80–120Mbps",
     latency: "20–30ms",
