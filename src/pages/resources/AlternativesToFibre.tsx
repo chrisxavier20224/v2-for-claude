@@ -375,9 +375,6 @@ const AlternativesToFibre = () => {
               <p className="mb-3">
                 "Every week we get a call from a business owner who has been told 'fibre is coming.' Sometimes it is — in three years. Sometimes it isn't, but no one will say so out loud. The honest answer for most rural businesses is that the right alternative today will out-perform a fibre promise for tomorrow."
               </p>
-              <p className="text-sm text-foreground/60">
-                — Chris Xavier, Founder, Integra Networks
-              </p>
             </ISPFounderNote>
           </div>
         </AnimatedSection>
