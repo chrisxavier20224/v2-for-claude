@@ -327,6 +327,27 @@ const AlternativesToFibre = () => {
 
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
+      {/* Key Takeaways */}
+      <Section className="bg-background">
+        <AnimatedSection>
+          <div className="max-w-3xl mx-auto">
+            <div className="pov-takeaways rounded-2xl bg-primary/[0.06] border border-primary/15 p-7 md:p-9">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-5">
+                Key takeaways
+              </p>
+              <ul className="space-y-4">
+                {takeaways.map((t, i) => (
+                  <li key={i} className="flex gap-3 text-foreground/85 leading-relaxed">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </AnimatedSection>
+      </Section>
+
       {/* Why you can't wait */}
       <Section className="bg-background">
         <AnimatedSection>
@@ -349,6 +370,14 @@ const AlternativesToFibre = () => {
                 This guide compares every real alternative available today. No jargon, no sales pitch — just honest assessments to help you choose.
               </p>
             </div>
+            <ISPFounderNote>
+              <p className="mb-3">
+                "Every week we get a call from a business owner who has been told 'fibre is coming.' Sometimes it is — in three years. Sometimes it isn't, but no one will say so out loud. The honest answer for most rural businesses is that the right alternative today will out-perform a fibre promise for tomorrow."
+              </p>
+              <p className="text-sm text-foreground/60">
+                — Chris Xavier, Founder, Integra Networks
+              </p>
+            </ISPFounderNote>
           </div>
         </AnimatedSection>
       </Section>
