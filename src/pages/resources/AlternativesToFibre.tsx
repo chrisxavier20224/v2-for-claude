@@ -24,6 +24,7 @@ import alternativesHeroAsset from "@/assets/insights/alternatives-hero.jpg.asset
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 import starlinkBgAsset from "@/assets/resources/starlink-bg.jpg.asset.json";
 import cellularBgAsset from "@/assets/resources/cellular-bg.jpg.asset.json";
+import leasedlineBgAsset from "@/assets/resources/leasedline-bg.jpg.asset.json";
 const heroImg = alternativesHeroAsset.url;
 
 const solutions = [
@@ -112,6 +113,7 @@ const solutions = [
   {
     icon: Cable,
     name: "Leased Line (Dedicated Fibre)",
+    bgImage: leasedlineBgAsset.url,
     tagline: "The gold standard — if you can afford the install",
     speedDown: "10Mbps–1Gbps symmetric",
     speedUp: "Same as download",
