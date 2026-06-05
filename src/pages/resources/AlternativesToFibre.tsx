@@ -20,8 +20,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
+import alternativesHeroAsset from "@/assets/insights/alternatives-hero.jpg.asset.json";
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
+const heroImg = alternativesHeroAsset.url;
 
 const solutions = [
   {
