@@ -8,6 +8,11 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import RelatedServices from "@/components/shared/RelatedServices";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
+import ISPFounderNote from "@/components/insights/ISPFounderNote";
+import { PullQuote } from "@/pages/insights/InsightArticle";
+import { insightArticles } from "@/pages/insights/insightsData";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +21,7 @@ import {
 } from "@/components/ui/accordion";
 
 import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
+import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 
 const solutions = [
   {
