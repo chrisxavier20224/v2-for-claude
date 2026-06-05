@@ -85,8 +85,7 @@ const WholesaleConnectivityModelArticle = () => (
       <BuildPartnerSayNoTable />
       <p className="text-sm md:text-base text-foreground/70 italic">
         Integra delivers using your IP range, integrating natively within
-        your wider customer solution. Typical speeds achieved are greater
-        than 500Mbps.
+        your wider customer solution.
       </p>
     </NumberedSection>
 
