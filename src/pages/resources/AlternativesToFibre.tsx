@@ -23,6 +23,7 @@ import {
 import alternativesHeroAsset from "@/assets/insights/alternatives-hero.jpg.asset.json";
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 import starlinkBgAsset from "@/assets/resources/starlink-bg.jpg.asset.json";
+import cellularBgAsset from "@/assets/resources/cellular-bg.jpg.asset.json";
 const heroImg = alternativesHeroAsset.url;
 
 const solutions = [
@@ -58,6 +59,7 @@ const solutions = [
     icon: Signal,
     name: "4G/5G Bonding (Cellular SD-WAN)",
     tagline: "Business-grade. Multi-network. Automatic failover.",
+    bgImage: cellularBgAsset.url,
     speedDown: "Up to 350Mbps",
     speedUp: "80–120Mbps",
     latency: "20–30ms",
