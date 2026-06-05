@@ -475,13 +475,13 @@ const AlternativesToFibre = () => {
 
                 {/* Who for / not for */}
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="rounded-2xl border border-green-200 bg-green-50/50 dark:border-green-900/30 dark:bg-green-950/20 p-6">
-                    <h3 className="text-base font-medium text-foreground mb-2">Who's it for?</h3>
-                    <p className="text-muted-foreground leading-relaxed">{sol.whoFor}</p>
+                  <div className={`rounded-2xl border p-6 ${sol.bgImage ? "border-green-400/30 bg-green-500/10 backdrop-blur-sm" : "border-green-200 bg-green-50/50 dark:border-green-900/30 dark:bg-green-950/20"}`}>
+                    <h3 className={`text-base font-medium mb-2 ${sol.bgImage ? "text-white" : "text-foreground"}`}>Who's it for?</h3>
+                    <p className={`leading-relaxed ${sol.bgImage ? "text-white/80" : "text-muted-foreground"}`}>{sol.whoFor}</p>
                   </div>
-                  <div className="rounded-2xl border border-red-200 bg-red-50/50 dark:border-red-900/30 dark:bg-red-950/20 p-6">
-                    <h3 className="text-base font-medium text-foreground mb-2">Who's it not for?</h3>
-                    <p className="text-muted-foreground leading-relaxed">{sol.whoNotFor}</p>
+                  <div className={`rounded-2xl border p-6 ${sol.bgImage ? "border-red-400/30 bg-red-500/10 backdrop-blur-sm" : "border-red-200 bg-red-50/50 dark:border-red-900/30 dark:bg-red-950/20"}`}>
+                    <h3 className={`text-base font-medium mb-2 ${sol.bgImage ? "text-white" : "text-foreground"}`}>Who's it not for?</h3>
+                    <p className={`leading-relaxed ${sol.bgImage ? "text-white/80" : "text-muted-foreground"}`}>{sol.whoNotFor}</p>
                   </div>
                 </div>
               </div>
