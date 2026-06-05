@@ -10,6 +10,13 @@ export interface InsightArticleMeta {
   whatsInside?: string[];
   takeaways?: string[];
   heroFigure?: string;
+  cta?: {
+    headline: string;
+    body: string;
+    buttonLabel: string;
+    buttonHref: string;
+    contactLine?: string;
+  };
 }
 
 export const insightArticles: InsightArticleMeta[] = [
