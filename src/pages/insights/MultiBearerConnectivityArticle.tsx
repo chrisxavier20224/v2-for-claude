@@ -121,7 +121,7 @@ const MultiBearerConnectivityArticle = () => (
       <p>
         Six questions will tell you most of what you need to know:
       </p>
-      <ul>
+      <ul className="list-disc pl-6">
         <li>Do you survey the site and test carriers <em>before</em> quoting?</li>
         <li>Are the antennas external and carrier-specific?</li>
         <li>Is it load balanced or bonded — and which fits my workload?</li>
