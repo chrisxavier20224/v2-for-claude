@@ -4,6 +4,7 @@ import InsightArticle, {
   DataCallout,
   FounderInput,
 } from "./InsightArticle";
+import { NetworkArchitectureSection } from "@/components/topology/NetworkArchitectureSection";
 
 const MultiBearerConnectivityArticle = () => (
   <InsightArticle slug="multi-bearer-internet-failover">
@@ -26,6 +27,12 @@ const MultiBearerConnectivityArticle = () => (
         Both approaches combine multiple carriers. The difference is{" "}
         <em>how</em> — and it's not a detail.
       </p>
+      <NetworkArchitectureSection
+        carriers={3}
+        productName="Integra Ultrafast"
+        bondedThroughputLabel="Up to 400 Mbps bonded"
+        loadBalancedThroughputLabel="Up to 400 Mbps combined"
+      />
       <p>
         <strong>Load balanced</strong> distributes traffic across carriers
         independently. Each session — a download, a call, a file transfer —

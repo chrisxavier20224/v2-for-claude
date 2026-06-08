@@ -451,14 +451,6 @@ export const BondedTopologyDiagram: React.FC<BondedTopologyDiagramProps> = ({
         <rect x={590} y={H - 62} width={14} height={14} fill="none" stroke={C.orange} strokeWidth={1.5} />
         <text x={612} y={H - 50} fontSize={11} fontFamily={FONT} fill={C.textSm}>Customer equipment</text>
 
-        {/* ── TITLE BLOCK (top right) ─────────────────────── */}
-        <rect x={W - 325} y={10} width={315} height={48} fill="none" stroke={C.border} strokeWidth={1.5} />
-        <text x={W - 167} y={30} textAnchor="middle" fontSize={13} fontFamily={FONT} fill={C.text} fontWeight="bold">
-          NETWORK TOPOLOGY
-        </text>
-        <text x={W - 167} y={48} textAnchor="middle" fontSize={11} fontFamily={FONT} fill={C.text} fontWeight="bold">
-          {productName.toUpperCase()} · BONDED SD-WAN
-        </text>
       </svg>
     </div>
   );
