@@ -103,7 +103,7 @@ const DecisionFrameworkArticle = () => (
         wireless connection that fails over automatically — so the question
         is not only "what is the primary," it is "what is behind it."
       </p>
-      <PullQuote>
+      <PullQuote noQuotes>
         The useful question is not "which is best." It is "which fits this site,
         given what it needs and when it needs it."
       </PullQuote>
