@@ -18,14 +18,16 @@ const slugify = (s: string) =>
 export const PullQuote = ({
   children,
   attribution,
+  noQuotes,
 }: {
   children: React.ReactNode;
   attribution?: string;
+  noQuotes?: boolean;
 }) => (
   <figure className="my-12 not-prose">
     <div className="border-l-4 border-primary pl-6 md:pl-8 py-2">
       <p className="text-2xl md:text-3xl font-medium leading-snug text-foreground tracking-tight">
-        “{children}”
+        {noQuotes ? children : <>“{children}”</>}
       </p>
       {attribution && (
         <figcaption className="mt-4 text-sm uppercase tracking-[0.2em] text-muted-foreground">
