@@ -57,18 +57,18 @@ export const insightArticles: InsightArticleMeta[] = [
     whatsInside: [
       "The wait nobody budgets for",
       "Where the lead time comes from",
-      "The four costs of the gap",
-      "The \"do nothing\" option isn't free",
-      "What closing the gap looks like",
+      "The four costs of the Connectivity Gap",
+      "The \"do nothing\" option is not free",
+      "What closing the Connectivity Gap looks like",
     ],
     takeaways: [
-      "The gap between ordering a circuit and having it live — typically 10 weeks — is a real cost, but it almost never appears as a line item, so nobody owns it.",
+      "The Connectivity Gap between ordering a circuit and having it live — typically 10 weeks — is a real cost, but it almost never appears as a line item, so nobody owns it.",
       "That cost has four components that compound: void rent, lost productivity, project slippage, and the reputational hit to whoever owns connectivity.",
       "\"Doing nothing\" and absorbing the wait is a choice with a price tag — not a neutral default.",
-      "Costed honestly against the loaded cost of the gap, interim connectivity is almost always the cheaper option.",
+      "Costed honestly against the loaded cost of the Connectivity Gap, interim connectivity is almost always the cheaper option.",
     ],
     heroFigure:
-      "\"Anatomy of the connectivity gap\" — a horizontal timeline from \"circuit ordered\" to \"circuit live\", with the four cost components (void rent, lost productivity, project slippage, reputational cost) stacked along the gap period.",
+      "\"Anatomy of the Connectivity Gap\" — a horizontal timeline from \"circuit ordered\" to \"circuit live\", with the four cost components (void rent, lost productivity, project slippage, reputational cost) stacked along the gap period.",
     heroImage: downtimeHero,
     ogImage: downtimeOg,
   },
@@ -88,10 +88,10 @@ export const insightArticles: InsightArticleMeta[] = [
   {
     slug: "how-to-choose-business-broadband",
     category: "Decision Guide",
-    title: "How to Choose Business Broadband: Leased Line vs SD-WAN vs Bridge",
-    seoTitle: "How to Choose Business Broadband: Leased Line vs SD-WAN",
+    title: "How to Choose Business Broadband: Leased Line vs SD-WAN vs Integra Bridge",
+    seoTitle: "How to Choose Business Broadband: Leased Line vs SD-WAN vs Integra Bridge",
     excerpt:
-      "A practical guide to choosing the right business broadband — leased line, SD-WAN or Bridge — and matching each one to the site.",
+      "A practical guide to choosing the right business broadband — leased line, SD-WAN or Integra Bridge — and matching each one to the site.",
     tone: "light",
     readingTime: "6 min read",
     whatsInside: [
@@ -99,13 +99,13 @@ export const insightArticles: InsightArticleMeta[] = [
       "The three options",
       "The five decision factors",
       "The framework",
-      "Why it's usually a combination",
+      "Why it is usually a combination",
     ],
     takeaways: [
       "\"Which is best\" is the wrong question — a leased line, bonded SD-WAN, and Integra Bridge solve different problems.",
       "Five factors decide the fit: lead time, location, workload, permanence, and resilience.",
       "The strongest estates rarely pick one product — they match each site to its requirement and layer resilience behind it.",
-      "Where Fibre is ordered but months away, the answer isn't \"wait\" — it's Bridge now, leased line later, Bridge stays as failover.",
+      "Where Fibre is ordered but months away, the answer is not \"wait\" — it is Integra Bridge now, leased line later, Integra Bridge stays as failover.",
     ],
     heroFigure:
       "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, Fibre availability, permanence, workload, resilience need) to recommended option(s).",
