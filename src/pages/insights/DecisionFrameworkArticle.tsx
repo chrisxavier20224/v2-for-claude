@@ -2,7 +2,6 @@ import InsightArticle, {
   NumberedSection,
   PullQuote,
   DataCallout,
-  FounderInput,
 } from "./InsightArticle";
 
 const DecisionFrameworkArticle = () => (
@@ -78,10 +77,6 @@ const DecisionFrameworkArticle = () => (
       <p>
         <strong>Workload.</strong> What actually runs on the connection?
       </p>
-      <FounderInput>
-        A line on how Integra assesses workload — user counts, cloud
-        dependency, inbound-access needs — would sharpen this.
-      </FounderInput>
       <p>
         A site that needs inbound access — VPNs terminating on-site, CCTV,
         remote support — needs a static IP, which points firmly toward a
