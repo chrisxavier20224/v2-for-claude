@@ -18,9 +18,9 @@ const Insights = () => {
       />
 
       {/* Page background wrapper with soft gradient + grid texture */}
-      <div className="relative">
+      <div className="relative bg-background isolate">
         {/* Layered background — sits behind both sections */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
           {/* Soft top-to-bottom tonal wash */}
           <div
             className="absolute inset-0"
@@ -49,7 +49,7 @@ const Insights = () => {
         </div>
 
       {/* Header */}
-      <section className="relative pt-24 pb-14 md:pt-36 md:pb-20">
+      <section className="relative z-10 pt-24 pb-14 md:pt-36 md:pb-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-5">
@@ -66,7 +66,7 @@ const Insights = () => {
       </section>
 
       {/* Featured + Grid */}
-      <section className="relative pb-28 md:pb-40">
+      <section className="relative z-10 pb-28 md:pb-40">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Featured */}
           <AnimatedSection>
