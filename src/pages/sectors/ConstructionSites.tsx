@@ -143,7 +143,7 @@ const ConstructionSites = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Live in 10 working days.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure Wi-Fi network across your site office and welfare facilities. And when fibre's on the way to your permanent site office, <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
+              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure Wi-Fi network across your site office and welfare facilities. And when fibre is on the way to your permanent site office, <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

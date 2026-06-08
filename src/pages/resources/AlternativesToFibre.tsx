@@ -212,7 +212,7 @@ const faqs = [
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const staggerItem = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] as const } } };
 
-const AlternativesTofibre = () => {
+const AlternativesToFibre = () => {
   const META_DESCRIPTION =
     "Alternatives to fibre broadband for UK businesses: Starlink, 4G/5G bonding, fixed wireless, leased lines, hybrid. Honest speeds, costs, reliability.";
   const PAGE_URL = "https://www.integra-networks.co.uk/alternatives-to-fibre-broadband";
@@ -378,7 +378,7 @@ const AlternativesTofibre = () => {
             </h2>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
-                Ofcom reports 78% of UK premises now have gigabit-capable connectivity. But that headline hides a brutal truth. In rural areas — farms, remote offices, construction sites, country estates — fibre's arrival date keeps moving.
+                Ofcom reports 78% of UK premises now have gigabit-capable connectivity. But that headline hides a brutal truth. In rural areas — farms, remote offices, construction sites, country estates — the fibre arrival date keeps moving.
               </p>
               <p>
                 You've probably heard it yourself: "We'll connect you by 2026." Then 2027. Then 2028. Meanwhile, your business runs on a mobile hotspot, Zoom calls buffer mid-sentence, and EPOS tills drop transactions at the worst possible moment.
@@ -748,4 +748,4 @@ const AlternativesTofibre = () => {
   );
 };
 
-export default AlternativesTofibre;
+export default AlternativesToFibre;

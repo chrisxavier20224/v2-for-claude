@@ -52,7 +52,7 @@ const ImagePlaceholder = ({ label, className = "" }: { label: string; className?
 const aboutPoints = [
   {
     icon: Lightbulb,
-    title: "Live while fibre's still being built",
+    title: "Live while fibre is still being built",
     description:
       "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives.",
   },
@@ -194,7 +194,7 @@ const Index = () => {
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 Leased lines, SoGEA, managed internet — the same fibre destination as any major ISP. Plus Integra
-                Bridge: enterprise-grade connectivity in days, while your fibre's being built.
+                Bridge: enterprise-grade connectivity in days, while your fibre is being built.
               </p>
               <div className="flex flex-wrap gap-4 mb-12">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
