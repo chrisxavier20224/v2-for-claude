@@ -85,7 +85,7 @@ const ConnectorLine = () => (
 );
 
 const aboutPoints = [
-  { icon: Lightbulb, title: "Live while fibre's still being built", description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives." },
+  { icon: Lightbulb, title: "Live while fibre is still being built", description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives." },
   { icon: Users, title: "99% UK coverage", description: "Multi-bearer connectivity works anywhere with a mobile signal or clear sky. Construction sites, business parks, multi-site rollouts — we've connected them all." },
   { icon: Headphones, title: "Real UK engineers, not a call centre", description: "When something needs sorting, you speak to the engineers who built your network. No ticket queues, no offshore support." },
 ];
@@ -149,7 +149,7 @@ const HomeV2 = () => {
                 We'll get you fibre. <span className="text-primary">While you wait,</span> we'll get you online.
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-10">
-                Leased lines, SoGEA, managed internet — the same fibre destination as any major ISP. Plus Integra Bridge: enterprise-grade connectivity in days, while your fibre's being built.
+                Integra Networks is a UK B2B internet provider. We deliver fibre leased lines and managed internet — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.
               </p>
               <div className="flex flex-wrap gap-4 mb-14">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

@@ -42,7 +42,7 @@ const painPoints = [
   {
     icon: Radio,
     title: "Point-to-Point Wireless Links",
-    description: "Direct line-of-sight connections between buildings — no fibre, no cables. Up to 2Gbps full duplex with V Band, 5GHz, and 60GHz options. Commercial-grade radios with weatherproof housings.",
+    description: "Direct line-of-sight connections between buildings — no fibre, no cables. Up to 2Gbps full duplex with V Band, 5GHz, and licensed E Band options. Commercial-grade radios with weatherproof housings.",
   },
   {
     icon: Target,
@@ -75,8 +75,8 @@ const benefits = [
 ];
 
 const useCases = [
-  { title: "Business Parks", description: "Royle Farm Business Park: V Band links connect multiple commercial units. VLAN per tenant for privacy and billing." },
-  { title: "Port Facilities", description: "Seacon Tilbury: V Band point-to-point from Shed 46A to offices. Small switches with VLAN segmentation for operational security." },
+  { title: "Business Parks", description: "V Band links connect multiple commercial units across a single estate. VLAN per tenant for privacy and billing." },
+  { title: "Port Facilities", description: "V Band point-to-point links from terminal sheds to offices, with small switches and VLAN segmentation for operational security." },
   { title: "Farms & Estates", description: "Connect barns, outbuildings, and cottages across rural properties. 5GHz mesh bridges extend to distant structures." },
   { title: "Holiday Parks", description: "Link reception, lodges, and activity centres. Guest Wi-Fi via Integra Cloud with bandwidth management per unit." },
   { title: "Construction Compounds", description: "Temporary links between site cabins. Portable radios on short masts — relocate or remove when project completes." },
@@ -199,11 +199,11 @@ const WirelessDistribution = () => {
               <p className="text-xs text-primary font-semibold">Best for: Multi-hop distribution, estates, and fallback resilience.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">60GHz Licensed Band</h3>
+              <h3 className="text-lg font-medium text-surface-dark-foreground mb-3">E Band (70/80 GHz) Licensed</h3>
               <p className="text-surface-dark-muted text-sm leading-relaxed mb-4">
-                For critical links, dedicated licensed spectrum eliminates interference. Regulatory approval required but ultimate reliability.
+                For critical links, dedicated licensed spectrum eliminates interference. Regulatory approval required but ultimate reliability — and capacity beyond what unlicensed bands can deliver.
               </p>
-              <p className="text-xs text-primary font-semibold">Best for: Port facilities, multi-tenant sites where isolation is critical.</p>
+              <p className="text-xs text-primary font-semibold">Best for: Port facilities, multi-tenant sites, and any link where isolation is critical and downtime is not an option.</p>
             </motion.div>
           </div>
         </div>

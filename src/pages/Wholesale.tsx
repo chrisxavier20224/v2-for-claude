@@ -57,7 +57,7 @@ const Wholesale = () => {
               Be the ISP or MSP that delivers — <span className="text-primary">even when fibre can't.</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              When your customer needs connectivity and the fibre's weeks away, Integra is the infrastructure partner behind your brand. We handle the survey, install, and support. You keep the customer, the brand, and the margin.
+              When your customer needs connectivity and fibre is weeks away, Integra is the infrastructure partner behind your brand. We handle the survey, install, and support. You keep the customer, the brand, and the margin.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
