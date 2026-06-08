@@ -321,10 +321,7 @@ const AlternativesToFibre = () => {
           </div>
 
           <AnimatedSection>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-8">
-              Pillar Guide
-            </p>
-            <h1 className="text-4xl md:text-6xl font-medium text-white leading-[1.05] tracking-tight max-w-4xl mb-6">
+            <h1 className="text-4xl md:text-6xl font-medium text-white leading-[1.05] tracking-tight max-w-4xl mb-6 mt-8">
               Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses
             </h1>
             <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl">
