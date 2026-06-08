@@ -22,7 +22,7 @@ const MultiBearerConnectivityArticle = () => (
       </p>
     </NumberedSection>
 
-    <div className="relative left-1/2 -translate-x-1/2 w-screen bg-primary/[0.06] py-12 md:py-16 my-16 border-y border-primary/15">
+    <div className="relative left-1/2 -translate-x-1/2 w-screen bg-surface-dark py-12 md:py-16 my-16 border-y border-white/10 text-white [&_section]:my-0 [&_h2]:text-white [&_p]:text-white/80 [&_strong]:text-white [&_em]:text-white/90 [&_.border-border]:border-white/15">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
     <NumberedSection number={2} title="Load balanced vs bonded — the real difference">
       <p>
