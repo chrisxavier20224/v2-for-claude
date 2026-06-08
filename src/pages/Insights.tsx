@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SEO from "@/components/shared/SEO";
@@ -10,7 +11,7 @@ const Insights = () => {
   const rest = insightArticles.filter((a) => a.slug !== featured.slug);
 
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Insights — Integra Networks"
         description="Points of view on business connectivity — the lead times, the trade-offs, and the decisions behind getting a site online."
@@ -299,6 +300,38 @@ const Insights = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* CTA banner — sits inside the page gradient so it blends with the section above */}
+      <section className="relative z-10 pb-20 md:pb-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+            className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-10 md:p-14"
+          >
+            <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-md bg-white/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-10 right-10 h-40 w-40 rounded-md bg-white/5" />
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+              <div className="max-w-xl">
+                <h2 className="text-2xl md:text-3xl font-medium text-primary-foreground mb-3">
+                  Let's see what we can do for you
+                </h2>
+                <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
+                  Business connectivity in 10 working days — wherever fibre can't reach.
+                </p>
+              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-white text-surface-dark font-semibold h-12 px-8 text-base rounded-md hover:bg-white/90 transition-colors shadow-lg shrink-0"
+              >
+                Let's talk <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
       </div>
