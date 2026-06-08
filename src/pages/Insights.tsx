@@ -17,8 +17,39 @@ const Insights = () => {
         url="/insights"
       />
 
+      {/* Page background wrapper with soft gradient + grid texture */}
+      <div className="relative">
+        {/* Layered background — sits behind both sections */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+          {/* Soft top-to-bottom tonal wash */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, hsl(216 100% 50% / 0.04) 0%, hsl(0 0% 100% / 0) 18%, hsl(210 40% 96% / 0.6) 60%, hsl(216 100% 50% / 0.05) 100%)",
+            }}
+          />
+          {/* Faint blue glow top-right */}
+          <div className="absolute -top-32 -right-40 h-[520px] w-[520px] rounded-full bg-primary/10 blur-[140px]" />
+          {/* Faint blue glow bottom-left */}
+          <div className="absolute bottom-0 -left-40 h-[480px] w-[480px] rounded-full bg-primary/[0.07] blur-[140px]" />
+          {/* Very subtle grid */}
+          <div
+            className="absolute inset-0 opacity-[0.035]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, hsl(222 47% 11%) 1px, transparent 1px), linear-gradient(to bottom, hsl(222 47% 11%) 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 90%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 90%)",
+            }}
+          />
+        </div>
+
       {/* Header */}
-      <section className="bg-background pt-24 pb-14 md:pt-36 md:pb-20">
+      <section className="relative pt-24 pb-14 md:pt-36 md:pb-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-5">
@@ -35,7 +66,7 @@ const Insights = () => {
       </section>
 
       {/* Featured + Grid */}
-      <section className="bg-background pb-28 md:pb-40">
+      <section className="relative pb-28 md:pb-40">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Featured */}
           <AnimatedSection>
@@ -270,6 +301,7 @@ const Insights = () => {
           </div>
         </div>
       </section>
+      </div>
     </PageLayout>
   );
 };
