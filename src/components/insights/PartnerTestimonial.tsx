@@ -2,8 +2,8 @@ import { Quote } from "lucide-react";
 
 interface PartnerTestimonialProps {
   quote: string;
-  name: string;
-  title: string;
+  name?: string;
+  title?: string;
   eyebrow?: string;
 }
 
@@ -27,12 +27,14 @@ const PartnerTestimonial = ({
     <blockquote className="text-lg md:text-xl leading-relaxed text-foreground/90 font-normal">
       {quote}
     </blockquote>
-    <div className="mt-7 pt-5 border-t border-border">
-      <figcaption className="leading-tight">
-        <div className="font-semibold text-foreground">{name}</div>
-        <div className="text-sm text-muted-foreground mt-1">{title}</div>
-      </figcaption>
-    </div>
+    {(name || title) && (
+      <div className="mt-7 pt-5 border-t border-border">
+        <figcaption className="leading-tight">
+          {name && <div className="font-semibold text-foreground">{name}</div>}
+          {title && <div className="text-sm text-muted-foreground mt-1">{title}</div>}
+        </figcaption>
+      </div>
+    )}
   </figure>
 );
 
