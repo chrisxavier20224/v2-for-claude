@@ -90,17 +90,17 @@ const Wholesale = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">The Reframe</p>
               <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground mb-6">
-                It's not your whole business. <span className="text-primary">It's the sites fibre can't reach.</span>
+                It is not the whole deal. <span className="text-primary">It is the sites your network can't reach.</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Most of your portfolio is fine. But across 50 sites there are always a few — the ones where fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra doesn't change how you run your business. It's having an answer for those sites, so you never have to say no.
+                Most of your customers' estates are well within your reach. But across a typical 50-site customer, there are always a few — the locations where your network cannot economically deliver, where the lead time is unworkable, or where the customer needs an emergency solution. Partnering with Integra does not change how you run your business. It gives you an answer for those sites, so you never have to walk away from the whole deal.
               </p>
               <div className="mt-8">
                 <BigStatCallout
                   numerator={4}
                   denominator={50}
-                  label="of every 50 sites is 'the tail'"
-                  annotation="= the deals worth winning"
+                  label="of every 50 sites in a customer estate is 'the tail'"
+                  annotation="= the deals you risk losing"
                 />
               </div>
             </AnimatedSection>

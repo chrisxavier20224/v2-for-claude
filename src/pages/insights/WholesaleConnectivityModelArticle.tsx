@@ -25,8 +25,8 @@ const WholesaleConnectivityModelArticle = () => (
       <BigStatCallout
         numerator={4}
         denominator={50}
-        label="of every 50 sites is 'the tail'"
-        annotation="= the deals worth winning"
+        label="of every 50 sites in a customer estate is 'the tail'"
+        annotation="= the deals you risk losing"
       />
       <p>
         But those four are not a rounding error. They are where deals are
