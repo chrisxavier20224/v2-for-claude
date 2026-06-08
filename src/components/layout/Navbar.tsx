@@ -268,7 +268,17 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Insights link hidden pending review */}
+            {/* Insights — standalone link */}
+            <Link
+              to="/insights"
+              className={`text-sm font-medium transition-colors ${
+                isInsightsPath
+                  ? isDarkNav ? "text-white" : "text-foreground"
+                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Insights
+            </Link>
 
             {/* Customers — standalone link */}
             <Link
