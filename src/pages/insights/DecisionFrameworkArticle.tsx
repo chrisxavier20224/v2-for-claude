@@ -101,7 +101,7 @@ const DecisionFrameworkArticle = () => (
         options can serve as a primary; any can serve as a backup. The
         strongest sites run a primary circuit <em>and</em> an independent
         wireless connection that fails over automatically — so the question
-        isn't only "what's the primary," it's "what's behind it."
+        is not only "what is the primary," it is "what is behind it."
       </p>
       <PullQuote>
         The useful question is not "which is best." It is "which fits this site,
@@ -143,8 +143,8 @@ const DecisionFrameworkArticle = () => (
         An estate has a head office that warrants a leased line, regional
         sites where bonded SD-WAN or Integra Bridge is the sensible primary, a new location where
         Integra Bridge covers the gap until Fibre arrives, and a temporary site that
-        will only ever be wireless. A connectivity <em>strategy</em> isn't
-        picking a winner — it's matching each site to what it needs, and
+        will only ever be wireless. A connectivity <em>strategy</em> is not
+        picking a winner — it is matching each site to what it needs, and
         layering the right resilience behind each one.
       </p>
       <p>
