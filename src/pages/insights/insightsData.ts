@@ -107,8 +107,6 @@ export const insightArticles: InsightArticleMeta[] = [
       "The strongest estates rarely pick one product — they match each site to its requirement and layer resilience behind it.",
       "Where fibre is ordered but months away, the answer is not \"wait\" — it is Integra Bridge now, leased line later, Integra Bridge stays as failover.",
     ],
-    heroFigure:
-      "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, fibre availability, permanence, workload, resilience need) to recommended option(s).",
     heroImage: chooseHero,
     ogImage: chooseOg,
   },
