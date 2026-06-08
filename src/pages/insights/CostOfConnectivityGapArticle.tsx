@@ -2,7 +2,6 @@ import InsightArticle, {
   NumberedSection,
   PullQuote,
   DataCallout,
-  FounderInput,
 } from "./InsightArticle";
 
 const CostOfConnectivityGapArticle = () => (
@@ -79,10 +78,6 @@ const CostOfConnectivityGapArticle = () => (
         the day it is signed — not the day the business can actually use the
         space.
       </p>
-      <FounderInput>
-        A typical commercial rent figure or a real example — e.g. "a 5,000 sq
-        ft unit at £X/week" — makes this land.
-      </FounderInput>
       <p>
         Every week a site sits unusable because it has no connectivity is rent
         paid for an asset that generates nothing.
@@ -127,10 +122,6 @@ const CostOfConnectivityGapArticle = () => (
         weeks of productivity, the slipped project, and the reputational drag,
         added together.
       </p>
-      <FounderInput>
-        A real before/after — e.g. the McGee outcome, "live in a week instead
-        of three months", quantified — belongs here as the proof point.
-      </FounderInput>
       <p>
         Measured that way, the maths usually is not close. The Connectivity Gap is the
         expensive option; interim connectivity is the saving.
