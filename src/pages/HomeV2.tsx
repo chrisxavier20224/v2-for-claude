@@ -588,7 +588,7 @@ const HomeV2 = () => {
             <AnimatedSection>
               <h2 className="text-heading-2 text-foreground text-center mb-6 font-medium">Business connectivity across the UK</h2>
               <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
-                <p>Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased lines, SoGEA, and managed internet — the same fibre destination as any major ISP — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.</p>
+                <p>Integra Networks is a UK B2B internet provider. We deliver fibre leased lines and managed internet — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.</p>
                 <p>Whether you're rolling out connectivity across a portfolio of construction sites, business parks, or industrial and retail estates, we engineer resilient networks with SLA-backed uptime, proactive monitoring, and UK-based engineering support on every call.</p>
                 <p>Our coverage spans 99% of the UK, including London, the South East, the South West, the Midlands, the North West, and Yorkshire. Every deployment starts with a desktop survey from our engineering team, so you know exactly what bearer mix and SLA fits your sites before anything goes live.</p>
               </div>

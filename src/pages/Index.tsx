@@ -193,8 +193,7 @@ const Index = () => {
                 We'll get you fibre. While you wait, we'll get you online.
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Leased lines, SoGEA, managed internet — the same fibre destination as any major ISP. Plus Integra
-                Bridge: enterprise-grade connectivity in days, while your fibre is being built.
+                Integra Networks is a UK B2B internet provider. We deliver fibre leased lines and managed internet — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.
               </p>
               <div className="flex flex-wrap gap-4 mb-12">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -657,9 +656,7 @@ const Index = () => {
               </h2>
               <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
                 <p>
-                  Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased
-                  lines, SoGEA, and managed internet — the same fibre destination as any major ISP — alongside Integra
-                  Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.
+                  Integra Networks is a UK B2B internet provider. We deliver fibre leased lines and managed internet — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.
                 </p>
                 <p>
                   Whether you're rolling out connectivity across a portfolio of construction sites, business parks, or
