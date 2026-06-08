@@ -22,6 +22,8 @@ const MultiBearerConnectivityArticle = () => (
       </p>
     </NumberedSection>
 
+    <div className="relative left-1/2 -translate-x-1/2 w-screen bg-primary/[0.06] py-12 md:py-16 my-16 border-y border-primary/15">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
     <NumberedSection number={2} title="Load balanced vs bonded — the real difference">
       <p>
         Both approaches combine multiple carriers. The difference is{" "}
@@ -57,6 +59,8 @@ const MultiBearerConnectivityArticle = () => (
         if a provider uses the words interchangeably.
       </p>
     </NumberedSection>
+      </div>
+    </div>
 
     <NumberedSection number={3} title="CGNAT, and why the static IP matters">
       <p>
