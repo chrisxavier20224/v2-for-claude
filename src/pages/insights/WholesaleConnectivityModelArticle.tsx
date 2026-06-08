@@ -2,7 +2,7 @@ import InsightArticle, {
   NumberedSection,
   PullQuote,
 } from "./InsightArticle";
-import FourOutOfFifty from "@/components/insights/FourOutOfFifty";
+import BigStatCallout from "@/components/figures/BigStatCallout";
 import ISPFounderNote from "@/components/insights/ISPFounderNote";
 import BuildPartnerSayNoTable from "@/components/insights/BuildPartnerSayNoTable";
 import CommercialModelGrid from "@/components/insights/CommercialModelGrid";
@@ -22,7 +22,12 @@ const WholesaleConnectivityModelArticle = () => (
         Four out of fifty sounds like a rounding error — it's easy for ISPs
         to wave away the edge cases as not worth the engineering attention.
       </p>
-      <FourOutOfFifty />
+      <BigStatCallout
+        numerator={4}
+        denominator={50}
+        label="of every 50 sites is 'the tail'"
+        annotation="= the deals worth winning"
+      />
       <p>
         But those four are not a rounding error. They are where deals are
         lost, where accounts start looking elsewhere, and where the brand
