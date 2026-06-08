@@ -5,7 +5,6 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SEO from "@/components/shared/SEO";
 import { findInsight, insightArticles } from "./insightsData";
-import { NetworkArchitectureSection } from "@/components/topology/NetworkArchitectureSection";
 
 interface InsightArticleProps {
   slug: string;
@@ -299,14 +298,7 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
         )}
 
         {/* ============ HERO FIGURE SLOT ============ */}
-        {article.slug === "multi-bearer-internet-failover" ? (
-          <NetworkArchitectureSection
-            carriers={3}
-            productName="Integra Ultrafast"
-            bondedThroughputLabel="Up to 400 Mbps bonded"
-            loadBalancedThroughputLabel="Up to 400 Mbps combined"
-          />
-        ) : article.heroFigure && (
+        {article.heroFigure && article.slug !== "multi-bearer-internet-failover" && (
           <section className="bg-background pt-6 pb-4">
             <div className="mx-auto max-w-5xl px-4 sm:px-6">
               <FigureSlot description={article.heroFigure} />
