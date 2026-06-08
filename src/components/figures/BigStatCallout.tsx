@@ -15,8 +15,8 @@ const HIGHLIGHTED_INDEXES = [7, 19, 33, 46];
 const BigStatCallout = ({
   numerator = 4,
   denominator = 50,
-  label = "of every 50 sites is 'the tail'",
-  annotation = "= the deals worth winning",
+  label = "of every 50 sites in a customer estate is 'the tail'",
+  annotation = "= the deals you risk losing",
   showDotGrid = true,
 }: BigStatCalloutProps) => {
   const ref = useRef<HTMLDivElement>(null);
