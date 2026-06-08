@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Satellite, Radio, Cable, Zap, HelpCircle, ArrowRight, CheckCircle, XCircle, Signal } from "lucide-react";
+import { Satellite, Radio, Cable, Zap, HelpCircle, ArrowRight, ArrowLeft, CheckCircle, XCircle, Signal } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
@@ -286,26 +286,64 @@ const AlternativesToFibre = () => {
       />
       <SchemaMarkup data={[articleSchema, faqSchema, breadcrumbSchema]} />
 
-      {/* Hero */}
-      <section className="relative min-h-[75vh] flex items-end overflow-hidden -mt-20">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="Alternatives to Fibre broadband" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/50 to-black/20" />
-        </div>
-        <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
+      {/* Hero — matches Insight article cover */}
+      <section className="insight-cover relative bg-surface-dark text-white overflow-hidden">
+        <img
+          src={heroImg}
+          alt=""
+          aria-hidden
+          loading="eager"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/85 to-surface-dark/40 pointer-events-none" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/30 to-transparent pointer-events-none" />
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
+          }}
+        />
+        <div aria-hidden className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 pt-14 md:pt-20 pb-16 md:pb-24">
+          <div className="mb-10">
+            <Link
+              to="/insights"
+              className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" />
+              All insights
+            </Link>
+          </div>
+
           <AnimatedSection>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur px-3 py-1 text-xs font-medium text-white mb-6">
-              Resources <ArrowRight className="h-3 w-3" /> Pillar Guide
-            </span>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl font-normal">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-8">
+              Pillar Guide
+            </p>
+            <h1 className="text-4xl md:text-6xl font-medium text-white leading-[1.05] tracking-tight max-w-4xl mb-6">
               Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses
             </h1>
-            <p className="max-w-2xl text-lg text-white/80 mb-8 font-normal">
+            <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl">
               Fibre's years away? Your business can't wait. This guide compares every real alternative available today — with honest assessments of speed, cost, and reliability.
             </p>
-            <Button size="lg" asChild>
-              <Link to="/check">Check Your Options</Link>
-            </Button>
+
+            <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs uppercase tracking-[0.2em] text-white/55">
+              <span className="text-white/80">Integra Networks Insights</span>
+              <span className="text-white/25">·</span>
+              <span>12 min read</span>
+              <span className="text-white/25">·</span>
+              <span>Pillar Guide</span>
+            </div>
+
+            <div className="mt-10">
+              <Button size="lg" asChild className="bg-primary text-white hover:bg-primary/90">
+                <Link to="/check">Check Your Options <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              </Button>
+            </div>
           </AnimatedSection>
         </div>
       </section>
