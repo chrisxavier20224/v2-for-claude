@@ -333,6 +333,7 @@ interface AvailabilityCheckerInlineProps {
   sourceTag?: string;
   heading?: string;
   subheading?: string;
+  hideChatAlternative?: boolean;
 }
 
 const AvailabilityCheckerInline = ({
@@ -340,6 +341,7 @@ const AvailabilityCheckerInline = ({
   sourceTag = "check-page",
   heading,
   subheading,
+  hideChatAlternative = false,
 }: AvailabilityCheckerInlineProps) => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
