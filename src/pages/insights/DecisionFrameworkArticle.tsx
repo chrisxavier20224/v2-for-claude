@@ -10,14 +10,14 @@ const DecisionFrameworkArticle = () => (
     <NumberedSection number={1} title="The wrong question">
       <p>
         When a site needs connectivity, the instinct is to ask "which option is
-        best?" It's the wrong question — and asking it leads to bad decisions,
-        because it assumes there's a winner.
+        best?" It is the wrong question — and asking it leads to bad decisions,
+        because it assumes there is a winner.
       </p>
       <p>
-        There isn't. A leased line, bonded SD-WAN, and Integra Bridge aren't
+        There is not. A leased line, bonded SD-WAN, and Integra Bridge are not
         competing for the same slot. They solve different problems, on
         different timelines, for different kinds of site. The useful question
-        isn't "which is best" — it's "which fits <em>this</em> site, given what
+        is not "which is best" — it is "which fits <em>this</em> site, given what
         it needs and when it needs it." This piece is a framework for
         answering that.
       </p>
@@ -27,22 +27,32 @@ const DecisionFrameworkArticle = () => (
       <p>
         <strong>Leased line.</strong> A dedicated Fibre circuit — symmetric,
         uncontended, SLA-backed. The gold standard for a permanent site that
-        can't afford downtime. Its weaknesses are lead time and, where civils
+        cannot afford downtime. Its weaknesses are lead time and, where civils
         are involved, an excess construction charge that can run into five
         figures.
+      </p>
+      <p>
+        Its other weakness can be resilience. In the rare case where fibre
+        develops a fault or is cut, it is best to have an alternative backup
+        configured for automatic failover. If that backup is another fibre
+        circuit, customers and partners need to be sure it is not running
+        through the same ducts or sharing single points of failure with the
+        main circuit. Integra Bridge (available everywhere) solves that
+        problem, as do other fixed wireless options which may or may not be
+        available depending on location.
       </p>
       <p>
         <strong>Bonded SD-WAN.</strong> Multiple 4G/5G carriers combined into
         one resilient connection — load balanced or bonded. Live in around
         fourteen days, with no Openreach dependency. The right answer where
-        Fibre can't reach a site, takes too long to install, or costs too much
+        Fibre cannot reach a site, takes too long to install, or costs too much
         to bring in.
       </p>
       <p>
         <strong>Integra Bridge.</strong> Bonded Starlink and 5G/4G delivered
         over Layer 2 from our data centre — enterprise-grade connectivity in
         around ten days, purpose-built for the gap while a permanent circuit
-        is being constructed. When the Fibre lands, Bridge doesn't get
+        is being constructed. When the Fibre lands, Integra Bridge does not get
         removed; it stays on as automatic failover.
       </p>
     </NumberedSection>
@@ -55,15 +65,15 @@ const DecisionFrameworkArticle = () => (
       <p>
         <strong>Lead time.</strong> When does the site actually need to be
         live? If the answer is "before the leased line install date" — and it
-        often is — then the immediate decision isn't a leased-line decision at
-        all. It's a Bridge or SD-WAN decision, very possibly running{" "}
+        often is — then the immediate decision is not a leased-line decision at
+        all. It is a bonded SD-WAN or Integra Bridge decision, very possibly running{" "}
         <em>alongside</em> the leased line order rather than instead of it.
       </p>
       <p>
         <strong>Location.</strong> Can Fibre reach the site economically? A
         quote that comes back with a heavy excess construction charge, or
-        stalls on a wayleave, isn't a reason to wait — it's a signal that
-        SD-WAN has stopped being the compromise and become the better primary.
+        stalls on a wayleave, is not a reason to wait — it is a signal that
+        bonded SD-WAN or Integra Bridge has stopped being the compromise and become the better primary.
       </p>
       <p>
         <strong>Workload.</strong> What actually runs on the connection?
@@ -91,10 +101,10 @@ const DecisionFrameworkArticle = () => (
         options can serve as a primary; any can serve as a backup. The
         strongest sites run a primary circuit <em>and</em> an independent
         wireless connection that fails over automatically — so the question
-        isn't only "what's the primary," it's "what's behind it."
+        is not only "what is the primary," it is "what is behind it."
       </p>
-      <PullQuote>
-        The useful question isn't "which is best." It's "which fits this site,
+      <PullQuote noQuotes>
+        The useful question is not "which is best." It is "which fits this site,
         given what it needs and when it needs it."
       </PullQuote>
     </NumberedSection>
@@ -104,18 +114,17 @@ const DecisionFrameworkArticle = () => (
       <ul>
         <li>Permanent site, Fibre available, timeline works → leased line.</li>
         <li>
-          Permanent site, Fibre can't reach or costs too much → bonded SD-WAN
-          as the primary.
+          Permanent site, Fibre cannot reach or costs too much → bonded SD-WAN
+          or Integra Bridge as the primary.
         </li>
         <li>
-          Permanent site, Fibre ordered but months away → Bridge now, leased
-          line later, Bridge stays as failover.
+          Permanent site, Fibre ordered but months away → Integra Bridge now, leased
+          line later, Integra Bridge stays as failover.
         </li>
-        <li>Temporary or moving site → SD-WAN, every time.</li>
+        <li>Temporary or moving site → bonded SD-WAN or Integra Bridge, every time.</li>
         <li>
-          Any site that genuinely can't go dark → a primary circuit{" "}
-          <em>plus</em> an independent wireless failover, whatever the primary
-          is.
+          Any site that genuinely cannot go dark → a primary circuit{" "}
+          <em>plus</em> bonded SD-WAN or Integra Bridge, whatever the primary is.
         </li>
       </ul>
       <DataCallout
@@ -124,22 +133,22 @@ const DecisionFrameworkArticle = () => (
       />
     </NumberedSection>
 
-    <NumberedSection number={5} title="Why it's usually a combination">
+    <NumberedSection number={5} title="Why it is usually a combination">
       <p>
-        Here's the part the "which is best" framing misses entirely: for
+        Here is the part the "which is best" framing misses entirely: for
         anything bigger than a single site, the right answer is almost never
         one product.
       </p>
       <p>
         An estate has a head office that warrants a leased line, regional
-        sites where SD-WAN is the sensible primary, a new location where
-        Bridge covers the gap until Fibre arrives, and a temporary site that
-        will only ever be wireless. A connectivity <em>strategy</em> isn't
-        picking a winner — it's matching each site to what it needs, and
+        sites where bonded SD-WAN or Integra Bridge is the sensible primary, a new location where
+        Integra Bridge covers the gap until Fibre arrives, and a temporary site that
+        will only ever be wireless. A connectivity <em>strategy</em> is not
+        picking a winner — it is matching each site to what it needs, and
         layering the right resilience behind each one.
       </p>
       <p>
-        The job of the framework isn't to crown a product. It's to make every
+        The job of the framework is not to crown a product. It is to make every
         individual decision quick, defensible, and right for that site.
       </p>
     </NumberedSection>
