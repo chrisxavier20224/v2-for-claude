@@ -2,7 +2,6 @@ import InsightArticle, {
   NumberedSection,
   PullQuote,
   DataCallout,
-  FounderInput,
 } from "./InsightArticle";
 import { NetworkArchitectureSection } from "@/components/topology/NetworkArchitectureSection";
 
@@ -98,11 +97,6 @@ const MultiBearerConnectivityArticle = () => (
         than any line on them. A wireless connection's real-world
         performance is decided at the <em>site</em> — not in the datasheet.
       </p>
-      <FounderInput>
-        Integra's specific install standard — the site survey process,
-        carrier testing, external antenna selection — stated concretely here
-        gives this section its authority.
-      </FounderInput>
       <p>
         A capable router with internal antennas, sitting in a metal comms
         cabinet, will underperform badly — however strong the carrier signal
