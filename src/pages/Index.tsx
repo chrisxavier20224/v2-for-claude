@@ -52,7 +52,7 @@ const ImagePlaceholder = ({ label, className = "" }: { label: string; className?
 const aboutPoints = [
   {
     icon: Lightbulb,
-    title: "Live while Fibre's still being built",
+    title: "Live while fibre is still being built",
     description:
       "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives.",
   },
@@ -64,7 +64,7 @@ const aboutPoints = [
   },
   {
     icon: RefreshCw,
-    title: "Bridge today, Fibre tomorrow.",
+    title: "Bridge today, fibre tomorrow.",
     description:
       "When your leased line lands, Integra Bridge stays on as failover. One partner from temporary to permanent — no rip-and-replace.",
   },
@@ -89,7 +89,7 @@ const connectivityServices = [
   {
     title: "Leased Lines",
     description:
-      "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
+      "Dedicated fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
     img: leasedImg,
     link: "/leased-lines",
   },
@@ -181,7 +181,7 @@ const Index = () => {
             </video>
             <img
               src={heroPoster}
-              alt="Integra Networks Fibre connectivity"
+              alt="Integra Networks fibre connectivity"
               className="hidden motion-reduce:block w-full h-full object-cover"
               loading="eager"
             />
@@ -190,11 +190,10 @@ const Index = () => {
           <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
             <AnimatedSection>
               <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl">
-                We'll get you Fibre. While you wait, we'll get you online.
+                We'll get you fibre. While you wait, we'll get you online.
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Leased lines, SoGEA, managed internet — the same Fibre destination as any major ISP. Plus Integra
-                Bridge: enterprise-grade connectivity in days, while your Fibre's being built.
+                Integra Networks is a UK B2B internet provider. We deliver fibre leased lines and managed internet — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.
               </p>
               <div className="flex flex-wrap gap-4 mb-12">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -292,9 +291,9 @@ const Index = () => {
                   One thing no other ISP has: the ability to bridge the gap.
                 </h2>
                 <p className="text-lg text-surface-dark-muted leading-relaxed mb-10">
-                  Every business waiting on Fibre faces the same dead zone — around 10 weeks between signing and going
+                  Every business waiting on fibre faces the same dead zone — around 10 weeks between signing and going
                   live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data
-                  centre, gives you enterprise-grade internet in 10 working days. When your Fibre lands, Bridge stays on
+                  centre, gives you enterprise-grade internet in 10 working days. When your fibre lands, Bridge stays on
                   as permanent failover.
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
@@ -399,7 +398,7 @@ const Index = () => {
                     </span>
                     <h3 className="text-2xl sm:text-3xl text-white font-medium mb-2">Integra Bridge</h3>
                     <p className="text-white/80 max-w-xl text-base sm:text-lg leading-relaxed mb-4">
-                      Enterprise internet in 10 working days while you wait for Fibre. Stays on as permanent failover.
+                      Enterprise internet in 10 working days while you wait for fibre. Stays on as permanent failover.
                     </p>
                     <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-3 transition-all">
                       Learn More <ArrowRight className="h-4 w-4" />
@@ -449,7 +448,7 @@ const Index = () => {
               <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
                 <span className="text-sm text-surface-dark-muted">Supporting solutions:</span>
                 <Link to="/business-wifi" className="text-sm text-primary hover:underline font-medium">
-                  Business WiFi
+                  Business Wi-Fi
                 </Link>
                 <span className="text-white/20">|</span>
                 <Link to="/unified-communications" className="text-sm text-primary hover:underline font-medium">
@@ -468,7 +467,7 @@ const Index = () => {
                 Sectors We Serve
               </p>
               <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto font-medium">
-                Built for businesses Fibre leaves behind.
+                Built for businesses fibre leaves behind.
               </h2>
               <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
                 Construction sites that move every few months. Multi-site rollouts on impossible timelines. Business
@@ -657,9 +656,7 @@ const Index = () => {
               </h2>
               <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
                 <p>
-                  Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased
-                  lines, SoGEA, and managed internet — the same Fibre destination as any major ISP — alongside Integra
-                  Bridge, the only product that gets you online in 10 working days while permanent Fibre is being built.
+                  Integra Networks is a UK B2B internet provider. We deliver fibre leased lines and managed internet — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.
                 </p>
                 <p>
                   Whether you're rolling out connectivity across a portfolio of construction sites, business parks, or

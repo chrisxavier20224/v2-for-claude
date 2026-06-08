@@ -50,7 +50,7 @@ const relatedServices = [
   },
   {
     icon: Wifi,
-    title: "Business WiFi",
+    title: "Business Wi-Fi",
     description: "Professional mesh networks for commercial properties.",
     href: "/business-wifi",
   },

@@ -38,7 +38,7 @@ const DIYInternetSpeedTests = () => (
 
     <h2>When to Call in the Professionals</h2>
     <p>
-      DIY testing gives you valuable information, but sometimes professional help reveals opportunities you'll miss alone. A Integra desktop survey can assess all your connectivity options—existing Fibre, mobile signal strength, Starlink viability—and recommend the solution best suited to your property. Their experts can identify environmental factors affecting signal, calculate realistic speeds, and design installations for optimal performance.
+      DIY testing gives you valuable information, but sometimes professional help reveals opportunities you'll miss alone. A Integra desktop survey can assess all your connectivity options—existing fibre, mobile signal strength, Starlink viability—and recommend the solution best suited to your property. Their experts can identify environmental factors affecting signal, calculate realistic speeds, and design installations for optimal performance.
     </p>
 
     <p>

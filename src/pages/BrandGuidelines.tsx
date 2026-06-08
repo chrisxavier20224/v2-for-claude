@@ -46,7 +46,7 @@ const BrandGuidelines = () => {
   const straplines = [
     "Connectivity shouldn't depend on your postcode.",
     "Built for the locations others won't reach.",
-    "When the Fibre stops, we start.",
+    "When the fibre stops, we start.",
     "Business-grade broadband. Anywhere.",
   ];
 
@@ -492,7 +492,7 @@ const BrandGuidelines = () => {
               <div className="bg-card border border-border/50 rounded-lg p-4 print:bg-gray-50 print:border-gray-200">
                 <p className="text-xs text-primary uppercase tracking-widest mb-2 font-medium">Tertiary</p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-sm text-foreground">Business WiFi</span>
+                  <span className="text-sm text-foreground">Business Wi-Fi</span>
                   <span className="text-muted-foreground">·</span>
                   <span className="text-sm text-foreground">CCTV & Infrastructure</span>
                   <span className="text-muted-foreground">·</span>
@@ -518,7 +518,7 @@ const BrandGuidelines = () => {
                 "Starlink installation",
                 "leased lines",
                 "bonded internet",
-                "construction WiFi",
+                "construction Wi-Fi",
                 "event connectivity",
                 "managed SIM",
               ].map((keyword) => (
@@ -550,7 +550,7 @@ const BrandGuidelines = () => {
               />
               <BoilerplateBlock
                 label="Full (100 words)"
-                text="Integra Networks is a UK-based connectivity provider focused on delivering reliable, high-speed internet to rural, remote, and underserved locations where traditional broadband infrastructure is limited or unavailable. Through its core products — Integra SD-WAN and Integra Bridge — the company bonds multiple internet connections into a single, resilient link, providing business-grade performance regardless of location. Combined with professional Starlink installation, managed SIM services, leased lines, and business WiFi, Integra offers a complete connectivity toolkit. Serving farms, business parks, construction sites, events, and rural businesses, every solution is engineered, installed, and supported by its own UK-based team."
+                text="Integra Networks is a UK-based connectivity provider focused on delivering reliable, high-speed internet to rural, remote, and underserved locations where traditional broadband infrastructure is limited or unavailable. Through its core products — Integra SD-WAN and Integra Bridge — the company bonds multiple internet connections into a single, resilient link, providing business-grade performance regardless of location. Combined with professional Starlink installation, managed SIM services, leased lines, and business Wi-Fi, Integra offers a complete connectivity toolkit. Serving farms, business parks, construction sites, events, and rural businesses, every solution is engineered, installed, and supported by its own UK-based team."
               />
             </div>
           </div>

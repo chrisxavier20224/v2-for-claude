@@ -15,13 +15,13 @@ const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren:
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
 const problemPoints = [
-  "You need enterprise internet but Fibre takes 10 weeks. Whether you're an ISP or MSP delivering to clients, or a business waiting for your own install, you're stuck with a timeline you can't control.",
+  "You need enterprise internet but fibre takes 10 weeks. Whether you're an ISP or MSP delivering to clients, or a business waiting for your own install, you're stuck with a timeline you can't control.",
   "Deadlines slip. Projects overrun. Revenue is delayed. The longer you wait, the more you lose — in productivity, in credibility, and in cash flow.",
   "Interim connectivity can help, but on its own it rarely delivers the business-grade resilience and performance that modern operations demand.",
 ];
 
 const solutionPoints = [
-  "Instead of waiting months for Fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
+  "Instead of waiting months for fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
   "For ISPs and MSPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
   "Immediate connectivity, stronger relationships, and a reputation for delivering when it matters most.",
 ];
@@ -42,12 +42,12 @@ const includes = [
 const otherSolutions = [
   {
     title: "Integra SD-WAN",
-    description: "Enterprise-grade bonded 4G/5G connectivity — up to 500Mbps without Fibre.",
+    description: "Enterprise-grade bonded 4G/5G connectivity — up to 500Mbps without fibre.",
     link: "/integra-sd-wan",
   },
   {
     title: "Leased Lines",
-    description: "Dedicated Fibre connectivity with guaranteed speeds and SLA-backed uptime.",
+    description: "Dedicated fibre connectivity with guaranteed speeds and SLA-backed uptime.",
     link: "/leased-lines",
   },
   {
@@ -72,7 +72,7 @@ const relatedServices = [
   },
   {
     title: "Leased Lines",
-    description: "Permanent dedicated Fibre when Bridge transitions to failover.",
+    description: "Permanent dedicated fibre when Bridge transitions to failover.",
     href: "/leased-lines",
     icon: Wifi,
   },
@@ -82,9 +82,9 @@ const IntegraBridge = () => {
   return (
     <PageLayout hideCTA>
       <SEO
-        title="Integra Bridge | Internet While You Wait for Fibre"
+        title="Integra Bridge | Internet While You Wait for fibre"
         description="Enterprise SD-WAN in 10 working days. Bonded Starlink + 5G/4G with up to 1Gbps. Works as interim or permanent failover."
-        keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, Fibre bridge, interim connectivity, ISP and MSP wholesale"
+        keywords="Integra Bridge, enterprise SD-WAN, bonded Starlink, 5G internet, fibre bridge, interim connectivity, ISP and MSP wholesale"
         url="/integra-bridge"
       />
 
@@ -108,7 +108,7 @@ const IntegraBridge = () => {
               Deliver <span className="text-primary">Enterprise Internet</span> in 10 working days.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              When you can't wait for Fibre, Integra Bridge delivers. For ISPs, MSPs and businesses alike.
+              When you can't wait for fibre, Integra Bridge delivers. For ISPs, MSPs and businesses alike.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
@@ -140,7 +140,7 @@ const IntegraBridge = () => {
               <div className="grid grid-cols-3 gap-4">
                 <motion.div className="col-span-3 rounded-2xl bg-muted border border-border p-8 text-center" variants={fadeUp}>
                   <p className="text-5xl md:text-6xl font-normal text-primary mb-2">10</p>
-                  <p className="text-muted-foreground text-sm">Weeks typical Fibre lead time</p>
+                  <p className="text-muted-foreground text-sm">Weeks typical fibre lead time</p>
                 </motion.div>
                 <motion.div className="rounded-2xl bg-muted border border-border p-6 text-center" variants={fadeUp}>
                   <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
@@ -169,7 +169,7 @@ const IntegraBridge = () => {
               Deliver now. Impress always with <span className="text-primary">Integra Bridge</span>
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Long Fibre lead times test patience, budgets, and relationships. Whether you're an ISP or MSP delivering to clients, or a business waiting for your own line, Integra Bridge flips the script.
+              Long fibre lead times test patience, budgets, and relationships. Whether you're an ISP or MSP delivering to clients, or a business waiting for your own line, Integra Bridge flips the script.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -197,7 +197,7 @@ const IntegraBridge = () => {
               By bonding Starlink satellite with multiple 5G/4G carriers, Integra Bridge delivers an enterprise-grade SD-WAN connection that's fast, resilient, and fully monitored.
             </p>
             <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-16">
-              Delivered over a Layer 2 tunnel from our data centre, it provides the static IPs and stability your clients expect from Fibre — only this time, without the wait.
+              Delivered over a Layer 2 tunnel from our data centre, it provides the static IPs and stability your clients expect from fibre — only this time, without the wait.
             </p>
           </AnimatedSection>
 
@@ -214,7 +214,7 @@ const IntegraBridge = () => {
 
           <AnimatedSection>
             <div className="rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 p-8 text-center max-w-2xl mx-auto">
-              <p className="text-foreground font-normal mb-2">Once Fibre is installed, Integra Bridge doesn't switch off.</p>
+              <p className="text-foreground font-normal mb-2">Once fibre is installed, Integra Bridge doesn't switch off.</p>
               <p className="text-muted-foreground text-sm">
                 It remains as a permanent multi-network, multi-technology failover — blending satellite and cellular for true always-on resilience.
               </p>
@@ -239,7 +239,7 @@ const IntegraBridge = () => {
               Fibre-class Internet <span className="text-primary">without the wait</span>
             </h2>
             <p className="text-surface-dark-muted text-center max-w-3xl mx-auto mb-16">
-              Bonded Starlink + 4G/5G presented over Layer-2 from our data centre for Fibre-like stability, static IPs and no CGNAT issues. Live in 10 working days; remains as failover post-Fibre.
+              Bonded Starlink + 4G/5G presented over Layer-2 from our data centre for fibre-like stability, static IPs and no CGNAT issues. Live in 10 working days; remains as failover post-fibre.
             </p>
           </AnimatedSection>
 
@@ -281,7 +281,7 @@ const IntegraBridge = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Other Solutions</p>
             <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-4 max-w-3xl mx-auto">
-              Where Fibre isn't available, Integra has the answer
+              Where fibre isn't available, Integra has the answer
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
               Our Bridge, Cellular SD-WAN, and Lite solutions share the same Integra backbone, each scaled for different sites and budgets. From high-bandwidth installs to compact branch or backup connections, Integra keeps every location online.

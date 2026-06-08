@@ -34,8 +34,8 @@ const RoyleFarm = () => {
     <PageLayout>
       <SEO
         title="Royle Farm Business Park Case Study"
-        description="Gigabit connectivity to rural business park in Burton upon Trent. 80% cost savings with smart Fibre and wireless."
-        keywords="case study, Royle Farm, business park, Fibre, wireless, rural connectivity, Integra Networks, Burton upon Trent"
+        description="Gigabit connectivity to rural business park in Burton upon Trent. 80% cost savings with smart fibre and wireless."
+        keywords="case study, Royle Farm, business park, fibre, wireless, rural connectivity, Integra Networks, Burton upon Trent"
         url="/customers/royle-farm"
       />
 
@@ -57,7 +57,7 @@ const RoyleFarm = () => {
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">From farm to Fibre: Royle Farm Business Park</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">From farm to fibre: Royle Farm Business Park</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
               From single-digit ADSL to 1000Mbps — how Integra transformed a rural business park's connectivity, cut costs by over 80%, and turned internet from a liability into a selling point.
             </p>
@@ -104,7 +104,7 @@ const RoyleFarm = () => {
               Established in 1998 on the grounds of a working farm, Royle Farm Business Park has grown into a thriving hub for over 30 industrial and engineering businesses. Strategically located near the A38, A444, and A511, the park has everything going for it — except reliable internet.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sitting several kilometres from the nearest exchange, tenants were stuck on copper ADSL lines with speeds in the single digits. Service dropouts were routine. Previous enquiries into Fibre had been met with prohibitively high excess construction charges that made the project unviable. The connectivity gap was holding back existing tenants and deterring new ones.
+              Sitting several kilometres from the nearest exchange, tenants were stuck on copper ADSL lines with speeds in the single digits. Service dropouts were routine. Previous enquiries into fibre had been met with prohibitively high excess construction charges that made the project unviable. The connectivity gap was holding back existing tenants and deterring new ones.
             </p>
           </AnimatedSection>
 
@@ -150,10 +150,10 @@ const RoyleFarm = () => {
               A smarter route to gigabit connectivity
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra conducted an exhaustive survey and identified a feasible route to bring Fibre into the park — circumventing the excess construction charges that had made every previous quote unworkable. That single decision cut projected costs by over 80%, turning a six-figure problem into an accessible five-figure investment.
+              Integra conducted an exhaustive survey and identified a feasible route to bring fibre into the park — circumventing the excess construction charges that had made every previous quote unworkable. That single decision cut projected costs by over 80%, turning a six-figure problem into an accessible five-figure investment.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              With Fibre in place, Integra deployed a mix of wireless and CAT6 networking to distribute connectivity across the entire park. Tenant speeds jumped from single-digit ADSL to up to 1000Mbps — and new tenants can now get connected within 10 working days.
+              With fibre in place, Integra deployed a mix of wireless and CAT6 networking to distribute connectivity across the entire park. Tenant speeds jumped from single-digit ADSL to up to 1000Mbps — and new tenants can now get connected within 10 working days.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Royle Farm went from a connectivity dead zone to one of the best-connected business parks in rural Staffordshire — a genuine selling point for attracting new businesses.
@@ -192,7 +192,7 @@ const RoyleFarm = () => {
               Wireless Distribution
             </Link>
             <Link to="/business-wifi" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-surface-dark-foreground text-sm font-medium hover:bg-white/[0.06] hover:border-white/20 transition-colors">
-              Business WiFi
+              Business Wi-Fi
             </Link>
           </div>
         </div>

@@ -107,7 +107,7 @@ const UKHarvest = () => {
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">The Clock Was Ticking</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Waiting for Fibre infrastructure wasn't an option. Traditional leased lines meant months of installation. The team needed real connectivity—fast—to run their operations, support remote team members, and keep their VoIP system alive. Delay meant inefficiency. Inefficiency meant impact on their mission.
+              Waiting for fibre infrastructure wasn't an option. Traditional leased lines meant months of installation. The team needed real connectivity—fast—to run their operations, support remote team members, and keep their VoIP system alive. Delay meant inefficiency. Inefficiency meant impact on their mission.
             </p>
           </AnimatedSection>
 
@@ -138,7 +138,7 @@ const UKHarvest = () => {
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">The Solution: Bonded Mobile Networks, Enterprise Grade</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra surveyed the site and fast-tracked a decision: forget waiting for Fibre. The mobile networks already covering the area could do the job—if bonded properly. They deployed SD-WAN technology that combined multiple 4G and 5G signals into a single, reliable, high-speed connection.
+              Integra surveyed the site and fast-tracked a decision: forget waiting for fibre. The mobile networks already covering the area could do the job—if bonded properly. They deployed SD-WAN technology that combined multiple 4G and 5G signals into a single, reliable, high-speed connection.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               The installation finished in two weeks. Result: over 325Mbps download speeds, redundancy across networks, and a Wi-Fi system that actually works. UKHarvest's team can now call donors, process distributions, and support their mission without fighting their internet connection.
@@ -154,7 +154,7 @@ const UKHarvest = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
               { label: "Integra SD-WAN", href: "/integra-sd-wan" },
-              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Business Wi-Fi", href: "/business-wifi" },
             ].map((s) => (
               <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
                 <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>

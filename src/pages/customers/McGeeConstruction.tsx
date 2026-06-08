@@ -138,7 +138,7 @@ const McGeeConstruction = () => {
               Integra bonded multiple 4G/5G connections together over SD-WAN. Result: 350Mbps+ download and 100Mbps+ upload. Where there are multi 5G connections available, they unlock even higher speeds.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-              Installation took a week. WiFi networks went live across site. Project managers could upload files in minutes instead of hours. And if the site moved? The hardware moved with it.
+              Installation took a week. Wi-Fi networks went live across site. Project managers could upload files in minutes instead of hours. And if the site moved? The hardware moved with it.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mt-6">
               No waiting for BT. No six-figure bills. No infrastructure that becomes stranded when the project ends. Just connectivity that works where and when they need it.
@@ -154,7 +154,7 @@ const McGeeConstruction = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
               { label: "Integra SD-WAN", href: "/integra-sd-wan" },
-              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Business Wi-Fi", href: "/business-wifi" },
               { label: "Wireless Distribution", href: "/wireless-distribution" },
             ].map((s) => (
               <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">

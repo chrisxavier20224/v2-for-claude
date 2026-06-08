@@ -32,7 +32,7 @@ const Carbee = () => {
     <PageLayout>
       <SEO
         title="CarBee Case Study — Integra Networks"
-        description="CarBee got 300Mbps+ with radio links, CCTV, and WiFi across office, workshop, and home. From 0.1Mbps to reliable high-speed connectivity."
+        description="CarBee got 300Mbps+ with radio links, CCTV, and Wi-Fi across office, workshop, and home. From 0.1Mbps to reliable high-speed connectivity."
         keywords="case study, CarBee, automotive, SD-WAN, connectivity, radio links, CCTV, Integra Networks"
         url="/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet"
       />
@@ -57,7 +57,7 @@ const Carbee = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">From 0.1Mbps to 300+: How a Rural Car Dealer Got High-Speed Internet</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              CarBee connected office, workshop, and home across 300+ metres. Radio links, CCTV, WiFi. All from a remote Lincolnshire site where BT offered nothing.
+              CarBee connected office, workshop, and home across 300+ metres. Radio links, CCTV, Wi-Fi. All from a remote Lincolnshire site where BT offered nothing.
             </p>
           </AnimatedSection>
         </div>
@@ -99,14 +99,14 @@ const Carbee = () => {
               CarBee sells premium pre-owned cars and high-performance parts from rural Lincolnshire. They run an office, a workshop, and even a home 300 metres away. Three separate locations that need to talk to each other.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              But they're miles from Fibre. Miles from proper infrastructure. When you're in the middle of the countryside trying to run a modern business, connectivity isn't optional—it's everything.
+              But they're miles from fibre. Miles from proper infrastructure. When you're in the middle of the countryside trying to run a modern business, connectivity isn't optional—it's everything.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">The Problem: BT's Best Offer Was Useless</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              BT offered 0.1Mbps. That's not a typo. In the 21st century, BT's best effort was essentially nothing. CarBee needed to monitor their car lot with CCTV. They needed WiFi in the workshop. Their home needed reliable internet. One tenth of a megabyte per second wouldn't do any of that.
+              BT offered 0.1Mbps. That's not a typo. In the 21st century, BT's best effort was essentially nothing. CarBee needed to monitor their car lot with CCTV. They needed Wi-Fi in the workshop. Their home needed reliable internet. One tenth of a megabyte per second wouldn't do any of that.
             </p>
           </AnimatedSection>
         </div>
@@ -129,9 +129,9 @@ const Carbee = () => {
       <Section size="large">
         <div className="mx-auto max-w-3xl">
           <AnimatedSection>
-            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Radio Links, CCTV, and WiFi Across the Whole Site</h2>
+            <h2 className="text-heading-1 text-foreground mb-6">The Solution: Radio Links, CCTV, and Wi-Fi Across the Whole Site</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra bonded 4G/5G connections over SD-WAN to deliver over 300Mbps. But that's just the start. They installed radio links across 300 metres to connect the workshop. They set up CCTV monitoring for the car lot. WiFi blanketed the office. And the home got its own secure connection.
+              Integra bonded 4G/5G connections over SD-WAN to deliver over 300Mbps. But that's just the start. They installed radio links across 300 metres to connect the workshop. They set up CCTV monitoring for the car lot. Wi-Fi blanketed the office. And the home got its own secure connection.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Now every part of the site works together seamlessly. Business moves at the speed of the internet, not the slow creep of 0.1Mbps.
@@ -147,7 +147,7 @@ const Carbee = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
               { label: "Integra SD-WAN", href: "/integra-sd-wan" },
-              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Business Wi-Fi", href: "/business-wifi" },
               { label: "Wireless Distribution", href: "/wireless-distribution" },
               { label: "CCTV", href: "/cctv" },
             ].map((s) => (

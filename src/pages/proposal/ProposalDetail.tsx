@@ -72,7 +72,7 @@ const CONNECTIVITY_OPTIONS = [
 const WIFI_ADDONS = [
   {
     id: "wifi-mesh",
-    name: "WiFi Mesh Access Point",
+    name: "Wi-Fi Mesh Access Point",
     installationCost: 0,
     monthlyCost: 0,
     oneOffCost: 350.0,
@@ -443,11 +443,11 @@ export default function ProposalDetail() {
           </div>
         </motion.section>
 
-        {/* WiFi Add-On Section */}
+        {/* Wi-Fi Add-On Section */}
         <motion.section variants={fadeUpVariant} initial="hidden" animate="visible">
-          <h2 className="text-xl font-medium mb-4">WiFi Add-Ons</h2>
+          <h2 className="text-xl font-medium mb-4">Wi-Fi Add-Ons</h2>
           <p className="text-muted-foreground mb-6 text-sm">
-            Connect Effortlessly: Superior WiFi Unleashed
+            Connect Effortlessly: Superior Wi-Fi Unleashed
           </p>
 
           <Card className="p-6 border-border">
@@ -462,7 +462,7 @@ export default function ProposalDetail() {
               <div className="flex-1">
                 <label htmlFor="wifi-mesh" className="font-semibold cursor-pointer flex items-center gap-2">
                   <Wifi className="w-4 h-4 text-primary" />
-                  WiFi Mesh Access Point
+                  Wi-Fi Mesh Access Point
                 </label>
                 <p className="text-sm text-muted-foreground mt-1">
                   Enterprise-grade mesh networking for complete coverage
@@ -579,7 +579,7 @@ export default function ProposalDetail() {
 
                 {orderSummary.wifiMeshIncluded && (
                   <div className="flex justify-between text-sm">
-                    <span className="text-foreground">WiFi Mesh Access Point</span>
+                    <span className="text-foreground">Wi-Fi Mesh Access Point</span>
                     <span className="font-semibold">£{wifiCost.toFixed(2)}</span>
                   </div>
                 )}

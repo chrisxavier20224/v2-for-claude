@@ -80,8 +80,8 @@ const faqs = [
     a: "You can. Keep Starlink as failover, primary traffic on cellular. Or disable Starlink entirely once cellular is rock-solid. No penalty.",
   },
   {
-    q: "Is Starlink more affordable than Fibre if Fibre were available?",
-    a: "Starlink (£99/month) vs Fibre (£40-80/month) — Fibre is cheaper monthly. But Fibre install takes 8-12 weeks; Starlink takes 1 day. If you need connectivity now, Starlink is the affordable bridge.",
+    q: "Is Starlink more affordable than fibre if fibre were available?",
+    a: "Starlink (£99/month) vs fibre (£40-80/month) — fibre is cheaper monthly. But fibre install takes 8-12 weeks; Starlink takes 1 day. If you need connectivity now, Starlink is the affordable bridge.",
   },
   {
     q: "Can I use Starlink in a moving vehicle (caravan, boat)?",
@@ -169,7 +169,7 @@ const StarlinkForBusiness = () => {
             </h2>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
-                Two years ago, rural businesses had three choices: wait for Fibre, use unreliable mobile hotspot, or pay £1,000+ per month for a leased line. Starlink changed that. For £99/month, you get up to 250Mbps from space, installed yourself, available almost everywhere.
+                Two years ago, rural businesses had three choices: wait for fibre, use unreliable mobile hotspot, or pay £1,000+ per month for a leased line. Starlink changed that. For £99/month, you get up to 250Mbps from space, installed yourself, available almost everywhere.
               </p>
               <p>
                 That's genuinely transformative. Starlink is real, it works, and it's legitimate for many use cases. But business-grade connectivity and fast connectivity are different things. This article is honest about both.
@@ -339,7 +339,7 @@ const StarlinkForBusiness = () => {
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">Roadmap</p>
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-8">
-              The upgrade path: Starlink → Starlink + Cellular → Fibre
+              The upgrade path: Starlink → Starlink + Cellular → fibre
             </h2>
             <div className="space-y-6">
               {[
@@ -352,8 +352,8 @@ const StarlinkForBusiness = () => {
                   description: "You've realised EPOS fails during rain. You add cellular. Cost rises to £179/month, but reliability jumps to 99.9%.",
                 },
                 {
-                  title: "Rung 3 — Fibre arrives (Month 24+)",
-                  description: "Fibre is now available in your area. You evaluate: Fibre cost vs Starlink+cellular reliability. You might keep Starlink+cellular as backup, or upgrade to Fibre primary + cellular backup.",
+                  title: "Rung 3 — fibre arrives (Month 24+)",
+                  description: "Fibre is now available in your area. You evaluate: fibre cost vs Starlink+cellular reliability. You might keep Starlink+cellular as backup, or upgrade to fibre primary + cellular backup.",
                 },
               ].map((rung, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">

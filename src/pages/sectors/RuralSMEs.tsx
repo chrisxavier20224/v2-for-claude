@@ -25,13 +25,13 @@ const painPoints = [
   },
   {
     icon: PoundSterling,
-    title: "Quoted £20k+ for Fibre Installation?",
+    title: "Quoted £20k+ for fibre Installation?",
     description: "Openreach excess construction charges for rural properties are often £15-50k. Our SD-WAN delivers similar speeds for a fraction of the cost.",
   },
   {
     icon: Clock,
     title: "Waiting Months for a Leased Line?",
-    description: "Ordered Fibre or a leased line and staring down a 10-week install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
+    description: "Ordered fibre or a leased line and staring down a 10-week install window? Integra Bridge gets your site online in days — and stays on as failover once your line lands.",
   },
 ];
 
@@ -70,8 +70,8 @@ const relatedServices = [
     icon: Radio,
   },
   {
-    title: "Business WiFi",
-    description: "Professional WiFi to extend your connectivity throughout your premises.",
+    title: "Business Wi-Fi",
+    description: "Professional Wi-Fi to extend your connectivity throughout your premises.",
     href: "/business-wifi",
     icon: Wifi,
   },
@@ -167,7 +167,7 @@ const RuralSMEs = () => {
               </motion.div>
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">One visit. One connection. Everything works.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Our engineer arrives, installs the Integra hardware, positions antennas for maximum signal, configures your WiFi network, and tests everything before they leave. Typically 4-6 hours, and you're online with speeds you've never had.
+                Our engineer arrives, installs the Integra hardware, positions antennas for maximum signal, configures your Wi-Fi network, and tests everything before they leave. Typically 4-6 hours, and you're online with speeds you've never had.
               </p>
             </AnimatedSection>
           </div>
@@ -298,7 +298,7 @@ const RuralSMEs = () => {
         compact
         sourceTag="rural-business-broadband"
         heading="Stop losing money to bad internet."
-        subheading="Up to 500Mbps. 99.5% uptime SLA. Installed in 10 working days. No Fibre required."
+        subheading="Up to 500Mbps. 99.5% uptime SLA. Installed in 10 working days. No fibre required."
       />
     </PageLayout>
   );

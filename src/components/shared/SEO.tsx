@@ -17,7 +17,7 @@ interface SEOProps {
 }
 
 const DEFAULT_TITLE = "Integra Networks | Business-Grade Connectivity";
-const DEFAULT_DESCRIPTION = "Managed connectivity and SD-WAN solutions for businesses across the UK. 4G/5G bonding, Starlink, WiFi, and leased lines — installed in 10 working days.";
+const DEFAULT_DESCRIPTION = "Managed connectivity and SD-WAN solutions for businesses across the UK. 4G/5G bonding, Starlink, Wi-Fi, and leased lines — installed in 10 working days.";
 const DEFAULT_IMAGE = "https://integra-networks.co.uk/og-image.png";
 const SITE_URL = "https://integra-networks.co.uk";
 

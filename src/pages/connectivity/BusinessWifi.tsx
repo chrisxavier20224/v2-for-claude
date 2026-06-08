@@ -30,8 +30,8 @@ const painPoints = [
   },
   {
     icon: CreditCard,
-    title: "WiFi-as-a-Service",
-    description: "Our managed WiFi service eliminates the need for upfront capital investment, offering a convenient monthly subscription instead.",
+    title: "Wi-Fi-as-a-Service",
+    description: "Our managed Wi-Fi service eliminates the need for upfront capital investment, offering a convenient monthly subscription instead.",
   },
 ];
 
@@ -42,18 +42,18 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 const businessWifiServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Business WiFi",
+  name: "Business Wi-Fi",
   provider: {
     "@type": "Organization",
     name: "Integra Networks",
     url: "https://integra-networks.co.uk",
   },
-  description: "Professional WiFi network design and installation for offices, warehouses and multi-building sites. Enterprise-grade wireless networks monitored 24/7 via Integra Cloud.",
+  description: "Professional Wi-Fi network design and installation for offices, warehouses and multi-building sites. Enterprise-grade wireless networks monitored 24/7 via Integra Cloud.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
   },
-  serviceType: "Managed WiFi Service",
+  serviceType: "Managed Wi-Fi Service",
   url: "https://integra-networks.co.uk/connectivity/business-wifi",
   offers: {
     "@type": "AggregateOffer",
@@ -81,7 +81,7 @@ const businessWifiBreadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Business WiFi",
+      name: "Business Wi-Fi",
       item: "https://integra-networks.co.uk/connectivity/business-wifi",
     },
   ],
@@ -91,9 +91,9 @@ const BusinessWifi = () => {
   return (
     <PageLayout>
       <SEO
-        title="Business WiFi"
-        description="Professional WiFi networks designed for your site. Survey, AP placement, configuration, 24/7 monitoring via Integra Cloud."
-        keywords="business WiFi, commercial WiFi, public WiFi, guest WiFi, event WiFi, WiFi survey, managed WiFi"
+        title="Business Wi-Fi"
+        description="Professional Wi-Fi networks designed for your site. Survey, AP placement, configuration, 24/7 monitoring via Integra Cloud."
+        keywords="business Wi-Fi, commercial Wi-Fi, public Wi-Fi, guest Wi-Fi, event Wi-Fi, Wi-Fi survey, managed Wi-Fi"
         url="/business-wifi"
       />
       <SchemaMarkup data={businessWifiServiceSchema} />
@@ -102,7 +102,7 @@ const BusinessWifi = () => {
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Business WiFi solutions" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Business Wi-Fi solutions" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -110,13 +110,13 @@ const BusinessWifi = () => {
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
               <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors mb-6">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/40 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-white">
-                  Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Business WiFi
+                  Connectivity <ArrowLeft className="h-3 w-3 rotate-180" /> Business Wi-Fi
                 </span>
               </Link>
             </motion.div>
-            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Professional WiFi that works everywhere.</h1>
+            <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Professional Wi-Fi that works everywhere.</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              We design and install WiFi networks for your exact building layout. Site survey, professional-grade access points, enterprise configuration — and 24/7 monitoring via Integra Cloud. Every project is custom-quoted.
+              We design and install Wi-Fi networks for your exact building layout. Site survey, professional-grade access points, enterprise configuration — and 24/7 monitoring via Integra Cloud. Every project is custom-quoted.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -131,9 +131,9 @@ const BusinessWifi = () => {
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Business WiFi</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Business Wi-Fi</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              WiFi that scales with your business.
+              Wi-Fi that scales with your business.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
               Every installation is custom-quoted based on your site survey. No generic pricing — just the right solution for your building, professionally designed, installed, and monitored.
@@ -159,14 +159,14 @@ const BusinessWifi = () => {
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Public WiFi</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Public Wi-Fi</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Holiday parks, caravan sites, marinas, and wide rural spaces. Our outdoor access points deliver reliable coverage across large areas — guests and tenants stay connected regardless of mobile signal strength.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
             <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={publicImg} alt="Public WiFi marina installation" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+              <img src={publicImg} alt="Public Wi-Fi marina installation" className="w-full h-auto object-cover aspect-video" loading="lazy" />
             </motion.div>
           </AnimatedSection>
         </div>
@@ -177,13 +177,13 @@ const BusinessWifi = () => {
       {/* INDOOR WIFI — full-bleed image overlay */}
       <section className="relative flex items-center" style={{ backgroundColor: 'hsl(222 47% 11%)' }}>
         <div className="absolute inset-0 overflow-hidden">
-          <img src={indoorImg} alt="Indoor WiFi for business" className="w-full h-full object-cover" loading="lazy" />
+          <img src={indoorImg} alt="Indoor Wi-Fi for business" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-l from-surface-dark via-surface-dark/80 to-transparent" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 py-12 md:py-16 flex justify-end">
           <AnimatedSection>
             <div className="text-right">
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Indoor WiFi</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Indoor Wi-Fi</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
                 From retail shops to corporate offices and thick-walled listed buildings. We handle the hard environments — proper AP placement, channel optimisation, and seamless device roaming between floors.
               </p>
@@ -201,14 +201,14 @@ const BusinessWifi = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
               <Users className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Guest WiFi with Branding</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Guest Wi-Fi with Branding</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Branded login portal, bandwidth management, and analytics. Separate guest traffic from your business network — perfect for retail, hospitality, and offices.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
             <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={guestImg} alt="Guest WiFi portal" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+              <img src={guestImg} alt="Guest Wi-Fi portal" className="w-full h-auto object-cover aspect-video" loading="lazy" />
             </motion.div>
           </AnimatedSection>
         </div>
@@ -222,14 +222,14 @@ const BusinessWifi = () => {
           <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
             <AnimatedSection direction="left" delay={0.2} className="order-2 lg:order-1">
               <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <img src={eventImg} alt="Event WiFi setup" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+                <img src={eventImg} alt="Event Wi-Fi setup" className="w-full h-auto object-cover aspect-video" loading="lazy" />
               </motion.div>
             </AnimatedSection>
             <AnimatedSection className="order-1 lg:order-2">
               <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
                 <Radio className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Event WiFi Solutions</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Event Wi-Fi Solutions</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
                 From 50-person gatherings to multi-thousand attendee events. We design and install high-density networks for challenging environments — steam rallies, agricultural shows, corporate events. EPOS terminals keep processing payments throughout.
               </p>
@@ -240,14 +240,14 @@ const BusinessWifi = () => {
               <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1 }}>
                 <ClipboardCheck className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">WiFi Surveys</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Wi-Fi Surveys</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                A WiFi site survey is essential for planning and designing a wireless network. We inspect and test your infrastructure, analyze coverage, and design your network from the ground up, ensuring it's fit for purpose and scalable.
+                A Wi-Fi site survey is essential for planning and designing a wireless network. We inspect and test your infrastructure, analyze coverage, and design your network from the ground up, ensuring it's fit for purpose and scalable.
               </p>
             </AnimatedSection>
             <AnimatedSection direction="right" delay={0.2} className="order-2">
               <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <img src={surveysImg} alt="WiFi survey heat map showing signal strength coverage" className="w-full h-auto object-contain rounded-xl" loading="lazy" />
+                <img src={surveysImg} alt="Wi-Fi survey heat map showing signal strength coverage" className="w-full h-auto object-contain rounded-xl" loading="lazy" />
               </motion.div>
             </AnimatedSection>
           </div>
@@ -267,7 +267,7 @@ const BusinessWifi = () => {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Free Site Survey</p>
-            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">Schedule a WiFi survey.</h2>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">Schedule a Wi-Fi survey.</h2>
             <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
               We'll walk your property, identify dead zones, and recommend the right system for your budget. No obligation, no hard sell — just honest advice from engineers who do this every day.
             </p>

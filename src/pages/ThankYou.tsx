@@ -298,8 +298,8 @@ const ThankYou = () => {
               <div className="space-y-4 mb-8">
                 {[
                   "New installations showing how we do what we do — added every week",
-                  "Find out more about how you can improve your WiFi",
-                  "Learn what connectivity options are available when Fibre isn't",
+                  "Find out more about how you can improve your Wi-Fi",
+                  "Learn what connectivity options are available when fibre isn't",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <div className="h-5 w-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">

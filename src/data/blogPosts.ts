@@ -47,17 +47,17 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "multi-building-wifi-rural-properties",
-    title: "Multi-Building WiFi for Rural Properties",
-    excerpt: "Got a farmhouse, barn conversion, and office 50 metres apart? Here's how to get seamless WiFi across multiple buildings without running cables everywhere.",
+    title: "Multi-Building Wi-Fi for Rural Properties",
+    excerpt: "Got a farmhouse, barn conversion, and office 50 metres apart? Here's how to get seamless Wi-Fi across multiple buildings without running cables everywhere.",
     date: "04 Feb 2026",
     image: multiBuildingImg,
-    category: "WiFi",
+    category: "Wi-Fi",
     archived: true,
   },
   {
     slug: "temporary-broadband-for-events-uk",
     title: "Temporary Broadband for Events UK",
-    excerpt: "Running an outdoor event and need reliable WiFi? Here's everything you need to know about temporary broadband for festivals, shows, and corporate events.",
+    excerpt: "Running an outdoor event and need reliable Wi-Fi? Here's everything you need to know about temporary broadband for festivals, shows, and corporate events.",
     date: "16 Jan 2026",
     image: tempBroadbandImg,
     category: "Events",
@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "satellite-internet-vs-fixed-wireless-pros-and-cons",
     title: "Satellite Internet vs Fixed Wireless: Pros and Cons",
-    excerpt: "Satellite and fixed wireless are the two leading alternatives to Fibre. Both can work. Both have distinct trade-offs. Which one should you choose?",
+    excerpt: "Satellite and fixed wireless are the two leading alternatives to fibre. Both can work. Both have distinct trade-offs. Which one should you choose?",
     date: "03 Oct 2025",
     image: satelliteVsFixedImg,
     category: "Connectivity",
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "portable-wifi-solutions-construction-sites",
-    title: "Portable WiFi Solutions for Construction Sites",
+    title: "Portable Wi-Fi Solutions for Construction Sites",
     excerpt: "Construction sites need connectivity that deploys fast, works reliably, and moves when you do. Here's what actually works on site.",
     date: "11 Sep 2025",
     image: portableWifiImg,
@@ -120,7 +120,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "4g-vs-5g-broadband-which-is-better-for-business",
     title: "4G vs 5G Broadband: Which Is Better for Business?",
-    excerpt: "The race between 4G and 5G is heating up. If you're a rural business waiting for Fibre, which should you choose? The answer depends on what your business actually needs.",
+    excerpt: "The race between 4G and 5G is heating up. If you're a rural business waiting for fibre, which should you choose? The answer depends on what your business actually needs.",
     date: "19 Jun 2025",
     image: fourGVsFiveGImg,
     category: "Connectivity",
@@ -209,8 +209,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "bt-openreach-fibre-checker",
-    title: "BT Openreach Fibre Checker and Other Handy Online Tools",
-    excerpt: "Before searching for alternative ISPs, check what's available at your property. Here's how to use the BT Openreach Fibre Checker and other free tools.",
+    title: "BT Openreach fibre Checker and Other Handy Online Tools",
+    excerpt: "Before searching for alternative ISPs, check what's available at your property. Here's how to use the BT Openreach fibre Checker and other free tools.",
     date: "14 Jul 2025",
     image: fibreCheckerImg,
     category: "Guides",
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "beyond-the-broadband-bottleneck",
     title: "Beyond the Broadband Bottleneck: A Practical Alternative for Rural SMEs",
-    excerpt: "Still waiting for Fibre? Rural SMEs don't have to settle for 2Mbps copper. SD-WAN delivers 150-350Mbps in 10 working days.",
+    excerpt: "Still waiting for fibre? Rural SMEs don't have to settle for 2Mbps copper. SD-WAN delivers 150-350Mbps in 10 working days.",
     date: "18 Jul 2022",
     image: broadbandBottleneckImg,
     category: "Connectivity",
@@ -246,7 +246,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "unlock-high-speed-internet-rural-areas",
     title: "Unlock High-Speed, Reliable Internet in Rural Areas with Integra SD-WAN",
-    excerpt: "No Fibre? No problem. Integra SD-WAN bonds multiple 4G/5G connections to deliver up to 350Mbps to rural businesses.",
+    excerpt: "No fibre? No problem. Integra SD-WAN bonds multiple 4G/5G connections to deliver up to 350Mbps to rural businesses.",
     date: "07 Sep 2022",
     image: broadbandBottleneckImg,
     category: "Connectivity",

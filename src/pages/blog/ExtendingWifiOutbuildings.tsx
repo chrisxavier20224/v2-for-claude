@@ -10,7 +10,7 @@ const ExtendingWifiOutbuildings = () => (
     <h2>Why is Extending Wi-Fi to Outbuildings a Challenge?</h2>
     <p>Properties with outbuildings face several hurdles when it comes to distributing Wi-Fi effectively:</p>
     <ol>
-      <li><strong>Physical Distance:</strong> The further an outbuilding is from your main WiFi network, the weaker the Wi-Fi signal becomes and as a result internet speeds and reliability degrade.</li>
+      <li><strong>Physical Distance:</strong> The further an outbuilding is from your main Wi-Fi network, the weaker the Wi-Fi signal becomes and as a result internet speeds and reliability degrade.</li>
       <li><strong>Obstructions:</strong> Walls, trees, or other structures can block or reduce signal strength.</li>
       <li><strong>Limited Infrastructure:</strong> Most outbuildings are not pre-wired for internet or networking from the main building.</li>
     </ol>
@@ -41,7 +41,7 @@ const ExtendingWifiOutbuildings = () => (
 
     <h2>4. SD-WAN and Aggregated Connectivity</h2>
     <p>For properties with more complex requirements, such as multiple outbuildings or varied internet sources, SD-WAN (Software-Defined Wide Area Network) technology can be implemented.</p>
-    <p>SD-WAN aggregates connections from different sources, such as Fibre broadband, 4G/5G, or satellite like Starlink, into a single network. This offers:</p>
+    <p>SD-WAN aggregates connections from different sources, such as fibre broadband, 4G/5G, or satellite like Starlink, into a single network. This offers:</p>
     <ul>
       <li><strong>Resilience:</strong> Ensures consistent connectivity even if one source fails.</li>
       <li><strong>Higher Speeds:</strong> Combines multiple connections for better bandwidth.</li>

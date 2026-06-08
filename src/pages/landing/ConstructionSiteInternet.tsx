@@ -33,7 +33,7 @@ const relatedServices = [
   },
   {
     icon: Wifi,
-    title: "Business WiFi",
+    title: "Business Wi-Fi",
     description: "Enterprise-grade wireless for the welfare cabin and beyond",
     href: "/business-wifi",
   },
@@ -48,7 +48,7 @@ const ConstructionSiteInternet = () => {
       description: "Openreach won't come to a site without power and a permanent address. So you wait. We don't need either.",
     },
     {
-      title: "Welfare WiFi Can't Carry It",
+      title: "Welfare Wi-Fi Can't Carry It",
       description: "BIM uploads, video calls, drone footage, CCTV — a £30 hotspot chokes the moment everyone logs on.",
     },
     {
@@ -73,9 +73,9 @@ const ConstructionSiteInternet = () => {
         "That's our specialty. Our cellular SD-WAN units run from a 12V supply — they'll run off a generator, a solar setup, or even a vehicle battery while you wait for grid power. No fixed line, no wayleaves, no trenching, no Openreach.",
     },
     {
-      question: "Do you handle CCTV and welfare WiFi off the same connection?",
+      question: "Do you handle CCTV and welfare Wi-Fi off the same connection?",
       answer:
-        "Yes — the same bonded 4G/5G connection backs your CCTV (with a static IP for remote viewing), the welfare cabin WiFi, the site office, and any IoT devices. One connection, multiple SSIDs and VLANs, all monitored from our UK NOC.",
+        "Yes — the same bonded 4G/5G connection backs your CCTV (with a static IP for remote viewing), the welfare cabin Wi-Fi, the site office, and any IoT devices. One connection, multiple SSIDs and VLANs, all monitored from our UK NOC.",
     },
     {
       question: "What happens to the kit when the site finishes?",
@@ -218,7 +218,7 @@ const ConstructionSiteInternet = () => {
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
               <h3 className="text-xl font-medium text-surface-dark-foreground mb-3">350Mbps / 100Mbps upload.</h3>
               <p className="text-surface-dark-muted leading-relaxed">
-                Big enough for BIM file transfers, video calls, drone footage, and remote CCTV — without choking the welfare WiFi.
+                Big enough for BIM file transfers, video calls, drone footage, and remote CCTV — without choking the welfare Wi-Fi.
               </p>
             </motion.div>
           </motion.div>
@@ -293,7 +293,7 @@ const ConstructionSiteInternet = () => {
                   </Button>
                 </div>
                 <div className="h-64 rounded-2xl bg-gradient-to-br from-primary/20 to-blue-600/20 flex items-center justify-center">
-                  <p className="text-surface-dark-muted text-center px-6">London's biggest sites · CCTV-ready · BIM uploads · No Fibre needed</p>
+                  <p className="text-surface-dark-muted text-center px-6">London's biggest sites · CCTV-ready · BIM uploads · No fibre needed</p>
                 </div>
               </div>
             </div>

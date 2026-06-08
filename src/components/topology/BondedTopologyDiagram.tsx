@@ -262,10 +262,10 @@ export const BondedTopologyDiagram: React.FC<BondedTopologyDiagramProps> = ({
         <polygon points={`42,${midY} 34,${midY - 4} 34,${midY + 4}`} fill={C.line} />
         <text x={18} y={midY - 10} fontSize={9} fontFamily={FONT} fill={C.textSm}>LAN</text>
 
-        {/* Primary Fibre (optional) — arrow going up */}
+        {/* Primary fibre (optional) — arrow going up */}
         <line x1={97} y1={midY - 30} x2={97} y2={60} stroke={C.dash} strokeWidth={1.5} strokeDasharray="5,3" />
         <polygon points="97,60 93,68 101,68" fill={C.dash} />
-        <text x={112} y={72} fontSize={9} fontFamily={FONT} fill={C.dash}>Primary Fibre</text>
+        <text x={112} y={72} fontSize={9} fontFamily={FONT} fill={C.dash}>Primary fibre</text>
         <text x={185} y={50} fontSize={9} fontFamily={FONT} fill={C.dash}>(when available)</text>
         <HArrow x1={125} x2={180} y={60} dashed color={C.dash} />
 

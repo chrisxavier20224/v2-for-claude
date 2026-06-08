@@ -18,7 +18,7 @@ import apjHero from "@/assets/case-studies/apj-hero.webp";
 import seaconHero from "@/assets/case-studies/seacon-hero.webp";
 
 const allStories = [
-  { company: "Royle Farm Business Park", title: "From Farm to Fibre: Royle Farm Business Park", image: royleFarmHero, path: "/customers/royle-farm" },
+  { company: "Royle Farm Business Park", title: "From Farm to fibre: Royle Farm Business Park", image: royleFarmHero, path: "/customers/royle-farm" },
   { company: "WRSA Steam Rally Festival", title: "Steam at Scale: 500Mbps for 8,000 Visitors", image: steamRallyHero, path: "/customers/steaming-ahead-with-enhanced-festival-connectivity" },
   { company: "WB Power Services", title: "Dodging the £50K Bill: SD-WAN at Chorley Depot", image: wbPowerHero, path: "/customers/wb-power-services" },
   { company: "McGee Construction", title: "Building at Speed: 350Mbps for London's Biggest Sites", image: mcgeeHero, path: "/customers/mcgee-construction" },

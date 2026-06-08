@@ -54,10 +54,10 @@ const Wholesale = () => {
             </motion.div>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">For ISPs, MSPs &amp; Resellers</p>
             <h1 className="mb-6 text-heading-1 md:text-display-sm font-normal tracking-tight text-white max-w-3xl">
-              Be the ISP or MSP that delivers — <span className="text-primary">even when Fibre can't.</span>
+              Be the ISP or MSP that delivers — <span className="text-primary">even when fibre can't.</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              When your customer needs connectivity and the Fibre's weeks away, Integra is the infrastructure partner behind your brand. We handle the survey, install, and support. You keep the customer, the brand, and the margin.
+              When your customer needs connectivity and fibre is weeks away, Integra is the infrastructure partner behind your brand. We handle the survey, install, and support. You keep the customer, the brand, and the margin.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
@@ -181,10 +181,10 @@ const Wholesale = () => {
             <div className="max-w-3xl mx-auto rounded-2xl border-2 border-primary bg-primary/10 ring-1 ring-primary/30 p-10 text-center">
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Integra Bridge for ISPs &amp; MSPs</p>
               <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-6">
-                Deliver day one. <span className="text-primary">Let the Fibre catch up.</span>
+                Deliver day one. <span className="text-primary">Let the fibre catch up.</span>
               </h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed mb-8">
-                Integra Bridge bonds Starlink and 5G/4G over a Layer 2 tunnel from our data centre — enterprise-grade connectivity for your customer in 10 working days, while their Fibre is still being built. When the Fibre lands, Bridge stays on as permanent failover. Your customer is never the one waiting.
+                Integra Bridge bonds Starlink and 5G/4G over a Layer 2 tunnel from our data centre — enterprise-grade connectivity for your customer in 10 working days, while their fibre is still being built. When the fibre lands, Bridge stays on as permanent failover. Your customer is never the one waiting.
               </p>
               <Button asChild size="lg">
                 <Link to="/integra-bridge">How Integra Bridge works <ArrowRight className="ml-2 h-4 w-4" /></Link>

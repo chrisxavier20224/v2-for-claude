@@ -15,21 +15,21 @@ const BtOpenreachFibreChecker = () => (
       Whether you're in a rural area struggling with poor broadband speeds or simply exploring better options, knowing what's available at your location is the first critical step. There are several free online tools and checkers provided by major providers and regulators that can give you a clear picture of your connectivity situation.
     </p>
 
-    <h2>Using the BT Openreach Fibre Checker</h2>
+    <h2>Using the BT Openreach fibre Checker</h2>
     <p>
-      The BT Openreach Fibre Checker is one of the most useful starting points. This tool lets you enter your postcode or address to see if Fibre is currently available at your property. But beyond checking current availability, it's equally important to investigate whether your area is included in Openreach's Fibre rollout plans. If Fibre is coming to your area, you'll get an indication of expected timelines. However, it's worth noting that rollout schedules frequently slip, so checking when Fibre is "planned" doesn't always mean it will arrive as promised.
+      The BT Openreach fibre Checker is one of the most useful starting points. This tool lets you enter your postcode or address to see if fibre is currently available at your property. But beyond checking current availability, it's equally important to investigate whether your area is included in Openreach's fibre rollout plans. If fibre is coming to your area, you'll get an indication of expected timelines. However, it's worth noting that rollout schedules frequently slip, so checking when fibre is "planned" doesn't always mean it will arrive as promised.
     </p>
 
-    <img src={openreachHomepage} alt="BT Openreach Fibre checker homepage — enter your postcode to check ultrafast full Fibre availability in your area" className="rounded-xl w-full" loading="lazy" />
+    <img src={openreachHomepage} alt="BT Openreach fibre checker homepage — enter your postcode to check ultrafast full fibre availability in your area" className="rounded-xl w-full" loading="lazy" />
 
-    <img src={openreachNotAvailable} alt="Openreach Fibre checker showing Fibre products not yet available at a rural UK property — a common result in underserved areas" className="rounded-xl w-full" loading="lazy" />
+    <img src={openreachNotAvailable} alt="Openreach fibre checker showing fibre products not yet available at a rural UK property — a common result in underserved areas" className="rounded-xl w-full" loading="lazy" />
 
     <h2>The Ofcom Broadband Checker</h2>
     <p>
-      For a comprehensive view of all available services at your address, the Ofcom Broadband Checker is invaluable. This independent regulator's tool shows you not just what's available now, but all the services that different providers have announced for your location. It helps you compare speeds, technologies (ADSL, Fibre, wireless), and potential future options in one place.
+      For a comprehensive view of all available services at your address, the Ofcom Broadband Checker is invaluable. This independent regulator's tool shows you not just what's available now, but all the services that different providers have announced for your location. It helps you compare speeds, technologies (ADSL, fibre, wireless), and potential future options in one place.
     </p>
 
-    <img src={openreachSpeedResults} alt="Openreach broadband speed results showing only 2Mbps standard copper available — superfast and ultrafast Fibre unavailable at this rural UK address" className="rounded-xl w-full" loading="lazy" />
+    <img src={openreachSpeedResults} alt="Openreach broadband speed results showing only 2Mbps standard copper available — superfast and ultrafast fibre unavailable at this rural UK address" className="rounded-xl w-full" loading="lazy" />
 
     <h2>Checking Mobile Signal Availability</h2>
     <p>
@@ -45,7 +45,7 @@ const BtOpenreachFibreChecker = () => (
 
     <h2>Getting Professional Assessment</h2>
     <p>
-      While these online tools provide excellent baseline information, they can't account for local terrain, building materials, and specific site conditions. This is where working with an experienced provider like Integra makes a real difference. Professional assessment can identify whether external antennas will deliver the connectivity you need and help you understand which solution—whether that's 4G/5G SD-WAN, Fibre, or a hybrid approach—will work best for your situation.
+      While these online tools provide excellent baseline information, they can't account for local terrain, building materials, and specific site conditions. This is where working with an experienced provider like Integra makes a real difference. Professional assessment can identify whether external antennas will deliver the connectivity you need and help you understand which solution—whether that's 4G/5G SD-WAN, fibre, or a hybrid approach—will work best for your situation.
     </p>
 
     <p>

@@ -3,7 +3,7 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 const TemporaryBroadbandEvents = () => (
   <BlogArticleLayout slug="temporary-broadband-for-events-uk">
-    <p>Running an event needs internet: card machines, ticketing systems, live streaming, staff communications, exhibitor WiFi.</p>
+    <p>Running an event needs internet: card machines, ticketing systems, live streaming, staff communications, exhibitor Wi-Fi.</p>
 
     <p>If the venue has no broadband or it's too slow, you're stuck.</p>
 
@@ -25,12 +25,12 @@ const TemporaryBroadbandEvents = () => (
     <p><strong>Cons:</strong></p>
     <ul>
       <li>Limited data (usually throttled after 100GB)</li>
-      <li>One device broadcasts, slow WiFi quality</li>
+      <li>One device broadcasts, slow Wi-Fi quality</li>
       <li>Not reliable for business-critical traffic</li>
       <li>Can't handle many simultaneous users</li>
     </ul>
 
-    <p><strong>Use case:</strong> Small event, 10-20 people, casual WiFi.</p>
+    <p><strong>Use case:</strong> Small event, 10-20 people, casual Wi-Fi.</p>
 
     <h3>Option 2: Portable 4G Router</h3>
 
@@ -39,7 +39,7 @@ const TemporaryBroadbandEvents = () => (
     <p><strong>Pros:</strong></p>
     <ul>
       <li>Faster speeds (50-150Mbps with bonding)</li>
-      <li>Professional WiFi coverage</li>
+      <li>Professional Wi-Fi coverage</li>
       <li>Handles 50+ simultaneous users</li>
       <li>Mobile hotspot as backup</li>
     </ul>
@@ -94,7 +94,7 @@ const TemporaryBroadbandEvents = () => (
       <li>Professional installation</li>
     </ul>
 
-    <p><strong>Use case:</strong> Large event, critical uptime, dense crowds needing fast WiFi.</p>
+    <p><strong>Use case:</strong> Large event, critical uptime, dense crowds needing fast Wi-Fi.</p>
 
     <h2>Key Considerations for Events</h2>
 
@@ -136,7 +136,7 @@ const TemporaryBroadbandEvents = () => (
     <p><strong>Requirements:</strong></p>
     <ul>
       <li>Card machines for ticket sales</li>
-      <li>WiFi for exhibitors (photographers, traders)</li>
+      <li>Wi-Fi for exhibitors (photographers, traders)</li>
       <li>CCTV monitoring</li>
       <li>Staff communications</li>
     </ul>
@@ -147,12 +147,12 @@ const TemporaryBroadbandEvents = () => (
     <ul>
       <li>Two 4G SIMs (EE + O2) bonded</li>
       <li>Starlink dish as supplementary backup</li>
-      <li>Professional mesh WiFi across the fairground</li>
+      <li>Professional mesh Wi-Fi across the fairground</li>
     </ul>
 
     <p><strong>Result:</strong></p>
     <ul>
-      <li>200+ simultaneous users on WiFi</li>
+      <li>200+ simultaneous users on Wi-Fi</li>
       <li>Card machines never dropped</li>
       <li>CCTV streamed without lag</li>
       <li>Staff comms rock solid</li>
@@ -195,7 +195,7 @@ const TemporaryBroadbandEvents = () => (
     <p><strong>For a 3-day event:</strong></p>
     <ul>
       <li>Bonded 4G + Starlink hybrid</li>
-      <li>Professional mesh WiFi</li>
+      <li>Professional mesh Wi-Fi</li>
       <li>On-site 24/7 support</li>
       <li>Contact us for event-specific pricing</li>
     </ul>

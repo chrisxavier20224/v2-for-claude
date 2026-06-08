@@ -19,12 +19,12 @@ import {
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/leased-lines",
   },
   {
-    title: "Business WiFi",
+    title: "Business Wi-Fi",
     description: "Enterprise-grade wireless networks for your office and operations.",
     icon: Wifi,
     href: "/business-wifi",
@@ -155,7 +155,7 @@ const EssexHerts = () => {
                 <li className="flex gap-3">
                   <span className="text-primary">•</span>
                   <span>
-                    Scattered rural properties make Fibre rollout expensive. BT prioritizes urban density.
+                    Scattered rural properties make fibre rollout expensive. BT prioritizes urban density.
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -274,7 +274,7 @@ const EssexHerts = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Bishop's Stortford Property</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A family-run business near Bishop's Stortford needed reliable internet for online sales and video calls. BT said Fibre was 3 years away. Starlink alone was unreliable in rain.
+              A family-run business near Bishop's Stortford needed reliable internet for online sales and video calls. BT said fibre was 3 years away. Starlink alone was unreliable in rain.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               We recommended Integra Pro (bonded EE and Vodafone). The property had excellent multi-network coverage. Installation: one day.

@@ -20,8 +20,8 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const painPoints = [
   {
-    question: "Tired of waiting for the Fibre rollout?",
-    answer: "Fibre rollouts are often delayed by years. We install in 10 working days — and you can cancel if Fibre becomes available.",
+    question: "Tired of waiting for the fibre rollout?",
+    answer: "Fibre rollouts are often delayed by years. We install in 10 working days — and you can cancel if fibre becomes available.",
   },
   {
     question: "Paying thousands for Openreach construction?",
@@ -34,7 +34,7 @@ const painPoints = [
 ];
 
 const tiers = [
-  { name: "Integra Backup", carriers: "Single 4G/5G network", speed: "Automatic failover", users: "For resilient backup on an existing line, or a fast standalone circuit while you wait for Fibre." },
+  { name: "Integra Backup", carriers: "Single 4G/5G network", speed: "Automatic failover", users: "For resilient backup on an existing line, or a fast standalone circuit while you wait for fibre." },
   { name: "Integra Lite", carriers: "Two carriers — load balanced or bonded", speed: "Up to 100 Mbps", users: "Up to 5 users. Entry-level SD-WAN for sites that need resilience more than raw performance." },
   { name: "Integra Pro", carriers: "Two carriers — load balanced or bonded", speed: "Up to 300 Mbps", users: "5–20 users. The default for most sites — serious performance with built-in resilience." },
   { name: "Integra Ultrafast", carriers: "Three carriers — load balanced or bonded", speed: "Up to 400 Mbps", users: "20–40 users. More users, more data, more headroom — for busy sites that have outgrown Pro." },
@@ -55,9 +55,9 @@ const included = [
 const faqs = [
   { q: "What's the difference between load balanced and bonded?", a: "Both use the same hardware and carriers — the difference is how traffic is handled. Load balanced distributes traffic across carriers independently; each session uses one carrier at a time, routed to the least-congested path. It works well for multi-user sites running browsing, email, and cloud apps. Bonded combines every carrier into encrypted tunnels through our cloud bonding server, creating a single unified pipe — a single download uses the combined bandwidth of every carrier at once, and a static public IP is included as standard." },
   { q: "What is CGNAT, and why does it matter?", a: "Most 4G/5G connections put you behind carrier-grade NAT — hundreds of customers share one upstream public address, so nothing from outside can reach your site. Outbound traffic is fine, but inbound VPNs, port forwarding, and remote CCTV access all break. Our bonded configuration solves this structurally by routing traffic through our cloud bonding server, which hands your site a real static public IP on the way out." },
-  { q: "Can I get a static IP?", a: "Yes. A static, routable, public IPv4 address is included as standard on every bonded configuration — so VPN tunnels terminate on your firewall, remote access works like a Fibre leased line, and CCTV and remote support reach the site normally. On load-balanced configurations the static IP is available as an add-on." },
+  { q: "Can I get a static IP?", a: "Yes. A static, routable, public IPv4 address is included as standard on every bonded configuration — so VPN tunnels terminate on your firewall, remote access works like a fibre leased line, and CCTV and remote support reach the site normally. On load-balanced configurations the static IP is available as an add-on." },
   { q: "How does SD-WAN compare to Starlink?", a: "Starlink can deliver decent download speeds, but for a business site working all day the limitations show: inconsistent upload, latency spikes under load, and a single connection with no redundancy — if it drops, the site goes dark. Integra SD-WAN runs on multiple independent mobile carriers, all active, with automatic failover and 24/7 monitoring." },
-  { q: "Can SD-WAN replace a leased line?", a: "They solve different problems. A leased line is dedicated symmetric bandwidth — ideal where it's available and the install timeline works. Integra SD-WAN is for sites where Fibre can't reach, takes too long to install, or carries a prohibitive excess construction charge. It's also commonly deployed alongside a leased line as a genuinely resilient, monitored failover." },
+  { q: "Can SD-WAN replace a leased line?", a: "They solve different problems. A leased line is dedicated symmetric bandwidth — ideal where it's available and the install timeline works. Integra SD-WAN is for sites where fibre can't reach, takes too long to install, or carries a prohibitive excess construction charge. It's also commonly deployed alongside a leased line as a genuinely resilient, monitored failover." },
   { q: "What happens if a carrier goes down?", a: "Traffic is automatically redistributed across the remaining carriers. No manual switching, no IT callout. Because all carriers are active all the time, the failover is seamless — the site keeps performing, not just surviving." },
   { q: "Is there a data limit?", a: "Each configuration carries a fair usage allowance that scales with the number of carriers. These aren't hard caps — a site that exceeds the allowance isn't suspended or throttled immediately. We confirm the right allowance for your use case before installation." },
   { q: "How is the connection monitored?", a: "Every carrier is monitored 24/7 via Integra Cloud. If a carrier degrades or drops, we know immediately — we're not waiting for you to report a problem. On a multi-carrier setup that matters: if one carrier quietly fails, the site still works but loses throughput and redundancy, and we catch that before it becomes an issue." },
@@ -67,14 +67,14 @@ const faqs = [
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated Fibre connectivity for businesses needing guaranteed speeds and uptime SLAs.",
+    description: "Dedicated fibre connectivity for businesses needing guaranteed speeds and uptime SLAs.",
     href: "/leased-lines",
     icon: Landmark,
     badge: "Enterprise",
   },
   {
-    title: "Business WiFi",
-    description: "Professional WiFi networks surveyed, installed, and monitored for complete coverage.",
+    title: "Business Wi-Fi",
+    description: "Professional Wi-Fi networks surveyed, installed, and monitored for complete coverage.",
     href: "/business-wifi",
     icon: Wifi,
   },
@@ -95,7 +95,7 @@ const sdwanServiceSchema = {
     name: "Integra Networks",
     url: "https://integra-networks.co.uk",
   },
-  description: "Bonded 4G/5G connectivity delivering fibre-like speeds up to 500Mbps without requiring fixed Fibre infrastructure. Installed in 10 working days with 99.5% uptime SLA.",
+  description: "Bonded 4G/5G connectivity delivering fibre-like speeds up to 500Mbps without requiring fixed fibre infrastructure. Installed in 10 working days with 99.5% uptime SLA.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -144,7 +144,7 @@ const IntegraSDWAN = () => {
       <SEO
         title="Integra SD-WAN | Bonded 4G/5G Business Broadband"
         description="Integra SD-WAN — bonded 4G/5G broadband for UK businesses. Up to 500Mbps, 99.5% SLA, multi-bearer redundancy. Installed in 10 working days."
-        keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to Fibre, business connectivity, fast broadband"
+        keywords="SD-WAN, bonded 4G 5G, rural internet, alternative to fibre, business connectivity, fast broadband"
         url="/integra-sd-wan"
       />
       <SchemaMarkup data={sdwanServiceSchema} />
@@ -165,7 +165,7 @@ const IntegraSDWAN = () => {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">
-              Fast Internet. <span className="text-primary">No Fibre Required.</span>
+              Fast Internet. <span className="text-primary">No fibre Required.</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
               Bonded 4G/5G cellular delivering up to 500Mbps, installed in 10 working days — with 99.5% uptime and UK-based support.
@@ -195,7 +195,7 @@ const IntegraSDWAN = () => {
               Fibre-free business connectivity.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
-              No waiting years for Fibre. We bond multiple 4G/5G cellular networks to deliver high-speed, resilient business internet in 10 working days — with automatic failover built in.
+              No waiting years for fibre. We bond multiple 4G/5G cellular networks to deliver high-speed, resilient business internet in 10 working days — with automatic failover built in.
             </p>
           </AnimatedSection>
           <motion.div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
@@ -400,7 +400,7 @@ const IntegraSDWAN = () => {
       <RelatedServices
         services={relatedServices}
         heading="Complementary Services"
-        subheading="Enhance your SD-WAN with professional WiFi, backup connectivity, and unified communications."
+        subheading="Enhance your SD-WAN with professional Wi-Fi, backup connectivity, and unified communications."
       />
 
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />

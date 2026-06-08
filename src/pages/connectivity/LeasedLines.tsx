@@ -30,7 +30,7 @@ const painPoints = [
   },
   {
     icon: Shield,
-    title: "High-Speed Fibre up to 10Gbps",
+    title: "High-Speed fibre up to 10Gbps",
     description: "From 100Mbps to 10Gbps, scaled to your requirements. Quoted per site based on speed, location and contract term.",
   },
 ];
@@ -59,8 +59,8 @@ const relatedServices = [
     icon: Radio,
   },
   {
-    title: "Business WiFi",
-    description: "Professional WiFi networks to complement your leased line infrastructure.",
+    title: "Business Wi-Fi",
+    description: "Professional Wi-Fi networks to complement your leased line infrastructure.",
     href: "/business-wifi",
     icon: Wifi,
   },
@@ -75,7 +75,7 @@ const leasedLineServiceSchema = {
     name: "Integra Networks",
     url: "https://integra-networks.co.uk",
   },
-  description: "Dedicated Fibre leased lines with symmetric upload and download speeds up to 10Gbps. Private circuit with 99.995% SLA. From 100Mbps to 10Gbps bespoke pricing.",
+  description: "Dedicated fibre leased lines with symmetric upload and download speeds up to 10Gbps. Private circuit with 99.995% SLA. From 100Mbps to 10Gbps bespoke pricing.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -122,7 +122,7 @@ const LeasedLines = () => {
       <SEO
         title="Business Leased Lines UK | 100Mbps-10Gbps | Integra"
         description="Business leased lines from 100Mbps to 10Gbps. UK installer, SLA-backed uptime, dedicated symmetric circuits. Get a quote with same-day pricing."
-        keywords="leased lines, business Fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
+        keywords="leased lines, business fibre, dedicated internet, DIA, symmetrical speeds, 10Gbps, dedicated circuit"
         url="/leased-lines"
       />
       <SchemaMarkup data={leasedLineServiceSchema} />
@@ -131,7 +131,7 @@ const LeasedLines = () => {
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Business leased line Fibre infrastructure" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroImg} alt="Business leased line fibre infrastructure" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -191,7 +191,7 @@ const LeasedLines = () => {
           <AnimatedSection>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Creative solutions that save thousands.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Leased lines can take 8-12 weeks to install. Our Integra SD-WAN or Bridge solution gets you online in days, bridging the gap until Fibre is ready. And we find creative routing solutions — combining Fibre with P2P radio links or wireless distribution to reach remote buildings without expensive trenching.
+              Leased lines can take 8-12 weeks to install. Our Integra SD-WAN or Bridge solution gets you online in days, bridging the gap until fibre is ready. And we find creative routing solutions — combining fibre with P2P radio links or wireless distribution to reach remote buildings without expensive trenching.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

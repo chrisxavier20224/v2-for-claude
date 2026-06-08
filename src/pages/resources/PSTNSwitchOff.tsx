@@ -48,7 +48,7 @@ const challenges = [
 ];
 
 const whyIntegra = [
-  { title: "Connectivity Versatility", description: "From Fibre Leased Lines to 4G, 5G, FTTP, Microwave, and Satellite Connectivity, we offer a range of solutions." },
+  { title: "Connectivity Versatility", description: "From fibre Leased Lines to 4G, 5G, FTTP, Microwave, and Satellite Connectivity, we offer a range of solutions." },
   { title: "Network Migration Specialists", description: "We're experts in upgrading network infrastructure, ensuring a seamless transition for our customers." },
   { title: "Fast Deployment", description: "We control all aspects of the process, enabling us to deliver solutions quickly, even in emergencies." },
 ];
@@ -59,7 +59,7 @@ const faqs = [
   { q: "What is VoIP?", a: "VoIP uses a company's existing internet connection to transmit voice calls. It requires less hardware than legacy systems and can be used on a variety of devices — from desk phones to mobiles, tablets, and computers." },
   { q: "What about special services like security alarms and payment terminals?", a: "The migration also impacts services like security and fire alarms, telecare devices, retail payment terminals, and equipment for monitoring and controlling networks. These rely on PSTN features not fully replicated in VoIP platforms." },
   { q: "What do businesses need to do now?", a: "Businesses should make sure they are fully informed on what is happening and when. They need to be aware of 'End of Sale' and 'End of Life' notifications and prepare to migrate to all-IP-ready products." },
-  { q: "What are the main technologies available?", a: "The main technologies available are Fibre to the Premises (FTTP) and Single Order Generic Ethernet Access (SoGEA). For businesses in truly rural locations, Integra SD-WAN is a viable alternative for more bandwidth-hungry operators." },
+  { q: "What are the main technologies available?", a: "The main technologies available are fibre to the Premises (FTTP) and Single Order Generic Ethernet Access (SoGEA). For businesses in truly rural locations, Integra SD-WAN is a viable alternative for more bandwidth-hungry operators." },
   { q: "What are the benefits of VoIP from a continuity standpoint?", a: "VoIP solutions use a company's existing internet connection to transmit voice calls, removing the need for legacy copper lines. The pandemic proved to be a good testing ground for VoIP services, demonstrating their reliability for remote working." },
 ];
 
@@ -74,12 +74,12 @@ const relatedServices = [
   },
   {
     name: "Leased Lines",
-    description: "Dedicated Fibre connectivity with business-grade SLA.",
+    description: "Dedicated fibre connectivity with business-grade SLA.",
     url: "/leased-lines",
   },
   {
     name: "Integra SD-WAN",
-    description: "Alternative broadband for areas without Fibre availability.",
+    description: "Alternative broadband for areas without fibre availability.",
     url: "/integra-sd-wan",
   },
   {
@@ -200,7 +200,7 @@ const PSTNSwitchOff = () => {
 
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-8 md:grid-cols-3">
           {[
-            { title: "Integra SD-WAN", desc: "When traditional connectivity options aren't available, our SD-WAN solution revolutionises connectivity for businesses, especially in rural locations, without the need for Fibre.", path: "/" },
+            { title: "Integra SD-WAN", desc: "When traditional connectivity options aren't available, our SD-WAN solution revolutionises connectivity for businesses, especially in rural locations, without the need for fibre.", path: "/" },
             { title: "VoIP Solutions", desc: "Our PSTN/ISDN2 replacement solution allows businesses to upgrade their existing system without overhauling their entire cabling network. Quick to deploy and easy to configure.", path: "/unified-communications" },
             { title: "Managed SIM Services", desc: "Our Managed SIM service provides superior connectivity, compliance, and reporting, offering significant cost savings compared to traditional analogue landlines.", path: "/managed-sim-services" },
           ].map((s) => (

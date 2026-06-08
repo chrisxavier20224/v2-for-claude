@@ -34,7 +34,7 @@ const WBPowerServices = () => {
       <SEO
         title="WB Power Services Case Study — Integra Networks"
         description="WB Power Services avoided over £50K in BT excess construction charges by choosing Integra SD-WAN for their Chorley depot. 350Mbps+ with strong uploads."
-        keywords="case study, WB Power Services, SD-WAN, connectivity, leased lines, CCTV, WiFi, Integra Networks"
+        keywords="case study, WB Power Services, SD-WAN, connectivity, leased lines, CCTV, Wi-Fi, Integra Networks"
         url="/customers/wb-power-services"
       />
 
@@ -58,7 +58,7 @@ const WBPowerServices = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Dodging the £50K Bill: How WB Power Got Connected</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              BT quoted over £50K in excess construction charges for a leased line at Chorley. Integra delivered 350Mbps+ via SD-WAN in days — and connected the rest of their depots with leased lines, WiFi, and CCTV.
+              BT quoted over £50K in excess construction charges for a leased line at Chorley. Integra delivered 350Mbps+ via SD-WAN in days — and connected the rest of their depots with leased lines, Wi-Fi, and CCTV.
             </p>
           </AnimatedSection>
         </div>
@@ -103,7 +103,7 @@ const WBPowerServices = () => {
               WB Power Services manages generator sales, hire, and maintenance across the UK. Their Chorley depot ran operations that depended on instant communication: project managers uploading files, site coordinators checking inventory, clients getting updates.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              But the depot sat dead—no mobile signal, no Fibre, no internet. Staff couldn't access centralised tools. They couldn't upload project files. Decisions slowed down. Operations ground to a crawl.
+              But the depot sat dead—no mobile signal, no fibre, no internet. Staff couldn't access centralised tools. They couldn't upload project files. Decisions slowed down. Operations ground to a crawl.
             </p>
           </AnimatedSection>
 
@@ -158,10 +158,10 @@ const WBPowerServices = () => {
               The Solution: SD-WAN at Chorley, Leased Lines Everywhere Else
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              At Chorley, where excess construction charges made Fibre unviable, Integra installed bonded 4G/5G SD-WAN from the depot roof — giving line of sight to multiple mobile towers. The result: 350Mbps+ download with strong upload speeds, perfect for the large files project managers push throughout the day.
+              At Chorley, where excess construction charges made fibre unviable, Integra installed bonded 4G/5G SD-WAN from the depot roof — giving line of sight to multiple mobile towers. The result: 350Mbps+ download with strong upload speeds, perfect for the large files project managers push throughout the day.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              For WB Power's other depots where Fibre was available, Integra deployed leased lines alongside CCTV systems and WiFi networks. Different solution for each site, one vendor managing everything. That's what makes the real difference — the right technology in the right place, without overpaying.
+              For WB Power's other depots where fibre was available, Integra deployed leased lines alongside CCTV systems and Wi-Fi networks. Different solution for each site, one vendor managing everything. That's what makes the real difference — the right technology in the right place, without overpaying.
             </p>
           </AnimatedSection>
         </div>
@@ -176,7 +176,7 @@ const WBPowerServices = () => {
               { label: "Integra SD-WAN", href: "/integra-sd-wan" },
               { label: "Leased Lines", href: "/leased-lines" },
               { label: "CCTV", href: "/cctv" },
-              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Business Wi-Fi", href: "/business-wifi" },
               { label: "Wireless Distribution", href: "/wireless-distribution" },
               { label: "Managed SIM", href: "/managed-sim-services" },
             ].map((s) => (

@@ -141,7 +141,7 @@ const Cotswolds = () => {
               The Cotswolds are among England's most beautiful and desirable areas. Yet this beauty comes with challenges: protected landscapes, listed buildings, conservation constraints, and sparse broadband infrastructure.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              BT's Fibre rollout is slow here. Many properties are promised Fibre years ahead, if at all. Meanwhile, satellite is unreliable and doesn't meet professional needs.
+              BT's fibre rollout is slow here. Many properties are promised fibre years ahead, if at all. Meanwhile, satellite is unreliable and doesn't meet professional needs.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               We serve affluent Cotswolds properties—country homes, estates, heritage properties, and successful businesses where broadband is essential but aesthetic impact matters. Our team understands listed building constraints, conservation requirements, and the specific needs of clients who refuse to compromise on either connectivity or appearance.
@@ -286,7 +286,7 @@ const Cotswolds = () => {
               An historic property in Stow-on-the-Wold had strict constraints: listed building status, conservation area designation, and strong local planning requirements.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              The owners needed professional broadband for a home-based business. BT Fibre was vaguely promised years ahead. Starlink alone had latency issues for their work. Visible infrastructure was not acceptable.
+              The owners needed professional broadband for a home-based business. BT fibre was vaguely promised years ahead. Starlink alone had latency issues for their work. Visible infrastructure was not acceptable.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               We installed Integra Pro (bonded EE and Vodafone) with roof-mounted antenna completely hidden from street view and cabling routed through the roof space. Result: 240Mbps combined speed, zero visible infrastructure changes, full compliance with conservation guidelines. Cost: £110/month. The property maintains its character while delivering world-class connectivity.
