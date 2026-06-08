@@ -1246,7 +1246,7 @@ const AvailabilityCheckerInline = ({
 
           </AnimatePresence>
         </div>
-        {compact && (
+        {compact && !hideChatAlternative && (
           <div className="mx-auto max-w-3xl px-4 mt-12">
             <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-[hsl(200,100%,45%)] p-8 md:p-10">
               <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-md bg-white/10 blur-3xl" />
