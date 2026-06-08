@@ -12,7 +12,8 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
-import heroImg from "@/assets/connectivity/sdwan-hero.jpg";
+import heroAsset from "@/assets/connectivity/sdwan-hero-office.jpg.asset.json";
+const heroImg = heroAsset.url;
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
