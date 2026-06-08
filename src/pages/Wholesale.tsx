@@ -29,7 +29,7 @@ const steps = [
 
 const Wholesale = () => {
   return (
-    <PageLayout>
+    <PageLayout hideCTA>
       <SEO
         title="Wholesale Partnership for ISPs & MSPs | Integra Networks"
         description="The infrastructure partner behind your brand. Integra delivers enterprise-grade connectivity in 10 working days under your brand — survey, install, and support handled."
