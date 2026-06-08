@@ -76,7 +76,7 @@ const CostOfConnectivityGapArticle = () => (
       </p>
       <p>
         <strong>Void cost.</strong> A commercial lease starts costing money
-        the day it's signed — not the day the business can actually use the
+        the day it is signed — not the day the business can actually use the
         space.
       </p>
       <FounderInput>
