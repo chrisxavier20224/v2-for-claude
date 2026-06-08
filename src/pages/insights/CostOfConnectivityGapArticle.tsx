@@ -15,8 +15,8 @@ const CostOfConnectivityGapArticle = () => (
       </p>
       <p>
         That gap between <em>needing</em> connectivity and <em>having</em> it
-        is rarely costed. It doesn't appear on the project plan as a line
-        item, it isn't in the budget, and because it has no owner, it gets
+        is rarely costed. It does not appear on the project plan as a line
+        item, it is not in the budget, and because it has no owner, it gets
         absorbed silently — as "just how long these things take." But absorbed
         is not the same as free. The Connectivity Gap is one of the most
         expensive things a growing business routinely swallows, and the reason
