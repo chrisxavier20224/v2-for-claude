@@ -8,13 +8,13 @@ const StarlinkRightSolution = () => (
 
     <h2>Understanding Starlink's Appeal</h2>
     <p>Starlink, a leading satellite internet technology, has emerged as a promising solution for areas plagued by poor internet connectivity. Its ability to provide internet access virtually anywhere, as long as there's a power source and a clear view of the sky, makes it an attractive option for remote locations.</p>
-    <p>For those in hyper-remote locations, Starlink is more than just an option; it's often the only choice. Without the necessary Fibre or copper infrastructure, or even mobile cell towers, Starlink brings the possibility of high-speed internet to even the most isolated areas.</p>
+    <p>For those in hyper-remote locations, Starlink is more than just an option; it's often the only choice. Without the necessary fibre or copper infrastructure, or even mobile cell towers, Starlink brings the possibility of high-speed internet to even the most isolated areas.</p>
 
     <h2>Performance and Limitations</h2>
     <p>Starlink typically delivers download speeds of up to 250Mbps, which is impressive for satellite internet. However, there are some important considerations:</p>
     <ul>
       <li><strong>Variable Performance:</strong> Speeds can fluctuate based on network congestion, weather conditions, and obstructions.</li>
-      <li><strong>Latency:</strong> While significantly better than traditional satellite internet, latency is still higher than Fibre or 4G connections.</li>
+      <li><strong>Latency:</strong> While significantly better than traditional satellite internet, latency is still higher than fibre or 4G connections.</li>
       <li><strong>Fair Use Policies:</strong> During peak times, speeds may be throttled for heavy users.</li>
       <li><strong>Weather Sensitivity:</strong> Heavy rain or snow can temporarily reduce performance.</li>
     </ul>
@@ -22,7 +22,7 @@ const StarlinkRightSolution = () => (
     <h2>When is Starlink the Right Choice?</h2>
     <p>Starlink is ideal when:</p>
     <ul>
-      <li>You're in a remote location with no Fibre or decent mobile signal.</li>
+      <li>You're in a remote location with no fibre or decent mobile signal.</li>
       <li>You need a quick-to-deploy internet solution.</li>
       <li>You want a portable solution for caravans, boats, or temporary sites.</li>
     </ul>

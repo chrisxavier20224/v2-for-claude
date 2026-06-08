@@ -47,14 +47,14 @@ const WhatIsCellularBonding = () => (
     <p><strong>Install:</strong> Professional setup available with dedicated engineer support.</p>
     <p><strong>Total monthly:</strong> Contact us for transparent pricing based on your specific needs.</p>
 
-    <h2>Why Not Use WiFi Bonding?</h2>
+    <h2>Why Not Use Wi-Fi Bonding?</h2>
 
-    <p>You might think: "Can't I just bond my home WiFi and mobile hotspot?"</p>
+    <p>You might think: "Can't I just bond my home Wi-Fi and mobile hotspot?"</p>
 
-    <p>Not effectively. WiFi + mobile hotspot would work, but:</p>
+    <p>Not effectively. Wi-Fi + mobile hotspot would work, but:</p>
     <ul>
       <li>Mobile hotspot is separate bandwidth (uses your phone's data)</li>
-      <li>WiFi would be your home broadband connection</li>
+      <li>Wi-Fi would be your home broadband connection</li>
       <li>They don't truly combine; they're separate connections you switch between</li>
     </ul>
 

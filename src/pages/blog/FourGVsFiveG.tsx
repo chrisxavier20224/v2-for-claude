@@ -3,7 +3,7 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 const FourGVsFiveG = () => (
   <BlogArticleLayout slug="4g-vs-5g-broadband-which-is-better-for-business">
-    <p>The race between 4G and 5G broadband is heating up. If you're a rural business waiting for Fibre that BT promised you years ago, you might be looking at 4G or 5G as a bridge solution — or even a permanent replacement.</p>
+    <p>The race between 4G and 5G broadband is heating up. If you're a rural business waiting for fibre that BT promised you years ago, you might be looking at 4G or 5G as a bridge solution — or even a permanent replacement.</p>
 
     <p>But here's the question: which one should you choose? The answer depends on what your business actually needs.</p>
 
@@ -77,7 +77,7 @@ const FourGVsFiveG = () => (
 
     <h2>Real Example: Royle Farm</h2>
 
-    <p>Last month we installed at a beef farm in Herefordshire. They'd been told by BT that Fibre wouldn't arrive for 5 years. Their existing satellite connection was dropping calls during video consultations with vets.</p>
+    <p>Last month we installed at a beef farm in Herefordshire. They'd been told by BT that fibre wouldn't arrive for 5 years. Their existing satellite connection was dropping calls during video consultations with vets.</p>
 
     <p>Their nearest 5G tower was 3km away with weak signal. But they had strong 4G from two different operators — O2 and EE.</p>
 

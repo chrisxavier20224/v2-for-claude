@@ -40,7 +40,7 @@ const londonLocalBusinessSchema = {
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/leased-lines",
   },
@@ -72,15 +72,15 @@ const London = () => {
     },
     {
       q: "What about site cabins and temporary office locations?",
-      a: "Perfect use case for Integra Pro. Construction site cabins often lack mains broadband. We install external antenna, run cable to your cabin, and you have professional-grade WiFi. No need to wait for BT. Fast deployment, competitive pricing, flexible terms.",
+      a: "Perfect use case for Integra Pro. Construction site cabins often lack mains broadband. We install external antenna, run cable to your cabin, and you have professional-grade Wi-Fi. No need to wait for BT. Fast deployment, competitive pricing, flexible terms.",
     },
     {
       q: "Do you support multiple buildings on a construction site?",
-      a: "Yes. Large sites across London often have multiple cabins, storage areas, and compound buildings. We can design mesh WiFi networks that cover your entire site, or multiple independent Integra Pro connections if you need isolated networks for security.",
+      a: "Yes. Large sites across London often have multiple cabins, storage areas, and compound buildings. We can design mesh Wi-Fi networks that cover your entire site, or multiple independent Integra Pro connections if you need isolated networks for security.",
     },
     {
       q: "What about data security on construction sites?",
-      a: "Critical concern on London projects. We offer bonded cellular which is inherently more secure than fixed broadband. We can also configure separate WiFi networks for different areas of your site, set bandwidth limits, and provide admin-level control.",
+      a: "Critical concern on London projects. We offer bonded cellular which is inherently more secure than fixed broadband. We can also configure separate Wi-Fi networks for different areas of your site, set bandwidth limits, and provide admin-level control.",
     },
     {
       q: "How much flexibility do you have for emergency deployment?",
@@ -167,7 +167,7 @@ const London = () => {
                 <li className="flex gap-3">
                   <span className="text-primary">•</span>
                   <span>
-                    BT and Fibre providers deprioritize temporary locations. Weeks or months of waiting.
+                    BT and fibre providers deprioritize temporary locations. Weeks or months of waiting.
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -179,7 +179,7 @@ const London = () => {
                 <li className="flex gap-3">
                   <span className="text-primary">•</span>
                   <span>
-                    Security and data isolation matter on large projects. WiFi needs proper access controls.
+                    Security and data isolation matter on large projects. Wi-Fi needs proper access controls.
                   </span>
                 </li>
               </ul>
@@ -205,7 +205,7 @@ const London = () => {
                   Multi-Building Mesh Networks
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Large construction sites often have multiple cabins, canteens, storage areas, and security huts. We design mesh WiFi that covers your entire site compound.
+                  Large construction sites often have multiple cabins, canteens, storage areas, and security huts. We design mesh Wi-Fi that covers your entire site compound.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
                   Seamless roaming across your site. All buildings on one primary Integra Pro connection.
@@ -217,7 +217,7 @@ const London = () => {
                   Secure Network Segmentation
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Large London projects need separate networks for general staff, management, and sensitive operations. We configure multiple WiFi networks with different access controls.
+                  Large London projects need separate networks for general staff, management, and sensitive operations. We configure multiple Wi-Fi networks with different access controls.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
                   Bandwidth management and usage limits available. Full admin control.
@@ -268,7 +268,7 @@ const London = () => {
                   <span className="font-semibold text-foreground">£110/month</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Mesh WiFi extension (per node)</span>
+                  <span>Mesh Wi-Fi extension (per node)</span>
                   <span className="font-semibold text-foreground">+£50/month</span>
                 </div>
                 <div className="flex justify-between">
@@ -287,13 +287,13 @@ const London = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Major Canary Wharf Development</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A large mixed-use development at Canary Wharf had site offices, multiple storage containers, and a construction compound that needed broadband. BT estimated 8-10 weeks for Fibre availability.
+              A large mixed-use development at Canary Wharf had site offices, multiple storage containers, and a construction compound that needed broadband. BT estimated 8-10 weeks for fibre availability.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Site manager called us on Monday. We confirmed 48-hour emergency deployment. By Wednesday morning, our engineer had installed Integra Pro (bonded EE and Vodafone) with mesh WiFi covering all compound buildings.
+              Site manager called us on Monday. We confirmed 48-hour emergency deployment. By Wednesday morning, our engineer had installed Integra Pro (bonded EE and Vodafone) with mesh Wi-Fi covering all compound buildings.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Result: 260Mbps combined speed, full site coverage, three separate WiFi networks (staff, management, security). Cost: £110/month plus £50 per mesh node. The site saved weeks of waiting and got fully productive immediately. When the project moved six months later, they cancelled without penalty.
+              Result: 260Mbps combined speed, full site coverage, three separate Wi-Fi networks (staff, management, security). Cost: £110/month plus £50 per mesh node. The site saved weeks of waiting and got fully productive immediately. When the project moved six months later, they cancelled without penalty.
             </p>
           </div>
         </AnimatedSection>

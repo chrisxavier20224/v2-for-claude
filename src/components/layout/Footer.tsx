@@ -21,7 +21,7 @@ const standardConnectivityLinks = [
 ];
 
 const solutionsLinks = [
-  { label: "Business WiFi", path: "/business-wifi" },
+  { label: "Business Wi-Fi", path: "/business-wifi" },
   { label: "Unified Communications", path: "/unified-communications" },
   { label: "Managed Firewall", path: "/managed-firewall" },
   { label: "Business Continuity", path: "/business-continuity" },

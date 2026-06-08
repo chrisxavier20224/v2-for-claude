@@ -19,7 +19,7 @@ interface SectorData {
 const sectorMap: Record<string, SectorData> = {
   "business-parks": {
     name: "Business Parks",
-    tagline: "Shared Fibre infrastructure for multi-tenant estates",
+    tagline: "Shared fibre infrastructure for multi-tenant estates",
     image: businessParksHero,
     icon: Building2,
     path: "/sectors/business-parks",
@@ -47,14 +47,14 @@ const sectorMap: Record<string, SectorData> = {
   },
   "airbnbs": {
     name: "Holiday Lets & Glamping",
-    tagline: "Guest WiFi that earns five-star reviews",
+    tagline: "Guest Wi-Fi that earns five-star reviews",
     image: airbnbHero,
     icon: Tent,
     path: "/",
   },
   "fibre-enabled-buildings": {
     name: "Fibre-Enabled Buildings",
-    tagline: "Pre-connected commercial buildings with managed WiFi",
+    tagline: "Pre-connected commercial buildings with managed Wi-Fi",
     image: fibreHero,
     icon: Factory,
     path: "/sectors/business-parks",

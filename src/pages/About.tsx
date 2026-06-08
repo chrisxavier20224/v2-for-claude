@@ -11,7 +11,7 @@ import heroImg from "@/assets/connectivity/bridge-hero.webp";
 const sections = [
   {
     h: "Started solving an impossible problem.",
-    p: "Rural properties nobody else would touch. Farms, glamping sites, construction sites. We layered satellite, cellular, and Fibre because no single technology worked. That's where we built the engineering muscle to make multi-bearer connectivity actually reliable.",
+    p: "Rural properties nobody else would touch. Farms, glamping sites, construction sites. We layered satellite, cellular, and fibre because no single technology worked. That's where we built the engineering muscle to make multi-bearer connectivity actually reliable.",
   },
   {
     h: "Realised the real problem was bigger.",
@@ -19,7 +19,7 @@ const sections = [
   },
   {
     h: "Today.",
-    p: "A proper business ISP. Standard Fibre, leased lines, managed connectivity — same destination as anyone else. But with one thing no one else has: the ability to bridge the gap.",
+    p: "A proper business ISP. Standard fibre, leased lines, managed connectivity — same destination as anyone else. But with one thing no one else has: the ability to bridge the gap.",
   },
 ];
 

@@ -112,7 +112,7 @@ const solutions = [
   },
   {
     icon: Cable,
-    name: "Leased Line (Dedicated Fibre)",
+    name: "Leased Line (Dedicated fibre)",
     bgImage: leasedlineBgAsset.url,
     tagline: "The gold standard — if you can afford the install",
     speedDown: "10Mbps–1Gbps symmetric",
@@ -150,7 +150,7 @@ const solutions = [
     reliability: "Excellent (dual paths)",
     support: "Professional, SLA available",
     whoFor: "Businesses that want maximum resilience with the speed of Starlink and the reliability of cellular. Ideal for remote farms, rural business premises, and construction sites.",
-    whoNotFor: "Properties with strong Fibre coverage — if you can get a leased line at reasonable cost, that's still the gold standard.",
+    whoNotFor: "Properties with strong fibre coverage — if you can get a leased line at reasonable cost, that's still the gold standard.",
     pros: [
       "Two completely independent networks — if one fails, you're still online",
       "Starlink provides base speed, cellular adds failover and lower latency",
@@ -176,8 +176,8 @@ const comparisonData = [
 
 const faqs = [
   {
-    q: "Is 4G bonding just a temporary patch until Fibre arrives?",
-    a: "Not if Fibre is years away. Cellular SD-WAN is proven, scalable, and supports businesses today. When Fibre eventually arrives, you evaluate upgrading — but waiting in the dark is more expensive than getting connected now.",
+    q: "Is 4G bonding just a temporary patch until fibre arrives?",
+    a: "Not if fibre is years away. Cellular SD-WAN is proven, scalable, and supports businesses today. When fibre eventually arrives, you evaluate upgrading — but waiting in the dark is more expensive than getting connected now.",
   },
   {
     q: "Will Starlink improve enough for business use?",
@@ -205,14 +205,14 @@ const faqs = [
   },
   {
     q: "What's the difference between FTTC and FTTP?",
-    a: "FTTC (Fibre to the Cabinet) puts Fibre into the street cabinet but still uses copper for the final connection to your property — so speeds degrade with distance. FTTP (Fibre to the Premises) replaces copper entirely with Fibre all the way to your door, delivering much faster and more consistent speeds.",
+    a: "FTTC (fibre to the Cabinet) puts fibre into the street cabinet but still uses copper for the final connection to your property — so speeds degrade with distance. FTTP (fibre to the Premises) replaces copper entirely with fibre all the way to your door, delivering much faster and more consistent speeds.",
   },
 ];
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const staggerItem = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] as const } } };
 
-const AlternativesToFibre = () => {
+const AlternativesTofibre = () => {
   const META_DESCRIPTION =
     "Alternatives to fibre broadband for UK businesses: Starlink, 4G/5G bonding, fixed wireless, leased lines, hybrid. Honest speeds, costs, reliability.";
   const PAGE_URL = "https://www.integra-networks.co.uk/alternatives-to-fibre-broadband";
@@ -229,7 +229,7 @@ const AlternativesToFibre = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses",
+    headline: "Alternatives to fibre Broadband: A Practical Guide for Rural UK Businesses",
     description: META_DESCRIPTION,
     author: { "@type": "Person", name: "Chris Xavier" },
     publisher: {
@@ -262,7 +262,7 @@ const AlternativesToFibre = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.integra-networks.co.uk/" },
       { "@type": "ListItem", position: 2, name: "Insights", item: "https://www.integra-networks.co.uk/insights" },
-      { "@type": "ListItem", position: 3, name: "Alternatives to Fibre Broadband", item: PAGE_URL },
+      { "@type": "ListItem", position: 3, name: "Alternatives to fibre Broadband", item: PAGE_URL },
     ],
   };
 
@@ -273,9 +273,9 @@ const AlternativesToFibre = () => {
   return (
     <PageLayout hideCTA>
       <SEO
-        title="Alternatives to Fibre Broadband"
+        title="Alternatives to fibre Broadband"
         description={META_DESCRIPTION}
-        keywords="alternatives to Fibre broadband, rural broadband UK, Starlink vs 4G, SD-WAN, cellular broadband, no Fibre broadband alternatives, business broadband"
+        keywords="alternatives to fibre broadband, rural broadband UK, Starlink vs 4G, SD-WAN, cellular broadband, no fibre broadband alternatives, business broadband"
         url="/alternatives-to-fibre-broadband"
         type="article"
         image={alternativesOg}
@@ -322,7 +322,7 @@ const AlternativesToFibre = () => {
 
           <AnimatedSection>
             <h1 className="text-4xl md:text-6xl font-medium text-white leading-[1.05] tracking-tight max-w-4xl mb-6 mt-8">
-              Alternatives to Fibre Broadband: A Practical Guide for Rural UK Businesses
+              Alternatives to fibre Broadband: A Practical Guide for Rural UK Businesses
             </h1>
             <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl">
               Fibre's years away? Your business can't wait. This guide compares every real alternative available today — with honest assessments of speed, cost, and reliability.
@@ -374,17 +374,17 @@ const AlternativesToFibre = () => {
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-medium uppercase tracking-wider text-primary mb-3">The Reality</p>
             <h2 className="text-heading-2 md:text-heading-1 text-foreground font-normal mb-6">
-              Why rural UK businesses can't wait for Fibre
+              Why rural UK businesses can't wait for fibre
             </h2>
             <div className="prose prose-lg text-muted-foreground max-w-none space-y-4">
               <p>
-                Ofcom reports 78% of UK premises now have gigabit-capable connectivity. But that headline hides a brutal truth. In rural areas — farms, remote offices, construction sites, country estates — Fibre's arrival date keeps moving.
+                Ofcom reports 78% of UK premises now have gigabit-capable connectivity. But that headline hides a brutal truth. In rural areas — farms, remote offices, construction sites, country estates — fibre's arrival date keeps moving.
               </p>
               <p>
                 You've probably heard it yourself: "We'll connect you by 2026." Then 2027. Then 2028. Meanwhile, your business runs on a mobile hotspot, Zoom calls buffer mid-sentence, and EPOS tills drop transactions at the worst possible moment.
               </p>
               <p>
-                With the PSTN switching off in January 2027, copper-based services like ADSL are being retired entirely. Waiting for Fibre isn't realistic anymore — not because Fibre won't eventually arrive, but because your business can't afford to stand still while it does.
+                With the PSTN switching off in January 2027, copper-based services like ADSL are being retired entirely. Waiting for fibre isn't realistic anymore — not because fibre won't eventually arrive, but because your business can't afford to stand still while it does.
               </p>
               <p>
                 This guide compares every real alternative available today. No jargon, no sales pitch — just honest assessments to help you choose.
@@ -591,8 +591,8 @@ const AlternativesToFibre = () => {
                   recommendation: "Get it. It's the gold standard. But check the install cost first. If excess construction charges exceed £10,000, the hybrid approach (Starlink + cellular) delivers 95% of the benefit at 20% of the cost.",
                 },
                 {
-                  scenario: "You're waiting for Fibre and don't know how long",
-                  recommendation: "Don't wait empty-handed. Deploy a hybrid solution now. When Fibre arrives, you'll already be profitable. Fibre becomes an upgrade, not a lifeline.",
+                  scenario: "You're waiting for fibre and don't know how long",
+                  recommendation: "Don't wait empty-handed. Deploy a hybrid solution now. When fibre arrives, you'll already be profitable. Fibre becomes an upgrade, not a lifeline.",
                 },
               ].map((item, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-card p-6">
@@ -748,4 +748,4 @@ const AlternativesToFibre = () => {
   );
 };
 
-export default AlternativesToFibre;
+export default AlternativesTofibre;

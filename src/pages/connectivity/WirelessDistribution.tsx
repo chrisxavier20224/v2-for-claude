@@ -19,8 +19,8 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, tra
 
 const relatedServices = [
   {
-    title: "Business WiFi",
-    description: "Professional WiFi networks to complement your wireless distribution.",
+    title: "Business Wi-Fi",
+    description: "Professional Wi-Fi networks to complement your wireless distribution.",
     href: "/business-wifi",
     icon: Wifi,
   },
@@ -42,7 +42,7 @@ const painPoints = [
   {
     icon: Radio,
     title: "Point-to-Point Wireless Links",
-    description: "Direct line-of-sight connections between buildings — no Fibre, no cables. Up to 2Gbps full duplex with V Band, 5GHz, and 60GHz options. Commercial-grade radios with weatherproof housings.",
+    description: "Direct line-of-sight connections between buildings — no fibre, no cables. Up to 2Gbps full duplex with V Band, 5GHz, and 60GHz options. Commercial-grade radios with weatherproof housings.",
   },
   {
     icon: Target,
@@ -78,9 +78,9 @@ const useCases = [
   { title: "Business Parks", description: "Royle Farm Business Park: V Band links connect multiple commercial units. VLAN per tenant for privacy and billing." },
   { title: "Port Facilities", description: "Seacon Tilbury: V Band point-to-point from Shed 46A to offices. Small switches with VLAN segmentation for operational security." },
   { title: "Farms & Estates", description: "Connect barns, outbuildings, and cottages across rural properties. 5GHz mesh bridges extend to distant structures." },
-  { title: "Holiday Parks", description: "Link reception, lodges, and activity centres. Guest WiFi via Integra Cloud with bandwidth management per unit." },
+  { title: "Holiday Parks", description: "Link reception, lodges, and activity centres. Guest Wi-Fi via Integra Cloud with bandwidth management per unit." },
   { title: "Construction Compounds", description: "Temporary links between site cabins. Portable radios on short masts — relocate or remove when project completes." },
-  { title: "Glamping & Lodges", description: "Premium guest experience via distributed WiFi. Radios hidden or integrated into landscaping for aesthetic appeal." },
+  { title: "Glamping & Lodges", description: "Premium guest experience via distributed Wi-Fi. Radios hidden or integrated into landscaping for aesthetic appeal." },
 ];
 
 const WirelessDistribution = () => {
@@ -89,7 +89,7 @@ const WirelessDistribution = () => {
       <SEO
         title="Wireless Distribution"
         description="Point-to-point and multipoint wireless links. V Band, 5GHz, 60GHz. Survey, VLAN, failover. Up to 2Gbps."
-        keywords="wireless distribution, point-to-point, point-to-multipoint, V Band, multi-building WiFi, business park connectivity, wireless network design"
+        keywords="wireless distribution, point-to-point, point-to-multipoint, V Band, multi-building Wi-Fi, business park connectivity, wireless network design"
         url="/wireless-distribution"
       />
 
@@ -127,7 +127,7 @@ const WirelessDistribution = () => {
           <AnimatedSection>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">Wireless Connectivity</p>
             <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground text-center mb-4 max-w-3xl mx-auto">
-              High-speed wireless links without the Fibre costs.
+              High-speed wireless links without the fibre costs.
             </h2>
             <p className="text-lg text-surface-dark-muted text-center max-w-2xl mx-auto mb-16">
               Install in 10 working days. Commercial-grade radios with weatherproof housings. Professional survey included. Free hardware replacement if anything fails.
@@ -303,7 +303,7 @@ const WirelessDistribution = () => {
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
             <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={surveysImg} alt="Professional WiFi heatmap and RF site survey" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+              <img src={surveysImg} alt="Professional Wi-Fi heatmap and RF site survey" className="w-full h-auto object-cover aspect-video" loading="lazy" />
             </motion.div>
           </AnimatedSection>
         </div>
@@ -417,7 +417,7 @@ const WirelessDistribution = () => {
       <RelatedServices
         services={relatedServices}
         heading="Complementary Services"
-        subheading="Enhance your wireless distribution with professional WiFi and connectivity solutions."
+        subheading="Enhance your wireless distribution with professional Wi-Fi and connectivity solutions."
       />
 
       {/* RELATED CONTENT */}

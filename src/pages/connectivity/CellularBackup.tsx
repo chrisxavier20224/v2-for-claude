@@ -100,7 +100,7 @@ const CellularBackup = () => {
               </div>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary">Who It's For</p>
             </div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Already got Fibre? Good. Now protect it.</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Already got fibre? Good. Now protect it.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               This isn't a replacement for your primary connection — it's the safety net underneath it. If you're running EPOS systems, VoIP phones, cloud applications, or anything that stops working when the internet goes down, cellular backup pays for itself the first time it activates.
             </p>

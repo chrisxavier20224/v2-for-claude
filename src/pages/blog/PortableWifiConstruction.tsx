@@ -5,7 +5,7 @@ const PortableWifiConstruction = () => (
   <BlogArticleLayout slug="portable-wifi-solutions-construction-sites">
     <p>Construction sites need internet: site managers checking CAD files, crew communicating via phones and radios, automated systems monitoring equipment, safety cameras logging incidents.</p>
 
-    <p>But construction sites move. You can't wait for a fixed broadband installation. You need portable WiFi that works today, moves tomorrow.</p>
+    <p>But construction sites move. You can't wait for a fixed broadband installation. You need portable Wi-Fi that works today, moves tomorrow.</p>
 
     <h2>Why Standard Broadband Doesn't Work on Sites</h2>
 
@@ -15,7 +15,7 @@ const PortableWifiConstruction = () => (
 
     <p>You need portable, quick-to-deploy broadband.</p>
 
-    <h2>Portable WiFi Solutions</h2>
+    <h2>Portable Wi-Fi Solutions</h2>
 
     <h3>Option 1: Mobile Hotspot / Smartphone Tether</h3>
 
@@ -44,7 +44,7 @@ const PortableWifiConstruction = () => (
 
     <p><strong>Pros:</strong></p>
     <ul>
-      <li>Better WiFi range (100-150m)</li>
+      <li>Better Wi-Fi range (100-150m)</li>
       <li>Handles 20-50 simultaneous devices</li>
       <li>Professional appearance</li>
       <li>Reasonable battery life (if powered)</li>
@@ -57,7 +57,7 @@ const PortableWifiConstruction = () => (
       <li>Can be slow on congested towers</li>
     </ul>
 
-    <p><strong>Use case:</strong> Small crew (10-30 people), basic WiFi, cost-conscious.</p>
+    <p><strong>Use case:</strong> Small crew (10-30 people), basic Wi-Fi, cost-conscious.</p>
 
     <h3>Option 3: Bonded Multi-SIM Portable (Integra Recommendation)</h3>
 
@@ -127,16 +127,16 @@ const PortableWifiConstruction = () => (
 
     <p><strong>Need:</strong> Real-time inventory tracking, job scheduling, photo documentation, live safety monitoring.</p>
 
-    <p><strong>Solution:</strong> Temporary fixed pole-mounted installation with bonded 4G + mesh WiFi.</p>
+    <p><strong>Solution:</strong> Temporary fixed pole-mounted installation with bonded 4G + mesh Wi-Fi.</p>
 
     <p><strong>Setup:</strong></p>
     <ul>
       <li>Install 4G/5G bonded antenna on a 3m pole</li>
-      <li>Mesh WiFi across the site</li>
+      <li>Mesh Wi-Fi across the site</li>
       <li>Professional setup by Integra</li>
     </ul>
 
-    <p><strong>Result:</strong> 50+ workers on WiFi without bottlenecks. Safety cameras stream 24/7. Inventory system tracks tools in real-time.</p>
+    <p><strong>Result:</strong> 50+ workers on Wi-Fi without bottlenecks. Safety cameras stream 24/7. Inventory system tracks tools in real-time.</p>
 
     <h2>Key Considerations</h2>
 
@@ -144,7 +144,7 @@ const PortableWifiConstruction = () => (
 
     <ul>
       <li>Is the site sheltered or exposed to weather? (Weather-proof router needed)</li>
-      <li>How spread out is the site? (Mesh WiFi coverage needed for large sites)</li>
+      <li>How spread out is the site? (Mesh Wi-Fi coverage needed for large sites)</li>
       <li>Will equipment move frequently? (Portable solution vs fixed)</li>
     </ul>
 
@@ -181,15 +181,15 @@ const PortableWifiConstruction = () => (
 
     <p>❌ <strong>Using a consumer data plan with limits.</strong> Construction sites use more data than you think. Get unlimited or 500GB+ cap.</p>
 
-    <p>❌ <strong>Setting it up once and forgetting it.</strong> WiFi needs maintenance: reboot weekly, move antenna if signal drops, swap SIMs if one network is congested.</p>
+    <p>❌ <strong>Setting it up once and forgetting it.</strong> Wi-Fi needs maintenance: reboot weekly, move antenna if signal drops, swap SIMs if one network is congested.</p>
 
-    <h2>Integra's Portable WiFi Service</h2>
+    <h2>Integra's Portable Wi-Fi Service</h2>
 
     <p>For construction sites, we offer:</p>
 
     <ol>
       <li><strong>Portable bonded router rental</strong> — equipment and dual SIMs included</li>
-      <li><strong>Professional temporary install</strong> — full setup with support, SIMs, and mesh WiFi</li>
+      <li><strong>Professional temporary install</strong> — full setup with support, SIMs, and mesh Wi-Fi</li>
       <li><strong>Monthly support</strong> — remote monitoring, signal optimisation, SIM management</li>
     </ol>
 
@@ -204,7 +204,7 @@ const PortableWifiConstruction = () => (
 
     <h2>Next Step</h2>
 
-    <p>Got a construction project needing WiFi? Email us:</p>
+    <p>Got a construction project needing Wi-Fi? Email us:</p>
     <ul>
       <li>Project location (postcode or coordinates)</li>
       <li>Project duration (start/end dates)</li>

@@ -62,8 +62,8 @@ const Yorkshire = () => {
       a: "Integra Pro (bonded 4G/5G) typically delivers 150-280Mbps depending on proximity to cell towers. Yorkshire has good network coverage across most rural areas and industrial sites. Starlink adds up to 250Mbps for properties with southern sky visibility. We test actual speeds at your location.",
     },
     {
-      q: "Do you support mesh WiFi and site-wide coverage?",
-      a: "Yes. For farms, manufacturing sites, and large properties, we install mesh WiFi systems that cover outbuildings, warehouses, and multiple structures. One primary connection (Integra Pro or Starlink) feeds into mesh nodes across your site. Full coverage from the main house to the far end of your property.",
+      q: "Do you support mesh Wi-Fi and site-wide coverage?",
+      a: "Yes. For farms, manufacturing sites, and large properties, we install mesh Wi-Fi systems that cover outbuildings, warehouses, and multiple structures. One primary connection (Integra Pro or Starlink) feeds into mesh nodes across your site. Full coverage from the main house to the far end of your property.",
     },
   ];
 
@@ -202,10 +202,10 @@ const Yorkshire = () => {
 
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-medium text-foreground mb-2">
-                  Mesh WiFi for Multi-Building Sites
+                  Mesh Wi-Fi for Multi-Building Sites
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Large farms, manufacturing facilities, and industrial sites often have multiple buildings. We install mesh WiFi that covers your entire property—main house, barns, workshops, outbuildings.
+                  Large farms, manufacturing facilities, and industrial sites often have multiple buildings. We install mesh Wi-Fi that covers your entire property—main house, barns, workshops, outbuildings.
                 </p>
                 <p className="text-sm text-muted-foreground font-medium text-foreground">
                   Seamless roaming across your site. All buildings connected to the same primary link.
@@ -274,7 +274,7 @@ const Yorkshire = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Manufacturing Business Near Rotherham</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A precision engineering business near Rotherham depended on fast, reliable broadband for CAD file transfers and client video calls. Their industrial site was remote, and BT Fibre was 3+ years away. Starlink latency was unsuitable for video conferencing.
+              A precision engineering business near Rotherham depended on fast, reliable broadband for CAD file transfers and client video calls. Their industrial site was remote, and BT fibre was 3+ years away. Starlink latency was unsuitable for video conferencing.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               The property had good EE coverage and adequate Vodafone. We recommended Integra Pro (bonded EE and Vodafone) with Enterprise SLA. Installation: one day.

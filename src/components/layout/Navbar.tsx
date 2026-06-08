@@ -5,18 +5,18 @@ import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, 
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
-// Fibre alternatives — solutions when you can't get Fibre
+// fibre alternatives — solutions when you can't get fibre
 const fibreAlternativeLinks = [
-  { label: "Integra SD-WAN", path: "/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No Fibre Needed" },
+  { label: "Integra SD-WAN", path: "/integra-sd-wan", icon: Zap, tagline: "Bonded 4G/5G — No fibre Needed" },
   { label: "Integra Bridge", path: "/integra-bridge", icon: Cable, tagline: "Enterprise Internet in 10 Days" },
   { label: "Starlink Installation", path: "/starlink-installation", icon: Satellite, tagline: "Professional Starlink Install & Support" },
   { label: "Managed SIM Services", path: "/managed-sim-services", icon: Smartphone, tagline: "4G/5G & PSTN Transition" },
   { label: "Pricing", path: "/pricing", icon: CreditCard, tagline: "How Integra Pricing Works" },
 ];
 
-// Standard connectivity — traditional broadband and Fibre
+// Standard connectivity — traditional broadband and fibre
 const standardConnectivityLinks = [
-  { label: "Leased Lines", path: "/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade Fibre" },
+  { label: "Leased Lines", path: "/leased-lines", icon: Cable, tagline: "Dedicated Business-Grade fibre" },
   { label: "Managed Internet", path: "/managed-internet", icon: Globe, tagline: "Dedicated Bandwidth, Simpler Pricing" },
   { label: "SoGEA Broadband", path: "/sogea", icon: Globe, tagline: "Broadband Without Line Rental" },
 { label: "4G/5G Backup", path: "/cellular-backup", icon: Signal, tagline: "Automatic Cellular Failover" },
@@ -24,11 +24,11 @@ const standardConnectivityLinks = [
 
 // Infrastructure & on-site services
 const infrastructureLinks = [
-  { label: "Business WiFi", path: "/business-wifi", icon: Wifi, tagline: "Enterprise Mesh Networks" },
+  { label: "Business Wi-Fi", path: "/business-wifi", icon: Wifi, tagline: "Enterprise Mesh Networks" },
   { label: "CCTV", path: "/cctv", icon: Camera, tagline: "Professional Camera Systems" },
   { label: "Wireless Distribution", path: "/wireless-distribution", icon: Radio, tagline: "Multi-Building Links" },
   { label: "Unified Communications", path: "/unified-communications", icon: Phone, tagline: "Cloud Collaboration" },
-  { label: "Network Infrastructure", path: "/network-infrastructure", icon: ServerCog, tagline: "Cabling, Cabinets & Fibre Links" },
+  { label: "Network Infrastructure", path: "/network-infrastructure", icon: ServerCog, tagline: "Cabling, Cabinets & fibre Links" },
   { label: "Managed Firewall", path: "/managed-firewall", icon: Shield, tagline: "Network Security & Protection" },
   { label: "Business Mobiles", path: "/business-mobiles", icon: Smartphone, tagline: "Multi-Network Mobile Plans" },
   { label: "Business Continuity", path: "/business-continuity", icon: Layers, tagline: "Layered Connectivity Resilience" },
@@ -166,7 +166,7 @@ const Navbar = () => {
                       </div>
                     </Link>
                     <div className="grid grid-cols-3">
-                      {/* Fibre Alternatives column */}
+                      {/* fibre Alternatives column */}
                       <div className="p-2">
                         <div className="px-3 py-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Fibre Alternatives</div>
                         {fibreAlternativeLinks.map((item) => (

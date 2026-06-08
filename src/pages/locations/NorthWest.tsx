@@ -25,12 +25,12 @@ const relatedServices = [
   },
   {
     title: "Leased Lines",
-    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/leased-lines",
   },
   {
-    title: "Business WiFi",
+    title: "Business Wi-Fi",
     description: "Enterprise-grade wireless networks for your office and operations.",
     icon: Wifi,
     href: "/business-wifi",
@@ -72,7 +72,7 @@ const NorthWest = () => {
       <SEO
         title="Rural Broadband North West | Integra Networks"
         description="Broadband for North West. Lancashire, Greater Manchester, Cheshire, Merseyside. 10-working-day install."
-        keywords="rural broadband North West, broadband Lancashire, Cheshire internet, Wigan broadband, Greater Manchester WiFi, rural connectivity"
+        keywords="rural broadband North West, broadband Lancashire, Cheshire internet, Wigan broadband, Greater Manchester Wi-Fi, rural connectivity"
         url="/locations/rural-broadband-north-west"
       />
       <SchemaMarkup
@@ -138,10 +138,10 @@ const NorthWest = () => {
               The North West Broadband Problem
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              Rural properties across Wigan, Bolton, Preston, Lancaster, and beyond face the same frustration: BT promised Fibre years ago. You're stuck with 4G that drops in buildings, satellite that fails in rain, or nothing at all.
+              Rural properties across Wigan, Bolton, Preston, Lancaster, and beyond face the same frustration: BT promised fibre years ago. You're stuck with 4G that drops in buildings, satellite that fails in rain, or nothing at all.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              The North West has difficult terrain—moorland, valleys, densely wooded areas. Running Fibre through this landscape costs BT thousands per mile. They focus on towns. Your country home waits.
+              The North West has difficult terrain—moorland, valleys, densely wooded areas. Running fibre through this landscape costs BT thousands per mile. They focus on towns. Your country home waits.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               We've installed at over 60 North West properties. We know Cumbrian fell country, Lancashire moorland, Cheshire farmland, and the valleys around Chester. We know which networks reach which locations. We know it works.
@@ -149,7 +149,7 @@ const NorthWest = () => {
 
             <div className="bg-muted/30 border border-border rounded-lg p-6 mb-8">
               <h3 className="font-medium text-foreground mb-3">
-                Why Standard Fibre Isn't Coming Soon
+                Why Standard fibre Isn't Coming Soon
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
                 <li className="flex gap-3">
@@ -277,7 +277,7 @@ const NorthWest = () => {
               A holiday cottage business near Windermere relied on Starlink, but guests complained about latency and streaming issues. The property had strong EE signal but weak O2.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              We recommended Integra Pro (bonded EE and O2). Installation: one day. Result: 250Mbps combined speed, rock-solid WiFi across the property, guests happy. Cost: £110/month.
+              We recommended Integra Pro (bonded EE and O2). Installation: one day. Result: 250Mbps combined speed, rock-solid Wi-Fi across the property, guests happy. Cost: £110/month.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               The business now runs online bookings, handles payments, and streams 4K video to guests without drops.

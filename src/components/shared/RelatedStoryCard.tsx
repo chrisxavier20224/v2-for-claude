@@ -37,7 +37,7 @@ interface StoryData {
 const storyMap: Record<string, StoryData> = {
   "royle-farm": {
     company: "Royle Farm Business Park",
-    strapline: "From Farm to Fibre: Royle Farm Business Park",
+    strapline: "From Farm to fibre: Royle Farm Business Park",
     image: royleFarmHero,
     logo: royleFarmLogo,
     path: "/customers/royle-farm",

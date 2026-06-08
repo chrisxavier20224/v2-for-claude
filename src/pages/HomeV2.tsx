@@ -34,7 +34,7 @@ const fadeUp = {
 const cornerCut = { clipPath: "polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px))" };
 const cornerCutTL = { clipPath: "polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px)" };
 
-// Fibre-optic abstract visual — replaces all "IMAGE:" placeholders
+// fibre-optic abstract visual — replaces all "IMAGE:" placeholders
 const FibreVisual = ({ className = "", variant = "a" }: { className?: string; variant?: "a" | "b" | "c" }) => {
   const gradients: Record<string, string> = {
     a: "radial-gradient(ellipse at 20% 30%, hsl(216 100% 55% / 0.45), transparent 55%), radial-gradient(ellipse at 80% 80%, hsl(195 100% 60% / 0.35), transparent 50%), linear-gradient(135deg, hsl(222 47% 8%), hsl(220 60% 14%))",
@@ -85,7 +85,7 @@ const ConnectorLine = () => (
 );
 
 const aboutPoints = [
-  { icon: Lightbulb, title: "Live while Fibre's still being built", description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives." },
+  { icon: Lightbulb, title: "Live while fibre's still being built", description: "No excess construction charges, no 8-week wait. Integra Bridge bonds satellite and cellular so your site is operational long before the leased line arrives." },
   { icon: Users, title: "99% UK coverage", description: "Multi-bearer connectivity works anywhere with a mobile signal or clear sky. Construction sites, business parks, multi-site rollouts — we've connected them all." },
   { icon: Headphones, title: "Real UK engineers, not a call centre", description: "When something needs sorting, you speak to the engineers who built your network. No ticket queues, no offshore support." },
 ];
@@ -97,7 +97,7 @@ const problemPoints = [
 ];
 
 const connectivityServices = [
-  { title: "Leased Lines", description: "Dedicated Fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.", img: leasedImg, link: "/leased-lines" },
+  { title: "Leased Lines", description: "Dedicated fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.", img: leasedImg, link: "/leased-lines" },
   { title: "SoGEA", description: "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.", img: fibreImg, link: "/sogea" },
   { title: "Managed Internet", description: "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.", img: bpImg, link: "/managed-internet" },
   { title: "Integra SD-WAN", description: "Bonded multi-carrier 4G/5G connectivity — a five-tier range from single-network failover up to 500Mbps, engineered and monitored per site.", img: sdwanImg, link: "/integra-sd-wan" },
@@ -135,7 +135,7 @@ const HomeV2 = () => {
               <source src="/video/hero-bg.webm" type="video/webm" />
               <source src="/video/hero-bg.mp4" type="video/mp4" />
             </video>
-            <img src={heroPoster} alt="Integra Networks Fibre connectivity" className="hidden motion-reduce:block w-full h-full object-cover" loading="eager" />
+            <img src={heroPoster} alt="Integra Networks fibre connectivity" className="hidden motion-reduce:block w-full h-full object-cover" loading="eager" />
             <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/70 to-surface-dark/30" />
             <div className="absolute inset-0 bg-gradient-to-r from-surface-dark/85 via-surface-dark/40 to-transparent" />
           </div>
@@ -146,10 +146,10 @@ const HomeV2 = () => {
             <AnimatedSection>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">Integra Networks</p>
               <h1 className="mb-8 text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] tracking-tight text-white max-w-5xl font-medium">
-                We'll get you Fibre. <span className="text-primary">While you wait,</span> we'll get you online.
+                We'll get you fibre. <span className="text-primary">While you wait,</span> we'll get you online.
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-10">
-                Leased lines, SoGEA, managed internet — the same Fibre destination as any major ISP. Plus Integra Bridge: enterprise-grade connectivity in days, while your Fibre's being built.
+                Leased lines, SoGEA, managed internet — the same fibre destination as any major ISP. Plus Integra Bridge: enterprise-grade connectivity in days, while your fibre's being built.
               </p>
               <div className="flex flex-wrap gap-4 mb-14">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -214,7 +214,7 @@ const HomeV2 = () => {
                   {/* floating caption tile */}
                   <div className="absolute -bottom-8 -left-8 lg:left-8 bg-background border border-border shadow-xl p-5 max-w-[260px]" style={cornerCutTL}>
                     <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-1">~10 weeks</p>
-                    <p className="text-sm text-foreground font-medium leading-snug">Average wait between order and live Fibre.</p>
+                    <p className="text-sm text-foreground font-medium leading-snug">Average wait between order and live fibre.</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -234,7 +234,7 @@ const HomeV2 = () => {
                   One thing no other ISP has: <span className="text-primary">the ability to bridge the gap.</span>
                 </h2>
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl">
-                  Every business waiting on Fibre faces the same dead zone — around 10 weeks between signing and going live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data centre, gives you enterprise-grade internet in 10 working days. When your Fibre lands, Bridge stays on as permanent failover.
+                  Every business waiting on fibre faces the same dead zone — around 10 weeks between signing and going live. Integra Bridge closes it. Bonded Starlink and 5G/4G, delivered over Layer 2 from our data centre, gives you enterprise-grade internet in 10 working days. When your fibre lands, Bridge stays on as permanent failover.
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium h-14 px-10 text-base" style={cornerCutTL}>
@@ -255,7 +255,7 @@ const HomeV2 = () => {
                   </div>
                   <div className="absolute -bottom-10 -left-6 lg:-left-12 bg-white/5 backdrop-blur border border-white/15 p-5 max-w-[240px]">
                     <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">Stays on</p>
-                    <p className="text-sm text-white/85 leading-snug">As permanent failover when Fibre lands.</p>
+                    <p className="text-sm text-white/85 leading-snug">As permanent failover when fibre lands.</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -326,7 +326,7 @@ const HomeV2 = () => {
                     <span className="inline-block w-fit bg-primary text-white text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-4">Featured</span>
                     <h3 className="text-3xl sm:text-5xl text-white font-medium mb-3 leading-tight">Integra Bridge</h3>
                     <p className="text-white/80 max-w-xl text-base sm:text-lg leading-relaxed mb-5">
-                      Enterprise internet in 10 working days while you wait for Fibre. Stays on as permanent failover.
+                      Enterprise internet in 10 working days while you wait for fibre. Stays on as permanent failover.
                     </p>
                     <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-widest group-hover:gap-3 transition-all">
                       Learn More <ArrowRight className="h-4 w-4" />
@@ -363,7 +363,7 @@ const HomeV2 = () => {
             <AnimatedSection>
               <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
                 <span className="text-sm text-white/60">Supporting solutions:</span>
-                <Link to="/business-wifi" className="text-sm text-primary hover:underline font-medium">Business WiFi</Link>
+                <Link to="/business-wifi" className="text-sm text-primary hover:underline font-medium">Business Wi-Fi</Link>
                 <span className="text-white/20">|</span>
                 <Link to="/unified-communications" className="text-sm text-primary hover:underline font-medium">Unified Communications</Link>
               </div>
@@ -588,7 +588,7 @@ const HomeV2 = () => {
             <AnimatedSection>
               <h2 className="text-heading-2 text-foreground text-center mb-6 font-medium">Business connectivity across the UK</h2>
               <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
-                <p>Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased lines, SoGEA, and managed internet — the same Fibre destination as any major ISP — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent Fibre is being built.</p>
+                <p>Integra Networks is a UK B2B internet provider built for multi-site businesses. We deliver leased lines, SoGEA, and managed internet — the same fibre destination as any major ISP — alongside Integra Bridge, the only product that gets you online in 10 working days while permanent fibre is being built.</p>
                 <p>Whether you're rolling out connectivity across a portfolio of construction sites, business parks, or industrial and retail estates, we engineer resilient networks with SLA-backed uptime, proactive monitoring, and UK-based engineering support on every call.</p>
                 <p>Our coverage spans 99% of the UK, including London, the South East, the South West, the Midlands, the North West, and Yorkshire. Every deployment starts with a desktop survey from our engineering team, so you know exactly what bearer mix and SLA fits your sites before anything goes live.</p>
               </div>

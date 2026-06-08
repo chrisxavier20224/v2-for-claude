@@ -202,9 +202,9 @@ const TermsOfService = () => {
       <LegalParagraph>
         14.1.2 If the customer is unhappy with the speeds presented after installation, they have the right to cancel the install and for the hardware to be removed from site, with the installation fee refunded.
       </LegalParagraph>
-      <LegalSubheading>Integra Fibre</LegalSubheading>
+      <LegalSubheading>Integra fibre</LegalSubheading>
       <LegalParagraph>
-        Integra Fibre contracts are based on a minimum term of 12 months. Should a tenant wish to cancel, a 30-day notice period is required.
+        Integra fibre contracts are based on a minimum term of 12 months. Should a tenant wish to cancel, a 30-day notice period is required.
       </LegalParagraph>
       <LegalParagraph>
         14.3 Either party may immediately terminate the Agreement if the other party commits an irremediable material breach, fails to remedy a breach within 30 days, fails to pay within 28 days, or becomes insolvent.

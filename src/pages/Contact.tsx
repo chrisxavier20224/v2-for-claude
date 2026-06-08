@@ -86,7 +86,7 @@ const Contact = () => {
     <PageLayout hideCTA>
       <SEO
         title="Contact Integra Networks | UK Business Connectivity"
-        description="Talk to Integra Networks. SD-WAN, leased lines, business WiFi, unified comms, network infrastructure — we design, install, and manage it all."
+        description="Talk to Integra Networks. SD-WAN, leased lines, business Wi-Fi, unified comms, network infrastructure — we design, install, and manage it all."
         keywords="contact Integra Networks, connectivity consultation, managed services, business broadband"
         url="/contact"
       />
@@ -104,7 +104,7 @@ const Contact = () => {
                 Tell us what you need. We'll make it happen.
               </h1>
               <p className="mb-8 text-lg text-surface-dark-muted leading-relaxed">
-                SD-WAN, leased lines, business WiFi, unified comms, CCTV, network infrastructure — we design, install, and manage it all. Tell us what you're dealing with and we'll come back with a plan.
+                SD-WAN, leased lines, business Wi-Fi, unified comms, CCTV, network infrastructure — we design, install, and manage it all. Tell us what you're dealing with and we'll come back with a plan.
               </p>
 
               {/* Contact details */}
@@ -211,7 +211,7 @@ const Contact = () => {
                       </label>
                       <Textarea
                         id="message"
-                        placeholder="Tell us what you need — connectivity, WiFi, infrastructure, or all of the above..."
+                        placeholder="Tell us what you need — connectivity, Wi-Fi, infrastructure, or all of the above..."
                         value={form.message}
                         onChange={handleChange}
                         className="mt-1.5 bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 focus:border-primary focus:ring-primary/20"

@@ -101,7 +101,7 @@ const SteamRally = () => {
               WSRA's annual Steam Rally draws 8,000 vintage transport enthusiasts to rural Somerset. It's their main fundraiser—critical for keeping the historic West Somerset Railway alive.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              But they run it in a field with no Fibre. No traditional infrastructure. Just grass, steam engines, and the desperate need to keep payments processing all day long.
+              But they run it in a field with no fibre. No traditional infrastructure. Just grass, steam engines, and the desperate need to keep payments processing all day long.
             </p>
           </AnimatedSection>
 
@@ -111,7 +111,7 @@ const SteamRally = () => {
               During the rally, card terminals need to work. Constantly. Food vendors, ticket booths, exhibitor payments—all rely on live connectivity. Drop the connection for 30 seconds and transactions fail. Visitors get angry. Sales disappear. The year's fundraising evaporates.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Previous years, they'd rented temporary WiFi systems and watched them buckle under 8,000 visitors. Weak signals in tents. Dead zones at the food court. Customers abandoning transactions. They needed bulletproof connectivity, not a band-aid.
+              Previous years, they'd rented temporary Wi-Fi systems and watched them buckle under 8,000 visitors. Weak signals in tents. Dead zones at the food court. Customers abandoning transactions. They needed bulletproof connectivity, not a band-aid.
             </p>
           </AnimatedSection>
 
@@ -165,7 +165,7 @@ const SteamRally = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
               { label: "Integra Bridge", href: "/integra-bridge" },
-              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Business Wi-Fi", href: "/business-wifi" },
             ].map((s) => (
               <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
                 <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>

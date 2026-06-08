@@ -56,15 +56,15 @@ const IoTConnectivityAgriculture = () => (
       <li>Water tank is 3km north</li>
     </ul>
 
-    <p>Standard WiFi doesn't reach. Cellular might be patchy.</p>
+    <p>Standard Wi-Fi doesn't reach. Cellular might be patchy.</p>
 
     <p>IoT devices need <strong>long-range, low-power, reliable</strong> connectivity.</p>
 
     <h2>IoT Connectivity Options</h2>
 
-    <h3>Option 1: WiFi + Range Extenders</h3>
+    <h3>Option 1: Wi-Fi + Range Extenders</h3>
 
-    <p>Extend your main WiFi across the property using repeaters or mesh nodes.</p>
+    <p>Extend your main Wi-Fi across the property using repeaters or mesh nodes.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>
@@ -130,11 +130,11 @@ const IoTConnectivityAgriculture = () => (
     <ul>
       <li>Main site has broadband + radio transmitter</li>
       <li>Radio antenna on main house broadcasts</li>
-      <li>Remote locations have receiving antenna + local WiFi/Ethernet</li>
+      <li>Remote locations have receiving antenna + local Wi-Fi/Ethernet</li>
       <li>Data flows back through the radio link</li>
     </ul>
 
-    <p><strong>Real example:</strong> Main farmhouse has Integra Pro broadband. Radio antenna on the roof broadcasts. Your barn 2km away has receiving antenna + WiFi mesh covering the barn and grazing fields nearby.</p>
+    <p><strong>Real example:</strong> Main farmhouse has Integra Pro broadband. Radio antenna on the roof broadcasts. Your barn 2km away has receiving antenna + Wi-Fi mesh covering the barn and grazing fields nearby.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>
@@ -171,9 +171,9 @@ const IoTConnectivityAgriculture = () => (
     <ul>
       <li>4G/5G bonded connection at farmhouse</li>
       <li>Radio antenna on barn roof, linked to farmhouse</li>
-      <li>Remote WiFi mesh nodes in grazing fields</li>
+      <li>Remote Wi-Fi mesh nodes in grazing fields</li>
       <li>Livestock GPS trackers (cellular SIM each)</li>
-      <li>IoT sensors (soil, water, cameras) on the remote WiFi network</li>
+      <li>IoT sensors (soil, water, cameras) on the remote Wi-Fi network</li>
     </ul>
 
     <p><strong>Result:</strong></p>
@@ -190,7 +190,7 @@ const IoTConnectivityAgriculture = () => (
 
     <p><strong>Single building / under 500m distance:</strong></p>
     <ul>
-      <li>WiFi range extenders or mesh (budget-friendly one-time investment)</li>
+      <li>Wi-Fi range extenders or mesh (budget-friendly one-time investment)</li>
     </ul>
 
     <p><strong>Multiple buildings / 500m-2km distance:</strong></p>
@@ -222,25 +222,25 @@ const IoTConnectivityAgriculture = () => (
 
     <p>Integra Pro's multi-network SIMs provide around 1.8TB of data per month — far more than any farm IoT setup would use. A fair usage policy applies, but in practice agricultural IoT sensors use very little data.</p>
 
-    <h2>Important: Cellular SIM vs WiFi for IoT</h2>
+    <h2>Important: Cellular SIM vs Wi-Fi for IoT</h2>
 
     <p><strong>IoT devices with cellular SIM:</strong></p>
     <ul>
       <li>Work anywhere (even remote fields)</li>
-      <li>No WiFi dependency</li>
-      <li>Battery-powered sensors use less power than WiFi</li>
+      <li>No Wi-Fi dependency</li>
+      <li>Battery-powered sensors use less power than Wi-Fi</li>
       <li>Cost: Competitive monthly rate per device</li>
     </ul>
 
-    <p><strong>IoT devices on your WiFi:</strong></p>
+    <p><strong>IoT devices on your Wi-Fi:</strong></p>
     <ul>
-      <li>Rely on WiFi coverage</li>
-      <li>Need WiFi infrastructure (mesh nodes, repeaters)</li>
+      <li>Rely on Wi-Fi coverage</li>
+      <li>Need Wi-Fi infrastructure (mesh nodes, repeaters)</li>
       <li>Work well for stationary sensors</li>
-      <li>Cost: One-time WiFi setup</li>
+      <li>Cost: One-time Wi-Fi setup</li>
     </ul>
 
-    <p><strong>Hybrid approach:</strong> Mix both. Livestock trackers get cellular SIMs (they roam). Barn sensors on WiFi (they're stationary).</p>
+    <p><strong>Hybrid approach:</strong> Mix both. Livestock trackers get cellular SIMs (they roam). Barn sensors on Wi-Fi (they're stationary).</p>
 
     <img src={farmValley} alt="Farm village nestled in a valley — remote rural areas where Integra provides connectivity for smart agriculture" className="rounded-xl w-full" loading="lazy" />
 

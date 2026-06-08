@@ -24,7 +24,7 @@ const DecisionFrameworkArticle = () => (
 
     <NumberedSection number={2} title="The three options">
       <p>
-        <strong>Leased line.</strong> A dedicated Fibre circuit — symmetric,
+        <strong>Leased line.</strong> A dedicated fibre circuit — symmetric,
         uncontended, SLA-backed. The gold standard for a permanent site that
         cannot afford downtime. Its weaknesses are lead time and, where civils
         are involved, an excess construction charge that can run into five
@@ -51,7 +51,7 @@ const DecisionFrameworkArticle = () => (
         <strong>Integra Bridge.</strong> Bonded Starlink and 5G/4G delivered
         over Layer 2 from our data centre — enterprise-grade connectivity in
         around ten days, purpose-built for the gap while a permanent circuit
-        is being constructed. When the Fibre lands, Integra Bridge does not get
+        is being constructed. When the fibre lands, Integra Bridge does not get
         removed; it stays on as automatic failover.
       </p>
     </NumberedSection>
@@ -69,7 +69,7 @@ const DecisionFrameworkArticle = () => (
         <em>alongside</em> the leased line order rather than instead of it.
       </p>
       <p>
-        <strong>Location.</strong> Can Fibre reach the site economically? A
+        <strong>Location.</strong> Can fibre reach the site economically? A
         quote that comes back with a heavy excess construction charge, or
         stalls on a wayleave, is not a reason to wait — it is a signal that
         bonded SD-WAN or Integra Bridge has stopped being the compromise and become the better primary.
@@ -107,13 +107,13 @@ const DecisionFrameworkArticle = () => (
     <NumberedSection number={4} title="The framework">
       <p>Run those factors and most decisions resolve cleanly:</p>
       <ul>
-        <li>Permanent site, Fibre available, timeline works → leased line.</li>
+        <li>Permanent site, fibre available, timeline works → leased line.</li>
         <li>
-          Permanent site, Fibre cannot reach or costs too much → bonded SD-WAN
+          Permanent site, fibre cannot reach or costs too much → bonded SD-WAN
           or Integra Bridge as the primary.
         </li>
         <li>
-          Permanent site, Fibre ordered but months away → Integra Bridge now, leased
+          Permanent site, fibre ordered but months away → Integra Bridge now, leased
           line later, Integra Bridge stays as failover.
         </li>
         <li>Temporary or moving site → bonded SD-WAN or Integra Bridge, every time.</li>
@@ -137,7 +137,7 @@ const DecisionFrameworkArticle = () => (
       <p>
         An estate has a head office that warrants a leased line, regional
         sites where bonded SD-WAN or Integra Bridge is the sensible primary, a new location where
-        Integra Bridge covers the gap until Fibre arrives, and a temporary site that
+        Integra Bridge covers the gap until fibre arrives, and a temporary site that
         will only ever be wireless. A connectivity <em>strategy</em> is not
         picking a winner — it is matching each site to what it needs, and
         layering the right resilience behind each one.

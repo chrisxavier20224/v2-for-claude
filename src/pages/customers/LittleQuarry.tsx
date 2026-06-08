@@ -100,14 +100,14 @@ const LittleQuarry = () => {
               Picture this: guests pay premium rates for a luxury pod retreat. They arrive ready to disconnect—but then reality hits. Their streaming buffers. Their video calls drop. Their Zoom meetings freeze.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Little Quarry's location near Goudhurst was idyllic for guests seeking peace. But it was a digital desert. No Fibre. Minimal mobile signal. The existing connectivity was slower than dial-up. Guests could escape the world—but they couldn't actually stay connected when they needed to. That's a problem for modern travellers.
+              Little Quarry's location near Goudhurst was idyllic for guests seeking peace. But it was a digital desert. No fibre. Minimal mobile signal. The existing connectivity was slower than dial-up. Guests could escape the world—but they couldn't actually stay connected when they needed to. That's a problem for modern travellers.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">The Cost: Lost Bookings, Bad Reviews</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Owner Nick Parr watched guests leave negative reviews. "No WiFi in the pods." "Couldn't work from here." "Internet is useless." Sure, they loved the scenery—but they'd book elsewhere next time. In luxury accommodation, connectivity isn't a nice-to-have. It's table stakes.
+              Owner Nick Parr watched guests leave negative reviews. "No Wi-Fi in the pods." "Couldn't work from here." "Internet is useless." Sure, they loved the scenery—but they'd book elsewhere next time. In luxury accommodation, connectivity isn't a nice-to-have. It's table stakes.
             </p>
           </AnimatedSection>
 
@@ -138,7 +138,7 @@ const LittleQuarry = () => {
           <AnimatedSection>
             <h2 className="text-heading-1 text-foreground mb-6">The Solution: Bonded 4G, Hidden Infrastructure</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Integra surveyed the site. No Fibre possible. No point waiting. They went after nearby mobile signals—the invisible infrastructure already covering the area. Using SD-WAN technology, they bonded multiple 4G connections into one seamless, fast network. And they hid it all: antennas positioned to blend with the landscape, equipment tucked away. The glamping vibe remained untouched.
+              Integra surveyed the site. No fibre possible. No point waiting. They went after nearby mobile signals—the invisible infrastructure already covering the area. Using SD-WAN technology, they bonded multiple 4G connections into one seamless, fast network. And they hid it all: antennas positioned to blend with the landscape, equipment tucked away. The glamping vibe remained untouched.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Result: 10 working days from decision to live. Guests now get close to 300Mbps download speeds. Video calls work. Streaming works. Zoom calls don't freeze. Little Quarry pods now have everything: luxury, peace, and real internet.
@@ -154,7 +154,7 @@ const LittleQuarry = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
               { label: "Integra SD-WAN", href: "/integra-sd-wan" },
-              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Business Wi-Fi", href: "/business-wifi" },
             ].map((s) => (
               <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
                 <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>

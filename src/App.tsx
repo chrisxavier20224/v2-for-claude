@@ -85,7 +85,7 @@ const LocationCotswolds = lazy(() => import("./pages/locations/Cotswolds"));
 const About = lazy(() => import("./pages/About"));
 const AccessBroadbandCymru = lazy(() => import("./pages/resources/AccessBroadbandCymru"));
 const PSTNSwitchOff = lazy(() => import("./pages/resources/PSTNSwitchOff"));
-const AlternativesToFibre = lazy(() => import("./pages/resources/AlternativesToFibre"));
+const AlternativesTofibre = lazy(() => import("./pages/resources/AlternativesTofibre"));
 const StarlinkForBusiness = lazy(() => import("./pages/resources/StarlinkForBusiness"));
 const LeasedLines = lazy(() => import("./pages/connectivity/LeasedLines"));
 const UnifiedCommunications = lazy(() => import("./pages/connectivity/UnifiedCommunications"));
@@ -276,7 +276,7 @@ const App = () => (
               <Route path="/insights/wholesale-connectivity-model" element={<Navigate to="/insights/wholesale-isp-partner-program" replace />} />
               <Route path="/access-broadband-cymru" element={<AccessBroadbandCymru />} />
               <Route path="/pstn-switch-off" element={<PSTNSwitchOff />} />
-              <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
+              <Route path="/alternatives-to-fibre-broadband" element={<AlternativesTofibre />} />
               <Route path="/rural-business-broadband" element={<RuralSMEs />} />
               <Route path="/starlink-for-business" element={<StarlinkForBusiness />} />
               <Route path="/sd-wan-for-small-business" element={<BusinessBroadbandLanding />} />

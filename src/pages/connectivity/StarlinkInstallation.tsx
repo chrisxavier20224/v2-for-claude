@@ -36,8 +36,8 @@ const relatedServices = [
     icon: Settings,
   },
   {
-    title: "Business WiFi",
-    description: "Professional WiFi to extend your Starlink connection throughout your location.",
+    title: "Business Wi-Fi",
+    description: "Professional Wi-Fi to extend your Starlink connection throughout your location.",
     href: "/business-wifi",
     icon: Wifi,
   },

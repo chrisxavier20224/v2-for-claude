@@ -44,7 +44,7 @@ const RuralBroadband = () => {
 
   const painPoints = [
     {
-      title: "No Fibre Available",
+      title: "No fibre Available",
       description: "Rural areas often fall through the gaps of traditional broadband rollouts.",
     },
     {
@@ -57,7 +57,7 @@ const RuralBroadband = () => {
     },
     {
       title: "Expensive Construction",
-      description: "Traditional Fibre installation costs thousands in groundwork and permits.",
+      description: "Traditional fibre installation costs thousands in groundwork and permits.",
     },
   ];
 
@@ -75,7 +75,7 @@ const RuralBroadband = () => {
     {
       question: "How many buildings can you cover?",
       answer:
-        "Starlink covers a wide area once installed. We can add multiple 4G/5G boosters for larger estates. Most rural estates with buildings within 500m of each other can be covered with a single Starlink + distributed mesh WiFi.",
+        "Starlink covers a wide area once installed. We can add multiple 4G/5G boosters for larger estates. Most rural estates with buildings within 500m of each other can be covered with a single Starlink + distributed mesh Wi-Fi.",
     },
     {
       question: "Will this work in really bad weather?",
@@ -92,8 +92,8 @@ const RuralBroadband = () => {
   return (
     <PageLayout>
       <SEO
-        title="Rural Business Broadband UK | Fast Internet, No Fibre Needed"
-        description="Fast, reliable broadband for rural businesses and farms. No Fibre? No problem. Starlink SD-WAN with 4G/5G failover. 99% UK coverage. Installed in 10 working days."
+        title="Rural Business Broadband UK | Fast Internet, No fibre Needed"
+        description="Fast, reliable broadband for rural businesses and farms. No fibre? No problem. Starlink SD-WAN with 4G/5G failover. 99% UK coverage. Installed in 10 working days."
         keywords="rural broadband, countryside internet, farm broadband, rural wifi, Starlink UK"
         url="/lp/rural-broadband"
       />
@@ -104,7 +104,7 @@ const RuralBroadband = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <AnimatedSection>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl">
-              Fast, Reliable Broadband — Even Where Fibre Can't Reach
+              Fast, Reliable Broadband — Even Where fibre Can't Reach
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
               No more 10 Mbps. No digging. No planning permission. Get connected to 350 Mbps in 10 working days with our Starlink SD-WAN solution. Used by farms, estates, and rural businesses across the UK.
@@ -181,7 +181,7 @@ const RuralBroadband = () => {
               <div className="text-5xl md:text-6xl font-medium text-primary mb-2">14</div>
               <h3 className="text-xl font-medium text-foreground mb-3">Days Average Install</h3>
               <p className="text-muted-foreground">
-                From survey to live. Fast. Unlike traditional Fibre which can take 12+ weeks.
+                From survey to live. Fast. Unlike traditional fibre which can take 12+ weeks.
               </p>
             </motion.div>
           </motion.div>
@@ -249,7 +249,7 @@ const RuralBroadband = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Mesh WiFi for large estates</span>
+                  <span>Mesh Wi-Fi for large estates</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>

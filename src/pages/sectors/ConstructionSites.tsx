@@ -64,8 +64,8 @@ const relatedServices = [
     icon: Zap,
   },
   {
-    title: "Business WiFi",
-    description: "Professional WiFi for site offices and welfare facilities.",
+    title: "Business Wi-Fi",
+    description: "Professional Wi-Fi for site offices and welfare facilities.",
     href: "/business-wifi",
     icon: Wifi,
   },
@@ -83,7 +83,7 @@ const ConstructionSites = () => {
       <SEO
         title="Construction Site Internet"
         description="Construction site broadband live in 48 hours. Cellular SD-WAN that survives weather, dust, and rough deployment. CCTV-ready static IPs. Monthly contracts."
-        keywords="construction site internet, construction WiFi, site connectivity, SD-WAN construction, temporary internet, portable broadband, site office internet"
+        keywords="construction site internet, construction Wi-Fi, site connectivity, SD-WAN construction, temporary internet, portable broadband, site office internet"
         url="/construction-site-broadband"
       />
 
@@ -143,7 +143,7 @@ const ConstructionSites = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Live in 10 working days.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure WiFi network across your site office and welfare facilities. And when Fibre's on the way to your permanent site office, <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
+              Openreach won't come to a construction site without utilities. We will. Our engineers deploy cellular SD-WAN in days — two 4G/5G connections bonded for speed and reliability, with a secure Wi-Fi network across your site office and welfare facilities. And when fibre's on the way to your permanent site office, <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> keeps you live until it lands.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>

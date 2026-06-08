@@ -3,13 +3,13 @@ import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 
 const MultiBuildingWifi = () => (
   <BlogArticleLayout slug="multi-building-wifi-rural-properties">
-    <p>Your main house has WiFi. But your barn is out of range. Your office building (300m away) has no signal. Your guest cottage needs connectivity but wiring 300m of cable is crazy expensive.</p>
+    <p>Your main house has Wi-Fi. But your barn is out of range. Your office building (300m away) has no signal. Your guest cottage needs connectivity but wiring 300m of cable is crazy expensive.</p>
 
-    <p>Multi-building WiFi solves this.</p>
+    <p>Multi-building Wi-Fi solves this.</p>
 
-    <h2>The Problem: WiFi Range Limits</h2>
+    <h2>The Problem: Wi-Fi Range Limits</h2>
 
-    <p>Standard WiFi router:</p>
+    <p>Standard Wi-Fi router:</p>
     <ul>
       <li>30-50m range indoors</li>
       <li>100m range outdoors in ideal conditions</li>
@@ -20,20 +20,20 @@ const MultiBuildingWifi = () => (
 
     <p><strong>Common solutions that don't work:</strong></p>
     <ul>
-      <li>❌ Buying a "WiFi extender" (range stays bad, speed drops)</li>
+      <li>❌ Buying a "Wi-Fi extender" (range stays bad, speed drops)</li>
       <li>❌ Wiring Ethernet across the property (can be expensive for long distances)</li>
       <li>❌ Putting a second router in each building (no coordination, devices keep switching)</li>
     </ul>
 
-    <h2>What Actually Works: Mesh WiFi</h2>
+    <h2>What Actually Works: Mesh Wi-Fi</h2>
 
-    <p>Mesh WiFi uses multiple access points coordinated by one system. Each AP talks to others. Devices seamlessly roam between them.</p>
+    <p>Mesh Wi-Fi uses multiple access points coordinated by one system. Each AP talks to others. Devices seamlessly roam between them.</p>
 
-    <p><strong>Example:</strong> Walk from main house to barn with your phone. On your main house WiFi, your signal is strong. As you walk toward the barn, a mesh node in the barn automatically becomes your primary AP. No reconnection, no drop.</p>
+    <p><strong>Example:</strong> Walk from main house to barn with your phone. On your main house Wi-Fi, your signal is strong. As you walk toward the barn, a mesh node in the barn automatically becomes your primary AP. No reconnection, no drop.</p>
 
-    <h2>Mesh WiFi Setup (Multi-Building)</h2>
+    <h2>Mesh Wi-Fi Setup (Multi-Building)</h2>
 
-    <h3>Step 1: Main Router + Primary WiFi</h3>
+    <h3>Step 1: Main Router + Primary Wi-Fi</h3>
 
     <p>Your primary broadband connection (Integra Pro, Starlink SD-WAN, or leased line) connects to a mesh router (commercial-grade mesh system, or similar).</p>
 
@@ -44,7 +44,7 @@ const MultiBuildingWifi = () => (
     <p>Each node has its own:</p>
     <ul>
       <li>Wireless antenna (for client devices: phones, laptops, smart sensors)</li>
-      <li>Wireless backhaul (talks back to main router via WiFi)</li>
+      <li>Wireless backhaul (talks back to main router via Wi-Fi)</li>
     </ul>
 
     <p>OR wired backhaul (if you can run Ethernet between buildings)</p>
@@ -53,20 +53,20 @@ const MultiBuildingWifi = () => (
 
     <p>If you can run Ethernet between buildings (underground cable, fiber, P2P radio link), backhaul is more stable.</p>
 
-    <p>Mesh nodes then use wired connection to main router and dedicate WiFi for client devices.</p>
+    <p>Mesh nodes then use wired connection to main router and dedicate Wi-Fi for client devices.</p>
 
     <h2>Real Example: Holiday Cottage Complex</h2>
 
     <p>A rural holiday cottage complex had:</p>
     <ul>
-      <li>Main reception building (WiFi)</li>
-      <li>6 guest cottages (no WiFi, 100-200m away)</li>
-      <li>Communal barn (no WiFi, 150m away)</li>
+      <li>Main reception building (Wi-Fi)</li>
+      <li>6 guest cottages (no Wi-Fi, 100-200m away)</li>
+      <li>Communal barn (no Wi-Fi, 150m away)</li>
     </ul>
 
-    <p><strong>Problem:</strong> Guests wanted WiFi. Wiring Ethernet across the property to each cottage would have been prohibitively expensive.</p>
+    <p><strong>Problem:</strong> Guests wanted Wi-Fi. Wiring Ethernet across the property to each cottage would have been prohibitively expensive.</p>
 
-    <p><strong>Solution:</strong> Multi-building mesh WiFi.</p>
+    <p><strong>Solution:</strong> Multi-building mesh Wi-Fi.</p>
 
     <p><strong>Setup:</strong></p>
     <ul>
@@ -75,19 +75,19 @@ const MultiBuildingWifi = () => (
       <li>Barn: mesh access point for staff/guests</li>
     </ul>
 
-    <p><strong>WiFi backhaul:</strong> Each AP communicates wirelessly back to main controller. No wiring needed between buildings (though one cable from main broadband to mesh controller).</p>
+    <p><strong>Wi-Fi backhaul:</strong> Each AP communicates wirelessly back to main controller. No wiring needed between buildings (though one cable from main broadband to mesh controller).</p>
 
     <p><strong>Result:</strong></p>
     <ul>
-      <li>Entire property one WiFi network</li>
+      <li>Entire property one Wi-Fi network</li>
       <li>Guests get 100-150Mbps in each cottage</li>
-      <li>Staff in barn have WiFi</li>
+      <li>Staff in barn have Wi-Fi</li>
       <li>Single network to manage (not 7 separate routers)</li>
     </ul>
 
-    <p><strong>Cost:</strong> Professional mesh WiFi system for multi-building setup. Contact us for detailed pricing.</p>
+    <p><strong>Cost:</strong> Professional mesh Wi-Fi system for multi-building setup. Contact us for detailed pricing.</p>
 
-    <h2>Mesh WiFi Systems for Rural Properties</h2>
+    <h2>Mesh Wi-Fi Systems for Rural Properties</h2>
 
     <p>Commercial-grade mesh systems | Professional coverage | Medium setup | Web-based controller</p>
     <p>Enterprise mesh systems | Enterprise coverage | Hard setup | Complex management</p>
@@ -101,7 +101,7 @@ const MultiBuildingWifi = () => (
     <h3>Wireless Backhaul (Easiest):</h3>
     <ul>
       <li>Place mesh APs line-of-sight to main router</li>
-      <li>Each AP has WiFi backhaul link</li>
+      <li>Each AP has Wi-Fi backhaul link</li>
       <li>No cable between buildings</li>
       <li>Slight speed loss due to backhaul traffic</li>
     </ul>
@@ -110,7 +110,7 @@ const MultiBuildingWifi = () => (
     <ul>
       <li>Run Ethernet between buildings (underground, overhead, or through existing conduit)</li>
       <li>Each AP connects via Ethernet to main router</li>
-      <li>Backhaul is dedicated, so WiFi speeds stay high</li>
+      <li>Backhaul is dedicated, so Wi-Fi speeds stay high</li>
       <li>Setup is one-time cost (professional wiring + installation)</li>
     </ul>
 
@@ -118,7 +118,7 @@ const MultiBuildingWifi = () => (
     <ul>
       <li>Use point-to-point radio links between buildings instead of Ethernet</li>
       <li>Long-range (2km+), line-of-sight</li>
-      <li>200-500Mbps throughput (sufficient for WiFi backhaul)</li>
+      <li>200-500Mbps throughput (sufficient for Wi-Fi backhaul)</li>
       <li>Cost: Competitive pricing for P2P radio links per pair</li>
     </ul>
 
@@ -146,10 +146,10 @@ const MultiBuildingWifi = () => (
 
     <p><strong>Result:</strong></p>
     <ul>
-      <li>Farmhouse: 150Mbps WiFi</li>
-      <li>Barn: 150Mbps WiFi (wired backhaul = consistent)</li>
-      <li>Equipment shed: 80-100Mbps WiFi (wireless backhaul = slightly lower)</li>
-      <li>Guest cottage: 100-120Mbps WiFi (wireless backhaul)</li>
+      <li>Farmhouse: 150Mbps Wi-Fi</li>
+      <li>Barn: 150Mbps Wi-Fi (wired backhaul = consistent)</li>
+      <li>Equipment shed: 80-100Mbps Wi-Fi (wireless backhaul = slightly lower)</li>
+      <li>Guest cottage: 100-120Mbps Wi-Fi (wireless backhaul)</li>
     </ul>
 
     <p><strong>Cost:</strong></p>
@@ -160,7 +160,7 @@ const MultiBuildingWifi = () => (
       <li>Total: Contact us for comprehensive quote including broadband</li>
     </ul>
 
-    <h2>When Multi-Building WiFi Makes Sense</h2>
+    <h2>When Multi-Building Wi-Fi Makes Sense</h2>
 
     <p>✅ Holiday rental complex</p>
     <p>✅ Farm with multiple buildings</p>
@@ -168,15 +168,15 @@ const MultiBuildingWifi = () => (
     <p>✅ Mixed-use properties (home + office + storage)</p>
     <p>✅ Situations where wiring is expensive or impractical</p>
 
-    <p>❌ Single building (just use a good WiFi router)</p>
-    <p>❌ Buildings over 2km apart (use cellular IoT + WiFi at each location instead)</p>
+    <p>❌ Single building (just use a good Wi-Fi router)</p>
+    <p>❌ Buildings over 2km apart (use cellular IoT + Wi-Fi at each location instead)</p>
     <p>❌ Extreme rural isolation (satellite might be more cost-effective)</p>
 
     <h2>Important Consideration: Backhaul Connectivity</h2>
 
-    <p>Mesh WiFi only works if the main router has good broadband.</p>
+    <p>Mesh Wi-Fi only works if the main router has good broadband.</p>
 
-    <p>If your main connection is slow or unreliable, adding mesh APs won't help. The bottleneck is the backhaul, not the WiFi.</p>
+    <p>If your main connection is slow or unreliable, adding mesh APs won't help. The bottleneck is the backhaul, not the Wi-Fi.</p>
 
     <p><strong>Example:</strong> If your main connection is 20Mbps, that's the max any AP can deliver. 10 mesh APs won't improve it.</p>
 
@@ -192,11 +192,11 @@ const MultiBuildingWifi = () => (
       <li>Roaming optimization (seamless device switching)</li>
     </ul>
 
-    <p>Our team can design and install multi-building WiFi. We design and install commercial-grade mesh WiFi systems, but can advise on other systems.</p>
+    <p>Our team can design and install multi-building Wi-Fi. We design and install commercial-grade mesh Wi-Fi systems, but can advise on other systems.</p>
 
     <h2>Next Step</h2>
 
-    <p>Have a multi-building property needing WiFi?</p>
+    <p>Have a multi-building property needing Wi-Fi?</p>
 
     <p>Email us:</p>
     <ul>

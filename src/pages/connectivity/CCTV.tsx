@@ -109,7 +109,7 @@ const cctvBreadcrumbSchema = {
 const relatedServices = [
   {
     icon: Wifi,
-    title: "Business WiFi",
+    title: "Business Wi-Fi",
     description: "Professional mesh networks for commercial properties.",
     href: "/business-wifi",
   },
@@ -218,7 +218,7 @@ const CCTV = () => {
             <div className="text-right">
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-white max-w-lg ml-auto">Network infrastructure that scales with you.</h2>
               <p className="text-lg text-white/80 leading-relaxed max-w-md ml-auto">
-                All cameras run over PoE — no separate power supplies, no spaghetti of cabling. We deploy commercial-grade PoE switches with multimode Fibre links and proper cable management. Your CCTV network integrates seamlessly with your existing Integra infrastructure: SD-WAN, WiFi, and connectivity all managed from one place.
+                All cameras run over PoE — no separate power supplies, no spaghetti of cabling. We deploy commercial-grade PoE switches with multimode fibre links and proper cable management. Your CCTV network integrates seamlessly with your existing Integra infrastructure: SD-WAN, Wi-Fi, and connectivity all managed from one place.
               </p>
             </div>
           </AnimatedSection>
@@ -285,7 +285,7 @@ const CCTV = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Integration with Your Integra Network.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              CCTV doesn't exist in isolation. If you're already using Integra for SD-WAN connectivity or WiFi, we integrate your CCTV system into the same managed infrastructure. One dashboard for all your network services. One support number. Consolidated billing. Your CCTV feeds travel over the same secure, monitored network that handles your business traffic.
+              CCTV doesn't exist in isolation. If you're already using Integra for SD-WAN connectivity or Wi-Fi, we integrate your CCTV system into the same managed infrastructure. One dashboard for all your network services. One support number. Consolidated billing. Your CCTV feeds travel over the same secure, monitored network that handles your business traffic.
             </p>
           </div>
         </AnimatedSection>

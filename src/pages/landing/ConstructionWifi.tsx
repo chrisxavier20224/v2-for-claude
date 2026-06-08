@@ -33,7 +33,7 @@ const relatedServices = [
   },
   {
     icon: Wifi,
-    title: "Business WiFi",
+    title: "Business Wi-Fi",
     description: "Enterprise-grade wireless coverage for site infrastructure",
     href: "/business-wifi",
   },
@@ -45,7 +45,7 @@ const ConstructionWifi = () => {
   const painPoints = [
     {
       title: "Sites Go Dark",
-      description: "No WiFi = site managers can't access plans, send photos, or manage contractors.",
+      description: "No Wi-Fi = site managers can't access plans, send photos, or manage contractors.",
     },
     {
       title: "Dead Zones Everywhere",
@@ -92,8 +92,8 @@ const ConstructionWifi = () => {
   return (
     <PageLayout>
       <SEO
-        title="Construction Site WiFi | Temporary Broadband Live in 48h"
-        description="Fast WiFi for construction sites in 48 hours. Temporary or permanent. Weather-resistant. Multi-site coverage. Flexible contract terms — from short-term agreements up to 36 months. Integra Networks."
+        title="Construction Site Wi-Fi | Temporary Broadband Live in 48h"
+        description="Fast Wi-Fi for construction sites in 48 hours. Temporary or permanent. Weather-resistant. Multi-site coverage. Flexible contract terms — from short-term agreements up to 36 months. Integra Networks."
         keywords="construction site wifi, site broadband, temporary internet, construction, portable broadband"
         url="/lp/construction-wifi"
       />
@@ -104,10 +104,10 @@ const ConstructionWifi = () => {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <AnimatedSection>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6 text-heading-1 md:text-display-sm text-white max-w-3xl">
-              Construction Site Broadband — Live in 48 Hours, No Fibre Required
+              Construction Site Broadband — Live in 48 Hours, No fibre Required
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              Get WiFi on your construction sites in 2 days. No digging. No long contracts. Weather-resistant equipment covers every cabin, office, and outdoor area. Scale up or down as your project grows.
+              Get Wi-Fi on your construction sites in 2 days. No digging. No long contracts. Weather-resistant equipment covers every cabin, office, and outdoor area. Scale up or down as your project grows.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium h-12 px-8 text-base">
@@ -165,7 +165,7 @@ const ConstructionWifi = () => {
               <div className="text-5xl md:text-6xl font-medium text-primary mb-2">48h</div>
               <h3 className="text-xl font-medium text-foreground mb-3">Live in 2 Days</h3>
               <p className="text-muted-foreground">
-                Equipment shipped next day. Installed and live by day 2. No waiting for Fibre crews.
+                Equipment shipped next day. Installed and live by day 2. No waiting for fibre crews.
               </p>
             </motion.div>
 
@@ -212,7 +212,7 @@ const ConstructionWifi = () => {
               <ul className="text-surface-dark-muted space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Portable WiFi hotspots</span>
+                  <span>Portable Wi-Fi hotspots</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">✓</span>
@@ -391,7 +391,7 @@ const ConstructionWifi = () => {
                   Connect Your Site in 48 Hours
                 </h2>
                 <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-                  No waiting for Fibre crews. Flexible terms. Get reliable WiFi across all your site buildings and stay flexible as your project evolves.
+                  No waiting for fibre crews. Flexible terms. Get reliable Wi-Fi across all your site buildings and stay flexible as your project evolves.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild size="lg" className="bg-white text-surface-dark font-semibold hover:bg-white/90">

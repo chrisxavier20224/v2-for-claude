@@ -77,9 +77,9 @@ const SERVICE_OPTIONS: { value: ServiceType; icon: typeof Building2; title: stri
 const PAIN_POINTS: { value: PainPoint; label: string }[] = [
   { value: "slow_connection", label: "We have an existing internet connection that is simply too slow" },
   { value: "intermittent", label: "Our critical services are working intermittently due to poor broadband" },
-  { value: "moving_no_fibre", label: "We are moving to a new location and Fibre isn't available" },
+  { value: "moving_no_fibre", label: "We are moving to a new location and fibre isn't available" },
   { value: "need_faster", label: "We need a faster connection to scale our business operations" },
-  { value: "quoted_thousands", label: "We have been quoted thousands to have a Fibre connection installed" },
+  { value: "quoted_thousands", label: "We have been quoted thousands to have a fibre connection installed" },
 ];
 
 const TYPE_LABELS: Record<ServiceType, string> = {
@@ -109,18 +109,18 @@ const USER_TYPE_HS: Record<string, string> = {
 const PAIN_LABEL_HS: Record<string, string> = {
   slow_connection: "Existing connection too slow",
   intermittent: "Critical services intermittent due to poor broadband",
-  moving_no_fibre: "Moving to new location, Fibre not available",
+  moving_no_fibre: "Moving to new location, fibre not available",
   need_faster: "Need faster connection to scale operations",
-  quoted_thousands: "Quoted thousands for Fibre install",
+  quoted_thousands: "Quoted thousands for fibre install",
 };
 
 /* CRM values for which_statement_applies_to_you_ (must match exactly, including legacy typos) */
 const PAIN_CRM_VALUE: Record<string, string> = {
   slow_connection: "We have an existing internet connection that is simply to slow",
   intermittent: "Our critical services are working intermittantly due to poor broadband",
-  moving_no_fibre: "We are moving to a new location and Fibre isn't available",
+  moving_no_fibre: "We are moving to a new location and fibre isn't available",
   need_faster: "We need a faster connection to scale our business operations",
-  quoted_thousands: "We have been quoted thousands to have a Fibre connection installed.",
+  quoted_thousands: "We have been quoted thousands to have a fibre connection installed.",
 };
 
 async function submitToHubSpot(payload: {

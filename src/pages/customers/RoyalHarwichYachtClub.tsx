@@ -33,7 +33,7 @@ const RoyalHarwichYachtClub = () => {
     <PageLayout>
       <SEO
         title="Royal Harwich Yacht Club Case Study — Integra Networks"
-        description="Royal Harwich Yacht Club got over 300Mbps connectivity bonded from 4G/5G connections via Integra, transforming operations where Fibre was impossible."
+        description="Royal Harwich Yacht Club got over 300Mbps connectivity bonded from 4G/5G connections via Integra, transforming operations where fibre was impossible."
         keywords="case study, Royal Harwich Yacht Club, sailing, SD-WAN, connectivity, Integra Networks"
         url="/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey"
       />
@@ -58,7 +58,7 @@ const RoyalHarwichYachtClub = () => {
             </motion.div>
             <h1 className="mb-6 text-heading-1 md:text-display-sm text-white max-w-2xl">Full Sail: How a Yacht Club Got 300Mbps in the Middle of Nowhere</h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-              When Fibre was impossible, Integra bonded 4G/5G to deliver over 300Mbps. Now card payments never fail and VoIP actually works.
+              When fibre was impossible, Integra bonded 4G/5G to deliver over 300Mbps. Now card payments never fail and VoIP actually works.
             </p>
           </AnimatedSection>
         </div>
@@ -107,7 +107,7 @@ const RoyalHarwichYachtClub = () => {
           <AnimatedSection delay={0.1} className="mt-16">
             <h2 className="text-heading-1 text-foreground mb-6">What They Needed: Connectivity That Actually Worked</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              The club didn't need flashy tech. They needed reliable internet. Fast enough for card payments. Stable enough for VoIP. Good enough to integrate with their WiFi network. But no leased line provider would touch Woolverstone. And traditional broadband meant waiting weeks for a service that would barely keep up with demand.
+              The club didn't need flashy tech. They needed reliable internet. Fast enough for card payments. Stable enough for VoIP. Good enough to integrate with their Wi-Fi network. But no leased line provider would touch Woolverstone. And traditional broadband meant waiting weeks for a service that would barely keep up with demand.
             </p>
           </AnimatedSection>
 
@@ -141,7 +141,7 @@ const RoyalHarwichYachtClub = () => {
               Integra ran a site survey and found what others had missed: clear sightlines to multiple mobile towers. They bonded 4G connections over SD-WAN to create a single, ultra-reliable connection. Over 300Mbps. Strong enough to handle any demand.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Installation took 10 working days. The antennas went on the roof—invisible from the clubhouse. Everything integrated with their existing WiFi and VoIP system seamlessly. From day one, it worked.
+              Installation took 10 working days. The antennas went on the roof—invisible from the clubhouse. Everything integrated with their existing Wi-Fi and VoIP system seamlessly. From day one, it worked.
             </p>
           </AnimatedSection>
         </div>
@@ -154,7 +154,7 @@ const RoyalHarwichYachtClub = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
               { label: "Integra SD-WAN", href: "/integra-sd-wan" },
-              { label: "Business WiFi", href: "/business-wifi" },
+              { label: "Business Wi-Fi", href: "/business-wifi" },
             ].map((s) => (
               <Link key={s.label} to={s.href} className="group rounded-xl border border-white/10 bg-white/[0.03] p-4 hover:bg-white/[0.06] hover:border-white/20 transition-colors text-center">
                 <span className="text-sm font-medium text-surface-dark-foreground group-hover:text-primary transition-colors">{s.label}</span>

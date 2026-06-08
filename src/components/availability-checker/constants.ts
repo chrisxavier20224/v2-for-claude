@@ -60,7 +60,7 @@ export const PRODUCTS = [
     price: 'From £400',
     frequency: '/month',
     vat: true,
-    description: 'Dedicated Fibre connection, guaranteed speeds, enterprise SLA',
+    description: 'Dedicated fibre connection, guaranteed speeds, enterprise SLA',
     minPainPoints: 2,
   },
 ];

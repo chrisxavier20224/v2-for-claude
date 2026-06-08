@@ -21,7 +21,7 @@ const useCases = [
   { icon: Camera, title: "CCTV & Remote Monitoring", description: "IP cameras and NVRs at remote or temporary sites where wired connectivity isn't available." },
   { icon: Thermometer, title: "Environmental Sensors", description: "Temperature, humidity, air quality, and water leak sensors reporting data from anywhere on your estate." },
   { icon: Gauge, title: "Smart Meters & Utilities", description: "Energy meters, water meters, and utility monitoring devices feeding back real-time consumption data." },
-  { icon: MonitorSmartphone, title: "Digital Signage & Kiosks", description: "Advertising displays, wayfinding screens, and self-service kiosks connected independently of local WiFi." },
+  { icon: MonitorSmartphone, title: "Digital Signage & Kiosks", description: "Advertising displays, wayfinding screens, and self-service kiosks connected independently of local Wi-Fi." },
   { icon: Truck, title: "Fleet & Asset Tracking", description: "GPS trackers on vehicles, trailers, plant equipment, and high-value assets reporting location in real time." },
   { icon: Lightbulb, title: "Smart Building Controls", description: "HVAC systems, lighting controls, BMS panels, and occupancy sensors connected for building automation." },
   { icon: Radio, title: "Vending & Dispensing", description: "Vending machines, EV chargers, and unattended retail devices reporting stock levels and transactions." },
@@ -148,7 +148,7 @@ const ManagedSimServices = () => {
                 Delivered on a 3-year Device-as-a-Service model with no upfront hardware costs. Line rental and call rates are rolled into a single bill — no separate management, no hidden charges. Advanced replacement and in-term upgrades are included as standard.
               </p>
               <p className="text-surface-dark-muted leading-relaxed mb-6">
-                IoT SIMs with pooled data options. Rapid deployment that's completely independent of the UK Fibre network — we can get devices live in 10 working days.
+                IoT SIMs with pooled data options. Rapid deployment that's completely independent of the UK fibre network — we can get devices live in 10 working days.
               </p>
               <div className="space-y-3">
                 {["Multinet SIM across O2, Vodafone, EE & Three", "3-day line test monitoring on deployment", "Constant GSM connectivity monitoring", "Technical and on-site support included", "Pooled data options across your estate"].map((item) => (

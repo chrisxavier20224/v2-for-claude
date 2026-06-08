@@ -21,7 +21,7 @@ import seaconHero from "@/assets/case-studies/seacon-hero.webp";
 const featured = {
   company: "McGee Construction",
   title: "Building at Speed: 350Mbps for London's Biggest Sites",
-  description: "McGee needed reliable connectivity across active London construction sites. Integra's SD-WAN delivered 350Mbps without waiting for Fibre.",
+  description: "McGee needed reliable connectivity across active London construction sites. Integra's SD-WAN delivered 350Mbps without waiting for fibre.",
   image: mcgeeHero,
   path: "/customers/mcgee-construction",
 };
@@ -37,13 +37,13 @@ const stories = [
   {
     company: "WB Power Services",
     title: "Dodging the £50K Bill: SD-WAN at Chorley Depot",
-    description: "Facing over £50K in excess construction charges for Fibre at their Chorley depot, WB Power chose Integra SD-WAN — and Integra connected the rest of their sites too.",
+    description: "Facing over £50K in excess construction charges for fibre at their Chorley depot, WB Power chose Integra SD-WAN — and Integra connected the rest of their sites too.",
     image: wbPowerHero,
     path: "/customers/wb-power-services",
   },
   {
     company: "Royle Farm Business Park",
-    title: "From Farm to Fibre: Royle Farm Business Park",
+    title: "From Farm to fibre: Royle Farm Business Park",
     description: "From poor connectivity to 1Gbps speeds across a multi-tenant rural business park. Every unit now has enterprise-grade internet.",
     image: royleFarmHero,
     path: "/customers/royle-farm",
@@ -51,7 +51,7 @@ const stories = [
   {
     company: "Little Quarry Glamping",
     title: "Luxury Pods, Real Internet: Little Quarry's Breakthrough",
-    description: "Guests expect luxury — including fast WiFi. Integra brought high-speed internet to glamping pods in rural Cornwall.",
+    description: "Guests expect luxury — including fast Wi-Fi. Integra brought high-speed internet to glamping pods in rural Cornwall.",
     image: littleQuarryHero,
     path: "/customers/little-quarry-glamping",
   },
@@ -65,7 +65,7 @@ const stories = [
   {
     company: "Royal Harwich Yacht Club",
     title: "Full Sail: 300Mbps in the Middle of Nowhere",
-    description: "A yacht club on a remote estuary with no Fibre options. Integra delivered 300Mbps via bonded cellular SD-WAN.",
+    description: "A yacht club on a remote estuary with no fibre options. Integra delivered 300Mbps via bonded cellular SD-WAN.",
     image: rhycHero,
     path: "/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey",
   },
@@ -86,7 +86,7 @@ const stories = [
   {
     company: "Atura Proteins",
     title: "Plant Proteins Powered by Real Connectivity",
-    description: "Atura's internet went from 7Mbps to 100Mbps — no excess construction charges, no six-month wait for Fibre.",
+    description: "Atura's internet went from 7Mbps to 100Mbps — no excess construction charges, no six-month wait for fibre.",
     image: aturaHero,
     path: "/customers/revolutionising-connectivity-for-plant-protein-pioneers",
   },
@@ -139,7 +139,7 @@ const Customers = () => {
               Real businesses. Real results.
             </h1>
             <p className="text-lg text-white/80 max-w-xl mt-6 leading-relaxed">
-              From rural farms to London construction sites, from glamping pods to yacht clubs — these are the businesses that stopped waiting for Fibre and chose Integra instead.
+              From rural farms to London construction sites, from glamping pods to yacht clubs — these are the businesses that stopped waiting for fibre and chose Integra instead.
             </p>
             <p className="text-white/60 mt-4">Read our customer stories below ↓</p>
           </AnimatedSection>

@@ -11,7 +11,7 @@ import heroImg from "@/assets/connectivity/bridge-hero.webp";
 const pillarPages = [
   {
     icon: Wifi,
-    title: "Alternatives to Fibre Broadband",
+    title: "Alternatives to fibre Broadband",
     description: "A practical comparison of every real alternative — Starlink, 4G bonding, SD-WAN, leased lines, and hybrid approaches. Honest assessments of speed, cost, and reliability.",
     path: "/alternatives-to-fibre-broadband",
     tag: "Comparison Guide",

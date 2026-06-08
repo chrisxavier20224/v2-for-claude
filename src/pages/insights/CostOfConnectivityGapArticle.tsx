@@ -9,7 +9,7 @@ const CostOfConnectivityGapArticle = () => (
     <NumberedSection number={1} title="The wait nobody budgets for">
       <p>
         Every connectivity project has a plan. The site is signed, the leased
-        line or Fibre is ordered, the team has a move-in date. And then the
+        line or fibre is ordered, the team has a move-in date. And then the
         install date comes back — around 10 weeks away.
       </p>
       <p>
@@ -26,7 +26,7 @@ const CostOfConnectivityGapArticle = () => (
 
     <NumberedSection number={2} title="Where the lead time comes from">
       <p>
-        A Fibre or leased line install is not a single task — it is a chain of
+        A fibre or leased line install is not a single task — it is a chain of
         them. A desktop survey, then a physical survey, then planning. If the
         route crosses third-party land, a wayleave has to be negotiated — a
         process measured in weeks at best. If there is no duct in the ground,
@@ -130,8 +130,8 @@ const CostOfConnectivityGapArticle = () => (
 
     <NumberedSection number={5} title="What closing the Connectivity Gap looks like">
       <p>
-        The fix is not to make Fibre faster. Nobody can do that. The fix is to{" "}
-        <em>decouple being online from the Fibre install</em> — to treat them
+        The fix is not to make fibre faster. Nobody can do that. The fix is to{" "}
+        <em>decouple being online from the fibre install</em> — to treat them
         as two separate problems instead of one.
       </p>
       <p>
@@ -140,7 +140,7 @@ const CostOfConnectivityGapArticle = () => (
         fourteen days while the permanent circuit is still being built. The
         business operates from day one. The lease stops being dead weight. The
         team works at full capacity. The project keeps its timeline. And when
-        the Fibre finally lands, the interim connection is not ripped out — it
+        the fibre finally lands, the interim connection is not ripped out — it
         stays in place as automatic failover, so the resilience outlasts the
         gap it was brought in to close.
       </p>
@@ -155,7 +155,7 @@ const CostOfConnectivityGapArticle = () => (
       />
       <p>
         That is the model behind Integra Bridge: get the business online now,
-        let the Fibre catch up, and keep the resilience for good.
+        let the fibre catch up, and keep the resilience for good.
       </p>
       <p>
         The Connectivity Gap is a real cost, not a neutral wait. The next

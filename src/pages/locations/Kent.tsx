@@ -19,12 +19,12 @@ import {
 const relatedServices = [
   {
     title: "Leased Lines",
-    description: "Dedicated Fibre connectivity for businesses requiring maximum reliability.",
+    description: "Dedicated fibre connectivity for businesses requiring maximum reliability.",
     icon: Zap,
     href: "/leased-lines",
   },
   {
-    title: "Business WiFi",
+    title: "Business Wi-Fi",
     description: "Enterprise-grade wireless networks for your office and operations.",
     icon: Wifi,
     href: "/business-wifi",
@@ -138,7 +138,7 @@ const Kent = () => {
               The Garden of England's Connectivity Gap
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              Kent's farmland, orchards, and rural properties are picturesque but poorly served by broadband. BT's Fibre rollout skips over the countryside, focusing on towns like Maidstone, Ashford, and Canterbury.
+              Kent's farmland, orchards, and rural properties are picturesque but poorly served by broadband. BT's fibre rollout skips over the countryside, focusing on towns like Maidstone, Ashford, and Canterbury.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
               The result: rural farmers, agricultural businesses, and small rural enterprises are offline or on unreliable 4G. Meanwhile, modern farming relies on broadband—crop management systems, livestock monitoring, online sales, vet consultations, supplier ordering.
@@ -274,7 +274,7 @@ const Kent = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Tonbridge Area Hop Farm</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A traditional hop farm near Tonbridge needed reliable connectivity for crop management and direct-to-brewery sales. BT Fibre was 5+ years away. Starlink alone was unreliable during the rainy English seasons.
+              A traditional hop farm near Tonbridge needed reliable connectivity for crop management and direct-to-brewery sales. BT fibre was 5+ years away. Starlink alone was unreliable during the rainy English seasons.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               The property had strong EE signal but weak Vodafone. We recommended Integra Pro (bonded EE + O2 as backup). Installation: one day. Result: 220Mbps combined speed, zero weather impact, automatic failover redundancy.

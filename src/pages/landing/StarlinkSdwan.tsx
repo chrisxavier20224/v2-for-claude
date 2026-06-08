@@ -85,7 +85,7 @@ const StarlinkSdwan = () => {
     {
       question: "How does pricing compare to traditional leased lines?",
       answer:
-        "Leased lines cost from £400/month. Our Starlink SD-WAN is £80/month +VAT (managed service) with 99.5% SLA. For areas without Fibre, we deliver enterprise reliability at a fraction of the cost. You pay Starlink directly for your dish and subscription.",
+        "Leased lines cost from £400/month. Our Starlink SD-WAN is £80/month +VAT (managed service) with 99.5% SLA. For areas without fibre, we deliver enterprise reliability at a fraction of the cost. You pay Starlink directly for your dish and subscription.",
     },
   ];
 

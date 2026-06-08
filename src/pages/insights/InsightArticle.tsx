@@ -337,7 +337,7 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
                 Talk to us
               </p>
               <h2 className="text-3xl md:text-4xl font-medium text-white mb-5 leading-tight">
-                {article.cta?.headline ?? "Got a site that Fibre can't reach?"}
+                {article.cta?.headline ?? "Got a site that fibre can't reach?"}
               </h2>
               <p className="text-lg text-white/70 mb-10 leading-relaxed">
                 {article.cta?.body ?? "Getting the awkward sites online is what we do. Tell us about yours."}

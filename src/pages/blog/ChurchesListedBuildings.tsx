@@ -12,7 +12,7 @@ const ChurchesListedBuildings = () => (
       <li><strong>Thick Walls:</strong> Many churches are built with dense stone or brick, which can block or weaken Wi-Fi signals.</li>
       <li><strong>Limited Infrastructure:</strong> Network cabling and power outlets are often minimal or nonexistent in older buildings.</li>
       <li><strong>Conservation Restrictions:</strong> Fixing hardware to walls or altering the structure is typically prohibited due to strict preservation regulations.</li>
-      <li><strong>Challenging Grounds:</strong> Digging to install Fibre cables is often impossible, especially around consecrated land.</li>
+      <li><strong>Challenging Grounds:</strong> Digging to install fibre cables is often impossible, especially around consecrated land.</li>
     </ul>
 
     <h2>Overcoming Wi-Fi Challenges in Churches</h2>

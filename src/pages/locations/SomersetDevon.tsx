@@ -47,7 +47,7 @@ const SomersetDevon = () => {
   const faqs = [
     {
       q: "I'm in Devon or Somerset with a holiday cottage business. How can Integra help?",
-      a: "Holiday cottage guests expect WiFi. Integra Pro delivers fast, reliable connectivity that keeps guests happy and enables you to run bookings, take payments, and manage your business online. We've installed at multiple holiday rental properties across Devon and Somerset. Typical cost: £110/month for professional-grade WiFi that guests rave about.",
+      a: "Holiday cottage guests expect Wi-Fi. Integra Pro delivers fast, reliable connectivity that keeps guests happy and enables you to run bookings, take payments, and manage your business online. We've installed at multiple holiday rental properties across Devon and Somerset. Typical cost: £110/month for professional-grade Wi-Fi that guests rave about.",
     },
     {
       q: "What speeds should I expect in rural Devon or Somerset?",
@@ -72,7 +72,7 @@ const SomersetDevon = () => {
       <SEO
         title="Broadband Devon & Somerset"
         description="Broadband for Devon and Somerset. Taunton, Exeter, Barnstaple, Torrington. 100+ sites."
-        keywords="rural broadband Devon, Somerset broadband, Exeter internet, Taunton, Barnstaple, holiday cottage WiFi, rural connectivity"
+        keywords="rural broadband Devon, Somerset broadband, Exeter internet, Taunton, Barnstaple, holiday cottage Wi-Fi, rural connectivity"
         url="/locations/rural-broadband-somerset-devon"
       />
       <SchemaMarkup
@@ -141,7 +141,7 @@ const SomersetDevon = () => {
               Devon and Somerset are our biggest customer concentration for good reason: the broadband gap here is real, and our solutions work.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              BT's Fibre rollout focuses on cities (Exeter, Taunton, Plymouth). Rural Devon and Somerset—Dartmoor villages, Exmoor farms, coastal properties, moorland homesteads—are deprioritized. Promised dates slip. You're stuck waiting or relying on satellite that fails in winter.
+              BT's fibre rollout focuses on cities (Exeter, Taunton, Plymouth). Rural Devon and Somerset—Dartmoor villages, Exmoor farms, coastal properties, moorland homesteads—are deprioritized. Promised dates slip. You're stuck waiting or relying on satellite that fails in winter.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               We've installed at over 100 Devon and Somerset properties. We understand Dartmoor terrain, coastal challenges, valley signal shadows, and which solutions actually work in each area. We know your region better than any other ISP.
@@ -280,13 +280,13 @@ const SomersetDevon = () => {
 
             <h2 className="text-2xl font-normal mb-6">Real Installation: Holiday Cottage Near Dartmouth</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A successful holiday rental operator near Dartmouth with multiple cottages on the property needed WiFi that guests would rave about. BT Fibre was 4+ years away.
+              A successful holiday rental operator near Dartmouth with multiple cottages on the property needed Wi-Fi that guests would rave about. BT fibre was 4+ years away.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               The property had excellent EE signal and decent Vodafone. We recommended Integra Pro (bonded EE and Vodafone). Installation: one day.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Result: 250Mbps combined speed, mesh WiFi across all cottages, guests happy, booking conversion improved. Cost: £110/month. This customer now runs their entire business—bookings, payments, guest communication—without a single connectivity issue.
+              Result: 250Mbps combined speed, mesh Wi-Fi across all cottages, guests happy, booking conversion improved. Cost: £110/month. This customer now runs their entire business—bookings, payments, guest communication—without a single connectivity issue.
             </p>
           </div>
         </AnimatedSection>

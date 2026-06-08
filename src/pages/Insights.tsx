@@ -193,7 +193,7 @@ const Insights = () => {
                     {isDark ? (
                       <>
                         <div className="absolute inset-0 bg-[hsl(222_47%_11%)]" />
-                        {/* Fibre-optic light strands */}
+                        {/* fibre-optic light strands */}
                         <div
                           className="pointer-events-none absolute inset-0 opacity-25"
                           style={{

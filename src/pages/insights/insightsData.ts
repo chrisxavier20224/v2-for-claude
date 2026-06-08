@@ -75,8 +75,8 @@ export const insightArticles: InsightArticleMeta[] = [
   {
     slug: "alternatives-to-fibre-broadband",
     category: "Guide",
-    title: "Alternatives to Fibre Broadband",
-    seoTitle: "Alternatives to Fibre Broadband",
+    title: "Alternatives to fibre Broadband",
+    seoTitle: "Alternatives to fibre Broadband",
     excerpt:
       "Five viable options for UK businesses where fibre hasn't reached — Starlink, 4G/5G, FWA, Leased Line, Hybrid. Honest comparison.",
     tone: "light",
@@ -105,10 +105,10 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"Which is best\" is the wrong question — a leased line, bonded SD-WAN, and Integra Bridge solve different problems.",
       "Five factors decide the fit: lead time, location, workload, permanence, and resilience.",
       "The strongest estates rarely pick one product — they match each site to its requirement and layer resilience behind it.",
-      "Where Fibre is ordered but months away, the answer is not \"wait\" — it is Integra Bridge now, leased line later, Integra Bridge stays as failover.",
+      "Where fibre is ordered but months away, the answer is not \"wait\" — it is Integra Bridge now, leased line later, Integra Bridge stays as failover.",
     ],
     heroFigure:
-      "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, Fibre availability, permanence, workload, resilience need) to recommended option(s).",
+      "\"The decision framework\" — a decision matrix or flow mapping site characteristics (lead-time need, fibre availability, permanence, workload, resilience need) to recommended option(s).",
     heroImage: chooseHero,
     ogImage: chooseOg,
   },
