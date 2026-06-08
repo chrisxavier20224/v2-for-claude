@@ -8,9 +8,8 @@
  * stays consistent across the product family.
  */
 
-import React, { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Network, Download } from 'lucide-react';
+import React, { useState } from 'react';
+import { Download } from 'lucide-react';
 import { BondedTopologyDiagram } from './BondedTopologyDiagram';
 import { LoadBalancedTopologyDiagram } from './LoadBalancedTopologyDiagram';
 
@@ -83,46 +82,22 @@ export const NetworkArchitectureSection: React.FC<NetworkArchitectureSectionProp
   loadBalancedPdfHref,
   bondedParagraphExtra,
 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
   const [mode, setMode] = useState<Mode>('bonded');
 
-  const headline =
+  const caption =
     mode === 'bonded'
-      ? `${CARRIER_WORD[carriers]} carriers. One bonded pipe.`
-      : `${CARRIER_WORD[carriers]} carriers. Balanced by session.`;
-
-  const paragraph =
-    mode === 'bonded'
-      ? bondedParagraph(carriers, bondedParagraphExtra)
-      : loadBalancedParagraph(carriers);
+      ? `${CARRIER_WORD[carriers]} carriers, one bonded pipe — the topology of an ${productName} SD-WAN.`
+      : `${CARRIER_WORD[carriers]} carriers, balanced by session — the topology of an ${productName} SD-WAN.`;
 
   return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      variants={staggerContainer}
-      className="py-12 sm:py-20 md:py-28 bg-[hsl(222,47%,11%)]"
-    >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <motion.div variants={fadeUp} className="text-center mb-8 sm:mb-10">
-          <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-5">
-            <Network size={24} className="text-primary" />
-          </div>
-          <span className="text-[0.75rem] uppercase tracking-[0.1em] font-semibold text-primary mb-3 block">
-            Network Architecture
-          </span>
-          <h2 className="text-2xl sm:text-[2.25rem] md:text-[3rem] leading-[1.15] tracking-[-0.02em] text-white mb-4">
-            {headline}
-          </h2>
-          <p className="text-lg text-white/70 leading-relaxed max-w-3xl mx-auto">
-            {paragraph}
-          </p>
-        </motion.div>
+    <figure className="my-12 not-prose">
+      <figcaption className="text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-4 text-center">
+        Figure — How a {mode === 'bonded' ? 'bonded' : 'load-balanced'} multi-bearer connection works
+      </figcaption>
 
+      <div className="rounded-2xl overflow-hidden bg-[hsl(222,47%,11%)] border border-white/10">
         {/* ── Mode Toggle ─────────────────────────────────────── */}
-        <motion.div variants={fadeUp} className="flex justify-center mb-8">
+        <div className="flex justify-center pt-5">
           <div
             role="tablist"
             aria-label="Network architecture mode"
@@ -155,12 +130,9 @@ export const NetworkArchitectureSection: React.FC<NetworkArchitectureSectionProp
               Load Balanced
             </button>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={fadeUp}
-          className="rounded-2xl overflow-hidden bg-[hsl(222,47%,11%)]"
-        >
+        <div>
           {mode === 'bonded' ? (
             <BondedTopologyDiagram
               carriers={carriers}
@@ -176,7 +148,7 @@ export const NetworkArchitectureSection: React.FC<NetworkArchitectureSectionProp
               throughputSubLabel={throughputSubLabel}
             />
           )}
-        </motion.div>
+        </div>
 
         {/* ── PDF Buttons (per mode, when a href is provided) ── */}
         {(() => {
@@ -184,10 +156,7 @@ export const NetworkArchitectureSection: React.FC<NetworkArchitectureSectionProp
             mode === 'bonded' ? bondedPdfHref : loadBalancedPdfHref;
           if (!activePdfHref) return null;
           return (
-            <motion.div
-              variants={fadeUp}
-              className="flex items-center justify-center mt-8"
-            >
+            <div className="flex items-center justify-center pb-6">
               <a
                 href={activePdfHref}
                 download
@@ -196,11 +165,14 @@ export const NetworkArchitectureSection: React.FC<NetworkArchitectureSectionProp
                 <Download size={18} />
                 Download Topology Diagram (PDF)
               </a>
-            </motion.div>
+            </div>
           );
         })()}
-
       </div>
-    </motion.section>
+
+      <p className="mt-4 text-sm text-muted-foreground text-center leading-relaxed">
+        {caption}
+      </p>
+    </figure>
   );
 };
