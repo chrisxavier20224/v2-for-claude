@@ -414,7 +414,7 @@ const HomeV2 = () => {
               <div className="max-w-4xl mb-16">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-5">Sectors We Serve</p>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-medium leading-[1.05] tracking-tight">
-                  Built for businesses <span className="text-primary">Fibre leaves behind.</span>
+                  Built for businesses <span className="text-primary">fibre leaves behind.</span>
                 </h2>
                 <p className="text-lg text-white/75 leading-relaxed max-w-2xl">
                   Construction sites that move every few months. Multi-site rollouts on impossible timelines. Business parks where every unit needs connectivity from day one. We've solved them all.
