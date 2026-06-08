@@ -11,7 +11,7 @@
  */
 
 import React from 'react';
-import integraLogoWhite from '../assets/integra-logo-white.png';
+import integraLogoWhite from '@/assets/topology/integra-logo-white.png';
 
 export type CarrierCount = 2 | 3 | 4;
 
