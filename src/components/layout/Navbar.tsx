@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper, ArrowRight, Lightbulb } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -268,7 +268,17 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Insights link hidden pending review */}
+            {/* Insights — standalone link */}
+            <Link
+              to="/insights"
+              className={`text-sm font-medium transition-colors ${
+                isInsightsPath
+                  ? isDarkNav ? "text-white" : "text-foreground"
+                  : isDarkNav ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Insights
+            </Link>
 
             {/* Customers — standalone link */}
             <Link
@@ -380,6 +390,10 @@ const Navbar = () => {
                 <Link to="/customers" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
                   <Building2 className="h-4 w-4 text-primary" />
                   Customer Stories
+                </Link>
+                <Link to="/insights" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                  <Lightbulb className="h-4 w-4 text-primary" />
+                  Insights
                 </Link>
                 <Link to="/wholesale" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
                   <Handshake className="h-4 w-4 text-primary" />
