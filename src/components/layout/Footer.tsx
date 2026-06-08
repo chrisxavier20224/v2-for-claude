@@ -71,7 +71,7 @@ const Footer = ({ hideCTA }: { hideCTA?: boolean }) => {
                 Let's see what we can do for you
               </h2>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed">
-                Join the multi-site businesses getting online with Integra — while everyone else waits for Fibre.
+                Business connectivity in 10 working days — wherever fibre can't reach.
               </p>
             </div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="shrink-0">
