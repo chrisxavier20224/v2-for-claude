@@ -340,7 +340,7 @@ const InsightArticle = ({ slug, children }: InsightArticleProps) => {
                 {article.cta?.headline ?? "Got a site that Fibre can't reach?"}
               </h2>
               <p className="text-lg text-white/70 mb-10 leading-relaxed">
-                {article.cta?.body ?? "We've spent a decade getting the awkward sites online. Tell us about yours."}
+                {article.cta?.body ?? "Getting the awkward sites online is what we do. Tell us about yours."}
               </p>
               <Button
                 asChild

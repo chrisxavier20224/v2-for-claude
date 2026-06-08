@@ -195,7 +195,7 @@ export const insightArticles: InsightArticleMeta[] = [
     ],
     cta: {
       headline: "Got sites your network cannot reach?",
-      body: "We have spent a decade getting the awkward sites online. Tell us how we can help you close the gap.",
+      body: "Getting the awkward sites online is what we do. Tell us how we can help you close the gap.",
       buttonLabel: "Talk to our partner team",
       buttonHref: "/wholesale",
       contactLine: "connect@integra-networks.co.uk  |  0203 388 7111  |  integra-networks.co.uk/wholesale",
