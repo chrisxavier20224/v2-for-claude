@@ -9,6 +9,7 @@ import SEO from "@/components/shared/SEO";
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
 import reframeImg from "@/assets/wholesale/struggling-connectivity.jpg.asset.json";
 import salesImg from "@/assets/wholesale/sales-team-bg.png";
+import BigStatCallout from "@/components/figures/BigStatCallout";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -94,9 +95,13 @@ const Wholesale = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Most of your portfolio is fine. But across 50 sites there are always a few — the ones where fibre can't reach, the lead time is impossible, or the customer needs an emergency solution. Partnering with Integra doesn't change how you run your business. It's having an answer for those sites, so you never have to say no.
               </p>
-              <div className="mt-8 flex items-baseline gap-4">
-                <span className="text-display-md font-normal text-primary tracking-tight leading-none">4 / 50</span>
-                <span className="text-lg text-muted-foreground max-w-sm">sites is typically "the tail" — where fibre can't reach, lead times don't work, or the customer needs an emergency solution</span>
+              <div className="mt-8">
+                <BigStatCallout
+                  numerator={4}
+                  denominator={50}
+                  label="of every 50 sites is 'the tail'"
+                  annotation="= the deals worth winning"
+                />
               </div>
             </AnimatedSection>
             <AnimatedSection>
