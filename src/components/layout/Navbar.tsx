@@ -391,6 +391,10 @@ const Navbar = () => {
                   <Building2 className="h-4 w-4 text-primary" />
                   Customer Stories
                 </Link>
+                <Link to="/insights" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
+                  <Lightbulb className="h-4 w-4 text-primary" />
+                  Insights
+                </Link>
                 <Link to="/wholesale" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-2 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors">
                   <Handshake className="h-4 w-4 text-primary" />
                   Wholesale
