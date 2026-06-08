@@ -90,7 +90,7 @@ export const NetworkArchitectureSection: React.FC<NetworkArchitectureSectionProp
       : `${CARRIER_WORD[carriers]} carriers, balanced by session — the topology of an ${productName} SD-WAN.`;
 
   return (
-    <figure className="my-12 not-prose">
+    <figure className="my-12 not-prose lg:-mx-12 xl:-mx-20">
       <figcaption className="text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-4 text-center">
         Figure — How a {mode === 'bonded' ? 'bonded' : 'load-balanced'} multi-bearer connection works
       </figcaption>
