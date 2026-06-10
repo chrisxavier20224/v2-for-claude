@@ -336,7 +336,7 @@ const WirelessInternetProvidersUK = () => {
             <div className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-slate-800/40 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10 animate-fade-in">
               <div className="relative aspect-[16/9] overflow-hidden">
                 <img
-                  src={ruralImg}
+                  src={ruralImgAsset.url}
                   alt="Rural industrial site with bonded 4G/5G wireless connectivity"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
