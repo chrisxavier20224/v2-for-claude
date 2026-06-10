@@ -295,11 +295,20 @@ const WirelessInternetProvidersUK = () => {
       {/* STATS — flows from coverage band, no orphan whitespace */}
       <section className="bg-slate-900 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">By the numbers</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
+              Fibre-free business connectivity.
+            </h2>
+            <p className="text-slate-300 leading-relaxed">
+              No waiting years for fibre. We bond multiple 4G/5G cellular networks with Starlink to deliver high-speed, resilient business internet in 10 working days — with automatic failover built in.
+            </p>
+          </div>
+          <div className="grid gap-10 md:grid-cols-3 max-w-5xl mx-auto">
             {stats.map((s) => (
-              <div key={s.stat} className="rounded-xl border border-white/10 bg-slate-800/40 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-slate-800/60 animate-fade-in">
-                <p className="text-3xl md:text-4xl font-semibold text-blue-400 mb-2">{s.stat}</p>
-                <p className="text-sm text-slate-300">{s.desc}</p>
+              <div key={s.stat} className="text-center animate-fade-in">
+                <p className="text-4xl md:text-5xl font-semibold text-blue-400 mb-3 tracking-tight">{s.stat}</p>
+                <p className="text-slate-300">{s.desc}</p>
               </div>
             ))}
           </div>
