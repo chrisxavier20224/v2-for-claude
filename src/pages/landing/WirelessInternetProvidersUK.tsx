@@ -14,6 +14,7 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
+import mcgeeBg from "@/assets/case-studies/mcgee-hero.webp";
 const heroImg = heroImgAsset.url;
 
 const stats = [
@@ -443,11 +444,18 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* PROOF */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        <img
+          src={mcgeeBg}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-900/80" />
+        <div className="relative max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Case studies</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Case studies</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
               Real businesses. Real results.
             </h2>
           </div>
@@ -467,7 +475,7 @@ const WirelessInternetProvidersUK = () => {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/customers" className="text-blue-600 font-medium hover:underline">
+            <Link to="/customers" className="text-white font-medium hover:underline">
               View all customer stories →
             </Link>
           </div>
