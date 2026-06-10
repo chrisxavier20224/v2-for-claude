@@ -15,6 +15,9 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
 import maypoleBgAsset from "@/assets/landing/enterprise-install-maypole-school.jpg.asset.json";
+import ruralImgAsset from "@/assets/landing/wireless-rural-industrial.jpg.asset.json";
+import multisiteImgAsset from "@/assets/landing/wireless-multisite-container.jpg.asset.json";
+import eposImgAsset from "@/assets/landing/wireless-epos-card.jpg.asset.json";
 import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
 import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
@@ -38,16 +41,19 @@ const audience = [
     icon: Wifi,
     title: "Rural businesses without fibre",
     body: "Farms, offices, light industrial sites where Openreach has quoted £20k+ for fibre — or won't quote at all. Our wireless network delivers fibre-equivalent speeds in days.",
+    image: ruralImgAsset.url,
   },
   {
     icon: Network,
     title: "Multi-site operators",
     body: "Construction sites, pop-up retail, business parks, distribution hubs. One platform, central management, predictable performance across every location.",
+    image: multisiteImgAsset.url,
   },
   {
     icon: Shield,
     title: "Businesses that can't afford downtime",
     body: "Card machines, VoIP, cloud apps, CCTV, EPOS. Dual-network failover means traffic keeps flowing even if one carrier drops.",
+    image: eposImgAsset.url,
   },
 ];
 
@@ -336,12 +342,23 @@ const WirelessInternetProvidersUK = () => {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {audience.map((a) => (
-              <div key={a.title} className="rounded-xl border border-white/10 bg-slate-800/40 p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/15 text-blue-400 mb-5">
-                  <a.icon className="h-6 w-6" strokeWidth={1.5} />
+              <div key={a.title} className="overflow-hidden rounded-xl border border-white/10 bg-slate-800/40">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={a.image}
+                    alt={a.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                  <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/90 text-white">
+                    <a.icon className="h-5 w-5" strokeWidth={1.75} />
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{a.title}</h3>
-                <p className="text-slate-300">{a.body}</p>
+                <div className="p-8">
+                  <h3 className="text-lg font-semibold text-white mb-3">{a.title}</h3>
+                  <p className="text-slate-300">{a.body}</p>
+                </div>
               </div>
             ))}
           </div>
