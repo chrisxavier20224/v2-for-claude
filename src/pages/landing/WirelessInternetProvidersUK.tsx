@@ -568,10 +568,10 @@ const WirelessInternetProvidersUK = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-slate-900/10" />
                 <div className="relative p-6 text-white">
-                  <p className="text-[11px] font-semibold uppercase tracking-widest text-white/70 mb-2">Customer story</p>
-                  <p className="text-2xl font-bold text-blue-300 mb-2">{c.stat}</p>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-300 mb-1">Customer story</p>
+                  <p className="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-3">{c.name}</p>
+                  <p className="text-xl font-bold text-blue-300 mb-2">{c.stat}</p>
                   <p className="text-white/80 text-sm mb-3 line-clamp-3">"{c.quote}"</p>
-                  <p className="text-sm font-semibold mb-3">{c.name}</p>
                   <span className="inline-flex items-center gap-1 text-sm font-medium text-white group-hover:text-blue-300">
                     Read case study <ArrowRight className="h-4 w-4" />
                   </span>
