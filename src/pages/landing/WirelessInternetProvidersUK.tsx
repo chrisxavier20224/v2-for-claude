@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, X, Wifi, Network, Shield, ArrowRight, Satellite, Radio, Server } from "lucide-react";
+import { Check, X, Wifi, Network, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -23,18 +23,6 @@ import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
 const heroImg = heroImgAsset.url;
 const maypoleBg = maypoleBgAsset.url;
-
-const stats = [
-  { stat: "10 working days", desc: "from order to live" },
-  { stat: "Up to 500Mbps", desc: "via bonded 4G/5G + Starlink" },
-  { stat: "99.5% SLA", desc: "UK engineer support" },
-];
-
-const bondedInputs = [
-  { icon: Satellite, label: "Starlink Satellite", detail: "Low-latency LEO satellite" },
-  { icon: Radio, label: "5G/4G Carriers (×2)", detail: "Dual-SIM cellular bonding" },
-  { icon: Server, label: "Bonded Output", detail: "One resilient business connection" },
-];
 
 const audience = [
   {
