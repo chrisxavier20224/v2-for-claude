@@ -512,13 +512,7 @@ const AvailabilityCheckerInline = ({
   const step1Valid = firstNameValid && lastNameValid && companyValid && emailValid && phoneValid;
   const step2Valid = !!service;
 
-  const togglePain = (p: PainPoint) => {
-    setPains((prev) => {
-      const next = new Set(prev);
-      next.has(p) ? next.delete(p) : next.add(p);
-      return next;
-    });
-  };
+  // Pain points removed from UI flow; pains set is empty.
 
   // Close dropdown when clicking outside
   useEffect(() => {
