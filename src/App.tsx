@@ -108,13 +108,7 @@ const BusinessMobiles = lazy(() => import("./pages/connectivity/BusinessMobiles"
 const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 
 // PPC Landing Pages
-const BusinessBroadbandLanding = lazy(() => import("./pages/landing/BusinessBroadband"));
-const ConstructionWifiLanding = lazy(() => import("./pages/landing/ConstructionWifi"));
-const RuralBroadbandLanding = lazy(() => import("./pages/landing/RuralBroadband"));
-const StarlinkSdwanLanding = lazy(() => import("./pages/landing/StarlinkSdwan"));
-const ConstructionSiteInternetLanding = lazy(() => import("./pages/landing/ConstructionSiteInternet"));
 const WirelessInternetProvidersUKLanding = lazy(() => import("./pages/landing/WirelessInternetProvidersUK"));
-const IntegraBridgeV2Landing = lazy(() => import("./pages/landing/IntegraBridgeV2"));
 const RuralBusinessBroadbandUKLanding = lazy(() => import("./pages/landing/RuralBusinessBroadbandUK"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const CheckAvailability = lazy(() => import("./pages/CheckAvailability"));
@@ -149,14 +143,15 @@ const App = () => (
               <Route path="/home-v2" element={<HomeV2 />} />
 
               {/* PPC Landing Pages */}
-              <Route path="/lp/business-broadband" element={<Navigate to="/sd-wan-for-small-business" replace />} />
-              <Route path="/lp/construction-wifi" element={<ConstructionWifiLanding />} />
-              <Route path="/lp/construction-site-internet" element={<ConstructionSiteInternetLanding />} />
-              <Route path="/lp/homeworker-broadband" element={<Navigate to="/" replace />} />
-              <Route path="/lp/rural-broadband" element={<RuralBroadbandLanding />} />
-              <Route path="/lp/starlink-sdwan" element={<StarlinkSdwanLanding />} />
               <Route path="/lp/wireless-internet-providers-uk" element={<WirelessInternetProvidersUKLanding />} />
               <Route path="/lp/rural-business-broadband-uk" element={<RuralBusinessBroadbandUKLanding />} />
+              {/* Retired LPs — redirect to home */}
+              <Route path="/lp/business-broadband" element={<Navigate to="/" replace />} />
+              <Route path="/lp/construction-wifi" element={<Navigate to="/" replace />} />
+              <Route path="/lp/construction-site-internet" element={<Navigate to="/" replace />} />
+              <Route path="/lp/homeworker-broadband" element={<Navigate to="/" replace />} />
+              <Route path="/lp/rural-broadband" element={<Navigate to="/" replace />} />
+              <Route path="/lp/starlink-sdwan" element={<Navigate to="/" replace />} />
 
               <Route path="/sectors/homeworkers" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/rural-smes" replace />} />
@@ -249,7 +244,6 @@ const App = () => (
               <Route path="/checking-out-your-property" element={<CheckingOutYourProperty />} />
               <Route path="/support" element={<Support />} />
               <Route path="/integra-bridge" element={<IntegraBridge />} />
-              <Route path="/integra-bridge-v2" element={<IntegraBridgeV2Landing />} />
               <Route path="/wholesale" element={<Wholesale />} />
 
               <Route path="/resources" element={<Navigate to="/insights" replace />} />
@@ -272,7 +266,7 @@ const App = () => (
               <Route path="/alternatives-to-fibre-broadband" element={<AlternativesToFibre />} />
               <Route path="/rural-business-broadband" element={<RuralSMEs />} />
               <Route path="/starlink-for-business" element={<StarlinkForBusiness />} />
-              <Route path="/sd-wan-for-small-business" element={<BusinessBroadbandLanding />} />
+              <Route path="/sd-wan-for-small-business" element={<Navigate to="/" replace />} />
               <Route path="/construction-site-broadband" element={<ConstructionSites />} />
               <Route path="/farm-broadband" element={<Navigate to="/rural-business-broadband" replace />} />
               <Route path="/contact" element={<Contact />} />
