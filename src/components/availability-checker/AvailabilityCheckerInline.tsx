@@ -242,6 +242,7 @@ async function submitToHubSpot(payload: {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        keepalive: true,
         body: JSON.stringify({
           fields,
           context: {
