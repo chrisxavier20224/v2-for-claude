@@ -455,7 +455,7 @@ const IntegraBridgeV2 = () => {
 
       {/* AVAILABILITY CHECKER */}
       <div id="availability-checker-form">
-        <AvailabilityCheckerInline compact sourceTag="integra-bridge-v2" chatAlternativeLabel="Book a Meeting" />
+        <AvailabilityCheckerInline compact sourceTag="integra-bridge-v2" />
       </div>
 
       {/* FINAL CTA */}
