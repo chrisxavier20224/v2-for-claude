@@ -450,14 +450,7 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* PROOF */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <img
-          src={mcgeeBg}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/80" />
+      <section className="relative py-16 md:py-24 bg-slate-900">
         <div className="relative max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Case studies</p>
