@@ -18,6 +18,8 @@ import maypoleBgAsset from "@/assets/landing/enterprise-install-maypole-school.j
 import ruralImgAsset from "@/assets/landing/wireless-rural-industrial.jpg.asset.json";
 import multisiteImgAsset from "@/assets/landing/wireless-multisite-container.jpg.asset.json";
 import eposImgAsset from "@/assets/landing/wireless-epos-card.jpg.asset.json";
+import bridgeCardImgAsset from "@/assets/landing/building-connectivity.jpg.asset.json";
+import sdwanCardImgAsset from "@/assets/landing/celltower.jpg.asset.json";
 import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
 import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
@@ -308,12 +310,16 @@ const WirelessInternetProvidersUK = () => {
             <div className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-slate-800/40 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10 animate-fade-in">
               <div className="relative aspect-[16/9] overflow-hidden">
                 <img
-                  src={heroImg}
-                  alt="Enterprise wireless install — bridge connectivity while fibre is provisioned"
+                  src={bridgeCardImgAsset.url}
+                  alt="Construction site with cranes — bridge connectivity while fibre is provisioned"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-slate-900/30" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-300 mb-1">Integra</p>
+                  <p className="text-3xl md:text-4xl font-semibold text-white tracking-tight">Bridge</p>
+                </div>
               </div>
               <div className="flex flex-col flex-1 p-8">
                 <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -336,12 +342,16 @@ const WirelessInternetProvidersUK = () => {
             <div className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-slate-800/40 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10 animate-fade-in">
               <div className="relative aspect-[16/9] overflow-hidden">
                 <img
-                  src={ruralImgAsset.url}
-                  alt="Rural industrial site with bonded 4G/5G wireless connectivity"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={sdwanCardImgAsset.url}
+                  alt="Cellular mast above forest — bonded 4G/5G wireless connectivity"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-slate-900/30" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-300 mb-1">Integra</p>
+                  <p className="text-3xl md:text-4xl font-semibold text-white tracking-tight">SD-WAN</p>
+                </div>
               </div>
               <div className="flex flex-col flex-1 p-8">
                 <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
