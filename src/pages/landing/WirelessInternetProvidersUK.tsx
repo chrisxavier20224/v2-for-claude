@@ -138,36 +138,36 @@ const proof = [
 
 const faqs = [
   {
-    q: "How is this different from a consumer 4G router?",
-    a: "Consumer 4G uses one SIM, one carrier, and shared bandwidth. Integra's setup uses two carriers in parallel (bonded), runs on business data plans (no throttling), uses engineer-installed roof antennas for stable signal, and comes with an SLA. You also get static IPs and 24/7 monitoring.",
-  },
-  {
     q: "How fast can you actually deliver?",
-    a: "Standard install is 10 working days from order. For urgent cases (construction sites, emergency replacement), we can deploy Integra Bridge in 48-72 hours.",
+    a: "Live in 10 working days from order. We run a desktop survey first, then a UK engineer installs and commissions the connection — no waiting on Openreach lead times.",
   },
   {
-    q: "What if 4G/5G coverage is bad at my site?",
-    a: "We survey first. If signal is poor, we use Starlink + 4G/5G hybrid bonding instead. Either way, we don't ship a service we can't deliver.",
+    q: "How do you know it'll work at my site before installing?",
+    a: "Every deployment starts with a free desktop survey from our engineering team. We confirm the bearer mix, expected speeds and SLA fit for your exact location before anything goes live — no postcode lottery, no surprises.",
   },
   {
-    q: "What's the SLA?",
-    a: "99.5% uptime guaranteed, with service credits for breach. Enterprise tier moves to 99.9%. Standard response time on faults is under 4 hours during UK business hours, with 24/7 emergency monitoring.",
+    q: "What if 4G/5G coverage is poor at my site?",
+    a: "That's exactly what bonding is for. We combine multiple mobile carriers with Starlink satellite into one connection — if one path is weak, the others carry the load. The survey confirms achievable speeds before you commit.",
   },
   {
-    q: "Will it work with our existing phones and EPOS?",
-    a: "Yes. We provide static IPs for CCTV/EPOS, configure VoIP-friendly QoS, and handle the PSTN migration (the analogue line switch-off is January 2027 regardless).",
+    q: "What does it cost?",
+    a: "Pricing is tailored to your site and bearer mix, and you'll have the full quote before you sign. It's typically a fraction of the £15–50k excess construction charges quoted for rural fibre installs.",
   },
   {
-    q: "Can I keep my existing fibre line as backup?",
-    a: "Absolutely. We design hybrid setups where wireless is primary and fibre is failover (or vice versa). Multi-bearer redundancy is included on Pro tier and above.",
+    q: "What's the SLA — and what happens if something goes down?",
+    a: "99.5% uptime SLA backed by service credits. Automatic failover between carriers and satellite keeps traffic flowing, and UK engineers monitor every connection around the clock.",
   },
   {
-    q: "What about contracts?",
-    a: "12-month terms on Starter and Pro. Enterprise is negotiable down to 1-month rolling for project sites. No mystery break fees.",
+    q: "What happens when fibre eventually arrives at my site?",
+    a: "Your wireless connection stays on as permanent failover. No rip-and-replace, no second project — one partner takes you from temporary to permanent connectivity.",
   },
   {
-    q: "How do I get a quote?",
-    a: "Fill the availability check at the top of this page or call 0203 388 7111. We respond same-day Mon-Fri with engineering-validated pricing — not estimates.",
+    q: "Will it work with our phones, EPOS, CCTV and VPNs?",
+    a: "Yes. Static IPs are available, there's no CGNAT, and the connection is engineered for business traffic — VoIP, card machines, cloud apps and remote CCTV access all run as standard.",
+  },
+  {
+    q: "Is there a data cap?",
+    a: "No caps, no throttling. We run enterprise data plans sized for business workloads.",
   },
 ];
 
