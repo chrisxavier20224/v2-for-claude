@@ -54,12 +54,8 @@
   <url><loc>https://integra-networks.co.uk/locations/construction-site-broadband-london</loc><priority>0.6</priority></url>
 
   <!-- PPC landing -->
-  <url><loc>https://integra-networks.co.uk/sd-wan-for-small-business</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/lp/construction-wifi</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/lp/construction-site-internet</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/lp/rural-broadband</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/lp/starlink-sdwan</loc><priority>0.6</priority></url>
   <url><loc>https://integra-networks.co.uk/lp/wireless-internet-providers-uk</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://integra-networks.co.uk/lp/rural-business-broadband-uk</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
 
   <!-- Customers -->
   <url><loc>https://integra-networks.co.uk/customers/wb-power-services</loc><priority>0.5</priority></url>
