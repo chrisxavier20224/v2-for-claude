@@ -357,6 +357,7 @@ const AvailabilityCheckerInline = ({
   const [selectedAddress, setSelectedAddress] = useState<string | null>(null);
   const [addressDropdownOpen, setAddressDropdownOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const addressDropdownRef = useRef<HTMLDivElement>(null);
 
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
