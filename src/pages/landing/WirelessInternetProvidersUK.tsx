@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, X, Wifi, Network, Shield, ArrowRight } from "lucide-react";
+import { Check, X, Wifi, Network, Shield, ArrowRight, Satellite, Radio, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -13,12 +13,19 @@ import Section from "@/components/shared/Section";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
-import heroImg from "@/assets/sectors/rural-sme-hero.webp";
+import heroImgAsset from "@/assets/landing/wireless-business-hero.jpg.asset.json";
+const heroImg = heroImgAsset.url;
 
 const stats = [
-  { stat: "Up to 500Mbps", desc: "via bonded cellular SD-WAN" },
   { stat: "10 working days", desc: "from order to live" },
-  { stat: "99.5% SLA", desc: "with UK-based engineer support" },
+  { stat: "Up to 500Mbps", desc: "via bonded 4G/5G + Starlink" },
+  { stat: "99.5% SLA", desc: "UK engineer support" },
+];
+
+const bondedInputs = [
+  { icon: Satellite, label: "Starlink Satellite", detail: "Low-latency LEO satellite" },
+  { icon: Radio, label: "5G/4G Carriers (×2)", detail: "Dual-SIM cellular bonding" },
+  { icon: Server, label: "Bonded Output", detail: "One resilient business connection" },
 ];
 
 const audience = [
@@ -218,33 +225,56 @@ const WirelessInternetProvidersUK = () => {
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 py-24 md:py-32">
           <div className="max-w-4xl">
             <h1 className="text-heading-1 md:text-display-sm text-white mb-6">
-            Wireless internet providers built for UK businesses.
+              Wireless internet for UK business — live in{" "}
+              <span className="text-primary">10 working days</span>, where fibre can't reach.
             </h1>
             <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-3xl">
-            Most wireless internet providers are aimed at homes, gamers, and renters. We're not.
-            Integra is wireless internet for business — bonded 4G/5G connections, 99.5% uptime SLAs,
-            dedicated business support. Up to 500Mbps. Installed in 10 working days. No fibre required.
+              Bonded 4G/5G + Starlink, engineered for business. Up to 500Mbps, 99.5% SLA, UK engineers.
+              No fibre required. No 10-week wait.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToChecker}>
-              Check Coverage
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/contact">Talk to Sales</Link>
-            </Button>
+              <Button size="lg" onClick={scrollToChecker}>
+                Check Coverage
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20 rounded"
+              >
+                <Link to="/contact">Talk to Sales</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CHECKER */}
-      <div id="availability-checker">
-        <Section size="compact" variant="alt">
-          <h2 className="text-heading-2 text-foreground mb-8 text-center">
-            Check coverage in 60 seconds — no postcode lottery
-          </h2>
-        </Section>
-      </div>
+      {/* TRUST STRIP */}
+      <section className="bg-background-alt border-y border-border">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
+            {["SLA-backed", "UK-based engineers", "Trusted by rural & multi-site businesses", "99.5% uptime guarantee"].map(
+              (item, i, arr) => (
+                <span key={item} className="flex items-center gap-x-6">
+                  <span className="text-foreground">{item}</span>
+                  {i < arr.length - 1 && <span className="text-primary hidden sm:inline">•</span>}
+                </span>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* COVERAGE BAND (slim) */}
+      <section id="availability-checker" className="bg-background-alt">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-foreground font-medium text-center sm:text-left">
+            Coverage check takes 60 seconds — no postcode lottery.
+          </p>
+          <Button asChild>
+            <a href="#availability-checker-form">Check Coverage <ArrowRight className="ml-2 h-4 w-4" /></a>
+          </Button>
+        </div>
+      </section>
 
       {/* STATS */}
       <Section size="compact">
@@ -257,6 +287,31 @@ const WirelessInternetProvidersUK = () => {
           ))}
         </div>
       </Section>
+
+      {/* HOW IT WORKS — BONDED INPUTS */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">
+            How it works
+          </p>
+          <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-4 max-w-3xl mx-auto">
+            Bonded inputs. <span className="text-primary">One resilient output.</span>
+          </h2>
+          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
+            We combine Starlink satellite with multiple 5G/4G carriers into a single bonded SD-WAN
+            connection — so if one path drops, traffic keeps flowing on the others.
+          </p>
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-3">
+            {bondedInputs.map((item) => (
+              <div key={item.label} className="rounded-2xl border border-border bg-card p-6 text-center">
+                <item.icon className="h-10 w-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
+                <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
+                <p className="text-sm text-muted-foreground">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* WHO IT'S FOR */}
       <Section variant="alt">
@@ -412,26 +467,33 @@ const WirelessInternetProvidersUK = () => {
         </div>
       </Section>
 
-      <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
-      {/* FINAL CTA */}
-      <Section variant="dark" size="large">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
+      <div id="availability-checker-form">
+        <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
+      </div>
+
+      {/* FINAL CTA — DARK */}
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+          <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">
             Ready to switch to wireless internet built for business?
           </h2>
-          <p className="text-lg text-white/80 mb-10">
+          <p className="text-lg text-surface-dark-muted mb-10">
             Up to 500Mbps. Live in 10 working days. SLA-backed. No fibre required.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg">
               <Link to="/check">Check Availability</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button
+              asChild
+              size="lg"
+              className="border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20 rounded"
+            >
               <a href="tel:+442033887111">Call 0203 388 7111</a>
             </Button>
           </div>
         </div>
-      </Section>
+      </section>
     </PageLayout>
   );
 };

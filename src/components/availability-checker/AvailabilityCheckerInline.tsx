@@ -34,7 +34,9 @@ function loadLeaflet(): Promise<void> {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { trackEvent, identifyUser, storeConversionUserData } from "@/components/shared/Analytics";
-import heroBg from "@/assets/sectors/homeworker-remote-work.avif";
+import heroBgAsset from "@/assets/landing/wireless-business-hero.jpg.asset.json";
+import { captureLeadAttribution, getLeadAttribution } from "@/lib/leadAttribution";
+const heroBg = heroBgAsset.url;
 
 // Build trigger: Address lookup v2 deployed - ensure fresh build includes label changes
 /* ------------------------------------------------------------------ */
@@ -89,7 +91,7 @@ const TYPE_LABELS: Record<ServiceType, string> = {
 };
 
 const HERO_COPY: Record<number, { title: string; sub: string }> = {
-  1: { title: "Let's get you connected", sub: "It takes 60 seconds to check — and could change everything" },
+  1: { title: "Let's get your business connected", sub: "60-second coverage check for UK business sites — fibre-class speeds, live in 10 working days." },
   2: { title: "Tell us about you", sub: "So we can recommend the perfect solution" },
   3: { title: "Show us your property", sub: "Drop a pin and we'll check what speeds we can deliver" },
 };
@@ -128,6 +130,7 @@ async function submitToHubSpot(payload: {
   last_name: string;
   email: string;
   phone: string;
+  company?: string;
   user_type: string | null;
   pain_points: string[];
   country: string | null;
@@ -154,6 +157,10 @@ async function submitToHubSpot(payload: {
     { objectTypeId: "0-1", name: "phone", value: payload.phone },
     { objectTypeId: "0-1", name: "zip", value: payload.postcode },
   ];
+
+  if (payload.company) {
+    fields.push({ objectTypeId: "0-1", name: "company", value: payload.company });
+  }
 
   if (payload.user_type) {
     fields.push({
@@ -258,26 +265,8 @@ async function submitToHubSpot(payload: {
   }
 }
 
-/* ---- Capture UTM params: module-level from URL + sessionStorage fallback ---- */
-const INITIAL_UTM_PARAMS: Record<string, string> = {};
-(() => {
-  // First, try current URL search params (direct landing on /check with UTMs)
-  const params = new URLSearchParams(window.location.search);
-  ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
-    const val = params.get(key);
-    if (val) INITIAL_UTM_PARAMS[key] = val;
-  });
-  // Fallback: read from sessionStorage (captured by App.tsx on initial landing page)
-  if (Object.keys(INITIAL_UTM_PARAMS).length === 0) {
-    try {
-      const stored = window.sessionStorage.getItem("integra_utm_params");
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        Object.assign(INITIAL_UTM_PARAMS, parsed);
-      }
-    } catch { /* ignore parse errors */ }
-  }
-})();
+/* ---- Capture & sanitise lead attribution (gclid + UTMs) on module load ---- */
+captureLeadAttribution();
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
@@ -349,6 +338,7 @@ const AvailabilityCheckerInline = ({
   // Step 1
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -382,7 +372,7 @@ const AvailabilityCheckerInline = ({
 
   /* ---- Capture UTM params on mount (from module-level capture) ---- */
   useEffect(() => {
-    utmParamsRef.current = INITIAL_UTM_PARAMS;
+    utmParamsRef.current = getLeadAttribution();
   }, []);
 
   /* ---- Leaflet map ---- */
@@ -518,7 +508,8 @@ const AvailabilityCheckerInline = ({
   const emailValid = email.trim().includes("@") && email.trim().includes(".");
   const firstNameValid = !!firstName.trim();
   const lastNameValid = !!lastName.trim();
-  const step1Valid = firstNameValid && lastNameValid && emailValid && phoneValid;
+  const companyValid = !!company.trim();
+  const step1Valid = firstNameValid && lastNameValid && companyValid && emailValid && phoneValid;
   const step2Valid = !!service;
 
   const togglePain = (p: PainPoint) => {
@@ -698,6 +689,7 @@ const AvailabilityCheckerInline = ({
         last_name: lastName,
         email,
         phone,
+        company: company.trim() || undefined,
         user_type: service,
         pain_points: Array.from(pains),
         country: pcData?.country ?? null,
@@ -860,6 +852,11 @@ const AvailabilityCheckerInline = ({
                   </div>
 
                   <form autoComplete="on" onSubmit={(e) => { e.preventDefault(); setStep1Touched(true); if (step1Valid) goTo(2); }} className="space-y-4">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-foreground mb-1.5">Company name</label>
+                      <Input id="company" name="organization" value={company} onChange={(e) => setCompany(e.target.value)} onFocus={trackFormStart} placeholder="Company name" autoComplete="organization" className={step1Touched && !companyValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      {step1Touched && !companyValid && <p className="text-xs text-red-500 mt-1">Required</p>}
+                    </div>
                     <div className="grid grid-cols-2 gap-3">
                       <div>
                         <label htmlFor="fname" className="block text-sm font-medium text-foreground mb-1.5">First name</label>
@@ -874,7 +871,7 @@ const AvailabilityCheckerInline = ({
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email address</label>
-                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onFocus={trackFormStart} placeholder="sarah@example.com" autoComplete="email" className={step1Touched && !emailValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onFocus={trackFormStart} placeholder="sarah@yourcompany.co.uk" autoComplete="email" className={step1Touched && !emailValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
                       {step1Touched && !emailValid && <p className="text-xs text-red-500 mt-1">Please enter a valid email address</p>}
                     </div>
                     <div>
@@ -892,6 +889,10 @@ const AvailabilityCheckerInline = ({
                     Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
+
+                <p className="text-center text-xs text-muted-foreground mt-4">
+                  Integra is a business-only provider — we don't supply residential addresses.
+                </p>
 
               </motion.div>
             )}

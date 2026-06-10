@@ -11,6 +11,7 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import SEO from "@/components/shared/SEO";
 import HubSpotMeeting from "@/components/shared/HubSpotMeeting";
 import { trackEvent, trackContactFormConversion } from "@/components/shared/Analytics";
+import { getLeadAttribution } from "@/lib/leadAttribution";
 
 // Contact page — HubSpot form integration
 const HUBSPOT_PORTAL_ID = "20314482";
@@ -42,6 +43,10 @@ const Contact = () => {
     setIsSubmitting(true);
     try {
       // Submit to HubSpot Forms API
+      const attribution = getLeadAttribution();
+      const attributionFields = (Object.entries(attribution) as [string, string][])
+        .filter(([, v]) => !!v)
+        .map(([name, value]) => ({ name, value }));
       const hubspotPayload = {
         fields: [
           { name: "firstname", value: form.firstName },
@@ -50,6 +55,7 @@ const Contact = () => {
           { name: "company", value: form.company },
           { name: "phone", value: form.fleetSize },
           { name: "message", value: form.message },
+          ...attributionFields,
         ],
         context: {
           pageUri: window.location.href,
