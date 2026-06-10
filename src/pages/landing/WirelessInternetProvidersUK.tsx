@@ -483,7 +483,7 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* FAQ */}
-      <section className="bg-blue-600 py-16 md:py-24">
+      <section className="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-100 mb-3">FAQ</p>
