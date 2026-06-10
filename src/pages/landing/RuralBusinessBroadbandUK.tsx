@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Check, X, ArrowRight, Radio, Antenna, Network as NetIcon } from "lucide-react";
+import { Check, X, ArrowRight, Radio, Antenna, Network as NetIcon, Layers, PoundSterling, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -23,14 +23,17 @@ import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
 
 const painPoints = [
   {
+    icon: Layers,
     h: "Stacking ADSL lines that still don't work?",
     p: "Two or three copper lines bonded together still give you 10Mbps on a good day. We replace them all with a single connection delivering up to 500Mbps. And with the UK PSTN switch-off in January 2027, your analogue lines are going away regardless — we handle the migration as part of the install.",
   },
   {
+    icon: PoundSterling,
     h: "Quoted £20k+ for fibre?",
     p: "Openreach excess construction charges for rural properties are routinely £15–50k. Our bonded 4G/5G SD-WAN delivers similar speeds for a fraction of the cost — no civils, no wayleaves, no waiting.",
   },
   {
+    icon: Clock,
     h: "Waiting months for a leased line?",
     p: "Ordered fibre or a leased line and staring down a 10-week install window? Integra Bridge gets your site online in days — and stays on as permanent failover once your line lands.",
   },
@@ -339,11 +342,17 @@ const RuralBusinessBroadbandUK = () => {
               Why rural businesses switch to Integra.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-3">
             {painPoints.map((p) => (
-              <div key={p.h} className="rounded-xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-200">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{p.h}</h3>
-                <p className="text-slate-600">{p.p}</p>
+              <div
+                key={p.h}
+                className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-300"
+              >
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 ring-1 ring-blue-100 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                  <p.icon className="h-6 w-6" strokeWidth={1.75} />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3 tracking-tight">{p.h}</h3>
+                <p className="text-slate-600 leading-relaxed">{p.p}</p>
               </div>
             ))}
           </div>
