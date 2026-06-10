@@ -18,6 +18,8 @@ import maypoleBgAsset from "@/assets/landing/enterprise-install-maypole-school.j
 import ruralImgAsset from "@/assets/landing/wireless-rural-industrial.jpg.asset.json";
 import multisiteImgAsset from "@/assets/landing/wireless-multisite-container.jpg.asset.json";
 import eposImgAsset from "@/assets/landing/wireless-epos-card.jpg.asset.json";
+import bridgeCardImgAsset from "@/assets/landing/building-connectivity.jpg.asset.json";
+import sdwanCardImgAsset from "@/assets/landing/celltower.jpg.asset.json";
 import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
 import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
