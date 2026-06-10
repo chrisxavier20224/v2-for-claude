@@ -12,7 +12,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
-import heroImgAsset from "@/assets/landing/wireless-business-hero.jpg.asset.json";
+import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
 const heroImg = heroImgAsset.url;
 
 const stats = [
