@@ -14,10 +14,12 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
+import maypoleBgAsset from "@/assets/landing/enterprise-install-maypole-school.jpg.asset.json";
 import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
 import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
 const heroImg = heroImgAsset.url;
+const maypoleBg = maypoleBgAsset.url;
 
 const stats = [
   { stat: "10 working days", desc: "from order to live" },
