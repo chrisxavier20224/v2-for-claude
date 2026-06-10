@@ -103,16 +103,19 @@ const painPoints = [
 const proof = [
   {
     name: "Royle Farm",
+    stat: "ADSL → 1000Mbps",
     quote: "From single-digit ADSL to 1000Mbps. New tenants now connect in days, not months.",
     href: "/customers/royle-farm",
   },
   {
     name: "WB Power Services",
+    stat: "Every depot unified",
     quote: "National generator service business unified across every depot — one platform, predictable performance.",
     href: "/customers/wb-power-services",
   },
   {
     name: "Carbee",
+    stat: "0.1Mbps → 300Mbps",
     quote: "From 0.1Mbps to 300+Mbps — transforming a rural car dealer's business operations.",
     href: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet",
   },
