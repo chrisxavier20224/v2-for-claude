@@ -281,8 +281,8 @@ const WirelessInternetProvidersUK = () => {
       <CustomerLogoBar />
 
       {/* COVERAGE BAND (slim) */}
-      <section id="availability-checker" className="bg-gradient-to-r from-blue-600 to-blue-500">
-        <div className="mx-auto max-w-6xl px-4 md:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <section id="availability-checker" className="bg-gradient-to-r from-blue-600 to-blue-500 py-4">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white font-medium text-center sm:text-left">
             Coverage check takes 60 seconds — no postcode lottery.
           </p>
@@ -293,7 +293,7 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* STATS — flows from coverage band, no orphan whitespace */}
-      <section className="bg-slate-900 pt-10 pb-16 md:pt-12 md:pb-24">
+      <section className="bg-slate-900 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="grid gap-6 md:grid-cols-3">
             {stats.map((s) => (
