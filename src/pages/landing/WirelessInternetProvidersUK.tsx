@@ -14,7 +14,6 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
-import mcgeeBg from "@/assets/case-studies/mcgee-hero.webp";
 import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
 import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
@@ -450,14 +449,7 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* PROOF */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <img
-          src={mcgeeBg}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/80" />
+      <section className="relative py-16 md:py-24 bg-slate-900">
         <div className="relative max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Case studies</p>
