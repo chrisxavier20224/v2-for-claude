@@ -633,6 +633,7 @@ const WirelessInternetProvidersUK = () => {
           </div>
         </div>
       </section>
+      <div className="bg-slate-900 h-12 md:hidden" aria-hidden="true" />
     </PageLayout>
   );
 };
