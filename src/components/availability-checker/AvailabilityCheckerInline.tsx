@@ -1062,7 +1062,7 @@ const AvailabilityCheckerInline = ({
                   )}
 
                   {pcData && (
-                    <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-4 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
+                    <div className="mt-4 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
                       <div className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
                         <div>
@@ -1072,11 +1072,11 @@ const AvailabilityCheckerInline = ({
                           </p>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
 
                   {addresses.length > 0 && (
-                    <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-4">
+                    <div className="mt-4">
                       <label className="block text-sm font-medium text-foreground mb-2">Select your address</label>
                       <div className="relative" ref={addressDropdownRef}>
                         <button
