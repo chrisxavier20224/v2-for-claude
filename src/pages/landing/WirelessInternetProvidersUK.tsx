@@ -447,7 +447,7 @@ const WirelessInternetProvidersUK = () => {
                 <div className="text-xs text-slate-300 mt-1">bonded 4G/5G cellular</div>
               </div>
               <div className="px-6 py-5 border-l border-white/10">
-                <div className="font-semibold text-base">Starlink + Integra Bridge</div>
+                <div className="font-semibold text-base">Integra Bridge</div>
                 <div className="text-xs text-slate-300 mt-1">cellular + satellite</div>
               </div>
             </div>
@@ -497,7 +497,7 @@ const WirelessInternetProvidersUK = () => {
             {([
               { name: "Starlink on its own", caption: "single network, DIY", key: "alone" as const },
               { name: "Integra SD-WAN", caption: "bonded 4G/5G cellular", key: "sdwan" as const },
-              { name: "Starlink + Integra Bridge", caption: "cellular + satellite", key: "bridge" as const },
+              { name: "Integra Bridge", caption: "cellular + satellite", key: "bridge" as const },
             ]).map((col) => (
               <div key={col.name} className="rounded-xl border border-slate-200 shadow-sm overflow-hidden bg-white">
                 <div className="bg-slate-900 text-white px-5 py-4">
