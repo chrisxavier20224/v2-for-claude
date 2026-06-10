@@ -34,7 +34,9 @@ function loadLeaflet(): Promise<void> {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { trackEvent, identifyUser, storeConversionUserData } from "@/components/shared/Analytics";
-import heroBg from "@/assets/sectors/homeworker-remote-work.avif";
+import heroBgAsset from "@/assets/landing/wireless-business-hero.jpg.asset.json";
+import { captureLeadAttribution, getLeadAttribution } from "@/lib/leadAttribution";
+const heroBg = heroBgAsset.url;
 
 // Build trigger: Address lookup v2 deployed - ensure fresh build includes label changes
 /* ------------------------------------------------------------------ */
@@ -89,7 +91,7 @@ const TYPE_LABELS: Record<ServiceType, string> = {
 };
 
 const HERO_COPY: Record<number, { title: string; sub: string }> = {
-  1: { title: "Let's get you connected", sub: "It takes 60 seconds to check — and could change everything" },
+  1: { title: "Let's get your business connected", sub: "60-second coverage check for UK business sites — fibre-class speeds, live in 10 working days." },
   2: { title: "Tell us about you", sub: "So we can recommend the perfect solution" },
   3: { title: "Show us your property", sub: "Drop a pin and we'll check what speeds we can deliver" },
 };
@@ -128,6 +130,7 @@ async function submitToHubSpot(payload: {
   last_name: string;
   email: string;
   phone: string;
+  company?: string;
   user_type: string | null;
   pain_points: string[];
   country: string | null;
@@ -154,6 +157,10 @@ async function submitToHubSpot(payload: {
     { objectTypeId: "0-1", name: "phone", value: payload.phone },
     { objectTypeId: "0-1", name: "zip", value: payload.postcode },
   ];
+
+  if (payload.company) {
+    fields.push({ objectTypeId: "0-1", name: "company", value: payload.company });
+  }
 
   if (payload.user_type) {
     fields.push({
@@ -258,26 +265,8 @@ async function submitToHubSpot(payload: {
   }
 }
 
-/* ---- Capture UTM params: module-level from URL + sessionStorage fallback ---- */
-const INITIAL_UTM_PARAMS: Record<string, string> = {};
-(() => {
-  // First, try current URL search params (direct landing on /check with UTMs)
-  const params = new URLSearchParams(window.location.search);
-  ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
-    const val = params.get(key);
-    if (val) INITIAL_UTM_PARAMS[key] = val;
-  });
-  // Fallback: read from sessionStorage (captured by App.tsx on initial landing page)
-  if (Object.keys(INITIAL_UTM_PARAMS).length === 0) {
-    try {
-      const stored = window.sessionStorage.getItem("integra_utm_params");
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        Object.assign(INITIAL_UTM_PARAMS, parsed);
-      }
-    } catch { /* ignore parse errors */ }
-  }
-})();
+/* ---- Capture & sanitise lead attribution (gclid + UTMs) on module load ---- */
+captureLeadAttribution();
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
