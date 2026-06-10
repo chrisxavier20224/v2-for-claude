@@ -150,6 +150,10 @@ const faqs = [
     a: "That's exactly what bonding is for. We combine multiple mobile carriers with Starlink satellite into one connection — if one path is weak, the others carry the load. The survey confirms achievable speeds before you commit.",
   },
   {
+    q: "Why not just buy Starlink ourselves?",
+    a: "You can — and for a home, you probably should. For a business, Starlink alone means ~25Mbps uploads, no static IP, no SLA and a single network. Integra Bridge bonds Starlink with multi-carrier cellular for up to 300Mbps up, static IPs, automatic failover and UK engineer support.",
+  },
+  {
     q: "What does it cost?",
     a: "Pricing is tailored to your site and bearer mix, and you'll have the full quote before you sign. It's typically a fraction of the £15–50k excess construction charges quoted for rural fibre installs.",
   },
@@ -169,6 +173,14 @@ const faqs = [
     q: "Is there a data cap?",
     a: "No caps, no throttling. We run enterprise data plans sized for business workloads.",
   },
+];
+
+const starlinkCompare: { label: string; alone: string; integra: string }[] = [
+  { label: "Upload speed", alone: "~25Mbps up", integra: "Up to 300Mbps up — cellular uplinks bonded in" },
+  { label: "Resilience", alone: "One network. Obstruction, weather or an outage takes you offline", integra: "Satellite + multiple 4G/5G carriers, automatic failover" },
+  { label: "Support & SLA", alone: "App-only support, best-effort", integra: "UK engineers, 99.5% uptime SLA with credits" },
+  { label: "IP addressing", alone: "CGNAT — no static IP, breaks VPNs & CCTV", integra: "Static IPs over private Layer 2, VPN & CCTV-ready" },
+  { label: "Installation", alone: "DIY kit on a windowsill", integra: "Surveyed, engineer-installed roof mount" },
 ];
 
 const CANONICAL = "https://www.integra-networks.co.uk/lp/wireless-internet-providers-uk";
@@ -335,6 +347,72 @@ const WirelessInternetProvidersUK = () => {
                 <p className="text-sm text-slate-600">{item.detail}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STARLINK COMPARISON */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Starlink, done properly</p>
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900 mb-4">
+              Thinking of just buying Starlink? <span className="text-blue-600">Here's the difference.</span>
+            </h2>
+            <p className="text-slate-600">
+              Starlink is brilliant — that's why we build with it. But on its own, it's a single network with consumer-grade limits. We bond it with multi-carrier cellular and wrap it in business-grade service.
+            </p>
+          </div>
+
+          {/* Desktop table */}
+          <div className="hidden md:block max-w-4xl mx-auto rounded-xl border border-slate-200 overflow-hidden bg-white shadow-sm">
+            <div className="grid grid-cols-3 bg-slate-50 border-b border-slate-200">
+              <div className="p-4" />
+              <div className="p-4 text-sm font-semibold text-slate-700 border-l border-slate-200">Starlink on its own</div>
+              <div className="p-4 text-sm font-semibold text-blue-700 bg-blue-50 border-l border-blue-200">Starlink + Integra Bridge</div>
+            </div>
+            {starlinkCompare.map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-3 ${i % 2 === 1 ? "bg-slate-50/50" : ""}`}>
+                <div className="p-4 text-sm font-semibold text-slate-900 border-t border-slate-200">{row.label}</div>
+                <div className="p-4 text-sm text-slate-600 border-t border-l border-slate-200">{row.alone}</div>
+                <div className="p-4 text-sm text-slate-800 border-t border-l border-blue-200 bg-blue-50/60">
+                  <span className="flex gap-2"><Check className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />{row.integra}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile cards */}
+          <div className="md:hidden grid gap-4 max-w-md mx-auto">
+            <div className="rounded-xl border border-slate-200 bg-white p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Starlink on its own</p>
+              <ul className="space-y-3">
+                {starlinkCompare.map((r) => (
+                  <li key={r.label} className="text-sm text-slate-600">
+                    <span className="block font-semibold text-slate-900">{r.label}</span>
+                    {r.alone}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border-2 border-blue-300 bg-blue-50 p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-blue-700 mb-4">Starlink + Integra Bridge</p>
+              <ul className="space-y-3">
+                {starlinkCompare.map((r) => (
+                  <li key={r.label} className="text-sm text-slate-800 flex gap-2">
+                    <Check className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
+                    <span><span className="block font-semibold text-slate-900">{r.label}</span>{r.integra}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <p className="text-lg font-medium text-slate-900 mb-5">Same satellite. Completely different service.</p>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white" onClick={scrollToChecker}>
+              Check Coverage
+            </Button>
           </div>
         </div>
       </section>
