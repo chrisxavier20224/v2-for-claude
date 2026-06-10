@@ -344,10 +344,10 @@ const AvailabilityCheckerInline = ({
 
   // Step 2
   const [service, setService] = useState<ServiceType | null>(null);
-  const [pains, setPains] = useState<Set<PainPoint>>(new Set());
+  const [pains] = useState<Set<PainPoint>>(new Set());
   const [urgency, setUrgency] = useState<string>("");
   const [houseBuildingNumber, setHouseBuildingNumber] = useState<string>("");
-  const [subStep, setSubStep] = useState(1); // 1=business type, 2=pain points, 3=urgency
+  const [subStep, setSubStep] = useState(1); // 1=business type, 2=urgency
 
   // Step 3
   const [postcode, setPostcode] = useState("");
