@@ -435,18 +435,39 @@ const WirelessInternetProvidersUK = () => {
           </div>
 
           {/* Desktop table */}
-          <div className="hidden md:block max-w-4xl mx-auto rounded-xl border border-slate-200 overflow-hidden bg-white shadow-sm">
-            <div className="grid grid-cols-3 bg-slate-50 border-b border-slate-200">
+          <div className="hidden md:block max-w-5xl mx-auto rounded-xl border border-slate-200 overflow-hidden bg-white shadow-sm">
+            <div className="grid grid-cols-[1.1fr_1fr_1fr_1.1fr] bg-slate-50 border-b border-slate-200">
               <div className="p-4" />
-              <div className="p-4 text-sm font-semibold text-slate-700 border-l border-slate-200">Starlink on its own</div>
-              <div className="p-4 text-sm font-semibold text-blue-700 bg-blue-50 border-l border-blue-200">Starlink + Integra Bridge</div>
+              <div className="p-4 border-l border-slate-200">
+                <div className="text-sm font-semibold text-slate-700">Starlink on its own</div>
+              </div>
+              <div className="p-4 border-l border-slate-200">
+                <div className="text-sm font-semibold text-slate-700">Integra SD-WAN</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">bonded 4G/5G cellular</div>
+              </div>
+              <div className="p-4 border-l border-blue-200 bg-blue-50">
+                <div className="text-sm font-semibold text-blue-700">Starlink + Integra Bridge</div>
+                <div className="text-[11px] text-blue-700/70 mt-0.5">cellular + satellite</div>
+              </div>
             </div>
             {starlinkCompare.map((row, i) => (
-              <div key={row.label} className={`grid grid-cols-3 ${i % 2 === 1 ? "bg-slate-50/50" : ""}`}>
+              <div
+                key={row.label}
+                className={`grid grid-cols-[1.1fr_1fr_1fr_1.1fr] ${i % 2 === 1 ? "bg-slate-50/50" : ""}`}
+              >
                 <div className="p-4 text-sm font-semibold text-slate-900 border-t border-slate-200">{row.label}</div>
                 <div className="p-4 text-sm text-slate-600 border-t border-l border-slate-200">{row.alone}</div>
+                <div className="p-4 text-sm text-slate-800 border-t border-l border-slate-200">
+                  <span className="flex gap-2">
+                    {row.sdwanTick && <Check className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />}
+                    <span>{row.sdwan}</span>
+                  </span>
+                </div>
                 <div className="p-4 text-sm text-slate-800 border-t border-l border-blue-200 bg-blue-50/60">
-                  <span className="flex gap-2"><Check className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />{row.integra}</span>
+                  <span className="flex gap-2">
+                    <Check className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
+                    <span>{row.bridge}</span>
+                  </span>
                 </div>
               </div>
             ))}
@@ -465,13 +486,30 @@ const WirelessInternetProvidersUK = () => {
                 ))}
               </ul>
             </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1">Integra SD-WAN</p>
+              <p className="text-[11px] text-slate-500 mb-4">bonded 4G/5G cellular</p>
+              <ul className="space-y-3">
+                {starlinkCompare.map((r) => (
+                  <li key={r.label} className="text-sm text-slate-700 flex gap-2">
+                    {r.sdwanTick ? (
+                      <Check className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
+                    ) : (
+                      <span className="w-4 shrink-0" />
+                    )}
+                    <span><span className="block font-semibold text-slate-900">{r.label}</span>{r.sdwan}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="rounded-xl border-2 border-blue-300 bg-blue-50 p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-blue-700 mb-4">Starlink + Integra Bridge</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-blue-700 mb-1">Starlink + Integra Bridge</p>
+              <p className="text-[11px] text-blue-700/70 mb-4">cellular + satellite</p>
               <ul className="space-y-3">
                 {starlinkCompare.map((r) => (
                   <li key={r.label} className="text-sm text-slate-800 flex gap-2">
                     <Check className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
-                    <span><span className="block font-semibold text-slate-900">{r.label}</span>{r.integra}</span>
+                    <span><span className="block font-semibold text-slate-900">{r.label}</span>{r.bridge}</span>
                   </li>
                 ))}
               </ul>
