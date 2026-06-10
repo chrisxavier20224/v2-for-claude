@@ -248,14 +248,14 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* TRUST STRIP */}
-      <section className="bg-slate-50 border-y border-slate-200 py-4">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-500 py-4">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-slate-600">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-white">
             {["SLA-backed", "UK-based engineers", "Trusted by rural & multi-site businesses", "99.5% uptime guarantee"].map(
               (item, i, arr) => (
                 <span key={item} className="flex items-center gap-x-6">
-                  <span className="text-slate-900">{item}</span>
-                  {i < arr.length - 1 && <span className="text-blue-600 hidden sm:inline">•</span>}
+                  <span>{item}</span>
+                  {i < arr.length - 1 && <span className="text-white/60 hidden sm:inline">•</span>}
                 </span>
               )
             )}
