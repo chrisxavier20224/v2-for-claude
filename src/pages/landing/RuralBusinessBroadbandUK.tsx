@@ -360,18 +360,18 @@ const RuralBusinessBroadbandUK = () => {
       </section>
 
       {/* HOW IT WORKS — bonding visual */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-slate-950 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">How it works</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">How it works</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
               Multiple networks in. One fast, resilient connection out.
             </h2>
-            <p className="text-slate-600">
+            <p className="text-slate-300">
               We bond up to four mobile carriers — and optionally Starlink — into a single business-grade connection. If one bearer drops, the others carry the load in milliseconds.
             </p>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-10">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-10">
             <div className="grid gap-6 md:grid-cols-[1fr_auto_1fr] items-center">
               <div className="grid grid-cols-2 gap-3">
                 {[
@@ -380,23 +380,23 @@ const RuralBusinessBroadbandUK = () => {
                   { icon: Antenna, label: "O2 4G/5G" },
                   { icon: Radio, label: "Starlink (optional)" },
                 ].map((b) => (
-                  <div key={b.label} className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3">
-                    <b.icon className="h-5 w-5 text-blue-600 shrink-0" />
-                    <span className="text-sm font-medium text-slate-800">{b.label}</span>
+                  <div key={b.label} className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
+                    <b.icon className="h-5 w-5 text-blue-400 shrink-0" />
+                    <span className="text-sm font-medium text-slate-100">{b.label}</span>
                   </div>
                 ))}
               </div>
-              <div className="hidden md:flex flex-col items-center text-blue-600">
+              <div className="hidden md:flex flex-col items-center text-blue-400">
                 <ArrowRight className="h-8 w-8" />
                 <span className="text-[10px] font-semibold uppercase tracking-widest mt-1">Bonded</span>
               </div>
-              <div className="md:hidden flex justify-center text-blue-600">
+              <div className="md:hidden flex justify-center text-blue-400">
                 <ArrowRight className="h-6 w-6 rotate-90" />
               </div>
-              <div className="rounded-xl bg-slate-900 text-white p-6 text-center">
-                <NetIcon className="h-10 w-10 mx-auto text-blue-400 mb-3" />
+              <div className="rounded-xl bg-blue-600 text-white p-6 text-center shadow-lg shadow-blue-900/40">
+                <NetIcon className="h-10 w-10 mx-auto text-white mb-3" />
                 <p className="text-2xl font-semibold tracking-tight">One connection</p>
-                <p className="text-sm text-slate-300 mt-2">Up to 500Mbps · Static IP · 99.5% SLA · Automatic failover</p>
+                <p className="text-sm text-blue-100 mt-2">Up to 500Mbps · Static IP · 99.5% SLA · Automatic failover</p>
               </div>
             </div>
           </div>
