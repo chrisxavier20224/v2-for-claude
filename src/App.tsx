@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import Analytics from "./components/shared/Analytics";
+import { captureLeadAttribution } from "./lib/leadAttribution";
 
 // Eager load critical pages
 import Index from "./pages/Index";
@@ -121,20 +122,8 @@ const Wholesale = lazy(() => import("./pages/Wholesale"));
 
 const queryClient = new QueryClient();
 
-/* ---- Capture UTM params on first page load (any route) into sessionStorage ---- */
-(() => {
-  if (typeof window === "undefined") return;
-  const params = new URLSearchParams(window.location.search);
-  const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
-  const captured: Record<string, string> = {};
-  utmKeys.forEach((key) => {
-    const val = params.get(key);
-    if (val) captured[key] = val;
-  });
-  if (Object.keys(captured).length > 0) {
-    window.sessionStorage.setItem("integra_utm_params", JSON.stringify(captured));
-  }
-})();
+/* ---- Capture & sanitise lead attribution (gclid + UTMs) on first page load ---- */
+captureLeadAttribution();
 
 // Simple loading fallback
 const PageLoader = () => (
