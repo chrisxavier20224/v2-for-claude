@@ -14,7 +14,6 @@ import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
-import mcgeeBg from "@/assets/case-studies/mcgee-hero.webp";
 import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
 import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
