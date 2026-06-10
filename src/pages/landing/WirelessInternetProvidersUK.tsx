@@ -9,7 +9,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import PageLayout from "@/components/layout/PageLayout";
-import Section from "@/components/shared/Section";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
@@ -104,16 +103,19 @@ const painPoints = [
 const proof = [
   {
     name: "Royle Farm",
+    stat: "ADSL → 1000Mbps",
     quote: "From single-digit ADSL to 1000Mbps. New tenants now connect in days, not months.",
     href: "/customers/royle-farm",
   },
   {
     name: "WB Power Services",
+    stat: "Every depot unified",
     quote: "National generator service business unified across every depot — one platform, predictable performance.",
     href: "/customers/wb-power-services",
   },
   {
     name: "Carbee",
+    stat: "0.1Mbps → 300Mbps",
     quote: "From 0.1Mbps to 300+Mbps — transforming a rural car dealer's business operations.",
     href: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet",
   },
@@ -212,7 +214,7 @@ const WirelessInternetProvidersUK = () => {
       <SchemaMarkup data={[serviceSchema, breadcrumbSchema, faqSchema]} />
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
           <img
             src={heroImg}
@@ -220,27 +222,23 @@ const WirelessInternetProvidersUK = () => {
             className="w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/70 to-surface-dark/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/75 to-slate-900/40" />
         </div>
-        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 py-24 md:py-32">
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-4 md:px-6 py-20 md:py-28">
           <div className="max-w-4xl">
-            <h1 className="text-heading-1 md:text-display-sm text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-6">
               Wireless internet for UK business — live in{" "}
-              <span className="text-primary">10 working days</span>, where fibre can't reach.
+              <span className="text-blue-400">10 working days</span>, where fibre can't reach.
             </h1>
             <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-3xl">
               Bonded 4G/5G + Starlink, engineered for business. Up to 500Mbps, 99.5% SLA, UK engineers.
               No fibre required. No 10-week wait.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" onClick={scrollToChecker}>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white" onClick={scrollToChecker}>
                 Check Coverage
               </Button>
-              <Button
-                asChild
-                size="lg"
-                className="border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20 rounded"
-              >
+              <Button asChild size="lg" variant="outline" className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white">
                 <Link to="/contact">Talk to Sales</Link>
               </Button>
             </div>
@@ -249,14 +247,14 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* TRUST STRIP */}
-      <section className="bg-background-alt border-y border-border">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
+      <section className="bg-slate-50 border-y border-slate-200 py-4">
+        <div className="mx-auto max-w-6xl px-4 md:px-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-slate-600">
             {["SLA-backed", "UK-based engineers", "Trusted by rural & multi-site businesses", "99.5% uptime guarantee"].map(
               (item, i, arr) => (
                 <span key={item} className="flex items-center gap-x-6">
-                  <span className="text-foreground">{item}</span>
-                  {i < arr.length - 1 && <span className="text-primary hidden sm:inline">•</span>}
+                  <span className="text-slate-900">{item}</span>
+                  {i < arr.length - 1 && <span className="text-blue-600 hidden sm:inline">•</span>}
                 </span>
               )
             )}
@@ -265,48 +263,49 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* COVERAGE BAND (slim) */}
-      <section id="availability-checker" className="bg-background-alt">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-foreground font-medium text-center sm:text-left">
+      <section id="availability-checker" className="bg-white border-b border-slate-200">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-slate-900 font-medium text-center sm:text-left">
             Coverage check takes 60 seconds — no postcode lottery.
           </p>
-          <Button asChild>
+          <Button asChild className="bg-blue-600 hover:bg-blue-500 text-white">
             <a href="#availability-checker-form">Check Coverage <ArrowRight className="ml-2 h-4 w-4" /></a>
           </Button>
         </div>
       </section>
 
-      {/* STATS */}
-      <Section size="compact">
-        <div className="grid gap-6 md:grid-cols-3">
-          {stats.map((s) => (
-            <Card key={s.stat} className="p-8 text-center">
-              <p className="text-3xl md:text-4xl font-medium text-primary mb-2">{s.stat}</p>
-              <p className="text-sm text-muted-foreground">{s.desc}</p>
-            </Card>
-          ))}
+      {/* STATS — flows from coverage band, no orphan whitespace */}
+      <section className="bg-white pt-10 pb-16 md:pt-12 md:pb-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="grid gap-6 md:grid-cols-3">
+            {stats.map((s) => (
+              <div key={s.stat} className="rounded-xl border border-slate-200 bg-white p-8 text-center">
+                <p className="text-3xl md:text-4xl font-semibold text-blue-600 mb-2">{s.stat}</p>
+                <p className="text-sm text-slate-600">{s.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* HOW IT WORKS — BONDED INPUTS */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">
-            How it works
-          </p>
-          <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-4 max-w-3xl mx-auto">
-            Bonded inputs. <span className="text-primary">One resilient output.</span>
-          </h2>
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
-            We combine Starlink satellite with multiple 5G/4G carriers into a single bonded SD-WAN
-            connection — so if one path drops, traffic keeps flowing on the others.
-          </p>
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-3">
+      {/* HOW IT WORKS */}
+      <section className="bg-slate-50 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">How it works</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+              Bonded inputs. <span className="text-blue-600">One resilient output.</span>
+            </h2>
+            <p className="text-slate-600">
+              We combine Starlink satellite with multiple 5G/4G carriers into a single bonded SD-WAN connection — so if one path drops, traffic keeps flowing on the others.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-3">
             {bondedInputs.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-border bg-card p-6 text-center">
-                <item.icon className="h-10 w-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
-                <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
-                <p className="text-sm text-muted-foreground">{item.detail}</p>
+              <div key={item.label} className="rounded-xl border border-slate-200 bg-white p-6 text-center">
+                <item.icon className="h-10 w-10 text-blue-600 mx-auto mb-4" strokeWidth={1.5} />
+                <h3 className="font-semibold text-slate-900 mb-2">{item.label}</h3>
+                <p className="text-sm text-slate-600">{item.detail}</p>
               </div>
             ))}
           </div>
@@ -314,181 +313,236 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* WHO IT'S FOR */}
-      <Section variant="alt">
-        <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-heading-1 text-foreground mb-4">
-            Wireless internet that's actually built for business.
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Same wireless tech — but engineered for the operations that depend on it.
-          </p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {audience.map((a) => (
-            <Card key={a.title} className="p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
-                <a.icon className="h-6 w-6" strokeWidth={1.5} />
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Who it's for</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+              Wireless internet that's actually built for business.
+            </h2>
+            <p className="text-slate-600">Same wireless tech — but engineered for the operations that depend on it.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {audience.map((a) => (
+              <div key={a.title} className="rounded-xl border border-slate-200 bg-white p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 mb-5">
+                  <a.icon className="h-6 w-6" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">{a.title}</h3>
+                <p className="text-slate-600">{a.body}</p>
               </div>
-              <h3 className="text-heading-3 text-foreground mb-3">{a.title}</h3>
-              <p className="text-muted-foreground">{a.body}</p>
-            </Card>
-          ))}
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* NOT THIS, THIS */}
-      <Section>
-        <h2 className="text-heading-1 text-foreground text-center mb-12 max-w-3xl mx-auto">
-          Not a consumer wireless ISP. Not residential 4G in a box.
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-          <Card className="p-8">
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-              What we're not
-            </p>
-            <ul className="space-y-4">
-              {compare.map((c) => (
-                <li key={c.not} className="flex items-start gap-3 text-foreground">
-                  <X className="h-5 w-5 flex-shrink-0 text-destructive mt-0.5" />
-                  <span>{c.not}</span>
-                </li>
-              ))}
-            </ul>
-          </Card>
-          <Card className="p-8 border-primary/40">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-6">
-              What we are
-            </p>
-            <ul className="space-y-4">
-              {compare.map((c) => (
-                <li key={c.are} className="flex items-start gap-3 text-foreground">
-                  <Check className="h-5 w-5 flex-shrink-0 text-primary mt-0.5" />
-                  <span>{c.are}</span>
-                </li>
-              ))}
-            </ul>
-          </Card>
-        </div>
-      </Section>
-
-      {/* PRICING */}
-      <Section variant="alt">
-        <h2 className="text-heading-1 text-foreground text-center mb-12">
-          Transparent business pricing. No mystery quotes.
-        </h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {tiers.map((t) => (
-            <Card
-              key={t.name}
-              className={`p-8 flex flex-col ${t.highlight ? "border-primary border-2 shadow-lg" : ""}`}
-            >
-              {t.highlight && (
-                <span className="self-start mb-3 inline-block rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-                  Most Popular
-                </span>
-              )}
-              <h3 className="text-heading-3 text-foreground mb-1">{t.name}</h3>
-              <p className="text-sm text-muted-foreground mb-4">{t.blurb}</p>
-              <p className="text-3xl font-medium text-foreground mb-6">{t.price}</p>
-              <ul className="space-y-3 mb-8 flex-1">
-                {t.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-foreground">
-                    <Check className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
-                    <span>{f}</span>
+      {/* NOT THIS, THIS — tight comparison */}
+      <section className="bg-slate-50 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">The difference</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              Not a consumer wireless ISP. Not residential 4G in a box.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
+            <div className="rounded-xl border border-red-200 bg-red-50/50 p-8">
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-red-600 mb-6">What we're not</h3>
+              <ul className="space-y-4">
+                {compare.map((c) => (
+                  <li key={c.not} className="flex gap-3 text-slate-800">
+                    <X className="text-red-500 shrink-0 mt-0.5 h-5 w-5" />
+                    <span>{c.not}</span>
                   </li>
                 ))}
               </ul>
-              <Button asChild className="w-full">
-                <Link to={t.cta.href}>{t.cta.label}</Link>
-              </Button>
-            </Card>
-          ))}
+            </div>
+            <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-8">
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-emerald-600 mb-6">What we are</h3>
+              <ul className="space-y-4">
+                {compare.map((c) => (
+                  <li key={c.are} className="flex gap-3 text-slate-800">
+                    <Check className="text-emerald-600 shrink-0 mt-0.5 h-5 w-5" />
+                    <span>{c.are}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
+
+      {/* PRICING */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Pricing</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              Transparent business pricing. No mystery quotes.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {tiers.map((t) => (
+              <div
+                key={t.name}
+                className={`rounded-xl bg-white p-8 flex flex-col ${t.highlight ? "border-2 border-blue-600 shadow-lg" : "border border-slate-200"}`}
+              >
+                {t.highlight && (
+                  <span className="self-start mb-3 inline-block rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+                    Most Popular
+                  </span>
+                )}
+                <h3 className="text-lg font-semibold text-slate-900 mb-1">{t.name}</h3>
+                <p className="text-sm text-slate-600 mb-4">{t.blurb}</p>
+                <p className="text-3xl font-semibold text-slate-900 mb-6">
+                  {t.price.startsWith("£") ? <span className="text-base font-normal text-slate-500 mr-1">From</span> : null}
+                  {t.price}
+                </p>
+                <ul className="space-y-3 mb-8 flex-1">
+                  {t.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm text-slate-800">
+                      <Check className="h-4 w-4 text-blue-600 flex-shrink-0 mt-1" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild className="w-full bg-blue-600 hover:bg-blue-500 text-white">
+                  <Link to={t.cta.href}>{t.cta.label}</Link>
+                </Button>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-slate-500 text-center mt-8 max-w-2xl mx-auto">
+            Final pricing depends on site survey and bearer mix. No mystery quotes — you'll know before you sign.
+          </p>
+        </div>
+      </section>
 
       {/* PAIN POINTS */}
-      <Section>
-        <h2 className="text-heading-1 text-foreground text-center mb-12">
-          Why businesses switch to Integra wireless.
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2">
-          {painPoints.map((p) => (
-            <Card key={p.h} className="p-8">
-              <h3 className="text-heading-3 text-foreground mb-3">{p.h}</h3>
-              <p className="text-muted-foreground">{p.p}</p>
-            </Card>
-          ))}
+      <section className="bg-slate-50 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Why switch</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              Why businesses switch to Integra wireless.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {painPoints.map((p) => (
+              <div key={p.h} className="rounded-xl border border-slate-200 bg-white p-8">
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">{p.h}</h3>
+                <p className="text-slate-600">{p.p}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* PROOF */}
-      <Section variant="alt">
-        <h2 className="text-heading-1 text-foreground text-center mb-12">
-          Real businesses. Real results.
-        </h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {proof.map((c) => (
-            <Card key={c.name} className="p-8 flex flex-col">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-                Case study
-              </p>
-              <h3 className="text-heading-3 text-foreground mb-3">{c.name}</h3>
-              <p className="text-muted-foreground mb-6 flex-1">"{c.quote}"</p>
-              <Link
-                to={c.href}
-                className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-              >
-                Read more <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Card>
-          ))}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Case studies</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              Real businesses. Real results.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {proof.map((c) => (
+              <div key={c.name} className="rounded-xl border border-slate-200 bg-white p-8 flex flex-col">
+                <p className="text-2xl font-bold text-blue-600 mb-3">{c.stat}</p>
+                <p className="text-slate-600 text-sm mb-4 flex-1">"{c.quote}"</p>
+                <p className="text-sm font-semibold text-slate-900 mb-3">{c.name}</p>
+                <Link
+                  to={c.href}
+                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline"
+                >
+                  Read case study <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/customers" className="text-blue-600 font-medium hover:underline">
+              View all customer stories →
+            </Link>
+          </div>
         </div>
-        <div className="text-center mt-10">
-          <Link to="/customers" className="text-primary font-medium hover:underline">
-            View all customer stories →
-          </Link>
-        </div>
-      </Section>
+      </section>
 
       {/* FAQ */}
-      <Section>
-        <h2 className="text-heading-1 text-foreground text-center mb-12">
-          Wireless business broadband — what people ask
-        </h2>
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((f, i) => (
-              <AccordionItem key={f.q} value={`item-${i}`}>
-                <AccordionTrigger className="text-left text-foreground">{f.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+      <section className="bg-slate-50 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">FAQ</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              Wireless business broadband — what people ask
+            </h2>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((f, i) => (
+                <AccordionItem key={f.q} value={`item-${i}`}>
+                  <AccordionTrigger className="text-left text-slate-900">{f.q}</AccordionTrigger>
+                  <AccordionContent className="text-slate-600">{f.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </Section>
+      </section>
 
-      <div id="availability-checker-form">
-        <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
-      </div>
+      {/* AVAILABILITY CHECKER — two-column */}
+      <section id="availability-checker-form" className="bg-slate-50 py-16 md:py-24 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Check availability</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              See what's available at your site.
+            </h2>
+            <p className="text-slate-600 mt-4">
+              60 seconds to a real, engineering-validated answer — not a postcode lottery.
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
+            </div>
+            <aside className="rounded-xl border border-slate-200 bg-white p-8 h-fit lg:sticky lg:top-24">
+              <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Prefer to chat first?</p>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Speak to a UK engineer.</h3>
+              <p className="text-slate-600 mb-6">
+                No call-centre script. Straight through to the team who'll design and install your network.
+              </p>
+              <a
+                href="tel:+442033887111"
+                className="block text-2xl font-semibold text-slate-900 mb-6 hover:text-blue-600"
+              >
+                0203 388 7111
+              </a>
+              <Button asChild className="w-full bg-blue-600 hover:bg-blue-500 text-white">
+                <Link to="/contact">Talk to Sales</Link>
+              </Button>
+              <p className="text-xs text-slate-500 mt-4">Mon–Fri, same-day response.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
 
-      {/* FINAL CTA — DARK */}
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
-          <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">
+      {/* FINAL CTA */}
+      <section className="bg-slate-900 py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
             Ready to switch to wireless internet built for business?
           </h2>
-          <p className="text-lg text-surface-dark-muted mb-10">
+          <p className="mt-4 text-slate-300">
             Up to 500Mbps. Live in 10 working days. SLA-backed. No fibre required.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg">
-              <Link to="/check">Check Availability</Link>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Button asChild size="lg" className="bg-blue-500 hover:bg-blue-400 text-white">
+              <a href="#availability-checker-form">Check Availability</a>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              className="border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20 rounded"
-            >
+            <Button asChild size="lg" variant="outline" className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white">
               <a href="tel:+442033887111">Call 0203 388 7111</a>
             </Button>
           </div>
