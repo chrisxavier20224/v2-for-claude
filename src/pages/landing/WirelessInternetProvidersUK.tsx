@@ -467,21 +467,10 @@ const WirelessInternetProvidersUK = () => {
         </div>
       </section>
 
-      {/* AVAILABILITY CHECKER — two-column */}
-      <section id="availability-checker-form" className="bg-slate-50 py-16 md:py-24 border-t border-slate-200">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600 mb-5">Check availability</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900">
-              See what's available at your site.
-            </h2>
-            <p className="text-slate-600 mt-4">
-              60 seconds to a real, engineering-validated answer — not a postcode lottery.
-            </p>
-          </div>
-          <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" hideChatAlternative />
-        </div>
-      </section>
+      {/* AVAILABILITY CHECKER */}
+      <div id="availability-checker-form">
+        <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" hideChatAlternative />
+      </div>
 
       {/* FINAL CTA */}
       <section className="bg-slate-900 py-16 md:py-24">
