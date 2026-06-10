@@ -41,16 +41,19 @@ const audience = [
     icon: Wifi,
     title: "Rural businesses without fibre",
     body: "Farms, offices, light industrial sites where Openreach has quoted £20k+ for fibre — or won't quote at all. Our wireless network delivers fibre-equivalent speeds in days.",
+    image: ruralImgAsset.url,
   },
   {
     icon: Network,
     title: "Multi-site operators",
     body: "Construction sites, pop-up retail, business parks, distribution hubs. One platform, central management, predictable performance across every location.",
+    image: multisiteImgAsset.url,
   },
   {
     icon: Shield,
     title: "Businesses that can't afford downtime",
     body: "Card machines, VoIP, cloud apps, CCTV, EPOS. Dual-network failover means traffic keeps flowing even if one carrier drops.",
+    image: eposImgAsset.url,
   },
 ];
 
