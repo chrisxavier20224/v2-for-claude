@@ -15,6 +15,9 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
 import mcgeeBg from "@/assets/case-studies/mcgee-hero.webp";
+import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
+import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
+import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
 const heroImg = heroImgAsset.url;
 
 const stats = [
@@ -108,18 +111,21 @@ const proof = [
     stat: "ADSL → 1000Mbps",
     quote: "From single-digit ADSL to 1000Mbps. New tenants now connect in days, not months.",
     href: "/customers/royle-farm",
+    image: royleFarmImg,
   },
   {
     name: "WB Power Services",
     stat: "Every depot unified",
     quote: "National generator service business unified across every depot — one platform, predictable performance.",
     href: "/customers/wb-power-services",
+    image: wbPowerImg,
   },
   {
     name: "Carbee",
     stat: "0.1Mbps → 300Mbps",
     quote: "From 0.1Mbps to 300+Mbps — transforming a rural car dealer's business operations.",
     href: "/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet",
+    image: carbeeImg,
   },
 ];
 
@@ -461,17 +467,28 @@ const WirelessInternetProvidersUK = () => {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {proof.map((c) => (
-              <div key={c.name} className="rounded-xl border border-slate-200 bg-white p-8 flex flex-col">
-                <p className="text-2xl font-bold text-blue-600 mb-3">{c.stat}</p>
-                <p className="text-slate-600 text-sm mb-4 flex-1">"{c.quote}"</p>
-                <p className="text-sm font-semibold text-slate-900 mb-3">{c.name}</p>
-                <Link
-                  to={c.href}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline"
-                >
-                  Read case study <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
+              <Link
+                key={c.name}
+                to={c.href}
+                className="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/5] flex flex-col justify-end shadow-lg transition-transform hover:-translate-y-1"
+              >
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-slate-900/10" />
+                <div className="relative p-6 text-white">
+                  <p className="text-[11px] font-semibold uppercase tracking-widest text-white/70 mb-2">Customer story</p>
+                  <p className="text-2xl font-bold text-blue-300 mb-2">{c.stat}</p>
+                  <p className="text-white/80 text-sm mb-3 line-clamp-3">"{c.quote}"</p>
+                  <p className="text-sm font-semibold mb-3">{c.name}</p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-white group-hover:text-blue-300">
+                    Read case study <ArrowRight className="h-4 w-4" />
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-10">
