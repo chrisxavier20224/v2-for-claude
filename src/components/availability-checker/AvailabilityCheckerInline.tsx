@@ -1197,6 +1197,11 @@ const AvailabilityCheckerInline = ({
                         <>Check My Coverage <ArrowRight className="ml-2 h-4 w-4" /></>
                       )}
                     </Button>
+                    {submitError && (
+                      <div role="alert" className="mt-3 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-600">
+                        {submitError}
+                      </div>
+                    )}
                   </div>
                 )}
 
