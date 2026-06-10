@@ -285,13 +285,13 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* STATS — flows from coverage band, no orphan whitespace */}
-      <section className="bg-white pt-10 pb-16 md:pt-12 md:pb-24">
+      <section className="bg-slate-900 pt-10 pb-16 md:pt-12 md:pb-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="grid gap-6 md:grid-cols-3">
             {stats.map((s) => (
-              <div key={s.stat} className="rounded-xl border border-slate-200 bg-white p-8 text-center">
-                <p className="text-3xl md:text-4xl font-semibold text-blue-600 mb-2">{s.stat}</p>
-                <p className="text-sm text-slate-600">{s.desc}</p>
+              <div key={s.stat} className="rounded-xl border border-white/10 bg-slate-800/40 p-8 text-center">
+                <p className="text-3xl md:text-4xl font-semibold text-blue-400 mb-2">{s.stat}</p>
+                <p className="text-sm text-slate-300">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -323,23 +323,23 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* WHO IT'S FOR */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-slate-900 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Who it's for</p>
-            <h2 className="text-heading-1 md:text-display-sm text-slate-900 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">Who it's for</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
               Wireless internet that's actually built for business.
             </h2>
-            <p className="text-slate-600">Same wireless tech — but engineered for the operations that depend on it.</p>
+            <p className="text-slate-300">Same wireless tech — but engineered for the operations that depend on it.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {audience.map((a) => (
-              <div key={a.title} className="rounded-xl border border-slate-200 bg-white p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 mb-5">
+              <div key={a.title} className="rounded-xl border border-white/10 bg-slate-800/40 p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/15 text-blue-400 mb-5">
                   <a.icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{a.title}</h3>
-                <p className="text-slate-600">{a.body}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{a.title}</h3>
+                <p className="text-slate-300">{a.body}</p>
               </div>
             ))}
           </div>
