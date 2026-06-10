@@ -288,6 +288,31 @@ const WirelessInternetProvidersUK = () => {
         </div>
       </Section>
 
+      {/* HOW IT WORKS — BONDED INPUTS */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary text-center mb-3">
+            How it works
+          </p>
+          <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-foreground text-center mb-4 max-w-3xl mx-auto">
+            Bonded inputs. <span className="text-primary">One resilient output.</span>
+          </h2>
+          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
+            We combine Starlink satellite with multiple 5G/4G carriers into a single bonded SD-WAN
+            connection — so if one path drops, traffic keeps flowing on the others.
+          </p>
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-3">
+            {bondedInputs.map((item) => (
+              <div key={item.label} className="rounded-2xl border border-border bg-card p-6 text-center">
+                <item.icon className="h-10 w-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
+                <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
+                <p className="text-sm text-muted-foreground">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* WHO IT'S FOR */}
       <Section variant="alt">
         <div className="text-center mb-12 max-w-3xl mx-auto">
