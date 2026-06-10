@@ -247,6 +247,7 @@ const App = () => (
               <Route path="/checking-out-your-property" element={<CheckingOutYourProperty />} />
               <Route path="/support" element={<Support />} />
               <Route path="/integra-bridge" element={<IntegraBridge />} />
+              <Route path="/integra-bridge-v2" element={<IntegraBridgeV2Landing />} />
               <Route path="/wholesale" element={<Wholesale />} />
 
               <Route path="/resources" element={<Navigate to="/insights" replace />} />
