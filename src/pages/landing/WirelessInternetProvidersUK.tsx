@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, X, Wifi, Network, Shield, ArrowRight, Satellite, Radio, Server } from "lucide-react";
+import { Check, X, Wifi, Network, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -23,18 +23,6 @@ import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
 const heroImg = heroImgAsset.url;
 const maypoleBg = maypoleBgAsset.url;
-
-const stats = [
-  { stat: "10 working days", desc: "from order to live" },
-  { stat: "Up to 500Mbps", desc: "via bonded 4G/5G + Starlink" },
-  { stat: "99.5% SLA", desc: "UK engineer support" },
-];
-
-const bondedInputs = [
-  { icon: Satellite, label: "Starlink Satellite", detail: "Low-latency LEO satellite" },
-  { icon: Radio, label: "5G/4G Carriers (×2)", detail: "Dual-SIM cellular bonding" },
-  { icon: Server, label: "Bonded Output", detail: "One resilient business connection" },
-];
 
 const audience = [
   {
@@ -304,50 +292,57 @@ const WirelessInternetProvidersUK = () => {
         </div>
       </section>
 
-      {/* STATS — flows from coverage band, no orphan whitespace */}
-      <section className="bg-slate-900 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">By the numbers</p>
-            <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
-              Fibre-free business connectivity.
-            </h2>
-            <p className="text-slate-300 leading-relaxed">
-              No waiting years for fibre. We bond multiple 4G/5G cellular networks with Starlink to deliver high-speed, resilient business internet in 10 working days — with automatic failover built in.
-            </p>
-          </div>
-          <div className="grid gap-10 md:grid-cols-3 max-w-5xl mx-auto">
-            {stats.map((s) => (
-              <div key={s.stat} className="text-center animate-fade-in">
-                <p className="text-4xl md:text-5xl font-semibold text-blue-400 mb-3 tracking-tight">{s.stat}</p>
-                <p className="text-slate-300">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
+      {/* WHICH SOUNDS LIKE YOU? */}
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">How it works</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Which sounds like you?</p>
             <h2 className="text-heading-1 md:text-display-sm text-slate-900 mb-4">
-              Bonded inputs. <span className="text-blue-600">One resilient output.</span>
+              Two situations. Two answers. <span className="text-blue-600">One platform.</span>
             </h2>
             <p className="text-slate-600">
-              We combine Starlink satellite with multiple 5G/4G carriers into a single bonded SD-WAN connection — so if one path drops, traffic keeps flowing on the others.
+              Both engineer-installed, bonded, SLA-backed and live in 10 working days — but they solve different problems.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {bondedInputs.map((item) => (
-              <div key={item.label} className="group rounded-xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 animate-fade-in">
-                <item.icon className="h-10 w-10 text-blue-600 mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" strokeWidth={1.5} />
-                <h3 className="font-semibold text-slate-900 mb-2">{item.label}</h3>
-                <p className="text-sm text-slate-600">{item.detail}</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="flex flex-col rounded-xl border border-slate-200 bg-white p-8 animate-fade-in">
+              <h3 className="text-xl md:text-2xl font-semibold text-slate-900 mb-4">
+                Fibre's ordered — but it won't arrive in time.
+              </h3>
+              <p className="text-slate-600 mb-4">
+                The leased line is signed, the install date is 8–12 weeks out, and the site can't wait. Integra Bridge bonds Starlink satellite with multi-carrier cellular to deliver enterprise internet in 10 working days — up to 1Gbps, private Layer 2, static IPs, no CGNAT.
+              </p>
+              <p className="text-blue-700 font-medium mb-6">
+                And when your fibre lands, Bridge stays on as permanent failover — the spend is never wasted.
+              </p>
+              <div className="mt-auto pt-4 border-t border-slate-100">
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Enterprise · Cellular + Starlink</p>
+                <Link to="/integra-bridge" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                  Explore Integra Bridge <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
               </div>
-            ))}
+            </div>
+            <div className="flex flex-col rounded-xl border border-slate-200 bg-white p-8 animate-fade-in">
+              <h3 className="text-xl md:text-2xl font-semibold text-slate-900 mb-4">
+                Fibre isn't coming — or costs £20k+ to reach you.
+              </h3>
+              <p className="text-slate-600 mb-4">
+                No fibre route, or an excess construction quote you can't justify. Integra SD-WAN bonds up to four mobile carriers into one permanent, fibre-class connection — up to 500Mbps, five tiers from failover-only to 40+ user Enterprise, static IP included on bonded configurations.
+              </p>
+              <p className="text-blue-700 font-medium mb-6">
+                Need more speed or resilience than cellular alone can give? Step up to Bridge and add Starlink.
+              </p>
+              <div className="mt-auto pt-4 border-t border-slate-100">
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">The workhorse · Bonded 4G/5G</p>
+                <Link to="/integra-sd-wan" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                  Explore Integra SD-WAN <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
           </div>
+          <p className="text-center text-slate-600 mt-10 max-w-2xl mx-auto">
+            Not sure which you are? The free desktop survey settles it — we recommend the right fit before you sign anything.
+          </p>
         </div>
       </section>
 
@@ -425,7 +420,7 @@ const WirelessInternetProvidersUK = () => {
             <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
               Wireless internet that's actually built for business.
             </h2>
-            <p className="text-slate-300">Same wireless tech — but engineered for the operations that depend on it.</p>
+            <p className="text-slate-300">Whichever situation you're in, it's engineered for the operations that depend on it.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {audience.map((a) => (
