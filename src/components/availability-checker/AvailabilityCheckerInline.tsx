@@ -242,6 +242,7 @@ async function submitToHubSpot(payload: {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        keepalive: true,
         body: JSON.stringify({
           fields,
           context: {
@@ -357,6 +358,7 @@ const AvailabilityCheckerInline = ({
   const [selectedAddress, setSelectedAddress] = useState<string | null>(null);
   const [addressDropdownOpen, setAddressDropdownOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const addressDropdownRef = useRef<HTMLDivElement>(null);
 
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
@@ -706,9 +708,18 @@ const AvailabilityCheckerInline = ({
       };
 
       setSubmitting(true);
+      setSubmitError(null);
       try {
         console.log("UTM params being sent:", utmParamsRef.current);
         const ok = await submitToHubSpot(payload);
+
+        if (!ok) {
+          setSubmitError(
+            "We couldn't submit your details just now. Please check your connection and try again, or call 0203 388 7111."
+          );
+          setSubmitting(false);
+          return;
+        }
 
         // ── Conversion tracking ──
         // Identify user in HubSpot for future page tracking
@@ -734,8 +745,29 @@ const AvailabilityCheckerInline = ({
           form_step: 3,
           value: 1,
         });
+
+        // GA4: submit_lead_form — mapped to Google Ads "2026 Availability Checker" conversion
+        trackEvent("submit_lead_form", {
+          form_name: "availability_checker",
+          user_type: service,
+          postcode: postcode.toUpperCase(),
+        });
+
+        // Direct Google Ads conversion fire (AW-344295012) as a safety net
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag("event", "conversion", {
+            send_to: "AW-344295012",
+            value: 1,
+            currency: "GBP",
+          });
+        }
       } catch (err) {
         console.error("Submission error:", err);
+        setSubmitError(
+          "Something went wrong submitting your details. Please try again, or call 0203 388 7111."
+        );
+        setSubmitting(false);
+        return;
       }
 
       // Store user data for Enhanced Conversions on /thankyou page
@@ -1165,6 +1197,11 @@ const AvailabilityCheckerInline = ({
                         <>Check My Coverage <ArrowRight className="ml-2 h-4 w-4" /></>
                       )}
                     </Button>
+                    {submitError && (
+                      <div role="alert" className="mt-3 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-600">
+                        {submitError}
+                      </div>
+                    )}
                   </div>
                 )}
 
