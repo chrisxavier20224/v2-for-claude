@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, X, Wifi, Network, Shield, ArrowRight } from "lucide-react";
+import { Check, X, Wifi, Network, Shield, ArrowRight, Satellite, Radio, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -13,12 +13,19 @@ import Section from "@/components/shared/Section";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
-import heroImg from "@/assets/sectors/rural-sme-hero.webp";
+import heroImgAsset from "@/assets/landing/wireless-business-hero.jpg.asset.json";
+const heroImg = heroImgAsset.url;
 
 const stats = [
-  { stat: "Up to 500Mbps", desc: "via bonded cellular SD-WAN" },
   { stat: "10 working days", desc: "from order to live" },
-  { stat: "99.5% SLA", desc: "with UK-based engineer support" },
+  { stat: "Up to 500Mbps", desc: "via bonded 4G/5G + Starlink" },
+  { stat: "99.5% SLA", desc: "UK engineer support" },
+];
+
+const bondedInputs = [
+  { icon: Satellite, label: "Starlink Satellite", detail: "Low-latency LEO satellite" },
+  { icon: Radio, label: "5G/4G Carriers (×2)", detail: "Dual-SIM cellular bonding" },
+  { icon: Server, label: "Bonded Output", detail: "One resilient business connection" },
 ];
 
 const audience = [
