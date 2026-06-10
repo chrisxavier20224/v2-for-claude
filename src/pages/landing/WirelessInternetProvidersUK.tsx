@@ -382,52 +382,6 @@ const WirelessInternetProvidersUK = () => {
         </div>
       </section>
 
-      {/* PRICING */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Pricing</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
-              Transparent business pricing. No mystery quotes.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {tiers.map((t) => (
-              <div
-                key={t.name}
-                className={`rounded-xl bg-white p-8 flex flex-col ${t.highlight ? "border-2 border-blue-600 shadow-lg" : "border border-slate-200"}`}
-              >
-                {t.highlight && (
-                  <span className="self-start mb-3 inline-block rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
-                    Most Popular
-                  </span>
-                )}
-                <h3 className="text-lg font-semibold text-slate-900 mb-1">{t.name}</h3>
-                <p className="text-sm text-slate-600 mb-4">{t.blurb}</p>
-                <p className="text-3xl font-semibold text-slate-900 mb-6">
-                  {t.price.startsWith("£") ? <span className="text-base font-normal text-slate-500 mr-1">From</span> : null}
-                  {t.price}
-                </p>
-                <ul className="space-y-3 mb-8 flex-1">
-                  {t.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-slate-800">
-                      <Check className="h-4 w-4 text-blue-600 flex-shrink-0 mt-1" />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild className="w-full bg-blue-600 hover:bg-blue-500 text-white">
-                  <Link to={t.cta.href}>{t.cta.label}</Link>
-                </Button>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-slate-500 text-center mt-8 max-w-2xl mx-auto">
-            Final pricing depends on site survey and bearer mix. No mystery quotes — you'll know before you sign.
-          </p>
-        </div>
-      </section>
-
       {/* PAIN POINTS */}
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
