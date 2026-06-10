@@ -59,7 +59,7 @@ const audience = [
 
 const compare: { not: string; are: string }[] = [
   { not: "Consumer fixed wireless", are: "Engineer-installed business connection" },
-  { not: "4G dongles & off-the-shelf routers", are: "Roof-mounted antennas, dual-SIM bonding" },
+  { not: "4G dongles & off-the-shelf routers", are: "Roof-mounted antennas, multi-network bonding" },
   { not: "Best-effort consumer SLA", are: "99.5% uptime SLA with credits" },
   { not: "Call centre support", are: "Direct UK engineers, WhatsApp support" },
   { not: "Bandwidth caps & throttling", are: "No caps, no throttling" },
