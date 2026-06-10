@@ -12,6 +12,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
+import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
 const heroImg = heroImgAsset.url;
 
@@ -261,6 +262,9 @@ const WirelessInternetProvidersUK = () => {
           </div>
         </div>
       </section>
+
+      {/* CUSTOMER LOGO BAR */}
+      <CustomerLogoBar />
 
       {/* COVERAGE BAND (slim) */}
       <section id="availability-checker" className="bg-white border-b border-slate-200">
