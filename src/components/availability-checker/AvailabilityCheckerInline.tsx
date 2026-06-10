@@ -508,7 +508,8 @@ const AvailabilityCheckerInline = ({
   const emailValid = email.trim().includes("@") && email.trim().includes(".");
   const firstNameValid = !!firstName.trim();
   const lastNameValid = !!lastName.trim();
-  const step1Valid = firstNameValid && lastNameValid && emailValid && phoneValid;
+  const companyValid = !!company.trim();
+  const step1Valid = firstNameValid && lastNameValid && companyValid && emailValid && phoneValid;
   const step2Valid = !!service;
 
   const togglePain = (p: PainPoint) => {
@@ -688,6 +689,7 @@ const AvailabilityCheckerInline = ({
         last_name: lastName,
         email,
         phone,
+        company: company.trim() || undefined,
         user_type: service,
         pain_points: Array.from(pains),
         country: pcData?.country ?? null,
