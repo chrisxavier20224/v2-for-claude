@@ -233,7 +233,7 @@ const WirelessInternetProvidersUK = () => {
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 md:px-6 py-20 md:py-28">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-white mb-6">
+            <h1 className="text-heading-1 md:text-display-sm text-white mb-6 max-w-4xl">
               Wireless internet for UK business — live in{" "}
               <span className="text-blue-400">10 working days</span>, where fibre can't reach.
             </h1>
@@ -302,8 +302,8 @@ const WirelessInternetProvidersUK = () => {
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600 mb-5">How it works</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">How it works</p>
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900 mb-4">
               Bonded inputs. <span className="text-blue-600">One resilient output.</span>
             </h2>
             <p className="text-slate-600">
@@ -326,8 +326,8 @@ const WirelessInternetProvidersUK = () => {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600 mb-5">Who it's for</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Who it's for</p>
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900 mb-4">
               Wireless internet that's actually built for business.
             </h2>
             <p className="text-slate-600">Same wireless tech — but engineered for the operations that depend on it.</p>
@@ -350,8 +350,8 @@ const WirelessInternetProvidersUK = () => {
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600 mb-5">The difference</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">The difference</p>
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900">
               Not a consumer wireless ISP. Not residential 4G in a box.
             </h2>
           </div>
@@ -386,8 +386,8 @@ const WirelessInternetProvidersUK = () => {
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600 mb-5">Why switch</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Why switch</p>
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900">
               Why businesses switch to Integra wireless.
             </h2>
           </div>
@@ -406,8 +406,8 @@ const WirelessInternetProvidersUK = () => {
       <section className="relative py-16 md:py-24 bg-slate-900">
         <div className="relative max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-300 mb-5">Case studies</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-white">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Case studies</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white">
               Real businesses. Real results.
             </h2>
           </div>
@@ -449,8 +449,8 @@ const WirelessInternetProvidersUK = () => {
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600 mb-5">FAQ</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">FAQ</p>
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900">
               Wireless business broadband — what people ask
             </h2>
           </div>
@@ -475,7 +475,7 @@ const WirelessInternetProvidersUK = () => {
       {/* FINAL CTA */}
       <section className="bg-slate-900 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.05] text-white">
+          <h2 className="text-heading-1 md:text-display-sm text-white">
             Ready to switch to wireless internet built for business?
           </h2>
           <p className="mt-4 text-slate-300">
