@@ -15,6 +15,9 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImgAsset from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
 import maypoleBgAsset from "@/assets/landing/enterprise-install-maypole-school.jpg.asset.json";
+import ruralImgAsset from "@/assets/landing/wireless-rural-industrial.jpg.asset.json";
+import multisiteImgAsset from "@/assets/landing/wireless-multisite-container.jpg.asset.json";
+import eposImgAsset from "@/assets/landing/wireless-epos-card.jpg.asset.json";
 import royleFarmImg from "@/assets/case-studies/royle-farm-hero.webp";
 import wbPowerImg from "@/assets/case-studies/wb-power-hero.avif";
 import carbeeImg from "@/assets/case-studies/carbee-hero.webp";
