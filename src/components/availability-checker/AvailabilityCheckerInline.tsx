@@ -890,10 +890,6 @@ const AvailabilityCheckerInline = ({
                   </Button>
                 </div>
 
-                <p className="text-center text-xs text-muted-foreground mt-4">
-                  Integra is a business-only provider — we don't supply residential addresses.
-                </p>
-
               </motion.div>
             )}
 
