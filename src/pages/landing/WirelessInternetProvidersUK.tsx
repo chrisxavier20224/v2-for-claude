@@ -150,6 +150,10 @@ const faqs = [
     a: "That's exactly what bonding is for. We combine multiple mobile carriers with Starlink satellite into one connection — if one path is weak, the others carry the load. The survey confirms achievable speeds before you commit.",
   },
   {
+    q: "Why not just buy Starlink ourselves?",
+    a: "You can — and for a home, you probably should. For a business, Starlink alone means ~25Mbps uploads, no static IP, no SLA and a single network. Integra Bridge bonds Starlink with multi-carrier cellular for up to 300Mbps up, static IPs, automatic failover and UK engineer support.",
+  },
+  {
     q: "What does it cost?",
     a: "Pricing is tailored to your site and bearer mix, and you'll have the full quote before you sign. It's typically a fraction of the £15–50k excess construction charges quoted for rural fibre installs.",
   },
@@ -169,6 +173,14 @@ const faqs = [
     q: "Is there a data cap?",
     a: "No caps, no throttling. We run enterprise data plans sized for business workloads.",
   },
+];
+
+const starlinkCompare: { label: string; alone: string; integra: string }[] = [
+  { label: "Upload speed", alone: "~25Mbps up", integra: "Up to 300Mbps up — cellular uplinks bonded in" },
+  { label: "Resilience", alone: "One network. Obstruction, weather or an outage takes you offline", integra: "Satellite + multiple 4G/5G carriers, automatic failover" },
+  { label: "Support & SLA", alone: "App-only support, best-effort", integra: "UK engineers, 99.5% uptime SLA with credits" },
+  { label: "IP addressing", alone: "CGNAT — no static IP, breaks VPNs & CCTV", integra: "Static IPs over private Layer 2, VPN & CCTV-ready" },
+  { label: "Installation", alone: "DIY kit on a windowsill", integra: "Surveyed, engineer-installed roof mount" },
 ];
 
 const CANONICAL = "https://www.integra-networks.co.uk/lp/wireless-internet-providers-uk";
