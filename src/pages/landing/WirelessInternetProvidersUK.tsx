@@ -349,32 +349,41 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* NOT THIS, THIS — tight comparison */}
-      <section className="bg-slate-50 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
+      <section className="relative overflow-hidden py-16 md:py-24">
+        <div className="absolute inset-0">
+          <img
+            src={maypoleBg}
+            alt="Engineer-installed wireless antennas on a UK building"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-slate-900/80" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">The difference</p>
-            <h2 className="text-heading-1 md:text-display-sm text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">The difference</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white">
               Not a consumer wireless ISP. Not residential 4G in a box.
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
-            <div className="rounded-xl border border-red-200 bg-red-50/50 p-8">
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-red-600 mb-6">What we're not</h3>
+            <div className="rounded-xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-900/40 backdrop-blur-md p-8">
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-red-400 mb-6">What we're not</h3>
               <ul className="space-y-4">
                 {compare.map((c) => (
-                  <li key={c.not} className="flex gap-3 text-slate-800">
-                    <X className="text-red-500 shrink-0 mt-0.5 h-5 w-5" />
+                  <li key={c.not} className="flex gap-3 text-white/90">
+                    <X className="text-red-400 shrink-0 mt-0.5 h-5 w-5" />
                     <span>{c.not}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-8">
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-emerald-600 mb-6">What we are</h3>
+            <div className="rounded-xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-900/40 backdrop-blur-md p-8">
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-emerald-300 mb-6">What we are</h3>
               <ul className="space-y-4">
                 {compare.map((c) => (
-                  <li key={c.are} className="flex gap-3 text-slate-800">
-                    <Check className="text-emerald-600 shrink-0 mt-0.5 h-5 w-5" />
+                  <li key={c.are} className="flex gap-3 text-white/90">
+                    <Check className="text-emerald-400 shrink-0 mt-0.5 h-5 w-5" />
                     <span>{c.are}</span>
                   </li>
                 ))}
