@@ -225,33 +225,56 @@ const WirelessInternetProvidersUK = () => {
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 py-24 md:py-32">
           <div className="max-w-4xl">
             <h1 className="text-heading-1 md:text-display-sm text-white mb-6">
-            Wireless internet providers built for UK businesses.
+              Wireless internet for UK business — live in{" "}
+              <span className="text-primary">10 working days</span>, where fibre can't reach.
             </h1>
             <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-3xl">
-            Most wireless internet providers are aimed at homes, gamers, and renters. We're not.
-            Integra is wireless internet for business — bonded 4G/5G connections, 99.5% uptime SLAs,
-            dedicated business support. Up to 500Mbps. Installed in 10 working days. No fibre required.
+              Bonded 4G/5G + Starlink, engineered for business. Up to 500Mbps, 99.5% SLA, UK engineers.
+              No fibre required. No 10-week wait.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToChecker}>
-              Check Coverage
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/contact">Talk to Sales</Link>
-            </Button>
+              <Button size="lg" onClick={scrollToChecker}>
+                Check Coverage
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20 rounded"
+              >
+                <Link to="/contact">Talk to Sales</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CHECKER */}
-      <div id="availability-checker">
-        <Section size="compact" variant="alt">
-          <h2 className="text-heading-2 text-foreground mb-8 text-center">
-            Check coverage in 60 seconds — no postcode lottery
-          </h2>
-        </Section>
-      </div>
+      {/* TRUST STRIP */}
+      <section className="bg-background-alt border-y border-border">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
+            {["SLA-backed", "UK-based engineers", "Trusted by rural & multi-site businesses", "99.5% uptime guarantee"].map(
+              (item, i, arr) => (
+                <span key={item} className="flex items-center gap-x-6">
+                  <span className="text-foreground">{item}</span>
+                  {i < arr.length - 1 && <span className="text-primary hidden sm:inline">•</span>}
+                </span>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* COVERAGE BAND (slim) */}
+      <section id="availability-checker" className="bg-background-alt">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-foreground font-medium text-center sm:text-left">
+            Coverage check takes 60 seconds — no postcode lottery.
+          </p>
+          <Button asChild>
+            <a href="#availability-checker-form">Check Coverage <ArrowRight className="ml-2 h-4 w-4" /></a>
+          </Button>
+        </div>
+      </section>
 
       {/* STATS */}
       <Section size="compact">
