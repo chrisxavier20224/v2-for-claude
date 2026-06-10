@@ -267,12 +267,12 @@ const WirelessInternetProvidersUK = () => {
       <CustomerLogoBar />
 
       {/* COVERAGE BAND (slim) */}
-      <section id="availability-checker" className="bg-white border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-4 md:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-900 font-medium text-center sm:text-left">
+      <section id="availability-checker" className="bg-gradient-to-r from-blue-600 to-blue-500">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white font-medium text-center sm:text-left">
             Coverage check takes 60 seconds — no postcode lottery.
           </p>
-          <Button asChild className="bg-blue-600 hover:bg-blue-500 text-white">
+          <Button asChild className="bg-white text-slate-900 hover:bg-slate-100">
             <a href="#availability-checker-form">Check Coverage <ArrowRight className="ml-2 h-4 w-4" /></a>
           </Button>
         </div>
