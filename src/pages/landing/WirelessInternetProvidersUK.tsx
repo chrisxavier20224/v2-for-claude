@@ -467,26 +467,33 @@ const WirelessInternetProvidersUK = () => {
         </div>
       </Section>
 
-      <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
-      {/* FINAL CTA */}
-      <Section variant="dark" size="large">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
+      <div id="availability-checker-form">
+        <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
+      </div>
+
+      {/* FINAL CTA — DARK */}
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+          <h2 className="text-heading-1 md:text-display-sm text-surface-dark-foreground mb-6">
             Ready to switch to wireless internet built for business?
           </h2>
-          <p className="text-lg text-white/80 mb-10">
+          <p className="text-lg text-surface-dark-muted mb-10">
             Up to 500Mbps. Live in 10 working days. SLA-backed. No fibre required.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg">
               <Link to="/check">Check Availability</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button
+              asChild
+              size="lg"
+              className="border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20 rounded"
+            >
               <a href="tel:+442033887111">Call 0203 388 7111</a>
             </Button>
           </div>
         </div>
-      </Section>
+      </section>
     </PageLayout>
   );
 };
