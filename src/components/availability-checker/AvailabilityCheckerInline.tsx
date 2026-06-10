@@ -344,10 +344,10 @@ const AvailabilityCheckerInline = ({
 
   // Step 2
   const [service, setService] = useState<ServiceType | null>(null);
-  const [pains, setPains] = useState<Set<PainPoint>>(new Set());
+  const [pains] = useState<Set<PainPoint>>(new Set());
   const [urgency, setUrgency] = useState<string>("");
   const [houseBuildingNumber, setHouseBuildingNumber] = useState<string>("");
-  const [subStep, setSubStep] = useState(1); // 1=business type, 2=pain points, 3=urgency
+  const [subStep, setSubStep] = useState(1); // 1=business type, 2=urgency
 
   // Step 3
   const [postcode, setPostcode] = useState("");
@@ -512,13 +512,7 @@ const AvailabilityCheckerInline = ({
   const step1Valid = firstNameValid && lastNameValid && companyValid && emailValid && phoneValid;
   const step2Valid = !!service;
 
-  const togglePain = (p: PainPoint) => {
-    setPains((prev) => {
-      const next = new Set(prev);
-      next.has(p) ? next.delete(p) : next.add(p);
-      return next;
-    });
-  };
+  // Pain points removed from UI flow; pains set is empty.
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -835,11 +829,11 @@ const AvailabilityCheckerInline = ({
               <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">{subheading ?? "Tell us where you are and we'll see what we can deliver."}</p>
             </div>
           )}
-          <AnimatePresence mode="wait">
+          <>
 
             {/* ═══ STEP 1: About You ═══ */}
             {step === 1 && (
-              <motion.div key="step1" {...fadeUp}>
+              <div key="step1">
                 <div className="rounded-2xl border border-border bg-card p-7 shadow-xl mb-4">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -890,15 +884,15 @@ const AvailabilityCheckerInline = ({
                   </Button>
                 </div>
 
-              </motion.div>
+              </div>
             )}
 
-            {/* ═══ STEP 2: Service Type + Pain Points ═══ */}
+            {/* ═══ STEP 2: Service Type + Urgency ═══ */}
             {step === 2 && (
-              <motion.div key="step2" {...fadeUp}>
+              <div key="step2">
                 {/* Sub-step progress dots */}
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  {[1, 2, 3].map((s) => (
+                  {[1, 2].map((s) => (
                     <div
                       key={s}
                       className={`h-2 rounded-full transition-all ${
@@ -908,10 +902,10 @@ const AvailabilityCheckerInline = ({
                   ))}
                 </div>
 
-                <AnimatePresence mode="wait">
+                <>
                   {/* Sub-step 1: Business type */}
                   {subStep === 1 && (
-                    <motion.div key="sub1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
+                    <div key="sub1">
                       <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
                         <div className="flex items-center gap-3 mb-5">
                           <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -927,7 +921,7 @@ const AvailabilityCheckerInline = ({
                           {SERVICE_OPTIONS.map((opt) => (
                             <button
                               key={opt.value}
-                              onClick={() => { setService(opt.value); setTimeout(() => setSubStep(2), 300); }}
+                              onClick={() => { setService(opt.value); setSubStep(2); }}
                               className={`w-full flex items-center gap-4 rounded-xl border-2 p-4 text-left transition-all ${
                                 service === opt.value
                                   ? "border-primary bg-primary/5 shadow-sm"
@@ -955,60 +949,12 @@ const AvailabilityCheckerInline = ({
                       <Button variant="outline" onClick={() => goTo(1)} className="w-full mt-2 h-11">
                         <ArrowLeft className="mr-2 h-4 w-4" /> Back
                       </Button>
-                    </motion.div>
+                    </div>
                   )}
 
-                  {/* Sub-step 2: Pain points */}
+                  {/* Sub-step 2: Urgency */}
                   {subStep === 2 && (
-                    <motion.div key="sub2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
-                      <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
-                        <div className="flex items-center gap-3 mb-5">
-                          <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                            <Zap className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <h2 className="text-lg font-semibold text-foreground">Sound familiar?</h2>
-                            <p className="text-xs text-muted-foreground">Please select at least one</p>
-                          </div>
-                        </div>
-
-                        <div className="space-y-2">
-                          {PAIN_POINTS.map((pp) => (
-                            <button
-                              key={pp.value}
-                              onClick={() => togglePain(pp.value)}
-                              className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
-                                pains.has(pp.value)
-                                  ? "border-primary bg-primary/5"
-                                  : "border-border hover:border-primary/30"
-                              }`}
-                            >
-                              <div className={`h-5 w-5 rounded flex items-center justify-center flex-shrink-0 transition-all ${
-                                pains.has(pp.value) ? "bg-primary" : "border-2 border-border"
-                              }`}>
-                                {pains.has(pp.value) && <Check className="h-3 w-3 text-white" />}
-                              </div>
-                              <span className="text-sm text-foreground">{pp.label}</span>
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-
-                      <Button onClick={() => setSubStep(3)} size="lg" disabled={pains.size === 0} className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed">
-                        Continue <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                      {pains.size === 0 && (
-                        <p className="text-xs text-muted-foreground text-center mt-2">Select at least one option to continue</p>
-                      )}
-                      <Button variant="outline" onClick={() => setSubStep(1)} className="w-full mt-2 h-11">
-                        <ArrowLeft className="mr-2 h-4 w-4" /> Back
-                      </Button>
-                    </motion.div>
-                  )}
-
-                  {/* Sub-step 3: Urgency */}
-                  {subStep === 3 && (
-                    <motion.div key="sub3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
+                    <div key="sub2">
                       <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
                         <div className="flex items-center gap-3 mb-5">
                           <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -1052,20 +998,20 @@ const AvailabilityCheckerInline = ({
                       <Button variant="outline" onClick={() => setSubStep(2)} className="w-full mt-2 h-11">
                         <ArrowLeft className="mr-2 h-4 w-4" /> Back
                       </Button>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
+                </>
 
                 {/* Reassurance */}
                 <p className="text-center text-xs text-muted-foreground mt-4">
                   No commitment. No credit card. Just a free coverage check.
                 </p>
-              </motion.div>
+              </div>
             )}
 
             {/* ═══ STEP 3: Pin Drop Map ═══ */}
             {step === 3 && (
-              <motion.div key="step3" {...fadeUp}>
+              <div key="step3">
                 <div className="rounded-2xl border border-border bg-card p-7 shadow-lg mb-4">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -1116,7 +1062,7 @@ const AvailabilityCheckerInline = ({
                   )}
 
                   {pcData && (
-                    <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-4 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
+                    <div className="mt-4 rounded-lg bg-green-500/5 border border-green-500/20 px-4 py-3">
                       <div className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
                         <div>
@@ -1126,11 +1072,11 @@ const AvailabilityCheckerInline = ({
                           </p>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
 
                   {addresses.length > 0 && (
-                    <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-4">
+                    <div className="mt-4">
                       <label className="block text-sm font-medium text-foreground mb-2">Select your address</label>
                       <div className="relative" ref={addressDropdownRef}>
                         <button
@@ -1183,12 +1129,12 @@ const AvailabilityCheckerInline = ({
                           </div>
                         )}
                       </div>
-                    </motion.div>
+                    </div>
                   )}
                 </div>
 
                 {pcData && (
-                  <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+                  <div>
                     <div className="rounded-2xl border border-border bg-card p-4 shadow-lg mb-4">
                       <div
                         ref={mapContainerRef}
@@ -1219,7 +1165,7 @@ const AvailabilityCheckerInline = ({
                         <>Check My Coverage <ArrowRight className="ml-2 h-4 w-4" /></>
                       )}
                     </Button>
-                  </motion.div>
+                  </div>
                 )}
 
                 <Button variant="outline" onClick={() => goTo(2)} className="w-full mt-2 h-11">
@@ -1238,10 +1184,10 @@ const AvailabilityCheckerInline = ({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
-          </AnimatePresence>
+          </>
         </div>
         {compact && !hideChatAlternative && (
           <div className="mx-auto max-w-3xl px-4 mt-12">
