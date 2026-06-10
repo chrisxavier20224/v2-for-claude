@@ -165,12 +165,55 @@ const faqs = [
   },
 ];
 
-const starlinkCompare: { label: string; alone: string; integra: string }[] = [
-  { label: "Upload speed", alone: "~25Mbps up", integra: "Up to 300Mbps up — cellular uplinks bonded in" },
-  { label: "Resilience", alone: "One network. Obstruction, weather or an outage takes you offline", integra: "Satellite + multiple 4G/5G carriers, automatic failover" },
-  { label: "Support & SLA", alone: "App-only support, best-effort", integra: "UK engineers, 99.5% uptime SLA with credits" },
-  { label: "IP addressing", alone: "CGNAT — no static IP, breaks VPNs & CCTV", integra: "Static IPs over private Layer 2, VPN & CCTV-ready" },
-  { label: "Installation", alone: "DIY kit on a windowsill", integra: "Surveyed, engineer-installed roof mount" },
+const starlinkCompare: {
+  label: string;
+  alone: string;
+  sdwan: string;
+  sdwanTick?: boolean;
+  bridge: string;
+}[] = [
+  {
+    label: "Upload speed",
+    alone: "~25Mbps up",
+    sdwan: "Bonded cellular uplinks — scales with every carrier added",
+    sdwanTick: true,
+    bridge: "Up to 300Mbps up — satellite + cellular bonded",
+  },
+  {
+    label: "Resilience",
+    alone: "One network. Obstruction, weather or an outage takes you offline",
+    sdwan: "Up to four mobile carriers, automatic failover",
+    sdwanTick: true,
+    bridge: "Satellite + multiple 4G/5G carriers — no single point of failure",
+  },
+  {
+    label: "Support & SLA",
+    alone: "App-only support, best-effort",
+    sdwan: "UK engineers, 99.5% uptime SLA with credits",
+    sdwanTick: true,
+    bridge: "UK engineers, 99.5% uptime SLA with credits",
+  },
+  {
+    label: "IP addressing",
+    alone: "CGNAT — no static IP, breaks VPNs & CCTV",
+    sdwan: "Static IP included on bonded configurations",
+    sdwanTick: true,
+    bridge: "Static IPs over private Layer 2, VPN & CCTV-ready",
+  },
+  {
+    label: "Works with poor mobile signal?",
+    alone: "Yes — needs clear sky only",
+    sdwan: "Needs usable 4G/5G coverage — confirmed by survey",
+    sdwanTick: false,
+    bridge: "Yes — satellite carries the load where cellular is weak",
+  },
+  {
+    label: "Installation",
+    alone: "DIY kit on a windowsill",
+    sdwan: "Engineer-installed, carrier-specific antennas per site",
+    sdwanTick: true,
+    bridge: "Surveyed, engineer-installed roof mount",
+  },
 ];
 
 const CANONICAL = "https://www.integra-networks.co.uk/lp/wireless-internet-providers-uk";
