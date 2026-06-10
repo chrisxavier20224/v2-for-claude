@@ -34,7 +34,7 @@ function loadLeaflet(): Promise<void> {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { trackEvent, identifyUser, storeConversionUserData } from "@/components/shared/Analytics";
-import heroBgAsset from "@/assets/landing/wireless-business-hero.jpg.asset.json";
+import heroBgAsset from "@/assets/availability-checker/office-connectivity.jpg.asset.json";
 import { captureLeadAttribution, getLeadAttribution } from "@/lib/leadAttribution";
 const heroBg = heroBgAsset.url;
 
