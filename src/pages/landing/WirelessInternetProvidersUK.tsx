@@ -217,7 +217,7 @@ const faqSchema = {
 
 const scrollToChecker = (e: React.MouseEvent) => {
   e.preventDefault();
-  document.getElementById("availability-checker")?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById("availability-checker-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
 const WirelessInternetProvidersUK = () => {
