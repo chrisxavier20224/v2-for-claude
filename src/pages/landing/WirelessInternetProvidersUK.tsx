@@ -483,20 +483,20 @@ const WirelessInternetProvidersUK = () => {
       </section>
 
       {/* FAQ */}
-      <section className="bg-slate-50 py-16 md:py-24">
+      <section className="bg-blue-600 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">FAQ</p>
-            <h2 className="text-heading-1 md:text-display-sm text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-100 mb-3">FAQ</p>
+            <h2 className="text-heading-1 md:text-display-sm text-white">
               Wireless business broadband — what people ask
             </h2>
           </div>
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((f, i) => (
-                <AccordionItem key={f.q} value={`item-${i}`}>
-                  <AccordionTrigger className="text-left text-slate-900">{f.q}</AccordionTrigger>
-                  <AccordionContent className="text-slate-600">{f.a}</AccordionContent>
+                <AccordionItem key={f.q} value={`item-${i}`} className="border-white/20">
+                  <AccordionTrigger className="text-left text-white hover:text-white [&>svg]:text-white">{f.q}</AccordionTrigger>
+                  <AccordionContent className="text-blue-50/90">{f.a}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
