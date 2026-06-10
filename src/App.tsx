@@ -114,6 +114,7 @@ const RuralBroadbandLanding = lazy(() => import("./pages/landing/RuralBroadband"
 const StarlinkSdwanLanding = lazy(() => import("./pages/landing/StarlinkSdwan"));
 const ConstructionSiteInternetLanding = lazy(() => import("./pages/landing/ConstructionSiteInternet"));
 const WirelessInternetProvidersUKLanding = lazy(() => import("./pages/landing/WirelessInternetProvidersUK"));
+const IntegraBridgeV2Landing = lazy(() => import("./pages/landing/IntegraBridgeV2"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const CheckAvailability = lazy(() => import("./pages/CheckAvailability"));
 const CheckingOutYourProperty = lazy(() => import("./pages/CheckingOutYourProperty"));
