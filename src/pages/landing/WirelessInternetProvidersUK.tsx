@@ -479,28 +479,7 @@ const WirelessInternetProvidersUK = () => {
               60 seconds to a real, engineering-validated answer — not a postcode lottery.
             </p>
           </div>
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" />
-            </div>
-            <aside className="rounded-xl border border-slate-200 bg-white p-8 h-fit lg:sticky lg:top-24">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600 mb-5">Prefer to chat first?</p>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Speak to a UK engineer.</h3>
-              <p className="text-slate-600 mb-6">
-                No call-centre script. Straight through to the team who'll design and install your network.
-              </p>
-              <a
-                href="tel:+442033887111"
-                className="block text-2xl font-semibold text-slate-900 mb-6 hover:text-blue-600"
-              >
-                0203 388 7111
-              </a>
-              <Button asChild className="w-full bg-blue-600 hover:bg-blue-500 text-white">
-                <Link to="/contact">Talk to Sales</Link>
-              </Button>
-              <p className="text-xs text-slate-500 mt-4">Mon–Fri, same-day response.</p>
-            </aside>
-          </div>
+          <AvailabilityCheckerInline compact sourceTag="lp-wireless-internet-providers" hideChatAlternative />
         </div>
       </section>
 
