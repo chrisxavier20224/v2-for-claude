@@ -297,7 +297,7 @@ const WirelessInternetProvidersUK = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="grid gap-6 md:grid-cols-3">
             {stats.map((s) => (
-              <div key={s.stat} className="rounded-xl border border-white/10 bg-slate-800/40 p-8 text-center">
+              <div key={s.stat} className="rounded-xl border border-white/10 bg-slate-800/40 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-slate-800/60 animate-fade-in">
                 <p className="text-3xl md:text-4xl font-semibold text-blue-400 mb-2">{s.stat}</p>
                 <p className="text-sm text-slate-300">{s.desc}</p>
               </div>
@@ -320,8 +320,8 @@ const WirelessInternetProvidersUK = () => {
           </div>
           <div className="grid gap-6 sm:grid-cols-3">
             {bondedInputs.map((item) => (
-              <div key={item.label} className="rounded-xl border border-slate-200 bg-white p-6 text-center">
-                <item.icon className="h-10 w-10 text-blue-600 mx-auto mb-4" strokeWidth={1.5} />
+              <div key={item.label} className="group rounded-xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 animate-fade-in">
+                <item.icon className="h-10 w-10 text-blue-600 mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" strokeWidth={1.5} />
                 <h3 className="font-semibold text-slate-900 mb-2">{item.label}</h3>
                 <p className="text-sm text-slate-600">{item.detail}</p>
               </div>
@@ -342,16 +342,16 @@ const WirelessInternetProvidersUK = () => {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {audience.map((a) => (
-              <div key={a.title} className="overflow-hidden rounded-xl border border-white/10 bg-slate-800/40">
+              <div key={a.title} className="group overflow-hidden rounded-xl border border-white/10 bg-slate-800/40 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/10 animate-fade-in">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
                     src={a.image}
                     alt={a.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
-                  <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/90 text-white">
+                  <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/90 text-white transition-all duration-300 group-hover:bg-blue-400 group-hover:scale-110">
                     <a.icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>
                 </div>
@@ -384,23 +384,23 @@ const WirelessInternetProvidersUK = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
-            <div className="rounded-xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-900/40 backdrop-blur-md p-8">
+            <div className="rounded-xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-900/40 backdrop-blur-md p-8 animate-fade-in transition-all duration-300 hover:border-red-400/30">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-red-400 mb-6">What we're not</h3>
               <ul className="space-y-4">
                 {compare.map((c) => (
-                  <li key={c.not} className="flex gap-3 text-white/90">
-                    <X className="text-red-400 shrink-0 mt-0.5 h-5 w-5" />
+                  <li key={c.not} className="group flex gap-3 text-white/90 transition-colors hover:text-white">
+                    <X className="text-red-400 shrink-0 mt-0.5 h-5 w-5 transition-transform duration-200 group-hover:scale-125" />
                     <span>{c.not}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-900/40 backdrop-blur-md p-8">
+            <div className="rounded-xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-900/40 backdrop-blur-md p-8 animate-fade-in transition-all duration-300 hover:border-emerald-400/30">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-emerald-300 mb-6">What we are</h3>
               <ul className="space-y-4">
                 {compare.map((c) => (
-                  <li key={c.are} className="flex gap-3 text-white/90">
-                    <Check className="text-emerald-400 shrink-0 mt-0.5 h-5 w-5" />
+                  <li key={c.are} className="group flex gap-3 text-white/90 transition-colors hover:text-white">
+                    <Check className="text-emerald-400 shrink-0 mt-0.5 h-5 w-5 transition-transform duration-200 group-hover:scale-125" />
                     <span>{c.are}</span>
                   </li>
                 ))}
@@ -421,7 +421,7 @@ const WirelessInternetProvidersUK = () => {
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {painPoints.map((p) => (
-              <div key={p.h} className="rounded-xl border border-slate-200 bg-white p-8">
+              <div key={p.h} className="rounded-xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 animate-fade-in">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">{p.h}</h3>
                 <p className="text-slate-600">{p.p}</p>
               </div>
