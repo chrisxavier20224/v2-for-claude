@@ -115,6 +115,7 @@ const StarlinkSdwanLanding = lazy(() => import("./pages/landing/StarlinkSdwan"))
 const ConstructionSiteInternetLanding = lazy(() => import("./pages/landing/ConstructionSiteInternet"));
 const WirelessInternetProvidersUKLanding = lazy(() => import("./pages/landing/WirelessInternetProvidersUK"));
 const IntegraBridgeV2Landing = lazy(() => import("./pages/landing/IntegraBridgeV2"));
+const RuralBusinessBroadbandUKLanding = lazy(() => import("./pages/landing/RuralBusinessBroadbandUK"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const CheckAvailability = lazy(() => import("./pages/CheckAvailability"));
 const CheckingOutYourProperty = lazy(() => import("./pages/CheckingOutYourProperty"));
@@ -155,6 +156,7 @@ const App = () => (
               <Route path="/lp/rural-broadband" element={<RuralBroadbandLanding />} />
               <Route path="/lp/starlink-sdwan" element={<StarlinkSdwanLanding />} />
               <Route path="/lp/wireless-internet-providers-uk" element={<WirelessInternetProvidersUKLanding />} />
+              <Route path="/lp/rural-business-broadband-uk" element={<RuralBusinessBroadbandUKLanding />} />
 
               <Route path="/sectors/homeworkers" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/sectors/fibre-enabled-buildings" element={<Navigate to="/sectors/rural-smes" replace />} />
