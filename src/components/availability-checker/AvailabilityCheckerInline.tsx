@@ -338,6 +338,7 @@ const AvailabilityCheckerInline = ({
   // Step 1
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -371,7 +372,7 @@ const AvailabilityCheckerInline = ({
 
   /* ---- Capture UTM params on mount (from module-level capture) ---- */
   useEffect(() => {
-    utmParamsRef.current = INITIAL_UTM_PARAMS;
+    utmParamsRef.current = getLeadAttribution();
   }, []);
 
   /* ---- Leaflet map ---- */
