@@ -111,6 +111,7 @@ const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 const WirelessInternetProvidersUKLanding = lazy(() => import("./pages/landing/WirelessInternetProvidersUK"));
 const RuralBusinessBroadbandUKLanding = lazy(() => import("./pages/landing/RuralBusinessBroadbandUK"));
 const BusinessSatelliteInternetLanding = lazy(() => import("./pages/landing/BusinessSatelliteInternet"));
+const WaitingForFibreLanding = lazy(() => import("./pages/landing/WaitingForFibre"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const CheckAvailability = lazy(() => import("./pages/CheckAvailability"));
 const CheckingOutYourProperty = lazy(() => import("./pages/CheckingOutYourProperty"));
@@ -147,6 +148,7 @@ const App = () => (
               <Route path="/lp/wireless-internet-providers-uk" element={<WirelessInternetProvidersUKLanding />} />
               <Route path="/lp/rural-business-broadband-uk" element={<RuralBusinessBroadbandUKLanding />} />
               <Route path="/lp/business-satellite-internet" element={<BusinessSatelliteInternetLanding />} />
+              <Route path="/lp/waiting-for-fibre" element={<WaitingForFibreLanding />} />
               {/* Retired LPs — redirect to home */}
               <Route path="/lp/business-broadband" element={<Navigate to="/" replace />} />
               <Route path="/lp/construction-wifi" element={<Navigate to="/" replace />} />
