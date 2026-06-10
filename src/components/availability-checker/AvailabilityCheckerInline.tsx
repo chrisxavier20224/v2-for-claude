@@ -852,6 +852,11 @@ const AvailabilityCheckerInline = ({
                   </div>
 
                   <form autoComplete="on" onSubmit={(e) => { e.preventDefault(); setStep1Touched(true); if (step1Valid) goTo(2); }} className="space-y-4">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-foreground mb-1.5">Company name</label>
+                      <Input id="company" name="organization" value={company} onChange={(e) => setCompany(e.target.value)} onFocus={trackFormStart} placeholder="Company name" autoComplete="organization" className={step1Touched && !companyValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      {step1Touched && !companyValid && <p className="text-xs text-red-500 mt-1">Required</p>}
+                    </div>
                     <div className="grid grid-cols-2 gap-3">
                       <div>
                         <label htmlFor="fname" className="block text-sm font-medium text-foreground mb-1.5">First name</label>
@@ -866,7 +871,7 @@ const AvailabilityCheckerInline = ({
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email address</label>
-                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onFocus={trackFormStart} placeholder="sarah@example.com" autoComplete="email" className={step1Touched && !emailValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
+                      <Input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onFocus={trackFormStart} placeholder="sarah@yourcompany.co.uk" autoComplete="email" className={step1Touched && !emailValid ? "border-red-500 focus-visible:ring-red-500" : ""} />
                       {step1Touched && !emailValid && <p className="text-xs text-red-500 mt-1">Please enter a valid email address</p>}
                     </div>
                     <div>
@@ -884,6 +889,10 @@ const AvailabilityCheckerInline = ({
                     Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
+
+                <p className="text-center text-xs text-muted-foreground mt-4">
+                  Integra is a business-only provider — we don't supply residential addresses.
+                </p>
 
               </motion.div>
             )}
