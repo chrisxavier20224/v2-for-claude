@@ -21,7 +21,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
-import BondedTopologyDiagram from "@/components/topology/BondedTopologyDiagram";
+import { BondedTopologyDiagram } from "@/components/topology/BondedTopologyDiagram";
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
 import mcgeeImg from "@/assets/case-studies/mcgee-hero.webp";
 
