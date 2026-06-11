@@ -13,7 +13,8 @@ import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 
 const heroPoster = "/video/hero-bg-poster.jpg";
 
-import sdwanImg from "@/assets/landing/celltower.jpg";
+import sdwanAsset from "@/assets/landing/celltower.jpg.asset.json";
+const sdwanImg = sdwanAsset.url;
 import leasedImg from "@/assets/connectivity/leased-lines-hero.webp";
 import bridgeImg from "@/assets/connectivity/bridge-hero.webp";
 import starlinkImg from "@/assets/connectivity/starlink-hero.webp";
