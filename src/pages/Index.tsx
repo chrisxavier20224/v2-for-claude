@@ -87,34 +87,51 @@ const problemPoints = [
   },
 ];
 
-const connectivityServices = [
+const flagshipProducts = [
+  {
+    kicker: "Fibre's ordered — but you can't wait",
+    title: "Integra Bridge",
+    description:
+      "Enterprise internet in 10 working days while your leased line is built. Stays on as permanent failover when fibre lands.",
+    img: bridgeImg,
+    link: "/integra-bridge",
+  },
+  {
+    kicker: "Fibre's not coming — you still need speed",
+    title: "Integra SD-WAN",
+    description:
+      "Bonded multi-carrier 4G/5G delivering up to 500Mbps without fibre. Five tiers, engineered and monitored per site.",
+    img: sdwanImg,
+    link: "/integra-sd-wan",
+  },
+  {
+    kicker: "Want Starlink — but business-grade",
+    title: "Starlink, Done Properly",
+    description:
+      "Engineer-installed Starlink bonded with 4G/5G failover. Static IPs, 99.5% SLA, UK support — satellite without the single point of failure.",
+    img: starlinkImg,
+    link: "/starlink-installation",
+  },
+];
+
+const standardConnectivity = [
   {
     title: "Leased Lines",
     description:
       "Dedicated fibre, symmetric speeds, guaranteed SLA. The gold standard for businesses that can't afford downtime.",
-    img: leasedImg,
     link: "/leased-lines",
   },
   {
     title: "SoGEA",
     description:
       "Single Order Generic Ethernet Access. Fibre to the premises without the phone line. Fast, reliable, and cost-effective for modern offices.",
-    img: fibreImg,
     link: "/sogea",
   },
   {
     title: "Managed Internet",
     description:
       "Fully managed business internet with proactive monitoring, UK support, and guaranteed uptime. We handle the network so you handle your business.",
-    img: bpImg,
     link: "/managed-internet",
-  },
-  {
-    title: "Integra SD-WAN",
-    description:
-      "Bonded multi-carrier 4G/5G connectivity — a five-tier range from single-network failover up to 500Mbps, engineered and monitored per site.",
-    img: sdwanImg,
-    link: "/integra-sd-wan",
   },
 ];
 
