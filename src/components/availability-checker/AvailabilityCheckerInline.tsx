@@ -1189,8 +1189,14 @@ const AvailabilityCheckerInline = ({
                     </div>
 
                     <Button
-                      onClick={() => goTo(4)}
-                      disabled={addresses.length > 0 ? !selectedAddress || submitting : submitting}
+                      onClick={() => {
+                        if (!step3HasLocation) {
+                          setSubmitError("Please enter your postcode or choose an address before checking coverage.");
+                          return;
+                        }
+                        goTo(4);
+                      }}
+                      disabled={submitting}
                       size="lg"
                       className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl"
                     >
