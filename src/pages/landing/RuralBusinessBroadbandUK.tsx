@@ -263,7 +263,7 @@ const RuralBusinessBroadbandUK = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">Which sounds like you?</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
               Two situations. Two answers. <span className="text-blue-400">One platform.</span>
             </h2>
             <p className="text-slate-300">
@@ -338,7 +338,7 @@ const RuralBusinessBroadbandUK = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Why switch</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900">
               Why rural businesses switch to Integra.
             </h2>
           </div>
@@ -364,7 +364,7 @@ const RuralBusinessBroadbandUK = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">How it works</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
               Multiple networks in. One fast, resilient connection out.
             </h2>
             <p className="text-slate-300">
@@ -408,7 +408,7 @@ const RuralBusinessBroadbandUK = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Done properly</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900 mb-4">
               Thinking of just buying Starlink? <span className="text-blue-600">Here's the difference.</span>
             </h2>
             <p className="text-slate-600">
@@ -530,7 +530,7 @@ const RuralBusinessBroadbandUK = () => {
         <div className="relative max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Case studies</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+            <h2 className="text-heading-1 md:text-display-sm text-white">
               Real rural businesses. Real results.
             </h2>
           </div>
@@ -568,7 +568,7 @@ const RuralBusinessBroadbandUK = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-100 mb-3">FAQ</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+            <h2 className="text-heading-1 md:text-display-sm text-white">
               Rural business broadband — what people ask
             </h2>
           </div>
@@ -593,7 +593,7 @@ const RuralBusinessBroadbandUK = () => {
       {/* FINAL CTA */}
       <section className="bg-slate-900 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+          <h2 className="text-heading-1 md:text-display-sm text-white">
             Stop losing money to bad internet.
           </h2>
           <p className="mt-4 text-slate-300">
