@@ -394,76 +394,55 @@ const Index = () => {
               </p>
             </AnimatedSection>
 
-            {/* Featured — Integra Bridge */}
-            <AnimatedSection>
-              <Link to="/integra-bridge" className="group block mb-8">
-                <motion.div
-                  className="relative rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent"
-                  whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                >
-                  <div className="aspect-[21/9] sm:aspect-[3/1] overflow-hidden">
-                    <img
-                      src={bridgeImg}
-                      alt="Integra Bridge"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+            {/* Row 1 — Which sounds like you? (flagship products) */}
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/60 mb-5">Which sounds like you?</p>
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-3 mb-16">
+              {flagshipProducts.map((product) => (
+                <Link key={product.title} to={product.link} className="group block h-full">
+                  <div className="relative overflow-hidden rounded-2xl border border-primary/40 bg-white/[0.03] h-full flex flex-col">
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <img
+                        src={product.img}
+                        alt={product.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/30 to-transparent" />
+                    </div>
+                    <div className="p-6 sm:p-7 flex flex-col flex-1">
+                      <span className="inline-block w-fit bg-primary text-white text-[10px] font-semibold uppercase tracking-widest px-3 py-1 mb-4 rounded">
+                        {product.kicker}
+                      </span>
+                      <h3 className="text-2xl text-white mb-3 font-medium leading-tight group-hover:text-primary transition-colors">
+                        {product.title}
+                      </h3>
+                      <p className="text-white/75 text-sm leading-relaxed mb-5 flex-1">{product.description}</p>
+                      <span className="inline-flex items-center gap-1 text-primary text-xs font-semibold uppercase tracking-widest group-hover:gap-2 transition-all">
+                        Learn More <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10">
-                    <span className="inline-block w-fit rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wide px-3 py-1 mb-3">
-                      Featured
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl text-white font-medium mb-2">Integra Bridge</h3>
-                    <p className="text-white/80 max-w-xl text-base sm:text-lg leading-relaxed mb-4">
-                      Enterprise internet in 10 working days while you wait for fibre. Stays on as permanent failover.
-                    </p>
-                    <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-3 transition-all">
-                      Learn More <ArrowRight className="h-4 w-4" />
-                    </span>
-                  </div>
-                </motion.div>
-              </Link>
-            </AnimatedSection>
-
-            <motion.div
-              className="grid gap-8 grid-cols-1 sm:grid-cols-2"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
-              {connectivityServices.map((service) => (
-                <motion.div key={service.title} variants={fadeUp}>
-                  <Link to={service.link} className="group block">
-                    <motion.div
-                      className="rounded-2xl overflow-hidden"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.4, ease: "easeOut" }}
-                    >
-                      <div className="aspect-[4/3] overflow-hidden">
-                        <img
-                          src={service.img}
-                          alt={service.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                      </div>
-                    </motion.div>
-                    <h3 className="text-heading-3 text-surface-dark-foreground mt-5 mb-2 group-hover:text-primary transition-colors font-medium">
-                      {service.title}
-                    </h3>
-                    <p className="text-surface-dark-muted text-sm leading-relaxed mb-3">{service.description}</p>
-                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                      {service.title} <ArrowRight className="h-3.5 w-3.5" />
-                    </span>
-                  </Link>
-                </motion.div>
+                </Link>
               ))}
-            </motion.div>
+            </div>
 
-            <AnimatedSection>
+            {/* Row 2 — Standard connectivity */}
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/60 mb-5">Standard connectivity</p>
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
+              {standardConnectivity.map((service) => (
+                <Link key={service.title} to={service.link} className="group block">
+                  <div className="relative rounded-xl border border-white/10 bg-white/[0.03] p-5 h-full hover:border-primary/50 transition-colors">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-base text-white font-semibold group-hover:text-primary transition-colors">{service.title}</h3>
+                      <ArrowRight className="h-3.5 w-3.5 text-primary opacity-70 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                    <p className="text-white/60 text-xs leading-relaxed">{service.description}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <div>
               <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
                 <span className="text-sm text-surface-dark-muted">Supporting solutions:</span>
                 <Link to="/business-wifi" className="text-sm text-primary hover:underline font-medium">
@@ -474,7 +453,7 @@ const Index = () => {
                   Unified Communications
                 </Link>
               </div>
-            </AnimatedSection>
+            </div>
           </div>
         </section>
 
