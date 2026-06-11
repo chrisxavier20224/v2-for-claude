@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import CookieConsentBanner from "@/components/shared/CookieConsentBanner";
 import StickyCallBar from "@/components/shared/StickyCallBar";
 
 interface PageLayoutProps {
@@ -15,7 +14,6 @@ const PageLayout = ({ children, hideCTA, mainClassName = "" }: PageLayoutProps) 
       <Navbar />
       <main className={`flex-1 overflow-x-hidden pb-12 md:pb-0 ${mainClassName}`}>{children}</main>
       <Footer hideCTA={hideCTA} />
-      <CookieConsentBanner />
       <StickyCallBar />
     </div>
   );
