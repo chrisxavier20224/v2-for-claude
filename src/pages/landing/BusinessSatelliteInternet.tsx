@@ -256,7 +256,7 @@ const BusinessSatelliteInternet = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Starlink, done properly</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900 mb-4">
               Starlink on its own vs <span className="text-blue-600">satellite internet, done properly.</span>
             </h2>
             <p className="text-slate-600">
@@ -364,7 +364,7 @@ const BusinessSatelliteInternet = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">Which sounds like you?</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
               Two situations. Two answers. <span className="text-blue-400">One platform.</span>
             </h2>
             <p className="text-slate-300">
@@ -439,7 +439,7 @@ const BusinessSatelliteInternet = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Why switch</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+            <h2 className="text-heading-1 md:text-display-sm text-slate-900">
               Starlink alone isn't a business connection.
             </h2>
           </div>
@@ -465,7 +465,7 @@ const BusinessSatelliteInternet = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">How it works</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+            <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
               Satellite + cellular in. One bonded business connection out.
             </h2>
             <p className="text-slate-300">
@@ -509,7 +509,7 @@ const BusinessSatelliteInternet = () => {
         <div className="relative max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Case studies</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+            <h2 className="text-heading-1 md:text-display-sm text-white">
               Real businesses. Real results.
             </h2>
           </div>
@@ -547,7 +547,7 @@ const BusinessSatelliteInternet = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-100 mb-3">FAQ</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+            <h2 className="text-heading-1 md:text-display-sm text-white">
               Business satellite internet — what people ask
             </h2>
           </div>
@@ -572,7 +572,7 @@ const BusinessSatelliteInternet = () => {
       {/* FINAL CTA */}
       <section className="bg-slate-900 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+          <h2 className="text-heading-1 md:text-display-sm text-white">
             Satellite internet your business can actually rely on.
           </h2>
           <p className="mt-4 text-slate-300">
