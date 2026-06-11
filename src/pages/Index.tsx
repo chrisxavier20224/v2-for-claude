@@ -16,11 +16,13 @@ import PartnerLogoBar from "@/components/shared/PartnerLogoBar";
 const heroPoster = "/video/hero-bg-poster.jpg";
 
 // Connectivity service images
-import sdwanImg from "@/assets/sectors/rural-sme-hero.webp";
+import sdwanAsset from "@/assets/landing/celltower.jpg.asset.json";
+const sdwanImg = sdwanAsset.url;
 import leasedImg from "@/assets/connectivity/leased-lines-hero.webp";
 import bridgeImg from "@/assets/connectivity/bridge-hero.webp";
 import fibreImg from "@/assets/sectors/fibre-building-hero.webp";
 import bpImg from "@/assets/sectors/business-parks-hero.webp";
+import starlinkImg from "@/assets/connectivity/starlink-hero.webp";
 
 // Sector images
 import constructionImg from "@/assets/sectors/construction-hero.webp";
