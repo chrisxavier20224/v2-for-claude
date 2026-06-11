@@ -513,6 +513,7 @@ const AvailabilityCheckerInline = ({
   const companyValid = !!company.trim();
   const step1Valid = firstNameValid && lastNameValid && companyValid && emailValid && phoneValid;
   const step2Valid = !!service;
+  const step3HasLocation = !!pcData && !pcLoading;
 
   // Pain points removed from UI flow; pains set is empty.
 
@@ -560,6 +561,7 @@ const AvailabilityCheckerInline = ({
     setPcData(null);
     setAddresses([]);
     setSelectedAddress(null);
+    setSubmitError(null);
 
     if (debounceRef.current) clearTimeout(debounceRef.current);
 
@@ -603,6 +605,7 @@ const AvailabilityCheckerInline = ({
     setShowAutocomplete(false);
     setPostcode(result.suggestion);
     setSelectedAddress(result.suggestion);
+    setSubmitError(null);
     setPcLoading(true);
 
     try {
