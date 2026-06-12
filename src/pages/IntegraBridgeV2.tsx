@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import {
   ArrowRight,
   CalendarX,
@@ -217,56 +219,10 @@ const IntegraBridgeV2 = () => {
           </div>
 
           {/* Desktop horizontal timeline */}
-          <div className="hidden lg:block relative">
-            <div className="absolute top-[34px] left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-blue-200 via-blue-500 to-blue-200" />
-            <div className="grid grid-cols-5 gap-4 relative">
-              {timeline.map((t, i) => (
-                <div key={t.w} className="text-center">
-                  <div className="relative flex justify-center mb-6">
-                    <div
-                      className={`relative z-10 flex h-[68px] w-[68px] items-center justify-center rounded-full border-4 ${
-                        i === 1
-                          ? "border-blue-600 bg-blue-600 text-white shadow-lg shadow-blue-200"
-                          : "border-blue-500 bg-white text-blue-600"
-                      }`}
-                    >
-                      <span className="text-[11px] font-semibold uppercase tracking-widest text-center leading-tight px-1">
-                        {t.w}
-                      </span>
-                    </div>
-                  </div>
-                  <h3 className="text-base font-semibold text-slate-900 mb-2 px-2">{t.h}</h3>
-                  <p className="text-sm text-slate-600 px-2 leading-relaxed">{t.p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <DesktopTimeline />
 
           {/* Mobile / tablet vertical timeline */}
-          <div className="lg:hidden relative max-w-xl mx-auto">
-            <div className="absolute top-2 bottom-2 left-[27px] w-0.5 bg-gradient-to-b from-blue-200 via-blue-500 to-blue-200" />
-            <div className="space-y-8">
-              {timeline.map((t, i) => (
-                <div key={t.w} className="relative flex gap-5">
-                  <div
-                    className={`relative z-10 shrink-0 flex h-[56px] w-[56px] items-center justify-center rounded-full border-4 ${
-                      i === 1
-                        ? "border-blue-600 bg-blue-600 text-white shadow-md shadow-blue-200"
-                        : "border-blue-500 bg-white text-blue-600"
-                    }`}
-                  >
-                    <span className="text-[10px] font-semibold uppercase tracking-widest text-center leading-tight px-1">
-                      {t.w}
-                    </span>
-                  </div>
-                  <div className="flex-1 pt-2">
-                    <h3 className="text-base font-semibold text-slate-900 mb-1">{t.h}</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">{t.p}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <MobileTimeline />
 
           <p className="text-center text-slate-700 text-lg mt-12 max-w-2xl mx-auto">
             One contract, no rip-and-replace, <span className="font-semibold text-slate-900">nothing wasted.</span>
