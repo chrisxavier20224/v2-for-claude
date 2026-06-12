@@ -89,7 +89,8 @@ const SEO = ({
     upsertMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
     upsertMeta('meta[name="twitter:image"]', "name", "twitter:image", absoluteImage);
     upsertMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
-  }, [canonicalUrl, description, absoluteImage, pageTitle, imageWidth, imageHeight]);
+    upsertMeta('meta[name="robots"]', "name", "robots", noIndex ? "noindex, nofollow" : "index, follow");
+  }, [canonicalUrl, description, absoluteImage, pageTitle, imageWidth, imageHeight, noIndex]);
 
   return (
     <Helmet>
