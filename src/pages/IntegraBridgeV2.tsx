@@ -414,3 +414,116 @@ const IntegraBridgeV2 = () => {
 };
 
 export default IntegraBridgeV2;
+
+// ---------- Animated timeline subcomponents ----------
+function DesktopTimeline() {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.4 });
+  const lineDuration = 1.6;
+  return (
+    <div ref={ref} className="hidden lg:block relative">
+      <div className="absolute top-[34px] left-[8%] right-[8%] h-0.5 bg-blue-100 overflow-hidden">
+        <motion.div
+          className="h-full w-full origin-left bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400"
+          initial={{ scaleX: 0 }}
+          animate={inView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ duration: lineDuration, ease: [0.22, 0.61, 0.36, 1] }}
+        />
+      </div>
+      <div className="grid grid-cols-5 gap-4 relative">
+        {timeline.map((t, i) => {
+          const delay = (i / (timeline.length - 1)) * lineDuration;
+          const isActive = i === 1;
+          return (
+            <motion.div
+              key={t.w}
+              className="text-center"
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.45, delay: delay + 0.05, ease: "easeOut" }}
+            >
+              <div className="relative flex justify-center mb-6">
+                <motion.div
+                  className={`relative z-10 flex h-[68px] w-[68px] items-center justify-center rounded-full border-4 ${
+                    isActive
+                      ? "border-blue-600 bg-blue-600 text-white shadow-lg shadow-blue-200"
+                      : "border-blue-500 bg-white text-blue-600"
+                  }`}
+                  initial={{ scale: 0.6 }}
+                  animate={inView ? { scale: 1 } : { scale: 0.6 }}
+                  transition={{ type: "spring", stiffness: 320, damping: 18, delay: delay + 0.05 }}
+                >
+                  {isActive && (
+                    <motion.span
+                      className="absolute inset-0 rounded-full bg-blue-500"
+                      initial={{ opacity: 0.4, scale: 1 }}
+                      animate={inView ? { opacity: 0, scale: 1.6 } : {}}
+                      transition={{ duration: 1.8, delay: delay + 0.4, repeat: Infinity, repeatDelay: 0.2 }}
+                    />
+                  )}
+                  <span className="relative text-[11px] font-semibold uppercase tracking-widest text-center leading-tight px-1">
+                    {t.w}
+                  </span>
+                </motion.div>
+              </div>
+              <h3 className="text-base font-semibold text-slate-900 mb-2 px-2">{t.h}</h3>
+              <p className="text-sm text-slate-600 px-2 leading-relaxed">{t.p}</p>
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function MobileTimeline() {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.2 });
+  const lineDuration = 1.6;
+  return (
+    <div ref={ref} className="lg:hidden relative max-w-xl mx-auto">
+      <div className="absolute top-2 bottom-2 left-[27px] w-0.5 bg-blue-100 overflow-hidden">
+        <motion.div
+          className="w-full h-full origin-top bg-gradient-to-b from-blue-400 via-blue-600 to-blue-400"
+          initial={{ scaleY: 0 }}
+          animate={inView ? { scaleY: 1 } : { scaleY: 0 }}
+          transition={{ duration: lineDuration, ease: [0.22, 0.61, 0.36, 1] }}
+        />
+      </div>
+      <div className="space-y-8">
+        {timeline.map((t, i) => {
+          const delay = (i / (timeline.length - 1)) * lineDuration;
+          const isActive = i === 1;
+          return (
+            <motion.div
+              key={t.w}
+              className="relative flex gap-5"
+              initial={{ opacity: 0, x: -8 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -8 }}
+              transition={{ duration: 0.45, delay: delay + 0.05, ease: "easeOut" }}
+            >
+              <motion.div
+                className={`relative z-10 shrink-0 flex h-[56px] w-[56px] items-center justify-center rounded-full border-4 ${
+                  isActive
+                    ? "border-blue-600 bg-blue-600 text-white shadow-md shadow-blue-200"
+                    : "border-blue-500 bg-white text-blue-600"
+                }`}
+                initial={{ scale: 0.6 }}
+                animate={inView ? { scale: 1 } : { scale: 0.6 }}
+                transition={{ type: "spring", stiffness: 320, damping: 18, delay: delay + 0.05 }}
+              >
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-center leading-tight px-1">
+                  {t.w}
+                </span>
+              </motion.div>
+              <div className="flex-1 pt-2">
+                <h3 className="text-base font-semibold text-slate-900 mb-1">{t.h}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{t.p}</p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
