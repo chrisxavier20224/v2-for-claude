@@ -300,6 +300,13 @@ const RuralSMEs = () => {
         heading="Stop losing money to bad internet."
         subheading="Up to 500Mbps. 99.5% uptime SLA. Installed in 10 working days. No fibre required."
       />
+      <FurtherReading
+        links={[
+          { slug: "extending-wi-fi-and-internet-to-outbuildings", label: "Extending Wi-Fi and internet to outbuildings" },
+          { slug: "internet-and-wi-fi-solutions-for-churches-and-listed-buildings", label: "Internet and Wi-Fi for churches and listed buildings" },
+          { slug: "beyond-the-broadband-bottleneck", label: "Beyond the broadband bottleneck — alternatives for rural SMEs" },
+        ]}
+      />
     </PageLayout>
   );
 };
