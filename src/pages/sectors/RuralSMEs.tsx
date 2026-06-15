@@ -16,6 +16,7 @@ import copperImg from "@/assets/sectors/rural-sme-copper.jpg";
 import installImg from "@/assets/sectors/rural-sme-install.jpg";
 import paymentsImg from "@/assets/sectors/rural-sme-payments.jpg";
 import carbeeHero from "@/assets/case-studies/carbee-hero.webp";
+import FurtherReading from "@/components/blog/FurtherReading";
 
 const painPoints = [
   {
