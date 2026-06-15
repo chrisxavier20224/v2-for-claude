@@ -66,7 +66,7 @@ const IoTConnectivityAgriculture = () => (
       <li>Water tank is 3km north</li>
     </ul>
 
-    <p>Standard Wi-Fi doesn't reach. Cellular might be patchy.</p>
+    <p>Standard Wi-Fi doesn't reach. <Link to="/cellular-backup" className="text-primary font-medium hover:underline">Cellular</Link> might be patchy.</p>
 
     <p>IoT devices need <strong>long-range, low-power, reliable</strong> connectivity.</p>
 

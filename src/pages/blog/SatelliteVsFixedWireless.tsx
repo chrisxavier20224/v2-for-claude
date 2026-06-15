@@ -19,7 +19,7 @@ const SatelliteVsFixedWireless = () => (
 
     <h2>Satellite: The Quick Setup</h2>
 
-    <p>Starlink is the most famous satellite service. You order it online, it arrives in a box, you point the dish at the sky, and it works within hours.</p>
+    <p><Link to="/starlink-installation" className="text-primary font-medium hover:underline">Starlink</Link> is the most famous satellite service. You order it online, it arrives in a box, you point the dish at the sky, and it works within hours.</p>
 
     <p>That simplicity is its biggest strength.</p>
 

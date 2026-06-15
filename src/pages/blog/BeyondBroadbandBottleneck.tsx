@@ -28,7 +28,7 @@ const BeyondBroadbandBottleneck = () => (
 
     <h2>The Alternative: Bonded 4G/5G SD-WAN</h2>
     <p>
-      Modern mobile networks offer the solution rural broadband providers haven't: bonded 4G/5G SD-WAN technology. By intelligently combining multiple mobile connections through an advanced router, this approach delivers speeds rural areas have never experienced. For most rural locations with decent mobile coverage, this technology transforms connectivity from a business liability into a genuine competitive advantage.
+      Modern mobile networks offer the solution rural broadband providers haven't: bonded 4G/5G <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> technology. By intelligently combining multiple mobile connections through an advanced router, this approach delivers speeds rural areas have never experienced. For most rural locations with decent mobile coverage, this technology transforms connectivity from a business liability into a genuine competitive advantage.
     </p>
 
     <h2>Speed Transformation</h2>

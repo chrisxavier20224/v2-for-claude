@@ -6,7 +6,7 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 const StarlinkSdwan = () => (
   <BlogArticleLayout slug="starlink-sd-wan-a-reliable-solution-for-business-connectivity" seoTitle="Starlink SD-WAN for Business — Failover Done Right | Integra">
     <p>In the modern business world, internet downtime is not an option. Whether you're running critical applications, managing CCTV systems, or maintaining seamless communication, consistent and reliable connectivity is essential.</p>
-    <p>While Starlink offers revolutionary satellite internet for remote and underserved areas, businesses reliant on critical services may hesitate to adopt it due to concerns about potential outages.</p>
+    <p>While <Link to="/starlink-installation" className="text-primary font-medium hover:underline">Starlink</Link> offers revolutionary satellite internet for remote and underserved areas, businesses reliant on critical services may hesitate to adopt it due to concerns about potential outages.</p>
 
     <div className="not-prose my-10">
       <p className="text-foreground font-semibold mb-4">

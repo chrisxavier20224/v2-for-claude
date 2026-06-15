@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const StarlinkRightSolution = () => (
   <BlogArticleLayout slug="starlink-is-it-the-right-solution-for-me" seoTitle="Is Starlink Right for Your Business? | Integra">
-    <p>If you're considering Starlink as a solution for your home or business, proper setup is essential to ensure optimal performance. Our Starlink installation service is designed to take the hassle out of setup, providing you with professional guidance and support from experienced engineers.</p>
+    <p>If you're considering <Link to="/starlink-installation" className="text-primary font-medium hover:underline">Starlink</Link> as a solution for your home or business, proper setup is essential to ensure optimal performance. Our Starlink installation service is designed to take the hassle out of setup, providing you with professional guidance and support from experienced engineers.</p>
     <p>In the picturesque landscapes of rural UK, where traditional broadband services like Openreach are still playing catch-up, the advent of Starlink offers a glimmer of hope. But is it the ultimate solution for internet woes in these areas, or does it come with its own set of limitations?</p>
 
     <h2>Understanding Starlink's Appeal</h2>

@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 const ChurchesListedBuildings = () => (
@@ -29,7 +30,7 @@ const ChurchesListedBuildings = () => (
 
     <h3>1. Non-Penetrating Roof Mounts</h3>
     <p>For churches with towers or high points, non-penetrating roof mounts (NPRMs) offer an effective, conservation-friendly way to install hardware. These mounts avoid drilling or altering the building, making them ideal for sensitive structures.</p>
-    <p>With a clear line of sight to local cell towers or satellites, these mounts can support 4G/5G SD-WAN connectivity and satellite internet solutions like Starlink.</p>
+    <p>With a clear line of sight to local cell towers or satellites, these mounts can support 4G/5G <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> connectivity and satellite internet solutions like Starlink.</p>
 
     <h3>2. Using Existing Infrastructure</h3>
     <p>Many churches have pre-existing cable routes that were originally installed for other purposes, such as powering Christmas decorations or CCTV systems. These routes can be repurposed for network cabling, minimising disruption.</p>

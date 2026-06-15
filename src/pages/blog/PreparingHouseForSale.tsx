@@ -29,7 +29,7 @@ const PreparingHouseForSale = () => (
 
     <h2>Improving Connectivity Before Sale</h2>
     <p>
-      If your speed tests reveal poor connectivity, improving it before sale is worthwhile. For properties with slow fibre speeds, Integra's SD-WAN solution can bond multiple 4G/5G connections to deliver 150-350Mbps—far exceeding what most fibre connections provide. For rural properties without adequate broadband, adding Starlink or upgrading to modern mobile-based solutions demonstrates to buyers that connectivity has been addressed.
+      If your speed tests reveal poor connectivity, improving it before sale is worthwhile. For properties with slow fibre speeds, Integra's <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> solution can bond multiple 4G/5G connections to deliver 150-350Mbps—far exceeding what most fibre connections provide. For rural properties without adequate broadband, adding Starlink or upgrading to modern mobile-based solutions demonstrates to buyers that connectivity has been addressed.
     </p>
 
     <h2>A Competitive Advantage</h2>

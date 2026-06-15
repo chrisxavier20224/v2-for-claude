@@ -5,7 +5,7 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 
 const StarlinkUploadSpeed = () => (
   <BlogArticleLayout slug="starlink-upload-speed-why-it-matters-for-business" seoTitle="Starlink Upload Speed: The Business Problem | Integra">
-    <p>Starlink is famous for download speeds — up to 250Mbps in rural areas. That sounds amazing.</p>
+    <p><Link to="/starlink-installation" className="text-primary font-medium hover:underline">Starlink</Link> is famous for download speeds — up to 250Mbps in rural areas. That sounds amazing.</p>
 
     <p>But Starlink's upload speed is the elephant in the room: typically just 10-15Mbps.</p>
 
