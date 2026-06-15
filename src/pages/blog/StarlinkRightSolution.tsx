@@ -1,8 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
 
 
 const StarlinkRightSolution = () => (
-  <BlogArticleLayout slug="starlink-is-it-the-right-solution-for-me">
+  <BlogArticleLayout slug="starlink-is-it-the-right-solution-for-me" seoTitle="Is Starlink Right for Your Business? | Integra">
     <p>If you're considering Starlink as a solution for your home or business, proper setup is essential to ensure optimal performance. Our Starlink installation service is designed to take the hassle out of setup, providing you with professional guidance and support from experienced engineers.</p>
     <p>In the picturesque landscapes of rural UK, where traditional broadband services like Openreach are still playing catch-up, the advent of Starlink offers a glimmer of hope. But is it the ultimate solution for internet woes in these areas, or does it come with its own set of limitations?</p>
 
@@ -32,6 +33,10 @@ const StarlinkRightSolution = () => (
 
     <h2>Conclusion</h2>
     <p>Starlink is a revolutionary technology that has transformed connectivity for remote and rural areas. Whether it's the right solution for you depends on your specific needs, location, and how critical your internet connection is to your daily operations. For many, combining Starlink with SD-WAN represents the best of both worlds.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/starlink-installation" className="text-primary font-medium hover:underline">see our professional Starlink installation</Link> · <Link to="/blog/starlink-vs-4g-bonding-honest-comparison" className="text-primary font-medium hover:underline">compare Starlink vs 4G bonding</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check what we can deliver at your address</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

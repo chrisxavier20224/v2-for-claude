@@ -1,10 +1,20 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const RuralBusinessesSdwan = () => (
-  <BlogArticleLayout slug="managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses">
+  <BlogArticleLayout slug="managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses" seoTitle="SD-WAN for Rural Business Broadband | Integra">
     <p>If you're a rural business owner, chances are you've faced unreliable internet. Whether it's handling card payments, managing VoIP systems, or keeping critical services online, staying connected is essential — but fibre broadband isn't always an option.</p>
     <p>Many rural businesses turn to multiple broadband connections as a workaround. While this can help spread the load, it often leads to inefficiencies, wasted resources, and unreliable service. That's where SD-WAN technology comes in.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Juggling multiple lines? See how one bonded connection performs at your site.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses" hideChatAlternative />
+    </div>
+
 
     <h2>The Problem with Multiple Broadband Connections</h2>
     <p>Rural businesses often add broadband connections over time to address connectivity challenges. While this might seem like a solution, it creates several problems:</p>
@@ -35,6 +45,10 @@ const RuralBusinessesSdwan = () => (
 
     <h2>Conclusion</h2>
     <p>For rural businesses struggling with unreliable internet, SD-WAN offers a practical, cost-effective solution. By combining multiple broadband connections into one intelligent network, businesses can enjoy faster speeds, greater resilience, and simplified management — all without the need for expensive fibre installations.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — one bonded connection instead of many</Link> · <Link to="/blog/load-balancing-vs-bonding-whats-the-difference" className="text-primary font-medium hover:underline">understand load balancing vs bonding</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check what one bonded connection delivers at your site</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

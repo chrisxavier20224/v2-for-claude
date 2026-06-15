@@ -1,5 +1,6 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
+import { Link } from "react-router-dom";
 import openreachHomepage from "@/assets/blog/openreach-homepage-fibre-checker.jpg";
 import openreachNotAvailable from "@/assets/blog/openreach-fibre-not-available-result.jpg";
 import openreachSpeedResults from "@/assets/blog/openreach-broadband-speed-results.jpg";
@@ -61,6 +62,14 @@ const BtOpenreachFibreChecker = () => (
 
     <p>
       Once you've gathered this information and have a clear understanding of your connectivity options, you can move forward with confidence. Consider checking our speed tests article to understand realistic performance expectations, and use our availability checker to see what solutions Integra can provide for your location.
+    </p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong>{" "}
+      <Link to="/integra-bridge" className="text-primary font-medium hover:underline">get online in 10 working days while you wait for fibre with Integra Bridge</Link>{" "}
+      ·{" "}
+      <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">or, if fibre's never coming, see Integra SD-WAN</Link>{" "}
+      ·{" "}
+      <Link to="/blog/how-to-check-broadband-availability-rural-areas" className="text-primary font-medium hover:underline">plus our guide to checking rural broadband availability</Link>.
     </p>
   </BlogArticleLayout>
 );

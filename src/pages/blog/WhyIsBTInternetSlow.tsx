@@ -1,7 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 const WhyIsBTInternetSlow = () => (
-  <BlogArticleLayout slug="why-is-my-bt-internet-so-slow">
+  <BlogArticleLayout slug="why-is-my-bt-internet-so-slow" seoTitle="Why Is My BT Internet So Slow? (And the Fix) | Integra">
     <p>
       BT is one of the UK's largest internet providers, yet countless customers experience frustratingly slow speeds. Understanding why your BT internet underperforms is the first step toward finding a solution. Often, slow speeds result from factors beyond BT's control or limitations inherent to the copper-based network infrastructure. This guide explores the common causes and what you can do about them.
     </p>
@@ -10,6 +12,14 @@ const WhyIsBTInternetSlow = () => (
     <p>
       Several technical factors limit BT broadband speeds. Distance from the telephone exchange is the primary culprit—the further your property sits from the exchange, the slower your connection becomes. Old copper telephone lines that carry ADSL services degrade over distance. Network congestion during peak hours, especially in the evenings when everyone streams video, can reduce speeds. If your area hasn't received fibre upgrades yet, you're stuck with slower copper infrastructure that simply can't deliver modern speeds.
     </p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Stuck on slow copper that'll never get faster? See what we can actually deliver at your address.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-why-is-my-bt-internet-so-slow" hideChatAlternative />
+    </div>
+
 
     <h2>Wi-Fi Issues Often Get Blamed on BT</h2>
     <p>
@@ -49,6 +59,10 @@ const WhyIsBTInternetSlow = () => (
     <p>
       Don't accept slow internet as inevitable. Check your property's availability for faster alternatives today and discover what truly reliable connectivity feels like.
     </p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see how bonded 4G/5G SD-WAN delivers 150–350Mbps where copper can't</Link> · <Link to="/blog/beyond-the-broadband-bottleneck" className="text-primary font-medium hover:underline">read our rural business broadband (without fibre) guide</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check what we can deliver at your address</Link>.
+    </p>
+  
   </BlogArticleLayout>
 );
 

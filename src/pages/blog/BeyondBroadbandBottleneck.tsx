@@ -1,7 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 const BeyondBroadbandBottleneck = () => (
-  <BlogArticleLayout slug="beyond-the-broadband-bottleneck">
+  <BlogArticleLayout slug="beyond-the-broadband-bottleneck" seoTitle="Rural Business Broadband Without Fibre | Integra">
     <p>
       If you're running a small or medium-sized business in a rural area, you know the frustration well. Your broadband is slow, unreliable, and the local provider keeps promising fibre that never seems to arrive. You watch competitors in better-connected areas operate with smooth video calls, instant cloud access, and seamless operations, while your business struggles with dropped connections and glacial upload speeds. There's an alternative to this frustrating situation.
     </p>
@@ -10,6 +12,14 @@ const BeyondBroadbandBottleneck = () => (
     <p>
       Rural businesses face genuine connectivity challenges that urban counterparts rarely encounter. Traditional ADSL lines in remote areas crawl along at 2-10Mbps—barely adequate for basic browsing, completely inadequate for modern business operations. Even when fibre is promised, rollout timelines slip by years. In the meantime, businesses suffer with unreliable connections that cost far more in lost productivity than the broadband itself costs. The underlying infrastructure simply wasn't built for rural areas, and catching up requires investment most providers aren't prioritizing.
     </p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Still waiting for fibre? See the speeds we can deliver to your rural site now.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-beyond-the-broadband-bottleneck" hideChatAlternative />
+    </div>
+
 
     <h2>Why Traditional Broadband Fails Rural Businesses</h2>
     <p>
@@ -40,6 +50,10 @@ const BeyondBroadbandBottleneck = () => (
     <p>
       You don't have to accept poor broadband as the cost of rural operation. Bonded 4G/5G SD-WAN gives rural SMEs genuine business-class connectivity. Check our availability checker to see what we can deliver for your location. You might be surprised at how close you are to escaping the broadband bottleneck entirely.
     </p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — bonded 4G/5G for rural businesses</Link> · <Link to="/blog/unlock-high-speed-internet-rural-areas" className="text-primary font-medium hover:underline">read how to unlock high-speed internet in rural areas</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check the speeds we can deliver to your site</Link>.
+    </p>
+  
   </BlogArticleLayout>
 );
 

@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const SatelliteVsFixedWireless = () => (
-  <BlogArticleLayout slug="satellite-internet-vs-fixed-wireless-pros-and-cons">
+  <BlogArticleLayout slug="satellite-internet-vs-fixed-wireless-pros-and-cons" seoTitle="Satellite vs Fixed Wireless Internet | Integra">
     <p>Satellite and fixed wireless are the two leading alternatives to fibre for rural properties. Both can work. Both have distinct trade-offs.</p>
 
     <p>Which one should you choose? It depends on what matters most: cost, speed, reliability, or latency.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Which one's right for your premises? Check availability and we'll recommend the best fit.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-satellite-internet-vs-fixed-wireless-pros-and-cons" hideChatAlternative />
+    </div>
+
 
     <h2>Satellite: The Quick Setup</h2>
 
@@ -139,6 +149,10 @@ const SatelliteVsFixedWireless = () => (
     <p>Not sure what's possible at your location? Send us your property's coordinates from Google Maps. We'll map your nearest cell towers, assess signal strength, and tell you whether fixed wireless, satellite, or a hybrid approach will work best.</p>
 
     <p>No obligation, no site visit needed. Just your coordinates and 24 hours of analysis.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — the bonded fixed-wireless alternative</Link> · <Link to="/blog/starlink-vs-4g-bonding-honest-comparison" className="text-primary font-medium hover:underline">read the Starlink vs 4G bonding comparison</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check availability at your premises</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

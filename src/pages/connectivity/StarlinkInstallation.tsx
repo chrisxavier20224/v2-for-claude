@@ -259,9 +259,9 @@ const StarlinkInstallation = () => {
       <FurtherReading
         dark
         links={[
-          { slug: "starlink-vs-4g-bonding-honest-comparison", label: "Starlink vs 4G bonding — an honest comparison" },
-          { slug: "satellite-internet-vs-integra-4g-5g-sdwan", label: "Satellite internet vs Integra 4G/5G SD-WAN" },
-          { slug: "starlink-sd-wan-a-reliable-solution-for-business-connectivity", label: "Starlink SD-WAN — a reliable solution for business connectivity" },
+          { slug: "starlink-installers-near-me-finding-the-best-solution-for-high-speed-satellite-internet", label: "Starlink installers near me — UK pro install" },
+          { slug: "starlink-sd-wan-a-reliable-solution-for-business-connectivity", label: "Starlink SD-WAN for business — failover done right" },
+          { slug: "starlink-upload-speed-why-it-matters-for-business", label: "Starlink upload speed — the business problem" },
         ]}
       />
 

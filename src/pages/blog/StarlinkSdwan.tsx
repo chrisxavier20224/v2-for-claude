@@ -1,10 +1,20 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const StarlinkSdwan = () => (
-  <BlogArticleLayout slug="starlink-sd-wan-a-reliable-solution-for-business-connectivity">
+  <BlogArticleLayout slug="starlink-sd-wan-a-reliable-solution-for-business-connectivity" seoTitle="Starlink SD-WAN for Business — Failover Done Right | Integra">
     <p>In the modern business world, internet downtime is not an option. Whether you're running critical applications, managing CCTV systems, or maintaining seamless communication, consistent and reliable connectivity is essential.</p>
     <p>While Starlink offers revolutionary satellite internet for remote and underserved areas, businesses reliant on critical services may hesitate to adopt it due to concerns about potential outages.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Want Starlink with proper business failover? See what's deliverable at your location.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-starlink-sd-wan-a-reliable-solution-for-business-connectivity" hideChatAlternative />
+    </div>
+
     <p>Enter <strong>Starlink SD-WAN</strong>: a solution that combines Starlink's high-speed satellite connectivity with a software-defined wide area network (SD-WAN) to create a resilient, failover-ready internet setup.</p>
 
     <h2>What is Starlink SD-WAN?</h2>
@@ -33,6 +43,10 @@ const StarlinkSdwan = () => (
 
     <h2>Conclusion</h2>
     <p>Starlink SD-WAN represents the best of both worlds: the revolutionary speed and coverage of satellite internet, combined with the reliability and intelligence of SD-WAN technology. For businesses that can't afford downtime, it's a practical, proven solution that delivers peace of mind.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/starlink-installation" className="text-primary font-medium hover:underline">see our Starlink installation and SD-WAN bundles</Link> · <Link to="/cellular-backup" className="text-primary font-medium hover:underline">add automatic 4G/5G failover for resilient business connectivity</Link> · <Link to="/blog/starlink-vs-4g-bonding-honest-comparison" className="text-primary font-medium hover:underline">compare Starlink vs 4G bonding honestly</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

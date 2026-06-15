@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const MultiBuildingWifi = () => (
-  <BlogArticleLayout slug="multi-building-wifi-rural-properties">
+  <BlogArticleLayout slug="multi-building-wifi-rural-properties" seoTitle="Multi-Building Wi-Fi for Rural Properties | Integra">
     <p>Your main house has Wi-Fi. But your barn is out of range. Your office building (300m away) has no signal. Your guest cottage needs connectivity but wiring 300m of cable is crazy expensive.</p>
 
     <p>Multi-building Wi-Fi solves this.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        One network across every building — check what we can deliver across your property.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-multi-building-wifi-rural-properties" hideChatAlternative />
+    </div>
+
 
     <h2>The Problem: Wi-Fi Range Limits</h2>
 
@@ -207,6 +217,10 @@ const MultiBuildingWifi = () => (
     </ul>
 
     <p>We'll design a mesh system and quote installation.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/business-wifi" className="text-primary font-medium hover:underline">see our business Wi-Fi service</Link> · <Link to="/wireless-distribution" className="text-primary font-medium hover:underline">and wireless distribution for multi-building estates</Link> · <Link to="/blog/iot-connectivity-agriculture-uk" className="text-primary font-medium hover:underline">plus IoT connectivity for UK agriculture</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 
