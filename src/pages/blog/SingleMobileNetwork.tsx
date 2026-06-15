@@ -12,7 +12,7 @@ const SingleMobileNetwork = () => (
 
     <div className="not-prose my-10">
       <p className="text-foreground font-semibold mb-4">
-        One network is a single point of failure — check what bonded SD-WAN delivers at your site.
+        One network is a single point of failure — check what bonded <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> delivers at your site.
       </p>
       <AvailabilityCheckerInline compact sourceTag="blog-single-mobile-network-connectivity-solutions-a-reliable-option" hideChatAlternative />
     </div>

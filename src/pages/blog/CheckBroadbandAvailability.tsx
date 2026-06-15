@@ -95,7 +95,7 @@ const CheckBroadbandAvailability = () => (
     <ul>
       <li>Nearest tower locations (map)</li>
       <li>Expected speeds (realistic, not theoretical)</li>
-      <li>Recommended product (Integra Pro, Starlink SD-WAN, leased line, etc.)</li>
+      <li>Recommended product (Integra Pro, Starlink <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link>, leased line, etc.)</li>
       <li>Timeline to install</li>
       <li>Pricing</li>
     </ul>

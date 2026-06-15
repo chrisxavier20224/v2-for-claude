@@ -1,9 +1,10 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
 
 const SatelliteVsIntegraSDWAN = () => (
   <BlogArticleLayout slug="satellite-internet-vs-integra-4g-5g-sdwan">
     <p>
-      As satellite internet options like Starlink become more widely available, many people in remote areas face a decision: should they opt for satellite internet or invest in a bonded 4G/5G SD-WAN solution? Both technologies offer real advantages, and understanding their respective strengths and limitations is crucial for making the right choice for your needs.
+      As satellite internet options like Starlink become more widely available, many people in remote areas face a decision: should they opt for satellite internet or invest in a bonded 4G/5G <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> solution? Both technologies offer real advantages, and understanding their respective strengths and limitations is crucial for making the right choice for your needs.
     </p>
 
     <h2>The Promise of Satellite Internet</h2>

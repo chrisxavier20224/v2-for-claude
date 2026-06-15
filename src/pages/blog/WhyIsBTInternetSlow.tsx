@@ -48,7 +48,7 @@ const WhyIsBTInternetSlow = () => (
 
     <h2>Alternative Solutions</h2>
     <p>
-      If BT's infrastructure won't deliver the speeds you need, alternatives exist. Integra's SD-WAN technology bonds multiple 4G and 5G mobile connections to deliver 150-350Mbps—far faster than most BT services. Unlike BT's network, Integra bypasses the traditional copper telephone infrastructure entirely, using modern mobile networks instead. For properties where mobile signals are strong, this approach delivers dramatically faster, more reliable internet without waiting for fibre infrastructure that might never come.
+      If BT's infrastructure won't deliver the speeds you need, alternatives exist. Integra's <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> technology bonds multiple 4G and 5G mobile connections to deliver 150-350Mbps—far faster than most BT services. Unlike BT's network, Integra bypasses the traditional copper telephone infrastructure entirely, using modern mobile networks instead. For properties where mobile signals are strong, this approach delivers dramatically faster, more reliable internet without waiting for fibre infrastructure that might never come.
     </p>
 
     <h2>Starlink as a Supplement</h2>

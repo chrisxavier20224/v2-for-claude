@@ -6,7 +6,7 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 const RuralBusinessesSdwan = () => (
   <BlogArticleLayout slug="managing-multiple-broadband-connections-sd-wan-solutions-for-rural-businesses" seoTitle="SD-WAN for Rural Business Broadband | Integra">
     <p>If you're a rural business owner, chances are you've faced unreliable internet. Whether it's handling card payments, managing VoIP systems, or keeping critical services online, staying connected is essential — but fibre broadband isn't always an option.</p>
-    <p>Many rural businesses turn to multiple broadband connections as a workaround. While this can help spread the load, it often leads to inefficiencies, wasted resources, and unreliable service. That's where SD-WAN technology comes in.</p>
+    <p>Many rural businesses turn to multiple broadband connections as a workaround. While this can help spread the load, it often leads to inefficiencies, wasted resources, and unreliable service. That's where <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> technology comes in.</p>
 
     <div className="not-prose my-10">
       <p className="text-foreground font-semibold mb-4">

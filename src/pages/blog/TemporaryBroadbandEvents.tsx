@@ -86,7 +86,7 @@ const TemporaryBroadbandEvents = () => (
 
     <h3>Option 4: Portable Bonded Connection (Integra Temporary)</h3>
 
-    <p>Rent a bonded 4G/5G system from Integra. Multiple SIMs from different operators, combined via SD-WAN.</p>
+    <p>Rent a bonded 4G/5G system from Integra. Multiple SIMs from different operators, combined via <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link>.</p>
 
     <p><strong>Pros:</strong></p>
     <ul>

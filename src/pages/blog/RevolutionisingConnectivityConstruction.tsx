@@ -1,9 +1,10 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
 
 const RevolutionisingConnectivityConstruction = () => (
   <BlogArticleLayout slug="revolutionising-connectivity-in-construction">
     <p>
-      Construction sites present one of the most challenging connectivity problems in modern work environments. Temporary locations, remote areas without infrastructure, and the time-sensitive nature of construction projects create a perfect storm where traditional connectivity solutions simply don't work. Integra's bonded 4G/5G SD-WAN is changing how construction companies approach this challenge.
+      Construction sites present one of the most challenging connectivity problems in modern work environments. Temporary locations, remote areas without infrastructure, and the time-sensitive nature of construction projects create a perfect storm where traditional connectivity solutions simply don't work. Integra's bonded 4G/5G <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> is changing how construction companies approach this challenge.
     </p>
 
     <h2>The Connectivity Challenge on Construction Sites</h2>

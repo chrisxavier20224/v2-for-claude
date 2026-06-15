@@ -28,7 +28,7 @@ const UnlockHighSpeedRural = () => (
 
     <h2>The SD-WAN Solution</h2>
     <p>
-      Integra's SD-WAN technology offers a breakthrough for rural connectivity. Rather than relying on a single fibre connection that doesn't exist, SD-WAN bonds multiple 4G and 5G mobile connections together, creating a fast, reliable internet service. This approach bypasses the need for traditional fibre infrastructure entirely, delivering results in weeks rather than waiting years.
+      Integra's <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> technology offers a breakthrough for rural connectivity. Rather than relying on a single fibre connection that doesn't exist, SD-WAN bonds multiple 4G and 5G mobile connections together, creating a fast, reliable internet service. This approach bypasses the need for traditional fibre infrastructure entirely, delivering results in weeks rather than waiting years.
     </p>
 
     <h2>Impressive Speeds</h2>

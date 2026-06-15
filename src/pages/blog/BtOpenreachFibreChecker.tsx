@@ -52,7 +52,7 @@ const BtOpenreachFibreChecker = () => (
 
     <h2>What Green Results Mean</h2>
     <p>
-      If your checks show green results for mobile signal, particularly for 4G or 5G coverage, you're in a strong position. With modern SD-WAN technology, external antennas can deliver remarkably strong and reliable signals, even in areas that initially appear to have borderline coverage. However, there's one important caveat: valleys, hills, and dense woodland can block line-of-sight to mobile masts, reducing signal strength unpredictably. This is why professional site assessment becomes valuable.
+      If your checks show green results for mobile signal, particularly for 4G or 5G coverage, you're in a strong position. With modern <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> technology, external antennas can deliver remarkably strong and reliable signals, even in areas that initially appear to have borderline coverage. However, there's one important caveat: valleys, hills, and dense woodland can block line-of-sight to mobile masts, reducing signal strength unpredictably. This is why professional site assessment becomes valuable.
     </p>
 
     <h2>Getting Professional Assessment</h2>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const WhatIsCellularBonding = () => (
   <BlogArticleLayout slug="what-is-cellular-bonding-simple-explanation" seoTitle="What Is Cellular Bonding? Simple Guide | Integra">
-    <p>"Cellular bonding" sounds technical. It's actually simple: combining two or more mobile connections into one faster, more reliable connection.</p>
+    <p>"<Link to="/cellular-backup" className="text-primary font-medium hover:underline">Cellular</Link> bonding" sounds technical. It's actually simple: combining two or more mobile connections into one faster, more reliable connection.</p>
 
     <p>Think of it like this: one motorway is congested, so you add a second motorway. Traffic spreads across both. You move faster. If one closes, you still have the other.</p>
 

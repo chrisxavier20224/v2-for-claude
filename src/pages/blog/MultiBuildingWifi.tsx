@@ -45,7 +45,7 @@ const MultiBuildingWifi = () => (
 
     <h3>Step 1: Main Router + Primary Wi-Fi</h3>
 
-    <p>Your primary broadband connection (Integra Pro, Starlink SD-WAN, or leased line) connects to a mesh router (commercial-grade mesh system, or similar).</p>
+    <p>Your primary broadband connection (Integra Pro, Starlink <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link>, or leased line) connects to a mesh router (commercial-grade mesh system, or similar).</p>
 
     <h3>Step 2: Secondary Access Points</h3>
 

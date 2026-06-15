@@ -108,7 +108,7 @@ const BroadbandGrantsUK = () => (
 
     <p>Government grants prioritize fixed infrastructure (fibre, leased lines) because they're permanent assets. Cellular solutions are seen as temporary.</p>
 
-    <p>This is a policy gap: cellular SD-WAN can work for 10 or more years reliably, but it's not grant-eligible.</p>
+    <p>This is a policy gap: cellular <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> can work for 10 or more years reliably, but it's not grant-eligible.</p>
 
     <h2>Real Talk: Why Grants Aren't Your Answer</h2>
 

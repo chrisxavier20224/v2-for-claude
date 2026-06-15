@@ -5,7 +5,7 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 
 const StarlinkVsFourGBonding = () => (
   <BlogArticleLayout slug="starlink-vs-4g-bonding-honest-comparison" seoTitle="Starlink vs 4G Bonding: Honest Comparison | Integra">
-    <p>Starlink vs 4G bonding (SD-WAN) is the biggest rural broadband decision right now. Both can work. Both have real trade-offs.</p>
+    <p><Link to="/starlink-installation" className="text-primary font-medium hover:underline">Starlink</Link> vs 4G bonding (SD-WAN) is the biggest rural broadband decision right now. Both can work. Both have real trade-offs.</p>
 
     <p>We're going to be completely honest about which is better for different situations.</p>
 

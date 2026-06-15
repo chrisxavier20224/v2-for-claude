@@ -9,7 +9,7 @@ const DIYInternetSpeedTests = () => (
 
     <h2>Why Speed Testing Matters</h2>
     <p>
-      Speed testing serves multiple purposes. First, it confirms what you're actually receiving versus what your provider advertises. Second, it establishes a baseline so you can measure improvements over time. Third, it lets you compare different broadband options before making a switch. Whether you're troubleshooting slow speeds or evaluating alternatives like SD-WAN or Starlink, accurate speed tests provide the evidence you need to make informed decisions.
+      Speed testing serves multiple purposes. First, it confirms what you're actually receiving versus what your provider advertises. Second, it establishes a baseline so you can measure improvements over time. Third, it lets you compare different broadband options before making a switch. Whether you're troubleshooting slow speeds or evaluating alternatives like <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">SD-WAN</Link> or Starlink, accurate speed tests provide the evidence you need to make informed decisions.
     </p>
 
     <h2>Tools You'll Need</h2>

@@ -19,7 +19,7 @@ const FourGVsFiveG = () => (
 
     <h2>The Basics: What's the Difference?</h2>
 
-    <p>4G (LTE) and 5G are both cellular technologies. 4G has been around since 2009 and is now nationwide — your mobile phone probably uses it. 5G is newer, faster, and rolling out across the UK, but coverage is still patchy in rural areas.</p>
+    <p>4G (LTE) and 5G are both <Link to="/cellular-backup" className="text-primary font-medium hover:underline">cellular</Link> technologies. 4G has been around since 2009 and is now nationwide — your mobile phone probably uses it. 5G is newer, faster, and rolling out across the UK, but coverage is still patchy in rural areas.</p>
 
     <p>In theory, 5G offers much faster speeds (up to 1Gbps in ideal conditions) compared to 4G's typical 50-150Mbps. But theory doesn't always match reality on a farm 10 miles from town.</p>
 
