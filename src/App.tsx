@@ -201,8 +201,9 @@ const App = () => (
               <Route path="/blog/iot-connectivity-agriculture-uk" element={<IoTConnectivityAgriculture />} />
               <Route path="/blog/multi-building-wifi-rural-properties" element={<MultiBuildingWifi />} />
               <Route path="/blog/bt-openreach-fibre-checker" element={<BtOpenreachFibreChecker />} />
-              <Route path="/blog/satellite-internet-vs-integra-4g-5g-sdwan" element={<SatelliteVsIntegraSDWAN />} />
-              <Route path="/blog/revolutionising-connectivity-in-construction" element={<RevolutionisingConnectivityConstruction />} />
+              {/* Merged / consolidated blog posts — 301 to canonical */}
+              <Route path="/blog/satellite-internet-vs-integra-4g-5g-sdwan" element={<Navigate to="/blog/starlink-vs-4g-bonding-honest-comparison" replace />} />
+              <Route path="/blog/revolutionising-connectivity-in-construction" element={<Navigate to="/blog/portable-wifi-solutions-construction-sites" replace />} />
               <Route path="/blog/beyond-the-broadband-bottleneck" element={<BeyondBroadbandBottleneck />} />
               <Route path="/blog/unlock-high-speed-internet-rural-areas" element={<UnlockHighSpeedRural />} />
               <Route path="/blog/preparing-house-for-sale-internet-speed" element={<PreparingHouseForSale />} />
