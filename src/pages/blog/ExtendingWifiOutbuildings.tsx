@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 const ExtendingWifiOutbuildings = () => (
-  <BlogArticleLayout slug="extending-wi-fi-and-internet-to-outbuildings">
+  <BlogArticleLayout
+    slug="extending-wi-fi-and-internet-to-outbuildings"
+    seoTitle="Extending Wi-Fi to Outbuildings & Barns | Integra"
+  >
     <p>Modern homes often include outbuildings such as home offices, gyms, workshops, or guest accommodations. One common challenge is ensuring reliable internet and Wi-Fi in these spaces, especially when they are far from the main house.</p>
     <p>At Integra Networks, we deploy the same technology solutions for residential properties that we use for larger commercial projects like business parks, festival sites, and rural estates. The principles remain the same: delivering high-speed internet with zero loss of performance, even when physical cabling isn't possible.</p>
     <p>This guide explores practical solutions to extend Wi-Fi to outbuildings and improve connectivity, using proven techniques to ensure strong, uninterrupted signals.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Need reliable internet to an outbuilding, barn or annexe? Check what's deliverable at your property:
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-extending-wifi-outbuildings" hideChatAlternative />
+    </div>
 
     <h2>Why is Extending Wi-Fi to Outbuildings a Challenge?</h2>
     <p>Properties with outbuildings face several hurdles when it comes to distributing Wi-Fi effectively:</p>

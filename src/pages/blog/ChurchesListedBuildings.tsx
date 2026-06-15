@@ -1,10 +1,20 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
-
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 const ChurchesListedBuildings = () => (
-  <BlogArticleLayout slug="internet-and-wi-fi-solutions-for-churches-and-listed-buildings">
+  <BlogArticleLayout
+    slug="internet-and-wi-fi-solutions-for-churches-and-listed-buildings"
+    seoTitle="Church & Listed-Building Internet Solutions | Integra"
+  >
     <p>Installing Internet and Wi-Fi solutions in churches and listed buildings comes with unique challenges. These properties, often rich in history and architectural significance, require careful planning to balance modern connectivity needs with preservation regulations.</p>
     <p>This article explores common obstacles in installing internet in churches and listed properties, highlights practical solutions, and explains why a professional survey is often essential.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Connecting a church, hall or listed building? Book a no-obligation survey — check availability at your site:
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-churches-listed-buildings" hideChatAlternative />
+    </div>
 
     <h2>Why Don't Churches Have Wi-Fi?</h2>
     <p>Churches are a prime example of buildings where traditional internet installations can be particularly difficult. Their historical significance and unique architecture often pose several challenges:</p>

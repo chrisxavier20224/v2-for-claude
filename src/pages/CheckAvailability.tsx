@@ -6,7 +6,7 @@ const CheckAvailability = () => {
   return (
     <PageLayout>
       <SEO
-        title="Check Your Availability — Integra Networks"
+        title="Free Business Fibre & Openreach Availability Checker | Integra"
         description="Check if Integra Networks can bring fast broadband to your property. Drop a pin on your building and we'll run an automated coverage check."
         keywords="availability checker, broadband coverage, rural broadband, Integra Networks"
         url="/check"
