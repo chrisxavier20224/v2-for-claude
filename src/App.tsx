@@ -68,8 +68,6 @@ const PortableWifiConstruction = lazy(() => import("./pages/blog/PortableWifiCon
 const IoTConnectivityAgriculture = lazy(() => import("./pages/blog/IoTConnectivityAgriculture"));
 const MultiBuildingWifi = lazy(() => import("./pages/blog/MultiBuildingWifi"));
 const BtOpenreachFibreChecker = lazy(() => import("./pages/blog/BtOpenreachFibreChecker"));
-const SatelliteVsIntegraSDWAN = lazy(() => import("./pages/blog/SatelliteVsIntegraSDWAN"));
-const RevolutionisingConnectivityConstruction = lazy(() => import("./pages/blog/RevolutionisingConnectivityConstruction"));
 const BeyondBroadbandBottleneck = lazy(() => import("./pages/blog/BeyondBroadbandBottleneck"));
 const UnlockHighSpeedRural = lazy(() => import("./pages/blog/UnlockHighSpeedRural"));
 const PreparingHouseForSale = lazy(() => import("./pages/blog/PreparingHouseForSale"));
