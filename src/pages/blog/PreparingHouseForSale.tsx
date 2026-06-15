@@ -1,7 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
 
 const PreparingHouseForSale = () => (
-  <BlogArticleLayout slug="preparing-house-for-sale-internet-speed">
+  <BlogArticleLayout slug="preparing-house-for-sale-internet-speed" seoTitle="Internet Speed & Selling Your House | Integra">
     <p>
       In today's competitive property market, internet speed has become a critical factor that buyers evaluate before purchasing. The shift to remote and hybrid work accelerated by recent years means broadband quality is now considered as important as the kitchen or bathroom. A property with poor connectivity can struggle to sell, attract lower offers, or sit on the market significantly longer.
     </p>
@@ -39,6 +40,10 @@ const PreparingHouseForSale = () => (
     <p>
       Don't overlook this critical factor. Get a desktop survey to understand your property's connectivity options and make improvements before selling. Fast internet isn't a luxury anymore—it's an expectation, and buyers will judge your property accordingly.
     </p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — fast broadband without fibre</Link> · <Link to="/blog/why-is-my-bt-internet-so-slow" className="text-primary font-medium hover:underline">read why BT internet is so slow (and how to fix it)</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check what we can deliver at the property</Link>.
+    </p>
+  
   </BlogArticleLayout>
 );
 

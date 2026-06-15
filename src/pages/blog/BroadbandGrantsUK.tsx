@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const BroadbandGrantsUK = () => (
-  <BlogArticleLayout slug="business-broadband-grants-uk-2026">
+  <BlogArticleLayout slug="business-broadband-grants-uk-2026" seoTitle="Business Broadband Grants UK 2026 | Integra">
     <p>The Government committed billions to reaching rural properties with broadband. The money is flowing. But which schemes are open right now? Which ones apply to your business?</p>
 
     <p>Here's the complete breakdown of what's available in 2026.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Don't wait 12–24 months for grant-funded fibre — see what we can install in 10 working days.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-business-broadband-grants-uk-2026" hideChatAlternative />
+    </div>
+
 
     <h2>National Broadband Programme (Openreach)</h2>
 
@@ -126,6 +136,10 @@ const BroadbandGrantsUK = () => (
     <p>But we're often faster and cheaper than waiting for grant-funded fibre.</p>
 
     <p>If you've been waiting for BT's grant-funded installation date and it keeps slipping, let's talk. We might have you online while you're waiting.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-bridge" className="text-primary font-medium hover:underline">get online in 10 working days with Integra Bridge while you wait for fibre</Link> · <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">or — if fibre's never coming — see Integra SD-WAN</Link> · <Link to="/blog/beyond-the-broadband-bottleneck" className="text-primary font-medium hover:underline">plus our guide to rural business broadband without fibre</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

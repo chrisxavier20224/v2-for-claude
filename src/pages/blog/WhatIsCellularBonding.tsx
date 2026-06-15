@@ -1,8 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
 
 
 const WhatIsCellularBonding = () => (
-  <BlogArticleLayout slug="what-is-cellular-bonding-simple-explanation">
+  <BlogArticleLayout slug="what-is-cellular-bonding-simple-explanation" seoTitle="What Is Cellular Bonding? Simple Guide | Integra">
     <p>"Cellular bonding" sounds technical. It's actually simple: combining two or more mobile connections into one faster, more reliable connection.</p>
 
     <p>Think of it like this: one motorway is congested, so you add a second motorway. Traffic spreads across both. You move faster. If one closes, you still have the other.</p>
@@ -139,6 +140,10 @@ const WhatIsCellularBonding = () => (
     </ul>
 
     <p>Unsure? Get a desktop survey. We'll measure actual speeds from each operator at your location and tell you if bonding is worth it.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — cellular bonding in action</Link> · <Link to="/blog/load-balancing-vs-bonding-whats-the-difference" className="text-primary font-medium hover:underline">and how it differs from load balancing</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check coverage at your site</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

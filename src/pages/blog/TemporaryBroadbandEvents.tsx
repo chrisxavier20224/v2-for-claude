@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const TemporaryBroadbandEvents = () => (
-  <BlogArticleLayout slug="temporary-broadband-for-events-uk">
+  <BlogArticleLayout slug="temporary-broadband-for-events-uk" seoTitle="Temporary Broadband for Events UK | Integra">
     <p>Running an event needs internet: card machines, ticketing systems, live streaming, staff communications, exhibitor Wi-Fi.</p>
 
     <p>If the venue has no broadband or it's too slow, you're stuck.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Running an event? Send your venue postcode and we'll confirm coverage before you book.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-temporary-broadband-for-events-uk" hideChatAlternative />
+    </div>
+
 
     <p>Temporary broadband is the solution. Here's what's actually available and what works.</p>
 
@@ -203,6 +213,10 @@ const TemporaryBroadbandEvents = () => (
     <h2>Next Step</h2>
 
     <p>Got an event coming up? Email us the venue postcode + event dates. We'll survey coverage and send you a quote.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN for events — bonded 4G/5G that scales</Link> · <Link to="/blog/portable-wifi-solutions-construction-sites" className="text-primary font-medium hover:underline">read our portable Wi-Fi for construction sites guide</Link> · <Link to="/check" className="text-primary font-medium hover:underline">send your venue postcode for a coverage check</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

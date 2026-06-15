@@ -1,14 +1,24 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import farmHillside from "@/assets/blog/farm-hillside-cottage.webp";
 import farmFields from "@/assets/blog/farm-rolling-fields.webp";
 import farmValley from "@/assets/blog/farm-valley-village.webp";
 
 
 const IoTConnectivityAgriculture = () => (
-  <BlogArticleLayout slug="iot-connectivity-agriculture-uk">
+  <BlogArticleLayout slug="iot-connectivity-agriculture-uk" seoTitle="IoT Connectivity for Agriculture UK | Integra">
     <p>Modern farming runs on data. Soil sensors, water monitors, livestock trackers, weather stations, and automated gates all send information back to a central system.</p>
 
     <p>But these IoT devices need reliable connectivity. One dropped connection means 6 hours of missing data. One missed alert means a gate stays open.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Connecting sensors, CCTV or trackers across your farm? Check coverage across your land.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-iot-connectivity-agriculture-uk" hideChatAlternative />
+    </div>
+
 
     <p>Here's how to set up IoT connectivity on your farm.</p>
 
@@ -255,6 +265,10 @@ const IoTConnectivityAgriculture = () => (
     </ul>
 
     <p>We'll design a connectivity plan with costs.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/business-wifi" className="text-primary font-medium hover:underline">see our business Wi-Fi service</Link> · <Link to="/wireless-distribution" className="text-primary font-medium hover:underline">and wireless distribution for multi-building farms</Link> · <Link to="/blog/multi-building-wifi-rural-properties" className="text-primary font-medium hover:underline">plus how to deliver one Wi-Fi network across every building</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

@@ -1,7 +1,8 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
 
 const DIYInternetSpeedTests = () => (
-  <BlogArticleLayout slug="diy-guide-internet-speed-tests">
+  <BlogArticleLayout slug="diy-guide-internet-speed-tests" seoTitle="How to Run an Internet Speed Test | Integra">
     <p>
       Understanding your internet speed is the first step toward fixing connectivity problems. Rather than relying on vague claims from your provider or guesses about performance, running speed tests at your property gives you concrete, measurable data. This guide walks through everything you need to know to perform accurate speed tests and interpret the results.
     </p>
@@ -44,6 +45,10 @@ const DIYInternetSpeedTests = () => (
     <p>
       Start with these DIY speed tests to understand your baseline. Armed with concrete data, you can then decide whether your current service is adequate or if exploring alternatives makes sense.
     </p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — bonded 4G/5G that beats copper</Link> · <Link to="/blog/why-is-my-bt-internet-so-slow" className="text-primary font-medium hover:underline">read why BT internet is so slow (and the fix)</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check what speeds we can deliver at your address</Link>.
+    </p>
+  
   </BlogArticleLayout>
 );
 

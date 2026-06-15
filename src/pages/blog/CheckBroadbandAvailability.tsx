@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const CheckBroadbandAvailability = () => (
-  <BlogArticleLayout slug="how-to-check-broadband-availability-rural-areas">
+  <BlogArticleLayout slug="how-to-check-broadband-availability-rural-areas" seoTitle="Check Broadband Availability in Rural Areas | Integra">
     <p>You've got a postcode and a property, but you don't know what broadband options are actually available. BT's checker says "no fibre." Openreach says "4-6 years away." Starlink might work, but you're not sure.</p>
 
     <p>How do you actually find out what's possible?</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Skip the misleading ISP checkers — get the real answer for your exact location.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-how-to-check-broadband-availability-rural-areas" hideChatAlternative />
+    </div>
+
 
     <h2>Why Standard Checkers Fail in Rural Areas</h2>
 
@@ -142,6 +152,10 @@ const CheckBroadbandAvailability = () => (
       <li>We'll send back a detailed desktop survey in 24 hours</li>
       <li>You'll finally have the truth about what's actually available</li>
     </ol>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-bridge" className="text-primary font-medium hover:underline">get online in 10 working days while you wait for fibre with Integra Bridge</Link> · <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">or, if fibre's never coming, see Integra SD-WAN</Link> · <Link to="/blog/bt-openreach-fibre-checker" className="text-primary font-medium hover:underline">plus our guide to using the BT Openreach fibre checker</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const StarlinkVsFourGBonding = () => (
-  <BlogArticleLayout slug="starlink-vs-4g-bonding-honest-comparison">
+  <BlogArticleLayout slug="starlink-vs-4g-bonding-honest-comparison" seoTitle="Starlink vs 4G Bonding: Honest Comparison | Integra">
     <p>Starlink vs 4G bonding (SD-WAN) is the biggest rural broadband decision right now. Both can work. Both have real trade-offs.</p>
 
     <p>We're going to be completely honest about which is better for different situations.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Not sure which suits your site? Get a free availability + signal check and we'll tell you straight.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-starlink-vs-4g-bonding-honest-comparison" hideChatAlternative />
+    </div>
+
 
     <h2>Starlink: The Strengths</h2>
 
@@ -136,6 +146,10 @@ const StarlinkVsFourGBonding = () => (
     <p>But for businesses, we lean toward Integra Pro because upload speed and latency provide significant operational benefits and justify the investment.</p>
 
     <p>For consumers? Starlink is fine, cheaper, and simpler.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/starlink-installation" className="text-primary font-medium hover:underline">see our Starlink installation service</Link> · <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">or our 4G/5G SD-WAN bonded option</Link> · <Link to="/blog/starlink-upload-speed-why-it-matters-for-business" className="text-primary font-medium hover:underline">plus the uploads problem most businesses underestimate</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

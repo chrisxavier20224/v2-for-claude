@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const FourGVsFiveG = () => (
-  <BlogArticleLayout slug="4g-vs-5g-broadband-which-is-better-for-business">
+  <BlogArticleLayout slug="4g-vs-5g-broadband-which-is-better-for-business" seoTitle="4G vs 5G Broadband for Business | Integra">
     <p>The race between 4G and 5G broadband is heating up. If you're a rural business waiting for fibre that BT promised you years ago, you might be looking at 4G or 5G as a bridge solution — or even a permanent replacement.</p>
 
     <p>But here's the question: which one should you choose? The answer depends on what your business actually needs.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Wondering which network works at your site? Run a free availability + coverage check.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-4g-vs-5g-broadband-which-is-better-for-business" hideChatAlternative />
+    </div>
+
 
     <h2>The Basics: What's the Difference?</h2>
 
@@ -90,6 +100,10 @@ const FourGVsFiveG = () => (
     <p>4G is mature and reliable. 5G is faster but less consistent in rural areas. The smart move is to use whichever works best at your specific location — or combine both.</p>
 
     <p>Before you decide, get a proper desktop survey. Send us your coordinates from Google Maps, and we'll map your property to nearby towers and tell you exactly what's possible.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — bonded 4G/5G for business</Link> · <Link to="/blog/satellite-internet-vs-fixed-wireless-pros-and-cons" className="text-primary font-medium hover:underline">compare satellite vs fixed-wireless options</Link> · <Link to="/check" className="text-primary font-medium hover:underline">run a free availability + coverage check</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const PortableWifiConstruction = () => (
-  <BlogArticleLayout slug="portable-wifi-solutions-construction-sites">
+  <BlogArticleLayout slug="portable-wifi-solutions-construction-sites" seoTitle="Portable Wi-Fi for Construction Sites | Integra">
     <p>Construction sites need internet: site managers checking CAD files, crew communicating via phones and radios, automated systems monitoring equipment, safety cameras logging incidents.</p>
 
     <p>But construction sites move. You can't wait for a fixed broadband installation. You need portable Wi-Fi that works today, moves tomorrow.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Connectivity that deploys today and moves with you — check coverage for your site.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-portable-wifi-solutions-construction-sites" hideChatAlternative />
+    </div>
+
 
     <h2>Why Standard Broadband Doesn't Work on Sites</h2>
 
@@ -213,6 +223,10 @@ const PortableWifiConstruction = () => (
     </ul>
 
     <p>We'll survey the site and send you a custom quote.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — portable bonded 4G/5G for construction</Link> · <Link to="/blog/temporary-broadband-for-events-uk" className="text-primary font-medium hover:underline">read our temporary broadband for UK events guide</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check coverage at your site</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

@@ -1,11 +1,21 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 
 const StarlinkUploadSpeed = () => (
-  <BlogArticleLayout slug="starlink-upload-speed-why-it-matters-for-business">
+  <BlogArticleLayout slug="starlink-upload-speed-why-it-matters-for-business" seoTitle="Starlink Upload Speed: The Business Problem | Integra">
     <p>Starlink is famous for download speeds — up to 250Mbps in rural areas. That sounds amazing.</p>
 
     <p>But Starlink's upload speed is the elephant in the room: typically just 10-15Mbps.</p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        Need faster uploads than Starlink gives you? Check the bonded options at your site.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-starlink-upload-speed-why-it-matters-for-business" hideChatAlternative />
+    </div>
+
 
     <p>For a business, that's a problem.</p>
 
@@ -155,6 +165,10 @@ const StarlinkUploadSpeed = () => (
     </ol>
 
     <p>We'd recommend a desktop survey before deciding. We'll test actual upload speeds at your location and recommend the product that matches your real needs.</p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/starlink-installation" className="text-primary font-medium hover:underline">see how we engineer Starlink for business</Link> · <Link to="/blog/starlink-vs-4g-bonding-honest-comparison" className="text-primary font-medium hover:underline">compare Starlink vs 4G bonding (uploads side-by-side)</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check the bonded upload speeds we can deliver at your site</Link>.
+    </p>
+  
     </BlogArticleLayout>
 );
 

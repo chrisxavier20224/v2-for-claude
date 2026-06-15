@@ -1,7 +1,9 @@
 import BlogArticleLayout from "@/components/blog/BlogArticleLayout";
+import { Link } from "react-router-dom";
+import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 
 const UnlockHighSpeedRural = () => (
-  <BlogArticleLayout slug="unlock-high-speed-internet-rural-areas">
+  <BlogArticleLayout slug="unlock-high-speed-internet-rural-areas" seoTitle="High-Speed Rural Internet, No Fibre Needed | Integra">
     <p>
       Rural living has its advantages, but one persistent challenge affects quality of life and property value: unreliable, slow internet. Many rural properties struggle with speeds under 10Mbps, making video calls choppy and downloads painfully slow. The promised fibre infrastructure seems perpetually out of reach, with no clear timeline for installation.
     </p>
@@ -10,6 +12,14 @@ const UnlockHighSpeedRural = () => (
     <p>
       If you live in a rural area, you've likely experienced the frustration firsthand. Standard broadband services depend on proximity to telephone exchanges and fibre infrastructure that simply doesn't exist in many countryside locations. Even properties just a few miles from towns can face years-long waits for fibre rollout. In the meantime, residents and businesses are stuck with inadequate connectivity that impacts productivity, entertainment, and overall living standards.
     </p>
+
+    <div className="not-prose my-10">
+      <p className="text-foreground font-semibold mb-4">
+        No fibre at your property? We bond 4G/5G to deliver up to 350Mbps — check your site.
+      </p>
+      <AvailabilityCheckerInline compact sourceTag="blog-unlock-high-speed-internet-rural-areas" hideChatAlternative />
+    </div>
+
 
     <h2>Why fibre Isn't Coming Soon</h2>
     <p>
@@ -39,6 +49,10 @@ const UnlockHighSpeedRural = () => (
     <p>
       Don't let poor rural connectivity hold you back. Check your property's availability for Integra's high-speed internet solution today and experience the difference reliable connectivity makes.
     </p>
+    <p data-seo-rollout="next-steps">
+      <strong>Where to next:</strong> <Link to="/integra-sd-wan" className="text-primary font-medium hover:underline">see Integra SD-WAN — up to 350Mbps via bonded 4G/5G</Link> · <Link to="/blog/4g-vs-5g-broadband-which-is-better-for-business" className="text-primary font-medium hover:underline">compare 4G vs 5G broadband for business</Link> · <Link to="/check" className="text-primary font-medium hover:underline">check availability at your property</Link>.
+    </p>
+  
   </BlogArticleLayout>
 );
 
