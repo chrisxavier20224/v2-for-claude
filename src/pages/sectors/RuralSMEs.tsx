@@ -16,6 +16,7 @@ import copperImg from "@/assets/sectors/rural-sme-copper.jpg";
 import installImg from "@/assets/sectors/rural-sme-install.jpg";
 import paymentsImg from "@/assets/sectors/rural-sme-payments.jpg";
 import carbeeHero from "@/assets/case-studies/carbee-hero.webp";
+import FurtherReading from "@/components/blog/FurtherReading";
 
 const painPoints = [
   {
@@ -299,6 +300,13 @@ const RuralSMEs = () => {
         sourceTag="rural-business-broadband"
         heading="Stop losing money to bad internet."
         subheading="Up to 500Mbps. 99.5% uptime SLA. Installed in 10 working days. No fibre required."
+      />
+      <FurtherReading
+        links={[
+          { slug: "extending-wi-fi-and-internet-to-outbuildings", label: "Extending Wi-Fi and internet to outbuildings" },
+          { slug: "internet-and-wi-fi-solutions-for-churches-and-listed-buildings", label: "Internet and Wi-Fi for churches and listed buildings" },
+          { slug: "beyond-the-broadband-bottleneck", label: "Beyond the broadband bottleneck — alternatives for rural SMEs" },
+        ]}
       />
     </PageLayout>
   );

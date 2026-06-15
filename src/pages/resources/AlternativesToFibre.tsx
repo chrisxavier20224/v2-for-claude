@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
+import FurtherReading from "@/components/blog/FurtherReading";
 import ISPFounderNote from "@/components/insights/ISPFounderNote";
 import { PullQuote } from "@/pages/insights/InsightArticle";
 import { insightArticles } from "@/pages/insights/insightsData";
@@ -744,6 +745,13 @@ const AlternativesToFibre = () => {
           </div>
         </AnimatedSection>
       </Section>
+      <FurtherReading
+        links={[
+          { slug: "extending-wi-fi-and-internet-to-outbuildings", label: "Extending Wi-Fi and internet to outbuildings" },
+          { slug: "internet-and-wi-fi-solutions-for-churches-and-listed-buildings", label: "Internet and Wi-Fi for churches and listed buildings" },
+          { slug: "satellite-internet-vs-integra-4g-5g-sdwan", label: "Satellite internet vs Integra 4G/5G SD-WAN" },
+        ]}
+      />
     </PageLayout>
   );
 };

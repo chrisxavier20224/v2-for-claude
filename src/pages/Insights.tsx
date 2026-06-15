@@ -5,6 +5,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SEO from "@/components/shared/SEO";
 import { insightArticles } from "./insights/insightsData";
+import { blogPosts } from "@/data/blogPosts";
 
 const Insights = () => {
   const featured = insightArticles.find((a) => a.featured) ?? insightArticles[0];
@@ -300,6 +301,35 @@ const Insights = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Guides — full list of blog posts to remove orphan status */}
+      <section className="relative z-10 pb-16 md:pb-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">
+              Guides
+            </p>
+            <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-8 max-w-2xl leading-tight">
+              Practical guides on connectivity, Starlink, SD-WAN and rural broadband.
+            </h2>
+          </AnimatedSection>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 border-t border-border/60 pt-6">
+            {blogPosts.map((post) => (
+              <li key={post.slug} className="border-b border-border/40 py-2">
+                <Link
+                  to={`/blog/${post.slug}`}
+                  className="group flex items-start justify-between gap-4 text-foreground hover:text-primary transition-colors"
+                >
+                  <span className="text-[0.95rem] leading-snug font-medium">
+                    {post.title}
+                  </span>
+                  <ArrowRight className="h-4 w-4 mt-1 shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

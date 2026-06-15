@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
+import FurtherReading from "@/components/blog/FurtherReading";
 import RelatedServices from "@/components/shared/RelatedServices";
 import RelatedContent from "@/components/shared/RelatedContent";
 
@@ -253,6 +254,15 @@ const StarlinkInstallation = () => {
       <RelatedContent
         sectors={["rural-smes", "construction-sites", "business-parks"]}
         dark
+      />
+
+      <FurtherReading
+        dark
+        links={[
+          { slug: "starlink-vs-4g-bonding-honest-comparison", label: "Starlink vs 4G bonding — an honest comparison" },
+          { slug: "satellite-internet-vs-integra-4g-5g-sdwan", label: "Satellite internet vs Integra 4G/5G SD-WAN" },
+          { slug: "starlink-sd-wan-a-reliable-solution-for-business-connectivity", label: "Starlink SD-WAN — a reliable solution for business connectivity" },
+        ]}
       />
 
       {/* CTA */}
