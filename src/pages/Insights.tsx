@@ -5,6 +5,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SEO from "@/components/shared/SEO";
 import { insightArticles } from "./insights/insightsData";
+import { blogPosts } from "@/data/blogPosts";
 
 const Insights = () => {
   const featured = insightArticles.find((a) => a.featured) ?? insightArticles[0];
