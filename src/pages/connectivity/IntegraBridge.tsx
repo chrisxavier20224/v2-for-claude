@@ -8,6 +8,7 @@ import RelatedServices from "@/components/shared/RelatedServices";
 import SEO from "@/components/shared/SEO";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
 import RelatedContent from "@/components/shared/RelatedContent";
+import FurtherReading from "@/components/blog/FurtherReading";
 
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
 
@@ -318,6 +319,12 @@ const IntegraBridge = () => {
       />
 
       <AvailabilityCheckerInline compact sourceTag="integra-bridge" />
+      <FurtherReading
+        links={[
+          { slug: "bt-openreach-fibre-checker", label: "BT Openreach fibre checker — and other handy online tools" },
+          { slug: "beyond-the-broadband-bottleneck", label: "Beyond the broadband bottleneck — a practical alternative for rural SMEs" },
+        ]}
+      />
       {/* CTA — DARK */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
