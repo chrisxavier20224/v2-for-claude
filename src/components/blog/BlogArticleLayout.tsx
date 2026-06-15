@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
