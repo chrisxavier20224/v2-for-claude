@@ -256,6 +256,15 @@ const StarlinkInstallation = () => {
         dark
       />
 
+      <FurtherReading
+        dark
+        links={[
+          { slug: "starlink-vs-4g-bonding-honest-comparison", label: "Starlink vs 4G bonding — an honest comparison" },
+          { slug: "satellite-internet-vs-integra-4g-5g-sdwan", label: "Satellite internet vs Integra 4G/5G SD-WAN" },
+          { slug: "starlink-sd-wan-a-reliable-solution-for-business-connectivity", label: "Starlink SD-WAN — a reliable solution for business connectivity" },
+        ]}
+      />
+
       {/* CTA */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
