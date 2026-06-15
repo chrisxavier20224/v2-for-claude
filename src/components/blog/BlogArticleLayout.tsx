@@ -16,11 +16,12 @@ interface BlogArticleLayoutProps {
 
 const BlogArticleLayout = ({ slug, children, seoTitle }: BlogArticleLayoutProps) => {
   const post = blogPosts.find((p) => p.slug === slug);
-  const otherPosts = blogPosts
-    .filter((p) => p.slug !== slug && !p.archived)
-    .slice(0, 3);
-
   if (!post) return null;
+
+  const candidates = blogPosts.filter((p) => p.slug !== slug);
+  const sameCategory = candidates.filter((p) => p.category === post.category);
+  const others = candidates.filter((p) => p.category !== post.category);
+  const relatedPosts = [...sameCategory, ...others].slice(0, 3);
 
   return (
     <PageLayout>
@@ -128,6 +129,8 @@ const BlogArticleLayout = ({ slug, children, seoTitle }: BlogArticleLayoutProps)
       </section>
 
       {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+      <>
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -140,7 +143,7 @@ const BlogArticleLayout = ({ slug, children, seoTitle }: BlogArticleLayoutProps)
             </h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {otherPosts.filter((p) => !p.archived).map((related) => (
+            {relatedPosts.map((related) => (
               <Link
                 key={related.slug}
                 to={`/blog/${related.slug}`}
@@ -172,29 +175,8 @@ const BlogArticleLayout = ({ slug, children, seoTitle }: BlogArticleLayoutProps)
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <AnimatedSection>
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Get Connected</p>
-            <h2 className="text-heading-1 md:text-display-sm text-white mb-6">
-              Ready to solve your connectivity?
-            </h2>
-            <p className="text-lg text-surface-dark-muted mb-10 leading-relaxed">
-              Check availability in 90 seconds or speak to our team about the right solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg shadow-primary/20">
-                <Link to="/check">Check Availability</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/20 text-surface-dark-foreground hover:bg-white/10">
-                <Link to="/contact">Talk to Us</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      </>
+      )}
     </PageLayout>
   );
 };
