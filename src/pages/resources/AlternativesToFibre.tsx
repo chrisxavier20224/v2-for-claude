@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import GradientBand from "@/components/shared/GradientBand";
 import SEO from "@/components/shared/SEO";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
+import FurtherReading from "@/components/blog/FurtherReading";
 import ISPFounderNote from "@/components/insights/ISPFounderNote";
 import { PullQuote } from "@/pages/insights/InsightArticle";
 import { insightArticles } from "@/pages/insights/insightsData";
