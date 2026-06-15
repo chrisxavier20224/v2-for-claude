@@ -413,9 +413,9 @@ const IntegraSDWAN = () => {
       <AvailabilityCheckerInline compact sourceTag="integra-sd-wan" />
       <FurtherReading
         links={[
-          { slug: "starlink-vs-4g-bonding-honest-comparison", label: "Starlink vs 4G bonding — an honest comparison" },
-          { slug: "satellite-internet-vs-integra-4g-5g-sdwan", label: "Satellite internet vs Integra 4G/5G SD-WAN" },
-          { slug: "starlink-sd-wan-a-reliable-solution-for-business-connectivity", label: "Starlink SD-WAN — a reliable solution for business connectivity" },
+          { slug: "beyond-the-broadband-bottleneck", label: "Rural business broadband without fibre" },
+          { slug: "unlock-high-speed-internet-rural-areas", label: "High-speed rural internet, no fibre needed" },
+          { slug: "4g-vs-5g-broadband-which-is-better-for-business", label: "4G vs 5G broadband for business" },
         ]}
       />
     </PageLayout>
