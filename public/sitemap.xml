@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://integra-networks.co.uk/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://integra-networks.co.uk/pricing</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://integra-networks.co.uk/contact</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://integra-networks.co.uk/check</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/insights</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/insights/cost-of-business-internet-downtime</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/insights/how-to-choose-business-broadband</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/insights/multi-site-business-connectivity</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/insights/multi-bearer-internet-failover</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/insights/wholesale-isp-partner-program</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/support</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/wholesale</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/pricing</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/contact</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/check</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/insights</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/insights/cost-of-business-internet-downtime</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/insights/how-to-choose-business-broadband</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/insights/multi-site-business-connectivity</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/insights/multi-bearer-internet-failover</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/insights/wholesale-isp-partner-program</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/support</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/wholesale</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Sectors (kept) -->
-  <url><loc>https://integra-networks.co.uk/construction-site-broadband</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/rural-business-broadband</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/sectors/business-parks</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/construction-site-broadband</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/rural-business-broadband</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/business-parks</loc><priority>0.8</priority></url>
 
   <!-- Connectivity (canonical short URLs) -->
-  <url><loc>https://integra-networks.co.uk/integra-sd-wan</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/integra-bridge</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/leased-lines</loc><priority>0.8</priority></url>
-  <url><loc>https://integra-networks.co.uk/managed-internet</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/managed-sim-services</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/sogea</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/business-wifi</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/cellular-backup</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/starlink-installation</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/cctv</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/wireless-distribution</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/network-infrastructure</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/managed-firewall</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/business-continuity</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/business-mobiles</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/unified-communications</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/integra-sd-wan</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/integra-bridge</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/leased-lines</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/managed-internet</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/managed-sim-services</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sogea</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/business-wifi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/cellular-backup</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/starlink-installation</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/cctv</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/wireless-distribution</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/network-infrastructure</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/managed-firewall</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/business-continuity</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/business-mobiles</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/unified-communications</loc><priority>0.6</priority></url>
 
   <!-- Resources (kept) -->
-  <url><loc>https://integra-networks.co.uk/alternatives-to-fibre-broadband</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/starlink-for-business</loc><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/access-broadband-cymru</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/pstn-switch-off</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/alternatives-to-fibre-broadband</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/starlink-for-business</loc><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/access-broadband-cymru</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/pstn-switch-off</loc><priority>0.6</priority></url>
 
   <!-- Locations -->
-  <url><loc>https://integra-networks.co.uk/locations/rural-broadband-north-west</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/locations/rural-broadband-essex-hertfordshire</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/locations/rural-broadband-sussex-surrey</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/locations/rural-broadband-kent</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/locations/rural-broadband-somerset-devon</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/locations/rural-broadband-yorkshire</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/locations/rural-broadband-cotswolds</loc><priority>0.6</priority></url>
-  <url><loc>https://integra-networks.co.uk/locations/construction-site-broadband-london</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/rural-broadband-north-west</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/rural-broadband-essex-hertfordshire</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/rural-broadband-sussex-surrey</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/rural-broadband-kent</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/rural-broadband-somerset-devon</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/rural-broadband-yorkshire</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/rural-broadband-cotswolds</loc><priority>0.6</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/locations/construction-site-broadband-london</loc><priority>0.6</priority></url>
 
   <!-- PPC landing -->
-  <url><loc>https://integra-networks.co.uk/lp/wireless-internet-providers-uk</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/lp/rural-business-broadband-uk</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/lp/business-satellite-internet</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://integra-networks.co.uk/lp/waiting-for-fibre</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/lp/wireless-internet-providers-uk</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/lp/rural-business-broadband-uk</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/lp/business-satellite-internet</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/lp/waiting-for-fibre</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
 
   <!-- Customers -->
-  <url><loc>https://integra-networks.co.uk/customers/wb-power-services</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/royle-farm</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/steaming-ahead-with-enhanced-festival-connectivity</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/little-quarry-glamping</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/fast-track-connectivity-ukharvests-digital-transformation</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/casting-the-net-wide-a-connectivity-transformation</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/revolutionising-connectivity-for-plant-protein-pioneers</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/revitalising-global-distribution-apj-europeans-digital-transformation</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/mcgee-construction</loc><priority>0.5</priority></url>
-  <url><loc>https://integra-networks.co.uk/customers/seacon-group</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/wb-power-services</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/royle-farm</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/steaming-ahead-with-enhanced-festival-connectivity</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/little-quarry-glamping</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/revving-up-connectivity-carbees-journey-to-high-speed-internet</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/sailing-through-connectivity-challenges-the-royal-harwich-yacht-clubs-journey</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/fast-track-connectivity-ukharvests-digital-transformation</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/casting-the-net-wide-a-connectivity-transformation</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/revolutionising-connectivity-for-plant-protein-pioneers</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/revitalising-global-distribution-apj-europeans-digital-transformation</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/mcgee-construction</loc><priority>0.5</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/customers/seacon-group</loc><priority>0.5</priority></url>
 
   <!-- Legal -->
-  <url><loc>https://integra-networks.co.uk/privacy-cookies</loc><priority>0.3</priority></url>
-  <url><loc>https://integra-networks.co.uk/terms</loc><priority>0.3</priority></url>
-  <url><loc>https://integra-networks.co.uk/sla</loc><priority>0.3</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/privacy-cookies</loc><priority>0.3</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sla</loc><priority>0.3</priority></url>
 </urlset>
