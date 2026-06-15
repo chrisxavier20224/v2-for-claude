@@ -11,9 +11,10 @@ import { blogPosts } from "@/data/blogPosts";
 interface BlogArticleLayoutProps {
   slug: string;
   children: React.ReactNode;
+  seoTitle?: string;
 }
 
-const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
+const BlogArticleLayout = ({ slug, children, seoTitle }: BlogArticleLayoutProps) => {
   const post = blogPosts.find((p) => p.slug === slug);
   const otherPosts = blogPosts
     .filter((p) => p.slug !== slug && !p.archived)
@@ -24,7 +25,7 @@ const BlogArticleLayout = ({ slug, children }: BlogArticleLayoutProps) => {
   return (
     <PageLayout>
       <SEO
-        title={`${post.title} — Integra Networks`}
+        title={seoTitle ?? `${post.title} — Integra Networks`}
         description={post.excerpt}
         keywords={`${post.category}, connectivity, Integra Networks, blog`}
         url={`/blog/${post.slug}`}
