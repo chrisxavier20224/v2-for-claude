@@ -1,6 +1,7 @@
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/shared/SEO";
 import AvailabilityCheckerInline from "@/components/availability-checker/AvailabilityCheckerInline";
+import FurtherReading from "@/components/blog/FurtherReading";
 
 const CheckAvailability = () => {
   return (
@@ -12,6 +13,12 @@ const CheckAvailability = () => {
         url="/check"
       />
       <AvailabilityCheckerInline sourceTag="check-page" />
+      <FurtherReading
+        links={[
+          { slug: "bt-openreach-fibre-checker", label: "BT Openreach fibre checker — and other handy online tools" },
+          { slug: "how-to-check-broadband-availability-rural-areas", label: "How to check broadband availability in rural areas" },
+        ]}
+      />
     </PageLayout>
   );
 };
