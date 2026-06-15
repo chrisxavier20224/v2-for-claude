@@ -321,8 +321,9 @@ const IntegraBridge = () => {
       <AvailabilityCheckerInline compact sourceTag="integra-bridge" />
       <FurtherReading
         links={[
-          { slug: "bt-openreach-fibre-checker", label: "BT Openreach fibre checker — and other handy online tools" },
-          { slug: "beyond-the-broadband-bottleneck", label: "Beyond the broadband bottleneck — a practical alternative for rural SMEs" },
+          { slug: "bt-openreach-fibre-checker", label: "How to use the BT Openreach fibre checker" },
+          { slug: "business-broadband-grants-uk-2026", label: "Business broadband grants UK 2026 — what's actually claimable" },
+          { slug: "how-to-check-broadband-availability-rural-areas", label: "How to check broadband availability in rural areas" },
         ]}
       />
       {/* CTA — DARK */}
