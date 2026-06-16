@@ -67,30 +67,27 @@ const initializeGA = () => {
 // Initialize HubSpot
 const initializeHubSpot = () => {
   if (!HUBSPOT_ID || typeof window === "undefined") return;
-
-  const script = document.createElement("script");
-  script.id = "hs-script-loader";
-  script.async = true;
-  script.defer = true;
-  script.src = `//js.hs-scripts.com/${HUBSPOT_ID}.js`;
-  document.head.appendChild(script);
-
+  // HubSpot loader script is included in index.html <head> so it's
+  // present on first paint. Here we just ensure the _hsq queue exists
+  // so SPA pageview pushes are buffered until the loader executes.
   window._hsq = window._hsq || [];
 };
 
 // Track page view for GA
 const trackPageView = (url: string) => {
-  if (!GA_MEASUREMENT_ID || typeof window === "undefined" || !window.gtag) return;
-  
-  window.gtag("config", GA_MEASUREMENT_ID, {
+  if (!GA_MEASUREMENT_ID || typeof window === "undefined" || typeof window.gtag !== "function") return;
+
+  window.gtag("event", "page_view", {
     page_path: url,
+    page_location: window.location.href,
+    page_title: document.title,
   });
 };
 
 // Track page view for HubSpot
 const trackHubSpotPageView = (url: string) => {
-  if (!HUBSPOT_ID || typeof window === "undefined" || !window._hsq) return;
-  
+  if (!HUBSPOT_ID || typeof window === "undefined") return;
+  window._hsq = window._hsq || [];
   window._hsq.push(["setPath", url]);
   window._hsq.push(["trackPageView"]);
 };
