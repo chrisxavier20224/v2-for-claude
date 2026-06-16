@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper, ArrowRight, Lightbulb, Anchor } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper, ArrowRight, Lightbulb, Anchor, Church, Tent, Tractor, Heart, Music, Trophy } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -42,6 +42,16 @@ const sectorLinks = [
   { label: "Rural SMEs", path: "/rural-business-broadband", icon: Store, tagline: "Reliable Internet for Rural Business" },
   { label: "Business Parks", path: "/sectors/business-parks", icon: Trees, tagline: "Connectivity for Business Parks" },
   { label: "Marinas & Yacht Clubs", path: "/sectors/marinas-yacht-clubs", icon: Anchor, tagline: "Internet at the water's edge" },
+  { label: "Churches & Places of Worship", path: "/sectors/churches-places-of-worship", icon: Church, tagline: "Conservation-friendly church connectivity" },
+  { label: "Village Halls & Community Centres", path: "/sectors/village-halls-community-centres", icon: Building2, tagline: "Wi-Fi for committee-run halls" },
+  { label: "Glamping Sites", path: "/sectors/glamping-sites", icon: Tent, tagline: "Real speeds without ruining the view" },
+  { label: "Holiday & Caravan Parks", path: "/sectors/holiday-caravan-parks", icon: Home, tagline: "Site-wide guest Wi-Fi" },
+  { label: "Farms & Agricultural Estates", path: "/sectors/farms-agricultural-estates", icon: Tractor, tagline: "Connect the whole estate" },
+  { label: "Listed & Heritage Buildings", path: "/sectors/listed-heritage-buildings", icon: Shield, tagline: "Without altering protected fabric" },
+  { label: "Equestrian Centres", path: "/sectors/equestrian-centres", icon: Trophy, tagline: "Cover the whole yard" },
+  { label: "Golf & Country Clubs", path: "/sectors/golf-country-clubs", icon: Trees, tagline: "150 acres on one network" },
+  { label: "Care Homes", path: "/sectors/care-homes", icon: Heart, tagline: "Clinical-grade reliability" },
+  { label: "Outdoor Events & Festivals", path: "/sectors/outdoor-events-festivals", icon: Music, tagline: "Fibre-grade in a field" },
 ];
 
 const locationLinks = [
