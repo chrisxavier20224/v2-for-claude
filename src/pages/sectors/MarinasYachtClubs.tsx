@@ -217,8 +217,8 @@ const MarinasYachtClubs = () => {
 
       {/* ALT SECTION 3 — Checklist */}
       <section
-        className="relative bg-cover bg-center py-24 md:py-36"
-        style={{ backgroundImage: `url(${marinaConnectivity.url})` }}
+        className="relative bg-cover py-24 md:py-36"
+        style={{ backgroundImage: `url(${marinaConnectivity.url})`, backgroundPosition: "right center" }}
         aria-label="Marina clubhouse with rooftop antenna delivering bonded connectivity"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20" aria-hidden="true" />
