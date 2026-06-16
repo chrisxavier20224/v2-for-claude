@@ -281,7 +281,6 @@ const MarinasYachtClubs = () => {
       </section>
 
       {/* CASE STUDY */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
@@ -311,7 +310,6 @@ const MarinasYachtClubs = () => {
       <CustomerLogoBar />
 
       {/* RELATED SERVICES */}
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
