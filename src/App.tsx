@@ -27,6 +27,16 @@ const ConstructionSites = lazy(() => import("./pages/sectors/ConstructionSites")
 const RuralSMEs = lazy(() => import("./pages/sectors/RuralSMEs"));
 const BusinessParks = lazy(() => import("./pages/sectors/BusinessParks"));
 const MarinasYachtClubs = lazy(() => import("./pages/sectors/MarinasYachtClubs"));
+const ChurchesPlacesOfWorship = lazy(() => import("./pages/sectors/ChurchesPlacesOfWorship"));
+const VillageHallsCommunityCentres = lazy(() => import("./pages/sectors/VillageHallsCommunityCentres"));
+const GlampingSites = lazy(() => import("./pages/sectors/GlampingSites"));
+const HolidayCaravanParks = lazy(() => import("./pages/sectors/HolidayCaravanParks"));
+const FarmsAgriculturalEstates = lazy(() => import("./pages/sectors/FarmsAgriculturalEstates"));
+const ListedHeritageBuildings = lazy(() => import("./pages/sectors/ListedHeritageBuildings"));
+const EquestrianCentres = lazy(() => import("./pages/sectors/EquestrianCentres"));
+const GolfCountryClubs = lazy(() => import("./pages/sectors/GolfCountryClubs"));
+const CareHomes = lazy(() => import("./pages/sectors/CareHomes"));
+const OutdoorEventsFestivals = lazy(() => import("./pages/sectors/OutdoorEventsFestivals"));
 const WBPowerServices = lazy(() => import("./pages/customers/WBPowerServices"));
 const RoyleFarm = lazy(() => import("./pages/customers/RoyleFarm"));
 const SteamRally = lazy(() => import("./pages/customers/SteamRally"));
@@ -163,6 +173,16 @@ const App = () => (
               <Route path="/sectors/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
               <Route path="/sectors/business-parks" element={<BusinessParks />} />
               <Route path="/sectors/marinas-yacht-clubs" element={<MarinasYachtClubs />} />
+              <Route path="/sectors/churches-places-of-worship" element={<ChurchesPlacesOfWorship />} />
+              <Route path="/sectors/village-halls-community-centres" element={<VillageHallsCommunityCentres />} />
+              <Route path="/sectors/glamping-sites" element={<GlampingSites />} />
+              <Route path="/sectors/holiday-caravan-parks" element={<HolidayCaravanParks />} />
+              <Route path="/sectors/farms-agricultural-estates" element={<FarmsAgriculturalEstates />} />
+              <Route path="/sectors/listed-heritage-buildings" element={<ListedHeritageBuildings />} />
+              <Route path="/sectors/equestrian-centres" element={<EquestrianCentres />} />
+              <Route path="/sectors/golf-country-clubs" element={<GolfCountryClubs />} />
+              <Route path="/sectors/care-homes" element={<CareHomes />} />
+              <Route path="/sectors/outdoor-events-festivals" element={<OutdoorEventsFestivals />} />
               <Route path="/sectors/airbnbs" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/customers/wb-power-services" element={<WBPowerServices />} />
