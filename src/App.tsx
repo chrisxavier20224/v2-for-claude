@@ -26,6 +26,7 @@ const SustainabilityEfficiencyArticle = lazy(() => import("./pages/insights/Sust
 const ConstructionSites = lazy(() => import("./pages/sectors/ConstructionSites"));
 const RuralSMEs = lazy(() => import("./pages/sectors/RuralSMEs"));
 const BusinessParks = lazy(() => import("./pages/sectors/BusinessParks"));
+const MarinasYachtClubs = lazy(() => import("./pages/sectors/MarinasYachtClubs"));
 const WBPowerServices = lazy(() => import("./pages/customers/WBPowerServices"));
 const RoyleFarm = lazy(() => import("./pages/customers/RoyleFarm"));
 const SteamRally = lazy(() => import("./pages/customers/SteamRally"));
@@ -161,6 +162,7 @@ const App = () => (
               <Route path="/sectors/construction-sites" element={<Navigate to="/construction-site-broadband" replace />} />
               <Route path="/sectors/rural-smes" element={<Navigate to="/rural-business-broadband" replace />} />
               <Route path="/sectors/business-parks" element={<BusinessParks />} />
+              <Route path="/sectors/marinas-yacht-clubs" element={<MarinasYachtClubs />} />
               <Route path="/sectors/airbnbs" element={<Navigate to="/sectors/rural-smes" replace />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/customers/wb-power-services" element={<WBPowerServices />} />
