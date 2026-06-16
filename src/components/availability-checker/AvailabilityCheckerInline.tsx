@@ -367,7 +367,7 @@ const AvailabilityCheckerInline = ({
   const mapRef = useRef<any>(null);
   const tileLayerRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
-  const formSectionRef = useRef<HTMLDivElement>(null);
+  const formSectionRef = useRef<HTMLElement>(null);
 
   const [step1Touched, setStep1Touched] = useState(false);
   const formStartedRef = useRef(false);
