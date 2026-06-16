@@ -924,7 +924,7 @@ const AvailabilityCheckerInline = ({
                 </div>
 
                 <div className="flex justify-center">
-                  <Button onClick={() => { setStep1Touched(true); if (step1Valid) goTo(2); }} size="lg" className="h-12 px-8 text-base font-medium shadow-lg">
+                  <Button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setStep1Touched(true); if (step1Valid) goTo(2); }} size="lg" className="h-12 px-8 text-base font-medium shadow-lg">
                     Check My Availability <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -966,7 +966,8 @@ const AvailabilityCheckerInline = ({
                           {SERVICE_OPTIONS.map((opt) => (
                             <button
                               key={opt.value}
-                              onClick={() => { setService(opt.value); setSubStep(2); }}
+                              type="button"
+                              onClick={(e) => { e.preventDefault(); e.stopPropagation(); setService(opt.value); setSubStep(2); }}
                               className={`w-full flex items-center gap-4 rounded-xl border-2 p-4 text-left transition-all ${
                                 service === opt.value
                                   ? "border-primary bg-primary/5 shadow-sm"
@@ -991,7 +992,7 @@ const AvailabilityCheckerInline = ({
                         </div>
                       </div>
 
-                      <Button variant="outline" onClick={() => goTo(1)} className="w-full mt-2 h-11">
+                      <Button type="button" variant="outline" onClick={(e) => { e.preventDefault(); e.stopPropagation(); goTo(1); }} className="w-full mt-2 h-11">
                         <ArrowLeft className="mr-2 h-4 w-4" /> Back
                       </Button>
                     </div>
@@ -1019,7 +1020,8 @@ const AvailabilityCheckerInline = ({
                           ].map((option) => (
                             <button
                               key={option}
-                              onClick={() => setUrgency(option)}
+                              type="button"
+                              onClick={(e) => { e.preventDefault(); e.stopPropagation(); setUrgency(option); }}
                               className={`w-full flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-left transition-all ${
                                 urgency === option
                                   ? "border-primary bg-primary/5"
@@ -1037,10 +1039,10 @@ const AvailabilityCheckerInline = ({
                         </div>
                       </div>
 
-                      <Button onClick={() => goTo(3)} disabled={!urgency} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
+                      <Button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); goTo(3); }} disabled={!urgency} size="lg" className="w-full h-14 text-lg font-semibold shadow-xl shadow-primary/30 rounded-xl">
                         Continue to Pin Drop <MapPin className="ml-2 h-5 w-5" />
                       </Button>
-                      <Button variant="outline" onClick={() => setSubStep(2)} className="w-full mt-2 h-11">
+                      <Button type="button" variant="outline" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSubStep(1); }} className="w-full mt-2 h-11">
                         <ArrowLeft className="mr-2 h-4 w-4" /> Back
                       </Button>
                     </div>
@@ -1089,7 +1091,8 @@ const AvailabilityCheckerInline = ({
                           {autocompleteResults.map((result, idx) => (
                             <button
                               key={idx}
-                              onClick={() => selectAutocompleteResult(result)}
+                              type="button"
+                              onClick={(e) => { e.preventDefault(); e.stopPropagation(); selectAutocompleteResult(result); }}
                               className="w-full text-left px-4 py-3 text-sm text-foreground transition-colors border-b border-border last:border-b-0 hover:bg-muted/50"
                             >
                               {result.suggestion}
@@ -1125,7 +1128,8 @@ const AvailabilityCheckerInline = ({
                       <label className="block text-sm font-medium text-foreground mb-2">Select your address</label>
                       <div className="relative" ref={addressDropdownRef}>
                         <button
-                          onClick={() => setAddressDropdownOpen(!addressDropdownOpen)}
+                          type="button"
+                          onClick={(e) => { e.preventDefault(); e.stopPropagation(); setAddressDropdownOpen(!addressDropdownOpen); }}
                           className="w-full flex items-center justify-between rounded-lg border border-border bg-muted/30 px-4 py-3 text-left transition-all hover:border-primary/50"
                         >
                           <span className={`text-sm ${selectedAddress ? "text-foreground font-medium" : "text-muted-foreground"}`}>
@@ -1149,7 +1153,10 @@ const AvailabilityCheckerInline = ({
                                 return (
                                 <button
                                   key={idx}
-                  onClick={() => {
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     const buildNum = addr.building_number || addr.sub_building_name || "";
                     let cleanL1 = addr.line_1 || "";
                     if (buildNum && cleanL1.toLowerCase().startsWith(buildNum.toLowerCase())) {
@@ -1199,7 +1206,10 @@ const AvailabilityCheckerInline = ({
                     </div>
 
                     <Button
-                      onClick={() => {
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
                         if (!step3HasLocation) {
                           setSubmitError("Please enter your postcode or choose an address before checking coverage.");
                           return;
