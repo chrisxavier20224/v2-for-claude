@@ -15,6 +15,9 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImg from "@/assets/sectors/marina-hero.jpg";
 import pontoonsImg from "@/assets/sectors/marina-pontoons.jpg";
 import marinaConnectivity from "@/assets/sectors/marina-connectivity.jpg.asset.json";
+import marinaSdwanCard from "@/assets/sectors/marina-sdwan.jpg.asset.json";
+import marinaWirelessCard from "@/assets/sectors/marina-wireless.jpg.asset.json";
+import marinaCctvCard from "@/assets/sectors/marina-cctv.jpg.asset.json";
 import rhycHero from "@/assets/case-studies/rhyc-hero.webp";
 import rhycMarina from "@/assets/case-studies/rhyc-marina.jpg";
 
@@ -103,6 +106,45 @@ const relatedServices = [
     description: "Reliable monitoring across pontoons, fuel store and boat storage.",
     href: "/cctv",
     icon: Camera,
+  },
+];
+
+const serviceCards = [
+  {
+    eyebrow: "Integra",
+    title: "SD-WAN",
+    headline: "Bonded, fibre-class connectivity.",
+    description:
+      "Multiple 4G/5G networks bonded into a single permanent business connection — up to 500Mbps with static IPs and a business SLA, no fibre required.",
+    footEyebrow: "Permanent · Bonded 4G/5G",
+    cta: "Explore Integra SD-WAN",
+    href: "/integra-sd-wan",
+    image: marinaSdwanCard.url,
+    alt: "Cellular mast above a coastline — bonded 4G/5G for waterside sites",
+  },
+  {
+    eyebrow: "Coverage",
+    title: "Wireless Distribution",
+    headline: "Reach every pontoon and boatyard.",
+    description:
+      "Point-to-point links and marine-grade outdoor access points carry coverage from the clubhouse down the pontoons, so Wi-Fi and payments work everywhere, not only at reception.",
+    footEyebrow: "Point-to-point · Outdoor Wi-Fi",
+    cta: "Explore Wireless Distribution",
+    href: "/wireless-distribution",
+    image: marinaWirelessCard.url,
+    alt: "Point-to-point wireless dish on a marina pontoon",
+  },
+  {
+    eyebrow: "Security",
+    title: "CCTV",
+    headline: "Eyes on pontoons, fuel and storage.",
+    description:
+      "Reliable monitoring across pontoons, the fuel store and boat storage — backed by the same bonded connection, with remote access for managers and out-of-hours visibility.",
+    footEyebrow: "On-site monitoring · Remote access",
+    cta: "Explore CCTV",
+    href: "/cctv",
+    image: marinaCctvCard.url,
+    alt: "Outdoor CCTV camera on a marina pontoon post at dusk",
   },
 ];
 
@@ -276,11 +318,63 @@ const MarinasYachtClubs = () => {
 
       {/* RELATED SERVICES */}
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
-      <RelatedServices
-        services={relatedServices}
-        heading="Complementary Services"
-        subheading="Built for waterside sites: bonded connectivity, distributed Wi-Fi and reliable monitoring."
-      />
+      <section className="bg-surface-dark py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Complementary services</p>
+              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">
+                Built for waterside sites.
+              </h2>
+              <p className="text-muted-foreground">
+                Bonded connectivity, distributed Wi-Fi and reliable monitoring — engineered to work across pontoons, fuel docks and clubhouses.
+              </p>
+            </div>
+          </AnimatedSection>
+          <motion.div
+            className="grid gap-6 md:grid-cols-3"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            {serviceCards.map((card) => (
+              <motion.div key={card.title} variants={fadeUp}>
+                <Link
+                  to={card.href}
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.alt}
+                      width={1280}
+                      height={800}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/60 to-surface-dark/10" />
+                    <div className="absolute inset-x-0 bottom-0 p-6">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary mb-1">{card.eyebrow}</p>
+                      <p className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight">{card.title}</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-7">
+                    <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3">{card.headline}</h3>
+                    <p className="text-muted-foreground mb-6">{card.description}</p>
+                    <div className="mt-auto pt-4 border-t border-border">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">{card.footEyebrow}</p>
+                      <span className="inline-flex items-center text-primary group-hover:text-primary/80 font-medium">
+                        {card.cta} <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <Section size="large">
