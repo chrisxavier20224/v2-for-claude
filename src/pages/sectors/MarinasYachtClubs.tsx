@@ -208,8 +208,6 @@ const MarinasYachtClubs = () => {
         </div>
       </section>
 
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-
       {/* ALT SECTION 1 — Royal Harwich */}
       <Section size="large">
         <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
@@ -229,8 +227,6 @@ const MarinasYachtClubs = () => {
           </AnimatedSection>
         </div>
       </Section>
-
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
 
       {/* ALT SECTION 2 — Far pontoons */}
       <section className="bg-surface-dark py-16 md:py-24">
@@ -253,8 +249,6 @@ const MarinasYachtClubs = () => {
           </div>
         </div>
       </section>
-
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
       {/* ALT SECTION 3 — Checklist */}
       <section
@@ -287,7 +281,6 @@ const MarinasYachtClubs = () => {
       </section>
 
       {/* CASE STUDY */}
-      <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
@@ -317,7 +310,6 @@ const MarinasYachtClubs = () => {
       <CustomerLogoBar />
 
       {/* RELATED SERVICES */}
-      <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(222 47% 11%)" />
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
