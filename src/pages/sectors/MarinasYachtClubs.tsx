@@ -323,10 +323,10 @@ const MarinasYachtClubs = () => {
           <AnimatedSection>
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Complementary services</p>
-              <h2 className="text-heading-1 md:text-display-sm text-foreground mb-4">
+              <h2 className="text-heading-1 md:text-display-sm text-white mb-4">
                 Built for waterside sites.
               </h2>
-              <p className="text-muted-foreground">
+              <p className="text-white/70">
                 Bonded connectivity, distributed Wi-Fi and reliable monitoring — engineered to work across pontoons, fuel docks and clubhouses.
               </p>
             </div>
@@ -356,7 +356,7 @@ const MarinasYachtClubs = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/60 to-surface-dark/10" />
                     <div className="absolute inset-x-0 bottom-0 p-6">
                       <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary mb-1">{card.eyebrow}</p>
-                      <p className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight">{card.title}</p>
+                      <p className="text-2xl md:text-3xl font-semibold text-white tracking-tight">{card.title}</p>
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col p-7">
