@@ -339,7 +339,7 @@ const MarinasYachtClubs = () => {
             viewport={{ once: true, margin: "-80px" }}
           >
             {serviceCards.map((card) => (
-              <motion.div key={card.title} variants={staggerItem}>
+              <motion.div key={card.title} variants={fadeUp}>
                 <Link
                   to={card.href}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10"
