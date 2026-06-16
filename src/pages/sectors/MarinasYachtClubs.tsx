@@ -150,7 +150,7 @@ const serviceCards = [
 
 const MarinasYachtClubs = () => {
   return (
-    <PageLayout hideCTA>
+    <PageLayout hideCTA mainClassName="bg-surface-dark">
       <SEO
         title="Internet for Marinas & Yacht Clubs"
         description="Fibre-class internet for marinas and yacht clubs where fibre never reached — berth Wi-Fi, fuel-dock payments and CCTV in around 10 working days."
