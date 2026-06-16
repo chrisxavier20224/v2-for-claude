@@ -14,6 +14,7 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroImg from "@/assets/sectors/marina-hero.jpg";
 import pontoonsImg from "@/assets/sectors/marina-pontoons.jpg";
+import marinaConnectivity from "@/assets/sectors/marina-connectivity.jpg.asset.json";
 import rhycHero from "@/assets/case-studies/rhyc-hero.webp";
 import rhycMarina from "@/assets/case-studies/rhyc-marina.jpg";
 
@@ -215,32 +216,34 @@ const MarinasYachtClubs = () => {
       <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
       {/* ALT SECTION 3 — Checklist */}
-      <Section size="large">
-        <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
+      <section
+        className="relative bg-cover bg-center py-24 md:py-36"
+        style={{ backgroundImage: `url(${marinaConnectivity.url})` }}
+        aria-label="Marina clubhouse with rooftop antenna delivering bonded connectivity"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <AnimatedSection>
-            <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
-              <CircleCheckBig className="h-9 w-9" strokeWidth={1.5} />
-            </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Payments and calls that don't drop.</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Bonding multiple connections is what makes them reliable: if one bearer dips, the others carry the load. With a business SLA and static IPs, the systems your revenue depends on stay online.
-            </p>
-            <motion.ul className="space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
-              {benefitItems.map((item) => (
-                <motion.li key={item} variants={checklistItem} className="flex items-center gap-3">
-                  <CircleCheckBig className="h-6 w-6 text-primary flex-shrink-0" />
-                  <span className="text-foreground font-medium">{item}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </AnimatedSection>
-          <AnimatedSection direction="right" delay={0.2}>
-            <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={rhycHero} alt="Royal Harwich Yacht Club waterside clubhouse" className="w-full h-auto object-cover aspect-video" loading="lazy" />
-            </motion.div>
+            <div className="max-w-2xl">
+              <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur text-white mb-6 ring-1 ring-white/20" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
+                <CircleCheckBig className="h-9 w-9" strokeWidth={1.5} />
+              </motion.div>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Payments and calls that don't drop.</h2>
+              <p className="text-lg text-white/85 leading-relaxed mb-8">
+                Bonding multiple connections is what makes them reliable: if one bearer dips, the others carry the load. With a business SLA and static IPs, the systems your revenue depends on stay online.
+              </p>
+              <motion.ul className="space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
+                {benefitItems.map((item) => (
+                  <motion.li key={item} variants={checklistItem} className="flex items-center gap-3">
+                    <CircleCheckBig className="h-6 w-6 text-primary-foreground bg-primary rounded-full p-1 flex-shrink-0" />
+                    <span className="text-white font-medium">{item}</span>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </div>
           </AnimatedSection>
         </div>
-      </Section>
+      </section>
 
       {/* CASE STUDY */}
       <GradientBand fromColor="hsl(0 0% 100%)" toColor="hsl(222 47% 11%)" />
