@@ -162,7 +162,7 @@ const MarinasYachtClubs = () => {
       </Helmet>
 
       {/* HERO */}
-      <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20">
+      <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20 bg-surface-dark">
         <div className="absolute inset-0">
           <img src={heroImg} alt="Marina at the water's edge with moored yachts and pontoons" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
