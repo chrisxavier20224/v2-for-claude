@@ -863,7 +863,7 @@ const AvailabilityCheckerInline = ({
       )}
 
       {/* ── FORM AREA ────────────────────────────────────────── */}
-      <section className={compact ? "bg-[hsl(216,100%,97%)] py-16 md:py-24" : "bg-background relative z-10 -mt-8"}>
+      <section ref={formSectionRef} className={compact ? "bg-[hsl(216,100%,97%)] py-16 md:py-24" : "bg-background relative z-10 -mt-8"}>
         <div className={compact ? "mx-auto max-w-lg px-4" : "mx-auto max-w-lg px-4 pb-20"}>
           {compact && (
             <div className="text-center mb-10">
