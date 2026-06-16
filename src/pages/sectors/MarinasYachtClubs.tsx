@@ -40,7 +40,6 @@ const painPoints = [
 ];
 
 const benefitItems = [
-  "300Mbps+ delivered at Royal Harwich",
   "Card payments & VoIP that stay up",
   "CCTV across pontoons & fuel store",
   "Live in around 10 working days",
