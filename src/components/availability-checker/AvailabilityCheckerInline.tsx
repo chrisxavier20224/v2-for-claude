@@ -367,6 +367,7 @@ const AvailabilityCheckerInline = ({
   const mapRef = useRef<any>(null);
   const tileLayerRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
+  const formSectionRef = useRef<HTMLDivElement>(null);
 
   const [step1Touched, setStep1Touched] = useState(false);
   const formStartedRef = useRef(false);
@@ -789,7 +790,16 @@ const AvailabilityCheckerInline = ({
 
     if (n === 2) setSubStep(1); // Reset carousel when entering step 2
     setStep(n);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Keep the checker in view instead of jumping to the top of the page
+    requestAnimationFrame(() => {
+      const el = formSectionRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      // Only scroll if the top of the checker is offscreen (above or far below the viewport)
+      if (rect.top < 0 || rect.top > window.innerHeight * 0.4) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
   };
 
   /* ---- Render ---- */
