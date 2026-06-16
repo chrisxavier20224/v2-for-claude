@@ -181,7 +181,7 @@ const Index = () => {
       />
       <StructuredData />
       <SchemaMarkup data={organizationSchema} />
-      <PageLayout>
+      <PageLayout mainClassName="bg-surface-dark">
         {/* ── 1. HERO ───────────────────────────────────────────────────── */}
         <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20 bg-surface-dark">
           <div className="absolute inset-0">
@@ -641,8 +641,6 @@ const Index = () => {
             </AnimatedSection>
           </div>
         </section>
-
-        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
 
         <PartnerLogoBar />
 
