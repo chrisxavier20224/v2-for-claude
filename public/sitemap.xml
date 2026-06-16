@@ -18,6 +18,7 @@
   <url><loc>https://www.integra-networks.co.uk/construction-site-broadband</loc><priority>0.8</priority></url>
   <url><loc>https://www.integra-networks.co.uk/rural-business-broadband</loc><priority>0.8</priority></url>
   <url><loc>https://www.integra-networks.co.uk/sectors/business-parks</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/marinas-yacht-clubs</loc><priority>0.8</priority></url>
 
   <!-- Connectivity -->
   <url><loc>https://www.integra-networks.co.uk/integra-sd-wan</loc><priority>0.8</priority></url>

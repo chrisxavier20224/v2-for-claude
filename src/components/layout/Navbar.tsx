@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper, ArrowRight, Lightbulb } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Building2, FileText, Hammer, Store, Trees, Cable, Phone, Smartphone, Wifi, Satellite, Zap, Globe, BookOpen, Radio, Camera, ServerCog, Shield, Signal, Layers, CreditCard, MapPin, Handshake, Newspaper, ArrowRight, Lightbulb, Anchor } from "lucide-react";
 import integraLogo from "@/assets/integra-logo.svg";
 import integraLogoWhite from "@/assets/integra-logo-white.png";
 
@@ -41,6 +41,7 @@ const sectorLinks = [
   { label: "Construction Sites", path: "/construction-site-broadband", icon: Hammer, tagline: "High-Speed for Construction" },
   { label: "Rural SMEs", path: "/rural-business-broadband", icon: Store, tagline: "Reliable Internet for Rural Business" },
   { label: "Business Parks", path: "/sectors/business-parks", icon: Trees, tagline: "Connectivity for Business Parks" },
+  { label: "Marinas & Yacht Clubs", path: "/sectors/marinas-yacht-clubs", icon: Anchor, tagline: "Internet at the water's edge" },
 ];
 
 const locationLinks = [
