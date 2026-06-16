@@ -15,6 +15,9 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroImg from "@/assets/sectors/marina-hero.jpg";
 import pontoonsImg from "@/assets/sectors/marina-pontoons.jpg";
 import marinaConnectivity from "@/assets/sectors/marina-connectivity.jpg.asset.json";
+import marinaSdwanCard from "@/assets/sectors/marina-sdwan.jpg.asset.json";
+import marinaWirelessCard from "@/assets/sectors/marina-wireless.jpg.asset.json";
+import marinaCctvCard from "@/assets/sectors/marina-cctv.jpg.asset.json";
 import rhycHero from "@/assets/case-studies/rhyc-hero.webp";
 import rhycMarina from "@/assets/case-studies/rhyc-marina.jpg";
 
@@ -103,6 +106,45 @@ const relatedServices = [
     description: "Reliable monitoring across pontoons, fuel store and boat storage.",
     href: "/cctv",
     icon: Camera,
+  },
+];
+
+const serviceCards = [
+  {
+    eyebrow: "Integra",
+    title: "SD-WAN",
+    headline: "Bonded, fibre-class connectivity.",
+    description:
+      "Multiple 4G/5G networks bonded into a single permanent business connection — up to 500Mbps with static IPs and a business SLA, no fibre required.",
+    footEyebrow: "Permanent · Bonded 4G/5G",
+    cta: "Explore Integra SD-WAN",
+    href: "/integra-sd-wan",
+    image: marinaSdwanCard.url,
+    alt: "Cellular mast above a coastline — bonded 4G/5G for waterside sites",
+  },
+  {
+    eyebrow: "Coverage",
+    title: "Wireless Distribution",
+    headline: "Reach every pontoon and boatyard.",
+    description:
+      "Point-to-point links and marine-grade outdoor access points carry coverage from the clubhouse down the pontoons, so Wi-Fi and payments work everywhere, not only at reception.",
+    footEyebrow: "Point-to-point · Outdoor Wi-Fi",
+    cta: "Explore Wireless Distribution",
+    href: "/wireless-distribution",
+    image: marinaWirelessCard.url,
+    alt: "Point-to-point wireless dish on a marina pontoon",
+  },
+  {
+    eyebrow: "Security",
+    title: "CCTV",
+    headline: "Eyes on pontoons, fuel and storage.",
+    description:
+      "Reliable monitoring across pontoons, the fuel store and boat storage — backed by the same bonded connection, with remote access for managers and out-of-hours visibility.",
+    footEyebrow: "On-site monitoring · Remote access",
+    cta: "Explore CCTV",
+    href: "/cctv",
+    image: marinaCctvCard.url,
+    alt: "Outdoor CCTV camera on a marina pontoon post at dusk",
   },
 ];
 
