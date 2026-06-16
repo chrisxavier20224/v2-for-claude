@@ -642,8 +642,6 @@ const Index = () => {
           </div>
         </section>
 
-        <GradientBand fromColor="hsl(222 47% 11%)" toColor="hsl(0 0% 100%)" />
-
         <PartnerLogoBar />
 
         <section className="bg-background py-16 md:py-20">
