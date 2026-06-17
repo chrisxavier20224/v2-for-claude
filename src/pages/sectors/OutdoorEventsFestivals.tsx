@@ -70,36 +70,36 @@ const checklistItem = { hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x
 const serviceCards = [
   {
     eyebrow: "Integra",
-    title: "SD-WAN",
+    title: "Bridge",
     headline: "Dedicated bonded capacity.",
-    description: "Multiple cellular connections (with satellite where needed) bonded for the event — sized for crowd load, separate from the public network.",
+    description: "Integra Bridge bonds multiple 4G/5G connections with Starlink backup — sized for crowd load, separate from the public network. 500Mbps+ at WRSA.",
     footEyebrow: "Temporary · Bonded for events",
-    cta: "Explore Integra SD-WAN",
-    href: "/integra-sd-wan",
+    cta: "Explore Integra Bridge",
+    href: "/integra-bridge",
     image: cardSdwanAsset.url,
     alt: "Temporary telecoms mast at a festival",
   },
   {
-    eyebrow: "Coverage",
-    title: "Wireless Distribution",
-    headline: "Reach bars, gates and production.",
-    description: "Point-to-point wireless distributes signal across bars, gates, production compounds and welfare areas — not just one stage.",
-    footEyebrow: "Point-to-point · Site-wide",
-    cta: "Explore Wireless Distribution",
-    href: "/wireless-distribution",
-    image: cardMidAsset.url,
-    alt: "Outdoor wireless equipment on a festival mast",
-  },
-  {
     eyebrow: "Resilience",
     title: "Starlink Installation",
-    headline: "Satellite where mobile won't cope.",
-    description: "Professional Starlink deployment combined with bonded cellular — keeps capacity up when the public network buckles.",
+    headline: "Satellite backup that won't drop.",
+    description: "Professional Starlink deployment as backup to bonded 4G/5G — keeps payments and ticketing live when the public network buckles.",
     footEyebrow: "Satellite · Event deployment",
     cta: "Explore Starlink Installation",
     href: "/starlink-installation",
-    image: cardThirdAsset.url,
+    image: cardMidAsset.url,
     alt: "Starlink dish at a festival at dusk",
+  },
+  {
+    eyebrow: "Coverage",
+    title: "Business Wi-Fi",
+    headline: "Blanket the whole venue.",
+    description: "Radio links and Wi-Fi coverage across drinks tents, ticket booths, exhibition areas — all fast, all online, sized for the crowd.",
+    footEyebrow: "Site-wide · Crowd-rated",
+    cta: "Explore Business Wi-Fi",
+    href: "/business-wifi",
+    image: cardThirdAsset.url,
+    alt: "Wi-Fi access points covering a festival bar",
   }
 ];
 
@@ -172,7 +172,7 @@ const OutdoorEventsFestivals = () => {
             </motion.div>
             <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">Capacity sized for the crowd, not one terminal.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We did exactly this for the WRSA Steam Rally — bonding multiple cellular connections (with satellite where needed) over <Link to="/integra-sd-wan" className="text-primary hover:underline">Integra SD-WAN</Link>, sized for crowd load.
+              We did exactly this for the WRSA Steam Rally — <Link to="/integra-bridge" className="text-primary hover:underline">Integra Bridge</Link> bonding multiple 4G/5G connections with Starlink backup, delivering 500Mbps+ to 8,000 visitors with not a single dropped payment all day.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -198,7 +198,7 @@ const OutdoorEventsFestivals = () => {
               </motion.div>
               <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Distribute it across the whole site.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Point-to-point wireless with <Link to="/wireless-distribution" className="text-primary hover:underline">Wireless Distribution</Link> reaches bars, gates, production and welfare.
+                Radio links with <Link to="/wireless-distribution" className="text-primary hover:underline">Wireless Distribution</Link> blanket the venue — drinks tent, ticket booth, exhibition areas — all fast, all online.
               </p>
             </AnimatedSection>
           </div>
@@ -246,9 +246,9 @@ const OutdoorEventsFestivals = () => {
               </motion.div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Case Study</p>
-                <h2 className="text-heading-1 text-surface-dark-foreground mb-4">WRSA Steam Rally: high-capacity connectivity for thousands</h2>
+                <h2 className="text-heading-1 text-surface-dark-foreground mb-4">WRSA Steam Rally: 500Mbps for 8,000 visitors, zero dropped payments.</h2>
                 <p className="text-lg text-surface-dark-muted leading-relaxed mb-6">
-                  See how Integra delivered dedicated bonded capacity for a working festival — cashless payments and gate scanning that didn't drop, no matter the crowd.
+                  See how Integra Bridge — bonded 4G/5G with Starlink backup — kept cashless payments and gate scanning live all day, no matter the crowd.
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Button asChild size="lg" className="font-medium h-12 px-8 text-base">
