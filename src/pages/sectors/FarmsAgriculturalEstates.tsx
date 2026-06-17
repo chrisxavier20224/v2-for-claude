@@ -21,13 +21,13 @@ import caseStudyImage from "@/assets/case-studies/royle-farm-hero.webp";
 const painPoints = [
   {
     "icon": Ban,
-    "title": "£30k+ in groundworks?",
-    "description": "Bonded wireless avoids the civils entirely for a fixed monthly cost."
+    "title": "£30k+ in excess construction charges?",
+    "description": "We often find a fibre route that dodges them — at Royle Farm that cut costs over 80%."
   },
   {
     "icon": Radio,
     "title": "Barns far from the farmhouse?",
-    "description": "Point-to-point wireless links distant buildings back to the connection."
+    "description": "Wireless links and CAT6 distribute the connection across the estate."
   },
   {
     "icon": Layers,
@@ -40,8 +40,8 @@ const benefitItems = ["DEFRA/RPA & grant submissions","CCTV & livestock monitori
 
 const faqs = [
   {
-    "q": "Our fibre quote was £30k+ in groundworks — is there an alternative?",
-    "a": "Yes — bonded wireless avoids the civils entirely and delivers fibre-class speeds for a fixed monthly cost."
+    "q": "Our fibre quote was £30k+ in excess construction charges — is there an alternative?",
+    "a": "Often yes — we frequently find a fibre route that dodges those charges (at Royle Farm it cut costs over 80%). Where fibre genuinely can't reach, we bond 4G/5G and satellite instead."
   },
   {
     "q": "Can you reach barns and units far from the farmhouse?",
@@ -69,37 +69,37 @@ const checklistItem = { hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x
 
 const serviceCards = [
   {
-    eyebrow: "Integra",
-    title: "SD-WAN",
-    headline: "Fibre-class connectivity, no civils.",
-    description: "Bonded mobile and satellite into one permanent business connection with a business SLA and static IPs — built for working farms.",
-    footEyebrow: "Permanent · Bonded 4G/5G",
-    cta: "Explore Integra SD-WAN",
-    href: "/integra-sd-wan",
+    eyebrow: "Smart fibre",
+    title: "Leased Lines",
+    headline: "The route others can't find.",
+    description: "Exhaustive surveys that often find a fibre route which dodges the excess construction charges — turning six-figure quotes into five-figure investments.",
+    footEyebrow: "Up to 1000Mbps · Business SLA",
+    cta: "Explore Leased Lines",
+    href: "/leased-lines",
     image: cardSdwanAsset.url,
-    alt: "Bonded cellular mast on a UK farmhouse",
+    alt: "Fibre leased line install at a rural farm",
   },
   {
     eyebrow: "Estate coverage",
     title: "Wireless Distribution",
     headline: "Connect every barn and unit.",
-    description: "Point-to-point wireless distributes coverage from the farmhouse to barns, stores, lets and converted units across the estate.",
-    footEyebrow: "Point-to-point · Estate-wide",
+    description: "Wireless links and CAT6 carry the connection from the farmhouse to barns, stores, lets and converted units hundreds of metres away.",
+    footEyebrow: "Wireless + CAT6 · Estate-wide",
     cta: "Explore Wireless Distribution",
     href: "/wireless-distribution",
     image: cardMidAsset.url,
     alt: "Wireless dish on a farm barn aimed at the farmhouse",
   },
   {
-    eyebrow: "Resilience",
-    title: "Starlink Installation",
-    headline: "Satellite where signal won't reach.",
-    description: "Professional Starlink install for the deepest rural farms — combined with bonded cellular for resilient, business-grade speeds.",
-    footEyebrow: "Satellite · Professional install",
-    cta: "Explore Starlink Installation",
-    href: "/starlink-installation",
+    eyebrow: "Integra",
+    title: "SD-WAN",
+    headline: "Where fibre genuinely can't reach.",
+    description: "Bonded 4G/5G and satellite over Integra SD-WAN — one permanent business connection with a business SLA and static IPs, for the deepest rural sites.",
+    footEyebrow: "Bonded 4G/5G · Satellite",
+    cta: "Explore Integra SD-WAN",
+    href: "/integra-sd-wan",
     image: cardThirdAsset.url,
-    alt: "Starlink dish on a farm gatepost",
+    alt: "Bonded cellular and satellite at a remote farm",
   }
 ];
 
@@ -108,7 +108,7 @@ const FarmsAgriculturalEstates = () => {
     <PageLayout hideCTA mainClassName="bg-surface-dark">
       <SEO
         title="Internet for Farms & Agricultural Estates"
-        description="Fast, reliable internet for farms and rural estates — connect the farmhouse, barns, units and diversified businesses with no fibre, in ~10 days."
+        description="Fast, reliable internet for farms and rural estates — connect the farmhouse, barns, units and diversified businesses, in around 10 working days."
         keywords="farm internet, agricultural broadband, rural estate wifi, farm diversification connectivity, defra rpa internet"
         url="/sectors/farms-agricultural-estates"
       />
@@ -135,7 +135,7 @@ const FarmsAgriculturalEstates = () => {
               Fibre quoted £30k. We have a better way.
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
-              Farms sit miles from the nearest cabinet, with fibre quotes running to tens of thousands in civils &mdash; if anyone will quote at all. Yet DEFRA paperwork is online-only, sensors stream data, and barns sit hundreds of metres from the house. We connect the whole estate, no civils bill, live in around 10 working days.
+              Farms sit miles from the exchange, with fibre quotes running to tens of thousands in excess construction charges &mdash; if anyone will quote at all. We find the route others miss &mdash; sometimes a smarter fibre route, sometimes bonded 4G/5G or satellite &mdash; then connect the whole estate, live in around 10 working days.
             </p>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-lg font-medium h-12 px-8 text-base">
@@ -170,9 +170,9 @@ const FarmsAgriculturalEstates = () => {
             <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
               <Tractor className="h-9 w-9" strokeWidth={1.5} />
             </motion.div>
-            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">A rural site turned into a connected business.</h2>
+            <h2 className="mb-4 text-heading-1 md:text-display-sm text-foreground">We find the route others can't.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              This is what we solved at Royle Farm — bonding mobile and satellite over <Link to="/integra-sd-wan" className="text-primary hover:underline">Integra SD-WAN</Link> into one fibre-class connection with a business SLA and static IPs.
+              At Royle Farm Business Park, an exhaustive survey found a way to bring fibre in that dodged the excess construction charges every previous quote carried — cutting projected costs by over 80%, turning a six-figure problem into a five-figure investment. Tenants went from single-digit ADSL to up to 1000Mbps via <Link to="/leased-lines" className="text-primary hover:underline">Leased Lines</Link>.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
@@ -196,9 +196,9 @@ const FarmsAgriculturalEstates = () => {
               <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6" whileHover={{ scale: 1.1, rotate: 3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
                 <Radio className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Reach every barn, store and unit.</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-surface-dark-foreground">Then we distribute it across the whole estate.</h2>
               <p className="text-lg text-surface-dark-muted leading-relaxed">
-                Point-to-point wireless with <Link to="/wireless-distribution" className="text-primary hover:underline">Wireless Distribution</Link> distributes the connection across the estate, so the farmhouse, barns and converted units all get real coverage.
+                <Link to="/wireless-distribution" className="text-primary hover:underline">Wireless Distribution</Link> and CAT6 carry the connection to barns, stores, workshops and converted units hundreds of metres from the farmhouse.
               </p>
             </AnimatedSection>
           </div>
@@ -218,9 +218,9 @@ const FarmsAgriculturalEstates = () => {
               <motion.div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur text-white mb-6 ring-1 ring-white/20" whileHover={{ scale: 1.1, rotate: -3 }} transition={{ type: "spring", stiffness: 300, damping: 15 }}>
                 <CircleCheckBig className="h-9 w-9" strokeWidth={1.5} />
               </motion.div>
-              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Everything a modern farm runs on.</h2>
+              <h2 className="mb-4 text-heading-1 md:text-display-sm text-white">Whatever your site needs.</h2>
               <p className="text-lg text-white/85 leading-relaxed mb-8">
-                Built for paperwork, monitoring and diversified business — one connection, one bill.
+                Where fibre genuinely can't reach, we bond 4G/5G and satellite over Integra SD-WAN instead.
               </p>
               <motion.ul className="space-y-4" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }}>
                 {benefitItems.map((item) => (
@@ -246,9 +246,9 @@ const FarmsAgriculturalEstates = () => {
               </motion.div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Case Study</p>
-                <h2 className="text-heading-1 text-surface-dark-foreground mb-4">Royle Farm: a rural site turned connected business park</h2>
+                <h2 className="text-heading-1 text-surface-dark-foreground mb-4">Royle Farm Business Park: from single-digit ADSL to 1000Mbps.</h2>
                 <p className="text-lg text-surface-dark-muted leading-relaxed mb-6">
-                  See how Integra connected Royle Farm — bonded mobile and satellite delivering fibre-class speeds, no civils bill, ready for diversified lets and units.
+                  An exhaustive survey found a fibre route that dodged the excess construction charges — cutting costs over 80% and connecting 30+ rural businesses.
                 </p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Button asChild size="lg" className="font-medium h-12 px-8 text-base">
