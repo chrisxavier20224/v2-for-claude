@@ -13,11 +13,11 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroAsset from "@/assets/sectors/heritage-hero.jpg.asset.json";
 import heroDesktop from "@/assets/sectors/heritage-hero-1600.webp.asset.json";
 import heroMobile from "@/assets/sectors/heritage-hero-800.webp.asset.json";
-import alt1Asset from "@/assets/sectors/heritage-alt1.jpg.asset.json";
-import alt2Asset from "@/assets/sectors/heritage-alt2.jpg.asset.json";
-import cardSdwanAsset from "@/assets/sectors/heritage-card-sdwan.jpg.asset.json";
-import cardMidAsset from "@/assets/sectors/heritage-card-mid.jpg.asset.json";
-import cardThirdAsset from "@/assets/sectors/heritage-card-third.jpg.asset.json";
+import alt1Asset from "@/assets/sectors/heritage-alt1.webp.asset.json";
+import alt2Asset from "@/assets/sectors/heritage-alt2.webp.asset.json";
+import cardSdwanAsset from "@/assets/sectors/heritage-card-sdwan.webp.asset.json";
+import cardMidAsset from "@/assets/sectors/heritage-card-mid.webp.asset.json";
+import cardThirdAsset from "@/assets/sectors/heritage-card-third.webp.asset.json";
 
 const painPoints = [
   {

@@ -13,11 +13,11 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroAsset from "@/assets/sectors/churches-hero.jpg.asset.json";
 import heroDesktop from "@/assets/sectors/churches-hero-1600.webp.asset.json";
 import heroMobile from "@/assets/sectors/churches-hero-800.webp.asset.json";
-import alt1Asset from "@/assets/sectors/churches-alt1.jpg.asset.json";
-import alt2Asset from "@/assets/sectors/churches-alt2.jpg.asset.json";
-import cardSdwanAsset from "@/assets/sectors/churches-card-sdwan.jpg.asset.json";
-import cardMidAsset from "@/assets/sectors/churches-card-mid.jpg.asset.json";
-import cardThirdAsset from "@/assets/sectors/churches-card-third.jpg.asset.json";
+import alt1Asset from "@/assets/sectors/churches-alt1.webp.asset.json";
+import alt2Asset from "@/assets/sectors/churches-alt2.webp.asset.json";
+import cardSdwanAsset from "@/assets/sectors/churches-card-sdwan.webp.asset.json";
+import cardMidAsset from "@/assets/sectors/churches-card-mid.webp.asset.json";
+import cardThirdAsset from "@/assets/sectors/churches-card-third.webp.asset.json";
 
 const painPoints = [
   {

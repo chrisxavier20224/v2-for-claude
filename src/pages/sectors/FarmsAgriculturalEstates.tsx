@@ -13,11 +13,11 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroAsset from "@/assets/sectors/farms-hero.jpg.asset.json";
 import heroDesktop from "@/assets/sectors/farms-hero-1600.webp.asset.json";
 import heroMobile from "@/assets/sectors/farms-hero-800.webp.asset.json";
-import alt1Asset from "@/assets/sectors/farms-alt1.jpg.asset.json";
-import alt2Asset from "@/assets/sectors/farms-alt2.jpg.asset.json";
-import cardSdwanAsset from "@/assets/sectors/farms-card-sdwan.jpg.asset.json";
-import cardMidAsset from "@/assets/sectors/farms-card-mid.jpg.asset.json";
-import cardThirdAsset from "@/assets/sectors/farms-card-third.jpg.asset.json";
+import alt1Asset from "@/assets/sectors/farms-alt1.webp.asset.json";
+import alt2Asset from "@/assets/sectors/farms-alt2.webp.asset.json";
+import cardSdwanAsset from "@/assets/sectors/farms-card-sdwan.webp.asset.json";
+import cardMidAsset from "@/assets/sectors/farms-card-mid.webp.asset.json";
+import cardThirdAsset from "@/assets/sectors/farms-card-third.webp.asset.json";
 import caseStudyImage from "@/assets/case-studies/royle-farm-hero.webp";
 
 const painPoints = [
