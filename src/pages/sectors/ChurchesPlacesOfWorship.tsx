@@ -98,7 +98,7 @@ const serviceCards = [
     cta: "Explore CCTV",
     href: "/cctv",
     image: cardThirdAsset.url,
-    alt: "CCTV camera on a church wall overlooking the graveyard",
+    alt: "Grand church facade with twin towers against a clear blue sky",
   }
 ];
 
@@ -118,7 +118,7 @@ const ChurchesPlacesOfWorship = () => {
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20 bg-surface-dark">
         <div className="absolute inset-0">
-          <img src={heroAsset.url} alt="Historic English stone church at golden hour" className="w-full h-full object-cover" loading="eager" />
+          <img src={heroAsset.url} alt="Historic church and graveyard at sunset" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
@@ -176,7 +176,7 @@ const ChurchesPlacesOfWorship = () => {
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.2}>
             <motion.div className="rounded-2xl overflow-hidden bg-background-alt" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-              <img src={alt1Asset.url} alt="Church interior with stained glass" className="w-full h-auto object-cover aspect-video" loading="lazy" />
+               <img src={alt1Asset.url} alt="Red-brick church framed by trees and garden grounds" className="w-full h-auto object-cover aspect-video" loading="lazy" />
             </motion.div>
           </AnimatedSection>
         </div>
@@ -188,7 +188,7 @@ const ChurchesPlacesOfWorship = () => {
           <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
             <AnimatedSection direction="left" delay={0.2} className="order-2 lg:order-1">
               <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <img src={alt2Asset.url} alt="Discreet wireless antenna on a church tower" className="w-full h-auto object-cover aspect-[4/3]" loading="lazy" />
+                 <img src={alt2Asset.url} alt="Stone parish church with tower and red tiled roof" className="w-full h-auto object-cover aspect-[4/3]" loading="lazy" />
               </motion.div>
             </AnimatedSection>
             <AnimatedSection className="order-1 lg:order-2">
