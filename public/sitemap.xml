@@ -18,17 +18,17 @@
   <url><loc>https://www.integra-networks.co.uk/construction-site-broadband</loc><priority>0.8</priority></url>
   <url><loc>https://www.integra-networks.co.uk/rural-business-broadband</loc><priority>0.8</priority></url>
   <url><loc>https://www.integra-networks.co.uk/sectors/business-parks</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/marinas-yacht-clubs</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/churches-places-of-worship</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/village-halls-community-centres</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/glamping-sites</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/holiday-caravan-parks</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/farms-agricultural-estates</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/listed-heritage-buildings</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/equestrian-centres</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/golf-country-clubs</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/care-homes</loc><priority>0.8</priority></url>
-  <url><loc>https://www.integra-networks.co.uk/sectors/outdoor-events-festivals</loc><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/marinas-yacht-clubs</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/churches-places-of-worship</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/village-halls-community-centres</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/glamping-sites</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/holiday-caravan-parks</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/farms-agricultural-estates</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/listed-heritage-buildings</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/equestrian-centres</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/golf-country-clubs</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/care-homes</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.integra-networks.co.uk/sectors/outdoor-events-festivals</loc><lastmod>2026-06-17</lastmod><priority>0.8</priority></url>
 
   <!-- Connectivity -->
   <url><loc>https://www.integra-networks.co.uk/integra-sd-wan</loc><priority>0.8</priority></url>

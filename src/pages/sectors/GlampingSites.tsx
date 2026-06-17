@@ -11,6 +11,8 @@ import AvailabilityCheckerInline from "@/components/availability-checker/Availab
 import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 
 import heroAsset from "@/assets/sectors/glamping-hero.jpg.asset.json";
+import heroDesktop from "@/assets/sectors/glamping-hero-1600.webp.asset.json";
+import heroMobile from "@/assets/sectors/glamping-hero-800.webp.asset.json";
 import alt1Asset from "@/assets/sectors/glamping-alt1.jpg.asset.json";
 import alt2Asset from "@/assets/sectors/glamping-alt2.jpg.asset.json";
 import cardSdwanAsset from "@/assets/sectors/glamping-card-sdwan.jpg.asset.json";
@@ -119,7 +121,17 @@ const GlampingSites = () => {
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20 bg-surface-dark">
         <div className="absolute inset-0">
-          <img src={heroAsset.url} alt="Luxury glamping site at dusk with glowing safari tents" className="w-full h-full object-cover" loading="eager" />
+          <img
+            src={heroDesktop.url}
+            srcSet={`${heroMobile.url} 800w, ${heroDesktop.url} 1600w`}
+            sizes="100vw"
+            alt="Luxury glamping site at dusk with glowing safari tents"
+            width={1600}
+            height={900}
+            className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/40 to-black/10" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
