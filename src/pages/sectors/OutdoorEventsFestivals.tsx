@@ -13,6 +13,7 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroAsset from "@/assets/sectors/events-hero.jpg.asset.json";
 import alt1Asset from "@/assets/sectors/events-alt1.jpg.asset.json";
 import alt2Asset from "@/assets/sectors/events-alt2.jpg.asset.json";
+import gpayAsset from "@/assets/sectors/events-gpay.jpg.asset.json";
 import cardSdwanAsset from "@/assets/sectors/events-card-sdwan.jpg.asset.json";
 import cardMidAsset from "@/assets/sectors/events-card-mid.jpg.asset.json";
 import cardThirdAsset from "@/assets/sectors/events-card-third.jpg.asset.json";
@@ -189,7 +190,7 @@ const OutdoorEventsFestivals = () => {
           <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-2 lg:items-center">
             <AnimatedSection direction="left" delay={0.2} className="order-2 lg:order-1">
               <motion.div className="rounded-2xl overflow-hidden" whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                <img src={alt2Asset.url} alt="Festival site overview with a tall comms mast above tents" className="w-full h-auto object-cover aspect-[4/3]" loading="lazy" />
+                <img src={gpayAsset.url} alt="Customer paying at an outdoor event with Google Pay on a smartphone" className="w-full h-auto object-cover aspect-[4/3]" loading="lazy" />
               </motion.div>
             </AnimatedSection>
             <AnimatedSection className="order-1 lg:order-2">
