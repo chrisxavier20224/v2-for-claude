@@ -1,31 +1,40 @@
-# Restyle Complementary Services cards on /sectors/marinas-yacht-clubs
+## Why this wasn't done before
 
-Adopt the Bridge / SD-WAN "image-led" card pattern (image hero with overlaid eyebrow + title, body copy below, divider, eyebrow label + arrow link) for the three Complementary Services cards (Integra SD-WAN, Wireless Distribution, CCTV). Scope is **only** this page — if we like it, we'll roll it across other sector pages in a follow-up.
+The previous round only optimized hero images because they drive the LCP (Largest Contentful Paint) metric — the single biggest Core Web Vitals score and what Google measures for ranking. Below-the-fold images already use `loading="lazy"`, so they don't block the initial paint and weren't the bottleneck.
 
-## What changes
+That said, you're right — lazy-loaded JPGs still cost bandwidth, slow scrolling on mobile, and hurt the overall PageSpeed score (Total Byte Weight, "Serve images in next-gen formats" audit). It's worth doing.
 
-1. **MarinasYachtClubs.tsx** — replace the generic `<RelatedServices …/>` block with an inline 3-column grid of image-led cards built to match the reference (Two situations / Bridge & SD-WAN) styling:
-   - Card surface: `rounded-2xl` `bg-card` `border-border`, subtle shadow, hover lift.
-   - **Top half:** full-bleed photo, ~16:10 ratio, with a dark gradient overlay from bottom. Overlaid bottom-left: small uppercase eyebrow ("SERVICE" / a category tag) above a large white card title (`Integra SD-WAN`, `Wireless Distribution`, `CCTV`).
-   - **Bottom half:** body description in muted-foreground, then a thin divider, then a small uppercase eyebrow tag ("BONDED 4G/5G" / "POINT-TO-POINT" / "ON-SITE MONITORING") above the `Explore … →` link in primary blue.
-   - Stagger-fade in on scroll, matching the existing `staggerContainer` / `staggerItem` variants already in this file.
-   - Keep the existing section heading ("Complementary Services") and subheading ("Built for waterside sites…") above the grid.
+## Scope
 
-2. **Three new marina-context images** (generated, premium tier, JPG) saved as Lovable asset pointers under `src/assets/sectors/`:
-   - `marina-sdwan.jpg` — cell tower / antenna against a coastal sky.
-   - `marina-wireless.jpg` — point-to-point dish on a clubhouse mast looking down a row of pontoons.
-   - `marina-cctv.jpg` — outdoor CCTV camera mounted on a pontoon post overlooking moored boats.
+Convert every remaining below-the-fold JPG on the 10 new sector pages to WebP. That's 5 images per page × 10 pages = **~50 images**:
 
-3. **No changes** to `RelatedServices.tsx` itself (we keep the existing component intact for the other sector pages until we decide to roll out).
+- `*-alt1.jpg` and `*-alt2.jpg` (checklist-over-hero panels)
+- `*-card-mid.jpg`, `*-card-sdwan.jpg`, `*-card-third.jpg` (service card thumbnails)
 
-## Out of scope (for now)
+Plus the `events-gpay.jpg` extra.
 
-- `/sectors/business-parks`, `/sectors/construction-sites`, `/sectors/rural-smes` — left as-is until we approve the marina version.
-- Section heading, FAQ, hero, checker — unchanged.
-- Routes, SEO, sitemap — unchanged.
+The shared `*-card-sdwan.jpg` (cell tower) is already a single asset reused across all 10 pages — convert once.
 
-## Technical notes
+## What I'll do
 
-- Component pattern mirrors the reference card: image block with absolute eyebrow + H3 overlay, content block below with `<p>`, `<hr>`, eyebrow tag, then `<Link>` with arrow.
-- Use semantic tokens only (`bg-card`, `border-border`, `text-primary`, `text-muted-foreground`, `text-foreground`). No hard-coded colours.
-- Images generated via `imagegen` (premium quality, JPG), then registered as `lovable-assets` pointer JSONs and imported into the page.
+1. **Download** each unique source JPG from CDN to `/tmp`.
+2. **Re-encode** with `sharp`:
+   - Alt panels (full-width feature images): WebP 1200w, quality ~80, target ≤200KB.
+   - Card thumbnails (display ~400px wide in a 3-col grid): WebP 800w, quality ~78, target ≤80KB.
+3. **Upload** each new `.webp` to CDN via `lovable-assets create`, producing new `.webp.asset.json` files.
+4. **Swap imports** in the 10 sector page `.tsx` files from `*-alt1.jpg` → `*-alt1.webp`, etc.
+5. **Delete** the now-unused `.jpg.asset.json` files (or leave them — they're tiny pointers; I'll delete to keep the tree clean).
+6. **Keep** `loading="lazy"` exactly as it is — no markup/layout changes, just the file extension swap.
+
+## What I will NOT change
+
+- Hero images (already optimized last round).
+- Any layout, copy, alt text, or component structure.
+- The 3 older sector pages (`business-parks`, `construction-site-broadband`, `rural-business-broadband`) — they already use `.webp` assets.
+- `sectors/MarinasYachtClubs.tsx` below-fold images — say if you want those done too (they predate this batch).
+
+## Expected gain
+
+Typical savings: 60-75% per image. Across ~50 images, roughly **8–12 MB** of total page weight removed across the 10 sector pages combined, with no visible quality change at the rendered sizes.
+
+Shall I proceed?
