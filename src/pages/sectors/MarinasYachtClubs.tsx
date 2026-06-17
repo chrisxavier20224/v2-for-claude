@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Ban, CreditCard, Wifi, CircleCheckBig, ArrowLeft, ArrowRight, Network, Radio, Camera, Anchor } from "lucide-react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import Section from "@/components/shared/Section";
@@ -157,9 +156,7 @@ const MarinasYachtClubs = () => {
         keywords="marina internet, yacht club broadband, waterside connectivity, berth wifi, marina wifi, fuel dock payments, bonded 4G/5G"
         url="/sectors/marinas-yacht-clubs"
       />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* HERO */}
       <section className="relative min-h-[72vh] flex items-end overflow-hidden -mt-20 bg-surface-dark">
