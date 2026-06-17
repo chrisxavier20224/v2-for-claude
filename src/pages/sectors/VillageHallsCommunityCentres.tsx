@@ -13,11 +13,11 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroAsset from "@/assets/sectors/village-halls-hero.jpg.asset.json";
 import heroDesktop from "@/assets/sectors/village-halls-hero-1600.webp.asset.json";
 import heroMobile from "@/assets/sectors/village-halls-hero-800.webp.asset.json";
-import alt1Asset from "@/assets/sectors/village-halls-alt1.jpg.asset.json";
-import alt2Asset from "@/assets/sectors/village-halls-alt2.jpg.asset.json";
-import cardSdwanAsset from "@/assets/sectors/village-halls-card-sdwan.jpg.asset.json";
-import cardMidAsset from "@/assets/sectors/village-halls-card-mid.jpg.asset.json";
-import cardThirdAsset from "@/assets/sectors/village-halls-card-third.jpg.asset.json";
+import alt1Asset from "@/assets/sectors/village-halls-alt1.webp.asset.json";
+import alt2Asset from "@/assets/sectors/village-halls-alt2.webp.asset.json";
+import cardSdwanAsset from "@/assets/sectors/village-halls-card-sdwan.webp.asset.json";
+import cardMidAsset from "@/assets/sectors/village-halls-card-mid.webp.asset.json";
+import cardThirdAsset from "@/assets/sectors/village-halls-card-third.webp.asset.json";
 
 const painPoints = [
   {

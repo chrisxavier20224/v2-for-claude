@@ -13,11 +13,11 @@ import CustomerLogoBar from "@/components/shared/CustomerLogoBar";
 import heroAsset from "@/assets/sectors/golf-hero.jpg.asset.json";
 import heroDesktop from "@/assets/sectors/golf-hero-1600.webp.asset.json";
 import heroMobile from "@/assets/sectors/golf-hero-800.webp.asset.json";
-import alt1Asset from "@/assets/sectors/golf-alt1.jpg.asset.json";
-import alt2Asset from "@/assets/sectors/golf-alt2.jpg.asset.json";
-import cardSdwanAsset from "@/assets/sectors/golf-card-sdwan.jpg.asset.json";
-import cardMidAsset from "@/assets/sectors/golf-card-mid.jpg.asset.json";
-import cardThirdAsset from "@/assets/sectors/golf-card-third.jpg.asset.json";
+import alt1Asset from "@/assets/sectors/golf-alt1.webp.asset.json";
+import alt2Asset from "@/assets/sectors/golf-alt2.webp.asset.json";
+import cardSdwanAsset from "@/assets/sectors/golf-card-sdwan.webp.asset.json";
+import cardMidAsset from "@/assets/sectors/golf-card-mid.webp.asset.json";
+import cardThirdAsset from "@/assets/sectors/golf-card-third.webp.asset.json";
 
 const painPoints = [
   {
