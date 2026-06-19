@@ -145,23 +145,32 @@ const Wholesale = () => {
               We do the <span className="text-primary">heavy lifting.</span>
             </h2>
           </AnimatedSection>
-          <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            {handles.map((item) => (
-              <motion.div key={item.title} variants={fadeUp} className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <div className="relative aspect-[16/9] overflow-hidden">
-                  <img src={item.image} alt={item.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent" />
-                  <div className="absolute top-4 left-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/90 backdrop-blur-sm text-primary-foreground">
-                    <item.icon className="h-5 w-5" strokeWidth={1.5} />
-                  </div>
+          <motion.ol
+            className="mx-auto max-w-4xl divide-y divide-white/10 border-y border-white/10"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            {handles.map((item, i) => (
+              <motion.li
+                key={item.title}
+                variants={fadeUp}
+                className="group grid grid-cols-[auto_auto_1fr] items-start gap-6 md:gap-10 py-8 md:py-10 transition-colors hover:bg-white/[0.03]"
+              >
+                <span className="font-light text-4xl md:text-5xl text-primary/70 tabular-nums leading-none pt-1 w-10 md:w-14">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary">
+                  <item.icon className="h-5 w-5" strokeWidth={1.5} />
+                </span>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-normal text-surface-dark-foreground mb-2">{item.title}</h3>
+                  <p className="text-surface-dark-muted leading-relaxed max-w-2xl">{item.body}</p>
                 </div>
-                <div className="flex flex-col flex-1 p-8">
-                  <h3 className="text-xl font-normal text-surface-dark-foreground mb-3">{item.title}</h3>
-                  <p className="text-surface-dark-muted leading-relaxed">{item.body}</p>
-                </div>
-              </motion.div>
+              </motion.li>
             ))}
-          </motion.div>
+          </motion.ol>
         </div>
       </section>
 
