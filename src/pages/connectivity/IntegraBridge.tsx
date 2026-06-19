@@ -11,6 +11,15 @@ import RelatedContent from "@/components/shared/RelatedContent";
 import FurtherReading from "@/components/blog/FurtherReading";
 
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
+import enterpriseInstallImg from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
+import buildingConnectivityImg from "@/assets/landing/building-connectivity.jpg.asset.json";
+import cellTowerImg from "@/assets/landing/celltower.jpg.asset.json";
+import wirelessRuralImg from "@/assets/landing/wireless-rural-industrial.jpg.asset.json";
+import sdwanAerialImg from "@/assets/connectivity/sdwan-aerial.webp";
+import sdwanHeroImg from "@/assets/connectivity/sdwan-hero.jpg";
+import starlinkHeroImg from "@/assets/connectivity/starlink-hero.webp";
+import starlinkEngineersImg from "@/assets/connectivity/starlink-engineers.jpg";
+import leasedLinesHeroImg from "@/assets/connectivity/leased-lines-hero.webp";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -22,15 +31,33 @@ const problemPoints = [
 ];
 
 const solutionPoints = [
-  "Instead of waiting months for fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
-  "For ISPs and MSPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
-  "Immediate connectivity, stronger relationships, and a reputation for delivering when it matters most.",
+  {
+    eyebrow: "Day-one delivery",
+    title: "Live in days, not months",
+    body: "Instead of waiting months for fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
+    image: enterpriseInstallImg.url,
+    alt: "Engineer installing enterprise connectivity on site",
+  },
+  {
+    eyebrow: "The provider who solves it",
+    title: "Be the answer, not the apology",
+    body: "For ISPs and MSPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
+    image: buildingConnectivityImg.url,
+    alt: "Connected building with enterprise-grade internet",
+  },
+  {
+    eyebrow: "Always-on resilience",
+    title: "Reputation built on uptime",
+    body: "Immediate connectivity, stronger relationships, and a reputation for delivering when it matters most.",
+    image: sdwanAerialImg,
+    alt: "Aerial view of resilient multi-site network",
+  },
 ];
 
 const howItWorks = [
-  { icon: Satellite, label: "Starlink Satellite", speed: "250 Mbps Down / 25 Mbps Up" },
-  { icon: Radio, label: "5G/4G Carriers (×2)", speed: "250 Mbps Down / 125 Mbps Up each" },
-  { icon: Server, label: "Bonded Output", speed: "Up to 1 Gbps Down / 300 Mbps Up" },
+  { icon: Satellite, label: "Starlink Satellite", speed: "250 Mbps Down / 25 Mbps Up", image: starlinkHeroImg, alt: "Starlink satellite dish on a rooftop" },
+  { icon: Radio, label: "5G/4G Carriers (×2)", speed: "250 Mbps Down / 125 Mbps Up each", image: cellTowerImg.url, alt: "5G cellular tower against a clear sky" },
+  { icon: Server, label: "Bonded Output", speed: "Up to 1 Gbps Down / 300 Mbps Up", image: sdwanHeroImg, alt: "Bonded SD-WAN output from the data centre" },
 ];
 
 const includes = [
@@ -45,16 +72,22 @@ const otherSolutions = [
     title: "Integra SD-WAN",
     description: "Enterprise-grade bonded 4G/5G connectivity — up to 500Mbps without fibre.",
     link: "/integra-sd-wan",
+    image: sdwanHeroImg,
+    alt: "Integra SD-WAN bonded cellular connectivity",
   },
   {
     title: "Leased Lines",
     description: "Dedicated fibre connectivity with guaranteed speeds and SLA-backed uptime.",
     link: "/leased-lines",
+    image: leasedLinesHeroImg,
+    alt: "Dedicated leased line fibre connectivity",
   },
   {
     title: "Starlink Installation",
     description: "Professional Starlink setup with static IP and SD-WAN integration.",
     link: "/starlink-installation",
+    image: starlinkEngineersImg,
+    alt: "Engineers installing a Starlink dish",
   },
 ];
 
@@ -64,18 +97,24 @@ const relatedServices = [
     description: "Enterprise 4G/5G bonding without Starlink component.",
     href: "/integra-sd-wan",
     icon: Network,
+    image: sdwanHeroImg,
+    imageAlt: "Integra SD-WAN bonded cellular connectivity",
   },
   {
     title: "Wireless Distribution",
     description: "Point-to-point radio links for multi-site coverage.",
     href: "/wireless-distribution",
     icon: Radio,
+    image: wirelessRuralImg.url,
+    imageAlt: "Wireless point-to-point distribution across a rural site",
   },
   {
     title: "Leased Lines",
     description: "Permanent dedicated fibre when Bridge transitions to failover.",
     href: "/leased-lines",
     icon: Wifi,
+    image: leasedLinesHeroImg,
+    imageAlt: "Leased line dedicated fibre",
   },
 ];
 
@@ -175,11 +214,18 @@ const IntegraBridge = () => {
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {solutionPoints.map((point, i) => (
-              <motion.div key={i} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
-                  <CircleCheckBig className="h-6 w-6" />
+              <motion.div key={i} variants={fadeUp} className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img src={point.image} alt={point.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary mb-1">{point.eyebrow}</p>
+                    <p className="text-xl md:text-2xl font-normal text-surface-dark-foreground tracking-tight">{point.title}</p>
+                  </div>
                 </div>
-                <p className="text-surface-dark-muted leading-relaxed">{point}</p>
+                <div className="flex flex-col flex-1 p-8">
+                  <p className="text-surface-dark-muted leading-relaxed">{point.body}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -205,10 +251,18 @@ const IntegraBridge = () => {
           {/* Speed cards */}
           <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-3 mb-12" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {howItWorks.map((item) => (
-              <motion.div key={item.label} variants={fadeUp} className="rounded-2xl border border-border bg-card p-6 text-center">
-                <item.icon className="h-10 w-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
-                <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
-                <p className="text-sm text-muted-foreground">{item.speed}</p>
+              <motion.div key={item.label} variants={fadeUp} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
+                <div className="relative aspect-[16/9] overflow-hidden bg-surface-dark">
+                  <img src={item.image} alt={item.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-surface-dark/30 to-transparent" />
+                  <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/90 backdrop-blur-sm text-primary-foreground">
+                    <item.icon className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="flex flex-col flex-1 p-6 text-center">
+                  <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
+                  <p className="text-sm text-muted-foreground">{item.speed}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -291,12 +345,18 @@ const IntegraBridge = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {otherSolutions.map((sol) => (
               <motion.div key={sol.title} variants={fadeUp}>
-                <Link to={sol.link} className="group block rounded-2xl border border-border bg-card p-8 hover:border-primary/30 transition-colors">
-                  <h3 className="text-lg font-normal text-foreground mb-3 group-hover:text-primary transition-colors">{sol.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{sol.description}</p>
-                  <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                    Learn More <ArrowRight className="h-3.5 w-3.5" />
-                  </span>
+                <Link to={sol.link} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img src={sol.image} alt={sol.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-8">
+                    <h3 className="text-lg font-normal text-foreground mb-3 group-hover:text-primary transition-colors">{sol.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{sol.description}</p>
+                    <span className="mt-auto inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
+                      Learn More <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

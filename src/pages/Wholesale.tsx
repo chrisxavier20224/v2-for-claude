@@ -9,22 +9,29 @@ import SEO from "@/components/shared/SEO";
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
 import reframeImg from "@/assets/wholesale/struggling-connectivity.jpg.asset.json";
 import salesImg from "@/assets/wholesale/sales-team-bg.png";
+import surveyImg from "@/assets/connectivity/business-wifi-surveys.webp";
+import installImg from "@/assets/connectivity/sdwan-install.webp";
+import configImg from "@/assets/connectivity/sdwan-stable.jpg";
+import supportImg from "@/assets/connectivity/managed-sim-visibility.jpg";
+import stepTalkImg from "@/assets/wholesale/wholesale-step-talk.jpg.asset.json";
+import stepOnboardImg from "@/assets/wholesale/wholesale-step-onboard.jpg.asset.json";
+import stepRegisterImg from "@/assets/wholesale/wholesale-step-register.jpg.asset.json";
 import BigStatCallout from "@/components/figures/BigStatCallout";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
 
 const handles = [
-  { icon: ClipboardCheck, title: "Site Survey", body: "We assess the site, check signal across every carrier, and recommend the right product before anything is ordered." },
-  { icon: Wrench, title: "Professional Installation", body: "Our engineers install carrier-specific antennas, externally mounted and cabled. Full physical install, no customer self-install." },
-  { icon: Settings, title: "Configuration & Go-Live", body: "SD-WAN, load balancing or bonding, failover — configured remotely before dispatch. Live the same day as install." },
-  { icon: ShieldCheck, title: "Ongoing Support & Monitoring", body: "UK-based support and 24/7 proactive monitoring via Integra Cloud." },
+  { icon: ClipboardCheck, title: "Site Survey", body: "We assess the site, check signal across every carrier, and recommend the right product before anything is ordered.", image: surveyImg, alt: "Engineer carrying out a connectivity site survey" },
+  { icon: Wrench, title: "Professional Installation", body: "Our engineers install carrier-specific antennas, externally mounted and cabled. Full physical install, no customer self-install.", image: installImg, alt: "Engineer installing an externally-mounted antenna" },
+  { icon: Settings, title: "Configuration & Go-Live", body: "SD-WAN, load balancing or bonding, failover — configured remotely before dispatch. Live the same day as install.", image: configImg, alt: "SD-WAN router configured and ready to ship" },
+  { icon: ShieldCheck, title: "Ongoing Support & Monitoring", body: "UK-based support and 24/7 proactive monitoring via Integra Cloud.", image: supportImg, alt: "UK-based support team monitoring the network" },
 ];
 
 const steps = [
-  { icon: Handshake, title: "Talk to us", body: "A short conversation about your customer base and where the gaps are. No commitment." },
-  { icon: UserCheck, title: "Get onboarded", body: "We set you up as a wholesale partner with pricing, process, and a named contact." },
-  { icon: Send, title: "Register deals", body: "From then on, every problem site is a two-minute submission in the partner portal. We handle the rest — survey, install, and support." },
+  { icon: Handshake, title: "Talk to us", body: "A short conversation about your customer base and where the gaps are. No commitment.", image: stepTalkImg.url, alt: "Two business people meeting and shaking hands" },
+  { icon: UserCheck, title: "Get onboarded", body: "We set you up as a wholesale partner with pricing, process, and a named contact.", image: stepOnboardImg.url, alt: "Engineer and account manager reviewing the partner portal" },
+  { icon: Send, title: "Register deals", body: "From then on, every problem site is a two-minute submission in the partner portal. We handle the rest — survey, install, and support.", image: stepRegisterImg.url, alt: "Laptop showing a clean partner portal dashboard" },
 ];
 
 const Wholesale = () => {
@@ -140,12 +147,18 @@ const Wholesale = () => {
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {handles.map((item) => (
-              <motion.div key={item.title} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
-                  <item.icon className="h-6 w-6" strokeWidth={1.5} />
+              <motion.div key={item.title} variants={fadeUp} className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img src={item.image} alt={item.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent" />
+                  <div className="absolute top-4 left-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/90 backdrop-blur-sm text-primary-foreground">
+                    <item.icon className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <h3 className="text-xl font-normal text-surface-dark-foreground mb-3">{item.title}</h3>
-                <p className="text-surface-dark-muted leading-relaxed">{item.body}</p>
+                <div className="flex flex-col flex-1 p-8">
+                  <h3 className="text-xl font-normal text-surface-dark-foreground mb-3">{item.title}</h3>
+                  <p className="text-surface-dark-muted leading-relaxed">{item.body}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -228,15 +241,21 @@ const Wholesale = () => {
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {steps.map((step, i) => (
-              <motion.div key={step.title} variants={fadeUp} className="relative rounded-2xl border border-border/60 bg-white p-8 shadow-sm">
-                <div className="absolute -top-4 -left-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold">
-                  {i + 1}
+              <motion.div key={step.title} variants={fadeUp} className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img src={step.image} alt={step.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                  <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold shadow-lg">
+                    {i + 1}
+                  </div>
                 </div>
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
-                  <step.icon className="h-6 w-6" strokeWidth={1.5} />
+                <div className="flex flex-col flex-1 p-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
+                    <step.icon className="h-6 w-6" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-normal text-foreground mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{step.body}</p>
                 </div>
-                <h3 className="text-xl font-normal text-foreground mb-3">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.body}</p>
               </motion.div>
             ))}
           </motion.div>
