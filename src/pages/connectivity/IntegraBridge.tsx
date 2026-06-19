@@ -57,7 +57,7 @@ const solutionPoints = [
 const howItWorks = [
   { icon: Satellite, label: "Starlink Satellite", speed: "250 Mbps Down / 25 Mbps Up", image: starlinkHeroImg, alt: "Starlink satellite dish on a rooftop" },
   { icon: Radio, label: "5G/4G Carriers (×2)", speed: "250 Mbps Down / 125 Mbps Up each", image: cellTowerImg.url, alt: "5G cellular tower against a clear sky" },
-  { icon: Server, label: "Bonded Output", speed: "Up to 1 Gbps Down / 300 Mbps Up", image: sdwanHeroImg, alt: "Bonded SD-WAN output from the data centre" },
+  { icon: Server, label: "Bonded Output", speed: "Up to 1 Gbps Down / 300 Mbps Up", image: "/assets/backgrounds/datacentre-hires-bg.webp", alt: "Bonded SD-WAN output from the data centre" },
 ];
 
 const includes = [
@@ -72,8 +72,8 @@ const otherSolutions = [
     title: "Integra SD-WAN",
     description: "Enterprise-grade bonded 4G/5G connectivity — up to 500Mbps without fibre.",
     link: "/integra-sd-wan",
-    image: sdwanHeroImg,
-    alt: "Integra SD-WAN bonded cellular connectivity",
+    image: cellTowerImg.url,
+    alt: "5G cellular tower powering Integra SD-WAN",
   },
   {
     title: "Leased Lines",
