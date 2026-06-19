@@ -573,11 +573,11 @@ const BrandGuidelines = () => {
         <div className="mt-12 space-y-8">
           <div className="bg-card/30 border border-border rounded-lg p-6 print:bg-gray-50 print:border-gray-200">
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">Primary Font</p>
-            <p className="text-2xl font-medium mb-1">Space Grotesk</p>
-            <p className="text-sm text-muted-foreground print:text-gray-500">Google Fonts · Weights: 400, 500, 600, 700</p>
+            <p className="text-2xl font-medium mb-1" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Inter</p>
+            <p className="text-sm text-muted-foreground print:text-gray-500">Google Fonts · Weights: 300, 400, 500, 600, 700</p>
             <p className="text-xs text-muted-foreground/60 mt-3 print:text-gray-400">
               <strong>Important:</strong> The default weight for display and heading text is <strong>400 (regular)</strong> or <strong>500 (medium)</strong>.
-              Avoid using bold (700) for headlines—Space Grotesk is designed to appear confident at lighter weights.
+              Avoid using bold (700) for headlines—Inter is designed to appear confident at lighter weights, paired with tight letter-spacing.
             </p>
           </div>
 
@@ -675,7 +675,7 @@ const BrandGuidelines = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="h-1 w-1 rounded-full bg-status-critical mt-2 shrink-0" />
-                <span>Never use <code className="text-status-critical bg-status-critical/10 px-1.5 py-0.5 rounded text-xs line-through">font-medium</code> on display or heading text—it makes Space Grotesk appear heavy</span>
+                <span>Never use <code className="text-status-critical bg-status-critical/10 px-1.5 py-0.5 rounded text-xs line-through">font-bold</code> on display or heading text—it makes Inter appear heavy</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="h-1 w-1 rounded-full bg-status-critical mt-2 shrink-0" />
@@ -715,14 +715,16 @@ const BrandGuidelines = () => {
         <div className="space-y-12 mt-12">
           <ColorGroup title="Core Brand">
             <ColorSwatch name="Primary Blue" hex="#0061FF" hsl="216, 100%, 50%" color="bg-primary" />
-            <ColorSwatch name="Background" hex="#0a0d14" hsl="222, 47%, 6%" color="bg-background" border darkSurface />
-            <ColorSwatch name="Foreground" hex="#FFFFFF" hsl="0, 0%, 100%" color="bg-foreground" border textDark />
+            <ColorSwatch name="Background" hex="#FFFFFF" hsl="0, 0%, 100%" color="bg-background" border textDark />
+            <ColorSwatch name="Foreground" hex="#0F172A" hsl="222, 47%, 11%" color="bg-foreground" border darkSurface />
           </ColorGroup>
 
           <ColorGroup title="Surface Colours">
-            <ColorSwatch name="Card" hex="#141821" hsl="222, 40%, 9%" color="bg-card" border darkSurface />
-            <ColorSwatch name="Secondary" hex="#1a1f2b" hsl="222, 35%, 12%" color="bg-secondary" border darkSurface />
-            <ColorSwatch name="Muted" hex="#232937" hsl="222, 30%, 15%" color="bg-muted" border darkSurface />
+            <ColorSwatch name="Card" hex="#FFFFFF" hsl="0, 0%, 100%" color="bg-card" border textDark />
+            <ColorSwatch name="Background Alt" hex="#F5F7FA" hsl="210, 20%, 97%" color="bg-background-alt" border textDark />
+            <ColorSwatch name="Secondary" hex="#F1F3F5" hsl="210, 20%, 96%" color="bg-secondary" border textDark />
+            <ColorSwatch name="Muted" hex="#E8ECEF" hsl="210, 15%, 93%" color="bg-muted" border textDark />
+            <ColorSwatch name="Surface Dark" hex="#0F172A" hsl="222, 47%, 11%" color="bg-surface-dark" border darkSurface />
           </ColorGroup>
 
           <ColorGroup title="Status Colours">
@@ -735,23 +737,23 @@ const BrandGuidelines = () => {
           <div className="bg-card/50 border border-border/50 rounded-lg p-6 print:bg-gray-50 print:border-gray-200">
             <p className="text-xs text-primary uppercase tracking-widest mb-3 font-medium">Surface Effects</p>
             <p className="text-sm text-muted-foreground leading-relaxed print:text-gray-600 mb-4">
-              All colour tokens above are <strong className="text-foreground">solid colours</strong>. The inner sheen visible on the strapline banners (Section 05) is an <strong className="text-foreground">optional overlay effect</strong>, not part of the base tokens.
+              All colour tokens above are <strong className="text-foreground">solid colours</strong>. The site uses a <strong className="text-foreground">light theme</strong> as the default surface, with a dark navy <code className="text-xs">surface-dark</code> token reserved for hero bands, footers, and contrast sections. The inner sheen visible on the strapline banners (Section 05) is an <strong className="text-foreground">optional overlay effect</strong>, not part of the base tokens.
             </p>
             <div className="bg-background/50 border border-border/30 rounded p-4 font-mono text-xs text-muted-foreground/80 space-y-3">
               <div>
-                <p className="mb-1 text-muted-foreground/60">/* Standard sheen — for coloured surfaces */</p>
+                <p className="mb-1 text-muted-foreground/60">/* Standard sheen — for primary / dark surfaces */</p>
                 <p>radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, transparent 70%)</p>
               </div>
               <div>
-                <p className="mb-1 text-muted-foreground/60">/* Subtle sheen — for dark surfaces */</p>
-                <p>radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 40%, transparent 70%)</p>
+                <p className="mb-1 text-muted-foreground/60">/* Subtle sheen — for light surfaces */</p>
+                <p>radial-gradient(ellipse at 20% 20%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.01) 40%, transparent 70%)</p>
               </div>
             </div>
           </div>
 
           <ColorGroup title="Borders">
-            <ColorSwatch name="Default Border" hex="#262d3d" hsl="222, 20%, 18%" color="bg-border" border />
-            <ColorSwatch name="Light Section Border" hex="#e4e5e9" hsl="220, 13%, 91%" color="bg-[#e4e5e9]" border textDark />
+            <ColorSwatch name="Default Border" hex="#DCDFE4" hsl="220, 13%, 88%" color="bg-border" border textDark />
+            <ColorSwatch name="Input Border" hex="#E2E5EA" hsl="220, 13%, 91%" color="bg-input" border textDark />
           </ColorGroup>
         </div>
       </section>
@@ -869,10 +871,10 @@ const BrandGuidelines = () => {
           <div>
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-4">Glass Effect</p>
             <div className="glass-card p-6 rounded-lg inline-block">
-              <p className="text-sm text-foreground">Glass card with 4% white overlay</p>
+              <p className="text-sm text-foreground">Glass card with 4% navy overlay (light theme)</p>
             </div>
             <p className="text-xs text-muted-foreground/60 mt-3 print:text-gray-400">
-              background: hsl(0 0% 100% / 0.04)
+              background: hsl(var(--glass) / 0.04) · --glass: 222 47% 11%
             </p>
           </div>
 
@@ -928,12 +930,12 @@ const BrandGuidelines = () => {
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">Primary Logos</p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card border border-border/50 rounded-lg p-10 flex flex-col items-center print:border-gray-200 print:bg-gray-50">
-                <img src={integraLogoWhite} alt="Integra Networks (White)" className="h-8 mb-4" />
-                <p className="text-xs text-muted-foreground print:text-gray-500">Integra Networks (White / Dark BG)</p>
-              </div>
-              <div className="bg-foreground border border-border/50 rounded-lg p-10 flex flex-col items-center print:border-gray-200 print:bg-gray-50">
                 <img src={integraLogoSvg} alt="Integra Networks (Dark)" className="h-8 mb-4" />
-                <p className="text-xs text-muted-foreground print:text-gray-500">Integra Networks (Dark / Light BG)</p>
+                <p className="text-xs text-muted-foreground print:text-gray-500">Integra Networks (Dark / Light BG) — primary</p>
+              </div>
+              <div className="bg-surface-dark border border-border/50 rounded-lg p-10 flex flex-col items-center print:border-gray-200 print:bg-gray-50">
+                <img src={integraLogoWhite} alt="Integra Networks (White)" className="h-8 mb-4" />
+                <p className="text-xs text-surface-dark-muted print:text-gray-500">Integra Networks (White / Dark BG)</p>
               </div>
             </div>
           </div>
@@ -955,9 +957,9 @@ const BrandGuidelines = () => {
               </div>
               <ul className="space-y-3">
                 {[
-                  "Use on dark backgrounds (preferred)",
-                  "Maintain aspect ratio",
-                  "Use white or dark versions only",
+                  "Use the dark logo on light backgrounds (primary use)",
+                  "Use the white logo on dark navy / primary blue surfaces",
+                  "Maintain aspect ratio and minimum clear space",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground print:text-gray-600">
                     <span className="h-1 w-1 rounded-full bg-status-ok mt-2 shrink-0" />
