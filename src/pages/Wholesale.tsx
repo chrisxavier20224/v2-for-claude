@@ -78,12 +78,12 @@ const Wholesale = () => {
       {/* THE PROBLEM — dark */}
       <section className="bg-surface-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <AnimatedSection>
+          <AnimatedSection className="text-center mx-auto max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">The Problem</p>
-            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-6 max-w-3xl">
+            <h2 className="text-heading-1 md:text-display-sm font-normal tracking-tight text-surface-dark-foreground mb-6">
               The lead time isn't your fault. <span className="text-primary">The delay is still your problem.</span>
             </h2>
-            <p className="text-lg text-surface-dark-muted leading-relaxed max-w-3xl">
+            <p className="text-lg text-surface-dark-muted leading-relaxed">
               You've won the deal. Then Openreach quotes 10 weeks, and you're stuck defending a timeline you don't control. Deadlines slip, the customer's patience wears thin, and your reputation takes the hit for infrastructure you don't own.
             </p>
           </AnimatedSection>
