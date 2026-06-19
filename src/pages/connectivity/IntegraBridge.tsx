@@ -214,11 +214,18 @@ const IntegraBridge = () => {
           </AnimatedSection>
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {solutionPoints.map((point, i) => (
-              <motion.div key={i} variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
-                  <CircleCheckBig className="h-6 w-6" />
+              <motion.div key={i} variants={fadeUp} className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img src={point.image} alt={point.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary mb-1">{point.eyebrow}</p>
+                    <p className="text-xl md:text-2xl font-normal text-surface-dark-foreground tracking-tight">{point.title}</p>
+                  </div>
                 </div>
-                <p className="text-surface-dark-muted leading-relaxed">{point}</p>
+                <div className="flex flex-col flex-1 p-8">
+                  <p className="text-surface-dark-muted leading-relaxed">{point.body}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -244,10 +251,18 @@ const IntegraBridge = () => {
           {/* Speed cards */}
           <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-3 mb-12" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {howItWorks.map((item) => (
-              <motion.div key={item.label} variants={fadeUp} className="rounded-2xl border border-border bg-card p-6 text-center">
-                <item.icon className="h-10 w-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
-                <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
-                <p className="text-sm text-muted-foreground">{item.speed}</p>
+              <motion.div key={item.label} variants={fadeUp} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
+                <div className="relative aspect-[16/9] overflow-hidden bg-surface-dark">
+                  <img src={item.image} alt={item.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-surface-dark/30 to-transparent" />
+                  <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/90 backdrop-blur-sm text-primary-foreground">
+                    <item.icon className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="flex flex-col flex-1 p-6 text-center">
+                  <h3 className="text-foreground font-normal mb-2">{item.label}</h3>
+                  <p className="text-sm text-muted-foreground">{item.speed}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -330,12 +345,18 @@ const IntegraBridge = () => {
           <motion.div className="grid gap-8 grid-cols-1 md:grid-cols-3" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             {otherSolutions.map((sol) => (
               <motion.div key={sol.title} variants={fadeUp}>
-                <Link to={sol.link} className="group block rounded-2xl border border-border bg-card p-8 hover:border-primary/30 transition-colors">
-                  <h3 className="text-lg font-normal text-foreground mb-3 group-hover:text-primary transition-colors">{sol.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{sol.description}</p>
-                  <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
-                    Learn More <ArrowRight className="h-3.5 w-3.5" />
-                  </span>
+                <Link to={sol.link} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img src={sol.image} alt={sol.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-8">
+                    <h3 className="text-lg font-normal text-foreground mb-3 group-hover:text-primary transition-colors">{sol.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{sol.description}</p>
+                    <span className="mt-auto inline-flex items-center gap-1 text-primary text-sm font-semibold uppercase tracking-wide group-hover:gap-2 transition-all">
+                      Learn More <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}
