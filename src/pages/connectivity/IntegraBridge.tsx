@@ -11,6 +11,15 @@ import RelatedContent from "@/components/shared/RelatedContent";
 import FurtherReading from "@/components/blog/FurtherReading";
 
 import heroImg from "@/assets/connectivity/bridge-hero.webp";
+import enterpriseInstallImg from "@/assets/landing/enterprise-install-rehlko.jpg.asset.json";
+import buildingConnectivityImg from "@/assets/landing/building-connectivity.jpg.asset.json";
+import cellTowerImg from "@/assets/landing/celltower.jpg.asset.json";
+import wirelessRuralImg from "@/assets/landing/wireless-rural-industrial.jpg.asset.json";
+import sdwanAerialImg from "@/assets/connectivity/sdwan-aerial.webp";
+import sdwanHeroImg from "@/assets/connectivity/sdwan-hero.jpg";
+import starlinkHeroImg from "@/assets/connectivity/starlink-hero.webp";
+import starlinkEngineersImg from "@/assets/connectivity/starlink-engineers.jpg";
+import leasedLinesHeroImg from "@/assets/connectivity/leased-lines-hero.webp";
 
 const staggerContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } } };
@@ -22,15 +31,33 @@ const problemPoints = [
 ];
 
 const solutionPoints = [
-  "Instead of waiting months for fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
-  "For ISPs and MSPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
-  "Immediate connectivity, stronger relationships, and a reputation for delivering when it matters most.",
+  {
+    eyebrow: "Day-one delivery",
+    title: "Live in days, not months",
+    body: "Instead of waiting months for fibre, you get enterprise connectivity in days — proving value from day one and generating revenue immediately.",
+    image: enterpriseInstallImg.url,
+    alt: "Engineer installing enterprise connectivity on site",
+  },
+  {
+    eyebrow: "The provider who solves it",
+    title: "Be the answer, not the apology",
+    body: "For ISPs and MSPs, your clients see you as the provider who solves problems. For businesses, you eliminate the dead zone between signing and going live.",
+    image: buildingConnectivityImg.url,
+    alt: "Connected building with enterprise-grade internet",
+  },
+  {
+    eyebrow: "Always-on resilience",
+    title: "Reputation built on uptime",
+    body: "Immediate connectivity, stronger relationships, and a reputation for delivering when it matters most.",
+    image: sdwanAerialImg,
+    alt: "Aerial view of resilient multi-site network",
+  },
 ];
 
 const howItWorks = [
-  { icon: Satellite, label: "Starlink Satellite", speed: "250 Mbps Down / 25 Mbps Up" },
-  { icon: Radio, label: "5G/4G Carriers (×2)", speed: "250 Mbps Down / 125 Mbps Up each" },
-  { icon: Server, label: "Bonded Output", speed: "Up to 1 Gbps Down / 300 Mbps Up" },
+  { icon: Satellite, label: "Starlink Satellite", speed: "250 Mbps Down / 25 Mbps Up", image: starlinkHeroImg, alt: "Starlink satellite dish on a rooftop" },
+  { icon: Radio, label: "5G/4G Carriers (×2)", speed: "250 Mbps Down / 125 Mbps Up each", image: cellTowerImg.url, alt: "5G cellular tower against a clear sky" },
+  { icon: Server, label: "Bonded Output", speed: "Up to 1 Gbps Down / 300 Mbps Up", image: sdwanHeroImg, alt: "Bonded SD-WAN output from the data centre" },
 ];
 
 const includes = [
@@ -45,16 +72,22 @@ const otherSolutions = [
     title: "Integra SD-WAN",
     description: "Enterprise-grade bonded 4G/5G connectivity — up to 500Mbps without fibre.",
     link: "/integra-sd-wan",
+    image: sdwanHeroImg,
+    alt: "Integra SD-WAN bonded cellular connectivity",
   },
   {
     title: "Leased Lines",
     description: "Dedicated fibre connectivity with guaranteed speeds and SLA-backed uptime.",
     link: "/leased-lines",
+    image: leasedLinesHeroImg,
+    alt: "Dedicated leased line fibre connectivity",
   },
   {
     title: "Starlink Installation",
     description: "Professional Starlink setup with static IP and SD-WAN integration.",
     link: "/starlink-installation",
+    image: starlinkEngineersImg,
+    alt: "Engineers installing a Starlink dish",
   },
 ];
 
@@ -64,18 +97,24 @@ const relatedServices = [
     description: "Enterprise 4G/5G bonding without Starlink component.",
     href: "/integra-sd-wan",
     icon: Network,
+    image: sdwanHeroImg,
+    imageAlt: "Integra SD-WAN bonded cellular connectivity",
   },
   {
     title: "Wireless Distribution",
     description: "Point-to-point radio links for multi-site coverage.",
     href: "/wireless-distribution",
     icon: Radio,
+    image: wirelessRuralImg.url,
+    imageAlt: "Wireless point-to-point distribution across a rural site",
   },
   {
     title: "Leased Lines",
     description: "Permanent dedicated fibre when Bridge transitions to failover.",
     href: "/leased-lines",
     icon: Wifi,
+    image: leasedLinesHeroImg,
+    imageAlt: "Leased line dedicated fibre",
   },
 ];
 
