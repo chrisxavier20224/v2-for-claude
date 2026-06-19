@@ -364,18 +364,11 @@ const IntegraBridge = () => {
         </div>
       </section>
 
-      {/* RELATED SERVICES — DARK */}
-      <RelatedServices
-        services={relatedServices}
-        heading="Complementary Services"
-        subheading="Explore alternative connectivity solutions and failover options."
-        dark
-      />
-
-      {/* RELATED CONTENT — LIGHT */}
+      {/* RELATED CONTENT — DARK */}
       <RelatedContent
         stories={["mcgee-construction"]}
         sectors={["construction-sites", "rural-smes"]}
+        dark
       />
 
       <AvailabilityCheckerInline compact sourceTag="integra-bridge" />
