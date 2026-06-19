@@ -10,6 +10,8 @@ export interface RelatedService {
   url?: string;
   icon?: LucideIcon;
   badge?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 interface RelatedServicesProps {
@@ -81,11 +83,24 @@ const RelatedServices = ({
                 transition={{ duration: 0.3 }}
               >
                 <Link to={link} className="group block h-full">
-                  <div className={`h-full rounded-2xl border backdrop-blur-sm transition-all duration-300 p-6 sm:p-8 flex flex-col ${dark ? "border-white/10 bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.05]" : "border-border bg-card hover:border-primary/30 hover:bg-muted"}`}>
-                    {/* Icon */}
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5 flex-shrink-0">
-                      <Icon className="h-6 w-6" strokeWidth={1.5} />
-                    </div>
+                  <div className={`h-full overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-300 flex flex-col ${dark ? "border-white/10 bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.05]" : "border-border bg-card hover:border-primary/30 hover:bg-muted"}`}>
+                    {service.image ? (
+                      <div className="relative aspect-[16/9] overflow-hidden">
+                        <img
+                          src={service.image}
+                          alt={service.imageAlt || label}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className={`absolute inset-0 ${dark ? "bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent" : "bg-gradient-to-t from-black/30 via-transparent to-transparent"}`} />
+                      </div>
+                    ) : null}
+                    <div className="flex flex-col flex-1 p-6 sm:p-8">
+                    {!service.image && (
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5 flex-shrink-0">
+                        <Icon className="h-6 w-6" strokeWidth={1.5} />
+                      </div>
+                    )}
 
                     {/* Badge */}
                     {service.badge && (
@@ -110,6 +125,7 @@ const RelatedServices = ({
                         Learn More
                       </span>
                       <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
+                    </div>
                     </div>
                   </div>
                 </Link>
