@@ -156,15 +156,16 @@ const Wholesale = () => {
               <motion.li
                 key={item.title}
                 variants={fadeUp}
-                className="group grid grid-cols-[auto_auto_1fr] items-start gap-6 md:gap-10 py-8 md:py-10 transition-colors hover:bg-white/[0.03]"
+                className="group relative grid grid-cols-[auto_auto_1fr] items-start gap-6 md:gap-10 py-8 md:py-10 px-4 md:px-6 -mx-4 md:-mx-6 transition-colors duration-300 hover:bg-white/[0.03]"
               >
-                <span className="font-light text-4xl md:text-5xl text-primary/70 tabular-nums leading-none pt-1 w-10 md:w-14">
+                <span className="pointer-events-none absolute left-0 top-0 h-full w-0.5 bg-primary origin-top scale-y-0 transition-transform duration-500 ease-out group-hover:scale-y-100" />
+                <span className="font-light text-4xl md:text-5xl text-primary/70 tabular-nums leading-none pt-1 w-10 md:w-14 transition-all duration-300 group-hover:text-primary group-hover:-translate-y-0.5">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary">
-                  <item.icon className="h-5 w-5" strokeWidth={1.5} />
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary transition-all duration-300 group-hover:bg-primary/20 group-hover:border-primary/40 group-hover:scale-110 group-hover:rotate-3">
+                  <item.icon className="h-5 w-5 transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
                 </span>
-                <div>
+                <div className="transition-transform duration-300 group-hover:translate-x-1">
                   <h3 className="text-xl md:text-2xl font-normal text-surface-dark-foreground mb-2">{item.title}</h3>
                   <p className="text-surface-dark-muted leading-relaxed max-w-2xl">{item.body}</p>
                 </div>
