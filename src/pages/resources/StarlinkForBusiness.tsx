@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, X, ArrowRight, Wifi, Network, Shield, Satellite, Gauge, Server, Lock, Clock, Headphones } from "lucide-react";
+import { Check, X, ArrowRight, Wifi, Network, Shield, Satellite, Gauge, Server, Lock, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
