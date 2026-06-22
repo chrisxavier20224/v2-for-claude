@@ -757,14 +757,18 @@ const AvailabilityCheckerInline = ({
           postcode: postcode.toUpperCase(),
         });
 
-        // Direct Google Ads conversion fire (AW-344295012) as a safety net
-        if (typeof window !== "undefined" && (window as any).gtag) {
-          (window as any).gtag("event", "conversion", {
-            send_to: "AW-344295012",
-            value: 1,
-            currency: "GBP",
-          });
+        // Direct Google Ads conversion fire (AW-344295012) only for business leads.
+        // Consumers still go to HubSpot above, but must not trigger the Ads conversion.
+        if (service !== "consumer") {
+          if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", "conversion", {
+              send_to: "AW-344295012",
+              value: 1,
+              currency: "GBP",
+            });
+          }
         }
+
       } catch (err) {
         console.error("Submission error:", err);
         setSubmitError(

@@ -240,14 +240,11 @@ const Analytics = () => {
       });
     }
 
-    // Fire Google Ads conversion on thank-you page
-    // Matches the "2026 Availability Checker" conversion action (Primary, Submit lead forms)
-    // Conversion ID: AW-344295012 | Label: GHgLCKWQt9sCEOSMlqQB
-    if (location.pathname === "/thankyou") {
-      // Send Enhanced Conversion data (hashed email/phone) before the conversion event
-      sendEnhancedConversionData();
-      trackGoogleAdsConversion("GHgLCKWQt9sCEOSMlqQB", 1, "GBP");
-    }
+    // Note: the availability-checker conversion is now fired inside the shared
+    // AvailabilityCheckerInline component's submit handler, scoped to Business /
+    // Home Worker leads only. We do not fire a second conversion here, otherwise
+    // consumer leads would also trigger it when they reach /thankyou.
+
   }, [location]);
 
   return null; // This component doesn't render anything
