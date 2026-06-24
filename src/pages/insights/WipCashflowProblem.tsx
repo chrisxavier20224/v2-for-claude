@@ -1,6 +1,9 @@
 import HiddenInsightLayout, {
   InsightCallout,
 } from "@/components/insights/HiddenInsightLayout";
+import WipQueueChart from "@/components/insights/hidden/WipQueueChart";
+import OrderJourneyBar from "@/components/insights/hidden/OrderJourneyBar";
+import { DataCallout } from "./InsightArticle";
 
 const WipCashflowProblem = () => (
   <HiddenInsightLayout
@@ -16,15 +19,19 @@ const WipCashflowProblem = () => (
       buttonHref: "/wholesale",
     }}
   >
+    <WipQueueChart />
+
     <p>
       In the connectivity businesses I've run, WIP queues regularly reach six
       figures in monthly recurring revenue. That is not a billing problem. It's
       a cashflow and profitability problem.
     </p>
+    <DataCallout value="Six figures of MRR" label="sitting in WIP" />
     <p>
       Every order sitting in WIP represents a customer who has signed, an
       engineer who has visited, and revenue that is not yet on the P&amp;L.
     </p>
+    <OrderJourneyBar />
     <p>
       In a business growing at any meaningful rate, that queue compounds. New
       orders arrive faster than delayed ones clear, and the WIP line on the

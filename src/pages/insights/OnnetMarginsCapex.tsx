@@ -1,6 +1,9 @@
 import HiddenInsightLayout, {
   InsightCallout,
 } from "@/components/insights/HiddenInsightLayout";
+import MarginReportVsReality from "@/components/insights/hidden/MarginReportVsReality";
+import WrongBucketDiagram from "@/components/insights/hidden/WrongBucketDiagram";
+import { PullQuote } from "./InsightArticle";
 
 const OnnetMarginsCapex = () => (
   <HiddenInsightLayout
@@ -16,6 +19,8 @@ const OnnetMarginsCapex = () => (
       buttonHref: "/wholesale",
     }}
   >
+    <MarginReportVsReality />
+
     <p>
       If your onnet product is showing 90% margins, your capex allocation policy
       is probably lying to you.
@@ -32,12 +37,17 @@ const OnnetMarginsCapex = () => (
       a complex install — is not a 90% margin product. At that price point, it
       may not be a good product at all.
     </p>
+    <PullQuote>
+      A £300/month circuit that costs £1,500–£2,500 to install is not a 90%
+      margin product.
+    </PullQuote>
     <p>
       The distortion drives the wrong commercial decisions. If the unit
       economics look artificially strong, the business over-invests in onnet
       rollout and under-prices the product. The cash position tells a different
       story, but by the time that registers, the damage is done.
     </p>
+    <WrongBucketDiagram />
     <p>
       It also consumes disproportionate provisioning time. Complex onnet
       installs aren't the highest-volume work, but they're frequently the most
