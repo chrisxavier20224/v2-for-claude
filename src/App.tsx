@@ -59,6 +59,9 @@ const DecisionFrameworkArticle = lazy(() => import("./pages/insights/DecisionFra
 const MultiSiteEstateArticle = lazy(() => import("./pages/insights/MultiSiteEstateArticle"));
 const MultiBearerConnectivityArticle = lazy(() => import("./pages/insights/MultiBearerConnectivityArticle"));
 const WholesaleConnectivityModelArticle = lazy(() => import("./pages/insights/WholesaleConnectivityModelArticle"));
+const ProvisioningRenewalKiller = lazy(() => import("./pages/insights/ProvisioningRenewalKiller"));
+const WipCashflowProblem = lazy(() => import("./pages/insights/WipCashflowProblem"));
+const OnnetMarginsCapex = lazy(() => import("./pages/insights/OnnetMarginsCapex"));
 const ExtendingWifiOutbuildings = lazy(() => import("./pages/blog/ExtendingWifiOutbuildings"));
 const ChurchesListedBuildings = lazy(() => import("./pages/blog/ChurchesListedBuildings"));
 const RuralBusinessesSdwan = lazy(() => import("./pages/blog/RuralBusinessesSdwan"));
@@ -282,6 +285,10 @@ const App = () => (
               <Route path="/insights/multi-site-business-connectivity" element={<MultiSiteEstateArticle />} />
               <Route path="/insights/multi-bearer-internet-failover" element={<MultiBearerConnectivityArticle />} />
               <Route path="/insights/wholesale-isp-partner-program" element={<WholesaleConnectivityModelArticle />} />
+              {/* Hidden / unlisted insight pages — direct URL only, noindex,nofollow, not in sitemap or Insights index */}
+              <Route path="/insights/provisioning-the-isp-renewal-killer" element={<ProvisioningRenewalKiller />} />
+              <Route path="/insights/wip-is-a-cashflow-problem" element={<WipCashflowProblem />} />
+              <Route path="/insights/onnet-margins-capex-policy" element={<OnnetMarginsCapex />} />
               {/* Legacy insights URLs — redirect to new keyword-optimised paths */}
               <Route path="/insights/cost-of-the-connectivity-gap" element={<Navigate to="/insights/cost-of-business-internet-downtime" replace />} />
               <Route path="/insights/decision-framework" element={<Navigate to="/insights/how-to-choose-business-broadband" replace />} />
