@@ -1,7 +1,9 @@
 import HiddenInsightLayout, {
   InsightCallout,
-  InsightFigurePlaceholder,
 } from "@/components/insights/HiddenInsightLayout";
+import ProvisioningNodeMap from "@/components/insights/hidden/ProvisioningNodeMap";
+import BridgeTimelineCompare from "@/components/insights/hidden/BridgeTimelineCompare";
+import { PullQuote } from "./InsightArticle";
 
 const ProvisioningRenewalKiller = () => (
   <HiddenInsightLayout
@@ -17,6 +19,8 @@ const ProvisioningRenewalKiller = () => (
       buttonHref: "/wholesale",
     }}
   >
+    <ProvisioningNodeMap />
+
     <p>
       Across the ISPs I've operated, provisioning communication is the single
       most consistent source of customer dissatisfaction — and almost no
@@ -29,6 +33,9 @@ const ProvisioningRenewalKiller = () => (
       account manager, and the end customer. Each holds a piece of the picture.
       None holds the whole thing.
     </p>
+    <PullQuote>
+      Each holds a piece of the picture. None holds the whole thing.
+    </PullQuote>
     <p>
       When something goes wrong — and something always goes wrong — the customer
       sees a disorganised supplier. The reseller takes the call. The ISP loses
@@ -55,7 +62,7 @@ const ProvisioningRenewalKiller = () => (
       stops being a relationship-ending event.
     </p>
 
-    <InsightFigurePlaceholder caption="The dozen+ parties in a single leased-line install — and where the information gaps open up." />
+    <BridgeTimelineCompare />
 
     <InsightCallout>
       This is exactly the gap Integra Bridge closes — bonded Starlink + 4G/5G,
