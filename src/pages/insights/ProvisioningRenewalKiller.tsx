@@ -19,8 +19,6 @@ const ProvisioningRenewalKiller = () => (
       buttonHref: "/wholesale",
     }}
   >
-    <ProvisioningSilence />
-
     <p>
       Across the ISPs I've operated, provisioning communication is the single
       most consistent source of customer dissatisfaction — and almost no
@@ -33,6 +31,7 @@ const ProvisioningRenewalKiller = () => (
       account manager, and the end customer. Each holds a piece of the picture.
       None holds the whole thing.
     </p>
+    <ProvisioningSilence />
     <PullQuote>
       Each holds a piece of the picture. None holds the whole thing.
     </PullQuote>
