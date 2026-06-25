@@ -4,6 +4,9 @@ const ProvisioningSilence = () => {
   const chipRef = useRef<SVGTextElement | null>(null);
   const lineRefs = useRef<(SVGPathElement | null)[]>([]);
   const dotRefs = useRef<(SVGCircleElement | null)[]>([]);
+  const mChipRef = useRef<SVGTextElement | null>(null);
+  const mStripeRefs = useRef<(SVGRectElement | null)[]>([]);
+  const mDotRefs = useRef<(SVGCircleElement | null)[]>([]);
 
   useEffect(() => {
     const N = 12;
@@ -74,6 +77,67 @@ const ProvisioningSilence = () => {
     };
   }, []);
 
+  // Mobile animation
+  useEffect(() => {
+    const N = 12;
+    const CAP = 3;
+    const stripes = mStripeRefs.current;
+    const dots = mDotRefs.current;
+    const chip = mChipRef.current;
+    if (!chip) return;
+
+    const setChip = (out: number) => {
+      chip.textContent = `12 PARTIES · ${out} OUTSTANDING`;
+    };
+    const setCleared = (i: number, on: boolean) => {
+      stripes[i]?.classList.toggle("cleared", on);
+      dots[i]?.classList.toggle("cleared", on);
+    };
+
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduce) {
+      setCleared(1, true);
+      setChip(11);
+      return;
+    }
+
+    const green: Record<number, boolean> = {};
+    const greenCount = () => Object.keys(green).length;
+    const pickRed = () => {
+      const reds: number[] = [];
+      for (let i = 0; i < N; i++) if (!green[i]) reds.push(i);
+      return reds.length ? reds[(Math.random() * reds.length) | 0] : -1;
+    };
+    const timeouts: number[] = [];
+    const tick = () => {
+      if (greenCount() < CAP && Math.random() < 0.72) {
+        const i = pickRed();
+        if (i !== -1) {
+          green[i] = true;
+          setCleared(i, true);
+          setChip(N - greenCount());
+          const t = window.setTimeout(() => {
+            delete green[i];
+            setCleared(i, false);
+            setChip(N - greenCount());
+          }, 1300 + Math.random() * 900);
+          timeouts.push(t);
+        }
+      }
+      setChip(N - greenCount());
+    };
+    setChip(N);
+    const interval = window.setInterval(tick, 900);
+    return () => {
+      window.clearInterval(interval);
+      timeouts.forEach((t) => window.clearTimeout(t));
+    };
+  }, []);
+
   const leftLabels = [
     ["Reseller account manager", "holds your contract"],
     ["Planner", "holds the survey date"],
@@ -121,6 +185,19 @@ const ProvisioningSilence = () => {
         .ps-dot.cleared { fill:#34c77b; }
         @keyframes ps-flow { from { stroke-dashoffset:0; } to { stroke-dashoffset:-48; } }
         @media (prefers-reduced-motion: reduce) { .ps-link { animation: none; } }
+        .ps-band-mobile { display:none; width:100vw; margin:2.5rem 0 2.5rem calc(50% - 50vw); background:#0a1628; padding:28px 14px; box-sizing:border-box; justify-content:center; }
+        .ps-band-mobile svg { width:100%; height:auto; max-width:440px; display:block; font-family:inherit; }
+        .ps-band-mobile .ps-stripe { fill:#e15a4e; transition: fill .45s ease; }
+        .ps-band-mobile .ps-stripe.cleared { fill:#34c77b; }
+        .ps-band-mobile .ps-mdot { fill:#e15a4e; transition: fill .45s ease; }
+        .ps-band-mobile .ps-mdot.cleared { fill:#34c77b; }
+        .ps-band-mobile .ps-scan { animation: ps-mscan 5.5s linear infinite; }
+        @keyframes ps-mscan { from { transform: translateY(0); } to { transform: translateY(610px); } }
+        @media (prefers-reduced-motion: reduce) { .ps-band-mobile .ps-scan { display:none; } }
+        @media (max-width: 640px) {
+          .ps-band { display:none; }
+          .ps-band-mobile { display:flex; }
+        }
       `}</style>
       <div className="ps-band">
         <svg
@@ -222,6 +299,76 @@ const ProvisioningSilence = () => {
           <text x="600" y="616" fill="#9fb2c8" fontSize="16" textAnchor="middle">
             Clear one, two more go red. The board never settles — and the customer is still waiting on a date.
           </text>
+        </svg>
+      </div>
+      <div className="ps-band-mobile">
+        <svg
+          viewBox="0 0 390 820"
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label="One circuit, more than a dozen parties. A provisioning PM chases each owner for a piece of information; most stay delayed (red) and the list never clears, so the customer is still waiting on a go-live date."
+        >
+          <defs>
+            <linearGradient id="ps-pmgrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#2563ea" />
+              <stop offset="100%" stopColor="#1550c4" />
+            </linearGradient>
+            <linearGradient id="ps-scangrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#2f7dff" stopOpacity="0" />
+              <stop offset="50%" stopColor="#2f7dff" stopOpacity="0.14" />
+              <stop offset="100%" stopColor="#2f7dff" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <rect width="390" height="820" fill="#0a1628" />
+          <text x="20" y="34" fill="#2f7dff" fontSize="11" letterSpacing="2.5" fontWeight="700">THE PROBLEM</text>
+          <text x="20" y="60" fill="#ffffff" fontSize="19" fontWeight="700">One circuit. A dozen owners.</text>
+          <text ref={mChipRef} x="20" y="80" fill="#7e94ad" fontSize="11" letterSpacing="1" fontWeight="600">12 PARTIES · 11 OUTSTANDING</text>
+          <rect x="16" y="96" width="358" height="58" rx="12" fill="url(#ps-pmgrad)" />
+          <rect x="16" y="96" width="358" height="58" rx="12" fill="none" stroke="#5b97ff" strokeWidth="1" opacity="0.5" />
+          <text x="32" y="124" fill="#ffffff" fontSize="15" fontWeight="700">Provisioning PM</text>
+          <text x="32" y="142" fill="#cfe0ff" fontSize="11">owes the customer a date — still no date</text>
+          <text x="350" y="135" fill="#ffffff" fontSize="22" fontWeight="800" textAnchor="end">?</text>
+          {[
+            ["Reseller account manager", "holds your contract"],
+            ["Planner", "holds the survey date"],
+            ["Survey team", "holds the line plan"],
+            ["Openreach liaison", "holds the install slot"],
+            ["Civils crew", "holds the dig date"],
+            ["Landlord", "holds site access"],
+            ["Solicitor", "holds the wayleave legals"],
+            ["Wayleave officer", "holds the signature"],
+            ["External engineer", "holds the appointment"],
+            ["Internal engineer", "holds the build"],
+            ["Router / firewall support", "holds the config"],
+            ["IT / desktop support", "holds the handover"],
+          ].map(([title, sub], i) => {
+            const y = 172 + i * 52;
+            return (
+              <g key={i}>
+                <rect x="16" y={y} width="358" height="44" rx="10" fill="#0e2236" stroke="#22405f" />
+                <rect
+                  ref={(el) => (mStripeRefs.current[i] = el)}
+                  className="ps-stripe"
+                  x="20"
+                  y={y + 8}
+                  width="4"
+                  height="28"
+                  rx="2"
+                />
+                <circle
+                  ref={(el) => (mDotRefs.current[i] = el)}
+                  className="ps-mdot"
+                  cx="40"
+                  cy={y + 22}
+                  r="4"
+                />
+                <text x="56" y={y + 19} fill="#ffffff" fontSize="13" fontWeight="700">{title}</text>
+                <text x="56" y={y + 34} fill="#7e94ad" fontSize="10.5">{sub}</text>
+              </g>
+            );
+          })}
+          <rect className="ps-scan" x="16" y="166" width="358" height="60" rx="10" fill="url(#ps-scangrad)" pointerEvents="none" />
+          <text x="195" y="808" fill="#9fb2c8" fontSize="11.5" textAnchor="middle">Clear one, two more go red. The list never clears.</text>
         </svg>
       </div>
     </>
