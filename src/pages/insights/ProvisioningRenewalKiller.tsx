@@ -1,7 +1,7 @@
 import HiddenInsightLayout, {
   InsightCallout,
 } from "@/components/insights/HiddenInsightLayout";
-import ProvisioningNodeMap from "@/components/insights/hidden/ProvisioningNodeMap";
+import ProvisioningSilence from "@/components/insights/hidden/ProvisioningSilence";
 import BridgeTimelineCompare from "@/components/insights/hidden/BridgeTimelineCompare";
 import { PullQuote } from "./InsightArticle";
 
@@ -19,7 +19,7 @@ const ProvisioningRenewalKiller = () => (
       buttonHref: "/wholesale",
     }}
   >
-    <ProvisioningNodeMap />
+    <ProvisioningSilence />
 
     <p>
       Across the ISPs I've operated, provisioning communication is the single
