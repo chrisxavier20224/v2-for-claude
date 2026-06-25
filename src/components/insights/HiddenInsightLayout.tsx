@@ -143,11 +143,11 @@ const HiddenInsightLayout = ({
 };
 
 export const InsightCallout = ({ children }: { children: React.ReactNode }) => (
-  <aside className="not-prose my-10 rounded-2xl border border-primary/20 bg-primary/[0.06] p-6 md:p-8">
-    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+  <aside className="not-prose my-10 rounded-2xl p-6 md:p-8 bg-gradient-to-br from-primary to-[hsl(216_100%_42%)] shadow-lg shadow-primary/20">
+    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/80 mb-3">
       Where Integra fits
     </p>
-    <div className="text-base md:text-lg leading-relaxed text-foreground/85">
+    <div className="text-base md:text-lg leading-relaxed text-white">
       {children}
     </div>
   </aside>
