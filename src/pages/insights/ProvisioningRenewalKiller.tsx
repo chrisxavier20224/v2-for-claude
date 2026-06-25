@@ -38,8 +38,10 @@ const ProvisioningRenewalKiller = () => (
     </PullQuote>
     <p>
       When something goes wrong — and something always goes wrong — the customer
-      sees a disorganised supplier. The reseller takes the call. The ISP loses
-      the renewal.
+      sees a disorganised supplier. The reseller takes the call. The ISP
+      scrambles, pulling engineers off planned jobs and eating the cost. And the
+      follow-on business — from the customer or the reseller — goes to a
+      competitor.
     </p>
 
     <h2>This is not a people problem. It's a structural one.</h2>
