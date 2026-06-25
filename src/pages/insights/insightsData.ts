@@ -9,6 +9,7 @@ import wholesaleOg from "@/assets/insights/wholesale-og.jpg";
 import alternativesOg from "@/assets/insights/alternatives-og.jpg";
 import multibearerHeroAsset from "@/assets/insights/multibearer-hero.jpg.asset.json";
 import alternativesHeroAsset from "@/assets/insights/alternatives-hero.jpg.asset.json";
+import provisioningHero from "@/assets/insights/provisioning-hero.jpg";
 
 const multibearerHero = multibearerHeroAsset.url;
 const multisiteHero = multisiteHeroAsset.url;
@@ -46,12 +47,25 @@ export interface InsightArticleMeta {
 
 export const insightArticles: InsightArticleMeta[] = [
   {
+    slug: "provisioning-the-isp-renewal-killer",
+    category: "Perspective",
+    title: "Provisioning is every ISP's quiet renewal killer",
+    seoTitle: "Provisioning is every ISP's quiet renewal killer",
+    excerpt:
+      "The information needed to run a clean leased-line install lives across a dozen parties the provisioning team doesn't control. Here's why that costs renewals — and how to shrink the exposure.",
+    featured: true,
+    tone: "dark",
+    readingTime: "4 min read",
+    heroImage: provisioningHero,
+    ogImage: provisioningHero,
+  },
+  {
     slug: "cost-of-business-internet-downtime",
     category: "White Paper",
     title: "The True Cost of Business Internet Downtime",
     excerpt:
       "What business internet downtime — including the eight-to-sixteen-week wait for a new circuit — actually costs, and why nobody budgets for it.",
-    featured: true,
+    featured: false,
     tone: "dark",
     readingTime: "6 min read",
     whatsInside: [

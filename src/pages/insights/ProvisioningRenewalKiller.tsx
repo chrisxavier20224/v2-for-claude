@@ -12,6 +12,7 @@ const ProvisioningRenewalKiller = () => (
     url="/insights/provisioning-the-isp-renewal-killer"
     category="Perspective"
     readingTime="4 min read"
+    indexable
     cta={{
       headline: "Got sites your network can't reach in time?",
       body: "Integra Bridge closes the provisioning gap — bonded Starlink + 4G/5G, live in around 10 working days, delivered under your brand.",
