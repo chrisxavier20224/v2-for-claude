@@ -144,7 +144,7 @@ const HiddenInsightLayout = ({
 
 export const InsightCallout = ({ children }: { children: React.ReactNode }) => (
   <aside
-    className="not-prose bg-gradient-to-br from-primary to-[hsl(216_100%_42%)] py-10 md:py-14"
+    className="not-prose bg-gradient-to-br from-primary to-[hsl(216_100%_42%)] py-10 md:py-14 -mb-20 md:-mb-28"
     style={{
       width: "100vw",
       marginLeft: "calc(50% - 50vw)",
