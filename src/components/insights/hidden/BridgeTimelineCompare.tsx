@@ -3,7 +3,7 @@ const BridgeTimelineCompare = () => {
     <>
       <style>{`
         .btc-band { display:block; width:100vw; margin:2.5rem 0 2.5rem calc(50% - 50vw); background:#0a1628; }
-        .btc-band svg { width:100%; height:auto; display:block; font-family:inherit; }
+        .btc-band svg { width:100%; height:auto; max-width:1120px; display:block; margin:0 auto; padding:56px 24px; box-sizing:border-box; font-family:inherit; }
         .btc-seg { transform:scaleX(0); transform-box:fill-box; transform-origin:left center; animation: btc-grow .7s cubic-bezier(.2,.7,.2,1) forwards; }
         @keyframes btc-grow { to { transform:scaleX(1); } }
         .btc-fade { opacity:0; animation: btc-fade .5s ease forwards; }
@@ -38,7 +38,7 @@ const BridgeTimelineCompare = () => {
           viewBox="0 0 1200 500"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
-          aria-label="Expected go-live is about 2 weeks. Actual leased-line go-live is about 10 weeks, with the customer offline through the WIP gap in between. With Integra Bridge the customer is live in about 2 weeks (10 working days) and stays trading as failover until the permanent circuit lands at week 10."
+          aria-label="Time to go live. A leased line is quoted at best case around 6 weeks and typically takes 12 or more weeks, with the customer offline the whole time. With Integra Bridge the customer is live within days, trading from week one, and the leased line becomes failover when it lands around week 12."
         >
           <defs>
             <linearGradient id="btc-blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#3a86ff" /><stop offset="100%" stopColor="#1f6fe0" /></linearGradient>
@@ -50,39 +50,38 @@ const BridgeTimelineCompare = () => {
           </defs>
 
           <rect width="1200" height="500" fill="#0a1628" />
-          <text x="130" y="48" fill="#2f7dff" fontSize="14" letterSpacing="3" fontWeight="700">EXPECTED GO-LIVE VS ACTUAL — AND WHAT BRIDGE CHANGES</text>
+          <text x="130" y="48" fill="#2f7dff" fontSize="14" letterSpacing="3" fontWeight="700">TIME TO GO LIVE — LEASED LINE VS INTEGRA BRIDGE</text>
 
-          <line className="btc-fade" style={{ animationDelay: "1.9s" }} x1="293" y1="100" x2="293" y2="376" stroke="#2f7dff" strokeWidth="1.5" strokeDasharray="3 6" opacity="0.35" />
-          <line className="btc-fade" style={{ animationDelay: "2.0s" }} x1="947" y1="190" x2="947" y2="376" stroke="#9fb2c8" strokeWidth="1.5" strokeDasharray="3 6" opacity="0.3" />
-          <text className="btc-fade" style={{ animationDelay: "1.9s" }} x="293" y="92" fill="#2f7dff" fontSize="11" textAnchor="middle" opacity="0.85">best-case go-live</text>
-          <text className="btc-fade" style={{ animationDelay: "2.0s" }} x="947" y="182" fill="#9fb2c8" fontSize="11" textAnchor="middle" opacity="0.85">leased line lands (wk 10)</text>
+          <line className="btc-fade" style={{ animationDelay: "1.9s" }} x1="550" y1="100" x2="550" y2="360" stroke="#2f7dff" strokeWidth="1.5" strokeDasharray="3 6" opacity="0.3" />
+          <line className="btc-fade" style={{ animationDelay: "2.0s" }} x1="970" y1="190" x2="970" y2="360" stroke="#9fb2c8" strokeWidth="1.5" strokeDasharray="3 6" opacity="0.3" />
+          <text className="btc-fade" style={{ animationDelay: "1.9s" }} x="550" y="92" fill="#2f7dff" fontSize="11" textAnchor="middle" opacity="0.85">best-case quote (6 wks)</text>
+          <text className="btc-fade" style={{ animationDelay: "2.0s" }} x="970" y="182" fill="#9fb2c8" fontSize="11" textAnchor="middle" opacity="0.85">typical go-live / circuit lands (12 wks)</text>
 
-          <text x="130" y="118" fill="#ffffff" fontSize="17" fontWeight="700">Expected</text>
-          <text x="1110" y="118" fill="#cfe0ff" fontSize="15" textAnchor="end">Live ~2 weeks</text>
+          <text x="130" y="118" fill="#ffffff" fontSize="17" fontWeight="700">Leased line — quoted</text>
+          <text x="1110" y="118" fill="#cfe0ff" fontSize="15" textAnchor="end">Live ~6 weeks (best case)</text>
           <rect x="130" y="130" width="980" height="26" rx="13" fill="#16263d" stroke="#22405f" />
-          <rect className="btc-seg" style={{ animationDelay: ".2s" }} x="130" y="130" width="163" height="26" rx="13" fill="url(#btc-blue)" />
-          <circle className="btc-fade" style={{ animationDelay: ".9s" }} cx="293" cy="143" r="6" fill="#ffffff" />
+          <rect className="btc-seg" style={{ animationDelay: ".2s" }} x="130" y="130" width="420" height="26" rx="13" fill="url(#btc-blue)" />
+          <circle className="btc-fade" style={{ animationDelay: "1.0s" }} cx="550" cy="143" r="6" fill="#ffffff" />
 
-          <text x="130" y="214" fill="#ffffff" fontSize="17" fontWeight="700">Actual</text>
-          <text x="1110" y="214" fill="#9fb2c8" fontSize="15" textAnchor="end">Live ~10 weeks</text>
+          <text x="130" y="214" fill="#ffffff" fontSize="17" fontWeight="700">Leased line — typical</text>
+          <text x="1110" y="214" fill="#9fb2c8" fontSize="15" textAnchor="end">Live ~12+ weeks</text>
           <rect x="130" y="226" width="980" height="26" rx="13" fill="#16263d" stroke="#22405f" />
-          <rect className="btc-seg" style={{ animationDelay: ".2s" }} x="130" y="226" width="163" height="26" rx="13" fill="url(#btc-blue)" />
-          <rect className="btc-seg" style={{ animationDelay: "1.0s" }} x="293" y="226" width="654" height="26" fill="url(#btc-wip)" />
-          <rect className="btc-seg" style={{ animationDelay: "1.7s" }} x="947" y="226" width="163" height="26" rx="13" fill="url(#btc-blue)" />
-          <rect className="btc-seg" style={{ animationDelay: "1.7s" }} x="947" y="226" width="20" height="26" fill="url(#btc-blue)" />
-          <circle className="btc-fade" style={{ animationDelay: "2.2s" }} cx="947" cy="239" r="6" fill="#ffffff" />
-          <text className="btc-fade" style={{ animationDelay: "1.3s" }} x="130" y="278" fill="#e15a4e" fontSize="14">↑ WIP gap — customer offline, revenue not recognised</text>
+          <rect className="btc-seg" style={{ animationDelay: ".6s" }} x="130" y="226" width="840" height="26" rx="13" fill="url(#btc-wip)" />
+          <rect className="btc-seg" style={{ animationDelay: "1.7s" }} x="970" y="226" width="140" height="26" rx="13" fill="url(#btc-blue)" />
+          <rect className="btc-seg" style={{ animationDelay: "1.7s" }} x="970" y="226" width="20" height="26" fill="url(#btc-blue)" />
+          <circle className="btc-fade" style={{ animationDelay: "2.2s" }} cx="970" cy="239" r="6" fill="#ffffff" />
+          <text className="btc-fade" style={{ animationDelay: "1.3s" }} x="130" y="278" fill="#e15a4e" fontSize="14">↑ Offline the whole time — revenue not recognised, customer chasing</text>
 
-          <text x="130" y="320" fill="#ffffff" fontSize="17" fontWeight="700">With Integra Bridge</text>
-          <text className="btc-fade" style={{ animationDelay: "2.0s" }} x="947" y="330" fill="#6fb1ff" fontSize="12" textAnchor="middle">circuit catches up</text>
+          <text x="130" y="318" fill="#ffffff" fontSize="17" fontWeight="700">With Integra Bridge</text>
+          <text className="btc-fade" style={{ animationDelay: "2.0s" }} x="970" y="330" fill="#6fb1ff" fontSize="12" textAnchor="middle">circuit catches up → failover</text>
           <rect x="130" y="342" width="980" height="26" rx="13" fill="#16263d" stroke="#22405f" />
-          <rect className="btc-seg" style={{ animationDelay: "1.1s" }} x="293" y="342" width="654" height="26" fill="#34c77b" opacity="0.26" />
-          <rect className="btc-seg" style={{ animationDelay: "1.8s" }} x="947" y="342" width="163" height="26" rx="13" fill="url(#btc-blue)" />
-          <rect className="btc-seg" style={{ animationDelay: "1.8s" }} x="947" y="342" width="20" height="26" fill="url(#btc-blue)" />
-          <rect className="btc-seg" style={{ animationDelay: ".35s" }} x="130" y="342" width="163" height="26" rx="13" fill="url(#btc-green)" />
-          <circle className="btc-fade" style={{ animationDelay: "1.0s" }} cx="293" cy="355" r="6" fill="#ffffff" />
-          <text className="btc-fade" style={{ animationDelay: "1.0s" }} x="305" y="333" fill="#34c77b" fontSize="12">Live in ~2 wks · 10 working days</text>
-          <text className="btc-fade" style={{ animationDelay: "1.3s" }} x="130" y="390" fill="#34c77b" fontSize="14">↑ Customer trading from day one — Bridge stays on as failover when the circuit lands.</text>
+          <rect className="btc-seg" style={{ animationDelay: "1.0s" }} x="200" y="342" width="770" height="26" fill="#34c77b" opacity="0.26" />
+          <rect className="btc-seg" style={{ animationDelay: "1.8s" }} x="970" y="342" width="140" height="26" rx="13" fill="url(#btc-blue)" />
+          <rect className="btc-seg" style={{ animationDelay: "1.8s" }} x="970" y="342" width="20" height="26" fill="url(#btc-blue)" />
+          <rect className="btc-seg" style={{ animationDelay: ".35s" }} x="130" y="342" width="70" height="26" rx="13" fill="url(#btc-green)" />
+          <circle className="btc-fade" style={{ animationDelay: ".9s" }} cx="200" cy="355" r="6" fill="#ffffff" />
+          <text className="btc-fade" style={{ animationDelay: ".9s" }} x="214" y="333" fill="#34c77b" fontSize="12">Live in days</text>
+          <text className="btc-fade" style={{ animationDelay: "1.3s" }} x="130" y="390" fill="#34c77b" fontSize="14">↑ Trading from week one — Bridge stays on as failover when the circuit lands.</text>
 
           <g className="btc-playhead">
             <line x1="130" y1="108" x2="130" y2="372" stroke="#7fb0ff" strokeWidth="2" opacity="0.18" />
@@ -90,10 +89,8 @@ const BridgeTimelineCompare = () => {
 
           <line x1="130" y1="420" x2="1110" y2="420" stroke="#22405f" strokeWidth="1" />
           <g fill="#7e94ad" fontSize="12" textAnchor="middle">
-            <text x="211" y="442">1</text><text x="293" y="442">2</text><text x="375" y="442">3</text>
-            <text x="457" y="442">4</text><text x="538" y="442">5</text><text x="620" y="442">6</text>
-            <text x="702" y="442">7</text><text x="783" y="442">8</text><text x="865" y="442">9</text>
-            <text x="947" y="442">10</text><text x="1028" y="442">11</text><text x="1110" y="442">12</text>
+            <text x="270" y="442">2</text><text x="410" y="442">4</text><text x="550" y="442">6</text>
+            <text x="690" y="442">8</text><text x="830" y="442">10</text><text x="970" y="442">12</text><text x="1110" y="442">14</text>
           </g>
           <text x="620" y="472" fill="#6f86a1" fontSize="12" letterSpacing="2" textAnchor="middle">WEEKS FROM ORDER</text>
         </svg>
