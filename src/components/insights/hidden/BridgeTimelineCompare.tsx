@@ -50,7 +50,9 @@ const BridgeTimelineCompare = () => {
           </defs>
 
           <rect width="1200" height="500" fill="#0a1628" />
-          <text x="130" y="48" fill="#2f7dff" fontSize="14" letterSpacing="3" fontWeight="700">TIME TO GO LIVE — LEASED LINE VS INTEGRA BRIDGE</text>
+          <text x="130" y="50" fill="#2f7dff" fontSize="13" letterSpacing="3" fontWeight="700">THE FIX</text>
+          <text x="130" y="84" fill="#ffffff" fontSize="26" fontWeight="700">Live in days, not months.</text>
+          <text x="1110" y="50" fill="#6f86a1" fontSize="13" letterSpacing="1.5" fontWeight="600" textAnchor="end">BRIDGE: DAYS · LEASED LINE: 12+ WEEKS</text>
 
           <line className="btc-fade" style={{ animationDelay: "1.9s" }} x1="550" y1="100" x2="550" y2="360" stroke="#2f7dff" strokeWidth="1.5" strokeDasharray="3 6" opacity="0.3" />
           <line className="btc-fade" style={{ animationDelay: "2.0s" }} x1="970" y1="190" x2="970" y2="360" stroke="#9fb2c8" strokeWidth="1.5" strokeDasharray="3 6" opacity="0.3" />
@@ -112,8 +114,9 @@ const BridgeTimelineCompare = () => {
             </pattern>
           </defs>
           <rect width="390" height="400" fill="#0a1628" />
-          <text x="16" y="22" fill="#2f7dff" fontSize="10" letterSpacing="2" fontWeight="700">EXPECTED VS ACTUAL</text>
-          <text x="16" y="36" fill="#2f7dff" fontSize="10" letterSpacing="2" fontWeight="700">— AND WHAT BRIDGE CHANGES</text>
+          <text x="16" y="22" fill="#2f7dff" fontSize="11" letterSpacing="2.5" fontWeight="700">THE FIX</text>
+          <text x="16" y="46" fill="#ffffff" fontSize="17" fontWeight="700">Live in days, not months.</text>
+          <text x="374" y="22" fill="#7e94ad" fontSize="9.5" letterSpacing="1" fontWeight="600" textAnchor="end">BRIDGE: DAYS · LL: 12+ WKS</text>
 
           <line className="btc-mfade" style={{ animationDelay: "1.9s" }} x1="76" y1="60" x2="76" y2="316" stroke="#2f7dff" strokeWidth="1.3" strokeDasharray="3 5" opacity="0.35" />
           <line className="btc-mfade" style={{ animationDelay: "2.0s" }} x1="314" y1="120" x2="314" y2="316" stroke="#9fb2c8" strokeWidth="1.3" strokeDasharray="3 5" opacity="0.3" />
