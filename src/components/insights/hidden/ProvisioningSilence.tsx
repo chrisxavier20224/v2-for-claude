@@ -113,8 +113,8 @@ const ProvisioningSilence = () => {
   return (
     <>
       <style>{`
-        .ps-band { display:block; width:100vw; margin:2.5rem 0 2.5rem calc(50% - 50vw); padding:2.5rem max(1rem, calc((100vw - 1100px) / 2)); box-sizing:border-box; background:#0a1628; }
-        .ps-band svg { width:100%; max-width:1100px; height:auto; display:block; margin:0 auto; font-family:inherit; }
+        .ps-band { display:block; width:100vw; margin:2.5rem 0 2.5rem calc(50% - 50vw); background:#0a1628; }
+        .ps-band svg { width:100%; height:auto; display:block; font-family:inherit; }
         .ps-link { stroke:#e15a4e; stroke-width:2; stroke-dasharray:3 9; stroke-linecap:round; fill:none; opacity:.62; animation: ps-flow linear infinite; transition: stroke .45s ease, opacity .45s ease; }
         .ps-link.cleared { stroke:#34c77b; opacity:.85; }
         .ps-dot { fill:#e15a4e; transition: fill .45s ease; }
