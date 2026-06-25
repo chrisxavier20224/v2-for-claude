@@ -12,6 +12,7 @@ interface HiddenInsightLayoutProps {
   category?: string;
   readingTime?: string;
   author?: string;
+  indexable?: boolean;
   cta?: {
     headline?: string;
     body?: string;
@@ -34,6 +35,7 @@ const HiddenInsightLayout = ({
   category = "Insight",
   readingTime,
   author = "Elliott Mueller",
+  indexable = false,
   cta,
   children,
 }: HiddenInsightLayoutProps) => {
@@ -45,7 +47,7 @@ const HiddenInsightLayout = ({
         url={url}
         type="article"
         author={author}
-        noIndex
+        noIndex={!indexable}
       />
 
       <article className="bg-background">
