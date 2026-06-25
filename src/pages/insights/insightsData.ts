@@ -81,8 +81,6 @@ export const insightArticles: InsightArticleMeta[] = [
       "\"Doing nothing\" and absorbing the wait is a choice with a price tag — not a neutral default.",
       "Costed honestly against the loaded cost of the Connectivity Gap, interim connectivity is almost always the cheaper option.",
     ],
-    heroFigure:
-      "\"Anatomy of the Connectivity Gap\" — a horizontal timeline from \"circuit ordered\" to \"circuit live\", with the four cost components (void rent, lost productivity, project slippage, reputational cost) stacked along the gap period.",
     heroImage: downtimeHero,
     ogImage: downtimeOg,
   },
