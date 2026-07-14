@@ -358,6 +358,7 @@ const AvailabilityCheckerInline = ({
   const [selectedAddress, setSelectedAddress] = useState<string | null>(null);
   const [addressDropdownOpen, setAddressDropdownOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const conversionFiredRef = useRef(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const addressDropdownRef = useRef<HTMLDivElement>(null);
 
@@ -757,12 +758,21 @@ const AvailabilityCheckerInline = ({
           postcode: postcode.toUpperCase(),
         });
 
-        // Direct Google Ads conversion fire (AW-344295012) only for business leads.
-        // Consumers still go to HubSpot above, but must not trigger the Ads conversion.
-        if (service !== "consumer") {
-          if (typeof window !== "undefined" && (window as any).gtag) {
+        // Direct Google Ads conversion fire (AW-344295012) — fires for every
+        // business type except Consumer (and blank/undefined). De-duped with a
+        // ref so a single successful submit only ever produces one beacon.
+        {
+          const t = (service ?? "").toString().trim().toLowerCase();
+          if (
+            !conversionFiredRef.current &&
+            t &&
+            t !== "consumer" &&
+            typeof window !== "undefined" &&
+            (window as any).gtag
+          ) {
+            conversionFiredRef.current = true;
             (window as any).gtag("event", "conversion", {
-              send_to: "AW-344295012",
+              send_to: "AW-344295012/kTuMCNmN8okcEOSMlqQB",
               value: 1,
               currency: "GBP",
             });
