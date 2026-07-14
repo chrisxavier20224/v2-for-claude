@@ -1,10 +1,23 @@
-Re-export the "One circuit. More than a dozen owners." graphic as a 1200×627 PNG with the Integra logo added — sized for LinkedIn link previews.
+# Publish the availability-checker conversion label fix
 
-## What changes
-- Re-capture the `.ps-band` section from `/insights/provisioning-the-isp-renewal-killer` at 2× density.
-- Composite onto a 1200×627 dark canvas (`#0a1628`, matching the band background).
-- Overlay the Integra logo (`src/assets/integra-logo.svg`) in the top-left corner with comfortable padding (~32px), sized ~140px wide so it reads clearly but doesn't compete with the diagram.
-- Save to `/mnt/documents/provisioning-silence-1200x627-v2.png` (new versioned file, leaves v1 intact).
+## Situation
 
-## Open question
-The current logo SVG is the standard dark-on-light mark. On the dark navy band it will need to render in white. I'll recolour it to white for the export — confirm if you'd prefer the original colour version instead.
+- Source (`src/components/availability-checker/AvailabilityCheckerInline.tsx`, line 775) already contains the correct label:
+  `send_to: "AW-344295012/GHgLCKWQt9sCEOSMlqQB"`
+- Live bundle at `https://v2scale.lovable.app/assets/index-z8SWTQ_g.js` still contains the **old** label `kTuMCNmN8okcEOSMlqQB` and does **not** contain `GHgLCKWQt9sCEOSMlqQB`.
+- Conclusion: the code fix is correct; the deploy just hasn't shipped. Frontend changes on Lovable only go live after Publish → Update.
+
+## Plan
+
+1. No code changes required — the file is already correct.
+2. Click **Publish → Update** (top-right of the editor) to push the current build to `v2scale.lovable.app`. Or approve this plan and I'll run the publish action for you once switched to build mode.
+3. After deploy, re-verify by fetching the new JS bundle from `v2scale.lovable.app/check` and confirming:
+   - `GHgLCKWQt9sCEOSMlqQB` is present
+   - `kTuMCNmN8okcEOSMlqQB` is gone from the availability-checker call site
+4. Fire a test submission (Business or Home Worker path) and check Google Ads → Conversions → "2026 Availability Checker" for the recorded event (may take up to a few hours to appear).
+
+## Notes
+
+- The gate (case-insensitive `t !== "consumer"`) and the `conversionFiredRef` de-dupe are unchanged.
+- gclid / UTM capture untouched.
+- Phone-call (`xVXnC…`) and phone-click (`zReJC…`) conversions remain as-is.
