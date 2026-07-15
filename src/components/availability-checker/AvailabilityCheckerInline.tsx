@@ -771,6 +771,7 @@ const AvailabilityCheckerInline = ({
             (window as any).gtag
           ) {
             conversionFiredRef.current = true;
+            console.log("AVAIL_CHECKER_SENDTO", "AW-344295012/GHgLCKWQt9sCEOSMlqQB");
             (window as any).gtag("event", "conversion", {
               send_to: "AW-344295012/GHgLCKWQt9sCEOSMlqQB",
               value: 1,
