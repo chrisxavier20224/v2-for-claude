@@ -58,7 +58,7 @@ const initializeGA = () => {
     // Google Ads phone-call conversion swap — replaces the visible
     // "0203 388 7111" with a Google tracking number and records a
     // conversion when the call connects.
-    window.gtag("config", `${GOOGLE_ADS_ID}/xVXnCOGsvP8CEOSMlqQB`, {
+    window.gtag("config", `${GOOGLE_ADS_ID}/GHgLCKWQt9sCEOSMlqQB`, {
       phone_conversion_number: "0203 388 7111",
     });
   }
@@ -235,7 +235,7 @@ const Analytics = () => {
     // Re-fire the phone-conversion config on every SPA route change so
     // Google's number-swap script re-applies to the newly-rendered DOM.
     if (GOOGLE_ADS_ID && window.gtag) {
-      window.gtag("config", `${GOOGLE_ADS_ID}/xVXnCOGsvP8CEOSMlqQB`, {
+      window.gtag("config", `${GOOGLE_ADS_ID}/GHgLCKWQt9sCEOSMlqQB`, {
         phone_conversion_number: "0203 388 7111",
       });
     }
