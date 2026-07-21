@@ -235,16 +235,6 @@ const Analytics = () => {
     trackPageView(url);
     trackHubSpotPageView(url);
 
-    // Re-fire the phone-conversion config on every SPA route change so
-    // Google's number-swap script re-applies to the newly-rendered DOM.
-    if (GOOGLE_ADS_ID && window.gtag) {
-      // Phone-Call conversion label (see note above) — do NOT use the
-      // availability-checker label here.
-      window.gtag("config", `${GOOGLE_ADS_ID}/zReJCNaN8okcEOSMlqQB`, {
-        phone_conversion_number: "0203 388 7111",
-      });
-    }
-
     // Note: the availability-checker conversion is now fired inside the shared
     // AvailabilityCheckerInline component's submit handler, scoped to Business /
     // Home Worker leads only. We do not fire a second conversion here, otherwise
