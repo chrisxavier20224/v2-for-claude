@@ -57,8 +57,11 @@ const initializeGA = () => {
     window.gtag("config", GOOGLE_ADS_ID);
     // Google Ads phone-call conversion swap — replaces the visible
     // "0203 388 7111" with a Google tracking number and records a
-    // conversion when the call connects.
-    window.gtag("config", `${GOOGLE_ADS_ID}/GHgLCKWQt9sCEOSMlqQB`, {
+    // conversion when the call connects. MUST use the Phone-Call
+    // conversion label (zReJCNaN8okcEOSMlqQB), NOT the availability-
+    // checker label — otherwise every SPA route change fires a
+    // conversion beacon for the availability checker.
+    window.gtag("config", `${GOOGLE_ADS_ID}/zReJCNaN8okcEOSMlqQB`, {
       phone_conversion_number: "0203 388 7111",
     });
   }
@@ -235,7 +238,9 @@ const Analytics = () => {
     // Re-fire the phone-conversion config on every SPA route change so
     // Google's number-swap script re-applies to the newly-rendered DOM.
     if (GOOGLE_ADS_ID && window.gtag) {
-      window.gtag("config", `${GOOGLE_ADS_ID}/GHgLCKWQt9sCEOSMlqQB`, {
+      // Phone-Call conversion label (see note above) — do NOT use the
+      // availability-checker label here.
+      window.gtag("config", `${GOOGLE_ADS_ID}/zReJCNaN8okcEOSMlqQB`, {
         phone_conversion_number: "0203 388 7111",
       });
     }
