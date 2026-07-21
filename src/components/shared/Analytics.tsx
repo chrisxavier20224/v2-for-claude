@@ -61,6 +61,7 @@ const initializeGA = () => {
     // conversion label (zReJCNaN8okcEOSMlqQB), NOT the availability-
     // checker label — otherwise every SPA route change fires a
     // conversion beacon for the availability checker.
+    console.log("PHONE_CONFIG_FIRED_ONCE", { at: "initializeGA", ts: Date.now() });
     window.gtag("config", `${GOOGLE_ADS_ID}/zReJCNaN8okcEOSMlqQB`, {
       phone_conversion_number: "0203 388 7111",
     });
