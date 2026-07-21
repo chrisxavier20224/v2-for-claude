@@ -1,23 +1,23 @@
-# Publish the availability-checker conversion label fix
+## Goal
 
-## Situation
+Add a runtime log that proves the phone-call `gtag('config', 'AW-344295012/zReJCNaN8okcEOSMlqQB', …)` call runs exactly once on initial mount and is not re-invoked on SPA route changes.
 
-- Source (`src/components/availability-checker/AvailabilityCheckerInline.tsx`, line 775) already contains the correct label:
-  `send_to: "AW-344295012/GHgLCKWQt9sCEOSMlqQB"`
-- Live bundle at `https://v2scale.lovable.app/assets/index-z8SWTQ_g.js` still contains the **old** label `kTuMCNmN8okcEOSMlqQB` and does **not** contain `GHgLCKWQt9sCEOSMlqQB`.
-- Conclusion: the code fix is correct; the deploy just hasn't shipped. Frontend changes on Lovable only go live after Publish → Update.
+## Change
 
-## Plan
+In `src/components/shared/Analytics.tsx`, inside `initializeGA()`, immediately before the phone-call `gtag('config', …)` call (currently ~line 64), add:
 
-1. No code changes required — the file is already correct.
-2. Click **Publish → Update** (top-right of the editor) to push the current build to `v2scale.lovable.app`. Or approve this plan and I'll run the publish action for you once switched to build mode.
-3. After deploy, re-verify by fetching the new JS bundle from `v2scale.lovable.app/check` and confirming:
-   - `GHgLCKWQt9sCEOSMlqQB` is present
-   - `kTuMCNmN8okcEOSMlqQB` is gone from the availability-checker call site
-4. Fire a test submission (Business or Home Worker path) and check Google Ads → Conversions → "2026 Availability Checker" for the recorded event (may take up to a few hours to appear).
+```ts
+console.log("PHONE_CONFIG_FIRED_ONCE", { at: "initializeGA", ts: Date.now() });
+```
 
-## Notes
+`initializeGA()` is only called from the mount-only `useEffect(() => { … }, [])` in the `Analytics` component, so this log will print exactly once per full page load. If it ever prints on a client-side route change, that's the signal something re-invoked the config.
 
-- The gate (case-insensitive `t !== "consumer"`) and the `conversionFiredRef` de-dupe are unchanged.
-- gclid / UTM capture untouched.
-- Phone-call (`xVXnC…`) and phone-click (`zReJC…`) conversions remain as-is.
+## Verification
+
+1. Load any page → console shows one `PHONE_CONFIG_FIRED_ONCE` line.
+2. Navigate between routes (e.g. `/` → `/check` → `/insights`) → no additional `PHONE_CONFIG_FIRED_ONCE` lines appear.
+3. Confirm no additional beacons hit `googleadservices.com/pagead/conversion/344295012/` during route changes.
+
+## Out of scope
+
+No changes to the availability-checker submit fire, the `conversionFiredRef` guard, the label, the gate logic, or any other tracking behaviour.
