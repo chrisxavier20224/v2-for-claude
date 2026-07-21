@@ -1,23 +1,27 @@
 ## Goal
 
-Add a runtime log that proves the phone-call `gtag('config', 'AW-344295012/zReJCNaN8okcEOSMlqQB', …)` call runs exactly once on initial mount and is not re-invoked on SPA route changes.
+Verify at runtime that the phone-call `gtag('config', 'AW-344295012/zReJCNaN8okcEOSMlqQB', …)` call fires exactly once on initial page load and does NOT re-fire on SPA route changes.
 
-## Change
+## Check
 
-In `src/components/shared/Analytics.tsx`, inside `initializeGA()`, immediately before the phone-call `gtag('config', …)` call (currently ~line 64), add:
+Drive Playwright (headless Chromium) against the preview URL:
 
-```ts
-console.log("PHONE_CONFIG_FIRED_ONCE", { at: "initializeGA", ts: Date.now() });
-```
+1. Open `https://id-preview--07f3936b-523c-4c24-9437-e98579c2728b.lovable.app/`, capture all console logs and all outbound requests to `googleadservices.com/pagead/conversion/344295012/`.
+2. Count `PHONE_CONFIG_FIRED_ONCE` log lines after initial load → expect exactly 1.
+3. Navigate client-side to `/check`, then `/insights`, then back to `/` (using in-app links so it's SPA navigation, not full reloads).
+4. Re-count `PHONE_CONFIG_FIRED_ONCE` → expect still exactly 1.
+5. Count conversion beacons hit during the route changes → expect 0.
 
-`initializeGA()` is only called from the mount-only `useEffect(() => { … }, [])` in the `Analytics` component, so this log will print exactly once per full page load. If it ever prints on a client-side route change, that's the signal something re-invoked the config.
+## Report back
 
-## Verification
+- Number of `PHONE_CONFIG_FIRED_ONCE` logs on load and after navigation.
+- Any conversion beacons that fired during navigation (URL + label).
+- Pass/fail verdict.
 
-1. Load any page → console shows one `PHONE_CONFIG_FIRED_ONCE` line.
-2. Navigate between routes (e.g. `/` → `/check` → `/insights`) → no additional `PHONE_CONFIG_FIRED_ONCE` lines appear.
-3. Confirm no additional beacons hit `googleadservices.com/pagead/conversion/344295012/` during route changes.
+## Target environment
+
+Preview URL by default (reflects latest committed code, no publish needed). If you'd prefer to test the live published site, say so and I'll point the check at `https://v2scale.lovable.app` instead — but that only works after you publish.
 
 ## Out of scope
 
-No changes to the availability-checker submit fire, the `conversionFiredRef` guard, the label, the gate logic, or any other tracking behaviour.
+No code changes. This is a read-only runtime verification.
