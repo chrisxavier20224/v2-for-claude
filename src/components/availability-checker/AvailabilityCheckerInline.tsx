@@ -96,6 +96,8 @@ const HERO_COPY: Record<number, { title: string; sub: string }> = {
   3: { title: "Show us your property", sub: "Drop a pin and we'll check what speeds we can deliver" },
 };
 
+const AVAILABILITY_CHECKER_CONVERSION_SEND_TO = "AW-344295012/GHgLCKWQt9sCEOSMlqQB";
+
 /* ------------------------------------------------------------------ */
 /*  HubSpot Forms API                                                  */
 /* ------------------------------------------------------------------ */
@@ -771,9 +773,9 @@ const AvailabilityCheckerInline = ({
             (window as any).gtag
           ) {
             conversionFiredRef.current = true;
-            console.log("AVAIL_CHECKER_SENDTO", "AW-344295012/GHgLCKWQt9sCEOSMlqQB");
+            console.log("AVAIL_CHECKER_SENDTO", AVAILABILITY_CHECKER_CONVERSION_SEND_TO);
             (window as any).gtag("event", "conversion", {
-              send_to: "AW-344295012/GHgLCKWQt9sCEOSMlqQB",
+              send_to: AVAILABILITY_CHECKER_CONVERSION_SEND_TO,
               value: 1,
               currency: "GBP",
             });
