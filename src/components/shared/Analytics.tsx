@@ -4,6 +4,9 @@ import { useLocation } from "react-router-dom";
 // Add your tracking IDs here
 const GA_MEASUREMENT_ID = "G-YWR9JZCZP1";
 const GOOGLE_ADS_ID = "AW-344295012";
+const PHONE_CALL_CONVERSION_LABEL = "zReJCNaN8okcEOSMlqQB";
+const PHONE_CALL_CONVERSION_SEND_TO = `${GOOGLE_ADS_ID}/${PHONE_CALL_CONVERSION_LABEL}`;
+const CONTACT_FORM_CONVERSION_LABEL = "kTuMCNmN8okcEOSMlqQB";
 const HUBSPOT_ID = "20314482";
 
 declare global {
@@ -57,12 +60,10 @@ const initializeGA = () => {
     window.gtag("config", GOOGLE_ADS_ID);
     // Google Ads phone-call conversion swap — replaces the visible
     // "0203 388 7111" with a Google tracking number and records a
-    // conversion when the call connects. MUST use the Phone-Call
-    // conversion label (zReJCNaN8okcEOSMlqQB), NOT the availability-
-    // checker label — otherwise every SPA route change fires a
-    // conversion beacon for the availability checker.
+    // conversion when the call connects. This uses the dedicated
+    // Phone Call Click label, never the availability-checker label.
     console.log("PHONE_CONFIG_FIRED_ONCE", { at: "initializeGA", ts: Date.now() });
-    window.gtag("config", `${GOOGLE_ADS_ID}/zReJCNaN8okcEOSMlqQB`, {
+    window.gtag("config", PHONE_CALL_CONVERSION_SEND_TO, {
       phone_conversion_number: "0203 388 7111",
     });
   }
@@ -82,6 +83,7 @@ const trackPageView = (url: string) => {
   if (!GA_MEASUREMENT_ID || typeof window === "undefined" || typeof window.gtag !== "function") return;
 
   window.gtag("event", "page_view", {
+    send_to: GA_MEASUREMENT_ID,
     page_path: url,
     page_location: window.location.href,
     page_title: document.title,
@@ -102,7 +104,10 @@ export const trackEvent = (
   eventParams?: Record<string, unknown>
 ) => {
   if (GA_MEASUREMENT_ID && window.gtag) {
-    window.gtag("event", eventName, eventParams);
+    window.gtag("event", eventName, {
+      send_to: GA_MEASUREMENT_ID,
+      ...eventParams,
+    });
   }
 };
 
@@ -203,7 +208,7 @@ const initPhoneClickTracking = () => {
 
     // Direct Google Ads conversion — "Phone Call Click" action
     // Conversion ID: AW-344295012 | Label: zReJCNaN8okcEOSMlqQB
-    trackGoogleAdsConversion("zReJCNaN8okcEOSMlqQB", 1, "GBP");
+    trackGoogleAdsConversion(PHONE_CALL_CONVERSION_LABEL, 1, "GBP");
   });
 };
 
@@ -217,7 +222,7 @@ export const trackContactFormConversion = () => {
 
   // Google Ads conversion — "Contact Form Submit" action
   // Conversion ID: AW-344295012 | Label: kTuMCNmN8okcEOSMlqQB
-  trackGoogleAdsConversion("kTuMCNmN8okcEOSMlqQB", 1, "GBP");
+  trackGoogleAdsConversion(CONTACT_FORM_CONVERSION_LABEL, 1, "GBP");
 };
 
 const Analytics = () => {
