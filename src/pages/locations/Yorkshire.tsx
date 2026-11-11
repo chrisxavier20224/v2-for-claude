@@ -252,7 +252,7 @@ const Yorkshire = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£110/month</span>
+                  <span className="font-semibold text-foreground">£225/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Starlink SD-WAN add-on</span>
@@ -260,11 +260,11 @@ const Yorkshire = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Installation</span>
-                  <span className="font-semibold text-foreground">£2,200</span>
+                  <span className="font-semibold text-foreground">£2,300</span>
                 </div>
                 <div className="border-t border-border pt-3 mt-3 flex justify-between">
                   <span>Enterprise (SLA + priority support)</span>
-                  <span className="font-semibold text-foreground">£400/month</span>
+                  <span className="font-semibold text-foreground">£565/month</span>
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">

@@ -51,7 +51,7 @@ const EssexHerts = () => {
     },
     {
       q: "How much does a typical Essex or Herts installation cost?",
-      a: "Installation is £2,200. Monthly service is £110/month for Integra Pro (bonded 4G/5G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or support charges.",
+      a: "Installation is £2,300. Monthly service is £225/month for Integra Pro (bonded 4G/5G) or £80/month for Starlink SD-WAN add-on. No long-term contract. These are all-inclusive prices—no hidden setup fees or support charges.",
     },
     {
       q: "What if my property has weak mobile signal?",
@@ -63,7 +63,7 @@ const EssexHerts = () => {
     },
     {
       q: "What happens if I'm temporarily without broadband?",
-      a: "We offer a failover service. If your primary connection drops, traffic automatically reroutes to a backup network. For Enterprise customers, this is included in your £400/month SLA service. For others, it's available as an add-on. Most rural properties on Integra Pro experience 99.5%+ uptime because bonded 4G/5G provides built-in redundancy.",
+      a: "We offer a failover service. If your primary connection drops, traffic automatically reroutes to a backup network. For Enterprise customers, this is included in your £565/month SLA service. For others, it's available as an add-on. Most rural properties on Integra Pro experience 99.5%+ uptime because bonded 4G/5G provides built-in redundancy.",
     },
   ];
 
@@ -252,7 +252,7 @@ const EssexHerts = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£110/month</span>
+                  <span className="font-semibold text-foreground">£225/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Starlink SD-WAN add-on</span>
@@ -260,11 +260,11 @@ const EssexHerts = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Installation</span>
-                  <span className="font-semibold text-foreground">£2,200</span>
+                  <span className="font-semibold text-foreground">£2,300</span>
                 </div>
                 <div className="border-t border-border pt-3 mt-3 flex justify-between">
                   <span>Enterprise (SLA + priority support)</span>
-                  <span className="font-semibold text-foreground">£400/month</span>
+                  <span className="font-semibold text-foreground">£565/month</span>
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">

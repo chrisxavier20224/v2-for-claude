@@ -265,7 +265,7 @@ const London = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Integra Pro (bonded 4G/5G)</span>
-                  <span className="font-semibold text-foreground">£110/month</span>
+                  <span className="font-semibold text-foreground">£225/month</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Mesh Wi-Fi extension (per node)</span>
@@ -273,7 +273,7 @@ const London = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Installation (standard site)</span>
-                  <span className="font-semibold text-foreground">£2,200</span>
+                  <span className="font-semibold text-foreground">£2,300</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Emergency deployment (48hr)</span>
