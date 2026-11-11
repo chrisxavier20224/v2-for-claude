@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 // Add your tracking IDs here
-const GA_MEASUREMENT_ID = "G-YWR9JZCZP1";
+const GA_MEASUREMENT_ID = "G-3WFSN2MMZE"; // Integra's own property — was wrongly carrying NEXR's tag
 const GOOGLE_ADS_ID = "AW-344295012";
 const PHONE_CALL_CONVERSION_LABEL = "zReJCNaN8okcEOSMlqQB";
 const PHONE_CALL_CONVERSION_SEND_TO = `${GOOGLE_ADS_ID}/${PHONE_CALL_CONVERSION_LABEL}`;
