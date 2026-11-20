@@ -118,7 +118,6 @@ const ManagedInternet = lazy(() => import("./pages/connectivity/ManagedInternet"
 const BusinessContinuity = lazy(() => import("./pages/connectivity/BusinessContinuity"));
 
 const BusinessMobiles = lazy(() => import("./pages/connectivity/BusinessMobiles"));
-const ProposalDetail = lazy(() => import("./pages/proposal/ProposalDetail"));
 
 // PPC Landing Pages
 const WirelessInternetProvidersUKLanding = lazy(() => import("./pages/landing/WirelessInternetProvidersUK"));
@@ -262,9 +261,6 @@ const App = () => (
               <Route path="/connectivity/managed-internet" element={<Navigate to="/managed-internet" replace />} />
               <Route path="/connectivity/business-continuity" element={<Navigate to="/business-continuity" replace />} />
               <Route path="/connectivity/business-mobiles" element={<Navigate to="/business-mobiles" replace />} />
-
-              {/* Proposal Pages */}
-              <Route path="/proposal/:id" element={<ProposalDetail />} />
 
               {/* Landing pages matching old Framer URLs */}
               <Route path="/integra-sd-wan" element={<IntegraSDWAN />} />
