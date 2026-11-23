@@ -65,7 +65,7 @@ const solutions = [
     speedDown: "Up to 350Mbps",
     speedUp: "80–120Mbps",
     latency: "20–30ms",
-    monthlyCost: "£110–400",
+    monthlyCost: "£225–565",
     installTime: "10 working days",
     reliability: "99%+ uptime",
     support: "Professional, SLA available",
@@ -82,7 +82,7 @@ const solutions = [
     cons: [
       "Higher monthly cost than Starlink or basic broadband",
       "Requires decent 4G coverage (desktop survey confirms this upfront)",
-      "Professional installation from £2,200 (all hardware included and maintained)",
+      "Professional installation from £2,300 (all hardware included and maintained)",
     ],
   },
   {

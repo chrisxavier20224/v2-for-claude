@@ -67,7 +67,7 @@ const tiers = [
   },
   {
     name: "Integra Pro",
-    price: "£135/mo + VAT",
+    price: "£225/mo + VAT",
     blurb: "For most distributed businesses",
     features: ["Up to 350Mbps bonded", "99.5% SLA + 14-Day Money Back", "Phone + WhatsApp support"],
     cta: { label: "Get a quote", href: "/check" },

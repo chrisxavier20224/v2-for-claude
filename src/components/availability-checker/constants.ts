@@ -30,7 +30,7 @@ export const PRODUCTS = [
   {
     id: 'integra_pro',
     name: 'Integra Pro',
-    price: '£110+',
+    price: '£225+',
     frequency: '/month',
     vat: true,
     description: 'Up to 350Mbps multi-network bonding, priority support',
@@ -39,7 +39,7 @@ export const PRODUCTS = [
   {
     id: 'ultrafast',
     name: 'Integra Ultrafast',
-    price: '£195+',
+    price: '£305+',
     frequency: '/month',
     vat: true,
     description: 'Up to 450Mbps across three networks, maximum resilience',
@@ -48,7 +48,7 @@ export const PRODUCTS = [
   {
     id: 'enterprise',
     name: 'Enterprise',
-    price: '£400+',
+    price: '£565+',
     frequency: '/month',
     vat: true,
     description: 'Up to 500Mbps bonded, 99.99% SLA, dedicated account manager',
